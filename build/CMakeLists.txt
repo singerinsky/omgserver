@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT (SERVER)
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+INCLUDE_DIRECTORIES(../include)
+AUX_SOURCE_DIRECTORY(../ DIR_SRCS)
+LINK_DIRECTORIES(/usr/local/lib)
+ADD_EXECUTABLE(start_server ${DIR_SRCS})
+TARGET_LINK_LIBRARIES(start_server libglog.so)

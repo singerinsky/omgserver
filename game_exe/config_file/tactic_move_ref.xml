@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all_tactic>
+<tactic tactic_id="1" cost_att_energy="2500" cost_def_energy="2500"
+	tactic_name="中路推进" attr_affect_num="17">
+	<move move_id="3" />
+	<move move_id="55" />
+	<move move_id="56" />
+	<move move_id="91" />
+	<move move_id="93" />
+	<move move_id="94" />
+	<move move_id="95" />
+	<move move_id="156" />
+	<move move_id="157" />
+	<move move_id="158" />
+	<move move_id="159" />
+</tactic>
+<tactic tactic_id="2" cost_att_energy="3000" cost_def_energy="2500"
+	tactic_name="左边路强攻" attr_affect_num="15">
+	<move move_id="58" />
+	<move move_id="60" />
+	<move move_id="96" />
+	<move move_id="97" />
+	<move move_id="98" />
+	<move move_id="99" />
+	<move move_id="160" />
+	<move move_id="161" />
+	<move move_id="162" />
+	<move move_id="163" />
+</tactic>
+<tactic tactic_id="3" cost_att_energy="3000" cost_def_energy="2500"
+	tactic_name="右边路强攻" attr_affect_num="15">
+	<move move_id="59" />
+	<move move_id="61" />
+	<move move_id="100" />
+	<move move_id="101" />
+	<move move_id="102" />
+	<move move_id="103" />
+	<move move_id="164" />
+	<move move_id="165" />
+	<move move_id="166" />
+	<move move_id="167" />
+</tactic>
+<tactic tactic_id="4" cost_att_energy="3500" cost_def_energy="3000"
+	tactic_name="两翼齐飞" attr_affect_num="22">
+	<move move_id="62" />
+	<move move_id="63" />
+	<move move_id="105" />
+	<move move_id="106" />
+	<move move_id="107" />
+	<move move_id="108" />
+	<move move_id="168" />
+	<move move_id="170" />
+	<move move_id="171" />
+	<move move_id="172" />
+</tactic>
+<tactic tactic_id="5" cost_att_energy="5500" cost_def_energy="3500"
+	tactic_name="全线进攻" attr_affect_num="27">
+	<move move_id="70" />
+	<move move_id="68" />
+	<move move_id="109" />
+	<move move_id="110" />
+	<move move_id="111" />
+	<move move_id="112" />
+	<move move_id="173" />
+	<move move_id="174" />
+	<move move_id="175" />
+	<move move_id="176" />
+</tactic>
+<tactic tactic_id="6" cost_att_energy="3000" cost_def_energy="5500"
+	tactic_name="龟缩防守" attr_affect_num="38">
+	<move move_id="71" />
+	<move move_id="72" />
+	<move move_id="113" />
+	<move move_id="114" />
+	<move move_id="115" />
+	<move move_id="116" />
+	<move move_id="177" />
+	<move move_id="178" />
+	<move move_id="179" />
+	<move move_id="180" />
+</tactic>
+<tactic tactic_id="7" cost_att_energy="5000" cost_def_energy="3000"
+	tactic_name="前场逼抢" attr_affect_num="25">
+	<move move_id="73" />
+	<move move_id="74" />
+	<move move_id="120" />
+	<move move_id="121" />
+	<move move_id="122" />
+	<move move_id="123" />
+	<move move_id="181" />
+	<move move_id="182" />
+	<move move_id="183" />
+	<move move_id="184" />
+</tactic>
+<tactic tactic_id="8" cost_att_energy="3000" cost_def_energy="4000"
+	tactic_name="后排插上" attr_affect_num="23">
+	<move move_id="75" />
+	<move move_id="76" />
+	<move move_id="124" />
+	<move move_id="125" />
+	<move move_id="126" />
+	<move move_id="127" />
+	<move move_id="185" />
+	<move move_id="186" />
+	<move move_id="187" />
+	<move move_id="188" />
+	<move move_id="189" />
+	<move move_id="190" />
+</tactic>
+<tactic tactic_id="9" cost_att_energy="2500" cost_def_energy="4000"
+	tactic_name="快速反击" attr_affect_num="20">
+	<move move_id="77" />
+	<move move_id="78" />
+	<move move_id="128" />
+	<move move_id="129" />
+	<move move_id="130" />
+	<move move_id="131" />
+	<move move_id="191" />
+	<move move_id="192" />
+	<move move_id="193" />
+	<move move_id="194" />
+</tactic>
+<tactic tactic_id="10" cost_att_energy="4000" cost_def_energy="4000"
+	tactic_name="中场控球" attr_affect_num="24">
+	<move move_id="79" />
+	<move move_id="80" />
+	<move move_id="132" />
+	<move move_id="133" />
+	<move move_id="134" />
+	<move move_id="135" />
+	<move move_id="195" />
+	<move move_id="196" />
+	<move move_id="197" />
+	<move move_id="198" />
+</tactic>
+<tactic tactic_id="11" cost_att_energy="4000" cost_def_energy="3500"
+	tactic_name="声东击西" attr_affect_num="18">
+	<move move_id="81" />
+	<move move_id="82" />
+	<move move_id="136" />
+	<move move_id="137" />
+	<move move_id="138" />
+	<move move_id="139" />
+	<move move_id="199" />
+	<move move_id="200" />
+	<move move_id="201" />
+	<move move_id="202" />
+</tactic>
+<tactic tactic_id="12" cost_att_energy="2500" cost_def_energy="3500"
+	tactic_name="混凝土防反" attr_affect_num="16">
+	<move move_id="83" />
+	<move move_id="84" />
+	<move move_id="140" />
+	<move move_id="141" />
+	<move move_id="142" />
+	<move move_id="143" />
+	<move move_id="203" />
+	<move move_id="204" />
+	<move move_id="205" />
+	<move move_id="206" />
+</tactic>
+<tactic tactic_id="13" cost_att_energy="5000" cost_def_energy="4500"
+	tactic_name="宇宙队式控球" attr_affect_num="31">
+	<move move_id="85" />
+	<move move_id="86" />
+	<move move_id="144" />
+	<move move_id="145" />
+	<move move_id="146" />
+	<move move_id="147" />
+</tactic>
+<tactic tactic_id="14" cost_att_energy="4500" cost_def_energy="5000"
+	tactic_name="银河队式快攻" attr_affect_num="34">
+	<move move_id="87" />
+	<move move_id="88" />
+	<move move_id="148" />
+	<move move_id="149" />
+	<move move_id="150" />
+	<move move_id="151" />
+</tactic>
+<tactic tactic_id="15" cost_att_energy="5000" cost_def_energy="5000"
+	tactic_name="全攻全守" attr_affect_num="38">
+	<move move_id="89" />
+	<move move_id="90" />
+	<move move_id="152" />
+	<move move_id="153" />
+	<move move_id="154" />
+	<move move_id="155" />
+</tactic>
+</all_tactic>

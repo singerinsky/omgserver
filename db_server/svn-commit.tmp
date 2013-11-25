@@ -1,0 +1,8 @@
+
+--This line, and those below, will be ignored--
+
+M    CDBMsgDispatcher.cpp
+M    CMakeFiles/db_server.dir/CXX.includecache
+M    CWorldEventHandler.cpp
+M    DBConnectionPool.cpp
+M    db_server

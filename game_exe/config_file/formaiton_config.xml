@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all_formation>
+	<formation formation_id="1" formation_name="3-4-1-2"
+		description="雷吉纳是该阵型的典型代表；进攻方式是长传、短传相结合，5中场的配置让对手难以找到明显的机会，快速的反击让对手头疼不已。"
+		att_buff="8" def_buff="2">
+		<position index="2" pos="29" />
+		<position index="3" pos="28" />
+		<position index="4" pos="27" />
+		<position index="5" pos="20" />
+		<position index="6" pos="19" />
+		<position index="7" pos="17" />
+		<position index="8" pos="16" />
+		<position index="9" pos="13" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="2" formation_name="3-4-2-1"
+		description="那不勒斯是该阵型的典型代表；3名前锋反抢能力出众，2名边路中场能上能下，双后腰牢牢扼守中路，这样的配置，对任何球队来说都很头疼。"
+		att_buff="9" def_buff="1">
+		<position index="2" pos="29" />
+		<position index="3" pos="28" />
+		<position index="4" pos="27" />
+		<position index="5" pos="20" />
+		<position index="6" pos="19" />
+		<position index="7" pos="17" />
+		<position index="8" pos="16" />
+		<position index="9" pos="9" />
+		<position index="10" pos="7" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="3" formation_name="3-4-3(1)"
+		description="美洲狮是该阵型的典型代表；进攻以短传为主，3名前锋和4名中场形成凌厉的攻势。" att_buff="9"
+		def_buff="1">
+		<position index="2" pos="29" />
+		<position index="3" pos="28" />
+		<position index="4" pos="27" />
+		<position index="5" pos="20" />
+		<position index="6" pos="19" />
+		<position index="7" pos="17" />
+		<position index="8" pos="16" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="4" formation_name="3-4-3(2)"
+		description="列特是该阵型的典型代表；进攻以短传为主，传统的快速反击打法。" att_buff="9" def_buff="1">
+		<position index="2" pos="29" />
+		<position index="3" pos="28" />
+		<position index="4" pos="27" />
+		<position index="5" pos="23" />
+		<position index="6" pos="20" />
+		<position index="7" pos="16" />
+		<position index="8" pos="13" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="6" formation_name="4-1-2-1-2(1)"
+		description="罗达JC是该阵型的典型代表；进攻方式是长传、短传相结合，中场菱形站位，前后腰的组织能力相对比较重要。"
+		att_buff="5" def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="23" />
+		<position index="7" pos="20" />
+		<position index="8" pos="16" />
+		<position index="9" pos="13" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="7" formation_name="4-1-2-1-2(2)"
+		description="AC米兰是该阵型的典型代表；进攻方式是长传、短传相结合，4名中场和2名边后卫的发挥将决定战局。"
+		att_buff="5" def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="23" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="13" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="8" formation_name="4-1-3-2"
+		description="纽约红牛是该阵型的典型代表；进攻以短传为主，稳守反击。" att_buff="5" def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="23" />
+		<position index="7" pos="20" />
+		<position index="8" pos="18" />
+		<position index="9" pos="16" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="9" formation_name="4-1-4-1"
+		description="西汉姆联是该阵型的典型代表；进攻方式是长传、短传相结合，5名硬朗中场能攻能守，当之无愧的“铁锤”。"
+		att_buff="6" def_buff="4">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="23" />
+		<position index="7" pos="20" />
+		<position index="8" pos="19" />
+		<position index="9" pos="17" />
+		<position index="10" pos="16" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="10" formation_name="4-2-2-2"
+		description="圣保罗是该阵型的典型代表；进攻以短传为主，双前腰负责组织进攻，双后腰负责攻防的转换。" att_buff="5"
+		def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="24" />
+		<position index="7" pos="22" />
+		<position index="8" pos="14" />
+		<position index="9" pos="12" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="11" formation_name="4-2-3-1(1)"
+		description="拜仁慕尼黑是该阵型的典型代表；进攻以短传为主，两翼齐飞+中路插上是其惯用打法。" att_buff="6"
+		def_buff="4">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="24" />
+		<position index="7" pos="22" />
+		<position index="8" pos="14" />
+		<position index="9" pos="13" />
+		<position index="10" pos="12" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="12" formation_name="4-2-3-1(2)"
+		description="皇家马德里是该阵型的典型代表；进攻以短传快攻为主，传球手+双边锋的个人能力是杀手锏。" att_buff="6"
+		def_buff="4">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="24" />
+		<position index="7" pos="22" />
+		<position index="8" pos="20" />
+		<position index="9" pos="16" />
+		<position index="10" pos="13" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="13" formation_name="4-3-1-2"
+		description="博卡青年是该阵型的典型代表；进攻方式是长传、短传相结合，前腰是组织和进攻核心，控制着场上节奏。"
+		att_buff="5" def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="19" />
+		<position index="7" pos="18" />
+		<position index="8" pos="17" />
+		<position index="9" pos="13" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="14" formation_name="4-3-2-1"
+		description="巴黎圣日耳曼是该阵型的典型代表；进攻以短传为主，5名中场通过传递推进到现场，配合以2名边后卫的助攻。"
+		att_buff="6" def_buff="4">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="19" />
+		<position index="7" pos="18" />
+		<position index="8" pos="17" />
+		<position index="9" pos="9" />
+		<position index="10" pos="7" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="15" formation_name="4-3-3(1)"
+		description="费耶诺德是该阵型的典型代表；进攻以短传为主，标准的荷兰攻势足球。" att_buff="7" def_buff="3">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="19" />
+		<position index="7" pos="18" />
+		<position index="8" pos="17" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="16" formation_name="4-3-3(2)"
+		description="巴塞罗那是该阵型的典型代表；进攻以短传为主，跑位灵活、配合炉火纯青，克鲁伊夫推崇的全攻全守足球。"
+		att_buff="7" def_buff="3">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="23" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="17" formation_name="4-3-3(3)"
+		description="布莱克浦是该阵型的典型代表；进攻方式是长传、短传相结合，3名后腰负责组织攻防。" att_buff="7"
+		def_buff="3">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="24" />
+		<position index="7" pos="22" />
+		<position index="8" pos="18" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="18" formation_name="4-3-3(4)"
+		description="阿森纳是该阵型的典型代表；进攻以短传为主，边路冲击+中前场换位是其特色。" att_buff="7"
+		def_buff="3">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="19" />
+		<position index="7" pos="17" />
+		<position index="8" pos="13" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="19" formation_name="4-4-1-1(1)"
+		description="曼联是该阵型的典型代表；进攻方式是长传、短传相结合，两翼齐飞、边路传中是其特色打法。" att_buff="5"
+		def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="20" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="16" />
+		<position index="10" pos="8" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="20" formation_name="4-4-1-1(2)"
+		description="托特纳姆热刺是该阵型的典型代表；进攻以短传为主，两翼齐飞+中路推进是其主要特点。" att_buff="5"
+		def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="20" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="16" />
+		<position index="10" pos="13" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="21" formation_name="4-4-2(1)"
+		description="凯泽斯劳滕是该阵型的典型代表；进攻方式是长传、短传相结合，稳健的防线、强悍的中场以及把握机会出色的前锋，共同塑造出德国风格的全攻全守战术。"
+		att_buff="5" def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="20" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="16" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="22" formation_name="4-4-2(2)"
+		description="国际米兰是该阵型的典型代表；进攻方式是长传、短传相结合，两翼齐飞+攻守兼备的中场是主要特点。" att_buff="5"
+		def_buff="5">
+		<position index="2" pos="30" />
+		<position index="3" pos="29" />
+		<position index="4" pos="27" />
+		<position index="5" pos="26" />
+		<position index="6" pos="24" />
+		<position index="7" pos="22" />
+		<position index="8" pos="20" />
+		<position index="9" pos="16" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="24" formation_name="5-2-1-2"
+		description="维冈竞技是该阵型的典型代表；进攻以短传为主，2名边后卫的发挥对比赛结果有着至关重要的影响。" att_buff="4"
+		def_buff="6">
+		<position index="2" pos="25" />
+		<position index="3" pos="29" />
+		<position index="4" pos="28" />
+		<position index="5" pos="27" />
+		<position index="6" pos="21" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="13" />
+		<position index="10" pos="4" />
+		<position index="11" pos="2" />
+	</formation>
+
+	<formation formation_id="25" formation_name="5-2-2-1"
+		description="卡塔尼亚是该阵型的典型代表；双后腰+5后卫的目的只有一个：立足防守，快速反击。" att_buff="3"
+		def_buff="7">
+		<position index="2" pos="25" />
+		<position index="3" pos="29" />
+		<position index="4" pos="28" />
+		<position index="5" pos="27" />
+		<position index="6" pos="21" />
+		<position index="7" pos="19" />
+		<position index="8" pos="17" />
+		<position index="9" pos="10" />
+		<position index="10" pos="3" />
+		<position index="11" pos="6" />
+	</formation>
+
+	<formation formation_id="27" formation_name="5-4-1(1)"
+		description="帕丘卡是该阵型的典型代表；进攻以短传为主，8名球员囤积中后场，力图通过阵地战推进到对手后场。" att_buff="3"
+		def_buff="7">
+		<position index="2" pos="25" />
+		<position index="3" pos="29" />
+		<position index="4" pos="28" />
+		<position index="5" pos="27" />
+		<position index="6" pos="21" />
+		<position index="7" pos="23" />
+		<position index="8" pos="20" />
+		<position index="9" pos="16" />
+		<position index="10" pos="13" />
+		<position index="11" pos="3" />
+	</formation>
+
+	<formation formation_id="28" formation_name="5-4-1(2)"
+		description="亚特兰特是该阵型的典型代表；进攻以短传为主，4中场和5后卫形成的防线牢不可破。" att_buff="3"
+		def_buff="7">
+		<position index="2" pos="25" />
+		<position index="3" pos="29" />
+		<position index="4" pos="28" />
+		<position index="5" pos="27" />
+		<position index="6" pos="21" />
+		<position index="7" pos="20" />
+		<position index="8" pos="19" />
+		<position index="9" pos="17" />
+		<position index="10" pos="16" />
+		<position index="11" pos="3" />
+	</formation>
+
+
+
+</all_formation>

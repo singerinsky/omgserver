@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<round_typ>
+
+<round number="3">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="45" /> 
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="45" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="101">
+	<config typ="1" time="0" home_away_player_typ="1" time_interval="0" />
+	<config typ="5" time="15" home_away_player_typ="2" time_interval="12" /> 
+  
+  	<config typ="0" time="35" home_away_player_typ="1" time_interval="23" />
+   
+  	<config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  	<config typ="0" time="68" home_away_player_typ="1" time_interval="13" />  
+  
+  	<config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  	<config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="102">
+  	<config typ="1" time="0" home_away_player_typ="1" time_interval="0" />
+	<config typ="5" time="12" home_away_player_typ="2" time_interval="12" /> 
+  
+  	<config typ="0" time="35" home_away_player_typ="1" time_interval="23" />
+   
+  	<config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  	<config typ="0" time="68" home_away_player_typ="1" time_interval="13" />  
+  
+  	<config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  	<config typ="4" time="92" home_away_player_typ="2" time_interval="2" />  
+</round>
+
+<round number="6">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="5" time="12" home_away_player_typ="2" time_interval="12" /> 
+  
+  <config typ="0" time="35" home_away_player_typ="0" time_interval="23" />
+  <config typ="3" time="44" home_away_player_typ="3" time_interval="9" />
+   
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  <config typ="0" time="68" home_away_player_typ="0" time_interval="13" /> 
+  <config typ="0" time="75" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="84" home_away_player_typ="0" time_interval="9" /> 
+  <config typ="0" time="87" home_away_player_typ="3" time_interval="3" /> 
+  
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="7">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="5" time="12" home_away_player_typ="2" time_interval="12" />
+  
+  <config typ="0" time="18" home_away_player_typ="0" time_interval="6" /> 
+  <config typ="0" time="25" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="3" time="44" home_away_player_typ="3" time_interval="7" /> 
+  
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="1" />
+  
+  <config typ="0" time="52" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="68" home_away_player_typ="0" time_interval="16" /> 
+  <config typ="0" time="84" home_away_player_typ="0" time_interval="9" /> 
+  <config typ="0" time="87" home_away_player_typ="3" time_interval="3" />
+   
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="8">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="5" time="12" home_away_player_typ="2" time_interval="12" /> 
+  
+  <config typ="0" time="25" home_away_player_typ="0" time_interval="13" /> 
+  <config typ="0" time="37" home_away_player_typ="0" time_interval="12" /> 
+  <config typ="3" time="44" home_away_player_typ="3" time_interval="7" /> 
+  
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  <config typ="0" time="50" home_away_player_typ="0" time_interval="5" />
+  <config typ="0" time="60" home_away_player_typ="0" time_interval="10" />
+  <config typ="0" time="68" home_away_player_typ="0" time_interval="16" /> 
+  <config typ="0" time="75" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="87" home_away_player_typ="3" time_interval="3" /> 
+  
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="9">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="5" time="12" home_away_player_typ="2" time_interval="12" />
+  
+  <config typ="0" time="18" home_away_player_typ="0" time_interval="6" /> 
+  <config typ="0" time="25" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="37" home_away_player_typ="0" time_interval="12" /> 
+  <config typ="3" time="44" home_away_player_typ="3" time_interval="7" /> 
+  
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  <config typ="0" time="55" home_away_player_typ="0" time_interval="10" />
+  <config typ="0" time="68" home_away_player_typ="0" time_interval="13" /> 
+  <config typ="0" time="75" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="84" home_away_player_typ="0" time_interval="9" /> 
+  <config typ="0" time="87" home_away_player_typ="3" time_interval="3" /> 
+  
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="10">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="5" time="12" home_away_player_typ="2" time_interval="12" />
+  
+  <config typ="0" time="18" home_away_player_typ="0" time_interval="6" /> 
+  <config typ="0" time="25" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="37" home_away_player_typ="0" time_interval="12" /> 
+  <config typ="3" time="44" home_away_player_typ="3" time_interval="7" /> 
+  
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  <config typ="0" time="48" home_away_player_typ="0" time_interval="3" />
+  <config typ="0" time="52" home_away_player_typ="0" time_interval="3" /> 
+  <config typ="0" time="68" home_away_player_typ="0" time_interval="16" /> 
+  <config typ="0" time="75" home_away_player_typ="3" time_interval="7" /> 
+  <config typ="0" time="84" home_away_player_typ="3" time_interval="9" /> 
+  <config typ="0" time="87" home_away_player_typ="3" time_interval="3" /> 
+  
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="11">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="0" time="10" home_away_player_typ="2" time_interval="10" />
+  
+  <config typ="0" time="15" home_away_player_typ="0" time_interval="5" /> 
+  <config typ="0" time="19" home_away_player_typ="0" time_interval="4" /> 
+  <config typ="0" time="27" home_away_player_typ="0" time_interval="8" /> 
+  <config typ="0" time="36" home_away_player_typ="0" time_interval="9" /> 
+  <config typ="3" time="43" home_away_player_typ="3" time_interval="7" /> 
+  
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="2" /> 
+  
+  <config typ="0" time="48" home_away_player_typ="0" time_interval="3" />
+  <config typ="0" time="52" home_away_player_typ="0" time_interval="4" /> 
+  <config typ="0" time="61" home_away_player_typ="0" time_interval="9" /> 
+  <config typ="0" time="69" home_away_player_typ="3" time_interval="8" /> 
+  <config typ="0" time="78" home_away_player_typ="3" time_interval="9" /> 
+  <config typ="0" time="87" home_away_player_typ="3" time_interval="9" /> 
+  
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="3" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+<round number="12">
+  <config typ="1" time="0" home_away_player_typ="1" time_interval="0" /> 
+  <config typ="0" time="9" home_away_player_typ="2" time_interval="9" />
+  
+  <config typ="0" time="15" home_away_player_typ="0" time_interval="6" /> 
+  <config typ="0" time="20" home_away_player_typ="0" time_interval="5" /> 
+  <config typ="0" time="27" home_away_player_typ="0" time_interval="17" /> 
+  <config typ="0" time="35" home_away_player_typ="0" time_interval="8" /> 
+  <config typ="3" time="44" home_away_player_typ="3" time_interval="9" />
+  
+  <config typ="2" time="45" home_away_player_typ="2" time_interval="1" /> 
+  
+  <config typ="0" time="48" home_away_player_typ="0" time_interval="3" />
+  <config typ="0" time="53" home_away_player_typ="0" time_interval="5" /> 
+  <config typ="0" time="60" home_away_player_typ="0" time_interval="7" /> 
+  <config typ="0" time="69" home_away_player_typ="0" time_interval="9" /> 
+  <config typ="0" time="77" home_away_player_typ="3" time_interval="8" /> 
+  <config typ="0" time="85" home_away_player_typ="3" time_interval="8" />
+  <config typ="0" time="89" home_away_player_typ="3" time_interval="4" />
+   
+  <config typ="4" time="90" home_away_player_typ="1" time_interval="1" /> 
+  <config typ="4" time="92" home_away_player_typ="2" time_interval="2" /> 
+</round>
+
+</round_typ>
+</config>

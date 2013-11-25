@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../game_lib/libnet.a  CMakeFiles/net.dir/thread.o CMakeFiles/net.dir/epoll_handler.o CMakeFiles/net.dir/epoll_socket.o CMakeFiles/net.dir/socket_epoll.o CMakeFiles/net.dir/client_socket.o CMakeFiles/net.dir/serversocket.o
+/usr/bin/ranlib ../game_lib/libnet.a

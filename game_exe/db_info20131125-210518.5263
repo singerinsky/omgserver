@@ -1,0 +1,53 @@
+Log file created at: 2013/11/25 21:05:18
+Running on machine: localhost.localdomain
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1125 21:05:18.734416  5270 DBConnectionPool.h:34] Init database football_gl ip:0.0.0.0 port:3306
+I1125 21:05:18.810711  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.811609  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.812311  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.812918  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.813485  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.813956  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.814770  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.815436  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.816071  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.816588  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.817081  5270 DBConnectionPool.cpp:31] Create database pool success...
+I1125 21:05:18.817180  5270 CPoolThread.cpp:61] add new thread
+I1125 21:05:18.853734  5295 CWorldEventHandler.cpp:137] UPDATE c_fixture set flag= 0 where mid in(290240)
+I1125 21:05:18.853756  5295 CWorldEventHandler.cpp:138] DELETE FROM match_action where mid in (290240)
+I1125 21:05:18.853765  5295 CWorldEventHandler.cpp:139] update e_user set flag=0,zeit=1385384718+900 where typ=3 and flag=0 and mapping_id in(290240)
+I1125 21:05:21.792541  5273 epoll_handler.cpp:116] Accept connection17
+I1125 21:05:21.792577  5273 CDBMsgDispatcher.cpp:16] regsiter Server 2 1
+I1125 21:05:21.896565  5295 CWorldEventHandler.cpp:92] update c_fixture set flag = 1 where mid in(290240)
+I1125 21:05:21.913210  5274 CDBhandlerJob.cpp:30]  db query start 711:9704
+I1125 21:05:21.935339  5274 CDBhandlerJob.cpp:429] SELECT buff FROM c_tactic_buff WHERE cid =711 AND tactic_id =5
+I1125 21:05:21.936621  5274 CDBhandlerJob.cpp:429] SELECT buff FROM c_tactic_buff WHERE cid =711 AND tactic_id =10
+I1125 21:05:21.936908  5274 CDBhandlerJob.cpp:429] SELECT buff FROM c_tactic_buff WHERE cid =711 AND tactic_id =6
+I1125 21:05:21.937160  5274 CDBhandlerJob.cpp:429] SELECT buff FROM c_tactic_buff WHERE cid =711 AND tactic_id =4
+E1125 21:05:21.937410  5274 CDBhandlerJob.cpp:186] NO PLAYER DATEA..................711:290240
+E1125 21:05:21.952376  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.952627  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.952836  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.952996  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.953145  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.953321  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.953528  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.953706  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.953893  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.954061  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.954205  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.954393  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.954571  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.954716  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.954874  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.955044  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+I1125 21:05:21.956086  5274 CDBhandlerJob.cpp:429] SELECT buff FROM c_tactic_buff WHERE cid =9704 AND tactic_id =1
+E1125 21:05:21.956321  5274 CDBhandlerJob.cpp:186] NO PLAYER DATEA..................9704:290240
+E1125 21:05:21.956521  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.956733  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.956903  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.957079  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.957257  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E1125 21:05:21.957458  5274 CDBhandlerJob.cpp:221] player 0 can't found ..
+E

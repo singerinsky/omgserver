@@ -1,0 +1,306 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCHITECTURE_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	181;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	184;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	187;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	190;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	194;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	172;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	175;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	178;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	181;"	d	file:
+ARCHITECTURE_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	185;"	d	file:
+AddNewMatch	CServerManage.h	/^	ServerInfo* AddNewMatch(int mid) {$/;"	f	class:CServerManage
+AddProcessThread	CDBTaskManage.h	/^	void AddProcessThread(CDBQueryhandlerJob* job){$/;"	f	class:CDBTaskManage
+AddTask	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::AddTask(CMsgEvent* event) {$/;"	f	class:CDBQueryhandlerJob
+AddTaskEvent	CDBTaskManage.h	/^	void AddTaskEvent(CMsgEvent* event){$/;"	f	class:CDBTaskManage
+CDBHANDLERJOB_H_	CDBhandlerJob.h	9;"	d
+CDBMSG_DISPATCHER	CDBMsgDispatcher.h	2;"	d
+CDBMsgDispatcher	CDBMsgDispatcher.cpp	/^CDBMsgDispatcher::CDBMsgDispatcher(){$/;"	f	class:CDBMsgDispatcher
+CDBMsgDispatcher	CDBMsgDispatcher.h	/^class CDBMsgDispatcher: public IMsgDispatcher{$/;"	c
+CDBQueryhandlerJob	CDBhandlerJob.h	/^	CDBQueryhandlerJob(DBConnectionPool* pool,IMsgDispatcher* dispatcher,int number):_conn(*pool,true){$/;"	f	class:CDBQueryhandlerJob
+CDBQueryhandlerJob	CDBhandlerJob.h	/^class CDBQueryhandlerJob: public omg::IJob {$/;"	c
+CDBTASKMANAGE_H_	CDBTaskManage.h	9;"	d
+CDBTaskManage	CDBTaskManage.h	/^	CDBTaskManage(){$/;"	f	class:CDBTaskManage
+CDBTaskManage	CDBTaskManage.h	/^class CDBTaskManage {$/;"	c
+CMAKE_BINARY_DIR	Makefile	/^CMAKE_BINARY_DIR = \/home\/gl\/server\/c_server\/omgserver\/db_server$/;"	m
+CMAKE_BINARY_DIR	objs/common/Makefile	/^CMAKE_BINARY_DIR = \/home\/gl\/server\/c_server\/omgserver\/db_server$/;"	m
+CMAKE_BINARY_DIR	objs/net/Makefile	/^CMAKE_BINARY_DIR = \/home\/gl\/server\/c_server\/omgserver\/db_server$/;"	m
+CMAKE_COMMAND	Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	objs/common/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	objs/net/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	Makefile	/^CMAKE_SOURCE_DIR = \/home\/gl\/server\/c_server\/omgserver\/db_server$/;"	m
+CMAKE_SOURCE_DIR	objs/common/Makefile	/^CMAKE_SOURCE_DIR = \/home\/gl\/server\/c_server\/omgserver\/db_server$/;"	m
+CMAKE_SOURCE_DIR	objs/net/Makefile	/^CMAKE_SOURCE_DIR = \/home\/gl\/server\/c_server\/omgserver\/db_server$/;"	m
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	40;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	54;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	65;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	68;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	74;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	45;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	56;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	59;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	68;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	71;"	d	file:
+COMPILER_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
+CServerManage	CServerManage.h	/^	CServerManage() {$/;"	f	class:CServerManage
+CServerManage	CServerManage.h	/^class CServerManage {$/;"	c
+CWORLDEVENTHANDLER_H_	CWorldEventHandler.h	9;"	d
+CWorldEventHandler	CWorldEventHandler.cpp	/^CWorldEventHandler::CWorldEventHandler(DBConnectionPool* pool,IMsgDispatcher* msg_dispatcher):_connection(*pool,true),_msg_dispatcher(msg_dispatcher) {$/;"	f	class:CWorldEventHandler
+CWorldEventHandler	CWorldEventHandler.h	/^class CWorldEventHandler: public omg::IJob {$/;"	c
+DBCONNECTIONPOOL_H_	DBConnectionPool.h	9;"	d
+DBConnectionPool	DBConnectionPool.h	/^	DBConnectionPool(DBServerInfo* server_info):$/;"	f	class:DBConnectionPool
+DBConnectionPool	DBConnectionPool.h	/^class DBConnectionPool: public mysqlpp::ConnectionPool {$/;"	c
+DBEVENT_H_	DBEvent.h	9;"	d
+DBServerInfo	DBConnectionPool.h	/^struct DBServerInfo{$/;"	s
+ExecuteJob	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::ExecuteJob() {$/;"	f	class:CDBQueryhandlerJob
+ExecuteJob	CWorldEventHandler.cpp	/^void CWorldEventHandler::ExecuteJob(){$/;"	f	class:CWorldEventHandler
+GetInstance	CDBTaskManage.h	/^	static CDBTaskManage* GetInstance(){$/;"	f	class:CDBTaskManage
+GetInstance	CServerManage.h	/^	static CServerManage* GetInstance() {$/;"	f	class:CServerManage
+GetInstance	DBConnectionPool.h	/^	static DBConnectionPool* GetInstance(){$/;"	f	class:DBConnectionPool
+GetMatchRunServer	CServerManage.h	/^	ServerInfo* GetMatchRunServer(int mid) {$/;"	f	class:CServerManage
+GetServerByIp	CServerManage.h	/^	ServerInfo* GetServerByIp(std::string ip){$/;"	f	class:CServerManage
+GetTaskInProcess	CDBhandlerJob.h	/^	int		GetTaskInProcess(){$/;"	f	class:CDBQueryhandlerJob
+ID_VOID_MAIN	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+MSG_INIT_MATCH	DBEvent.h	/^	MSG_INIT_MATCH		=2000, \/\/init match from db$/;"	e	enum:__anon1
+MSG_TYPE_GTODB_PLAYER_UPDATE	DBEvent.h	/^	MSG_TYPE_GTODB_PLAYER_UPDATE	= 2013\/\/update player info$/;"	e	enum:__anon1
+MSG_TYPE_GTODB_SERVER_MATCH_END	DBEvent.h	/^	MSG_TYPE_GTODB_SERVER_MATCH_END	= 2010,\/\/tell db to end game$/;"	e	enum:__anon1
+MSG_TYPE_MATCH_INFO	DBEvent.h	/^	MSG_TYPE_MATCH_INFO	,$/;"	e	enum:__anon1
+MSG_TYPE_MATCH_MOVE	DBEvent.h	/^	MSG_TYPE_MATCH_MOVE	= 2008,	\/\/tell game server to start move$/;"	e	enum:__anon1
+MSG_TYPE_SERVER_REGISTER	DBEvent.h	/^	MSG_TYPE_SERVER_REGISTER,$/;"	e	enum:__anon1
+MSG_TYPE_SERVER_REQ	DBEvent.h	/^    MSG_TYPE_SERVER_REQ     =2001,\/\/server to server msg begin$/;"	e	enum:__anon1
+MsgGameToDbServerMatchEnd	DBEvent.h	/^	MsgGameToDbServerMatchEnd(){$/;"	f	struct:MsgGameToDbServerMatchEnd
+MsgGameToDbServerMatchEnd	DBEvent.h	/^struct MsgGameToDbServerMatchEnd:MsgBase{$/;"	s
+MsgGameToDbServerPlayerUpdate	DBEvent.h	/^	MsgGameToDbServerPlayerUpdate(){$/;"	f	struct:MsgGameToDbServerPlayerUpdate
+MsgGameToDbServerPlayerUpdate	DBEvent.h	/^struct MsgGameToDbServerPlayerUpdate:MsgBase{$/;"	s
+MsgInitMatch	DBEvent.h	/^        MsgInitMatch(){$/;"	f	struct:MsgInitMatch
+MsgInitMatch	DBEvent.h	/^ struct MsgInitMatch:MsgBase{$/;"	s
+MsgMatchTeamInfo	DBEvent.h	/^	MsgMatchTeamInfo(){$/;"	f	struct:MsgMatchTeamInfo
+MsgMatchTeamInfo	DBEvent.h	/^struct MsgMatchTeamInfo:MsgBase{$/;"	s
+MsgMoveOperator	DBEvent.h	/^	MsgMoveOperator(){$/;"	f	struct:MsgMoveOperator
+MsgMoveOperator	DBEvent.h	/^struct MsgMoveOperator{$/;"	s
+MsgPlayerInfo	DBEvent.h	/^	MsgPlayerInfo(){$/;"	f	struct:MsgPlayerInfo
+MsgPlayerInfo	DBEvent.h	/^struct MsgPlayerInfo{$/;"	s
+MsgRunMatch	DBEvent.h	/^	 MsgRunMatch(){$/;"	f	struct:MsgRunMatch
+MsgRunMatch	DBEvent.h	/^ struct MsgRunMatch:MsgBase{$/;"	s
+MsgServerRegister	DBEvent.h	/^        MsgServerRegister(){$/;"	f	struct:MsgServerRegister
+MsgServerRegister	DBEvent.h	/^struct MsgServerRegister: MsgBase{$/;"	s
+MsgServerReq	DBEvent.h	/^        MsgServerReq(){$/;"	f	struct:MsgServerReq
+MsgServerReq	DBEvent.h	/^struct MsgServerReq: MsgBase{$/;"	s
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	101;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	143;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	95;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	98;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	131;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	83;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	86;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	89;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+PickServerToRunMatch	CServerManage.h	/^	ServerInfo* PickServerToRunMatch() {$/;"	f	class:CServerManage
+PlayerSkill	DBEvent.h	/^struct PlayerSkill{$/;"	s
+QueryFixtureInfo	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::QueryFixtureInfo(int mid, int& home_cid, int& away_cid) {$/;"	f	class:CDBQueryhandlerJob
+QueryMatchOperate	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::QueryMatchOperate(int mid, int cid, int formation[],$/;"	f	class:CDBQueryhandlerJob
+QueryPlayerAttrInfo	CDBhandlerJob.cpp	/^int  CDBQueryhandlerJob::QueryPlayerAttrInfo(int pid, MsgPlayerInfo& info) {$/;"	f	class:CDBQueryhandlerJob
+QueryTeamSkillInfo	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::QueryTeamSkillInfo(int cid, MsgMoveOperator& team_op) {$/;"	f	class:CDBQueryhandlerJob
+RM	Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	objs/common/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	objs/net/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RegisterServer	CServerManage.h	/^	void RegisterServer(int index, CSession* conn) {$/;"	f	class:CServerManage
+RemoveMatch	CServerManage.h	/^	void RemoveMatch(int server_index,int mid){$/;"	f	class:CServerManage
+RemoveServer	CServerManage.h	/^	void RemoveServer(int index){$/;"	f	class:CServerManage
+SERVER_ITR	CServerManage.h	/^	typedef std::map<int,ServerInfo*>::iterator SERVER_ITR;$/;"	t	class:CServerManage
+SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	objs/common/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	objs/net/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SQLConnection	DBConnectionPool.h	65;"	d
+SQLPool	DBConnectionPool.h	66;"	d
+SUFFIXES	Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	objs/common/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	objs/net/Makefile	/^SUFFIXES =$/;"	m
+ServerInfo	CServerManage.h	/^struct ServerInfo {$/;"	s
+TeamSkill	DBEvent.h	/^struct TeamSkill{$/;"	s
+UpdateMatchResultInfo	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::UpdateMatchResultInfo(MsgGameToDbServerMatchEnd* msg){$/;"	f	class:CDBQueryhandlerJob
+UpdateMatchStatus	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::UpdateMatchStatus(int mid){$/;"	f	class:CDBQueryhandlerJob
+UpdatePlayersMatchInfo	CDBhandlerJob.cpp	/^void CDBQueryhandlerJob::UpdatePlayersMatchInfo(MsgGameToDbServerPlayerUpdate* msg){$/;"	f	class:CDBQueryhandlerJob
+_SERVER_MANAGE_H	CServerManage.h	2;"	d
+_conn	CDBhandlerJob.h	/^	mysqlpp::ScopedConnection _conn;$/;"	m	class:CDBQueryhandlerJob
+_connection	CWorldEventHandler.h	/^	mysqlpp::ScopedConnection _connection;$/;"	m	class:CWorldEventHandler
+_id	CDBhandlerJob.h	/^	int  _id;$/;"	m	class:CDBQueryhandlerJob
+_index	DBEvent.h	/^        int _index;$/;"	m	struct:MsgServerRegister
+_index	DBEvent.h	/^        int _index;$/;"	m	struct:MsgServerReq
+_job_list	CDBTaskManage.h	/^	std::list<CDBQueryhandlerJob*> _job_list;$/;"	m	class:CDBTaskManage
+_lock	CServerManage.h	/^	omg::MutexLock _lock;$/;"	m	class:CServerManage
+_m_instance	CDBTaskManage.cpp	/^CDBTaskManage* CDBTaskManage::_m_instance;$/;"	m	class:CDBTaskManage	file:
+_m_instance	CDBTaskManage.h	/^	static CDBTaskManage* _m_instance;$/;"	m	class:CDBTaskManage
+_m_instance	CServerManage.cpp	/^CServerManage* CServerManage::_m_instance;$/;"	m	class:CServerManage	file:
+_m_instance	CServerManage.h	/^	static CServerManage* _m_instance;$/;"	m	class:CServerManage
+_m_instance	DBConnectionPool.cpp	/^DBConnectionPool* DBConnectionPool::_m_instance;$/;"	m	class:DBConnectionPool	file:
+_m_instance	DBConnectionPool.h	/^	static DBConnectionPool *_m_instance;$/;"	m	class:DBConnectionPool
+_match_list	CServerManage.h	/^	std::set<int> _match_list;$/;"	m	struct:ServerInfo
+_msg_dispatcher	CDBhandlerJob.h	/^	IMsgDispatcher* _msg_dispatcher;$/;"	m	class:CDBQueryhandlerJob
+_msg_dispatcher	CWorldEventHandler.h	/^	IMsgDispatcher* _msg_dispatcher;$/;"	m	class:CWorldEventHandler
+_msg_queue	CDBhandlerJob.h	/^	omg::ConcurrenceQueue<CMsgEvent,omg::MutexLock,omg::NullLock>	_msg_queue;$/;"	m	class:CDBQueryhandlerJob
+_next_process	CDBTaskManage.h	/^	std::list<CDBQueryhandlerJob*>::iterator _next_process;$/;"	m	class:CDBTaskManage
+_server_map	CServerManage.h	/^	std::map<int,ServerInfo*> _server_map;$/;"	m	class:CServerManage
+_server_typ	DBEvent.h	/^        int _server_typ;$/;"	m	struct:MsgServerReq
+_server_type	DBEvent.h	/^        int _server_type;$/;"	m	struct:MsgServerRegister
+_task_all	CDBhandlerJob.h	/^	int  _task_all;$/;"	m	class:CDBQueryhandlerJob
+_task_processed	CDBhandlerJob.h	/^	int  _task_processed;$/;"	m	class:CDBQueryhandlerJob
+add_msg_to_queue	CDBMsgDispatcher.cpp	/^void CDBMsgDispatcher::add_msg_to_queue(CMsgEvent* event,EPollSocket* socket){$/;"	f	class:CDBMsgDispatcher
+affect_value	DBEvent.h	/^	int affect_value;$/;"	m	struct:TeamSkill
+att_value	DBEvent.h	/^	int		att_value;$/;"	m	struct:MsgPlayerInfo
+attr	DBEvent.h	/^	unsigned short attr[19];$/;"	m	struct:MsgPlayerInfo
+attr_numbers	DBEvent.h	/^	int attr_numbers;$/;"	m	struct:MsgPlayerInfo
+away_cid	DBEvent.h	/^	int away_cid;$/;"	m	struct:MsgGameToDbServerMatchEnd
+away_score	DBEvent.h	/^	unsigned short away_score;$/;"	m	struct:MsgGameToDbServerMatchEnd
+chance	DBEvent.h	/^	int chance;$/;"	m	struct:TeamSkill
+cid	DBEvent.h	/^        int cid;$/;"	m	struct:MsgInitMatch
+cond	DBEvent.h	/^	unsigned short cond;$/;"	m	struct:MsgPlayerInfo
+connection	CServerManage.h	/^	CSession *connection;$/;"	m	struct:ServerInfo
+conns_in_use	DBConnectionPool.h	/^	unsigned int conns_in_use;$/;"	m	class:DBConnectionPool
+create	DBConnectionPool.cpp	/^mysqlpp::Connection * DBConnectionPool::create(){$/;"	f	class:DBConnectionPool
+data	DBEvent.h	/^	char	data[1024];$/;"	m	struct:MsgGameToDbServerPlayerUpdate
+db_	DBConnectionPool.h	/^	std::string db_;$/;"	m	class:DBConnectionPool
+db_name	DBConnectionPool.h	/^	std::string	db_name;$/;"	m	struct:DBServerInfo
+def_value	DBEvent.h	/^	int		def_value;$/;"	m	struct:MsgPlayerInfo
+destroy	DBConnectionPool.cpp	/^void DBConnectionPool::destroy(mysqlpp::Connection* conn){$/;"	f	class:DBConnectionPool
+dispatch_msg	CDBMsgDispatcher.cpp	/^void CDBMsgDispatcher::dispatch_msg(){$/;"	f	class:CDBMsgDispatcher
+formation1	DBEvent.h	/^	int	formation1[16];$/;"	m	struct:MsgMatchTeamInfo
+formation2	DBEvent.h	/^	int	formation2[16];$/;"	m	struct:MsgMatchTeamInfo
+formation_id	DBEvent.h	/^	int	formation_id;$/;"	m	struct:MsgMoveOperator
+formation_level	DBEvent.h	/^	int formation_level;$/;"	m	struct:MsgMoveOperator
+g_db_server_info	main.cpp	/^DBServerInfo g_db_server_info;$/;"	v
+getId	CDBhandlerJob.h	/^	int getId(){$/;"	f	class:CDBQueryhandlerJob
+home_cid	DBEvent.h	/^	int	home_cid;$/;"	m	struct:MsgGameToDbServerMatchEnd
+home_score	DBEvent.h	/^	unsigned short home_score;$/;"	m	struct:MsgGameToDbServerMatchEnd
+index	CServerManage.h	/^	int index;$/;"	m	struct:ServerInfo
+info_arch	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+init_server_log	main.cpp	/^void init_server_log(int argc, char** argv){$/;"	f
+is_gk	DBEvent.h	/^	short is_gk;$/;"	m	struct:MsgPlayerInfo
+listening_port	DBConnectionPool.h	/^	int			listening_port;$/;"	m	struct:DBServerInfo
+load_db_config	main.cpp	/^void load_db_config(){$/;"	f
+main	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	main.cpp	/^int main(int argc,char** argv){$/;"	f
+max_idle_time	DBConnectionPool.h	/^	unsigned int max_idle_time(){$/;"	f	class:DBConnectionPool
+mid	DBEvent.h	/^	 int mid;$/;"	m	struct:MsgRunMatch
+mid	DBEvent.h	/^	int mid;$/;"	m	struct:MsgGameToDbServerMatchEnd
+mid	DBEvent.h	/^	int mid;$/;"	m	struct:MsgGameToDbServerPlayerUpdate
+mid	DBEvent.h	/^	int mid;$/;"	m	struct:MsgMatchTeamInfo
+mid	DBEvent.h	/^        int mid;$/;"	m	struct:MsgInitMatch
+my_debug	main.cpp	12;"	d	file:
+op1	DBEvent.h	/^	MsgMoveOperator	op1;$/;"	m	struct:MsgMatchTeamInfo
+op2	DBEvent.h	/^	MsgMoveOperator	op2;$/;"	m	struct:MsgMatchTeamInfo
+op_cid	DBEvent.h	/^        int op_cid;$/;"	m	struct:MsgInitMatch
+password	DBConnectionPool.h	/^	std::string	password;$/;"	m	struct:DBServerInfo
+password_	DBConnectionPool.h	/^	std::string	password_;$/;"	m	class:DBConnectionPool
+pid	DBEvent.h	/^	int pid;$/;"	m	struct:MsgPlayerInfo
+player_info	DBEvent.h	/^	MsgPlayerInfo	player_info[16];$/;"	m	struct:MsgMoveOperator
+player_name	DBEvent.h	/^	char player_name[20];$/;"	m	struct:MsgPlayerInfo
+player_skills	DBEvent.h	/^	PlayerSkill	   player_skills[10];$/;"	m	struct:MsgPlayerInfo
+port	DBConnectionPool.h	/^	int			port;$/;"	m	struct:DBServerInfo
+port_	DBConnectionPool.h	/^	int			port_;$/;"	m	class:DBConnectionPool
+pos_index	DBEvent.h	/^	int pos_index;$/;"	m	struct:MsgPlayerInfo
+propaganda_id	DBEvent.h	/^	int	propaganda_id;$/;"	m	struct:MsgMoveOperator
+server_	DBConnectionPool.h	/^	std::string server_;$/;"	m	class:DBConnectionPool
+server_ip	CServerManage.h	/^	std::string server_ip;$/;"	m	struct:ServerInfo
+server_ip	DBConnectionPool.h	/^	std::string server_ip;$/;"	m	struct:DBServerInfo
+skill_chance	DBEvent.h	/^	 unsigned short skill_chance;$/;"	m	struct:PlayerSkill
+skill_count	DBEvent.h	/^	unsigned short skill_count;$/;"	m	struct:MsgPlayerInfo
+skill_id	DBEvent.h	/^	 unsigned short skill_id;$/;"	m	struct:PlayerSkill
+skill_level	DBEvent.h	/^	 unsigned short skill_level;$/;"	m	struct:PlayerSkill
+strlen	DBEvent.h	/^	int strlen;$/;"	m	struct:MsgGameToDbServerPlayerUpdate
+tactic_id	DBEvent.h	/^	int	tactic_id;$/;"	m	struct:MsgMoveOperator
+tactic_id	DBEvent.h	/^	int tactic_id;$/;"	m	struct:TeamSkill
+team_skill_count	DBEvent.h	/^	int team_skill_count;$/;"	m	struct:MsgMoveOperator
+team_skills	DBEvent.h	/^	TeamSkill	team_skills[10];$/;"	m	struct:MsgMoveOperator
+uid	DBEvent.h	/^	int	uid;$/;"	m	struct:MsgMoveOperator
+user_	DBConnectionPool.h	/^	std::string	user_;$/;"	m	class:DBConnectionPool
+username	DBConnectionPool.h	/^	std::string	username;$/;"	m	struct:DBServerInfo
+~CDBMsgDispatcher	CDBMsgDispatcher.cpp	/^CDBMsgDispatcher::~CDBMsgDispatcher(){$/;"	f	class:CDBMsgDispatcher
+~CDBQueryhandlerJob	CDBhandlerJob.cpp	/^CDBQueryhandlerJob::~CDBQueryhandlerJob() {$/;"	f	class:CDBQueryhandlerJob
+~CDBTaskManage	CDBTaskManage.cpp	/^CDBTaskManage::~CDBTaskManage() {$/;"	f	class:CDBTaskManage
+~CWorldEventHandler	CWorldEventHandler.cpp	/^CWorldEventHandler::~CWorldEventHandler() {$/;"	f	class:CWorldEventHandler
+~DBConnectionPool	DBConnectionPool.cpp	/^DBConnectionPool::~DBConnectionPool() {$/;"	f	class:DBConnectionPool

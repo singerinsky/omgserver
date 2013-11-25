@@ -1,0 +1,4 @@
+Log file created at: 2013/11/25 21:05:18
+Running on machine: localhost.localdomain
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1125 21:05:18.656972  5261 main.cpp:145] Public key1234

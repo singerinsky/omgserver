@@ -1,0 +1,4 @@
+/home/gl/football/omgserver/objs/common/CMakeFiles/common.dir
+/home/gl/football/omgserver/game_server/build/CMakeFiles/game_server.dir
+/home/gl/football/omgserver/objs/net/CMakeFiles/net.dir
+/home/gl/football/omgserver/objs/soccer_ai/CMakeFiles/soccer_ai.dir

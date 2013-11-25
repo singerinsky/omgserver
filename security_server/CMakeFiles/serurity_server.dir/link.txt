@@ -1,0 +1,1 @@
+/usr/bin/c++   -g -Wall -g   CMakeFiles/serurity_server.dir/main.cpp.o  -o serurity_server -rdynamic -L/usr/local/lib -L../lib objs/net/libnet.a objs/common/libcommon.a -lgflags -lglog -Wl,-Bstatic -ltinyxml -Wl,-Bdynamic -lxml2 -lz -Wl,-rpath,/usr/local/lib:../lib 

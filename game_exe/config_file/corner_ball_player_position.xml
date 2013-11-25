@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all_formation>
+	<formation id="1" descrption="角球的配置文档">
+		<player att_def="1" position_index="1" pos_x="" pos_y="" />
+		<player att_def="1" position_index="2" pos_x="" pos_y="" />
+		<player att_def="1" position_index="3" pos_x="" pos_y="" />
+		<player att_def="1" position_index="4" pos_x="" pos_y="" />
+		<player att_def="1" position_index="5" pos_x="" pos_y="" />
+		<player att_def="1" position_index="6" pos_x="" pos_y="" />
+		<player att_def="1" position_index="7" pos_x="" pos_y="" />
+		<player att_def="1" position_index="8" pos_x="" pos_y="" />
+		<player att_def="1" position_index="9" pos_x="" pos_y="" />
+		<player att_def="1" position_index="10" pos_x="" pos_y="" />
+		<player att_def="1" position_index="11" pos_x="" pos_y="" />
+		<player att_def="2" position_index="1" pos_x="" pos_y="" />
+		<player att_def="2" position_index="2" pos_x="" pos_y="" />
+		<player att_def="2" position_index="3" pos_x="" pos_y="" />
+		<player att_def="2" position_index="4" pos_x="" pos_y="" />
+		<player att_def="2" position_index="5" pos_x="" pos_y="" />
+		<player att_def="2" position_index="6" pos_x="" pos_y="" />
+		<player att_def="2" position_index="7" pos_x="" pos_y="" />
+		<player att_def="2" position_index="8" pos_x="" pos_y="" />
+		<player att_def="2" position_index="9" pos_x="" pos_y="" />
+		<player att_def="2" position_index="10" pos_x="" pos_y="" />
+		<player att_def="2" position_index="11" pos_x="" pos_y="" />
+	</formation>
+</all_formation>

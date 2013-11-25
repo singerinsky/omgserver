@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<team_tactic_config>
+	<tactic tactic_id="1" tactic_name="中路推进" attr_affect_num="17">
+	</tactic>
+	<tactic tactic_id="2" tactic_name="左边路强攻" attr_affect_num="15">
+	</tactic>
+	<tactic tactic_id="3" tactic_name="右边路强攻" attr_affect_num="15">
+	</tactic>
+	<tactic tactic_id="4" tactic_name="两翼齐飞" attr_affect_num="22">
+	</tactic>
+	<tactic tactic_id="5" tactic_name="全线进攻" attr_affect_num="27">
+	</tactic>
+	<tactic tactic_id="6" tactic_name="龟缩防守" attr_affect_num="38">
+	</tactic>
+	<tactic tactic_id="7" tactic_name="前场逼抢" attr_affect_num="25">
+	</tactic>
+	<tactic tactic_id="8" tactic_name="后排插上" attr_affect_num="23">
+	</tactic>
+	<tactic tactic_id="9" tactic_name="快速反击" attr_affect_num="20">
+	</tactic>
+	<tactic tactic_id="10" tactic_name="中场控球" attr_affect_num="24">
+	</tactic>
+	<tactic tactic_id="11" tactic_name="声东击西" attr_affect_num="18">
+	</tactic>
+	<tactic tactic_id="12" tactic_name="混凝土防反" attr_affect_num="16">
+	</tactic>
+	<tactic tactic_id="13" tactic_name="宇宙队式控球" attr_affect_num="31">
+	</tactic>
+	<tactic tactic_id="14" tactic_name="银河队式快攻" attr_affect_num="34">
+	</tactic>
+	<tactic tactic_id="15" tactic_name="全攻全守" attr_affect_num="38">
+	</tactic>
+</team_tactic_config>
+

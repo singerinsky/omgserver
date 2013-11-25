@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../game_lib/libcommon.a  CMakeFiles/common.dir/IJob.o CMakeFiles/common.dir/CThread.o CMakeFiles/common.dir/MD5.o CMakeFiles/common.dir/CThreadManage.o CMakeFiles/common.dir/CPoolThread.o CMakeFiles/common.dir/JobDequeue.o CMakeFiles/common.dir/CTimerEventHandler.o CMakeFiles/common.dir/CEventThread.o CMakeFiles/common.dir/circular_buffer.o
+/usr/bin/ranlib ../game_lib/libcommon.a

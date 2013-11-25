@@ -1,0 +1,48 @@
+#!/bin/sh
+current_path=$(pwd)
+gate_server_path=${current_path}/gate_server
+gate_server_pid=$(ps gaux | grep "$gate_server_path" | grep -v grep| awk '{print $2}' )
+if [ -n "$gate_server_pid" ];then
+	echo "the runing gate_server's pid is:"$gate_server_pid
+	kill -9 $gate_server_pid
+	echo "gate server have been killed"
+else
+	echo "No gate server running...."
+fi
+
+sleep 1
+echo "starting db server"
+db_server_path=${current_path}/db_server
+db_server_pid=$(ps gaux | grep "$db_server_path" | grep -v grep | awk '{print $2}')
+if [ -n "$db_server_pid" ];then
+	echo "the runing db_server's pid is:"$db_server_pid
+	kill -9 $db_server_pid
+	echo "db server have been killed"
+else
+	echo "No db server running...."
+fi
+
+sleep 3
+echo "starting game server"
+
+game_server_path=${current_path}/game_server
+game_server_pid=$(ps gaux | grep "$game_server_path" | grep -v grep | awk '{print $2}')
+if [ -n "$game_server_pid" ];then
+	echo "the runing game_server's pid is:"$game_server_pid
+	kill -9 $game_server_pid
+	echo "game server have been killed"
+else
+	echo "No game server running...."
+fi
+
+
+
+
+
+
+
+
+
+
+
+

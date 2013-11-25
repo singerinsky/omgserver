@@ -1,0 +1,3 @@
+/home/gl/server/c_server/omgserver/security_server/objs/common/CMakeFiles/common.dir
+/home/gl/server/c_server/omgserver/security_server/objs/net/CMakeFiles/net.dir
+/home/gl/server/c_server/omgserver/security_server/CMakeFiles/serurity_server.dir

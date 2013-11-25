@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all_event>
+	<event event_typ="0" event_descrption="带球过人--对人抢断">
+		<skill skill_id="36" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="11" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="71" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="7" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="2" event_descrption="短传--对球断球">
+		<skill skill_id="15" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="5" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="71" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="7" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="4" event_descrption="长传高空球--对球断球">
+		<skill skill_id="15" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="5" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="7" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="6" event_descrption="头球射门和后卫比较">
+		<skill skill_id="16" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="7" event_descrption="头球射门和门将比较">
+		<skill skill_id="3" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="16" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="2" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="8" event_descrption="脚球射门和后门比较">
+		<skill skill_id="28" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="11" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="9" event_descrption="脚球射门和门将比较">
+		<skill skill_id="28" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="3" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="2" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="10" event_descrption="防守方防高球">
+		<skill skill_id="16" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="17" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="11" event_descrption="任意球">
+		<skill skill_id="9" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="2" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="12" event_descrption="接球">
+		<skill skill_id="61" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="11" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="7" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="14" event_descrption="反越位">
+		<skill skill_id="61" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="3" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="16" event_descrption="远射和门将比较">
+		<skill skill_id="13" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="3" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="2" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="17" event_descrption="点球">
+		<skill skill_id="43" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+		<skill skill_id="2" attack_or_defend="2" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+	<event event_typ="18" event_descrption="守门员开球">
+		<skill skill_id="1" attack_or_defend="1" attr_name="att_ball_ctrl"
+			base_value="5" attr_name1=" " base_value1="0" />
+	</event>
+</all_event>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<all>
+	<tester ip="192.168.91.47" name="管磊" flag="1"/>
+	<tester ip="192.168.91.61" name="张韶华" flag="1"/>
+	<tester ip="192.168.91.46" name="王强" flag="1"/>
+	<tester ip="192.168.90.62" name="谌刚" flag="1"/>
+	<tester ip="192.168.91.50" name="小辉" flag="1"/>
+	<tester ip="192.168.91.55" name="郭佳" flag="1"/>
+	<tester ip="192.168.91.34" name="朱旭" flag="1"/>
+	<tester ip="192.168.91.54" name="鲍强" flag="1"/>
+	<tester ip="192.168.91.52" name="梁雪婷" flag="1"/>
+	<tester ip="192.168.91.79" name="宾奔" flag="1"/>
+</all>

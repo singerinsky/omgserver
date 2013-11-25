@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+	<ball_config>
+		<shoot_speed>50</shoot_speed>
+		<size>100</size>
+	</ball_config>
