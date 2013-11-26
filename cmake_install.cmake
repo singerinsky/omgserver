@@ -1,4 +1,4 @@
-# Install script for directory: /home/gl/football/omgserver
+# Install script for directory: /home/gl/football_server/omgserver
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,17 +29,17 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 # Install shared libraries without execute permission?
 IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  SET(CMAKE_INSTALL_SO_NO_EXE "0")
+  SET(CMAKE_INSTALL_SO_NO_EXE "1")
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/gl/football/omgserver/common/cmake_install.cmake")
-  INCLUDE("/home/gl/football/omgserver/net/cmake_install.cmake")
-  INCLUDE("/home/gl/football/omgserver/soccer_ai/cmake_install.cmake")
-  INCLUDE("/home/gl/football/omgserver/gate_server/build/cmake_install.cmake")
-  INCLUDE("/home/gl/football/omgserver/game_server/build/cmake_install.cmake")
-  INCLUDE("/home/gl/football/omgserver/db_server/build/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/common/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/net/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/soccer_ai/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/gate_server/build/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/game_server/build/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/db_server/build/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -49,7 +49,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/gl/football/omgserver/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/gl/football_server/omgserver/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/gl/football/omgserver/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/gl/football_server/omgserver/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

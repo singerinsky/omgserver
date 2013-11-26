@@ -38,22 +38,19 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football/omgserver
+CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football/omgserver
+CMAKE_BINARY_DIR = /home/gl/football_server/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -72,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/football/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football/omgserver/CMakeFiles /home/gl/football/omgserver/soccer_ai/CMakeFiles/progress.marks
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football/omgserver/CMakeFiles 0
+	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles /home/gl/football_server/omgserver/soccer_ai/CMakeFiles/progress.marks
+	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/clean
+	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/preinstall
+	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/preinstall
+	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/football/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 soccer_ai/CMakeFiles/soccer_ai.dir/rule:
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/CMakeFiles/soccer_ai.dir/rule
+	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 soccer_ai/CMakeFiles/soccer_ai.dir/rule
 .PHONY : soccer_ai/CMakeFiles/soccer_ai.dir/rule
 
 # Convenience name for target.
@@ -112,7 +109,7 @@ soccer_ai: soccer_ai/CMakeFiles/soccer_ai.dir/rule
 
 # fast build rule for target.
 soccer_ai/fast:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/build
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/build
 .PHONY : soccer_ai/fast
 
 action_define.o: action_define.cpp.o
@@ -120,7 +117,7 @@ action_define.o: action_define.cpp.o
 
 # target to build an object file
 action_define.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/action_define.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/action_define.cpp.o
 .PHONY : action_define.cpp.o
 
 action_define.i: action_define.cpp.i
@@ -128,7 +125,7 @@ action_define.i: action_define.cpp.i
 
 # target to preprocess a source file
 action_define.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/action_define.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/action_define.cpp.i
 .PHONY : action_define.cpp.i
 
 action_define.s: action_define.cpp.s
@@ -136,7 +133,7 @@ action_define.s: action_define.cpp.s
 
 # target to generate assembly for a file
 action_define.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/action_define.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/action_define.cpp.s
 .PHONY : action_define.cpp.s
 
 entity_manager.o: entity_manager.cpp.o
@@ -144,7 +141,7 @@ entity_manager.o: entity_manager.cpp.o
 
 # target to build an object file
 entity_manager.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/entity_manager.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/entity_manager.cpp.o
 .PHONY : entity_manager.cpp.o
 
 entity_manager.i: entity_manager.cpp.i
@@ -152,7 +149,7 @@ entity_manager.i: entity_manager.cpp.i
 
 # target to preprocess a source file
 entity_manager.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/entity_manager.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/entity_manager.cpp.i
 .PHONY : entity_manager.cpp.i
 
 entity_manager.s: entity_manager.cpp.s
@@ -160,7 +157,7 @@ entity_manager.s: entity_manager.cpp.s
 
 # target to generate assembly for a file
 entity_manager.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/entity_manager.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/entity_manager.cpp.s
 .PHONY : entity_manager.cpp.s
 
 message_dispatcher.o: message_dispatcher.cpp.o
@@ -168,7 +165,7 @@ message_dispatcher.o: message_dispatcher.cpp.o
 
 # target to build an object file
 message_dispatcher.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/message_dispatcher.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/message_dispatcher.cpp.o
 .PHONY : message_dispatcher.cpp.o
 
 message_dispatcher.i: message_dispatcher.cpp.i
@@ -176,7 +173,7 @@ message_dispatcher.i: message_dispatcher.cpp.i
 
 # target to preprocess a source file
 message_dispatcher.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/message_dispatcher.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/message_dispatcher.cpp.i
 .PHONY : message_dispatcher.cpp.i
 
 message_dispatcher.s: message_dispatcher.cpp.s
@@ -184,7 +181,7 @@ message_dispatcher.s: message_dispatcher.cpp.s
 
 # target to generate assembly for a file
 message_dispatcher.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/message_dispatcher.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/message_dispatcher.cpp.s
 .PHONY : message_dispatcher.cpp.s
 
 move_define.o: move_define.cpp.o
@@ -192,7 +189,7 @@ move_define.o: move_define.cpp.o
 
 # target to build an object file
 move_define.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/move_define.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/move_define.cpp.o
 .PHONY : move_define.cpp.o
 
 move_define.i: move_define.cpp.i
@@ -200,7 +197,7 @@ move_define.i: move_define.cpp.i
 
 # target to preprocess a source file
 move_define.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/move_define.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/move_define.cpp.i
 .PHONY : move_define.cpp.i
 
 move_define.s: move_define.cpp.s
@@ -208,7 +205,7 @@ move_define.s: move_define.cpp.s
 
 # target to generate assembly for a file
 move_define.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/move_define.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/move_define.cpp.s
 .PHONY : move_define.cpp.s
 
 pass_refer_table.o: pass_refer_table.cpp.o
@@ -216,7 +213,7 @@ pass_refer_table.o: pass_refer_table.cpp.o
 
 # target to build an object file
 pass_refer_table.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/pass_refer_table.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/pass_refer_table.cpp.o
 .PHONY : pass_refer_table.cpp.o
 
 pass_refer_table.i: pass_refer_table.cpp.i
@@ -224,7 +221,7 @@ pass_refer_table.i: pass_refer_table.cpp.i
 
 # target to preprocess a source file
 pass_refer_table.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/pass_refer_table.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/pass_refer_table.cpp.i
 .PHONY : pass_refer_table.cpp.i
 
 pass_refer_table.s: pass_refer_table.cpp.s
@@ -232,7 +229,7 @@ pass_refer_table.s: pass_refer_table.cpp.s
 
 # target to generate assembly for a file
 pass_refer_table.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/pass_refer_table.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/pass_refer_table.cpp.s
 .PHONY : pass_refer_table.cpp.s
 
 player_queue.o: player_queue.cpp.o
@@ -240,7 +237,7 @@ player_queue.o: player_queue.cpp.o
 
 # target to build an object file
 player_queue.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/player_queue.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/player_queue.cpp.o
 .PHONY : player_queue.cpp.o
 
 player_queue.i: player_queue.cpp.i
@@ -248,7 +245,7 @@ player_queue.i: player_queue.cpp.i
 
 # target to preprocess a source file
 player_queue.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/player_queue.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/player_queue.cpp.i
 .PHONY : player_queue.cpp.i
 
 player_queue.s: player_queue.cpp.s
@@ -256,7 +253,7 @@ player_queue.s: player_queue.cpp.s
 
 # target to generate assembly for a file
 player_queue.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/player_queue.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/player_queue.cpp.s
 .PHONY : player_queue.cpp.s
 
 soccer_ball.o: soccer_ball.cpp.o
@@ -264,7 +261,7 @@ soccer_ball.o: soccer_ball.cpp.o
 
 # target to build an object file
 soccer_ball.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_ball.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_ball.cpp.o
 .PHONY : soccer_ball.cpp.o
 
 soccer_ball.i: soccer_ball.cpp.i
@@ -272,7 +269,7 @@ soccer_ball.i: soccer_ball.cpp.i
 
 # target to preprocess a source file
 soccer_ball.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_ball.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_ball.cpp.i
 .PHONY : soccer_ball.cpp.i
 
 soccer_ball.s: soccer_ball.cpp.s
@@ -280,7 +277,7 @@ soccer_ball.s: soccer_ball.cpp.s
 
 # target to generate assembly for a file
 soccer_ball.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_ball.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_ball.cpp.s
 .PHONY : soccer_ball.cpp.s
 
 soccer_formation.o: soccer_formation.cpp.o
@@ -288,7 +285,7 @@ soccer_formation.o: soccer_formation.cpp.o
 
 # target to build an object file
 soccer_formation.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_formation.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_formation.cpp.o
 .PHONY : soccer_formation.cpp.o
 
 soccer_formation.i: soccer_formation.cpp.i
@@ -296,7 +293,7 @@ soccer_formation.i: soccer_formation.cpp.i
 
 # target to preprocess a source file
 soccer_formation.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_formation.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_formation.cpp.i
 .PHONY : soccer_formation.cpp.i
 
 soccer_formation.s: soccer_formation.cpp.s
@@ -304,7 +301,7 @@ soccer_formation.s: soccer_formation.cpp.s
 
 # target to generate assembly for a file
 soccer_formation.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_formation.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_formation.cpp.s
 .PHONY : soccer_formation.cpp.s
 
 soccer_match.o: soccer_match.cpp.o
@@ -312,7 +309,7 @@ soccer_match.o: soccer_match.cpp.o
 
 # target to build an object file
 soccer_match.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_match.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_match.cpp.o
 .PHONY : soccer_match.cpp.o
 
 soccer_match.i: soccer_match.cpp.i
@@ -320,7 +317,7 @@ soccer_match.i: soccer_match.cpp.i
 
 # target to preprocess a source file
 soccer_match.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_match.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_match.cpp.i
 .PHONY : soccer_match.cpp.i
 
 soccer_match.s: soccer_match.cpp.s
@@ -328,7 +325,7 @@ soccer_match.s: soccer_match.cpp.s
 
 # target to generate assembly for a file
 soccer_match.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_match.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_match.cpp.s
 .PHONY : soccer_match.cpp.s
 
 soccer_pitch.o: soccer_pitch.cpp.o
@@ -336,7 +333,7 @@ soccer_pitch.o: soccer_pitch.cpp.o
 
 # target to build an object file
 soccer_pitch.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_pitch.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_pitch.cpp.o
 .PHONY : soccer_pitch.cpp.o
 
 soccer_pitch.i: soccer_pitch.cpp.i
@@ -344,7 +341,7 @@ soccer_pitch.i: soccer_pitch.cpp.i
 
 # target to preprocess a source file
 soccer_pitch.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_pitch.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_pitch.cpp.i
 .PHONY : soccer_pitch.cpp.i
 
 soccer_pitch.s: soccer_pitch.cpp.s
@@ -352,7 +349,7 @@ soccer_pitch.s: soccer_pitch.cpp.s
 
 # target to generate assembly for a file
 soccer_pitch.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_pitch.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_pitch.cpp.s
 .PHONY : soccer_pitch.cpp.s
 
 soccer_player.o: soccer_player.cpp.o
@@ -360,7 +357,7 @@ soccer_player.o: soccer_player.cpp.o
 
 # target to build an object file
 soccer_player.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player.cpp.o
 .PHONY : soccer_player.cpp.o
 
 soccer_player.i: soccer_player.cpp.i
@@ -368,7 +365,7 @@ soccer_player.i: soccer_player.cpp.i
 
 # target to preprocess a source file
 soccer_player.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player.cpp.i
 .PHONY : soccer_player.cpp.i
 
 soccer_player.s: soccer_player.cpp.s
@@ -376,7 +373,7 @@ soccer_player.s: soccer_player.cpp.s
 
 # target to generate assembly for a file
 soccer_player.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player.cpp.s
 .PHONY : soccer_player.cpp.s
 
 soccer_player_skill.o: soccer_player_skill.cpp.o
@@ -384,7 +381,7 @@ soccer_player_skill.o: soccer_player_skill.cpp.o
 
 # target to build an object file
 soccer_player_skill.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_skill.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_skill.cpp.o
 .PHONY : soccer_player_skill.cpp.o
 
 soccer_player_skill.i: soccer_player_skill.cpp.i
@@ -392,7 +389,7 @@ soccer_player_skill.i: soccer_player_skill.cpp.i
 
 # target to preprocess a source file
 soccer_player_skill.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_skill.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_skill.cpp.i
 .PHONY : soccer_player_skill.cpp.i
 
 soccer_player_skill.s: soccer_player_skill.cpp.s
@@ -400,7 +397,7 @@ soccer_player_skill.s: soccer_player_skill.cpp.s
 
 # target to generate assembly for a file
 soccer_player_skill.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_skill.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_skill.cpp.s
 .PHONY : soccer_player_skill.cpp.s
 
 soccer_player_state.o: soccer_player_state.cpp.o
@@ -408,7 +405,7 @@ soccer_player_state.o: soccer_player_state.cpp.o
 
 # target to build an object file
 soccer_player_state.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_state.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_state.cpp.o
 .PHONY : soccer_player_state.cpp.o
 
 soccer_player_state.i: soccer_player_state.cpp.i
@@ -416,7 +413,7 @@ soccer_player_state.i: soccer_player_state.cpp.i
 
 # target to preprocess a source file
 soccer_player_state.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_state.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_state.cpp.i
 .PHONY : soccer_player_state.cpp.i
 
 soccer_player_state.s: soccer_player_state.cpp.s
@@ -424,7 +421,7 @@ soccer_player_state.s: soccer_player_state.cpp.s
 
 # target to generate assembly for a file
 soccer_player_state.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_state.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_player_state.cpp.s
 .PHONY : soccer_player_state.cpp.s
 
 soccer_team.o: soccer_team.cpp.o
@@ -432,7 +429,7 @@ soccer_team.o: soccer_team.cpp.o
 
 # target to build an object file
 soccer_team.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team.cpp.o
 .PHONY : soccer_team.cpp.o
 
 soccer_team.i: soccer_team.cpp.i
@@ -440,7 +437,7 @@ soccer_team.i: soccer_team.cpp.i
 
 # target to preprocess a source file
 soccer_team.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team.cpp.i
 .PHONY : soccer_team.cpp.i
 
 soccer_team.s: soccer_team.cpp.s
@@ -448,7 +445,7 @@ soccer_team.s: soccer_team.cpp.s
 
 # target to generate assembly for a file
 soccer_team.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team.cpp.s
 .PHONY : soccer_team.cpp.s
 
 soccer_team_state.o: soccer_team_state.cpp.o
@@ -456,7 +453,7 @@ soccer_team_state.o: soccer_team_state.cpp.o
 
 # target to build an object file
 soccer_team_state.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team_state.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team_state.cpp.o
 .PHONY : soccer_team_state.cpp.o
 
 soccer_team_state.i: soccer_team_state.cpp.i
@@ -464,7 +461,7 @@ soccer_team_state.i: soccer_team_state.cpp.i
 
 # target to preprocess a source file
 soccer_team_state.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team_state.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team_state.cpp.i
 .PHONY : soccer_team_state.cpp.i
 
 soccer_team_state.s: soccer_team_state.cpp.s
@@ -472,7 +469,7 @@ soccer_team_state.s: soccer_team_state.cpp.s
 
 # target to generate assembly for a file
 soccer_team_state.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team_state.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/soccer_team_state.cpp.s
 .PHONY : soccer_team_state.cpp.s
 
 speed_refer_table.o: speed_refer_table.cpp.o
@@ -480,7 +477,7 @@ speed_refer_table.o: speed_refer_table.cpp.o
 
 # target to build an object file
 speed_refer_table.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/speed_refer_table.cpp.o
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/speed_refer_table.cpp.o
 .PHONY : speed_refer_table.cpp.o
 
 speed_refer_table.i: speed_refer_table.cpp.i
@@ -488,7 +485,7 @@ speed_refer_table.i: speed_refer_table.cpp.i
 
 # target to preprocess a source file
 speed_refer_table.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/speed_refer_table.cpp.i
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/speed_refer_table.cpp.i
 .PHONY : speed_refer_table.cpp.i
 
 speed_refer_table.s: speed_refer_table.cpp.s
@@ -496,7 +493,7 @@ speed_refer_table.s: speed_refer_table.cpp.s
 
 # target to generate assembly for a file
 speed_refer_table.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/speed_refer_table.cpp.s
+	cd /home/gl/football_server/omgserver && $(MAKE) -f soccer_ai/CMakeFiles/soccer_ai.dir/build.make soccer_ai/CMakeFiles/soccer_ai.dir/speed_refer_table.cpp.s
 .PHONY : speed_refer_table.cpp.s
 
 # Help Target
@@ -567,6 +564,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/football/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
