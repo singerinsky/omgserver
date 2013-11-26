@@ -24,7 +24,7 @@ namespace omg{
 			virtual ~Epollhandler();
 			bool init_epoll(int epoll_size,const char* ip,int port);
 			void startListening();
-			int	 setEvent(epoll_event *ev,int fd,int epoll_op,EPollSocket* s);
+			int	 set_event(epoll_event *ev,int fd,int epoll_op,EPollSocket* s);
 			int  accept_conn(EPollSocket* s);
 			void send_data(EPollSocket *socket,const char* msg,int msg_len);
 			void recv_data(EPollSocket* socket);
