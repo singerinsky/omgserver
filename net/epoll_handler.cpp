@@ -217,7 +217,7 @@ namespace omg {
                         }
 
                         if(_events[i].events & EPOLLOUT) {
-                            VLOG(3)<<"DO WRITE ACTION";
+                            epoll_socket->on_write();
                         }
                     }
                 } else if(epoll_socket->_socket_type == EPollSocket::CONNECT_SOCKET){//主动连接socket

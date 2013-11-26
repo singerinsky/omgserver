@@ -3,6 +3,8 @@
 #include "../common/head.h"
 #include "msg.h"
 #include "../common/omg_type.h"
+#include "../common/lock.h"
+using namespace omg;
 
 enum{
 	CONN_UNVRIFY = 1,//未验证
@@ -19,12 +21,16 @@ struct EPollSocket {
 		this->_conn_state = CONN_UNVRIFY;
         _recv_buffer.resize(32*1024);
         _send_buffer.resize(32*1024);
+        _lock.init();
 	}
 
     EPollSocket(int sock_fd,int sock_type)
     {
         fd = sock_fd; 
         _socket_type = sock_type;
+        _recv_buffer.resize(32*1024);
+        _send_buffer.resize(32*1024);
+        _lock.init();
     }
 
 	~EPollSocket(void) {
@@ -88,18 +94,24 @@ struct EPollSocket {
             return 0;
        }
     
-       int rst  = send_msg(_send_buffer[0],_send_buffer.size());
+       int rst  = send_msg(_send_buffer.data(),_send_buffer.size());
 
        return rst; 
+    }
+
+    int send_msg(const MsgBase* msg)
+    {
+       return send_msg((const char*)msg,msg->msg_size);
     }
 
 
 	int send_msg(const char* data_head,int send_size){
         //if send buffer has data ,push data into buffer
         //send lock 
+        ScopeLock<MutexLock> lock(_lock);
         if(_send_buffer.size() > 0 )
         {
-            _send_buffer.push_back(data_head,send_size);
+            _send_buffer.insert(_send_buffer.end(),data_head,data_head+send_size);
             mod_epoll_status(EPOLLIN|EPOLLOUT);
             return 0;
         }
@@ -112,7 +124,7 @@ struct EPollSocket {
             //error should disconnect
             return -1;
 		}
-        _send_buffer.pop_front(rst);
+        _send_buffer.erase(_send_buffer.begin(),_send_buffer.begin()+rst);
         //have data not send ,register write epoll event
         if(rst < send_size)
         {
@@ -163,6 +175,7 @@ struct EPollSocket {
 	INT	_conn_state;
 	std::string 	_ip_str;
 	int				_port;
+    MutexLock       _lock;
 	sockaddr_in		_sin;
     std::vector<char>   _recv_buffer;
     std::vector<char>   _send_buffer;

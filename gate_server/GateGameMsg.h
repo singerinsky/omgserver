@@ -38,7 +38,7 @@ enum{
 	MSG_TYPE_CLIENT_WATCH_MATCH_ACK					=	1021			//观看比赛ACK
 };
 
-static char* gm_login_public_key="guanlei";
+static char* gm_login_public_key = "guanlei";
 
 enum{
 	MSG_TYPE_GM_LOGIN	= 10000,//gm login
@@ -383,7 +383,7 @@ struct MsgGamePlayerSkillData:MsgBase{
 		is_encode = 1;
 	}
 	~MsgGamePlayerSkillData(){
-		delete[] data;
+		delete[] (char*)&data;
 	}
 	int mid;
 	int time_scale_start;

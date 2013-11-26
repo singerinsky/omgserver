@@ -196,10 +196,10 @@ class  ScopeLock
 {
     public:
         ScopeLock(T t):lock(t){
-            t.lock(); 
+            lock.lock(); 
         }
         ~ScopeLock(){
-            t.unlock(); 
+            lock.unlock(); 
         }
     protected:
         T&   lock;
