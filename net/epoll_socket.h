@@ -17,6 +17,8 @@ struct EPollSocket {
 	EPollSocket(void) {
 		fd = 0;
 		this->_conn_state = CONN_UNVRIFY;
+        _recv_buffer.resize(32*1024);
+        _send_buffer.resize(32*1024);
 	}
 
     EPollSocket(int sock_fd,int sock_type)
@@ -79,28 +81,55 @@ struct EPollSocket {
 		return rv;
 	}
 
-	int send_msg(const MsgBase* base){
-		//TODO need more work
-		int data_has_send = 0;
-		char* data_head = (char*)base;
-		int timeout = 0;
-		while(data_has_send < base->msg_size){
-			int rst = ::send(fd,data_head+data_has_send,base->msg_size - data_has_send,0);
-			if(rst == -1){
-				if(errno == EAGAIN){//缓冲区满了。
-					timeout++;
-					if(timeout> 10){
-						return -1;
-					}else{
-						continue;
-					}
-				}
-				return -1;
+    int on_write()
+    {
+       if(_send_buffer.size() <= 0 )
+       {
+            return 0;
+       }
+    
+       int rst  = send_msg(_send_buffer[0],_send_buffer.size());
+
+       return rst; 
+    }
+
+
+	int send_msg(const char* data_head,int send_size){
+        //if send buffer has data ,push data into buffer
+        //send lock 
+        if(_send_buffer.size() > 0 )
+        {
+            _send_buffer.push_back(data_head,send_size);
+            mod_epoll_status(EPOLLIN|EPOLLOUT);
+            return 0;
+        }
+       //send unlock 
+		int rst = ::send(fd,data_head,send_size,0);
+		if(rst < 0 ){
+			if(errno == EAGAIN || errno== EINTR){//缓冲区满了。
+				return 0;
 			}
-			data_has_send += rst;
+            //error should disconnect
+            return -1;
 		}
-		return data_has_send;
+        _send_buffer.pop_front(rst);
+        //have data not send ,register write epoll event
+        if(rst < send_size)
+        {
+             mod_epoll_status(EPOLLIN|EPOLLOUT); 
+        }
+		
+        return 0;
 	}
+
+    
+    void mod_epoll_status(int status)
+    {
+        epoll_event event = {0};
+        event.events = status;
+        event.data.ptr = this;
+        ::epoll_ctl(_epoll_fd,EPOLL_CTL_MOD,fd,&event); 
+    }
 
 	void set_client_ip_address(sockaddr_in& sin){
 		_sin = sin;
@@ -135,5 +164,7 @@ struct EPollSocket {
 	std::string 	_ip_str;
 	int				_port;
 	sockaddr_in		_sin;
+    std::vector<char>   _recv_buffer;
+    std::vector<char>   _send_buffer;
 };
 #endif
