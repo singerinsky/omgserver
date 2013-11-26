@@ -121,8 +121,9 @@ void Epollhandler::recv_data(EPollSocket* socket) {
 	int len;
 	MsgBase msg_base;
 	len = recv(socket->fd,(char*)&msg_base,sizeof(MsgBase),0);
-	if(len == -1) {
+	if(len == -1 || len ==0) {
 		LOG(INFO)<<"close socket .......";
+        do_close(socket);
 		return;
 	}
 
@@ -131,12 +132,7 @@ void Epollhandler::recv_data(EPollSocket* socket) {
 		return;
 	}
 
-	if(len == 0 ) {//套接字在另外一端断开
-		VLOG(2)<<"CLOSE SOCKET";
-		do_close(socket);
-		return;
-	}
-
+//do check qq tgw 
 #ifdef	_QQ_PLATM_
 	char tmp[64];
 	memcpy(tmp,&msg_base,sizeof(msg_base));
@@ -156,8 +152,7 @@ void Epollhandler::recv_data(EPollSocket* socket) {
 #endif
 
 	int data_remain = msg_base.msg_size - sizeof(MsgBase);
-
-	if(len != (int)sizeof(MsgBase) || msg_base.msg_size <= 0 || msg_base.msg_size>1024*32||msg_base.msg_type <= 0 || msg_base.msg_type > 16*1024) {
+	if(msg_base.msg_size <= 0 || msg_base.msg_size>32768||msg_base.msg_type <= 0 || msg_base.msg_type > 50000) {
 		LOG(ERROR)<<"error msg"<<socket->get_client_ip_str().c_str()<<"msg len:"<<len<<" msg size"<<msg_base.msg_size<<" msg type"<<msg_base.msg_type<<(const char*)&msg_base;
 		do_close(socket);
 		return;
@@ -190,10 +185,7 @@ void Epollhandler::recv_data(EPollSocket* socket) {
 			return;
 		} else if(len <0) {//the client socket?.
 			delete[] buff;
-/*			if(errno == EAGAIN) {
-			} else {*/
 			do_close(socket);
-			//}
 			return;
 		}
 		data_remain = data_remain -len;
@@ -210,9 +202,8 @@ void* Epollhandler::on_run(void) {
 }
 
 void Epollhandler::do_select() {
-	VLOG(3)<<"STARTING SELECT ";
 	while(1) {
-		int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,100);
+		int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,50);
 		if(fds < 0) {
 			VLOG(3)<<"epoll_wait error";
 			break;
@@ -232,7 +223,6 @@ void Epollhandler::do_select() {
 
 					if(_events[i].events & EPOLLOUT) {
 						VLOG(3)<<"DO WRITE ACTION";
-						//this->send_data(epoll_socket);
 					}
 				}
 			} else if(epoll_socket->type == EPollSocket::CONNECT_SOCKET){//主动连接socket
