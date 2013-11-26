@@ -4,6 +4,8 @@
 #include "msg.h"
 #include "../common/omg_type.h"
 #include "../common/lock.h"
+#include "../net/IMsgDispatcher.h"
+
 using namespace omg;
 
 enum{
@@ -16,15 +18,16 @@ struct EPollSocket {
 		LISTEN_SOCKET, CONNECT_SOCKET, DATA_SOCKET
 	};
 
-	EPollSocket(void) {
+	EPollSocket(IMsgDispatcher* dispatcher) {
 		fd = 0;
 		this->_conn_state = CONN_UNVRIFY;
         _recv_buffer.resize(32*1024);
         _send_buffer.resize(32*1024);
         _lock.init();
+        _msg_dispatcher = dispatcher;
 	}
 
-    EPollSocket(int sock_fd,int sock_type,int epoll_mod)
+    EPollSocket(int sock_fd,int sock_type,int epoll_mod,IMsgDispatcher* dispatcher)
     {
         fd = sock_fd; 
         _socket_type = sock_type;
@@ -32,6 +35,7 @@ struct EPollSocket {
         _send_buffer.resize(32*1024);
         _epoll_mod = epoll_mod;
         _lock.init();
+        _msg_dispatcher = dispatcher;
     }
 
 	~EPollSocket(void) {
@@ -123,17 +127,16 @@ struct EPollSocket {
                     event._client_id = fd;
                     event._msg_base = msg_base;
                     _recv_buffer.erase(_recv_buffer.begin(),_recv_buffer.begin()+msg_len);
+                    bool add rst = _msg_dispatcher->add_msg_to_queue(event,this);
+                    if(add_rst == false)
+                    {
+                        delete[] msg_data;
+                        return -1;
+                    }
                 }
             } 
         }
-
-        // bool add_rst = _msg_handler->add_msg_to_queue(event,socket);
-        // if(!add_rst)
-        // {
-        //     LOG(ERROR)<<"error add msg "; 
-        //     delete[] buff;
-        //     do_close(socket);
-        // }
+        return 0;
     }
 
 
@@ -251,5 +254,6 @@ struct EPollSocket {
 	sockaddr_in		_sin;
     std::vector<char>   _recv_buffer;
     std::vector<char>   _send_buffer;
+    IMsgDispatcher*     _msg_dispatcher;
 };
 #endif
