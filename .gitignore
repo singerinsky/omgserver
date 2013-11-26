@@ -11,3 +11,8 @@
 *.lai
 *.la
 *.a
+*.cmake
+CMakeFiles/
+tags
+common/CMakeFiles/
+net/CMakeFiles/
