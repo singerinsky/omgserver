@@ -19,9 +19,10 @@ struct EPollSocket {
 		this->_conn_state = CONN_UNVRIFY;
 	}
 
-    EPollSocket(int sock_type)
+    EPollSocket(int sock_fd,int sock_type)
     {
-        this->socket_type = sock_type;
+        fd = sock_fd; 
+        _socket_type = sock_type;
     }
 
 	~EPollSocket(void) {
@@ -129,7 +130,7 @@ struct EPollSocket {
 
 	EPOLL_SOCKET_FD _epoll_fd;
 	INT fd;
-	INT type;
+	INT _socket_type;
 	INT	_conn_state;
 	std::string 	_ip_str;
 	int				_port;

@@ -59,6 +59,7 @@ public:
 		_zeit_enter_arenar = time(NULL);
 		_arenaer_stage_id= stage_id;
 		_player_state = WAIT_FOR_ARENAER_MACHING;
+        return true;
 	}
 
 	void leave_arenaer(){
@@ -104,8 +105,8 @@ public:
 
 private:
 	int				_match_watcher_id;
-	PLAYER_ID		_player_id;
 	EPollSocket* 	_socket;
+	PLAYER_ID		_player_id;
 	time_t			_login_time;
 	PLAYER_STATE	_player_state;
 	int			_arenaer_stage_id;

@@ -45,9 +45,7 @@ namespace omg {
             ::close(fd);
             return;
         }
-        s = new EPollSocket();
-        s->fd = fd;
-        s->type = EPollSocket::LISTEN_SOCKET;
+        s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET);
 
         //设置套接字为非阻塞
         if(s->set_blocking(false) == -1)
@@ -98,9 +96,7 @@ namespace omg {
                 return -1;
             }
 
-            socket_client = new EPollSocket();
-            socket_client->fd = nfd;
-            socket_client->type = EPollSocket::DATA_SOCKET;
+            socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET);
             socket_client->_epoll_fd = _epoll_create;
             socket_client->set_blocking(false);
             socket_client->set_nodelay(true);
@@ -209,10 +205,10 @@ namespace omg {
             }
             for(int i=0; i< fds; i++) {
                 EPollSocket *epoll_socket = (EPollSocket*)_events[i].data.ptr;
-                if(epoll_socket->type == EPollSocket::LISTEN_SOCKET)
+                if(epoll_socket->_socket_type == EPollSocket::LISTEN_SOCKET)
                 {
                     accept_conn(epoll_socket);
-                } else if(epoll_socket->type == EPollSocket::DATA_SOCKET) {
+                } else if(epoll_socket->_socket_type == EPollSocket::DATA_SOCKET) {
                     if(_events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
                         do_close(epoll_socket);
                     } else {
@@ -224,7 +220,7 @@ namespace omg {
                             VLOG(3)<<"DO WRITE ACTION";
                         }
                     }
-                } else if(epoll_socket->type == EPollSocket::CONNECT_SOCKET){//主动连接socket
+                } else if(epoll_socket->_socket_type == EPollSocket::CONNECT_SOCKET){//主动连接socket
                     VLOG(3)<<"Connected Socket...";
                 }else{
                     VLOG(3)<<"EPOLL_WAIT ERROR";
