@@ -19,6 +19,11 @@ struct EPollSocket {
 		this->_conn_state = CONN_UNVRIFY;
 	}
 
+    EPollSocket(int sock_type)
+    {
+        this->socket_type = sock_type;
+    }
+
 	~EPollSocket(void) {
 		::epoll_ctl(_epoll_fd, EPOLL_CTL_DEL, fd, NULL);
 		close(fd);
