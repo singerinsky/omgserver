@@ -96,9 +96,9 @@ omg::Epollhandler*  epoll_server_thread_start(void* param){
 
 
 	omg::Epollhandler *handler = new omg::Epollhandler();
+	handler->set_msg_dispatcher((CMsgDispatcher*)param);
 	handler->init_epoll(EPOLL_SIZE,ip_buffer,port);
 	handler->startListening();
-	handler->set_msg_dispatcher((CMsgDispatcher*)param);
 	handler->start(false);
 	//handler->join();
 	return handler;		

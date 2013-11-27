@@ -24,12 +24,13 @@ struct EPollSocket {
         _lock.init();
 	}
 
-    EPollSocket(int sock_fd,int sock_type)
+    EPollSocket(int sock_fd,int sock_type,int epoll_mod)
     {
         fd = sock_fd; 
         _socket_type = sock_type;
         _recv_buffer.resize(32*1024);
         _send_buffer.resize(32*1024);
+        _epoll_mod = epoll_mod;
         _lock.init();
     }
 
@@ -87,6 +88,56 @@ struct EPollSocket {
 		return rv;
 	}
 
+    int on_read()
+    {
+        char msg_buffer[2048];
+        int len = 0;
+        while(true){
+            len = recv(fd,msg_buffer,2048,0);
+            if(len ==0) {
+                LOG(INFO)<<"client close socket .......";
+                //do_close(socket);
+                return -1;
+            }
+
+            if(len == -1)
+            {
+                if(errno != EAGAIN && errno != EINTR)
+                {
+                    LOG(ERROR)<<"system error,close client"; 
+                    //do_close(this);
+                    return -1;
+                }
+            }
+
+            if(len > 0 )
+            {
+                _recv_buffer.insert(_recv_buffer.end(),msg_buffer,msg_buffer+len); 
+                int msg_len = -1;
+                while((_recv_buffer.size()>0 ) && (msg_len = check_msg_complete(_recv_buffer.data(),_recv_buffer.size())) != -1){
+                    char* msg_data = new char[msg_len];
+                    memcpy(msg_data,_recv_buffer.data(),msg_len);
+                    MsgBase* msg_base = (MsgBase*)msg_data;
+                    CMsgEvent event;
+                    event._msg_type = msg_base->msg_type; 
+                    event._client_id = fd;
+                    event._msg_base = msg_base;
+                    _recv_buffer.erase(_recv_buffer.begin(),_recv_buffer.begin()+msg_len);
+                }
+            } 
+        }
+
+        // bool add_rst = _msg_handler->add_msg_to_queue(event,socket);
+        // if(!add_rst)
+        // {
+        //     LOG(ERROR)<<"error add msg "; 
+        //     delete[] buff;
+        //     do_close(socket);
+        // }
+    }
+
+
+
     int on_write()
     {
        if(_send_buffer.size() <= 0 )
@@ -135,12 +186,22 @@ struct EPollSocket {
 	}
 
     
-    void mod_epoll_status(int status)
+    int mod_epoll_status(int status)
     {
         epoll_event event = {0};
         event.events = status;
+        event.events |= _epoll_mod;
         event.data.ptr = this;
-        ::epoll_ctl(_epoll_fd,EPOLL_CTL_MOD,fd,&event); 
+        return ::epoll_ctl(_epoll_fd,EPOLL_CTL_MOD,fd,&event); 
+    }
+
+    int add_epoll_event(int status)
+    {
+        epoll_event event = {0};
+        event.events = status;
+        event.events |= _epoll_mod;
+        event.data.ptr = this;
+        return ::epoll_ctl(_epoll_fd,EPOLL_CTL_ADD,fd,&event); 
     }
 
 	void set_client_ip_address(sockaddr_in& sin){
@@ -169,7 +230,18 @@ struct EPollSocket {
 		return _conn_state;
 	}
 
+    int check_msg_complete(char *data_head,int size)
+    {
+        MsgBase* msg_head = (MsgBase*)data_head;
+        if(size >= msg_head->msg_size)
+        {
+            return msg_head->msg_size;
+        }
+        return -1;
+    }
+
 	EPOLL_SOCKET_FD _epoll_fd;
+    int             _epoll_mod;
 	INT fd;
 	INT _socket_type;
 	INT	_conn_state;

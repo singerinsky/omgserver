@@ -3,28 +3,28 @@
 namespace omg {
 
     Epollhandler::~Epollhandler() {
-
     }
 
-    bool Epollhandler::init_epoll(int epoll_size, const char* ip, int port) {
+    bool Epollhandler::init_epoll(int epoll_size, const char* ip, int port,bool use_et) {
         assert(epoll_size > 0);
         _epoll_create = epoll_create(epoll_size);
         _port = port;
         this->_ip_buffer = ip;
         assert(_epoll_create > 0);
+        if(use_et)
+        {
+            _epoll_mod = EPOLLET;
+        }
+        else
+        {
+            _epoll_mod = 0; 
+        }
         return true;
-    }
-
-    int Epollhandler::set_event(epoll_event *ev, int fd, int epoll_op,
-            EPollSocket* s) {
-        ev->data.ptr = s;
-        return epoll_ctl(_epoll_create, epoll_op, fd, ev);
     }
 
     void Epollhandler::startListening() {
 
         EPollSocket *s;
-
         int fd = ::socket(AF_INET, SOCK_STREAM, 0);
         if (fd == -1) {
             VLOG(3)<<"error of create socket";
@@ -45,7 +45,7 @@ namespace omg {
             ::close(fd);
             return;
         }
-        s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET);
+        s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod);
 
         //设置套接字为非阻塞
         if(s->set_blocking(false) == -1)
@@ -75,41 +75,38 @@ namespace omg {
             return;
         }
 
-        epoll_event ev;
-        ev.events = EPOLLIN|EPOLLET;
-        rcv = set_event(&ev,fd,EPOLL_CTL_ADD,s);
-        if(rcv != 0 ) {
-            VLOG(3)<<"ERROR OF SET LISTENING SOCKET";
+        int rst = s->add_epoll_event(EPOLLIN);
+        if(rst != 0)
+        {
+            LOG(ERROR)<<"init epoll fd add ";
+            exit(1);
         }
         return;
     }
 
-    int Epollhandler::accept_conn(EPollSocket* epoll_socket) {
+    int Epollhandler::accept_conn(EPollSocket* listen_socket) {
         struct sockaddr_in sin;
         socklen_t len = sizeof(sockaddr_in);
         EPollSocket *socket_client = NULL;
         int nfd;
 
         while(true){
-            if((nfd = accept(epoll_socket->fd,(struct sockaddr*)&sin,&len)) == -1) {
-                VLOG(3)<<"ERROR OF SOCKET::ACCEpT";
+            if((nfd = accept(listen_socket->fd,(struct sockaddr*)&sin,&len)) == -1) {
                 return -1;
             }
 
-            socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET);
+            socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod);
             socket_client->_epoll_fd = _epoll_create;
             socket_client->set_blocking(false);
             socket_client->set_nodelay(true);
             socket_client->set_reuseaddr(true);
-            epoll_event event;
-            event.events = EPOLLIN;
-            event.data.ptr = socket_client;
-            if(::epoll_ctl(_epoll_create,EPOLL_CTL_ADD,nfd,&event) == -1) {
-                VLOG(3)<<"ERROR OF SOCKET EPOLLCTL";
+            socket_client->set_client_ip_address(sin);
+            if(socket_client->add_epoll_event(EPOLLIN) != 0){
+                LOG(ERROR)<<"accept connection error "; 
+                delete socket_client;
                 return -1;
             }
             VLOG(1)<<"Accept connection"<<socket_client->fd;
-            socket_client->set_client_ip_address(sin);
         }
     }
     void Epollhandler::recv_data(EPollSocket* socket) {
@@ -142,8 +139,6 @@ namespace omg {
             send_data(socket,(const char*)&msg_send,msg_send.msg_size);
             return;
         }
-
-
 #endif
 
         int data_remain = msg_base.msg_size - sizeof(MsgBase);
@@ -189,8 +184,7 @@ namespace omg {
     }
 
     void* Epollhandler::on_run(void) {
-        while(1) {
-            VLOG(3)<<"net thread running";
+        while(_is_final) {
             do_select();
         }
         return NULL;
@@ -198,7 +192,7 @@ namespace omg {
 
     void Epollhandler::do_select() {
         while(1) {
-            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,50);
+            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,100);
             if(fds < 0) {
                 VLOG(3)<<"epoll_wait error";
                 break;

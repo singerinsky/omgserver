@@ -20,16 +20,15 @@ namespace omg{
 			Epollhandler(const char *name=NULL) : Thread(name){
 				VLOG(3)<<"STARTING epoll thread"<<name;
 				_epoll_create = 0;
+                _is_final = true;
 			}
 			virtual ~Epollhandler();
-			bool init_epoll(int epoll_size,const char* ip,int port);
+			bool init_epoll(int epoll_size,const char* ip,int port,bool use_et_mod=false);
 			void startListening();
-			int	 set_event(epoll_event *ev,int fd,int epoll_op,EPollSocket* s);
 			int  accept_conn(EPollSocket* s);
 			void send_data(EPollSocket *socket,const char* msg,int msg_len);
 			void recv_data(EPollSocket* socket);
 			void do_close(EPollSocket*);
-
 		public:
 			virtual void *on_run(void);
 		
@@ -47,6 +46,8 @@ namespace omg{
 			epoll_event _events[EPOLL_SIZE];
 			int	_port;
 			StringBuffer	_ip_buffer;
+            int _epoll_mod;
+            bool    _is_final; 
 	};
 }
 
