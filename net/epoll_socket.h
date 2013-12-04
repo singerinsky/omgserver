@@ -27,7 +27,7 @@ struct EPollSocket {
         _msg_dispatcher = dispatcher;
 	}
 
-    EPollSocket(int sock_fd,int sock_type,int epoll_mod,IMsgDispatcher* dispatcher)
+    EPollSocket(int sock_fd,int sock_type,int epoll_mod,IMsgDispatcher* dispatcher,int ep_fd)
     {
         fd = sock_fd; 
         _socket_type = sock_type;
@@ -36,6 +36,7 @@ struct EPollSocket {
         _epoll_mod = epoll_mod;
         _lock.init();
         _msg_dispatcher = dispatcher;
+        _epoll_fd = ep_fd;
     }
 
 	~EPollSocket(void) {
@@ -122,12 +123,12 @@ struct EPollSocket {
                     char* msg_data = new char[msg_len];
                     memcpy(msg_data,_recv_buffer.data(),msg_len);
                     MsgBase* msg_base = (MsgBase*)msg_data;
-                    CMsgEvent event;
-                    event._msg_type = msg_base->msg_type; 
-                    event._client_id = fd;
-                    event._msg_base = msg_base;
+                    CMsgEvent* event = new CMsgEvent();
+                    event->_msg_type = msg_base->msg_type; 
+                    event->_client_id = fd;
+                    event->_msg_base = msg_base;
                     _recv_buffer.erase(_recv_buffer.begin(),_recv_buffer.begin()+msg_len);
-                    bool add rst = _msg_dispatcher->add_msg_to_queue(event,this);
+                    bool add_rst = _msg_dispatcher->add_msg_to_queue(event,this);
                     if(add_rst == false)
                     {
                         delete[] msg_data;

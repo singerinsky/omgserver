@@ -45,7 +45,7 @@ namespace omg {
             ::close(fd);
             return;
         }
-        s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod,_msg_handler);
+        s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
 
         //设置套接字为非阻塞
         if(s->set_blocking(false) == -1)
@@ -78,7 +78,7 @@ namespace omg {
         int rst = s->add_epoll_event(EPOLLIN);
         if(rst != 0)
         {
-            LOG(ERROR)<<"init epoll fd add ";
+            LOG(ERROR)<<"init epoll fd add"<<rst;
             exit(1);
         }
         return;
@@ -95,7 +95,7 @@ namespace omg {
                 return -1;
             }
 
-            socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler);
+            socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
             socket_client->_epoll_fd = _epoll_create;
             socket_client->set_blocking(false);
             socket_client->set_nodelay(true);
