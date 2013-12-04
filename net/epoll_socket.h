@@ -4,6 +4,8 @@
 #include "msg.h"
 #include "../common/omg_type.h"
 #include "../common/lock.h"
+#include "../net/IMsgDispatcher.h"
+
 using namespace omg;
 
 enum{
@@ -16,15 +18,16 @@ struct EPollSocket {
 		LISTEN_SOCKET, CONNECT_SOCKET, DATA_SOCKET
 	};
 
-	EPollSocket(void) {
+	EPollSocket(IMsgDispatcher* dispatcher) {
 		fd = 0;
 		this->_conn_state = CONN_UNVRIFY;
         _recv_buffer.resize(32*1024);
         _send_buffer.resize(32*1024);
         _lock.init();
+        _msg_dispatcher = dispatcher;
 	}
 
-    EPollSocket(int sock_fd,int sock_type,int epoll_mod)
+    EPollSocket(int sock_fd,int sock_type,int epoll_mod,IMsgDispatcher* dispatcher)
     {
         fd = sock_fd; 
         _socket_type = sock_type;
@@ -32,6 +35,7 @@ struct EPollSocket {
         _send_buffer.resize(32*1024);
         _epoll_mod = epoll_mod;
         _lock.init();
+        _msg_dispatcher = dispatcher;
     }
 
 	~EPollSocket(void) {
@@ -123,17 +127,16 @@ struct EPollSocket {
                     event._client_id = fd;
                     event._msg_base = msg_base;
                     _recv_buffer.erase(_recv_buffer.begin(),_recv_buffer.begin()+msg_len);
+                    bool add rst = _msg_dispatcher->add_msg_to_queue(event,this);
+                    if(add_rst == false)
+                    {
+                        delete[] msg_data;
+                        return -1;
+                    }
                 }
             } 
         }
-
-        // bool add_rst = _msg_handler->add_msg_to_queue(event,socket);
-        // if(!add_rst)
-        // {
-        //     LOG(ERROR)<<"error add msg "; 
-        //     delete[] buff;
-        //     do_close(socket);
-        // }
+        return 0;
     }
 
 
@@ -144,10 +147,33 @@ struct EPollSocket {
        {
             return 0;
        }
+         //send lock 
+        ScopeLock<MutexLock> lock(_lock);
+       
+        //send unlock 
+		int rst = ::send(fd,_send_buffer.data(),_send_buffer.size(),0);
+		if(rst < 0 ){
+			if(errno == EAGAIN || errno== EINTR){//缓冲区满了。
+				return 0;
+			}
+            //error should disconnect
+            return -1;
+		}
+        //have data not send ,register write epoll event
+        if(rst < _send_buffer.size())
+        {
+             mod_epoll_status(EPOLLIN|EPOLLOUT); 
+        }
     
-       int rst  = send_msg(_send_buffer.data(),_send_buffer.size());
+        if(rst == _send_buffer.size())
+        {
+            mod_epoll_status(EPOLLIN);
+        }
+        if(rst != 0){
+            _send_buffer.erase(_send_buffer.begin(),_send_buffer.begin()+rst);
+        }
 
-       return rst; 
+        return rst; 
     }
 
     int send_msg(const MsgBase* msg)
@@ -175,11 +201,11 @@ struct EPollSocket {
             //error should disconnect
             return -1;
 		}
-        _send_buffer.erase(_send_buffer.begin(),_send_buffer.begin()+rst);
         //have data not send ,register write epoll event
         if(rst < send_size)
         {
              mod_epoll_status(EPOLLIN|EPOLLOUT); 
+             _send_buffer.insert(_send_buffer.end(),data_head + rst,data_head + send_size);
         }
 		
         return 0;
@@ -240,16 +266,17 @@ struct EPollSocket {
         return -1;
     }
 
-	EPOLL_SOCKET_FD _epoll_fd;
+    EPOLL_SOCKET_FD _epoll_fd;
     int             _epoll_mod;
-	INT fd;
-	INT _socket_type;
-	INT	_conn_state;
-	std::string 	_ip_str;
-	int				_port;
+    INT fd;
+    INT _socket_type;
+    INT	_conn_state;
+    std::string 	_ip_str;
+    int				_port;
     MutexLock       _lock;
-	sockaddr_in		_sin;
+    sockaddr_in		_sin;
     std::vector<char>   _recv_buffer;
     std::vector<char>   _send_buffer;
+    IMsgDispatcher*     _msg_dispatcher;
 };
 #endif
