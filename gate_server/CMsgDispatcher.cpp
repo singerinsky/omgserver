@@ -660,7 +660,7 @@ void CMsgDispatcher::SendMatchPlayerData(MsgMatchPlayerRoundData* m){
 	if(itr != _match_watcher.end()){
 		send_match_info_to_all_watch(itr->second,msg_base);
 	}
-	compress_pool->free((unsigned char*)msg_base);
+    delete[] (char*)msg_base;
 }
 
 void CMsgDispatcher::SendMatchBallData(MsgMatchBallRoundData* m){
@@ -673,7 +673,7 @@ void CMsgDispatcher::SendMatchBallData(MsgMatchBallRoundData* m){
 	if(itr != _match_watcher.end()){
 		send_match_info_to_all_watch((itr->second),msg_base);
 	}
-	compress_pool->free((unsigned char*)msg_base);
+    delete[] (char*)msg_base;
 }
 
 void CMsgDispatcher::SendTeamSkillInfoToPlayer(MsgClientRequestSkillInfoAck*msg){
@@ -709,7 +709,7 @@ void CMsgDispatcher::SendMatchEventData(MsgMatchEventRoundData* m){
 	if(itr != _match_watcher.end()){
 		send_match_info_to_all_watch(itr->second,msg_base);
 	}
-	compress_pool->free((unsigned char*)msg_base);
+    delete[] (char*)msg_base;
 }
 
 void CMsgDispatcher::SendMatchSkillData(MsgGamePlayerSkillData* m){
@@ -722,7 +722,7 @@ void CMsgDispatcher::SendMatchSkillData(MsgGamePlayerSkillData* m){
 	if(itr != _match_watcher.end()){
 		send_match_info_to_all_watch(itr->second,msg_base);
 	}
-	compress_pool->free((unsigned char*)msg_base);
+    delete[] (char*)msg_base;
 }
 
 
@@ -778,8 +778,10 @@ void CMsgDispatcher::borcast_player_speak(int mid,MsgClientSpeakBrocast* m){
 	}
 }
 
+#define BUFFER_SIZE 8*1024
+
 MsgBase* CMsgDispatcher::CompressMsg(MsgBase* msgbase){
-	unsigned char* buffer = (unsigned char*)compress_pool->malloc();//(unsigned char*)malloc(8*1024);
+    char* buffer = new char[BUFFER_SIZE];
 	if(buffer == NULL){
 		return NULL;
 	}
@@ -788,11 +790,11 @@ MsgBase* CMsgDispatcher::CompressMsg(MsgBase* msgbase){
 		LOG(ERROR)<<"Msg size is too big"<<msgbase->msg_size;
 	}
 	memcpy(buffer,(const char*)msgbase,sizeof(MsgBase));
-	unsigned char* encode_data = buffer+sizeof(MsgBase);
+	unsigned char* encode_data = (unsigned char*)buffer+sizeof(MsgBase);
 	unsigned char* src_data = ((unsigned char*)msgbase) + sizeof(MsgBase);
 	int rst = compress(encode_data,&len_after_compress,src_data,msgbase->msg_size - sizeof(MsgBase));
 	if(rst < 0){
-		compress_pool->free(buffer);
+        delete[] buffer;
 		return NULL;
 	}
 	((MsgBase*)buffer)->msg_size = len_after_compress+sizeof(MsgBase);

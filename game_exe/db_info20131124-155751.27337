@@ -1,4 +1,0 @@
-Log file created at: 2013/11/24 15:57:51
-Running on machine: localhost.localdomain
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-E1124 15:57:51.257694 27337 epoll_handler.cpp:71] error of bind socket 10003:0.0.0.0

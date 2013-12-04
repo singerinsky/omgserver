@@ -22,6 +22,7 @@
 #include "GateGameMsg.h"
 #include "GateWayPlayer.h"
 #include <string>
+#include <sstream>
 
 extern char* public_key;
 
@@ -88,7 +89,6 @@ class CMsgDispatcher:public IMsgDispatcher, public Thread {
 public:
 	CMsgDispatcher(const char* name=NULL):Thread(name){
 		_pass_msg_count++;
-		compress_pool = new boost::pool<>(32*1024);
 	}
 	virtual ~CMsgDispatcher();
 	virtual void*	on_run(void);	
@@ -146,7 +146,6 @@ protected:
 	omg::WRQueue<CMsgEvent,MutexLock>			_msg_queue;
 	int		_pass_msg_count;
 	static CMsgDispatcher* _m_instance;
-	boost::pool<> *compress_pool;
 	CGateTimerEventHandler*	_timer_handler;
 };
 #endif /* CMSGDISPATCHER_H_ */

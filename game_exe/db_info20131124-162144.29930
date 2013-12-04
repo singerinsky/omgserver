@@ -1,4 +1,0 @@
-Log file created at: 2013/11/24 16:21:44
-Running on machine: localhost.localdomain
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I1124 16:21:44.524986 29930 DBConnectionPool.h:34] Init database football_gl ip:0.0.0.0 port:3306
