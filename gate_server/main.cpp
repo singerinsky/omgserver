@@ -44,6 +44,7 @@ struct GateServerInfo{
 GateServerInfo	g_gate_server_info;
 CMsgDispatcher	*g_msg_dispatcher;
 char* public_key;
+const char* gm_login_public_key = "guanlei";
 
 void init_server_log(int argc, char** argv){
 	
@@ -156,7 +157,6 @@ void load_tester_map() {
 	if(root != NULL) {
 		TiXmlNode* tester = NULL;
 		for(tester=root->FirstChild("tester");tester!= NULL;tester=root->IterateChildren(tester)) {
-				TiXmlNode* order_node = NULL;
 				TiXmlElement* tester_element = tester->ToElement();
 				int flag = 0;
 				tester_element->QueryIntAttribute("flag",&flag);

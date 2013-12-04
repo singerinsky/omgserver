@@ -9,6 +9,7 @@
  *
  *
  */
+
 enum{
 	MATCH_PVP_CHAT_MSG	=	3000//PVP比赛中聊天的信令
 };
@@ -37,8 +38,6 @@ enum{
 	MSG_TYPE_CLIENT_WATCH_MATCH					=	1020,			//观看比赛
 	MSG_TYPE_CLIENT_WATCH_MATCH_ACK					=	1021			//观看比赛ACK
 };
-
-static char* gm_login_public_key = "guanlei";
 
 enum{
 	MSG_TYPE_GM_LOGIN	= 10000,//gm login

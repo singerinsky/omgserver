@@ -11,6 +11,8 @@
 #include "CGateTimerEventHandler.h"
 CMsgDispatcher* CMsgDispatcher::_m_instance;
 extern std::map<std::string,std::string> g_test_player_map;
+extern const char* gm_login_public_key;
+
 CMsgDispatcher::~CMsgDispatcher() {
 	// TODO Auto-generated destructor stub
 }
@@ -19,6 +21,7 @@ void* CMsgDispatcher::on_run(void) {
 	int count = 0;
 	while (1) {
 		dispatch_msg();
+        count++;
 	}
 	return NULL;
 }
@@ -30,6 +33,7 @@ bool CMsgDispatcher::check_msg_valide(CMsgEvent* msg_event,EPollSocket* scoket) 
 	//GM COMMAND
 	if(msg_event->_msg_type != MSG_TYPE_LOGIN && msg_event->_msg_type != MSG_TYPE_GM_LOGIN && (scoket->_conn_state == CONN_UNVRIFY)){
 		LOG(ERROR)<<"error of hacke"<<msg_event->_msg_type<<":"<<scoket->_conn_state<<":"<<scoket->get_client_ip_str();
+        LOG(ERROR)<<gm_login_public_key;
 		return false;
 	}
 

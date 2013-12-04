@@ -26,6 +26,7 @@
 
 extern char* public_key;
 
+
 using namespace omg;
 struct GameServerInfo{
 	int _index;
