@@ -141,6 +141,7 @@
 ./game_server/RunMatchJob.cpp
 ./game_server/CMatchTaskManage.cpp
 ./game_server/CMatchManager.cpp
+./game_server/build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 ./game_server/ball_keyframe.h
 ./game_server/GateSSocketListenerThread.cpp
 ./game_server/main.cpp

@@ -8,7 +8,7 @@ default_target: all
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -35,11 +35,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/server/c_server/omgserver/client
+CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/server/c_server/omgserver/client
+CMAKE_BINARY_DIR = /home/gl/football_server/omgserver/client
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/server/c_server/omgserver/client && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/server/c_server/omgserver/client/CMakeFiles /home/gl/server/c_server/omgserver/client/objs/net/CMakeFiles/progress.marks
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/server/c_server/omgserver/client/CMakeFiles 0
+	cd /home/gl/football_server/omgserver/client && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/client/CMakeFiles /home/gl/football_server/omgserver/client/objs/net/CMakeFiles/progress.marks
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/client/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/clean
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/preinstall
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/preinstall
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/server/c_server/omgserver/client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/football_server/omgserver/client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 objs/net/CMakeFiles/net.dir/rule:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/CMakeFiles/net.dir/rule
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f CMakeFiles/Makefile2 objs/net/CMakeFiles/net.dir/rule
 .PHONY : objs/net/CMakeFiles/net.dir/rule
 
 # Convenience name for target.
@@ -106,39 +109,15 @@ net: objs/net/CMakeFiles/net.dir/rule
 
 # fast build rule for target.
 net/fast:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/build
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/build
 .PHONY : net/fast
-
-CSocketMap.o: CSocketMap.cpp.o
-.PHONY : CSocketMap.o
-
-# target to build an object file
-CSocketMap.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o
-.PHONY : CSocketMap.cpp.o
-
-CSocketMap.i: CSocketMap.cpp.i
-.PHONY : CSocketMap.i
-
-# target to preprocess a source file
-CSocketMap.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/CSocketMap.cpp.i
-.PHONY : CSocketMap.cpp.i
-
-CSocketMap.s: CSocketMap.cpp.s
-.PHONY : CSocketMap.s
-
-# target to generate assembly for a file
-CSocketMap.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/CSocketMap.cpp.s
-.PHONY : CSocketMap.cpp.s
 
 client_socket.o: client_socket.cpp.o
 .PHONY : client_socket.o
 
 # target to build an object file
 client_socket.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.o
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.o
 .PHONY : client_socket.cpp.o
 
 client_socket.i: client_socket.cpp.i
@@ -146,7 +125,7 @@ client_socket.i: client_socket.cpp.i
 
 # target to preprocess a source file
 client_socket.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.i
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.i
 .PHONY : client_socket.cpp.i
 
 client_socket.s: client_socket.cpp.s
@@ -154,7 +133,7 @@ client_socket.s: client_socket.cpp.s
 
 # target to generate assembly for a file
 client_socket.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.s
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.s
 .PHONY : client_socket.cpp.s
 
 epoll_handler.o: epoll_handler.cpp.o
@@ -162,7 +141,7 @@ epoll_handler.o: epoll_handler.cpp.o
 
 # target to build an object file
 epoll_handler.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
 .PHONY : epoll_handler.cpp.o
 
 epoll_handler.i: epoll_handler.cpp.i
@@ -170,7 +149,7 @@ epoll_handler.i: epoll_handler.cpp.i
 
 # target to preprocess a source file
 epoll_handler.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.i
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.i
 .PHONY : epoll_handler.cpp.i
 
 epoll_handler.s: epoll_handler.cpp.s
@@ -178,39 +157,15 @@ epoll_handler.s: epoll_handler.cpp.s
 
 # target to generate assembly for a file
 epoll_handler.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.s
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.s
 .PHONY : epoll_handler.cpp.s
-
-epoll_socket.o: epoll_socket.cpp.o
-.PHONY : epoll_socket.o
-
-# target to build an object file
-epoll_socket.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o
-.PHONY : epoll_socket.cpp.o
-
-epoll_socket.i: epoll_socket.cpp.i
-.PHONY : epoll_socket.i
-
-# target to preprocess a source file
-epoll_socket.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_socket.cpp.i
-.PHONY : epoll_socket.cpp.i
-
-epoll_socket.s: epoll_socket.cpp.s
-.PHONY : epoll_socket.s
-
-# target to generate assembly for a file
-epoll_socket.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_socket.cpp.s
-.PHONY : epoll_socket.cpp.s
 
 serversocket.o: serversocket.cpp.o
 .PHONY : serversocket.o
 
 # target to build an object file
 serversocket.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/serversocket.cpp.o
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/serversocket.cpp.o
 .PHONY : serversocket.cpp.o
 
 serversocket.i: serversocket.cpp.i
@@ -218,7 +173,7 @@ serversocket.i: serversocket.cpp.i
 
 # target to preprocess a source file
 serversocket.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/serversocket.cpp.i
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/serversocket.cpp.i
 .PHONY : serversocket.cpp.i
 
 serversocket.s: serversocket.cpp.s
@@ -226,7 +181,7 @@ serversocket.s: serversocket.cpp.s
 
 # target to generate assembly for a file
 serversocket.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/serversocket.cpp.s
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/serversocket.cpp.s
 .PHONY : serversocket.cpp.s
 
 socket_epoll.o: socket_epoll.cpp.o
@@ -234,7 +189,7 @@ socket_epoll.o: socket_epoll.cpp.o
 
 # target to build an object file
 socket_epoll.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o
 .PHONY : socket_epoll.cpp.o
 
 socket_epoll.i: socket_epoll.cpp.i
@@ -242,7 +197,7 @@ socket_epoll.i: socket_epoll.cpp.i
 
 # target to preprocess a source file
 socket_epoll.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.i
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.i
 .PHONY : socket_epoll.cpp.i
 
 socket_epoll.s: socket_epoll.cpp.s
@@ -250,7 +205,7 @@ socket_epoll.s: socket_epoll.cpp.s
 
 # target to generate assembly for a file
 socket_epoll.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.s
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.s
 .PHONY : socket_epoll.cpp.s
 
 thread.o: thread.cpp.o
@@ -258,7 +213,7 @@ thread.o: thread.cpp.o
 
 # target to build an object file
 thread.cpp.o:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.o
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.o
 .PHONY : thread.cpp.o
 
 thread.i: thread.cpp.i
@@ -266,7 +221,7 @@ thread.i: thread.cpp.i
 
 # target to preprocess a source file
 thread.cpp.i:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.i
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.i
 .PHONY : thread.cpp.i
 
 thread.s: thread.cpp.s
@@ -274,7 +229,7 @@ thread.s: thread.cpp.s
 
 # target to generate assembly for a file
 thread.cpp.s:
-	cd /home/gl/server/c_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.s
+	cd /home/gl/football_server/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.s
 .PHONY : thread.cpp.s
 
 # Help Target
@@ -286,18 +241,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... net"
 	@echo "... rebuild_cache"
-	@echo "... CSocketMap.o"
-	@echo "... CSocketMap.i"
-	@echo "... CSocketMap.s"
 	@echo "... client_socket.o"
 	@echo "... client_socket.i"
 	@echo "... client_socket.s"
 	@echo "... epoll_handler.o"
 	@echo "... epoll_handler.i"
 	@echo "... epoll_handler.s"
-	@echo "... epoll_socket.o"
-	@echo "... epoll_socket.i"
-	@echo "... epoll_socket.s"
 	@echo "... serversocket.o"
 	@echo "... serversocket.i"
 	@echo "... serversocket.s"
@@ -318,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/server/c_server/omgserver/client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/football_server/omgserver/client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

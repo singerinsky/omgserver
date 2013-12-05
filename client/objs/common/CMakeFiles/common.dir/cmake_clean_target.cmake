@@ -1,3 +1,3 @@
 FILE(REMOVE_RECURSE
-  "libcommon.a"
+  "../game_lib/libcommon.a"
 )

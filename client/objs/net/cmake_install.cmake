@@ -1,4 +1,4 @@
-# Install script for directory: /home/gl/server/c_server/omgserver/net
+# Install script for directory: /home/gl/football_server/omgserver/net
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

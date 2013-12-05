@@ -99,32 +99,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named common
-
-# Build rule for target.
-common: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 common
-.PHONY : common
-
-# fast build rule for target.
-common/fast:
-	$(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/build
-.PHONY : common/fast
-
-#=============================================================================
-# Target rules for targets named net
-
-# Build rule for target.
-net: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 net
-.PHONY : net
-
-# fast build rule for target.
-net/fast:
-	$(MAKE) -f net/CMakeFiles/net.dir/build.make net/CMakeFiles/net.dir/build
-.PHONY : net/fast
-
-#=============================================================================
 # Target rules for targets named gate_server
 
 # Build rule for target.
@@ -136,6 +110,19 @@ gate_server: cmake_check_build_system
 gate_server/fast:
 	$(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
 .PHONY : gate_server/fast
+
+#=============================================================================
+# Target rules for targets named game_server
+
+# Build rule for target.
+game_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 game_server
+.PHONY : game_server
+
+# fast build rule for target.
+game_server/fast:
+	$(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/build
+.PHONY : game_server/fast
 
 #=============================================================================
 # Target rules for targets named db_server
@@ -150,6 +137,32 @@ db_server/fast:
 	$(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/build
 .PHONY : db_server/fast
 
+#=============================================================================
+# Target rules for targets named net
+
+# Build rule for target.
+net: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 net
+.PHONY : net
+
+# fast build rule for target.
+net/fast:
+	$(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/build
+.PHONY : net/fast
+
+#=============================================================================
+# Target rules for targets named common
+
+# Build rule for target.
+common: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 common
+.PHONY : common
+
+# fast build rule for target.
+common/fast:
+	$(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/build
+.PHONY : common/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +171,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... common"
-	@echo "... net"
 	@echo "... gate_server"
+	@echo "... game_server"
 	@echo "... db_server"
+	@echo "... net"
+	@echo "... common"
 .PHONY : help
 
 

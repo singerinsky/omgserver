@@ -8,7 +8,7 @@ default_target: all
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -35,11 +35,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/server/c_server/omgserver/client
+CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/server/c_server/omgserver/client
+CMAKE_BINARY_DIR = /home/gl/football_server/omgserver/client
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/server/c_server/omgserver/client/CMakeFiles /home/gl/server/c_server/omgserver/client/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/client/CMakeFiles /home/gl/football_server/omgserver/client/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/server/c_server/omgserver/client/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/client/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

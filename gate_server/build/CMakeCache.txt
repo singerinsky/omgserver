@@ -165,11 +165,23 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
+//Dependencies for target
+common_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 gate_server_BINARY_DIR:STATIC=/home/gl/football_server/omgserver/gate_server/build
 
 //Value Computed by CMake
 gate_server_SOURCE_DIR:STATIC=/home/gl/football_server/omgserver/gate_server/build
+
+//Dependencies for target
+libcommon.a_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+libnet.a_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+net_LIB_DEPENDS:STATIC=
 
 
 ########################

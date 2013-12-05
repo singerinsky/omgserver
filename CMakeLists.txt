@@ -5,11 +5,9 @@ PROJECT(football_server)
 MESSAGE(STATUS "Project: SERVER")            
 
 SET(CMAKE_BUILE_TYPE DEBUG)                 
-SET(CMAKE_CXX_FLAGS_DEBUG "g++ -O0 -Wall -g")
-SET(CMAKE_CXX_FLAGS_RELEASE "g++ -O3 -Wall")
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -D_GNU_SOURCE -fPIC")
 
 INCLUDE_DIRECTORIES(./include )
-ADD_SUBDIRECTORY(soccer_ai)                             
 ADD_SUBDIRECTORY(gate_server/build)                             
 ADD_SUBDIRECTORY(game_server/build)                             
 ADD_SUBDIRECTORY(db_server/build)                             

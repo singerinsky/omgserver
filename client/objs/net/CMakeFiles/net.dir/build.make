@@ -4,7 +4,7 @@
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -31,11 +31,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/server/c_server/omgserver/client
+CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/server/c_server/omgserver/client
+CMAKE_BINARY_DIR = /home/gl/football_server/omgserver/client
 
 # Include any dependencies generated for this target.
 include objs/net/CMakeFiles/net.dir/depend.make
@@ -46,163 +49,19 @@ include objs/net/CMakeFiles/net.dir/progress.make
 # Include the compile flags for this target's objects.
 include objs/net/CMakeFiles/net.dir/flags.make
 
-objs/net/CMakeFiles/net.dir/thread.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/thread.cpp.o: /home/gl/server/c_server/omgserver/net/thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/thread.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/thread.cpp.o -c /home/gl/server/c_server/omgserver/net/thread.cpp
-
-objs/net/CMakeFiles/net.dir/thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/thread.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/thread.cpp > CMakeFiles/net.dir/thread.cpp.i
-
-objs/net/CMakeFiles/net.dir/thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/thread.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/thread.cpp -o CMakeFiles/net.dir/thread.cpp.s
-
-objs/net/CMakeFiles/net.dir/thread.cpp.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
-
-objs/net/CMakeFiles/net.dir/thread.cpp.o.provides: objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/thread.cpp.o.provides
-
-objs/net/CMakeFiles/net.dir/thread.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/thread.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/thread.cpp.o.provides.build
-
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o: /home/gl/server/c_server/omgserver/net/CSocketMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/CSocketMap.cpp.o -c /home/gl/server/c_server/omgserver/net/CSocketMap.cpp
-
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/CSocketMap.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/CSocketMap.cpp > CMakeFiles/net.dir/CSocketMap.cpp.i
-
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/CSocketMap.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/CSocketMap.cpp -o CMakeFiles/net.dir/CSocketMap.cpp.s
-
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.requires
-
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.provides: objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.provides
-
-objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.provides.build
-
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/server/c_server/omgserver/net/epoll_handler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/epoll_handler.cpp.o -c /home/gl/server/c_server/omgserver/net/epoll_handler.cpp
-
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/epoll_handler.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/epoll_handler.cpp > CMakeFiles/net.dir/epoll_handler.cpp.i
-
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/epoll_handler.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/epoll_handler.cpp -o CMakeFiles/net.dir/epoll_handler.cpp.s
-
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
-
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides
-
-objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides.build
-
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o: /home/gl/server/c_server/omgserver/net/epoll_socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/epoll_socket.cpp.o -c /home/gl/server/c_server/omgserver/net/epoll_socket.cpp
-
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/epoll_socket.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/epoll_socket.cpp > CMakeFiles/net.dir/epoll_socket.cpp.i
-
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/epoll_socket.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/epoll_socket.cpp -o CMakeFiles/net.dir/epoll_socket.cpp.s
-
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.requires
-
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.provides: objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.provides
-
-objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.provides.build
-
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o: /home/gl/server/c_server/omgserver/net/socket_epoll.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/socket_epoll.cpp.o -c /home/gl/server/c_server/omgserver/net/socket_epoll.cpp
-
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/socket_epoll.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/socket_epoll.cpp > CMakeFiles/net.dir/socket_epoll.cpp.i
-
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/socket_epoll.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/socket_epoll.cpp -o CMakeFiles/net.dir/socket_epoll.cpp.s
-
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires
-
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides
-
-objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides.build
-
-objs/net/CMakeFiles/net.dir/client_socket.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/client_socket.cpp.o: /home/gl/server/c_server/omgserver/net/client_socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/client_socket.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/client_socket.cpp.o -c /home/gl/server/c_server/omgserver/net/client_socket.cpp
-
-objs/net/CMakeFiles/net.dir/client_socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/client_socket.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/client_socket.cpp > CMakeFiles/net.dir/client_socket.cpp.i
-
-objs/net/CMakeFiles/net.dir/client_socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/client_socket.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/client_socket.cpp -o CMakeFiles/net.dir/client_socket.cpp.s
-
-objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
-
-objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides: objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides
-
-objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/client_socket.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides.build
-
 objs/net/CMakeFiles/net.dir/serversocket.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/serversocket.cpp.o: /home/gl/server/c_server/omgserver/net/serversocket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/server/c_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_7)
+objs/net/CMakeFiles/net.dir/serversocket.cpp.o: /home/gl/football_server/omgserver/net/serversocket.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/football_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/serversocket.cpp.o"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/serversocket.cpp.o -c /home/gl/server/c_server/omgserver/net/serversocket.cpp
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/serversocket.cpp.o -c /home/gl/football_server/omgserver/net/serversocket.cpp
 
 objs/net/CMakeFiles/net.dir/serversocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/serversocket.cpp.i"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/server/c_server/omgserver/net/serversocket.cpp > CMakeFiles/net.dir/serversocket.cpp.i
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/football_server/omgserver/net/serversocket.cpp > CMakeFiles/net.dir/serversocket.cpp.i
 
 objs/net/CMakeFiles/net.dir/serversocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/serversocket.cpp.s"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/server/c_server/omgserver/net/serversocket.cpp -o CMakeFiles/net.dir/serversocket.cpp.s
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/football_server/omgserver/net/serversocket.cpp -o CMakeFiles/net.dir/serversocket.cpp.s
 
 objs/net/CMakeFiles/net.dir/serversocket.cpp.o.requires:
 .PHONY : objs/net/CMakeFiles/net.dir/serversocket.cpp.o.requires
@@ -212,52 +71,137 @@ objs/net/CMakeFiles/net.dir/serversocket.cpp.o.provides: objs/net/CMakeFiles/net
 .PHONY : objs/net/CMakeFiles/net.dir/serversocket.cpp.o.provides
 
 objs/net/CMakeFiles/net.dir/serversocket.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/serversocket.cpp.o
-.PHONY : objs/net/CMakeFiles/net.dir/serversocket.cpp.o.provides.build
+
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/football_server/omgserver/net/epoll_handler.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/football_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/epoll_handler.cpp.o -c /home/gl/football_server/omgserver/net/epoll_handler.cpp
+
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/epoll_handler.cpp.i"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/football_server/omgserver/net/epoll_handler.cpp > CMakeFiles/net.dir/epoll_handler.cpp.i
+
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/epoll_handler.cpp.s"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/football_server/omgserver/net/epoll_handler.cpp -o CMakeFiles/net.dir/epoll_handler.cpp.s
+
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires:
+.PHONY : objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
+
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
+	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides.build
+.PHONY : objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides
+
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
+
+objs/net/CMakeFiles/net.dir/client_socket.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
+objs/net/CMakeFiles/net.dir/client_socket.cpp.o: /home/gl/football_server/omgserver/net/client_socket.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/football_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/client_socket.cpp.o"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/client_socket.cpp.o -c /home/gl/football_server/omgserver/net/client_socket.cpp
+
+objs/net/CMakeFiles/net.dir/client_socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/client_socket.cpp.i"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/football_server/omgserver/net/client_socket.cpp > CMakeFiles/net.dir/client_socket.cpp.i
+
+objs/net/CMakeFiles/net.dir/client_socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/client_socket.cpp.s"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/football_server/omgserver/net/client_socket.cpp -o CMakeFiles/net.dir/client_socket.cpp.s
+
+objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires:
+.PHONY : objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
+
+objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides: objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
+	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides.build
+.PHONY : objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides
+
+objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/client_socket.cpp.o
+
+objs/net/CMakeFiles/net.dir/thread.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
+objs/net/CMakeFiles/net.dir/thread.cpp.o: /home/gl/football_server/omgserver/net/thread.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/football_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/thread.cpp.o"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/thread.cpp.o -c /home/gl/football_server/omgserver/net/thread.cpp
+
+objs/net/CMakeFiles/net.dir/thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/thread.cpp.i"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/football_server/omgserver/net/thread.cpp > CMakeFiles/net.dir/thread.cpp.i
+
+objs/net/CMakeFiles/net.dir/thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/thread.cpp.s"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/football_server/omgserver/net/thread.cpp -o CMakeFiles/net.dir/thread.cpp.s
+
+objs/net/CMakeFiles/net.dir/thread.cpp.o.requires:
+.PHONY : objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
+
+objs/net/CMakeFiles/net.dir/thread.cpp.o.provides: objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
+	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/thread.cpp.o.provides.build
+.PHONY : objs/net/CMakeFiles/net.dir/thread.cpp.o.provides
+
+objs/net/CMakeFiles/net.dir/thread.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/thread.cpp.o
+
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o: /home/gl/football_server/omgserver/net/socket_epoll.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/football_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/socket_epoll.cpp.o -c /home/gl/football_server/omgserver/net/socket_epoll.cpp
+
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/socket_epoll.cpp.i"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/football_server/omgserver/net/socket_epoll.cpp > CMakeFiles/net.dir/socket_epoll.cpp.i
+
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/socket_epoll.cpp.s"
+	cd /home/gl/football_server/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/football_server/omgserver/net/socket_epoll.cpp -o CMakeFiles/net.dir/socket_epoll.cpp.s
+
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires:
+.PHONY : objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires
+
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires
+	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides.build
+.PHONY : objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides
+
+objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o
 
 # Object files for target net
 net_OBJECTS = \
-"CMakeFiles/net.dir/thread.cpp.o" \
-"CMakeFiles/net.dir/CSocketMap.cpp.o" \
+"CMakeFiles/net.dir/serversocket.cpp.o" \
 "CMakeFiles/net.dir/epoll_handler.cpp.o" \
-"CMakeFiles/net.dir/epoll_socket.cpp.o" \
-"CMakeFiles/net.dir/socket_epoll.cpp.o" \
 "CMakeFiles/net.dir/client_socket.cpp.o" \
-"CMakeFiles/net.dir/serversocket.cpp.o"
+"CMakeFiles/net.dir/thread.cpp.o" \
+"CMakeFiles/net.dir/socket_epoll.cpp.o"
 
 # External object files for target net
 net_EXTERNAL_OBJECTS =
 
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/thread.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/client_socket.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/serversocket.cpp.o
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/build.make
-objs/net/libnet.a: objs/net/CMakeFiles/net.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libnet.a"
-	cd /home/gl/server/c_server/omgserver/client/objs/net && $(CMAKE_COMMAND) -P CMakeFiles/net.dir/cmake_clean_target.cmake
-	cd /home/gl/server/c_server/omgserver/client/objs/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net.dir/link.txt --verbose=$(VERBOSE)
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/serversocket.cpp.o
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/client_socket.cpp.o
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/thread.cpp.o
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/build.make
+objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../game_lib/libnet.a"
+	cd /home/gl/football_server/omgserver/client/objs/net && $(CMAKE_COMMAND) -P CMakeFiles/net.dir/cmake_clean_target.cmake
+	cd /home/gl/football_server/omgserver/client/objs/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-objs/net/CMakeFiles/net.dir/build: objs/net/libnet.a
+objs/net/CMakeFiles/net.dir/build: objs/game_lib/libnet.a
 .PHONY : objs/net/CMakeFiles/net.dir/build
 
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/CSocketMap.cpp.o.requires
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/epoll_socket.cpp.o.requires
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/serversocket.cpp.o.requires
+objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
+objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
+objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
+objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/socket_epoll.cpp.o.requires
 .PHONY : objs/net/CMakeFiles/net.dir/requires
 
 objs/net/CMakeFiles/net.dir/clean:
-	cd /home/gl/server/c_server/omgserver/client/objs/net && $(CMAKE_COMMAND) -P CMakeFiles/net.dir/cmake_clean.cmake
+	cd /home/gl/football_server/omgserver/client/objs/net && $(CMAKE_COMMAND) -P CMakeFiles/net.dir/cmake_clean.cmake
 .PHONY : objs/net/CMakeFiles/net.dir/clean
 
 objs/net/CMakeFiles/net.dir/depend:
-	cd /home/gl/server/c_server/omgserver/client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/server/c_server/omgserver/client /home/gl/server/c_server/omgserver/net /home/gl/server/c_server/omgserver/client /home/gl/server/c_server/omgserver/client/objs/net /home/gl/server/c_server/omgserver/client/objs/net/CMakeFiles/net.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gl/football_server/omgserver/client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/football_server/omgserver/client /home/gl/football_server/omgserver/net /home/gl/football_server/omgserver/client /home/gl/football_server/omgserver/client/objs/net /home/gl/football_server/omgserver/client/objs/net/CMakeFiles/net.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : objs/net/CMakeFiles/net.dir/depend
 

@@ -34,9 +34,8 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/gl/football_server/omgserver/common/cmake_install.cmake")
-  INCLUDE("/home/gl/football_server/omgserver/net/cmake_install.cmake")
   INCLUDE("/home/gl/football_server/omgserver/gate_server/build/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/game_server/build/cmake_install.cmake")
   INCLUDE("/home/gl/football_server/omgserver/db_server/build/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)

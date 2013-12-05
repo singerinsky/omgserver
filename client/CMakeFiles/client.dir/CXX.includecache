@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+../include/gflags/gflags.h
+string
+-
+vector
+-
+stdint.h
+-
+sys/types.h
+-
+inttypes.h
+-
+
 ../include/glog/log_severity.h
 
 ../include/glog/logging.h
@@ -42,13 +54,13 @@ glog/vlog_is_on.h
 glog/log_severity.h
 ../include/glog/glog/log_severity.h
 
-/home/gl/server/c_server/omgserver/client/../common/../include/tinystr.h
+/home/gl/football_server/omgserver/client/../common/../include/tinystr.h
 assert.h
 -
 string.h
 -
 
-/home/gl/server/c_server/omgserver/client/../common/../include/tinyxml.h
+/home/gl/football_server/omgserver/client/../common/../include/tinyxml.h
 ctype.h
 -
 stdio.h
@@ -66,57 +78,57 @@ iostream
 sstream
 -
 tinystr.h
-/home/gl/server/c_server/omgserver/client/../common/../include/tinystr.h
+/home/gl/football_server/omgserver/client/../common/../include/tinystr.h
 
-/home/gl/server/c_server/omgserver/client/../common/CEventThread.h
+/home/gl/football_server/omgserver/client/../common/CEventThread.h
 CThread.h
-/home/gl/server/c_server/omgserver/client/../common/CThread.h
+/home/gl/football_server/omgserver/client/../common/CThread.h
 IJob.h
-/home/gl/server/c_server/omgserver/client/../common/IJob.h
+/home/gl/football_server/omgserver/client/../common/IJob.h
 lock.h
-/home/gl/server/c_server/omgserver/client/../common/lock.h
+/home/gl/football_server/omgserver/client/../common/lock.h
 
-/home/gl/server/c_server/omgserver/client/../common/CPoolThread.h
+/home/gl/football_server/omgserver/client/../common/CPoolThread.h
 CThread.h
-/home/gl/server/c_server/omgserver/client/../common/CThread.h
+/home/gl/football_server/omgserver/client/../common/CThread.h
 JobDequeue.h
-/home/gl/server/c_server/omgserver/client/../common/JobDequeue.h
+/home/gl/football_server/omgserver/client/../common/JobDequeue.h
 CEventThread.h
-/home/gl/server/c_server/omgserver/client/../common/CEventThread.h
+/home/gl/football_server/omgserver/client/../common/CEventThread.h
 
-/home/gl/server/c_server/omgserver/client/../common/CThread.h
+/home/gl/football_server/omgserver/client/../common/CThread.h
 pthread.h
 -
 ../common/head.h
-/home/gl/server/c_server/omgserver/client/../common/../common/head.h
+/home/gl/football_server/omgserver/client/../common/../common/head.h
 
-/home/gl/server/c_server/omgserver/client/../common/CThreadManage.h
+/home/gl/football_server/omgserver/client/../common/CThreadManage.h
 list
 -
 CEventThread.h
-/home/gl/server/c_server/omgserver/client/../common/CEventThread.h
+/home/gl/football_server/omgserver/client/../common/CEventThread.h
 CThread.h
-/home/gl/server/c_server/omgserver/client/../common/CThread.h
+/home/gl/football_server/omgserver/client/../common/CThread.h
 lock.h
-/home/gl/server/c_server/omgserver/client/../common/lock.h
+/home/gl/football_server/omgserver/client/../common/lock.h
 CPoolThread.h
-/home/gl/server/c_server/omgserver/client/../common/CPoolThread.h
+/home/gl/football_server/omgserver/client/../common/CPoolThread.h
 IJob.h
-/home/gl/server/c_server/omgserver/client/../common/IJob.h
+/home/gl/football_server/omgserver/client/../common/IJob.h
 
-/home/gl/server/c_server/omgserver/client/../common/IJob.h
+/home/gl/football_server/omgserver/client/../common/IJob.h
 cstddef
 -
 
-/home/gl/server/c_server/omgserver/client/../common/JobDequeue.h
+/home/gl/football_server/omgserver/client/../common/JobDequeue.h
 list
 -
 IJob.h
-/home/gl/server/c_server/omgserver/client/../common/IJob.h
+/home/gl/football_server/omgserver/client/../common/IJob.h
 head.h
-/home/gl/server/c_server/omgserver/client/../common/head.h
+/home/gl/football_server/omgserver/client/../common/head.h
 
-/home/gl/server/c_server/omgserver/client/../common/head.h
+/home/gl/football_server/omgserver/client/../common/head.h
 stdio.h
 -
 stdlib.h
@@ -161,72 +173,86 @@ stdint.h
 -
 stdarg.h
 -
+sys/param.h
+-
+sys/stat.h
+-
 string
 -
 vector
 -
 map
 -
+list
+-
 omg_type.h
-/home/gl/server/c_server/omgserver/client/../common/omg_type.h
+/home/gl/football_server/omgserver/client/../common/omg_type.h
+string.h
+/home/gl/football_server/omgserver/client/../common/string.h
 glog/logging.h
 -
 ../include/tinyxml.h
-/home/gl/server/c_server/omgserver/client/../common/../include/tinyxml.h
+/home/gl/football_server/omgserver/client/../common/../include/tinyxml.h
 ../include/tinystr.h
-/home/gl/server/c_server/omgserver/client/../common/../include/tinystr.h
+/home/gl/football_server/omgserver/client/../common/../include/tinystr.h
 lock.h
-/home/gl/server/c_server/omgserver/client/../common/lock.h
+/home/gl/football_server/omgserver/client/../common/lock.h
 
-/home/gl/server/c_server/omgserver/client/../common/lock.h
+/home/gl/football_server/omgserver/client/../common/lock.h
 head.h
-/home/gl/server/c_server/omgserver/client/../common/head.h
+/home/gl/football_server/omgserver/client/../common/head.h
 
-/home/gl/server/c_server/omgserver/client/../common/omg_type.h
+/home/gl/football_server/omgserver/client/../common/omg_type.h
 
-/home/gl/server/c_server/omgserver/client/../net/../common/omg_type.h
+/home/gl/football_server/omgserver/client/../net/../common/omg_type.h
 
-/home/gl/server/c_server/omgserver/client/../net/../net/IMsgDispatcher.h
+/home/gl/football_server/omgserver/client/../net/../net/IConnection.h
 
-/home/gl/server/c_server/omgserver/client/../net/client_socket.h
+/home/gl/football_server/omgserver/client/../net/../net/IMsgDispatcher.h
+
+/home/gl/football_server/omgserver/client/../net/client_socket.h
 ../common/head.h
-/home/gl/server/c_server/omgserver/client/../net/../common/head.h
+/home/gl/football_server/omgserver/client/../net/../common/head.h
 ../common/omg_type.h
-/home/gl/server/c_server/omgserver/client/../net/../common/omg_type.h
+/home/gl/football_server/omgserver/client/../net/../common/omg_type.h
 ../net/msg.h
-/home/gl/server/c_server/omgserver/client/../net/../net/msg.h
+/home/gl/football_server/omgserver/client/../net/../net/msg.h
 ../net/IMsgDispatcher.h
-/home/gl/server/c_server/omgserver/client/../net/../net/IMsgDispatcher.h
+/home/gl/football_server/omgserver/client/../net/../net/IMsgDispatcher.h
+../net/IConnection.h
+/home/gl/football_server/omgserver/client/../net/../net/IConnection.h
 
-/home/gl/server/c_server/omgserver/client/../net/msg.h
-
-/home/gl/server/c_server/omgserver/client/TestJob.h
-../common/IJob.h
-/home/gl/server/c_server/omgserver/client/../common/IJob.h
-stdio.h
-/home/gl/server/c_server/omgserver/client/stdio.h
-
-/home/gl/server/c_server/omgserver/client/main.cpp
+/home/gl/football_server/omgserver/client/../net/msg.h
 ../common/head.h
-/home/gl/server/c_server/omgserver/client/../common/head.h
+/home/gl/football_server/omgserver/client/../net/../common/head.h
+
+/home/gl/football_server/omgserver/client/TestJob.h
+../common/IJob.h
+/home/gl/football_server/omgserver/client/../common/IJob.h
+stdio.h
+/home/gl/football_server/omgserver/client/stdio.h
+
+/home/gl/football_server/omgserver/client/main.cpp
+../common/head.h
+/home/gl/football_server/omgserver/client/../common/head.h
 ../net/msg.h
-/home/gl/server/c_server/omgserver/client/../net/msg.h
+/home/gl/football_server/omgserver/client/../net/msg.h
 sys/socket.h
 -
 sys/types.h
 -
 stdio.h
-/home/gl/server/c_server/omgserver/client/stdio.h
+/home/gl/football_server/omgserver/client/stdio.h
 string.h
-/home/gl/server/c_server/omgserver/client/string.h
+/home/gl/football_server/omgserver/client/string.h
 string.h
-/home/gl/server/c_server/omgserver/client/string.h
+/home/gl/football_server/omgserver/client/string.h
 ../net/msg.h
-/home/gl/server/c_server/omgserver/client/../net/msg.h
+/home/gl/football_server/omgserver/client/../net/msg.h
 ../net/client_socket.h
-/home/gl/server/c_server/omgserver/client/../net/client_socket.h
+/home/gl/football_server/omgserver/client/../net/client_socket.h
 TestJob.h
-/home/gl/server/c_server/omgserver/client/TestJob.h
+/home/gl/football_server/omgserver/client/TestJob.h
 ../common/CThreadManage.h
-/home/gl/server/c_server/omgserver/client/../common/CThreadManage.h
+/home/gl/football_server/omgserver/client/../common/CThreadManage.h
 
