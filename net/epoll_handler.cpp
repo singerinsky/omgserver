@@ -124,6 +124,13 @@ namespace omg {
                 VLOG(3)<<"epoll_wait error";
                 break;
             }
+
+            if(fds == 0)
+            {
+                VLOG(3)<<"no event";
+                continue;
+            }
+
             for(int i=0; i< fds; i++) {
                 EPollSocket *epoll_socket = (EPollSocket*)_events[i].data.ptr;
                 if(epoll_socket->_socket_type == EPollSocket::LISTEN_SOCKET)
@@ -157,6 +164,7 @@ namespace omg {
         if(socket == NULL){
             return;
         }
+        LOG(INFO)<<"close socket";
         epoll_event ev;
         ::epoll_ctl(_epoll_create, EPOLL_CTL_DEL,socket->fd , &ev);
 

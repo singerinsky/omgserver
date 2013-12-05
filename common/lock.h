@@ -195,7 +195,7 @@ template<class T>
 class  ScopeLock
 {
     public:
-        ScopeLock(T t):lock(t){
+        ScopeLock(T& t):lock(t){
             lock.lock(); 
         }
         ~ScopeLock(){

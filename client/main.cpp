@@ -21,14 +21,14 @@ void init_server_log(int argc, char** argv){
 int main(int argc,char** argv){
 	init_server_log(argc,argv);
 	
-	omg::CThreadManage::BeginPoolThread(1);
+//	omg::CThreadManage::BeginPoolThread(1);
 	int port = 1;
 	struct sockaddr_in addr;
 	socklen_t len;
 	
 	memset(&addr,0,sizeof(addr));
 	addr.sin_family =	AF_INET;
-	addr.sin_port = htons(9999);	
+	addr.sin_port = htons(19999);	
 	inet_pton(AF_INET,"127.0.0.1",&addr.sin_addr);
 //	TestJob *pjob = new TestJob();
 //	omg::CThreadManage::AddJob(pjob);
@@ -48,8 +48,9 @@ int main(int argc,char** argv){
 			struct MsgLogin msg_login;
 			msg_login.mid = 10;
 			msg_login.uid = 1;
+            msg_login.zeit = time(NULL);
 			if(is_login == false){
-				send(fd,(const char*)&msg_login,msg_login.msg_size-4,0);
+				send(fd,(const char*)&msg_login,msg_login.msg_size,0);
 				is_login = true;
 			}
 
@@ -57,20 +58,17 @@ int main(int argc,char** argv){
 			int msg_len = sizeof(MsgAlive);
 			char* buff = (char*)malloc(msg_len);
 			int i=0;
-			msg_live.live_time = 12345.1112;
-			char* time="1986.09.20";
-			char* name="管磊";
-			strncpy(msg_live.str_time,time,10);
-			strncpy(msg_live.str_name,name,10);
+			msg_live.player_id = 111;
+            msg_live.zeit = time(NULL);
 			memcpy(buff,&msg_live,msg_len);
 			VLOG(1)<<"SEND MSG...";
 		//snprintf(buff,sizeof(buff),"send message%d",i);
-			int len = send(fd,buff,msg_len,0);
+//			int len = send(fd,buff,msg_len,0);
 			VLOG(1)<<"SEND MSG";
 			char buffer[1024];
-			usleep(1000*500);
+			usleep(10000*500);
 			recv(fd,buffer,1024,0);
-			VLOG(1)<<"Server time is "<<((MsgAlive*)buffer)->live_time;
+			VLOG(1)<<"Server time is "<<((MsgAlive*)buffer)->zeit;
 		}
 	}else{
 		VLOG(1)<<"error connect";

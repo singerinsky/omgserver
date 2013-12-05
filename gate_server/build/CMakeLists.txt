@@ -17,17 +17,19 @@ ADD_DEFINITIONS(-D_QQ_PLATM_)
 #本地才有
 ADD_DEFINITIONS(-D_MY_DEBUG_)
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g")
-
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+
+ADD_SUBDIRECTORY(../../net ../game_lib/net) 
+ADD_SUBDIRECTORY(../../common ../../game_lib/common)
 
 INCLUDE_DIRECTORIES(../../include)
 AUX_SOURCE_DIRECTORY(../ DIR_SRCS)
+#LINK_DIRECTORIES(../../game_lib)
 LINK_DIRECTORIES(/usr/local/lib)
-LINK_DIRECTORIES(../../game_lib)
 
 LINK_DIRECTORIES(../../libfor${libname})
 MESSAGE("Linking libs ${libname}")
-
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
 ADD_EXECUTABLE(gate_server ${DIR_SRCS})
 ADD_DEPENDENCIES(gate_server net common)
 TARGET_LINK_LIBRARIES(gate_server net common gflags glog libtinyxml.a libz.so pthread)

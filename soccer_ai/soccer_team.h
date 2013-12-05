@@ -9,6 +9,7 @@
 #include "soccer_formation.h"
 #include "state_type.h"
 #include "../game_server/GameConfigManage.h"
+#include <algorithm>
 
 class SoccerPlayer;
 class SoccerMatch;

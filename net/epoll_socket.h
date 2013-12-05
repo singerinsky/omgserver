@@ -21,8 +21,6 @@ struct EPollSocket {
 	EPollSocket(IMsgDispatcher* dispatcher) {
 		fd = 0;
 		this->_conn_state = CONN_UNVRIFY;
-        _recv_buffer.resize(32*1024);
-        _send_buffer.resize(32*1024);
         _lock.init();
         _msg_dispatcher = dispatcher;
 	}
@@ -31,8 +29,6 @@ struct EPollSocket {
     {
         fd = sock_fd; 
         _socket_type = sock_type;
-        _recv_buffer.resize(32*1024);
-        _send_buffer.resize(32*1024);
         _epoll_mod = epoll_mod;
         _lock.init();
         _msg_dispatcher = dispatcher;
@@ -95,7 +91,7 @@ struct EPollSocket {
 
     int on_read()
     {
-        char msg_buffer[2048];
+        char msg_buffer[2048] = {0};
         int len = 0;
         while(true){
             len = recv(fd,msg_buffer,2048,0);
@@ -120,6 +116,10 @@ struct EPollSocket {
                 _recv_buffer.insert(_recv_buffer.end(),msg_buffer,msg_buffer+len); 
                 int msg_len = -1;
                 while((_recv_buffer.size()>0 ) && (msg_len = check_msg_complete(_recv_buffer.data(),_recv_buffer.size())) != -1){
+                    if(msg_len > 12*1024 || msg_len < 0 )
+                    {
+                        return -1;
+                    }
                     char* msg_data = new char[msg_len];
                     memcpy(msg_data,_recv_buffer.data(),msg_len);
                     MsgBase* msg_base = (MsgBase*)msg_data;
