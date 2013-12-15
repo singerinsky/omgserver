@@ -14,6 +14,8 @@ SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g ")
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall ")
 INCLUDE_DIRECTORIES(../../include)
 AUX_SOURCE_DIRECTORY(../ DIR_SRCS)
+ADD_SUBDIRECTORY(../../soccer_ai ../game_lib/soccer_ai) 
+
 LINK_DIRECTORIES(/usr/local/lib)
 LINK_DIRECTORIES(../../game_lib)
 

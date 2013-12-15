@@ -35,14 +35,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football_server/omgserver
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles /home/gl/football_server/omgserver/gate_server/build/CMakeFiles/progress.marks
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles /home/gl/workspace/omgserver/gate_server/build/CMakeFiles/progress.marks
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/clean
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 gate_server/build/CMakeFiles/gate_server.dir/rule:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/CMakeFiles/gate_server.dir/rule
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/CMakeFiles/gate_server.dir/rule
 .PHONY : gate_server/build/CMakeFiles/gate_server.dir/rule
 
 # Convenience name for target.
@@ -109,7 +106,7 @@ gate_server: gate_server/build/CMakeFiles/gate_server.dir/rule
 
 # fast build rule for target.
 gate_server/fast:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
 .PHONY : gate_server/fast
 
 __/CAllServerManage.o: __/CAllServerManage.cpp.o
@@ -117,7 +114,7 @@ __/CAllServerManage.o: __/CAllServerManage.cpp.o
 
 # target to build an object file
 __/CAllServerManage.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.o
 .PHONY : __/CAllServerManage.cpp.o
 
 __/CAllServerManage.i: __/CAllServerManage.cpp.i
@@ -125,7 +122,7 @@ __/CAllServerManage.i: __/CAllServerManage.cpp.i
 
 # target to preprocess a source file
 __/CAllServerManage.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.i
 .PHONY : __/CAllServerManage.cpp.i
 
 __/CAllServerManage.s: __/CAllServerManage.cpp.s
@@ -133,7 +130,7 @@ __/CAllServerManage.s: __/CAllServerManage.cpp.s
 
 # target to generate assembly for a file
 __/CAllServerManage.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.s
 .PHONY : __/CAllServerManage.cpp.s
 
 __/CArenaManage.o: __/CArenaManage.cpp.o
@@ -141,7 +138,7 @@ __/CArenaManage.o: __/CArenaManage.cpp.o
 
 # target to build an object file
 __/CArenaManage.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.o
 .PHONY : __/CArenaManage.cpp.o
 
 __/CArenaManage.i: __/CArenaManage.cpp.i
@@ -149,7 +146,7 @@ __/CArenaManage.i: __/CArenaManage.cpp.i
 
 # target to preprocess a source file
 __/CArenaManage.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.i
 .PHONY : __/CArenaManage.cpp.i
 
 __/CArenaManage.s: __/CArenaManage.cpp.s
@@ -157,7 +154,7 @@ __/CArenaManage.s: __/CArenaManage.cpp.s
 
 # target to generate assembly for a file
 __/CArenaManage.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.s
 .PHONY : __/CArenaManage.cpp.s
 
 __/CGameMsgRecv.o: __/CGameMsgRecv.cpp.o
@@ -165,7 +162,7 @@ __/CGameMsgRecv.o: __/CGameMsgRecv.cpp.o
 
 # target to build an object file
 __/CGameMsgRecv.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.o
 .PHONY : __/CGameMsgRecv.cpp.o
 
 __/CGameMsgRecv.i: __/CGameMsgRecv.cpp.i
@@ -173,7 +170,7 @@ __/CGameMsgRecv.i: __/CGameMsgRecv.cpp.i
 
 # target to preprocess a source file
 __/CGameMsgRecv.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.i
 .PHONY : __/CGameMsgRecv.cpp.i
 
 __/CGameMsgRecv.s: __/CGameMsgRecv.cpp.s
@@ -181,7 +178,7 @@ __/CGameMsgRecv.s: __/CGameMsgRecv.cpp.s
 
 # target to generate assembly for a file
 __/CGameMsgRecv.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.s
 .PHONY : __/CGameMsgRecv.cpp.s
 
 __/CGateTimerEventHandler.o: __/CGateTimerEventHandler.cpp.o
@@ -189,7 +186,7 @@ __/CGateTimerEventHandler.o: __/CGateTimerEventHandler.cpp.o
 
 # target to build an object file
 __/CGateTimerEventHandler.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.o
 .PHONY : __/CGateTimerEventHandler.cpp.o
 
 __/CGateTimerEventHandler.i: __/CGateTimerEventHandler.cpp.i
@@ -197,7 +194,7 @@ __/CGateTimerEventHandler.i: __/CGateTimerEventHandler.cpp.i
 
 # target to preprocess a source file
 __/CGateTimerEventHandler.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.i
 .PHONY : __/CGateTimerEventHandler.cpp.i
 
 __/CGateTimerEventHandler.s: __/CGateTimerEventHandler.cpp.s
@@ -205,7 +202,7 @@ __/CGateTimerEventHandler.s: __/CGateTimerEventHandler.cpp.s
 
 # target to generate assembly for a file
 __/CGateTimerEventHandler.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.s
 .PHONY : __/CGateTimerEventHandler.cpp.s
 
 __/CMsgDispatcher.o: __/CMsgDispatcher.cpp.o
@@ -213,7 +210,7 @@ __/CMsgDispatcher.o: __/CMsgDispatcher.cpp.o
 
 # target to build an object file
 __/CMsgDispatcher.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.o
 .PHONY : __/CMsgDispatcher.cpp.o
 
 __/CMsgDispatcher.i: __/CMsgDispatcher.cpp.i
@@ -221,7 +218,7 @@ __/CMsgDispatcher.i: __/CMsgDispatcher.cpp.i
 
 # target to preprocess a source file
 __/CMsgDispatcher.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.i
 .PHONY : __/CMsgDispatcher.cpp.i
 
 __/CMsgDispatcher.s: __/CMsgDispatcher.cpp.s
@@ -229,7 +226,7 @@ __/CMsgDispatcher.s: __/CMsgDispatcher.cpp.s
 
 # target to generate assembly for a file
 __/CMsgDispatcher.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.s
 .PHONY : __/CMsgDispatcher.cpp.s
 
 __/GateUserManager.o: __/GateUserManager.cpp.o
@@ -237,7 +234,7 @@ __/GateUserManager.o: __/GateUserManager.cpp.o
 
 # target to build an object file
 __/GateUserManager.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.o
 .PHONY : __/GateUserManager.cpp.o
 
 __/GateUserManager.i: __/GateUserManager.cpp.i
@@ -245,7 +242,7 @@ __/GateUserManager.i: __/GateUserManager.cpp.i
 
 # target to preprocess a source file
 __/GateUserManager.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.i
 .PHONY : __/GateUserManager.cpp.i
 
 __/GateUserManager.s: __/GateUserManager.cpp.s
@@ -253,7 +250,7 @@ __/GateUserManager.s: __/GateUserManager.cpp.s
 
 # target to generate assembly for a file
 __/GateUserManager.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.s
 .PHONY : __/GateUserManager.cpp.s
 
 __/GateWayPlayer.o: __/GateWayPlayer.cpp.o
@@ -261,7 +258,7 @@ __/GateWayPlayer.o: __/GateWayPlayer.cpp.o
 
 # target to build an object file
 __/GateWayPlayer.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.o
 .PHONY : __/GateWayPlayer.cpp.o
 
 __/GateWayPlayer.i: __/GateWayPlayer.cpp.i
@@ -269,7 +266,7 @@ __/GateWayPlayer.i: __/GateWayPlayer.cpp.i
 
 # target to preprocess a source file
 __/GateWayPlayer.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.i
 .PHONY : __/GateWayPlayer.cpp.i
 
 __/GateWayPlayer.s: __/GateWayPlayer.cpp.s
@@ -277,7 +274,7 @@ __/GateWayPlayer.s: __/GateWayPlayer.cpp.s
 
 # target to generate assembly for a file
 __/GateWayPlayer.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.s
 .PHONY : __/GateWayPlayer.cpp.s
 
 __/SSocketListenAdapter.o: __/SSocketListenAdapter.cpp.o
@@ -285,7 +282,7 @@ __/SSocketListenAdapter.o: __/SSocketListenAdapter.cpp.o
 
 # target to build an object file
 __/SSocketListenAdapter.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.o
 .PHONY : __/SSocketListenAdapter.cpp.o
 
 __/SSocketListenAdapter.i: __/SSocketListenAdapter.cpp.i
@@ -293,7 +290,7 @@ __/SSocketListenAdapter.i: __/SSocketListenAdapter.cpp.i
 
 # target to preprocess a source file
 __/SSocketListenAdapter.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.i
 .PHONY : __/SSocketListenAdapter.cpp.i
 
 __/SSocketListenAdapter.s: __/SSocketListenAdapter.cpp.s
@@ -301,7 +298,7 @@ __/SSocketListenAdapter.s: __/SSocketListenAdapter.cpp.s
 
 # target to generate assembly for a file
 __/SSocketListenAdapter.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.s
 .PHONY : __/SSocketListenAdapter.cpp.s
 
 __/main.o: __/main.cpp.o
@@ -309,7 +306,7 @@ __/main.o: __/main.cpp.o
 
 # target to build an object file
 __/main.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.o
 .PHONY : __/main.cpp.o
 
 __/main.i: __/main.cpp.i
@@ -317,7 +314,7 @@ __/main.i: __/main.cpp.i
 
 # target to preprocess a source file
 __/main.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.i
 .PHONY : __/main.cpp.i
 
 __/main.s: __/main.cpp.s
@@ -325,7 +322,7 @@ __/main.s: __/main.cpp.s
 
 # target to generate assembly for a file
 __/main.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.s
 .PHONY : __/main.cpp.s
 
 # Help Target
@@ -375,6 +372,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

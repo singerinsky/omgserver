@@ -1,43 +1,23 @@
-cscope 15 $HOME/football_server/omgserver -q 0000015543 0002867535
-	@CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+cscope 15 $HOME/workspace/omgserver -q 0000015542 0002815102
+	@CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
 4 #i‚de‡
 __˝lu•lus
 
 
-11 #i‡
+8 #i‡
 deföed
 (
 __COMO__
 )
 
-12 
+9 
 	#COMPILER_ID
  "Comóu"
 
 	)
 
-14 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__COMO_VERSION__
- / 100)
-
-	)
-
-15 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__COMO_VERSION__
- % 100)
-
-	)
-
-17 #ñi‡
+11 #ñi‡
 deföed
 (
 __INTEL_COMPILER
@@ -45,783 +25,203 @@ __INTEL_COMPILER
 __ICC
 )
 
-18 
+12 
 	#COMPILER_ID
  "I¡ñ"
 
 	)
 
-20 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/100)
-
-	)
-
-21 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/10 % 10)
-
-	)
-
-22 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__INTEL_COMPILER
- % 10)
-
-	)
-
-23 #i‡
-deföed
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-25 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-	)
-
-28 #ñi‡
-deföed
-(
-__PATHCC__
-)
-
-29 
-	#COMPILER_ID
- "P©hSˇÀ"
-
-	)
-
-30 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PATHCC__
-)
-
-	)
-
-31 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PATHCC_MINOR__
-)
-
-	)
-
-32 #i‡
-deföed
-(
-__PATHCC_PATCHLEVEL__
-)
-
-33 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PATHCC_PATCHLEVEL__
-)
-
-	)
-
-36 #ñi‡
+14 #ñi‡
 deföed
 (
 __˛™g__
 )
 
-37 
+15 
 	#COMPILER_ID
  "Cœng"
 
 	)
 
-38 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__˛™g_maj‹__
-)
-
-	)
-
-39 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__˛™g_mö‹__
-)
-
-	)
-
-40 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__˛™g_∑tchÀvñ__
-)
-
-	)
-
-42 #ñi‡
-deföed
-(
-__BORLANDC__
-Ë&& deföed(
-__CODEGEARC_VERSION__
-)
-
-43 
-	#COMPILER_ID
- "Emb¨ˇdîo"
-
-	)
-
-44 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>24 & 0x00FF)
-
-	)
-
-45 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>16 & 0x00FF)
-
-	)
-
-46 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
- & 0xFFFF)
-
-	)
-
-48 #ñi‡
+17 #ñi‡
 deföed
 (
 __BORLANDC__
 )
 
-49 
+18 
 	#COMPILER_ID
  "B‹œnd"
 
 	)
 
-51 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__BORLANDC__
->>8)
-
-	)
-
-52 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__BORLANDC__
- & 0xFF)
-
-	)
-
-54 #ñi‡
+20 #ñi‡
 deföed
 (
 __WATCOMC__
 )
 
-55 
+21 
 	#COMPILER_ID
  "W©com"
 
 	)
 
-57 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__WATCOMC__
- / 100)
-
-	)
-
-58 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__WATCOMC__
- % 100)
-
-	)
-
-60 #ñi‡
+23 #ñi‡
 deföed
 (
 __SUNPRO_CC
 )
 
-61 
+24 
 	#COMPILER_ID
  "SunPro"
 
 	)
 
-62 #i‡
-__SUNPRO_CC
- >= 0x5100
-
-64 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>12)
-
-	)
-
-65 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xFF)
-
-	)
-
-66 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-69 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>8)
-
-	)
-
-70 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xF)
-
-	)
-
-71 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-74 #ñi‡
+26 #ñi‡
 deföed
 (
 __HP_aCC
 )
 
-75 
+27 
 	#COMPILER_ID
  "HP"
 
 	)
 
-77 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__HP_aCC
-/10000)
-
-	)
-
-78 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__HP_aCC
-/100 % 100)
-
-	)
-
-79 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__HP_aCC
- % 100)
-
-	)
-
-81 #ñi‡
+29 #ñi‡
 deföed
 (
 __DECCXX
 )
 
-82 
+30 
 	#COMPILER_ID
  "Com∑q"
 
 	)
 
-84 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__DECCXX_VER
-/10000000)
-
-	)
-
-85 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__DECCXX_VER
-/100000 % 100)
-
-	)
-
-86 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__DECCXX_VER
- % 10000)
-
-	)
-
-88 #ñi‡
+32 #ñi‡
 deföed
 (
 __IBMCPP__
 )
 
-89 #i‡
+33 #i‡
 deföed
 (
 __COMPILER_VER__
 )
 
-90 
+34 
 	#COMPILER_ID
  "zOS"
 
 	)
 
-92 #i‡
+35 #ñi‡
 __IBMCPP__
  >= 800
 
-93 
+36 
 	#COMPILER_ID
  "XL"
 
 	)
 
-95 
+38 
 	#COMPILER_ID
  "VisuÆAge"
 
 	)
 
-98 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__IBMCPP__
-/100)
-
-	)
-
-99 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__IBMCPP__
-/10 % 10)
-
-	)
-
-100 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__IBMCPP__
- % 10)
-
-	)
-
-103 #ñi‡
+41 #ñi‡
 deföed
 (
 __PGI
 )
 
-104 
+42 
 	#COMPILER_ID
  "PGI"
 
 	)
 
-105 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PGIC__
-)
-
-	)
-
-106 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PGIC_MINOR__
-)
-
-	)
-
-107 #i‡
+44 #ñi‡
 deföed
 (
-__PGIC_PATCHLEVEL__
+__PATHSCALE__
 )
 
-108 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PGIC_PATCHLEVEL__
-)
+45 
+	#COMPILER_ID
+ "P©hSˇÀ"
 
 	)
 
-111 #ñi‡
+47 #ñi‡
 deföed
 (
 _CRAYC
 )
 
-112 
+48 
 	#COMPILER_ID
  "Cøy"
 
 	)
 
-113 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_RELEASE
-)
-
-	)
-
-114 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_RELEASE_MINOR
-)
-
-	)
-
-116 #ñi‡
+50 #ñi‡
 deföed
 (
 __TI_COMPILER_VERSION__
 )
 
-117 
+51 
 	#COMPILER_ID
- "TI"
+ "TI_DSP"
 
 	)
 
-119 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000000)
-
-	)
-
-120 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000 % 1000)
-
-	)
-
-121 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
- % 1000)
-
-	)
-
-123 #ñi‡
+53 #ñi‡
 deföed
 (
 __SCO_VERSION__
 )
 
-124 
+54 
 	#COMPILER_ID
  "SCO"
 
 	)
 
-126 #ñi‡
+56 #ñi‡
 deföed
 (
 __GNUC__
 )
 
-127 
+57 
 	#COMPILER_ID
  "GNU"
 
 	)
 
-128 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__GNUC__
-)
-
-	)
-
-129 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__GNUC_MINOR__
-)
-
-	)
-
-130 #i‡
-deföed
-(
-__GNUC_PATCHLEVEL__
-)
-
-131 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__GNUC_PATCHLEVEL__
-)
-
-	)
-
-134 #ñi‡
+59 #ñi‡
 deföed
 (
 _MSC_VER
 )
 
-135 
+60 
 	#COMPILER_ID
  "MSVC"
 
 	)
 
-137 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_MSC_VER
- / 100)
-
-	)
-
-138 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_MSC_VER
- % 100)
-
-	)
-
-139 #i‡
-deföed
-(
-_MSC_FULL_VER
-)
-
-140 #i‡
-_MSC_VER
- >= 1400
-
-142 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 100000)
-
-	)
-
-145 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 10000)
-
-	)
-
-148 #i‡
-deföed
-(
-_MSC_BUILD
-)
-
-149 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-_MSC_BUILD
-)
-
-	)
-
-153 #ñi‡
-deföed
-(
-__VISUALDSPVERSION__
-)
-
-154 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-156 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>24)
-
-	)
-
-157 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>16 & 0xFF)
-
-	)
-
-158 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>8 & 0xFF)
-
-	)
-
-161 #ñi‡
+62 #ñi‡
 deföed
 (
 __ADSPBLACKFIN__
@@ -831,13 +231,13 @@ __ADSPTS__
 __ADSP21000__
 )
 
-162 
+65 
 	#COMPILER_ID
  "ADSP"
 
 	)
 
-164 #ñi‡
+67 #ñi‡
 deföed
 (
 _SGI_COMPILER_VERSION
@@ -845,91 +245,25 @@ _SGI_COMPILER_VERSION
 _COMPILER_VERSION
 )
 
-165 
+68 
 	#COMPILER_ID
  "MIPS¥o"
 
 	)
 
-166 #i‡
-deföed
-(
-_SGI_COMPILER_VERSION
-)
-
-168 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/100)
-
-	)
-
-169 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-170 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
- % 10)
-
-	)
-
-173 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/100)
-
-	)
-
-174 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-175 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_COMPILER_VERSION
- % 10)
-
-	)
-
-181 #ñi‡
+73 #ñi‡
 deföed
 (
 __sgi
 )
 
-182 
+74 
 	#COMPILER_ID
  "MIPS¥o"
 
 	)
 
-184 #ñi‡
+76 #ñi‡
 deföed
 (
 __hpux
@@ -937,25 +271,25 @@ __hpux
 __hpua
 )
 
-185 
+77 
 	#COMPILER_ID
  "HP"
 
 	)
 
-188 
+80 
 	#COMPILER_ID
  ""
 
 	)
 
-196 c⁄°* 
+88 c⁄°* 
 	göfo_compûî
  = "INFO" ":" "compûî[" 
 COMPILER_ID
  "]";
 
-199 #i‡
+91 #i‡
 deföed
 (
 __löux
@@ -965,49 +299,49 @@ __löux__
 löux
 )
 
-200 
+92 
 	#PLATFORM_ID
  "Löux"
 
 	)
 
-202 #ñi‡
+94 #ñi‡
 deföed
 (
 __CYGWIN__
 )
 
-203 
+95 
 	#PLATFORM_ID
  "Cygwö"
 
 	)
 
-205 #ñi‡
+97 #ñi‡
 deföed
 (
 __MINGW32__
 )
 
-206 
+98 
 	#PLATFORM_ID
  "MöGW"
 
 	)
 
-208 #ñi‡
+100 #ñi‡
 deföed
 (
 __APPLE__
 )
 
-209 
+101 
 	#PLATFORM_ID
  "D¨wö"
 
 	)
 
-211 #ñi‡
+103 #ñi‡
 deföed
 (
 _WIN32
@@ -1017,13 +351,13 @@ __WIN32__
 WIN32
 )
 
-212 
+104 
 	#PLATFORM_ID
  "Wödows"
 
 	)
 
-214 #ñi‡
+106 #ñi‡
 deföed
 (
 __FªeBSD__
@@ -1031,13 +365,13 @@ __FªeBSD__
 __FªeBSD
 )
 
-215 
+107 
 	#PLATFORM_ID
  "FªeBSD"
 
 	)
 
-217 #ñi‡
+109 #ñi‡
 deföed
 (
 __NëBSD__
@@ -1045,13 +379,13 @@ __NëBSD__
 __NëBSD
 )
 
-218 
+110 
 	#PLATFORM_ID
  "NëBSD"
 
 	)
 
-220 #ñi‡
+112 #ñi‡
 deföed
 (
 __O≥nBSD__
@@ -1059,13 +393,13 @@ __O≥nBSD__
 __OPENBSD
 )
 
-221 
+113 
 	#PLATFORM_ID
  "O≥nBSD"
 
 	)
 
-223 #ñi‡
+115 #ñi‡
 deföed
 (
 __sun
@@ -1073,13 +407,13 @@ __sun
 sun
 )
 
-224 
+116 
 	#PLATFORM_ID
  "SunOS"
 
 	)
 
-226 #ñi‡
+118 #ñi‡
 deföed
 (
 _AIX
@@ -1093,13 +427,13 @@ __aix
 __aix__
 )
 
-227 
+119 
 	#PLATFORM_ID
  "AIX"
 
 	)
 
-229 #ñi‡
+121 #ñi‡
 deföed
 (
 __sgi
@@ -1109,13 +443,13 @@ __sgi__
 _SGI
 )
 
-230 
+122 
 	#PLATFORM_ID
  "IRIX"
 
 	)
 
-232 #ñi‡
+124 #ñi‡
 deföed
 (
 __hpux
@@ -1123,25 +457,29 @@ __hpux
 __hpux__
 )
 
-233 
+125 
 	#PLATFORM_ID
  "HP-UX"
 
 	)
 
-235 #ñi‡
+127 #ñi‡
 deföed
 (
+__HAIKU
+Ë|| deföed(
 __HAIKU__
+Ë|| deföed(
+_HAIKU
 )
 
-236 
+128 
 	#PLATFORM_ID
  "Haiku"
 
 	)
 
-238 #ñi‡
+133 #ñi‡
 deföed
 (
 __BeOS
@@ -1151,13 +489,13 @@ __BEOS__
 _BEOS
 )
 
-239 
+134 
 	#PLATFORM_ID
  "BeOS"
 
 	)
 
-241 #ñi‡
+136 #ñi‡
 deföed
 (
 __QNX__
@@ -1165,13 +503,13 @@ __QNX__
 __QNXNTO__
 )
 
-242 
+137 
 	#PLATFORM_ID
  "QNX"
 
 	)
 
-244 #ñi‡
+139 #ñi‡
 deföed
 (
 __åu64
@@ -1181,13 +519,13 @@ _åu64
 __TRU64__
 )
 
-245 
+140 
 	#PLATFORM_ID
  "Tru64"
 
 	)
 
-247 #ñi‡
+142 #ñi‡
 deföed
 (
 __riscos
@@ -1195,13 +533,13 @@ __riscos
 __riscos__
 )
 
-248 
+143 
 	#PLATFORM_ID
  "RISCos"
 
 	)
 
-250 #ñi‡
+145 #ñi‡
 deföed
 (
 __söix
@@ -1211,37 +549,37 @@ __söix__
 __SINIX__
 )
 
-251 
+146 
 	#PLATFORM_ID
  "SINIX"
 
 	)
 
-253 #ñi‡
+148 #ñi‡
 deföed
 (
 __UNIX_SV__
 )
 
-254 
+149 
 	#PLATFORM_ID
  "UNIX_SV"
 
 	)
 
-256 #ñi‡
+151 #ñi‡
 deföed
 (
 __bsdos__
 )
 
-257 
+152 
 	#PLATFORM_ID
  "BSDOS"
 
 	)
 
-259 #ñi‡
+154 #ñi‡
 deföed
 (
 _MPRAS
@@ -1249,13 +587,13 @@ _MPRAS
 MPRAS
 )
 
-260 
+155 
 	#PLATFORM_ID
  "MP-RAS"
 
 	)
 
-262 #ñi‡
+157 #ñi‡
 deföed
 (
 __osf
@@ -1263,13 +601,13 @@ __osf
 __osf__
 )
 
-263 
+158 
 	#PLATFORM_ID
  "OSF1"
 
 	)
 
-265 #ñi‡
+160 #ñi‡
 deföed
 (
 _SCO_SV
@@ -1279,13 +617,13 @@ SCO_SV
 sco_sv
 )
 
-266 
+161 
 	#PLATFORM_ID
  "SCO_SV"
 
 	)
 
-268 #ñi‡
+163 #ñi‡
 deföed
 (
 __u…rix
@@ -1295,13 +633,13 @@ __u…rix__
 _ULTRIX
 )
 
-269 
+164 
 	#PLATFORM_ID
  "ULTRIX"
 
 	)
 
-271 #ñi‡
+166 #ñi‡
 deföed
 (
 __XENIX__
@@ -1311,1617 +649,19 @@ _XENIX
 XENIX
 )
 
-272 
+167 
 	#PLATFORM_ID
  "Xíix"
-
-	)
-
-275 
-	#PLATFORM_ID
- ""
-
-	)
-
-284 #i‡
-deföed
-(
-_WIN32
-Ë&& deföed(
-_MSC_VER
-)
-
-285 #i‡
-deföed
-(
-_M_IA64
-)
-
-286 
-	#ARCHITECTURE_ID
- "IA64"
-
-	)
-
-288 #ñi‡
-deföed
-(
-_M_X64
-Ë|| deföed(
-_M_AMD64
-)
-
-289 
-	#ARCHITECTURE_ID
- "x64"
-
-	)
-
-291 #ñi‡
-deföed
-(
-_M_IX86
-)
-
-292 
-	#ARCHITECTURE_ID
- "X86"
-
-	)
-
-294 #ñi‡
-deföed
-(
-_M_ARM
-)
-
-295 
-	#ARCHITECTURE_ID
- "ARM"
-
-	)
-
-297 #ñi‡
-deföed
-(
-_M_MIPS
-)
-
-298 
-	#ARCHITECTURE_ID
- "MIPS"
-
-	)
-
-300 #ñi‡
-deföed
-(
-_M_SH
-)
-
-301 
-	#ARCHITECTURE_ID
- "SHx"
-
-	)
-
-304 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-308 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-312 
-	#DEC
-(
-n
-) \
-
-313 ('0' + (((
-n
-) / 10000000)%10)), \
-
-314 ('0' + (((
-n
-) / 1000000)%10)), \
-
-315 ('0' + (((
-n
-) / 100000)%10)), \
-
-316 ('0' + (((
-n
-) / 10000)%10)), \
-
-317 ('0' + (((
-n
-) / 1000)%10)), \
-
-318 ('0' + (((
-n
-) / 100)%10)), \
-
-319 ('0' + (((
-n
-) / 10)%10)), \
-
-320 ('0' + ((
-n
-Ë% 10))
-
-	)
-
-323 
-	#HEX
-(
-n
-) \
-
-324 ('0' + ((
-n
-)>>28 & 0xF)), \
-
-325 ('0' + ((
-n
-)>>24 & 0xF)), \
-
-326 ('0' + ((
-n
-)>>20 & 0xF)), \
-
-327 ('0' + ((
-n
-)>>16 & 0xF)), \
-
-328 ('0' + ((
-n
-)>>12 & 0xF)), \
-
-329 ('0' + ((
-n
-)>>8 & 0xF)), \
-
-330 ('0' + ((
-n
-)>>4 & 0xF)), \
-
-331 ('0' + ((
-n
-Ë& 0xF))
-
-	)
-
-334 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-335 c⁄° 
-	göfo_vîsi⁄
-[] = {
-
-338 
-COMPILER_VERSION_MAJOR
-,
-
-339 #ifde‡
-COMPILER_VERSION_MINOR
-
-
-340 '.', 
-COMPILER_VERSION_MINOR
-,
-
-341 #ifde‡
-COMPILER_VERSION_PATCH
-
-
-342 '.', 
-COMPILER_VERSION_PATCH
-,
-
-343 #ifde‡
-COMPILER_VERSION_TWEAK
-
-
-344 '.', 
-COMPILER_VERSION_TWEAK
-,
-
-355 c⁄°* 
-	göfo_∂©f‹m
- = "INFO" ":" "∂©f‹m[" 
-PLATFORM_ID
- "]";
-
-356 c⁄°* 
-	göfo_¨ch
- = "INFO" ":" "¨ch[" 
-ARCHITECTURE_ID
- "]";
-
-362 
-	$maö
-(
-¨gc
-, * 
-¨gv
-[])
-
-364 
-ªquúe
- = 0;
-
-365 
-ªquúe
- +
-öfo_compûî
-[
-¨gc
-];
-
-366 
-ªquúe
- +
-öfo_∂©f‹m
-[
-¨gc
-];
-
-367 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-368 
-ªquúe
- +
-öfo_vîsi⁄
-[
-¨gc
-];
-
-370 ()
-¨gv
-;
-
-371  
-ªquúe
-;
-
-372 
-	}
-}
-
-	@build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-
-4 #i‚de‡
-__˝lu•lus
-
-
-11 #i‡
-deföed
-(
-__COMO__
-)
-
-12 
-	#COMPILER_ID
- "Comóu"
-
-	)
-
-14 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__COMO_VERSION__
- / 100)
-
-	)
-
-15 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__COMO_VERSION__
- % 100)
-
-	)
-
-17 #ñi‡
-deföed
-(
-__INTEL_COMPILER
-Ë|| deföed(
-__ICC
-)
-
-18 
-	#COMPILER_ID
- "I¡ñ"
-
-	)
-
-20 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/100)
-
-	)
-
-21 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/10 % 10)
-
-	)
-
-22 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__INTEL_COMPILER
- % 10)
-
-	)
-
-23 #i‡
-deföed
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-25 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-	)
-
-28 #ñi‡
-deföed
-(
-__PATHCC__
-)
-
-29 
-	#COMPILER_ID
- "P©hSˇÀ"
-
-	)
-
-30 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PATHCC__
-)
-
-	)
-
-31 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PATHCC_MINOR__
-)
-
-	)
-
-32 #i‡
-deföed
-(
-__PATHCC_PATCHLEVEL__
-)
-
-33 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PATHCC_PATCHLEVEL__
-)
-
-	)
-
-36 #ñi‡
-deföed
-(
-__˛™g__
-)
-
-37 
-	#COMPILER_ID
- "Cœng"
-
-	)
-
-38 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__˛™g_maj‹__
-)
-
-	)
-
-39 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__˛™g_mö‹__
-)
-
-	)
-
-40 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__˛™g_∑tchÀvñ__
-)
-
-	)
-
-42 #ñi‡
-deföed
-(
-__BORLANDC__
-Ë&& deföed(
-__CODEGEARC_VERSION__
-)
-
-43 
-	#COMPILER_ID
- "Emb¨ˇdîo"
-
-	)
-
-44 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>24 & 0x00FF)
-
-	)
-
-45 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>16 & 0x00FF)
-
-	)
-
-46 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
- & 0xFFFF)
-
-	)
-
-48 #ñi‡
-deföed
-(
-__BORLANDC__
-)
-
-49 
-	#COMPILER_ID
- "B‹œnd"
-
-	)
-
-51 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__BORLANDC__
->>8)
-
-	)
-
-52 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__BORLANDC__
- & 0xFF)
-
-	)
-
-54 #ñi‡
-deföed
-(
-__WATCOMC__
-)
-
-55 
-	#COMPILER_ID
- "W©com"
-
-	)
-
-57 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__WATCOMC__
- / 100)
-
-	)
-
-58 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__WATCOMC__
- % 100)
-
-	)
-
-60 #ñi‡
-deföed
-(
-__SUNPRO_CC
-)
-
-61 
-	#COMPILER_ID
- "SunPro"
-
-	)
-
-62 #i‡
-__SUNPRO_CC
- >= 0x5100
-
-64 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>12)
-
-	)
-
-65 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xFF)
-
-	)
-
-66 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-69 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>8)
-
-	)
-
-70 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xF)
-
-	)
-
-71 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-74 #ñi‡
-deföed
-(
-__HP_aCC
-)
-
-75 
-	#COMPILER_ID
- "HP"
-
-	)
-
-77 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__HP_aCC
-/10000)
-
-	)
-
-78 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__HP_aCC
-/100 % 100)
-
-	)
-
-79 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__HP_aCC
- % 100)
-
-	)
-
-81 #ñi‡
-deföed
-(
-__DECCXX
-)
-
-82 
-	#COMPILER_ID
- "Com∑q"
-
-	)
-
-84 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__DECCXX_VER
-/10000000)
-
-	)
-
-85 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__DECCXX_VER
-/100000 % 100)
-
-	)
-
-86 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__DECCXX_VER
- % 10000)
-
-	)
-
-88 #ñi‡
-deföed
-(
-__IBMCPP__
-)
-
-89 #i‡
-deföed
-(
-__COMPILER_VER__
-)
-
-90 
-	#COMPILER_ID
- "zOS"
-
-	)
-
-92 #i‡
-__IBMCPP__
- >= 800
-
-93 
-	#COMPILER_ID
- "XL"
-
-	)
-
-95 
-	#COMPILER_ID
- "VisuÆAge"
-
-	)
-
-98 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__IBMCPP__
-/100)
-
-	)
-
-99 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__IBMCPP__
-/10 % 10)
-
-	)
-
-100 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__IBMCPP__
- % 10)
-
-	)
-
-103 #ñi‡
-deföed
-(
-__PGI
-)
-
-104 
-	#COMPILER_ID
- "PGI"
-
-	)
-
-105 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PGIC__
-)
-
-	)
-
-106 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PGIC_MINOR__
-)
-
-	)
-
-107 #i‡
-deföed
-(
-__PGIC_PATCHLEVEL__
-)
-
-108 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PGIC_PATCHLEVEL__
-)
-
-	)
-
-111 #ñi‡
-deföed
-(
-_CRAYC
-)
-
-112 
-	#COMPILER_ID
- "Cøy"
-
-	)
-
-113 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_RELEASE
-)
-
-	)
-
-114 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_RELEASE_MINOR
-)
-
-	)
-
-116 #ñi‡
-deföed
-(
-__TI_COMPILER_VERSION__
-)
-
-117 
-	#COMPILER_ID
- "TI"
-
-	)
-
-119 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000000)
-
-	)
-
-120 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000 % 1000)
-
-	)
-
-121 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
- % 1000)
-
-	)
-
-123 #ñi‡
-deföed
-(
-__SCO_VERSION__
-)
-
-124 
-	#COMPILER_ID
- "SCO"
-
-	)
-
-126 #ñi‡
-deföed
-(
-__GNUC__
-)
-
-127 
-	#COMPILER_ID
- "GNU"
-
-	)
-
-128 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__GNUC__
-)
-
-	)
-
-129 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__GNUC_MINOR__
-)
-
-	)
-
-130 #i‡
-deföed
-(
-__GNUC_PATCHLEVEL__
-)
-
-131 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__GNUC_PATCHLEVEL__
-)
-
-	)
-
-134 #ñi‡
-deföed
-(
-_MSC_VER
-)
-
-135 
-	#COMPILER_ID
- "MSVC"
-
-	)
-
-137 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_MSC_VER
- / 100)
-
-	)
-
-138 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_MSC_VER
- % 100)
-
-	)
-
-139 #i‡
-deföed
-(
-_MSC_FULL_VER
-)
-
-140 #i‡
-_MSC_VER
- >= 1400
-
-142 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 100000)
-
-	)
-
-145 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 10000)
-
-	)
-
-148 #i‡
-deföed
-(
-_MSC_BUILD
-)
-
-149 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-_MSC_BUILD
-)
-
-	)
-
-153 #ñi‡
-deföed
-(
-__VISUALDSPVERSION__
-)
-
-154 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-156 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>24)
-
-	)
-
-157 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>16 & 0xFF)
-
-	)
-
-158 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>8 & 0xFF)
-
-	)
-
-161 #ñi‡
-deföed
-(
-__ADSPBLACKFIN__
-Ë|| deföed(
-__ADSPTS__
-Ë|| deföed(
-__ADSP21000__
-)
-
-162 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-164 #ñi‡
-deföed
-(
-_SGI_COMPILER_VERSION
-Ë|| deföed(
-_COMPILER_VERSION
-)
-
-165 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-166 #i‡
-deföed
-(
-_SGI_COMPILER_VERSION
-)
-
-168 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/100)
-
-	)
-
-169 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/10 % 10)
 
 	)
 
 170 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
- % 10)
-
-	)
-
-173 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/100)
-
-	)
-
-174 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-175 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_COMPILER_VERSION
- % 10)
-
-	)
-
-181 #ñi‡
-deföed
-(
-__sgi
-)
-
-182 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-184 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpua
-)
-
-185 
-	#COMPILER_ID
- "HP"
-
-	)
-
-188 
-	#COMPILER_ID
- ""
-
-	)
-
-196 c⁄°* 
-	göfo_compûî
- = "INFO" ":" "compûî[" 
-COMPILER_ID
- "]";
-
-199 #i‡
-deföed
-(
-__löux
-Ë|| deföed(
-__löux__
-Ë|| deföed(
-löux
-)
-
-200 
-	#PLATFORM_ID
- "Löux"
-
-	)
-
-202 #ñi‡
-deföed
-(
-__CYGWIN__
-)
-
-203 
-	#PLATFORM_ID
- "Cygwö"
-
-	)
-
-205 #ñi‡
-deföed
-(
-__MINGW32__
-)
-
-206 
-	#PLATFORM_ID
- "MöGW"
-
-	)
-
-208 #ñi‡
-deföed
-(
-__APPLE__
-)
-
-209 
-	#PLATFORM_ID
- "D¨wö"
-
-	)
-
-211 #ñi‡
-deföed
-(
-_WIN32
-Ë|| deföed(
-__WIN32__
-Ë|| deföed(
-WIN32
-)
-
-212 
-	#PLATFORM_ID
- "Wödows"
-
-	)
-
-214 #ñi‡
-deföed
-(
-__FªeBSD__
-Ë|| deföed(
-__FªeBSD
-)
-
-215 
-	#PLATFORM_ID
- "FªeBSD"
-
-	)
-
-217 #ñi‡
-deföed
-(
-__NëBSD__
-Ë|| deföed(
-__NëBSD
-)
-
-218 
-	#PLATFORM_ID
- "NëBSD"
-
-	)
-
-220 #ñi‡
-deföed
-(
-__O≥nBSD__
-Ë|| deföed(
-__OPENBSD
-)
-
-221 
-	#PLATFORM_ID
- "O≥nBSD"
-
-	)
-
-223 #ñi‡
-deföed
-(
-__sun
-Ë|| deföed(
-sun
-)
-
-224 
-	#PLATFORM_ID
- "SunOS"
-
-	)
-
-226 #ñi‡
-deföed
-(
-_AIX
-Ë|| deföed(
-__AIX
-Ë|| deföed(
-__AIX__
-Ë|| deföed(
-__aix
-Ë|| deföed(
-__aix__
-)
-
-227 
-	#PLATFORM_ID
- "AIX"
-
-	)
-
-229 #ñi‡
-deföed
-(
-__sgi
-Ë|| deföed(
-__sgi__
-Ë|| deföed(
-_SGI
-)
-
-230 
-	#PLATFORM_ID
- "IRIX"
-
-	)
-
-232 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpux__
-)
-
-233 
-	#PLATFORM_ID
- "HP-UX"
-
-	)
-
-235 #ñi‡
-deföed
-(
-__HAIKU__
-)
-
-236 
-	#PLATFORM_ID
- "Haiku"
-
-	)
-
-238 #ñi‡
-deföed
-(
-__BeOS
-Ë|| deföed(
-__BEOS__
-Ë|| deföed(
-_BEOS
-)
-
-239 
-	#PLATFORM_ID
- "BeOS"
-
-	)
-
-241 #ñi‡
-deföed
-(
-__QNX__
-Ë|| deföed(
-__QNXNTO__
-)
-
-242 
-	#PLATFORM_ID
- "QNX"
-
-	)
-
-244 #ñi‡
-deföed
-(
-__åu64
-Ë|| deföed(
-_åu64
-Ë|| deföed(
-__TRU64__
-)
-
-245 
-	#PLATFORM_ID
- "Tru64"
-
-	)
-
-247 #ñi‡
-deföed
-(
-__riscos
-Ë|| deföed(
-__riscos__
-)
-
-248 
-	#PLATFORM_ID
- "RISCos"
-
-	)
-
-250 #ñi‡
-deföed
-(
-__söix
-Ë|| deföed(
-__söix__
-Ë|| deföed(
-__SINIX__
-)
-
-251 
-	#PLATFORM_ID
- "SINIX"
-
-	)
-
-253 #ñi‡
-deföed
-(
-__UNIX_SV__
-)
-
-254 
-	#PLATFORM_ID
- "UNIX_SV"
-
-	)
-
-256 #ñi‡
-deföed
-(
-__bsdos__
-)
-
-257 
-	#PLATFORM_ID
- "BSDOS"
-
-	)
-
-259 #ñi‡
-deföed
-(
-_MPRAS
-Ë|| deföed(
-MPRAS
-)
-
-260 
-	#PLATFORM_ID
- "MP-RAS"
-
-	)
-
-262 #ñi‡
-deföed
-(
-__osf
-Ë|| deföed(
-__osf__
-)
-
-263 
-	#PLATFORM_ID
- "OSF1"
-
-	)
-
-265 #ñi‡
-deföed
-(
-_SCO_SV
-Ë|| deföed(
-SCO_SV
-Ë|| deföed(
-sco_sv
-)
-
-266 
-	#PLATFORM_ID
- "SCO_SV"
-
-	)
-
-268 #ñi‡
-deföed
-(
-__u…rix
-Ë|| deföed(
-__u…rix__
-Ë|| deföed(
-_ULTRIX
-)
-
-269 
-	#PLATFORM_ID
- "ULTRIX"
-
-	)
-
-271 #ñi‡
-deföed
-(
-__XENIX__
-Ë|| deföed(
-_XENIX
-Ë|| deföed(
-XENIX
-)
-
-272 
-	#PLATFORM_ID
- "Xíix"
-
-	)
-
-275 
 	#PLATFORM_ID
  ""
 
 	)
 
-284 #i‡
+179 #i‡
 deföed
 (
 _WIN32
@@ -2929,19 +669,19 @@ _WIN32
 _MSC_VER
 )
 
-285 #i‡
+180 #i‡
 deföed
 (
 _M_IA64
 )
 
-286 
+181 
 	#ARCHITECTURE_ID
  "IA64"
 
 	)
 
-288 #ñi‡
+183 #ñi‡
 deföed
 (
 _M_X64
@@ -2949,201 +689,49 @@ _M_X64
 _M_AMD64
 )
 
-289 
+184 
 	#ARCHITECTURE_ID
  "x64"
 
 	)
 
-291 #ñi‡
+186 #ñi‡
 deföed
 (
 _M_IX86
 )
 
-292 
+187 
 	#ARCHITECTURE_ID
  "X86"
 
 	)
 
-294 #ñi‡
-deföed
-(
-_M_ARM
-)
-
-295 
-	#ARCHITECTURE_ID
- "ARM"
-
-	)
-
-297 #ñi‡
-deföed
-(
-_M_MIPS
-)
-
-298 
-	#ARCHITECTURE_ID
- "MIPS"
-
-	)
-
-300 #ñi‡
-deföed
-(
-_M_SH
-)
-
-301 
-	#ARCHITECTURE_ID
- "SHx"
-
-	)
-
-304 
+190 
 	#ARCHITECTURE_ID
  ""
 
 	)
 
-308 
+194 
 	#ARCHITECTURE_ID
  ""
 
 	)
 
-312 
-	#DEC
-(
-n
-) \
-
-313 ('0' + (((
-n
-) / 10000000)%10)), \
-
-314 ('0' + (((
-n
-) / 1000000)%10)), \
-
-315 ('0' + (((
-n
-) / 100000)%10)), \
-
-316 ('0' + (((
-n
-) / 10000)%10)), \
-
-317 ('0' + (((
-n
-) / 1000)%10)), \
-
-318 ('0' + (((
-n
-) / 100)%10)), \
-
-319 ('0' + (((
-n
-) / 10)%10)), \
-
-320 ('0' + ((
-n
-Ë% 10))
-
-	)
-
-323 
-	#HEX
-(
-n
-) \
-
-324 ('0' + ((
-n
-)>>28 & 0xF)), \
-
-325 ('0' + ((
-n
-)>>24 & 0xF)), \
-
-326 ('0' + ((
-n
-)>>20 & 0xF)), \
-
-327 ('0' + ((
-n
-)>>16 & 0xF)), \
-
-328 ('0' + ((
-n
-)>>12 & 0xF)), \
-
-329 ('0' + ((
-n
-)>>8 & 0xF)), \
-
-330 ('0' + ((
-n
-)>>4 & 0xF)), \
-
-331 ('0' + ((
-n
-Ë& 0xF))
-
-	)
-
-334 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-335 c⁄° 
-	göfo_vîsi⁄
-[] = {
-
-338 
-COMPILER_VERSION_MAJOR
-,
-
-339 #ifde‡
-COMPILER_VERSION_MINOR
-
-
-340 '.', 
-COMPILER_VERSION_MINOR
-,
-
-341 #ifde‡
-COMPILER_VERSION_PATCH
-
-
-342 '.', 
-COMPILER_VERSION_PATCH
-,
-
-343 #ifde‡
-COMPILER_VERSION_TWEAK
-
-
-344 '.', 
-COMPILER_VERSION_TWEAK
-,
-
-355 c⁄°* 
+201 c⁄°* 
 	göfo_∂©f‹m
  = "INFO" ":" "∂©f‹m[" 
 PLATFORM_ID
  "]";
 
-356 c⁄°* 
+202 c⁄°* 
 	göfo_¨ch
  = "INFO" ":" "¨ch[" 
 ARCHITECTURE_ID
  "]";
 
-362 
+208 
 	$maö
 (
 ¨gc
@@ -3151,11 +739,11 @@ ARCHITECTURE_ID
 ¨gv
 [])
 
-364 
+210 
 ªquúe
  = 0;
 
-365 
+211 
 ªquúe
  +
 öfo_compûî
@@ -3163,7 +751,7 @@ ARCHITECTURE_ID
 ¨gc
 ];
 
-366 
+212 
 ªquúe
  +
 öfo_∂©f‹m
@@ -3171,27 +759,15 @@ ARCHITECTURE_ID
 ¨gc
 ];
 
-367 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-368 
-ªquúe
- +
-öfo_vîsi⁄
-[
-¨gc
-];
-
-370 ()
+213 ()
 ¨gv
 ;
 
-371  
+214  
 ªquúe
 ;
 
-372 
+215 
 	}
 }
 
@@ -5637,14 +3213,6 @@ googÀ
 ¨gv
 );
 
-24 
-omg
-::
-CThªadM™age
-::
-	`BegöPoﬁThªad
-(1);
-
 25 
 p‹t
  = 1;
@@ -5681,7 +3249,7 @@ addr
 sö_p‹t
  = 
 	`ht⁄s
-(9999);
+(19999);
 
 32 
 	`öë_±⁄
@@ -5781,13 +3349,23 @@ msg_logö
 uid
  = 1;
 
-51 if(
+51 
+msg_logö
+.
+zeô
+ = 
+	`time
+(
+NULL
+);
+
+52 if(
 is_logö
  =
 Ál£
 ){
 
-52 
+53 
 	`£nd
 (
 fd
@@ -5795,27 +3373,27 @@ fd
 msg_logö
 ,msg_logö.
 msg_size
--4,0);
+,0);
 
-53 
+54 
 is_logö
  = 
 åue
 ;
 
-56 
+57 
 MsgAlive
  
 msg_live
 ;
 
-57 
+58 
 msg_Àn
  = (
 MsgAlive
 );
 
-58 * 
+59 * 
 buff
  = (*)
 	`mÆloc
@@ -5823,45 +3401,27 @@ buff
 msg_Àn
 );
 
-59 
+60 
 i
 =0;
 
-60 
+61 
 msg_live
 .
-live_time
- = 12345.1112;
+∂ayî_id
+ = 111;
 
-61 * 
-time
-="1986.09.20";
-
-62 * 
-«me
-="ÁÆ°Á£ä";
+62 
+msg_live
+.
+zeô
+ = 
+	`time
+(
+NULL
+);
 
 63 
-	`°∫˝y
-(
-msg_live
-.
-°r_time
-,
-time
-,10);
-
-64 
-	`°∫˝y
-(
-msg_live
-.
-°r_«me
-,
-«me
-,10);
-
-65 
 	`mem˝y
 (
 buff
@@ -5871,35 +3431,23 @@ msg_live
 msg_Àn
 );
 
-66 
+64 
 	`VLOG
 (1)<<"SEND MSG...";
 
-68 
-Àn
- = 
-	`£nd
-(
-fd
-,
-buff
-,
-msg_Àn
-,0);
-
-69 
+67 
 	`VLOG
 (1)<<"SEND MSG";
 
-70 
+68 
 buf„r
 [1024];
 
-71 
+69 
 	`u¶ìp
-(1000*500);
+(10000*500);
 
-72 
+70 
 	`ªcv
 (
 fd
@@ -5907,27 +3455,27 @@ fd
 buf„r
 ,1024,0);
 
-73 
+71 
 	`VLOG
 (1)<<"SîvîÅimêi†"<<((
 MsgAlive
 *)
 buf„r
 )->
-live_time
+zeô
 ;
 
-76 
+74 
 	`VLOG
 (1)<<"error connect";
 
-78 
+76 
 	`±hªad_exô
 (
 NULL
 );
 
-80 
+78 
 	}
 }
 
@@ -6304,1604 +3852,6 @@ _dól_w‹k_cou¡
 ;
 
 61 
-	}
-}
-
-	@common/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-
-4 #i‚de‡
-__˝lu•lus
-
-
-11 #i‡
-deföed
-(
-__COMO__
-)
-
-12 
-	#COMPILER_ID
- "Comóu"
-
-	)
-
-14 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__COMO_VERSION__
- / 100)
-
-	)
-
-15 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__COMO_VERSION__
- % 100)
-
-	)
-
-17 #ñi‡
-deföed
-(
-__INTEL_COMPILER
-Ë|| deföed(
-__ICC
-)
-
-18 
-	#COMPILER_ID
- "I¡ñ"
-
-	)
-
-20 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/100)
-
-	)
-
-21 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/10 % 10)
-
-	)
-
-22 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__INTEL_COMPILER
- % 10)
-
-	)
-
-23 #i‡
-deföed
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-25 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-	)
-
-28 #ñi‡
-deföed
-(
-__PATHCC__
-)
-
-29 
-	#COMPILER_ID
- "P©hSˇÀ"
-
-	)
-
-30 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PATHCC__
-)
-
-	)
-
-31 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PATHCC_MINOR__
-)
-
-	)
-
-32 #i‡
-deföed
-(
-__PATHCC_PATCHLEVEL__
-)
-
-33 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PATHCC_PATCHLEVEL__
-)
-
-	)
-
-36 #ñi‡
-deföed
-(
-__˛™g__
-)
-
-37 
-	#COMPILER_ID
- "Cœng"
-
-	)
-
-38 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__˛™g_maj‹__
-)
-
-	)
-
-39 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__˛™g_mö‹__
-)
-
-	)
-
-40 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__˛™g_∑tchÀvñ__
-)
-
-	)
-
-42 #ñi‡
-deföed
-(
-__BORLANDC__
-Ë&& deföed(
-__CODEGEARC_VERSION__
-)
-
-43 
-	#COMPILER_ID
- "Emb¨ˇdîo"
-
-	)
-
-44 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>24 & 0x00FF)
-
-	)
-
-45 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>16 & 0x00FF)
-
-	)
-
-46 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
- & 0xFFFF)
-
-	)
-
-48 #ñi‡
-deföed
-(
-__BORLANDC__
-)
-
-49 
-	#COMPILER_ID
- "B‹œnd"
-
-	)
-
-51 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__BORLANDC__
->>8)
-
-	)
-
-52 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__BORLANDC__
- & 0xFF)
-
-	)
-
-54 #ñi‡
-deföed
-(
-__WATCOMC__
-)
-
-55 
-	#COMPILER_ID
- "W©com"
-
-	)
-
-57 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__WATCOMC__
- / 100)
-
-	)
-
-58 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__WATCOMC__
- % 100)
-
-	)
-
-60 #ñi‡
-deföed
-(
-__SUNPRO_CC
-)
-
-61 
-	#COMPILER_ID
- "SunPro"
-
-	)
-
-62 #i‡
-__SUNPRO_CC
- >= 0x5100
-
-64 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>12)
-
-	)
-
-65 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xFF)
-
-	)
-
-66 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-69 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>8)
-
-	)
-
-70 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xF)
-
-	)
-
-71 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-74 #ñi‡
-deföed
-(
-__HP_aCC
-)
-
-75 
-	#COMPILER_ID
- "HP"
-
-	)
-
-77 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__HP_aCC
-/10000)
-
-	)
-
-78 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__HP_aCC
-/100 % 100)
-
-	)
-
-79 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__HP_aCC
- % 100)
-
-	)
-
-81 #ñi‡
-deföed
-(
-__DECCXX
-)
-
-82 
-	#COMPILER_ID
- "Com∑q"
-
-	)
-
-84 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__DECCXX_VER
-/10000000)
-
-	)
-
-85 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__DECCXX_VER
-/100000 % 100)
-
-	)
-
-86 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__DECCXX_VER
- % 10000)
-
-	)
-
-88 #ñi‡
-deföed
-(
-__IBMCPP__
-)
-
-89 #i‡
-deföed
-(
-__COMPILER_VER__
-)
-
-90 
-	#COMPILER_ID
- "zOS"
-
-	)
-
-92 #i‡
-__IBMCPP__
- >= 800
-
-93 
-	#COMPILER_ID
- "XL"
-
-	)
-
-95 
-	#COMPILER_ID
- "VisuÆAge"
-
-	)
-
-98 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__IBMCPP__
-/100)
-
-	)
-
-99 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__IBMCPP__
-/10 % 10)
-
-	)
-
-100 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__IBMCPP__
- % 10)
-
-	)
-
-103 #ñi‡
-deföed
-(
-__PGI
-)
-
-104 
-	#COMPILER_ID
- "PGI"
-
-	)
-
-105 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PGIC__
-)
-
-	)
-
-106 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PGIC_MINOR__
-)
-
-	)
-
-107 #i‡
-deföed
-(
-__PGIC_PATCHLEVEL__
-)
-
-108 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PGIC_PATCHLEVEL__
-)
-
-	)
-
-111 #ñi‡
-deföed
-(
-_CRAYC
-)
-
-112 
-	#COMPILER_ID
- "Cøy"
-
-	)
-
-113 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_RELEASE
-)
-
-	)
-
-114 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_RELEASE_MINOR
-)
-
-	)
-
-116 #ñi‡
-deföed
-(
-__TI_COMPILER_VERSION__
-)
-
-117 
-	#COMPILER_ID
- "TI"
-
-	)
-
-119 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000000)
-
-	)
-
-120 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000 % 1000)
-
-	)
-
-121 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
- % 1000)
-
-	)
-
-123 #ñi‡
-deföed
-(
-__SCO_VERSION__
-)
-
-124 
-	#COMPILER_ID
- "SCO"
-
-	)
-
-126 #ñi‡
-deföed
-(
-__GNUC__
-)
-
-127 
-	#COMPILER_ID
- "GNU"
-
-	)
-
-128 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__GNUC__
-)
-
-	)
-
-129 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__GNUC_MINOR__
-)
-
-	)
-
-130 #i‡
-deföed
-(
-__GNUC_PATCHLEVEL__
-)
-
-131 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__GNUC_PATCHLEVEL__
-)
-
-	)
-
-134 #ñi‡
-deföed
-(
-_MSC_VER
-)
-
-135 
-	#COMPILER_ID
- "MSVC"
-
-	)
-
-137 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_MSC_VER
- / 100)
-
-	)
-
-138 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_MSC_VER
- % 100)
-
-	)
-
-139 #i‡
-deföed
-(
-_MSC_FULL_VER
-)
-
-140 #i‡
-_MSC_VER
- >= 1400
-
-142 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 100000)
-
-	)
-
-145 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 10000)
-
-	)
-
-148 #i‡
-deföed
-(
-_MSC_BUILD
-)
-
-149 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-_MSC_BUILD
-)
-
-	)
-
-153 #ñi‡
-deföed
-(
-__VISUALDSPVERSION__
-)
-
-154 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-156 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>24)
-
-	)
-
-157 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>16 & 0xFF)
-
-	)
-
-158 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>8 & 0xFF)
-
-	)
-
-161 #ñi‡
-deföed
-(
-__ADSPBLACKFIN__
-Ë|| deföed(
-__ADSPTS__
-Ë|| deföed(
-__ADSP21000__
-)
-
-162 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-164 #ñi‡
-deföed
-(
-_SGI_COMPILER_VERSION
-Ë|| deföed(
-_COMPILER_VERSION
-)
-
-165 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-166 #i‡
-deföed
-(
-_SGI_COMPILER_VERSION
-)
-
-168 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/100)
-
-	)
-
-169 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-170 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
- % 10)
-
-	)
-
-173 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/100)
-
-	)
-
-174 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-175 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_COMPILER_VERSION
- % 10)
-
-	)
-
-181 #ñi‡
-deföed
-(
-__sgi
-)
-
-182 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-184 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpua
-)
-
-185 
-	#COMPILER_ID
- "HP"
-
-	)
-
-188 
-	#COMPILER_ID
- ""
-
-	)
-
-196 c⁄°* 
-	göfo_compûî
- = "INFO" ":" "compûî[" 
-COMPILER_ID
- "]";
-
-199 #i‡
-deföed
-(
-__löux
-Ë|| deföed(
-__löux__
-Ë|| deföed(
-löux
-)
-
-200 
-	#PLATFORM_ID
- "Löux"
-
-	)
-
-202 #ñi‡
-deföed
-(
-__CYGWIN__
-)
-
-203 
-	#PLATFORM_ID
- "Cygwö"
-
-	)
-
-205 #ñi‡
-deföed
-(
-__MINGW32__
-)
-
-206 
-	#PLATFORM_ID
- "MöGW"
-
-	)
-
-208 #ñi‡
-deföed
-(
-__APPLE__
-)
-
-209 
-	#PLATFORM_ID
- "D¨wö"
-
-	)
-
-211 #ñi‡
-deföed
-(
-_WIN32
-Ë|| deföed(
-__WIN32__
-Ë|| deföed(
-WIN32
-)
-
-212 
-	#PLATFORM_ID
- "Wödows"
-
-	)
-
-214 #ñi‡
-deföed
-(
-__FªeBSD__
-Ë|| deföed(
-__FªeBSD
-)
-
-215 
-	#PLATFORM_ID
- "FªeBSD"
-
-	)
-
-217 #ñi‡
-deföed
-(
-__NëBSD__
-Ë|| deföed(
-__NëBSD
-)
-
-218 
-	#PLATFORM_ID
- "NëBSD"
-
-	)
-
-220 #ñi‡
-deföed
-(
-__O≥nBSD__
-Ë|| deföed(
-__OPENBSD
-)
-
-221 
-	#PLATFORM_ID
- "O≥nBSD"
-
-	)
-
-223 #ñi‡
-deföed
-(
-__sun
-Ë|| deföed(
-sun
-)
-
-224 
-	#PLATFORM_ID
- "SunOS"
-
-	)
-
-226 #ñi‡
-deföed
-(
-_AIX
-Ë|| deföed(
-__AIX
-Ë|| deföed(
-__AIX__
-Ë|| deföed(
-__aix
-Ë|| deföed(
-__aix__
-)
-
-227 
-	#PLATFORM_ID
- "AIX"
-
-	)
-
-229 #ñi‡
-deföed
-(
-__sgi
-Ë|| deföed(
-__sgi__
-Ë|| deföed(
-_SGI
-)
-
-230 
-	#PLATFORM_ID
- "IRIX"
-
-	)
-
-232 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpux__
-)
-
-233 
-	#PLATFORM_ID
- "HP-UX"
-
-	)
-
-235 #ñi‡
-deföed
-(
-__HAIKU__
-)
-
-236 
-	#PLATFORM_ID
- "Haiku"
-
-	)
-
-238 #ñi‡
-deföed
-(
-__BeOS
-Ë|| deföed(
-__BEOS__
-Ë|| deföed(
-_BEOS
-)
-
-239 
-	#PLATFORM_ID
- "BeOS"
-
-	)
-
-241 #ñi‡
-deföed
-(
-__QNX__
-Ë|| deföed(
-__QNXNTO__
-)
-
-242 
-	#PLATFORM_ID
- "QNX"
-
-	)
-
-244 #ñi‡
-deföed
-(
-__åu64
-Ë|| deföed(
-_åu64
-Ë|| deföed(
-__TRU64__
-)
-
-245 
-	#PLATFORM_ID
- "Tru64"
-
-	)
-
-247 #ñi‡
-deföed
-(
-__riscos
-Ë|| deföed(
-__riscos__
-)
-
-248 
-	#PLATFORM_ID
- "RISCos"
-
-	)
-
-250 #ñi‡
-deföed
-(
-__söix
-Ë|| deföed(
-__söix__
-Ë|| deföed(
-__SINIX__
-)
-
-251 
-	#PLATFORM_ID
- "SINIX"
-
-	)
-
-253 #ñi‡
-deföed
-(
-__UNIX_SV__
-)
-
-254 
-	#PLATFORM_ID
- "UNIX_SV"
-
-	)
-
-256 #ñi‡
-deföed
-(
-__bsdos__
-)
-
-257 
-	#PLATFORM_ID
- "BSDOS"
-
-	)
-
-259 #ñi‡
-deföed
-(
-_MPRAS
-Ë|| deföed(
-MPRAS
-)
-
-260 
-	#PLATFORM_ID
- "MP-RAS"
-
-	)
-
-262 #ñi‡
-deföed
-(
-__osf
-Ë|| deföed(
-__osf__
-)
-
-263 
-	#PLATFORM_ID
- "OSF1"
-
-	)
-
-265 #ñi‡
-deföed
-(
-_SCO_SV
-Ë|| deföed(
-SCO_SV
-Ë|| deföed(
-sco_sv
-)
-
-266 
-	#PLATFORM_ID
- "SCO_SV"
-
-	)
-
-268 #ñi‡
-deföed
-(
-__u…rix
-Ë|| deföed(
-__u…rix__
-Ë|| deföed(
-_ULTRIX
-)
-
-269 
-	#PLATFORM_ID
- "ULTRIX"
-
-	)
-
-271 #ñi‡
-deföed
-(
-__XENIX__
-Ë|| deföed(
-_XENIX
-Ë|| deföed(
-XENIX
-)
-
-272 
-	#PLATFORM_ID
- "Xíix"
-
-	)
-
-275 
-	#PLATFORM_ID
- ""
-
-	)
-
-284 #i‡
-deföed
-(
-_WIN32
-Ë&& deföed(
-_MSC_VER
-)
-
-285 #i‡
-deföed
-(
-_M_IA64
-)
-
-286 
-	#ARCHITECTURE_ID
- "IA64"
-
-	)
-
-288 #ñi‡
-deföed
-(
-_M_X64
-Ë|| deföed(
-_M_AMD64
-)
-
-289 
-	#ARCHITECTURE_ID
- "x64"
-
-	)
-
-291 #ñi‡
-deföed
-(
-_M_IX86
-)
-
-292 
-	#ARCHITECTURE_ID
- "X86"
-
-	)
-
-294 #ñi‡
-deföed
-(
-_M_ARM
-)
-
-295 
-	#ARCHITECTURE_ID
- "ARM"
-
-	)
-
-297 #ñi‡
-deföed
-(
-_M_MIPS
-)
-
-298 
-	#ARCHITECTURE_ID
- "MIPS"
-
-	)
-
-300 #ñi‡
-deföed
-(
-_M_SH
-)
-
-301 
-	#ARCHITECTURE_ID
- "SHx"
-
-	)
-
-304 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-308 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-312 
-	#DEC
-(
-n
-) \
-
-313 ('0' + (((
-n
-) / 10000000)%10)), \
-
-314 ('0' + (((
-n
-) / 1000000)%10)), \
-
-315 ('0' + (((
-n
-) / 100000)%10)), \
-
-316 ('0' + (((
-n
-) / 10000)%10)), \
-
-317 ('0' + (((
-n
-) / 1000)%10)), \
-
-318 ('0' + (((
-n
-) / 100)%10)), \
-
-319 ('0' + (((
-n
-) / 10)%10)), \
-
-320 ('0' + ((
-n
-Ë% 10))
-
-	)
-
-323 
-	#HEX
-(
-n
-) \
-
-324 ('0' + ((
-n
-)>>28 & 0xF)), \
-
-325 ('0' + ((
-n
-)>>24 & 0xF)), \
-
-326 ('0' + ((
-n
-)>>20 & 0xF)), \
-
-327 ('0' + ((
-n
-)>>16 & 0xF)), \
-
-328 ('0' + ((
-n
-)>>12 & 0xF)), \
-
-329 ('0' + ((
-n
-)>>8 & 0xF)), \
-
-330 ('0' + ((
-n
-)>>4 & 0xF)), \
-
-331 ('0' + ((
-n
-Ë& 0xF))
-
-	)
-
-334 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-335 c⁄° 
-	göfo_vîsi⁄
-[] = {
-
-338 
-COMPILER_VERSION_MAJOR
-,
-
-339 #ifde‡
-COMPILER_VERSION_MINOR
-
-
-340 '.', 
-COMPILER_VERSION_MINOR
-,
-
-341 #ifde‡
-COMPILER_VERSION_PATCH
-
-
-342 '.', 
-COMPILER_VERSION_PATCH
-,
-
-343 #ifde‡
-COMPILER_VERSION_TWEAK
-
-
-344 '.', 
-COMPILER_VERSION_TWEAK
-,
-
-355 c⁄°* 
-	göfo_∂©f‹m
- = "INFO" ":" "∂©f‹m[" 
-PLATFORM_ID
- "]";
-
-356 c⁄°* 
-	göfo_¨ch
- = "INFO" ":" "¨ch[" 
-ARCHITECTURE_ID
- "]";
-
-362 
-	$maö
-(
-¨gc
-, * 
-¨gv
-[])
-
-364 
-ªquúe
- = 0;
-
-365 
-ªquúe
- +
-öfo_compûî
-[
-¨gc
-];
-
-366 
-ªquúe
- +
-öfo_∂©f‹m
-[
-¨gc
-];
-
-367 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-368 
-ªquúe
- +
-öfo_vîsi⁄
-[
-¨gc
-];
-
-370 ()
-¨gv
-;
-
-371  
-ªquúe
-;
-
-372 
 	}
 }
 
@@ -15117,7 +11067,7 @@ _lock
 	$Sc›eLock
 (
 T
- 
+& 
 t
 ):
 	$lock
@@ -26436,6 +22386,10 @@ c⁄n
 ));
 
 22 
+boﬁ
+ 
+c⁄√˘_r°
+ = 
 c⁄n
 ->
 	`c⁄√˘
@@ -26476,9 +22430,9 @@ p‹t_
 == 0)?3306:port_);
 
 28 if(
-c⁄n
+c⁄√˘_r°
  =
-NULL
+Ál£
 ){
 
 29 
@@ -26487,21 +22441,25 @@ NULL
 ERROR
 )<<"ERROR Connect Server";
 
-31 
+30  
+NULL
+;
+
+32 
 	`LOG
 (
 INFO
 )<<"Create databaseÖool success...";
 
-33  
+34  
 c⁄n
 ;
 
-34 
+35 
 	}
 }
 
-36 
+37 
 	gDBC⁄√˘i⁄Poﬁ
 ::
 de°roy
@@ -26513,7 +22471,7 @@ C⁄√˘i⁄
 c⁄n
 ){
 
-37 
+38 
 dñëe
  
 c⁄n
@@ -26685,29 +22643,61 @@ d©a_ba£_ù
 p‹t
 ;
 
-36 
+35 
+mysqÕp
+::
+C⁄√˘i⁄
+* 
+ãmp_c⁄n
+ = 
+	`¸óã
+();
+
+36 if(
+ãmp_c⁄n
+ =
+NULL
+)
+
+38 
+	`LOG
+(
+ERROR
+)<<"Connect mysql serverÉrror!";
+
+39 
+	`exô
+(1);
+
+41 
+dñëe
+ 
+ãmp_c⁄n
+;
+
+43 
 public
 :
 
-37 
+44 
 vútuÆ
  ~
 	`DBC⁄√˘i⁄Poﬁ
 ();
 
-38 
+45 
 DBC⁄√˘i⁄Poﬁ
 * 
 	$GëIn°™˚
 (){
 
-39 if(
+46 if(
 _m_ö°™˚
  =
 NULL
 ){
 
-40 
+47 
 _m_ö°™˚
  = 
 √w
@@ -26717,19 +22707,19 @@ _m_ö°™˚
 g_db_£rvî_öfo
 );
 
-42  
+49  
 _m_ö°™˚
 ;
 
-43 
+50 
 	}
 }
 
-45 
+52 
 	g¥Ÿe˘ed
 :
 
-46 
+53 
 mysqÕp
 ::
 C⁄√˘i⁄
@@ -26737,7 +22727,7 @@ C⁄√˘i⁄
 ¸óã
 ();
 
-47 
+54 
 de°roy
 (
 mysqÕp
@@ -26745,23 +22735,23 @@ mysqÕp
 C⁄√˘i⁄
 *);
 
-48 
+55 
 	$max_idÀ_time
 (){
 
-50 
+57 
 	}
 };
 
-52 
+59 
 	g¥iv©e
 :
 
-53 
+60 
 c⁄ns_ö_u£
 ;
 
-56 
+63 
 	g°d
 ::
 °rög
@@ -26769,7 +22759,7 @@ c⁄ns_ö_u£
 db_
 ;
 
-57 
+64 
 	g°d
 ::
 °rög
@@ -26777,7 +22767,7 @@ db_
 £rvî_
 ;
 
-58 
+65 
 	g°d
 ::
 °rög
@@ -26785,7 +22775,7 @@ db_
 u£r_
 ;
 
-59 
+66 
 	g°d
 ::
 °rög
@@ -26793,17 +22783,17 @@ u£r_
 ∑ssw‹d_
 ;
 
-60 
+67 
 	gp‹t_
 ;
 
-61 
+68 
 DBC⁄√˘i⁄Poﬁ
  *
 	g_m_ö°™˚
 ;
 
-65 
+72 
 	#SQLC⁄√˘i⁄
  
 mysqÕp
@@ -26813,7 +22803,7 @@ C⁄√˘i⁄
 
 	)
 
-66 
+73 
 	#SQLPoﬁ
  
 mysqÕp
@@ -40518,1604 +36508,6 @@ _z
 ;
 
 86 
-	}
-}
-
-	@game_server/build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-
-4 #i‚de‡
-__˝lu•lus
-
-
-11 #i‡
-deföed
-(
-__COMO__
-)
-
-12 
-	#COMPILER_ID
- "Comóu"
-
-	)
-
-14 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__COMO_VERSION__
- / 100)
-
-	)
-
-15 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__COMO_VERSION__
- % 100)
-
-	)
-
-17 #ñi‡
-deföed
-(
-__INTEL_COMPILER
-Ë|| deföed(
-__ICC
-)
-
-18 
-	#COMPILER_ID
- "I¡ñ"
-
-	)
-
-20 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/100)
-
-	)
-
-21 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/10 % 10)
-
-	)
-
-22 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__INTEL_COMPILER
- % 10)
-
-	)
-
-23 #i‡
-deföed
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-25 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-	)
-
-28 #ñi‡
-deföed
-(
-__PATHCC__
-)
-
-29 
-	#COMPILER_ID
- "P©hSˇÀ"
-
-	)
-
-30 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PATHCC__
-)
-
-	)
-
-31 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PATHCC_MINOR__
-)
-
-	)
-
-32 #i‡
-deföed
-(
-__PATHCC_PATCHLEVEL__
-)
-
-33 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PATHCC_PATCHLEVEL__
-)
-
-	)
-
-36 #ñi‡
-deföed
-(
-__˛™g__
-)
-
-37 
-	#COMPILER_ID
- "Cœng"
-
-	)
-
-38 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__˛™g_maj‹__
-)
-
-	)
-
-39 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__˛™g_mö‹__
-)
-
-	)
-
-40 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__˛™g_∑tchÀvñ__
-)
-
-	)
-
-42 #ñi‡
-deföed
-(
-__BORLANDC__
-Ë&& deföed(
-__CODEGEARC_VERSION__
-)
-
-43 
-	#COMPILER_ID
- "Emb¨ˇdîo"
-
-	)
-
-44 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>24 & 0x00FF)
-
-	)
-
-45 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>16 & 0x00FF)
-
-	)
-
-46 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
- & 0xFFFF)
-
-	)
-
-48 #ñi‡
-deföed
-(
-__BORLANDC__
-)
-
-49 
-	#COMPILER_ID
- "B‹œnd"
-
-	)
-
-51 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__BORLANDC__
->>8)
-
-	)
-
-52 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__BORLANDC__
- & 0xFF)
-
-	)
-
-54 #ñi‡
-deföed
-(
-__WATCOMC__
-)
-
-55 
-	#COMPILER_ID
- "W©com"
-
-	)
-
-57 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__WATCOMC__
- / 100)
-
-	)
-
-58 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__WATCOMC__
- % 100)
-
-	)
-
-60 #ñi‡
-deföed
-(
-__SUNPRO_CC
-)
-
-61 
-	#COMPILER_ID
- "SunPro"
-
-	)
-
-62 #i‡
-__SUNPRO_CC
- >= 0x5100
-
-64 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>12)
-
-	)
-
-65 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xFF)
-
-	)
-
-66 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-69 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>8)
-
-	)
-
-70 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xF)
-
-	)
-
-71 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-74 #ñi‡
-deföed
-(
-__HP_aCC
-)
-
-75 
-	#COMPILER_ID
- "HP"
-
-	)
-
-77 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__HP_aCC
-/10000)
-
-	)
-
-78 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__HP_aCC
-/100 % 100)
-
-	)
-
-79 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__HP_aCC
- % 100)
-
-	)
-
-81 #ñi‡
-deföed
-(
-__DECCXX
-)
-
-82 
-	#COMPILER_ID
- "Com∑q"
-
-	)
-
-84 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__DECCXX_VER
-/10000000)
-
-	)
-
-85 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__DECCXX_VER
-/100000 % 100)
-
-	)
-
-86 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__DECCXX_VER
- % 10000)
-
-	)
-
-88 #ñi‡
-deföed
-(
-__IBMCPP__
-)
-
-89 #i‡
-deföed
-(
-__COMPILER_VER__
-)
-
-90 
-	#COMPILER_ID
- "zOS"
-
-	)
-
-92 #i‡
-__IBMCPP__
- >= 800
-
-93 
-	#COMPILER_ID
- "XL"
-
-	)
-
-95 
-	#COMPILER_ID
- "VisuÆAge"
-
-	)
-
-98 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__IBMCPP__
-/100)
-
-	)
-
-99 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__IBMCPP__
-/10 % 10)
-
-	)
-
-100 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__IBMCPP__
- % 10)
-
-	)
-
-103 #ñi‡
-deföed
-(
-__PGI
-)
-
-104 
-	#COMPILER_ID
- "PGI"
-
-	)
-
-105 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PGIC__
-)
-
-	)
-
-106 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PGIC_MINOR__
-)
-
-	)
-
-107 #i‡
-deföed
-(
-__PGIC_PATCHLEVEL__
-)
-
-108 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PGIC_PATCHLEVEL__
-)
-
-	)
-
-111 #ñi‡
-deföed
-(
-_CRAYC
-)
-
-112 
-	#COMPILER_ID
- "Cøy"
-
-	)
-
-113 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_RELEASE
-)
-
-	)
-
-114 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_RELEASE_MINOR
-)
-
-	)
-
-116 #ñi‡
-deföed
-(
-__TI_COMPILER_VERSION__
-)
-
-117 
-	#COMPILER_ID
- "TI"
-
-	)
-
-119 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000000)
-
-	)
-
-120 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000 % 1000)
-
-	)
-
-121 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
- % 1000)
-
-	)
-
-123 #ñi‡
-deföed
-(
-__SCO_VERSION__
-)
-
-124 
-	#COMPILER_ID
- "SCO"
-
-	)
-
-126 #ñi‡
-deföed
-(
-__GNUC__
-)
-
-127 
-	#COMPILER_ID
- "GNU"
-
-	)
-
-128 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__GNUC__
-)
-
-	)
-
-129 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__GNUC_MINOR__
-)
-
-	)
-
-130 #i‡
-deföed
-(
-__GNUC_PATCHLEVEL__
-)
-
-131 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__GNUC_PATCHLEVEL__
-)
-
-	)
-
-134 #ñi‡
-deföed
-(
-_MSC_VER
-)
-
-135 
-	#COMPILER_ID
- "MSVC"
-
-	)
-
-137 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_MSC_VER
- / 100)
-
-	)
-
-138 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_MSC_VER
- % 100)
-
-	)
-
-139 #i‡
-deföed
-(
-_MSC_FULL_VER
-)
-
-140 #i‡
-_MSC_VER
- >= 1400
-
-142 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 100000)
-
-	)
-
-145 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 10000)
-
-	)
-
-148 #i‡
-deföed
-(
-_MSC_BUILD
-)
-
-149 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-_MSC_BUILD
-)
-
-	)
-
-153 #ñi‡
-deföed
-(
-__VISUALDSPVERSION__
-)
-
-154 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-156 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>24)
-
-	)
-
-157 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>16 & 0xFF)
-
-	)
-
-158 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>8 & 0xFF)
-
-	)
-
-161 #ñi‡
-deföed
-(
-__ADSPBLACKFIN__
-Ë|| deföed(
-__ADSPTS__
-Ë|| deföed(
-__ADSP21000__
-)
-
-162 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-164 #ñi‡
-deföed
-(
-_SGI_COMPILER_VERSION
-Ë|| deföed(
-_COMPILER_VERSION
-)
-
-165 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-166 #i‡
-deföed
-(
-_SGI_COMPILER_VERSION
-)
-
-168 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/100)
-
-	)
-
-169 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-170 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
- % 10)
-
-	)
-
-173 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/100)
-
-	)
-
-174 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-175 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_COMPILER_VERSION
- % 10)
-
-	)
-
-181 #ñi‡
-deföed
-(
-__sgi
-)
-
-182 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-184 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpua
-)
-
-185 
-	#COMPILER_ID
- "HP"
-
-	)
-
-188 
-	#COMPILER_ID
- ""
-
-	)
-
-196 c⁄°* 
-	göfo_compûî
- = "INFO" ":" "compûî[" 
-COMPILER_ID
- "]";
-
-199 #i‡
-deföed
-(
-__löux
-Ë|| deföed(
-__löux__
-Ë|| deföed(
-löux
-)
-
-200 
-	#PLATFORM_ID
- "Löux"
-
-	)
-
-202 #ñi‡
-deföed
-(
-__CYGWIN__
-)
-
-203 
-	#PLATFORM_ID
- "Cygwö"
-
-	)
-
-205 #ñi‡
-deföed
-(
-__MINGW32__
-)
-
-206 
-	#PLATFORM_ID
- "MöGW"
-
-	)
-
-208 #ñi‡
-deföed
-(
-__APPLE__
-)
-
-209 
-	#PLATFORM_ID
- "D¨wö"
-
-	)
-
-211 #ñi‡
-deföed
-(
-_WIN32
-Ë|| deföed(
-__WIN32__
-Ë|| deföed(
-WIN32
-)
-
-212 
-	#PLATFORM_ID
- "Wödows"
-
-	)
-
-214 #ñi‡
-deföed
-(
-__FªeBSD__
-Ë|| deföed(
-__FªeBSD
-)
-
-215 
-	#PLATFORM_ID
- "FªeBSD"
-
-	)
-
-217 #ñi‡
-deföed
-(
-__NëBSD__
-Ë|| deföed(
-__NëBSD
-)
-
-218 
-	#PLATFORM_ID
- "NëBSD"
-
-	)
-
-220 #ñi‡
-deföed
-(
-__O≥nBSD__
-Ë|| deföed(
-__OPENBSD
-)
-
-221 
-	#PLATFORM_ID
- "O≥nBSD"
-
-	)
-
-223 #ñi‡
-deföed
-(
-__sun
-Ë|| deföed(
-sun
-)
-
-224 
-	#PLATFORM_ID
- "SunOS"
-
-	)
-
-226 #ñi‡
-deföed
-(
-_AIX
-Ë|| deföed(
-__AIX
-Ë|| deföed(
-__AIX__
-Ë|| deföed(
-__aix
-Ë|| deföed(
-__aix__
-)
-
-227 
-	#PLATFORM_ID
- "AIX"
-
-	)
-
-229 #ñi‡
-deföed
-(
-__sgi
-Ë|| deföed(
-__sgi__
-Ë|| deföed(
-_SGI
-)
-
-230 
-	#PLATFORM_ID
- "IRIX"
-
-	)
-
-232 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpux__
-)
-
-233 
-	#PLATFORM_ID
- "HP-UX"
-
-	)
-
-235 #ñi‡
-deföed
-(
-__HAIKU__
-)
-
-236 
-	#PLATFORM_ID
- "Haiku"
-
-	)
-
-238 #ñi‡
-deföed
-(
-__BeOS
-Ë|| deföed(
-__BEOS__
-Ë|| deföed(
-_BEOS
-)
-
-239 
-	#PLATFORM_ID
- "BeOS"
-
-	)
-
-241 #ñi‡
-deföed
-(
-__QNX__
-Ë|| deföed(
-__QNXNTO__
-)
-
-242 
-	#PLATFORM_ID
- "QNX"
-
-	)
-
-244 #ñi‡
-deföed
-(
-__åu64
-Ë|| deföed(
-_åu64
-Ë|| deföed(
-__TRU64__
-)
-
-245 
-	#PLATFORM_ID
- "Tru64"
-
-	)
-
-247 #ñi‡
-deföed
-(
-__riscos
-Ë|| deföed(
-__riscos__
-)
-
-248 
-	#PLATFORM_ID
- "RISCos"
-
-	)
-
-250 #ñi‡
-deföed
-(
-__söix
-Ë|| deföed(
-__söix__
-Ë|| deföed(
-__SINIX__
-)
-
-251 
-	#PLATFORM_ID
- "SINIX"
-
-	)
-
-253 #ñi‡
-deföed
-(
-__UNIX_SV__
-)
-
-254 
-	#PLATFORM_ID
- "UNIX_SV"
-
-	)
-
-256 #ñi‡
-deföed
-(
-__bsdos__
-)
-
-257 
-	#PLATFORM_ID
- "BSDOS"
-
-	)
-
-259 #ñi‡
-deföed
-(
-_MPRAS
-Ë|| deföed(
-MPRAS
-)
-
-260 
-	#PLATFORM_ID
- "MP-RAS"
-
-	)
-
-262 #ñi‡
-deföed
-(
-__osf
-Ë|| deföed(
-__osf__
-)
-
-263 
-	#PLATFORM_ID
- "OSF1"
-
-	)
-
-265 #ñi‡
-deföed
-(
-_SCO_SV
-Ë|| deföed(
-SCO_SV
-Ë|| deföed(
-sco_sv
-)
-
-266 
-	#PLATFORM_ID
- "SCO_SV"
-
-	)
-
-268 #ñi‡
-deföed
-(
-__u…rix
-Ë|| deföed(
-__u…rix__
-Ë|| deföed(
-_ULTRIX
-)
-
-269 
-	#PLATFORM_ID
- "ULTRIX"
-
-	)
-
-271 #ñi‡
-deföed
-(
-__XENIX__
-Ë|| deföed(
-_XENIX
-Ë|| deföed(
-XENIX
-)
-
-272 
-	#PLATFORM_ID
- "Xíix"
-
-	)
-
-275 
-	#PLATFORM_ID
- ""
-
-	)
-
-284 #i‡
-deföed
-(
-_WIN32
-Ë&& deföed(
-_MSC_VER
-)
-
-285 #i‡
-deföed
-(
-_M_IA64
-)
-
-286 
-	#ARCHITECTURE_ID
- "IA64"
-
-	)
-
-288 #ñi‡
-deföed
-(
-_M_X64
-Ë|| deföed(
-_M_AMD64
-)
-
-289 
-	#ARCHITECTURE_ID
- "x64"
-
-	)
-
-291 #ñi‡
-deföed
-(
-_M_IX86
-)
-
-292 
-	#ARCHITECTURE_ID
- "X86"
-
-	)
-
-294 #ñi‡
-deföed
-(
-_M_ARM
-)
-
-295 
-	#ARCHITECTURE_ID
- "ARM"
-
-	)
-
-297 #ñi‡
-deföed
-(
-_M_MIPS
-)
-
-298 
-	#ARCHITECTURE_ID
- "MIPS"
-
-	)
-
-300 #ñi‡
-deföed
-(
-_M_SH
-)
-
-301 
-	#ARCHITECTURE_ID
- "SHx"
-
-	)
-
-304 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-308 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-312 
-	#DEC
-(
-n
-) \
-
-313 ('0' + (((
-n
-) / 10000000)%10)), \
-
-314 ('0' + (((
-n
-) / 1000000)%10)), \
-
-315 ('0' + (((
-n
-) / 100000)%10)), \
-
-316 ('0' + (((
-n
-) / 10000)%10)), \
-
-317 ('0' + (((
-n
-) / 1000)%10)), \
-
-318 ('0' + (((
-n
-) / 100)%10)), \
-
-319 ('0' + (((
-n
-) / 10)%10)), \
-
-320 ('0' + ((
-n
-Ë% 10))
-
-	)
-
-323 
-	#HEX
-(
-n
-) \
-
-324 ('0' + ((
-n
-)>>28 & 0xF)), \
-
-325 ('0' + ((
-n
-)>>24 & 0xF)), \
-
-326 ('0' + ((
-n
-)>>20 & 0xF)), \
-
-327 ('0' + ((
-n
-)>>16 & 0xF)), \
-
-328 ('0' + ((
-n
-)>>12 & 0xF)), \
-
-329 ('0' + ((
-n
-)>>8 & 0xF)), \
-
-330 ('0' + ((
-n
-)>>4 & 0xF)), \
-
-331 ('0' + ((
-n
-Ë& 0xF))
-
-	)
-
-334 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-335 c⁄° 
-	göfo_vîsi⁄
-[] = {
-
-338 
-COMPILER_VERSION_MAJOR
-,
-
-339 #ifde‡
-COMPILER_VERSION_MINOR
-
-
-340 '.', 
-COMPILER_VERSION_MINOR
-,
-
-341 #ifde‡
-COMPILER_VERSION_PATCH
-
-
-342 '.', 
-COMPILER_VERSION_PATCH
-,
-
-343 #ifde‡
-COMPILER_VERSION_TWEAK
-
-
-344 '.', 
-COMPILER_VERSION_TWEAK
-,
-
-355 c⁄°* 
-	göfo_∂©f‹m
- = "INFO" ":" "∂©f‹m[" 
-PLATFORM_ID
- "]";
-
-356 c⁄°* 
-	göfo_¨ch
- = "INFO" ":" "¨ch[" 
-ARCHITECTURE_ID
- "]";
-
-362 
-	$maö
-(
-¨gc
-, * 
-¨gv
-[])
-
-364 
-ªquúe
- = 0;
-
-365 
-ªquúe
- +
-öfo_compûî
-[
-¨gc
-];
-
-366 
-ªquúe
- +
-öfo_∂©f‹m
-[
-¨gc
-];
-
-367 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-368 
-ªquúe
- +
-öfo_vîsi⁄
-[
-¨gc
-];
-
-370 ()
-¨gv
-;
-
-371  
-ªquúe
-;
-
-372 
 	}
 }
 
@@ -63897,39 +58289,47 @@ m≠
 g_ã°_∂ayî_m≠
 ;
 
-14 
+14 c⁄° * 
+gm_logö_public_key
+;
+
+16 
 	gCMsgDi•©chî
 ::~
 	$CMsgDi•©chî
 () {
 
-16 
+18 
 	}
 }
 
-18 * 
+20 * 
 CMsgDi•©chî
 ::
 	$⁄_run
 () {
 
-19 
+21 
 cou¡
  = 0;
 
-21 
+23 
 	`di•©ch_msg
 ();
 
-23  
+24 
+cou¡
+++;
+
+26  
 NULL
 ;
 
-24 
+27 
 	}
 }
 
-26 
+29 
 boﬁ
  
 	gCMsgDi•©chî
@@ -63945,17 +58345,17 @@ EPﬁlSockë
 scokë
 ) {
 
-27 if(
+30 if(
 scokë
  =
 NULL
 ){
 
-28  
+31  
 åue
 ;
 
-31 if(
+34 if(
 msg_evít
 ->
 _msg_ty≥
@@ -63971,7 +58371,7 @@ _c⁄n_°©e
 CONN_UNVRIFY
 )){
 
-32 
+35 
 	`LOG
 (
 ERROR
@@ -63987,7 +58387,7 @@ _c⁄n_°©e
 	`gë_˛õ¡_ù_°r
 ();
 
-33 
+36 
 	`LOG
 (
 ERROR
@@ -63995,11 +58395,11 @@ ERROR
 gm_logö_public_key
 ;
 
-34  
+37  
 Ál£
 ;
 
-37 if(
+40 if(
 msg_evít
 ->
 _msg_ty≥
@@ -64013,7 +58413,7 @@ _c⁄n_°©e
 CONN_VRIFY
 ){
 
-38 
+41 
 	`LOG
 (
 ERROR
@@ -64023,19 +58423,19 @@ scokë
 fd
 ;
 
-39  
+42  
 Ál£
 ;
 
-42  
+45  
 åue
 ;
 
-43 
+46 
 	}
 }
 
-45 
+48 
 boﬁ
  
 	gCMsgDi•©chî
@@ -64051,7 +58451,7 @@ EPﬁlSockë
 sockë
 ) {
 
-46 i‡(
+49 i‡(
 	`check_msg_vÆide
 (
 msg_evít
@@ -64059,7 +58459,7 @@ msg_evít
 sockë
 )) {
 
-47 i‡(
+50 i‡(
 msg_evít
 ->
 _msg_ty≥
@@ -64067,7 +58467,7 @@ _msg_ty≥
 MSG_TYPE_LOGIN
 ) {
 
-48  
+51  
 	`do_logö
 (
 msg_evít
@@ -64075,7 +58475,7 @@ msg_evít
 sockë
 );
 
-49 }if(
+52 }if(
 msg_evít
 ->
 _msg_ty≥
@@ -64083,7 +58483,7 @@ _msg_ty≥
 MSG_TYPE_GM_LOGIN
 ){
 
-50 
+53 
 	`do_gm_logö
 (
 msg_evít
@@ -64091,11 +58491,11 @@ msg_evít
 sockë
 );
 
-51  
+54  
 åue
 ;
 
-54 
+57 
 this
 ->
 _msg_queue
@@ -64105,31 +58505,31 @@ _msg_queue
 msg_evít
 );
 
-55  
+58  
 åue
 ;
 
-58 
+61 
 	`LOG
 (
 ERROR
 )<<"error msg.......";
 
-59  
+62  
 Ál£
 ;
 
-62 
+65 
 	}
 }
 
-64 
+67 
 	gCMsgDi•©chî
 ::
 	$di•©ch_msg
 () {
 
-65 
+68 
 CMsgEvít
 * 
 evít
@@ -64139,13 +58539,13 @@ _msg_queue
 	`dequeue
 ();
 
-66 i‡(
+69 i‡(
 evít
  !
 NULL
 ) {
 
-67 
+70 
 msg_ty≥
  = 
 evít
@@ -64153,15 +58553,15 @@ evít
 _msg_ty≥
 ;
 
-68 
+71 
 msg_ty≥
 ) {
 
-69 
+72 
 MSG_TYPE_ALIVE
 : {
 
-70 
+73 
 MsgAlive
  *
 msg
@@ -64171,13 +58571,13 @@ evít
 _msg_ba£
 ;
 
-71 
+74 
 ∂ayî_id
  = 
 msg
 ->player_id;
 
-72 
+75 
 G©eWayPœyî
 * 
 ∂ayî
@@ -64191,13 +58591,13 @@ G©eWayPœyîM™agî
 ∂ayî_id
 );
 
-73 if(
+76 if(
 ∂ayî
  !
 NULL
 ){
 
-74 
+77 
 msg
 ->
 zeô
@@ -64207,7 +58607,7 @@ zeô
 NULL
 );
 
-75 
+78 
 ∂ayî
 ->
 	`£nd_msg
@@ -64215,13 +58615,13 @@ NULL
 msg
 );
 
-78 
+81 
 dñëe
 [] (*)
 msg
 ;
 
-79 
+82 
 evít
 ->
 _msg_ba£
@@ -64229,17 +58629,17 @@ _msg_ba£
 NULL
 ;
 
-80 
+83 
 dñëe
  
 evít
 ;
 
-83 
+86 
 MSG_TYPE_LOGIN_OUT
 :{
 
-84 
+87 
 MsgLogöOut
  *
 out
@@ -64249,7 +58649,7 @@ evít
 _msg_ba£
 ;
 
-85 
+88 
 G©eWayPœyî
  *
 ∂ayî
@@ -64265,7 +58665,7 @@ evít
 _˛õ¡_id
 );
 
-86 if((
+89 if((
 ∂ayî
 !
 NULL
@@ -64275,7 +58675,7 @@ NULL
 WAIT_FOR_ARENAER_MACHING
 )){
 
-87 
+90 
 	`VLOG
 (1)<<"DO LOGOUT..."<<
 ∂ayî
@@ -64283,7 +58683,7 @@ WAIT_FOR_ARENAER_MACHING
 	`gë_∂ayî_id
 ();
 
-88 
+91 
 CAª«M™age
 ::
 	`gë_ö°™˚
@@ -64297,13 +58697,13 @@ CAª«M™age
 	`gë_¨í´r_°age_id
 ());
 
-90 if(
+93 if(
 ∂ayî
  !
 NULL
 ){
 
-91 
+94 
 mid
  = 
 ∂ayî
@@ -64311,7 +58711,7 @@ mid
 	`gë_m©ch_w©ch
 ();
 
-92 
+95 
 °d
 ::
 m≠
@@ -64329,7 +58729,7 @@ _m©ch_w©chî
 mid
 );
 
-93 if(
+96 if(
 ôr
  !
 _m©ch_w©chî
@@ -64337,7 +58737,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-94 
+97 
 ôr
 ->
 £c⁄d
@@ -64349,7 +58749,7 @@ _m©ch_w©chî
 	`gë_∂ayî_id
 ());
 
-97 
+100 
 G©eWayPœyîM™agî
 ::
 	`GëIn°™˚
@@ -64361,13 +58761,13 @@ G©eWayPœyîM™agî
 	`gë_∂ayî_id
 ());
 
-100 
+103 
 dñëe
 [] (*)
 out
 ;
 
-101 
+104 
 evít
 ->
 _msg_ba£
@@ -64375,17 +58775,17 @@ _msg_ba£
 NULL
 ;
 
-102 
+105 
 dñëe
  
 evít
 ;
 
-105 
+108 
 MATCH_PVP_CHAT_MSG
 :
 
-107 
+110 
 MsgCh©PVP
  * 
 ch©_msg
@@ -64395,13 +58795,13 @@ evít
 _msg_ba£
 ;
 
-108 
+111 
 ªcv_id
  = 
 ch©_msg
 ->recv_id;
 
-109 
+112 
 G©eWayPœyî
 * 
 ∂ayî
@@ -64415,7 +58815,7 @@ G©eWayPœyîM™agî
 ªcv_id
 );
 
-110 
+113 
 	`LOG
 (
 INFO
@@ -64427,11 +58827,11 @@ ch©_msg
 msg_c⁄ã¡
 ;
 
-111 if(
+114 if(
 ∂ayî
 ){
 
-112 
+115 
 ∂ayî
 ->
 	`£nd_msg
@@ -64439,13 +58839,13 @@ msg_c⁄ã¡
 ch©_msg
 );
 
-114 
+117 
 dñëe
 [] (*)
 ch©_msg
 ;
 
-115 
+118 
 evít
 ->
 _msg_ba£
@@ -64453,17 +58853,17 @@ _msg_ba£
 NULL
 ;
 
-116 
+119 
 dñëe
  
 evít
 ;
 
-119 
+122 
 MSG_TYPE_CLIENT_CHANGE_FORMATION
 :
 
-121 
+124 
 MsgClõ¡Ch™geF‹m©i⁄
 * 
 msg
@@ -64473,13 +58873,13 @@ evít
 _msg_ba£
 ;
 
-122 
+125 
 mid
  = 
 msg
 ->mid;
 
-123 
+126 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -64489,13 +58889,13 @@ GSîvîInfo
 mid
 );
 
-124 if(
+127 if(
 £rvî_öfo
  !
 NULL
 ){
 
-125 
+128 
 £rvî_öfo
 ->
 _c_sockë
@@ -64507,13 +58907,13 @@ msg
 msg_size
 );
 
-127 
+130 
 dñëe
 [] (*)
 msg
 ;
 
-128 
+131 
 evít
 ->
 _msg_ba£
@@ -64521,17 +58921,17 @@ _msg_ba£
 NULL
 ;
 
-129 
+132 
 dñëe
  
 evít
 ;
 
-132 
+135 
 MSG_TYPE_CLIENT_CHANGE_MOVE
 :
 
-134 
+137 
 MsgClõ¡Ch™geMove
  *
 msg
@@ -64541,13 +58941,13 @@ evít
 _msg_ba£
 ;
 
-135 
+138 
 mid
  = 
 msg
 ->mid;
 
-136 
+139 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -64557,13 +58957,13 @@ GSîvîInfo
 mid
 );
 
-137 if(
+140 if(
 £rvî_öfo
  !
 NULL
 ){
 
-138 
+141 
 £rvî_öfo
 ->
 _c_sockë
@@ -64575,17 +58975,17 @@ msg
 msg_size
 );
 
-140 
+143 
 dñëe
  
 evít
 ;
 
-143 
+146 
 MSG_TYPE_CLIENT_CHANGE_PLAYER
 :
 
-145 
+148 
 MsgClõ¡Ch™gePœyî
 * 
 msg
@@ -64595,13 +58995,13 @@ evít
 _msg_ba£
 ;
 
-146 
+149 
 mid
  = 
 msg
 ->mid;
 
-147 
+150 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -64611,13 +59011,13 @@ GSîvîInfo
 mid
 );
 
-148 if(
+151 if(
 £rvî_öfo
  !
 NULL
 ){
 
-149 
+152 
 £rvî_öfo
 ->
 _c_sockë
@@ -64629,13 +59029,13 @@ msg
 msg_size
 );
 
-151 
+154 
 dñëe
 [] (*)
 msg
 ;
 
-152 
+155 
 evít
 ->
 _msg_ba£
@@ -64643,17 +59043,17 @@ _msg_ba£
 NULL
 ;
 
-153 
+156 
 dñëe
  
 evít
 ;
 
-156 
+159 
 MSG_TYPE_CLIENT_COACH_SPEAK
 :
 
-158 
+161 
 MsgClõ¡CﬂchS≥ak
  *
 msg
@@ -64663,7 +59063,7 @@ evít
 _msg_ba£
 ;
 
-159 
+162 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -64675,13 +59075,13 @@ msg
 mid
 );
 
-160 if(
+163 if(
 £rvî_öfo
  !
 NULL
 ){
 
-161 
+164 
 £rvî_öfo
 ->
 _c_sockë
@@ -64693,7 +59093,7 @@ msg
 msg_size
 );
 
-162 
+165 
 	`LOG
 (
 INFO
@@ -64705,13 +59105,13 @@ cid
 •ók_ty≥
 ;
 
-164 
+167 
 dñëe
 [] (*)
 msg
 ;
 
-165 
+168 
 evít
 ->
 _msg_ba£
@@ -64719,17 +59119,17 @@ _msg_ba£
 NULL
 ;
 
-166 
+169 
 dñëe
  
 evít
 ;
 
-169 
+172 
 MSG_TYPE_CLIENT_USE_TEAM_SKILL
 :
 
-171 
+174 
 MsgClõ¡U£Skûl
 * 
 msg
@@ -64739,7 +59139,7 @@ evít
 _msg_ba£
 ;
 
-172 
+175 
 	`f‹w¨d_to_game_£rvî
 (
 evít
@@ -64751,13 +59151,13 @@ msg
 mid
 );
 
-173 
+176 
 dñëe
 [] (*)
 msg
 ;
 
-174 
+177 
 evít
 ->
 _msg_ba£
@@ -64765,17 +59165,17 @@ _msg_ba£
 NULL
 ;
 
-175 
+178 
 dñëe
  
 evít
 ;
 
-178 
+181 
 MSG_TYPE_CLIENT_USE_TEAM_SKILL_BROCAST
 :
 
-180 
+183 
 MsgClõ¡U£SkûlBroˇ°
 * 
 msg
@@ -64785,7 +59185,7 @@ evít
 _msg_ba£
 ;
 
-182 
+185 
 	`VLOG
 (1)<<"USE ............"<<
 msg
@@ -64793,7 +59193,7 @@ msg
 mid
 ;
 
-183 
+186 
 	`broˇ°_msg_to_m©ch_w©chî
 (
 msg
@@ -64801,13 +59201,13 @@ msg
 mid
 ,msg);
 
-184 
+187 
 dñëe
 [] (*)
 msg
 ;
 
-185 
+188 
 evít
 ->
 _msg_ba£
@@ -64815,17 +59215,17 @@ _msg_ba£
 NULL
 ;
 
-186 
+189 
 dñëe
  
 evít
 ;
 
-189 
+192 
 MSG_TYPE_CLIENT_TERMINAL_MATCH
 :
 
-191 
+194 
 MsgClõ¡TîmöÆM©ch
 * 
 msg
@@ -64835,13 +59235,13 @@ evít
 _msg_ba£
 );
 
-192 
+195 
 mid
  = 
 msg
 ->mid;
 
-193 
+196 
 GSîvîInfo
  * 
 £rvî_öfo
@@ -64851,13 +59251,13 @@ GSîvîInfo
 mid
 );
 
-194 if(
+197 if(
 £rvî_öfo
  !
 NULL
 ){
 
-195 
+198 
 £rvî_öfo
 ->
 _c_sockë
@@ -64869,17 +59269,17 @@ msg
 msg_size
 );
 
-197 
+200 
 dñëe
  
 evít
 ;
 
-200 
+203 
 MSG_TYPE_CLIENT_PVN_MATCH_START
 :
 
-202 
+205 
 MsgClõ¡PVNSèπM©ch
 * 
 msg
@@ -64889,7 +59289,7 @@ evít
 _msg_ba£
 );
 
-203 
+206 
 	`Broˇ°AŒSîvî
 ((c⁄° *)
 msg
@@ -64897,13 +59297,13 @@ msg
 msg_size
 );
 
-225 
+228 
 dñëe
 [] (*)
 msg
 ;
 
-226 
+229 
 evít
 ->
 _msg_ba£
@@ -64911,17 +59311,17 @@ _msg_ba£
 NULL
 ;
 
-227 
+230 
 dñëe
  
 evít
 ;
 
-230 
+233 
 MSG_TYPE_CLIENT_WATCH_MATCH
 :{
 
-231 
+234 
 MsgClõ¡PVNSèπM©ch
 * 
 msg
@@ -64931,13 +59331,13 @@ evít
 _msg_ba£
 );
 
-232 
+235 
 mid
  = 
 msg
 ->mid;
 
-233 
+236 
 MATCH_WATCH_ITR
  
 ôr
@@ -64949,7 +59349,7 @@ _m©ch_w©chî
 mid
 );
 
-234 if(
+237 if(
 ôr
  !
 _m©ch_w©chî
@@ -64957,7 +59357,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-235 
+238 
 boﬁ
  
 r°
@@ -64973,13 +59373,13 @@ msg
 cid
 );
 
-236 if(
+239 if(
 r°
  =
 Ál£
 ){
 
-237 (
+240 (
 ôr
 ->
 £c⁄d
@@ -64993,7 +59393,7 @@ msg
 cid
 );
 
-239 
+242 
 G©eWayPœyî
 * 
 ∂ayî
@@ -65009,13 +59409,13 @@ msg
 cid
 );
 
-240 if(
+243 if(
 ∂ayî
  !
 NULL
 ){
 
-241 
+244 
 ∂ayî
 ->
 	`add_m©ch_w©ch
@@ -65023,19 +59423,19 @@ NULL
 mid
 );
 
-242 
+245 
 MsgClõ¡W©chM©chAck
  
 ack
 ;
 
-243 
+246 
 ack
 .
 mid
  = mid;
 
-244 
+247 
 ack
 .
 r°
@@ -65043,7 +59443,7 @@ r°
 åue
 ;
 
-245 
+248 
 ∂ayî
 ->
 	`£nd_msg
@@ -65053,7 +59453,7 @@ MsgBa£
 ack
 );
 
-248 
+251 
 G©eWayPœyî
 * 
 ∂ayî
@@ -65069,25 +59469,25 @@ msg
 cid
 );
 
-249 if(
+252 if(
 ∂ayî
  !
 NULL
 ){
 
-250 
+253 
 MsgClõ¡W©chM©chAck
  
 ack
 ;
 
-251 
+254 
 ack
 .
 mid
  = mid;
 
-252 
+255 
 ack
 .
 r°
@@ -65095,7 +59495,7 @@ r°
 Ál£
 ;
 
-253 
+256 
 ∂ayî
 ->
 	`£nd_msg
@@ -65105,13 +59505,13 @@ MsgBa£
 ack
 );
 
-257 
+260 
 dñëe
 [] (*)
 msg
 ;
 
-258 
+261 
 evít
 ->
 _msg_ba£
@@ -65119,25 +59519,25 @@ _msg_ba£
 NULL
 ;
 
-259 
+262 
 dñëe
  
 evít
 ;
 
-262 
+265 
 MSG_TYPE_SERVER_REQ
 :
 
-264 
+267 
 	`VLOG
 (1)<<"GAME SERVER REGISTER";
 
-270 
+273 
 MSG_TYPE_GTOG_SERVER_NEW_MATCH
 :
 
-272 
+275 
 MsgGameSîvîM©chSèπ
 * 
 msg
@@ -65147,13 +59547,13 @@ evít
 _msg_ba£
 ;
 
-273 
+276 
 mid
  = 
 msg
 ->mid;
 
-274 if(
+277 if(
 _m©ch_w©chî
 .
 	`föd
@@ -65163,7 +59563,7 @@ mid
 	`íd
 ()){
 
-275 
+278 
 M©chInfo
 * 
 m©ch_öfo
@@ -65173,7 +59573,7 @@ m©ch_öfo
 	`M©chInfo
 ();
 
-276 
+279 
 m©ch_öfo
 ->
 £rvî_ödex
@@ -65181,7 +59581,7 @@ m©ch_öfo
 msg
 ->server_index;
 
-277 
+280 
 m©ch_öfo
 ->
 m©ch_ty≥
@@ -65189,7 +59589,7 @@ m©ch_ty≥
 msg
 ->match_type);
 
-278 
+281 
 _m©ch_w©chî
 [
 msg
@@ -65199,13 +59599,13 @@ mid
 m©ch_öfo
 ;
 
-280 
+283 
 dñëe
 [] (*)
 msg
 ;
 
-281 
+284 
 evít
 ->
 _msg_ba£
@@ -65213,17 +59613,17 @@ _msg_ba£
 NULL
 ;
 
-282 
+285 
 dñëe
  
 evít
 ;
 
-285 
+288 
 MSG_TYPE_CLIENT_MATCHING_SUCCESS_START
 :
 
-287 
+290 
 MsgAª«îM©chögSuc˚ss
 * 
 msg_ack
@@ -65233,25 +59633,25 @@ evít
 _msg_ba£
 ;
 
-288 
+291 
 mid
  = 
 msg_ack
 ->mid;
 
-289 
+292 
 uid
  = 
 msg_ack
 ->uid;
 
-290 
+293 
 ›_uid
  = 
 msg_ack
 ->op_uid;
 
-291 
+294 
 	`£nd_¨ía_m©chög_suc˚ss
 (
 mid
@@ -65261,11 +59661,11 @@ uid
 ›_uid
 );
 
-294 
+297 
 MSG_TYPE_GTOG_SERVER_ROUND_PLAYER_DATA
 :
 
-296 
+299 
 MsgM©chPœyîRoundD©a
 * 
 m
@@ -65275,13 +59675,13 @@ evít
 _msg_ba£
 );
 
-297 
+300 
 	`SídM©chPœyîD©a
 (
 m
 );
 
-298 
+301 
 dñëe
 [] (*)(
 evít
@@ -65289,7 +59689,7 @@ evít
 _msg_ba£
 );
 
-299 
+302 
 evít
 ->
 _msg_ba£
@@ -65297,17 +59697,17 @@ _msg_ba£
 NULL
 ;
 
-300 
+303 
 dñëe
  
 evít
 ;
 
-303 
+306 
 MSG_TYPE_GTOG_SERVER_ROUND_BALL_DATA
 :
 
-305 
+308 
 MsgM©chBÆlRoundD©a
 * 
 msg
@@ -65317,13 +59717,13 @@ evít
 _msg_ba£
 );
 
-306 
+309 
 	`SídM©chBÆlD©a
 (
 msg
 );
 
-307 
+310 
 dñëe
 [] (*)(
 evít
@@ -65331,7 +59731,7 @@ evít
 _msg_ba£
 );
 
-308 
+311 
 evít
 ->
 _msg_ba£
@@ -65339,17 +59739,17 @@ _msg_ba£
 NULL
 ;
 
-309 
+312 
 dñëe
  
 evít
 ;
 
-312 
+315 
 MSG_TYPE_GTOG_SERVER_RESULT_DATA
 :
 
-314 
+317 
 MsgM©chResu…D©a
 * 
 msg
@@ -65359,19 +59759,19 @@ evít
 _msg_ba£
 );
 
-315 
+318 
 	`SídM©chResu…D©a
 (
 msg
 );
 
-316 
+319 
 dñëe
 [] (*)
 msg
 ;
 
-317 
+320 
 evít
 ->
 _msg_ba£
@@ -65379,17 +59779,17 @@ _msg_ba£
 NULL
 ;
 
-318 
+321 
 dñëe
  
 evít
 ;
 
-321 
+324 
 MSG_TYPE_GTOG_SERVER_EVENT_DATA
 :
 
-323 
+326 
 MsgM©chEvítRoundD©a
 * 
 msg
@@ -65399,13 +59799,13 @@ evít
 _msg_ba£
 );
 
-324 
+327 
 	`SídM©chEvítD©a
 (
 msg
 );
 
-325 
+328 
 dñëe
 [] (*)(
 evít
@@ -65413,7 +59813,7 @@ evít
 _msg_ba£
 );
 
-326 
+329 
 evít
 ->
 _msg_ba£
@@ -65421,17 +59821,17 @@ _msg_ba£
 NULL
 ;
 
-327 
+330 
 dñëe
  
 evít
 ;
 
-330 
+333 
 MSG_TYPE_GTOG_SERVER_MATCH_END
 :
 
-332 
+335 
 MsgGameToG©eSîvîM©chEnd
 * 
 msg
@@ -65441,7 +59841,7 @@ evít
 _msg_ba£
 );
 
-333 
+336 
 	`RemoveM©ch
 (
 msg
@@ -65449,13 +59849,13 @@ msg
 mid
 );
 
-334 
+337 
 dñëe
 [] (*)
 msg
 ;
 
-335 
+338 
 evít
 ->
 _msg_ba£
@@ -65463,17 +59863,17 @@ _msg_ba£
 NULL
 ;
 
-336 
+339 
 dñëe
  
 evít
 ;
 
-339 
+342 
 MSG_TYPE_GTOG_SERVER_SKILL_DATA
 :
 
-341 
+344 
 MsgGamePœyîSkûlD©a
 * 
 msg
@@ -65483,13 +59883,13 @@ evít
 _msg_ba£
 );
 
-342 
+345 
 	`SídM©chSkûlD©a
 (
 msg
 );
 
-343 
+346 
 dñëe
 [] (*)(
 evít
@@ -65497,7 +59897,7 @@ evít
 _msg_ba£
 );
 
-344 
+347 
 evít
 ->
 _msg_ba£
@@ -65505,17 +59905,17 @@ _msg_ba£
 NULL
 ;
 
-345 
+348 
 dñëe
  
 evít
 ;
 
-348 
+351 
 MSG_TYPE_GTOG_SERVER_TEAM_SKILL_DATA
 :
 
-350 
+353 
 MsgGameTómSkûlD©a
  *
 msg
@@ -65525,19 +59925,19 @@ evít
 _msg_ba£
 );
 
-351 
+354 
 	`SídM©chTómSkûlD©a
 (
 msg
 );
 
-352 
+355 
 dñëe
 [] (*)
 msg
 ;
 
-353 
+356 
 evít
 ->
 _msg_ba£
@@ -65545,17 +59945,17 @@ _msg_ba£
 NULL
 ;
 
-354 
+357 
 dñëe
  
 evít
 ;
 
-357 
+360 
 MSG_TYPE_GTOG_TEAM_NEW_FORMATION
 :
 
-359 
+362 
 MsgTómNewPœyîF‹m©i⁄Pos
  *
 msg
@@ -65565,19 +59965,19 @@ evít
 _msg_ba£
 );
 
-360 
+363 
 	`SídM©chTómNewF‹m©i⁄
 (
 msg
 );
 
-361 
+364 
 dñëe
 [] (*)
 msg
 ;
 
-362 
+365 
 evít
 ->
 _msg_ba£
@@ -65585,17 +59985,17 @@ _msg_ba£
 NULL
 ;
 
-363 
+366 
 dñëe
  
 evít
 ;
 
-366 
+369 
 MSG_TYPE_GTOG_SERVER_PENTLY_RESULT
 :
 
-368 
+371 
 MsgM©chPíéyResu…D©a
 * 
 msg
@@ -65605,19 +60005,19 @@ evít
 _msg_ba£
 );
 
-369 
+372 
 	`£nd_m©ch_≥¡ly_to_Æl_w©ch
 (
 msg
 );
 
-370 
+373 
 dñëe
 [] (*)
 msg
 ;
 
-371 
+374 
 evít
 ->
 _msg_ba£
@@ -65625,39 +60025,39 @@ _msg_ba£
 NULL
 ;
 
-372 
+375 
 dñëe
  
 evít
 ;
 
-376 
+379 
 MSG_TYPE_GM_SERVER_INFO
 :
 
-377 
+380 
 MSG_TYPE_GM_QUERY_MATCH_INFO
 :
 
-378 
+381 
 MSG_TYPE_GM_MODIFER_MATCH
 :
 
-379 
+382 
 MSG_TYPE_GM_QUERY_GATE_SERVER_PLAYER_ONLINE
 :
 
-380 
+383 
 	`gm_comm™d
 (
 evít
 );
 
-382 
+385 
 MSG_TYPE_CLIENT_DO_ARENA_MATCHING
 :
 
-384 
+387 
 MsgSîvîAª«DoM©ch
 * 
 msg
@@ -65667,11 +60067,11 @@ evít
 _msg_ba£
 );
 
-385 
+388 
 i
 =1;i<5;i++){
 
-386 
+389 
 CAª«M™age
 ::
 	`gë_ö°™˚
@@ -65681,23 +60081,23 @@ CAª«M™age
 i
 );
 
-388 
+391 
 	`VLOG
 (1)<<"do matching....";
 
-390 
+393 
 _timî_h™dÀr
 ->
 	`add_¨ía_evít
 ();
 
-392 
+395 
 dñëe
 [] (*)
 msg
 ;
 
-393 
+396 
 evít
 ->
 _msg_ba£
@@ -65705,17 +60105,17 @@ _msg_ba£
 NULL
 ;
 
-394 
+397 
 dñëe
  
 evít
 ;
 
-397 
+400 
 MSG_TYPE_CLIENT_MATCHING_SUCCESS
 :
 
-399 
+402 
 MsgSîvîM©chögSuc˚ss
 * 
 msg
@@ -65725,7 +60125,7 @@ evít
 _msg_ba£
 );
 
-400 
+403 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -65733,13 +60133,13 @@ GSîvîInfo
 	`PickM©chSîvî
 ();
 
-401 if(
+404 if(
 £rvî_öfo
  !
 NULL
 ){
 
-402 
+405 
 £rvî_öfo
 ->
 _c_sockë
@@ -65751,7 +60151,7 @@ msg
 msg_size
 );
 
-405 
+408 
 G©eWayPœyî
 * 
 home_∂ayî
@@ -65767,13 +60167,13 @@ msg
 home_uid
 );
 
-406 if(
+409 if(
 home_∂ayî
  !
 NULL
 ){
 
-407 
+410 
 home_∂ayî
 ->
 	`£nd_msg
@@ -65783,13 +60183,13 @@ MsgBa£
 msg
 );
 
-410 if(
+413 if(
 msg
 ->
 away_uid
  != -1){
 
-411 
+414 
 G©eWayPœyî
 * 
 away_∂ayî
@@ -65805,13 +60205,13 @@ msg
 away_uid
 );
 
-412 if(
+415 if(
 away_∂ayî
  !
 NULL
 ){
 
-413 
+416 
 away_∂ayî
 ->
 	`£nd_msg
@@ -65821,13 +60221,13 @@ MsgBa£
 msg
 );
 
-417 
+420 
 dñëe
 [] (*)
 msg
 ;
 
-418 
+421 
 evít
 ->
 _msg_ba£
@@ -65835,17 +60235,17 @@ _msg_ba£
 NULL
 ;
 
-419 
+422 
 dñëe
  
 evít
 ;
 
-422 
+425 
 MSG_TYPE_CLIENT_ENTER_ARENA
 :
 
-424 
+427 
 MsgAª«îE¡î
 * 
 msg
@@ -65855,7 +60255,7 @@ evít
 _msg_ba£
 );
 
-425 
+428 
 G©eWayPœyî
 * 
 ∂ayî
@@ -65871,13 +60271,13 @@ msg
 ∂ayî_id
 );
 
-426 if(
+429 if(
 ∂ayî
  !
 NULL
 ){
 
-427 
+430 
 ∂ayî
 ->
 	`íãr_¨í¨
@@ -65887,7 +60287,7 @@ msg
 °age_id
 );
 
-428 
+431 
 ∂ayî
 ->
 	`£t_©èck_vÆue
@@ -65897,7 +60297,7 @@ msg
 ©èck_vÆue
 );
 
-429 
+432 
 ∂ayî
 ->
 	`£t_de„nd_vÆue
@@ -65907,7 +60307,7 @@ msg
 de„nd_vÆue
 );
 
-430 
+433 
 CAª«M™age
 ::
 	`gë_ö°™˚
@@ -65917,13 +60317,13 @@ CAª«M™age
 ∂ayî
 );
 
-432 
+435 
 dñëe
 [] (*)
 msg
 ;
 
-433 
+436 
 evít
 ->
 _msg_ba£
@@ -65931,17 +60331,17 @@ _msg_ba£
 NULL
 ;
 
-434 
+437 
 dñëe
  
 evít
 ;
 
-437 
+440 
 MSG_TYEP_SPEAK_BROCAST
 :
 
-439 
+442 
 MsgClõ¡S≥akBroˇ°
  *
 msg
@@ -65951,7 +60351,7 @@ evít
 _msg_ba£
 );
 
-440 
+443 
 	`b‹ˇ°_∂ayî_•ók
 (
 msg
@@ -65959,13 +60359,13 @@ msg
 mid
 ,msg);
 
-441 
+444 
 dñëe
 [] (*)
 msg
 ;
 
-442 
+445 
 evít
 ->
 _msg_ba£
@@ -65973,17 +60373,17 @@ _msg_ba£
 NULL
 ;
 
-443 
+446 
 dñëe
  
 evít
 ;
 
-446 
+449 
 MSG_TYPE_CLIENT_REQUEST_TEAM_SKILL_INFO
 :{
 
-447 
+450 
 MsgClõ¡Reque°SkûlInfo
 * 
 msg
@@ -65993,7 +60393,7 @@ evít
 _msg_ba£
 );
 
-448 
+451 
 	`f‹w¨d_to_game_£rvî
 (
 evít
@@ -66005,13 +60405,13 @@ msg
 mid
 );
 
-449 
+452 
 dñëe
 [] (*)
 msg
 ;
 
-450 
+453 
 evít
 ->
 _msg_ba£
@@ -66019,17 +60419,17 @@ _msg_ba£
 NULL
 ;
 
-451 
+454 
 dñëe
  
 evít
 ;
 
-454 
+457 
 MSG_TYPE_CLIENT_REQUEST_TEAM_SKILL_INFO_ACK
 :{
 
-455 
+458 
 MsgClõ¡Reque°SkûlInfoAck
 * 
 msg
@@ -66039,13 +60439,13 @@ evít
 _msg_ba£
 );
 
-456 
+459 
 	`SídTómSkûlInfoToPœyî
 (
 msg
 );
 
-457 
+460 
 	`VLOG
 (0)<<"REQUEST ACK "<<
 msg
@@ -66055,13 +60455,13 @@ cid
 °©e
 ;
 
-458 
+461 
 dñëe
 [] (*)
 msg
 ;
 
-459 
+462 
 evít
 ->
 _msg_ba£
@@ -66069,17 +60469,17 @@ _msg_ba£
 NULL
 ;
 
-460 
+463 
 dñëe
  
 evít
 ;
 
-463 
+466 
 MSG_TYPE_CLIENT_REQUEST_MATCH_START_ACK
 :{
 
-464 
+467 
 MsgClõ¡SèπM©chAck
 * 
 ack_msg
@@ -66089,25 +60489,25 @@ evít
 _msg_ba£
 );
 
-465 
+468 
 	`SídSèπM©chAckTOPœyî
 (
 ack_msg
 );
 
-466 if(
+469 if(
 ack_msg
 ->
 r°
  == 1){
 
-467 
+470 
 	`LOG
 (
 INFO
 )<<"match isÑunning on game server ";
 
-469 
+472 
 MATCH_WATCH_ITR
  
 ôr
@@ -66121,7 +60521,7 @@ ack_msg
 mid
 );
 
-470 if(
+473 if(
 ôr
  !
 _m©ch_w©chî
@@ -66129,7 +60529,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-471 
+474 
 boﬁ
  
 r°
@@ -66145,13 +60545,13 @@ ack_msg
 cid
 );
 
-472 if(
+475 if(
 r°
  =
 Ál£
 ){
 
-473 (
+476 (
 ôr
 ->
 £c⁄d
@@ -66165,7 +60565,7 @@ ack_msg
 cid
 );
 
-475 
+478 
 G©eWayPœyî
 * 
 ∂ayî
@@ -66181,13 +60581,13 @@ ack_msg
 cid
 );
 
-476 if(
+479 if(
 ∂ayî
  !
 NULL
 ){
 
-477 
+480 
 ∂ayî
 ->
 	`add_m©ch_w©ch
@@ -66197,13 +60597,13 @@ ack_msg
 mid
 );
 
-486 
+489 
 dñëe
 [] (*)
 ack_msg
 ;
 
-487 
+490 
 evít
 ->
 _msg_ba£
@@ -66211,17 +60611,17 @@ _msg_ba£
 NULL
 ;
 
-488 
+491 
 dñëe
  
 evít
 ;
 
-491 
+494 
 MSG_TYPE_CLIENT_DEPOIST_OPERATE
 :{
 
-492 
+495 
 MsgClõ¡Dïoi°O≥øã
  *
 msg
@@ -66231,7 +60631,7 @@ evít
 _msg_ba£
 );
 
-493 
+496 
 	`f‹w¨d_to_game_£rvî
 (
 evít
@@ -66243,13 +60643,13 @@ msg
 mid
 );
 
-494 
+497 
 dñëe
 [] (*)
 msg
 ;
 
-495 
+498 
 evít
 ->
 _msg_ba£
@@ -66257,17 +60657,17 @@ _msg_ba£
 NULL
 ;
 
-496 
+499 
 dñëe
  
 evít
 ;
 
-499 
+502 
 MSG_TYPE_CLIENT_QUERY_FAST_MATCH
 :{
 
-500 
+503 
 MsgClõ¡QuîyFa°M©ch
 * 
 msg
@@ -66277,7 +60677,7 @@ evít
 _msg_ba£
 );
 
-501 
+504 
 	`f‹w¨d_to_game_£rvî
 (
 evít
@@ -66289,7 +60689,7 @@ msg
 mid
 );
 
-502 
+505 
 	`LOG
 (
 INFO
@@ -66299,13 +60699,13 @@ msg
 mid
 ;
 
-503 
+506 
 dñëe
 [] (*)
 msg
 ;
 
-504 
+507 
 evít
 ->
 _msg_ba£
@@ -66313,17 +60713,17 @@ _msg_ba£
 NULL
 ;
 
-505 
+508 
 dñëe
  
 evít
 ;
 
-508 
+511 
 MSG_TYPE_CLIENT_QUERY_FAST_MATCH_ACK
 :{
 
-509 
+512 
 MsgClõ¡QuîyFa°M©chAck
 * 
 msg
@@ -66333,7 +60733,7 @@ evít
 _msg_ba£
 );
 
-510 
+513 
 ∂ayî_id
  = 
 msg
@@ -66341,7 +60741,7 @@ msg
 cid
 ;
 
-511 
+514 
 G©eWayPœyî
 * 
 ∂ayî
@@ -66355,13 +60755,13 @@ G©eWayPœyîM™agî
 ∂ayî_id
 );
 
-512 if(
+515 if(
 ∂ayî
  !
 NULL
 ){
 
-513 
+516 
 ∂ayî
 ->
 	`£nd_msg
@@ -66371,13 +60771,13 @@ MsgBa£
 msg
 );
 
-515 
+518 
 dñëe
 [] (*)
 msg
 ;
 
-516 
+519 
 evít
 ->
 _msg_ba£
@@ -66385,13 +60785,13 @@ _msg_ba£
 NULL
 ;
 
-517 
+520 
 dñëe
  
 evít
 ;
 
-521 
+524 
 	`LOG
 (
 ERROR
@@ -66399,25 +60799,25 @@ ERROR
 msg_ty≥
 ;
 
-524 
+527 
 time•ec
  
 ts
 ;
 
-525 
+528 
 ts
 .
 tv_n£c
  = 20000000;
 
-526 
+529 
 ts
 .
 tv_£c
  = 0;
 
-527 
+530 
 	`«no¶ìp
 (&
 ts
@@ -66425,11 +60825,11 @@ ts
 NULL
 );
 
-529 
+532 
 	}
 }
 
-531 
+534 
 boﬁ
  
 	gCMsgDi•©chî
@@ -66445,7 +60845,7 @@ EPﬁlSockë
 sockë
 ) {
 
-532 
+535 
 MsgLogö
 * 
 logö
@@ -66455,31 +60855,31 @@ msg_evít
 _msg_ba£
 ;
 
-533 
+536 
 uid
  = 
 logö
 ->uid;
 
-534 
+537 
 mid
  = 
 logö
 ->mid;
 
-535 
+538 
 zeô
  = 
 logö
 ->zeit;
 
-536 
+539 
 ønd_öt
  = 
 logö
 ->rand_int;
 
-537 
+540 
 °d
 ::
 o°rög°ªam
@@ -66487,13 +60887,13 @@ o°rög°ªam
 °rbuff
 ;
 
-538 
+541 
 °rbuff
 <<
 zeô
 ;
 
-539 
+542 
 °d
 ::
 o°rög°ªam
@@ -66501,31 +60901,31 @@ o°rög°ªam
 °r_tmp
 ;
 
-540 
+543 
 °r_tmp
 <<
 public_key
 ;
 
-541 
+544 
 °r_tmp
 <<
 ønd_öt
 ;
 
-542 
+545 
 °r_tmp
 <<
 mid
 ;
 
-543 
+546 
 °r_tmp
 <<
 uid
 ;
 
-544 
+547 
 °d
 ::
 °rög
@@ -66537,7 +60937,7 @@ uid
 	`°r
 ());
 
-545 
+548 
 °d
 ::
 °rög
@@ -66549,7 +60949,7 @@ md5_°r
 sour˚_°r
 );
 
-546 
+549 
 °rbuff
 <<
 md5_°r
@@ -66557,7 +60957,7 @@ md5_°r
 	`c_°r
 ();
 
-547 
+550 
 °d
 ::
 °rög
@@ -66569,7 +60969,7 @@ md5_°r
 	`°r
 ());
 
-548 
+551 
 °d
 ::
 °rög
@@ -66581,7 +60981,7 @@ föÆ_°r
 tmp_°rög
 );
 
-549 
+552 
 r°
  = 
 	`°∫cmp
@@ -66595,11 +60995,11 @@ logö
 code
 ,16);
 
-550 if(
+553 if(
 r°
  != 0){
 
-551 
+554 
 	`LOG
 (
 ERROR
@@ -66621,21 +61021,21 @@ föÆ_°r
 	`c_°r
 ();
 
-552 
+555 
 	`dis_c⁄√˘i⁄
 (
 sockë
 ,-2);
 
-553  
+556  
 Ál£
 ;
 
-556 #ifde‡
+559 #ifde‡
 _MY_DEBUG_
 
 
-557 
+560 
 °d
 ::
 °rög
@@ -66647,7 +61047,7 @@ sockë
 	`gë_˛õ¡_ù_°r
 ();
 
-559 
+562 
 °d
 ::
 m≠
@@ -66665,7 +61065,7 @@ g_ã°_∂ayî_m≠
 ù
 );
 
-560 if(
+563 if(
 ôr
  !
 g_ã°_∂ayî_m≠
@@ -66673,7 +61073,7 @@ g_ã°_∂ayî_m≠
 	`íd
 ()){
 
-561 
+564 
 	`VLOG
 (2)<<(
 ôr
@@ -66685,17 +61085,17 @@ g_ã°_∂ayî_m≠
 uid
 <<" ÁôªÈôÜ‰∫Ü„ÄÇ";
 
-563 
+566 
 	`dis_c⁄√˘i⁄
 (
 sockë
 ,-2);
 
-564  
+567  
 Ál£
 ;
 
-568 
+571 
 G©eWayPœyî
 * 
 ∂ayî
@@ -66709,13 +61109,13 @@ G©eWayPœyîM™agî
 uid
 );
 
-569 if(
+572 if(
 ∂ayî
  =
 NULL
 ){
 
-570 
+573 
 ∂ayî
  = 
 √w
@@ -66727,7 +61127,7 @@ sockë
 uid
 );
 
-573 
+576 
 G©eWayPœyîM™agî
 ::
 	`GëIn°™˚
@@ -66739,13 +61139,13 @@ uid
 ∂ayî
 );
 
-585 
+588 
 	`do_logout
 (
 ∂ayî
 );
 
-586 
+589 
 ∂ayî
 ->
 	`ªlﬂd_∂ayî_öfo
@@ -66755,7 +61155,7 @@ sockë
 uid
 );
 
-589 
+592 
 	`LOG
 (
 INFO
@@ -66763,19 +61163,19 @@ INFO
 uid
 <<"Üogin success!";
 
-590 
+593 
 MsgLogöAck
  
 msg
 ;
 
-591 
+594 
 msg
 .
 ªt
  = 1;
 
-592 
+595 
 ∂ayî
 ->
 	`£nd_msg
@@ -66783,11 +61183,11 @@ msg
 msg
 );
 
-594 
+597 
 	}
 }
 
-596 
+599 
 boﬁ
  
 	gCMsgDi•©chî
@@ -66803,7 +61203,7 @@ EPﬁlSockë
 sockë
 ){
 
-597 
+600 
 GMMsgGmLogö
  *
 msg
@@ -66813,7 +61213,7 @@ msg_evít
 _msg_ba£
 ;
 
-598 
+601 
 °d
 ::
 o°rög°ªam
@@ -66821,7 +61221,7 @@ o°rög°ªam
 °r_tmp
 ;
 
-599 
+602 
 °r_tmp
 <<
 msg
@@ -66829,7 +61229,7 @@ msg
 gm_uid
 ;
 
-600 
+603 
 °r_tmp
 <<
 msg
@@ -66837,13 +61237,13 @@ msg
 time
 ;
 
-601 
+604 
 °r_tmp
 <<
 gm_logö_public_key
 ;
 
-602 
+605 
 °d
 ::
 °rög
@@ -66855,7 +61255,7 @@ gm_logö_public_key
 	`°r
 ());
 
-603 
+606 
 °d
 ::
 °rög
@@ -66867,7 +61267,7 @@ md5_°r
 °r_föÆ
 );
 
-604 
+607 
 r°
  = 
 	`°∫cmp
@@ -66881,23 +61281,23 @@ msg
 code
 ,20);
 
-605 if(
+608 if(
 r°
  != 0){
 
-618  
+621  
 Ál£
 ;
 
-620  
+623  
 åue
 ;
 
-621 
+624 
 	}
 }
 
-624 
+627 
 boﬁ
  
 	gCMsgDi•©chî
@@ -66911,13 +61311,13 @@ G©eWayPœyî
 r°
 ) {
 
-629 
+632 
 MsgLogöAck
  
 msg
 ;
 
-630 
+633 
 msg
 .
 ªt
@@ -66925,7 +61325,7 @@ msg
 r°
 ;
 
-631 
+634 
 ∂ayî
 ->
 	`£nd_msg
@@ -66933,7 +61333,7 @@ r°
 msg
 );
 
-640 
+643 
 EPﬁlSockë
 * 
 sockë
@@ -66943,21 +61343,21 @@ sockë
 	`gë_ïﬁl_sockë
 ();
 
-641 
+644 
 dñëe
  
 sockë
 ;
 
-642  
+645  
 åue
 ;
 
-643 
+646 
 	}
 }
 
-645 
+648 
 boﬁ
  
 	gCMsgDi•©chî
@@ -66971,13 +61371,13 @@ sockë
 r°
 ) {
 
-646 
+649 
 MsgLogöAck
  
 msg
 ;
 
-647 
+650 
 msg
 .
 ªt
@@ -66985,7 +61385,7 @@ msg
 r°
 ;
 
-648 
+651 
 sockë
 ->
 	`£nd_msg
@@ -66993,21 +61393,21 @@ sockë
 msg
 );
 
-649 
+652 
 dñëe
  
 sockë
 ;
 
-650  
+653  
 åue
 ;
 
-651 
+654 
 	}
 }
 
-653 
+656 
 	gCMsgDi•©chî
 ::
 	$SídM©chPœyîD©a
@@ -67017,13 +61417,13 @@ MsgM©chPœyîRoundD©a
 m
 ){
 
-654 
+657 
 mid
  = 
 m
 ->mid;
 
-655 
+658 
 MsgBa£
 * 
 msg_ba£
@@ -67033,19 +61433,19 @@ msg_ba£
 m
 );
 
-656 if(
+659 if(
 msg_ba£
  =
 NULL
 ){
 
-657 
+660 
 dñëe
  
 m
 ;
 
-660 
+663 
 °d
 ::
 m≠
@@ -67063,7 +61463,7 @@ _m©ch_w©chî
 mid
 );
 
-661 if(
+664 if(
 ôr
  !
 _m©ch_w©chî
@@ -67071,7 +61471,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-662 
+665 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67081,17 +61481,17 @@ _m©ch_w©chî
 msg_ba£
 );
 
-664 
+667 
 dñëe
 [] (*)
 msg_ba£
 ;
 
-665 
+668 
 	}
 }
 
-667 
+670 
 	gCMsgDi•©chî
 ::
 	$SídM©chBÆlD©a
@@ -67101,7 +61501,7 @@ MsgM©chBÆlRoundD©a
 m
 ){
 
-668 
+671 
 MsgBa£
 * 
 msg_ba£
@@ -67111,19 +61511,19 @@ msg_ba£
 m
 );
 
-669 if(
+672 if(
 msg_ba£
  =
 NULL
 ){
 
-670 
+673 
 dñëe
  
 m
 ;
 
-673 
+676 
 °d
 ::
 m≠
@@ -67143,7 +61543,7 @@ m
 mid
 );
 
-674 if(
+677 if(
 ôr
  !
 _m©ch_w©chî
@@ -67151,7 +61551,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-675 
+678 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 ((
 ôr
@@ -67161,17 +61561,17 @@ _m©ch_w©chî
 msg_ba£
 );
 
-677 
+680 
 dñëe
 [] (*)
 msg_ba£
 ;
 
-678 
+681 
 	}
 }
 
-680 
+683 
 	gCMsgDi•©chî
 ::
 	$SídTómSkûlInfoToPœyî
@@ -67181,7 +61581,7 @@ MsgClõ¡Reque°SkûlInfoAck
 msg
 ){
 
-681 
+684 
 G©eWayPœyî
  * 
 ∂ayî
@@ -67197,13 +61597,13 @@ msg
 cid
 );
 
-682 if(
+685 if(
 ∂ayî
  !
 NULL
 ){
 
-683 
+686 
 ∂ayî
 ->
 	`£nd_msg
@@ -67213,11 +61613,11 @@ MsgBa£
 msg
 );
 
-686 
+689 
 	}
 }
 
-688 
+691 
 	gCMsgDi•©chî
 ::
 	$SídSèπM©chAckTOPœyî
@@ -67227,7 +61627,7 @@ MsgClõ¡SèπM©chAck
 msg
 ){
 
-689 
+692 
 G©eWayPœyî
  * 
 ∂ayî
@@ -67243,13 +61643,13 @@ msg
 cid
 );
 
-690 if(
+693 if(
 ∂ayî
  !
 NULL
 ){
 
-691 
+694 
 ∂ayî
 ->
 	`£nd_msg
@@ -67259,11 +61659,11 @@ MsgBa£
 msg
 );
 
-693 
+696 
 	}
 }
 
-696 
+699 
 	gCMsgDi•©chî
 ::
 	$SídM©chResu…D©a
@@ -67273,7 +61673,7 @@ MsgM©chResu…D©a
 m
 ){
 
-697 
+700 
 °d
 ::
 m≠
@@ -67293,7 +61693,7 @@ m
 mid
 );
 
-698 if(
+701 if(
 ôr
  !
 _m©ch_w©chî
@@ -67301,7 +61701,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-699 
+702 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67313,11 +61713,11 @@ MsgBa£
 m
 );
 
-701 
+704 
 	}
 }
 
-703 
+706 
 	gCMsgDi•©chî
 ::
 	$SídM©chEvítD©a
@@ -67327,7 +61727,7 @@ MsgM©chEvítRoundD©a
 m
 ){
 
-704 
+707 
 MsgBa£
 * 
 msg_ba£
@@ -67337,19 +61737,19 @@ msg_ba£
 m
 );
 
-705 if(
+708 if(
 msg_ba£
  =
 NULL
 ){
 
-706 
+709 
 dñëe
  
 m
 ;
 
-709 
+712 
 °d
 ::
 m≠
@@ -67369,7 +61769,7 @@ m
 mid
 );
 
-710 if(
+713 if(
 ôr
  !
 _m©ch_w©chî
@@ -67377,7 +61777,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-711 
+714 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67387,17 +61787,17 @@ _m©ch_w©chî
 msg_ba£
 );
 
-713 
+716 
 dñëe
 [] (*)
 msg_ba£
 ;
 
-714 
+717 
 	}
 }
 
-716 
+719 
 	gCMsgDi•©chî
 ::
 	$SídM©chSkûlD©a
@@ -67407,7 +61807,7 @@ MsgGamePœyîSkûlD©a
 m
 ){
 
-717 
+720 
 MsgBa£
 * 
 msg_ba£
@@ -67417,19 +61817,19 @@ msg_ba£
 m
 );
 
-718 if(
+721 if(
 msg_ba£
  =
 NULL
 ){
 
-719 
+722 
 dñëe
  
 m
 ;
 
-722 
+725 
 °d
 ::
 m≠
@@ -67449,7 +61849,7 @@ m
 mid
 );
 
-723 if(
+726 if(
 ôr
  !
 _m©ch_w©chî
@@ -67457,7 +61857,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-724 
+727 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67467,17 +61867,17 @@ _m©ch_w©chî
 msg_ba£
 );
 
-726 
+729 
 dñëe
 [] (*)
 msg_ba£
 ;
 
-727 
+730 
 	}
 }
 
-730 
+733 
 	gCMsgDi•©chî
 ::
 	$SídM©chTómSkûlD©a
@@ -67487,7 +61887,7 @@ MsgGameTómSkûlD©a
 m
 ){
 
-731 
+734 
 °d
 ::
 m≠
@@ -67507,7 +61907,7 @@ m
 mid
 );
 
-732 if(
+735 if(
 ôr
  !
 _m©ch_w©chî
@@ -67515,7 +61915,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-733 
+736 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67527,11 +61927,11 @@ MsgBa£
 m
 );
 
-735 
+738 
 	}
 }
 
-737 
+740 
 	gCMsgDi•©chî
 ::
 	$SídM©chTómNewF‹m©i⁄
@@ -67541,7 +61941,7 @@ MsgTómNewPœyîF‹m©i⁄Pos
 m
 ){
 
-738 
+741 
 °d
 ::
 m≠
@@ -67561,7 +61961,7 @@ m
 mid
 );
 
-739 if(
+742 if(
 ôr
  !
 _m©ch_w©chî
@@ -67569,7 +61969,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-740 
+743 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67581,11 +61981,11 @@ MsgBa£
 m
 );
 
-742 
+745 
 	}
 }
 
-745 
+748 
 	gCMsgDi•©chî
 ::
 	$£nd_m©ch_≥¡ly_to_Æl_w©ch
@@ -67595,7 +61995,7 @@ MsgM©chPíéyResu…D©a
 m
 ){
 
-746 
+749 
 °d
 ::
 m≠
@@ -67615,7 +62015,7 @@ m
 mid
 );
 
-747 if(
+750 if(
 ôr
  !
 _m©ch_w©chî
@@ -67623,7 +62023,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-748 
+751 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67635,11 +62035,11 @@ MsgBa£
 m
 );
 
-750 
+753 
 	}
 }
 
-753 
+756 
 	gCMsgDi•©chî
 ::
 	$£nd_¨ía_m©chög_suc˚ss
@@ -67651,19 +62051,19 @@ uid
 ›_uid
 ){
 
-754 
+757 
 MsgAª«îM©chögSuc˚ss
  
 msg
 ;
 
-755 
+758 
 msg
 .
 mid
  = mid;
 
-756 
+759 
 G©eWayPœyî
 * 
 ∂ayî
@@ -67677,13 +62077,13 @@ G©eWayPœyîM™agî
 uid
 );
 
-757 i‡(
+760 i‡(
 ∂ayî
  !
 NULL
 ) {
 
-758 (
+761 (
 ∂ayî
 )->
 	`£nd_msg
@@ -67691,7 +62091,7 @@ NULL
 msg
 );
 
-761 
+764 
 ∂ayî
  = 
 G©eWayPœyîM™agî
@@ -67703,13 +62103,13 @@ G©eWayPœyîM™agî
 ›_uid
 );
 
-762 i‡(
+765 i‡(
 ∂ayî
  !
 NULL
 ) {
 
-763 (
+766 (
 ∂ayî
 )->
 	`£nd_msg
@@ -67717,11 +62117,11 @@ NULL
 msg
 );
 
-766 
+769 
 	}
 }
 
-768 
+771 
 	gCMsgDi•©chî
 ::
 	$broˇ°_msg_to_m©ch_w©chî
@@ -67733,7 +62133,7 @@ MsgBa£
 msg
 ){
 
-769 
+772 
 °d
 ::
 m≠
@@ -67751,7 +62151,7 @@ _m©ch_w©chî
 mid
 );
 
-770 if(
+773 if(
 ôr
  !
 _m©ch_w©chî
@@ -67759,7 +62159,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-771 
+774 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67769,11 +62169,11 @@ _m©ch_w©chî
 msg
 );
 
-773 
+776 
 	}
 }
 
-775 
+778 
 	gCMsgDi•©chî
 ::
 	$b‹ˇ°_∂ayî_•ók
@@ -67785,7 +62185,7 @@ MsgClõ¡S≥akBroˇ°
 m
 ){
 
-776 
+779 
 °d
 ::
 m≠
@@ -67803,7 +62203,7 @@ _m©ch_w©chî
 mid
 );
 
-777 if(
+780 if(
 ôr
  !
 _m©ch_w©chî
@@ -67811,7 +62211,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-778 
+781 
 	`£nd_m©ch_öfo_to_Æl_w©ch
 (
 ôr
@@ -67823,17 +62223,17 @@ MsgBa£
 m
 );
 
-780 
+783 
 	}
 }
 
-782 
+785 
 	#BUFFER_SIZE
  8*1024
 
 	)
 
-784 
+787 
 MsgBa£
 * 
 	gCMsgDi•©chî
@@ -67845,7 +62245,7 @@ MsgBa£
 msgba£
 ){
 
-785 * 
+788 * 
 buf„r
  = 
 √w
@@ -67853,27 +62253,27 @@ buf„r
 BUFFER_SIZE
 ];
 
-786 if(
+789 if(
 buf„r
  =
 NULL
 ){
 
-787  
+790  
 NULL
 ;
 
-789 
+792 
 Àn_a·î_com¥ess
  = 32*1024;
 
-790 if(
+793 if(
 msgba£
 ->
 msg_size
  > 32*1024){
 
-791 
+794 
 	`LOG
 (
 ERROR
@@ -67883,7 +62283,7 @@ msgba£
 msg_size
 ;
 
-793 
+796 
 	`mem˝y
 (
 buf„r
@@ -67893,7 +62293,7 @@ msgba£
 MsgBa£
 ));
 
-794 * 
+797 * 
 ícode_d©a
  = (*)
 buf„r
@@ -67901,7 +62301,7 @@ buf„r
 MsgBa£
 );
 
-795 * 
+798 * 
 §c_d©a
  = ((*)
 msgba£
@@ -67909,7 +62309,7 @@ msgba£
 MsgBa£
 );
 
-796 
+799 
 r°
  = 
 	`com¥ess
@@ -67927,21 +62327,21 @@ msg_size
 MsgBa£
 ));
 
-797 if(
+800 if(
 r°
  < 0){
 
-798 
+801 
 dñëe
 [] 
 buf„r
 ;
 
-799  
+802  
 NULL
 ;
 
-801 ((
+804 ((
 MsgBa£
 *)
 buf„r
@@ -67951,17 +62351,17 @@ msg_size
 Àn_a·î_com¥ess
 +(MsgBase);
 
-802  (
+805  (
 MsgBa£
 *)
 buf„r
 ;
 
-803 
+806 
 	}
 }
 
-805 
+808 
 	gCMsgDi•©chî
 ::
 	$RemoveM©ch
@@ -67969,7 +62369,7 @@ buf„r
 mid
 ){
 
-807 
+810 
 °d
 ::
 m≠
@@ -67987,7 +62387,7 @@ _m©ch_w©chî
 mid
 );
 
-808 if(
+811 if(
 ôr
  !
 _m©ch_w©chî
@@ -67995,7 +62395,7 @@ _m©ch_w©chî
 	`íd
 ()){
 
-809 
+812 
 	`ªmove_Æl_w©chî
 ((
 ôr
@@ -68005,7 +62405,7 @@ _m©ch_w©chî
 åue
 );
 
-810 
+813 
 dñëe
  
 ôr
@@ -68013,7 +62413,7 @@ dñëe
 £c⁄d
 ;
 
-811 
+814 
 _m©ch_w©chî
 .
 	`îa£
@@ -68021,11 +62421,11 @@ _m©ch_w©chî
 ôr
 );
 
-813 
+816 
 	}
 }
 
-815 
+818 
 GSîvîInfo
 * 
 	gCMsgDi•©chî
@@ -68035,7 +62435,7 @@ GSîvîInfo
 mid
 ){
 
-820  
+823  
 °d
 ::
 m≠
@@ -68053,7 +62453,7 @@ _m©ch_w©chî
 mid
 );
 
-821 
+824 
 £rvî_ödex
  = 
 ôr
@@ -68061,7 +62461,7 @@ mid
 £c⁄d
 ->server_index;
 
-822  
+825  
 CALLSîvîM™age
 ::
 	`GëIn°™˚
@@ -68071,11 +62471,11 @@ CALLSîvîM™age
 £rvî_ödex
 );
 
-823 
+826 
 	}
 }
 
-825 
+828 
 GSîvîInfo
 * 
 	gCMsgDi•©chî
@@ -68083,7 +62483,7 @@ GSîvîInfo
 	$PickM©chSîvî
 (){
 
-826 
+829 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -68095,25 +62495,25 @@ CALLSîvîM™age
 	`GëO√Sîvî
 ();
 
-827 if(
+830 if(
 £rvî_öfo
  =
 NULL
 ){
 
-828  
+831  
 NULL
 ;
 
-830  
+833  
 £rvî_öfo
 ;
 
-831 
+834 
 	}
 }
 
-833 
+836 
 GSîvîInfo
 * 
 	gCMsgDi•©chî
@@ -68121,7 +62521,7 @@ GSîvîInfo
 	$GëDeÁu…Sîvî
 (){
 
-834 
+837 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -68133,25 +62533,25 @@ CALLSîvîM™age
 	`GëSîvîByIndexId
 (1);
 
-835 if(
+838 if(
 £rvî_öfo
  =
 NULL
 ){
 
-836  
+839  
 NULL
 ;
 
-838  
+841  
 £rvî_öfo
 ;
 
-839 
+842 
 	}
 }
 
-841 
+844 
 	gCMsgDi•©chî
 ::
 	$gm_comm™d
@@ -68161,7 +62561,7 @@ CMsgEvít
 evít
 ){
 
-842 
+845 
 MsgBa£
 * 
 ba£
@@ -68171,7 +62571,7 @@ evít
 _msg_ba£
 ;
 
-843 
+846 
 	`VLOG
 (0)<<"comög gamêma°î msg......"<<
 ba£
@@ -68179,7 +62579,7 @@ ba£
 msg_ty≥
 ;
 
-844 if(
+847 if(
 ba£
 ->
 msg_ty≥
@@ -68187,7 +62587,7 @@ msg_ty≥
 MSG_TYPE_GM_QUERY_GATE_SERVER_PLAYER_ONLINE
 ){
 
-845 
+848 
 °d
 ::
 li°
@@ -68199,13 +62599,13 @@ G©eWayPœyîM™agî
 	`exp‹t_Æl_∂ayî_⁄löe
 ();
 
-846 
+849 
 GMMsgQuîyPœyîInfoAck
  
 öfo
 ;
 
-847 
+850 
 öfo
 .
 ∂ayî_cou¡
@@ -68215,7 +62615,7 @@ li°
 	`size
 ();
 
-848 
+851 
 °d
 ::
 li°
@@ -68227,11 +62627,11 @@ li°
 	`begö
 ();
 
-849 
+852 
 i
 =0;
 
-850 
+853 
 ôr
  !
 li°
@@ -68239,17 +62639,17 @@ li°
 	`íd
 ()){
 
-851 
+854 
 ∂ayî_id
  = *
 ôr
 ;
 
-852 
+855 
 ôr
 ++;
 
-853 
+856 
 öfo
 .
 ∂ayî_id
@@ -68257,11 +62657,11 @@ li°
 i
 ] =Ölayer_id;
 
-854 
+857 
 i
 ++;
 
-856 
+859 
 öfo
 .
 msg_size
@@ -68269,11 +62669,11 @@ msg_size
 i
 ;
 
-860 
+863 
 	}
 }
 
-862 
+865 
 	gCMsgDi•©chî
 ::
 	$£nd_m©ch_öfo_to_Æl_w©ch
@@ -68287,7 +62687,7 @@ MsgBa£
 msg
 ) {
 
-863 
+866 
 °d
 ::
 li°
@@ -68303,7 +62703,7 @@ _w©ch_li°
 	`begö
 ();
 
-864 
+867 
 ôr
  !
 öfo
@@ -68313,7 +62713,7 @@ _w©ch_li°
 	`íd
 ()) {
 
-865 
+868 
 G©eWayPœyî
 * 
 ∂ayî
@@ -68327,13 +62727,13 @@ G©eWayPœyîM™agî
 ôr
 );
 
-866 i‡(
+869 i‡(
 ∂ayî
  !
 NULL
 ) {
 
-867 (
+870 (
 ∂ayî
 )->
 	`£nd_msg
@@ -68341,15 +62741,15 @@ NULL
 msg
 );
 
-869 
+872 
 ôr
 ++;
 
-871 
+874 
 	}
 }
 
-873 
+876 
 	gCMsgDi•©chî
 ::
 	$ªmove_Æl_w©chî
@@ -68363,7 +62763,7 @@ boﬁ
 √ed_logout
 ) {
 
-874 
+877 
 °d
 ::
 li°
@@ -68379,7 +62779,7 @@ _w©ch_li°
 	`begö
 ();
 
-875 
+878 
 ôr
  !
 öfo
@@ -68389,7 +62789,7 @@ _w©ch_li°
 	`íd
 ()) {
 
-876 
+879 
 G©eWayPœyî
 * 
 ∂ayî
@@ -68403,27 +62803,27 @@ G©eWayPœyîM™agî
 ôr
 );
 
-877 if(
+880 if(
 ∂ayî
  !
 NULL
 ){
 
-878 
+881 
 ∂ayî
 ->
 	`add_m©ch_w©ch
 (0);
 
-880 
+883 
 ôr
 ++;
 
-882 
+885 
 	}
 }
 
-884 
+887 
 	gCMsgDi•©chî
 ::
 	$f‹w¨d_to_game_£rvî
@@ -68435,7 +62835,7 @@ msg
 mid
 ){
 
-885 
+888 
 GSîvîInfo
 * 
 £rvî_öfo
@@ -68445,13 +62845,13 @@ GSîvîInfo
 mid
 );
 
-886 if(
+889 if(
 £rvî_öfo
  !
 NULL
 ){
 
-887 
+890 
 £rvî_öfo
 ->
 _c_sockë
@@ -68463,11 +62863,11 @@ msg
 msg_size
 );
 
-889 
+892 
 	}
 }
 
-891 
+894 
 	gCMsgDi•©chî
 ::
 	$Broˇ°AŒSîvî
@@ -68477,7 +62877,7 @@ msg
 msg_size
 ){
 
-892 
+895 
 CALLSîvîM™age
 ::
 	`GëIn°™˚
@@ -68489,7 +62889,7 @@ msg
 msg_size
 );
 
-893 
+896 
 	}
 }
 
@@ -68569,7 +62969,7 @@ CMSGDISPATCHER_H_
 public_key
 ;
 
-29 
+30 
 usög
  
 «me•a˚
@@ -68577,69 +62977,69 @@ usög
 	gomg
 ;
 
-30 
+31 
 	sGameSîvîInfo
 {
 
-31 
+32 
 	m_ödex
 ;
 
-32 
+33 
 	m_fd
 ;
 
-33 
+34 
 SåögBuf„r
  
 	m_ù
 ;
 
-34 
+35 
 	m_p‹t
 ;
 
-35 
+36 
 CSockëClõ¡
 * 
 	m_sockë
 ;
 
-36 
+37 
 	m_°©e
 ;
 
-37 
+38 
 GameSîvîInfo
 (){
 
-38 
+39 
 	m_sockë
  = 
 NULL
 ;
 
-39 
+40 
 	m_°©e
  = 0;
 
-43 
+44 
 	sM©chInfo
 {
 
-44 
+45 
 M©chInfo
 (){
 
-46 
+47 
 	m£rvî_ödex
 ;
 
-47 
+48 
 	mm©ch_ty≥
 ;
 
-48 
+49 
 	m°d
 ::
 li°
@@ -68647,13 +63047,13 @@ li°
 _w©ch_li°
 ;
 
-50 
+51 
 add_w©ch_∂ayî
 (
 uid
 ){
 
-51 
+52 
 	m_w©ch_li°
 .
 push_back
@@ -68661,7 +63061,7 @@ push_back
 uid
 );
 
-54 
+55 
 boﬁ
  
 is_∂ayî_ö
@@ -68669,7 +63069,7 @@ is_∂ayî_ö
 uid
 ){
 
-55 
+56 
 	m°d
 ::
 li°
@@ -68683,7 +63083,7 @@ _w©ch_li°
 begö
 ();
 
-56 
+57 
 	môr
  !
 _w©ch_li°
@@ -68691,31 +63091,31 @@ _w©ch_li°
 íd
 ()){
 
-57 if(*
+58 if(*
 ôr
  =
 uid
 ){
 
-58  
+59  
 åue
 ;
 
-60 
+61 
 	môr
 ++;
 
-62  
+63  
 	mÁl£
 ;
 
-65 
+66 
 ªmove_w©chî_∂ayî
 (
 uid
 ){
 
-66 
+67 
 	m°d
 ::
 li°
@@ -68729,7 +63129,7 @@ _w©ch_li°
 begö
 ();
 
-67 
+68 
 	môr
  !
 _w©ch_li°
@@ -68737,13 +63137,13 @@ _w©ch_li°
 íd
 ()){
 
-68 if(*
+69 if(*
 ôr
  =
 uid
 ){
 
-69 
+70 
 _w©ch_li°
 .
 îa£
@@ -68751,15 +63151,15 @@ _w©ch_li°
 ôr
 );
 
-72 
+73 
 	môr
 ++;
 
-76 
+77 
 dump_Æl_∂ayî_öfo
 (){
 
-77 
+78 
 	m°d
 ::
 li°
@@ -68773,7 +63173,7 @@ _w©ch_li°
 begö
 ();
 
-78 
+79 
 	môr
  !
 _w©ch_li°
@@ -68781,23 +63181,23 @@ _w©ch_li°
 íd
 ()){
 
-79 
+80 
 VLOG
 (1)<<"WATCHER "<<*
 ôr
 ;
 
-80 
+81 
 	môr
 ++;
 
-86 
+87 
 ˛ass
  
 	gCG©eTimîEvítH™dÀr
 ;
 
-88 
+89 
 ˛ass
  
 	gCMsgDi•©chî
@@ -68809,11 +63209,11 @@ IMsgDi•©chî
 	gThªad
  {
 
-89 
+90 
 	gpublic
 :
 
-90 
+91 
 CMsgDi•©chî
 (c⁄° * 
 «me
@@ -68823,39 +63223,39 @@ NULL
 Thªad
 (name){
 
-91 
+92 
 _∑ss_msg_cou¡
 ++;
 
-93 
+94 
 	gvútuÆ
  ~
 CMsgDi•©chî
 ();
 
-94 
+95 
 vútuÆ
  * 
 ⁄_run
 ();
 
-95 
+96 
 	gpublic
 :
 
-96 
+97 
 CMsgDi•©chî
 * 
 GëIn°™˚
 (){
 
-97 if(
+98 if(
 _m_ö°™˚
  =
 NULL
 ){
 
-98 
+99 
 _m_ö°™˚
  = 
 √w
@@ -68863,11 +63263,11 @@ _m_ö°™˚
 CMsgDi•©chî
 ();
 
-100  
+101  
 	g_m_ö°™˚
 ;
 
-102 
+103 
 vútuÆ
  
 boﬁ
@@ -68879,13 +63279,13 @@ CMsgEvít
 EPﬁlSockë
 *);
 
-103 
+104 
 vútuÆ
  
 di•©ch_msg
 ();
 
-104 
+105 
 boﬁ
  
 check_msg_vÆide
@@ -68895,7 +63295,7 @@ CMsgEvít
 EPﬁlSockë
 *);
 
-105 
+106 
 boﬁ
  
 do_logö
@@ -68905,7 +63305,7 @@ CMsgEvít
 EPﬁlSockë
 *);
 
-106 
+107 
 boﬁ
  
 do_logout
@@ -68915,7 +63315,7 @@ G©eWayPœyî
 r°
 =-1);
 
-107 
+108 
 boﬁ
  
 dis_c⁄√˘i⁄
@@ -68927,25 +63327,25 @@ sockë
 îr‹
 );
 
-108 
+109 
 SídM©chPœyîD©a
 (
 MsgM©chPœyîRoundD©a
 *);
 
-109 
+110 
 SídM©chBÆlD©a
 (
 MsgM©chBÆlRoundD©a
 *);
 
-110 
+111 
 SídM©chResu…D©a
 (
 MsgM©chResu…D©a
 *);
 
-111 
+112 
 SídTómSkûlInfoToPœyî
 (
 MsgClõ¡Reque°SkûlInfoAck
@@ -68953,7 +63353,7 @@ MsgClõ¡Reque°SkûlInfoAck
 msg
 );
 
-112 
+113 
 SídSèπM©chAckTOPœyî
 (
 MsgClõ¡SèπM©chAck
@@ -68961,13 +63361,13 @@ MsgClõ¡SèπM©chAck
 msg
 );
 
-113 
+114 
 SídM©chEvítD©a
 (
 MsgM©chEvítRoundD©a
 *);
 
-114 
+115 
 SídM©chSkûlD©a
 (
 MsgGamePœyîSkûlD©a
@@ -68975,7 +63375,7 @@ MsgGamePœyîSkûlD©a
 m
 );
 
-115 
+116 
 SídM©chTómSkûlD©a
 (
 MsgGameTómSkûlD©a
@@ -68983,7 +63383,7 @@ MsgGameTómSkûlD©a
 m
 );
 
-116 
+117 
 SídM©chTómNewF‹m©i⁄
 (
 MsgTómNewPœyîF‹m©i⁄Pos
@@ -68991,7 +63391,7 @@ MsgTómNewPœyîF‹m©i⁄Pos
 m
 );
 
-117 
+118 
 £nd_m©ch_≥¡ly_to_Æl_w©ch
 (
 MsgM©chPíéyResu…D©a
@@ -68999,11 +63399,11 @@ MsgM©chPíéyResu…D©a
 m
 );
 
-118 
+119 
 £nd_¨ía_m©chög_suc˚ss
 (,,);
 
-119 
+120 
 b‹ˇ°_∂ayî_•ók
 (
 mid
@@ -69013,37 +63413,37 @@ MsgClõ¡S≥akBroˇ°
 m
 );
 
-120 
+121 
 MsgBa£
 * 
 Com¥essMsg
 (MsgBase*);
 
-121 
+122 
 RemoveM©ch
 (
 mid
 );
 
-122 
+123 
 GSîvîInfo
 * 
 GëM©chRunSîvî
 ();
 
-123 
+124 
 GSîvîInfo
 * 
 PickM©chSîvî
 ();
 
-124 
+125 
 GSîvîInfo
 * 
 GëDeÁu…Sîvî
 ();
 
-125 
+126 
 gm_comm™d
 (
 CMsgEvít
@@ -69051,7 +63451,7 @@ CMsgEvít
 ba£
 );
 
-126 
+127 
 £nd_m©ch_öfo_to_Æl_w©ch
 (
 M©chInfo
@@ -69063,7 +63463,7 @@ MsgBa£
 msg
 );
 
-127 
+128 
 ªmove_Æl_w©chî
 (
 M©chInfo
@@ -69075,23 +63475,23 @@ boﬁ
 √ed_logout
 );
 
-129 
+130 
 f‹w¨d_to_game_£rvî
 (
 MsgBa£
 *,);
 
-131 
+132 
 Broˇ°AŒSîvî
 (const *,);
 
-133 
+134 
 broˇ°_msg_to_m©ch_w©chî
 (,
 MsgBa£
 *);
 
-136 
+137 
 boﬁ
  
 do_gm_logö
@@ -69101,7 +63501,7 @@ CMsgEvít
 EPﬁlSockë
 *);
 
-138 
+139 
 £t_timî_h™dî
 (
 CG©eTimîEvítH™dÀr
@@ -69109,7 +63509,7 @@ CG©eTimîEvítH™dÀr
 h™dÀr
 ){
 
-139 
+140 
 	gthis
 ->
 	g_timî_h™dÀr
@@ -69117,11 +63517,11 @@ h™dÀr
 h™dÀr
 ;
 
-142 
+143 
 	g¥Ÿe˘ed
 :
 
-143 
+144 
 °d
 ::
 	tm≠
@@ -69133,7 +63533,7 @@ h™dÀr
 	tMATCH_WATCH_ITR
 ;
 
-144 
+145 
 	g°d
 ::
 m≠
@@ -69143,7 +63543,7 @@ m≠
 	g_m©ch_w©chî
 ;
 
-146 
+147 
 	gomg
 ::
 WRQueue
@@ -69155,17 +63555,17 @@ CMsgEvít
 	g_msg_queue
 ;
 
-147 
+148 
 	g_∑ss_msg_cou¡
 ;
 
-148 
+149 
 CMsgDi•©chî
 * 
 	g_m_ö°™˚
 ;
 
-149 
+150 
 CG©eTimîEvítH™dÀr
 * 
 	g_timî_h™dÀr
@@ -69315,1801 +63715,1797 @@ _GATE_MSG_H_
 ∑ck
 (1)
 
-13 
+14 
 	mMATCH_PVP_CHAT_MSG
  = 3000
 
-18 
+19 
 	mMSG_TYPE_CLIENT_CHANGE_FORMATION
  = 1001,
 
-19 
+20 
 	mMSG_TYPE_CLIENT_CHANGE_MOVE
  = 1002,
 
-20 
+21 
 	mMSG_TYPE_CLIENT_CHANGE_PLAYER
  = 1003,
 
-21 
+22 
 	mMSG_TYPE_CLIENT_COACH_SPEAK
  = 1004,
 
-22 
+23 
 	mMSG_TYPE_CLIENT_TERMINAL_MATCH
  = 1005,
 
-23 
+24 
 	mMSG_TYPE_CLIENT_PVN_MATCH_START
  = 1006,
 
-24 
+25 
 	mMSG_TYPE_CLIENT_DO_ARENA_MATCHING
  = 1007,
 
-25 
+26 
 	mMSG_TYPE_CLIENT_MATCHING_SUCCESS
  = 1008,
 
-26 
+27 
 	mMSG_TYPE_CLIENT_MATCHING_SUCCESS_START
  = 1009,
 
-27 
+28 
 	mMSG_TYPE_CLIENT_ENTER_ARENA
  = 1010,
 
-28 
+29 
 	mMSG_TYEP_SPEAK_BROCAST
  = 1011,
 
-29 
+30 
 	mMSG_TYPE_CLIENT_USE_TEAM_SKILL
  = 1012,
 
-30 
+31 
 	mMSG_TYPE_CLIENT_USE_TEAM_SKILL_BROCAST
  = 1013,
 
-31 
+32 
 	mMSG_TYPE_CLIENT_REQUEST_TEAM_SKILL_INFO
  = 1014,
 
-32 
+33 
 	mMSG_TYPE_CLIENT_REQUEST_TEAM_SKILL_INFO_ACK
  = 1015,
 
-33 
+34 
 	mMSG_TYPE_CLIENT_REQUEST_MATCH_START_ACK
  = 1016,
 
-34 
+35 
 	mMSG_TYPE_CLIENT_DEPOIST_OPERATE
  = 1017,
 
-35 
+36 
 	mMSG_TYPE_CLIENT_QUERY_FAST_MATCH
  = 1018,
 
-36 
+37 
 	mMSG_TYPE_CLIENT_QUERY_FAST_MATCH_ACK
  = 1019,
 
-37 
+38 
 	mMSG_TYPE_CLIENT_WATCH_MATCH
  = 1020,
 
-38 
+39 
 	mMSG_TYPE_CLIENT_WATCH_MATCH_ACK
  = 1021
 
-41 * 
-	ggm_logö_public_key
- = "guanlei";
-
-44 
+43 
 	mMSG_TYPE_GM_LOGIN
  = 10000,
 
-45 
+44 
 	mMSG_TYPE_GM_SERVER_INFO
  = 10001,
 
-46 
+45 
 	mMSG_TYPE_GM_QUERY_MATCH_INFO
 ,
 
-47 
+46 
 	mMSG_TYPE_GM_MODIFER_MATCH
 ,
 
-48 
+47 
 	mMSG_TYPE_GM_QUERY_GATE_SERVER_PLAYER_ONLINE
 
 
-56 
+55 
 	gGMMsgGmLogö
 :
 MsgBa£
 {
 
-57 
+56 
 gm_uid
 ;
 
-58 
+57 
 	gtime
 ;
 
-59 
+58 
 	gcode
 [20];
 
-60 
+59 
 GMMsgGmLogö
 (){
 
-61 
+60 
 	gmsg_ty≥
  = 
 MSG_TYPE_GM_LOGIN
 ;
 
-62 
+61 
 	gis_ícode
  = 0;
 
-63 
+62 
 	gmsg_size
  = (
 GMMsgGmLogö
 );
 
-68 
+67 
 	gGMMsgQuîyPœyîInfo
 :
 MsgBa£
 {
 
-69 
+68 
 GMMsgQuîyPœyîInfo
 (){
 
-70 
+69 
 msg_size
  = (
 GMMsgQuîyPœyîInfo
 );
 
-71 
+70 
 	gmsg_ty≥
  = 
 MSG_TYPE_GM_QUERY_GATE_SERVER_PLAYER_ONLINE
 ;
 
-72 
+71 
 	gis_ícode
  = 0;
 
-78 
+77 
 	gGMMsgQuîyPœyîInfoAck
 :
 MsgBa£
 {
 
-79 
+78 
 ∂ayî_cou¡
 ;
 
-80 
+79 
 	g∂ayî_id
 [1024];
 
-81 
+80 
 GMMsgQuîyPœyîInfoAck
 (){
 
-82 
+81 
 	gmsg_ty≥
  = 
 MSG_TYPE_GM_QUERY_GATE_SERVER_PLAYER_ONLINE
 ;
 
-83 
+82 
 	gis_ícode
  = 0;
 
-88 
+87 
 	gGMMsgQuîySîvîInfo
 :
 MsgBa£
 {
 
-89 
+88 
 £rvî_cou¡
 ;
 
-90 * 
+89 * 
 	g£rvî_li°
 ;
 
-91 
+90 
 GMMsgQuîySîvîInfo
 (){
 
-92 
+91 
 	gmsg_ty≥
  = 
 MSG_TYPE_GM_SERVER_INFO
 ;
 
-93 
+92 
 	gis_ícode
  = 0;
 
-99 
+98 
 	gMsgCh©PVP
 :
 MsgBa£
 {
 
-100 
+99 
 £nd_id
 ;
 
-101 
+100 
 	gªcv_id
 ;
 
-102 
+101 
 	g£nd_zeô
 ;
 
-103 
+102 
 	gmsg_Àn
 ;
 
-104 
+103 
 	gmsg_c⁄ã¡
 [256];
 
-105 
+104 
 MsgCh©PVP
 (){
 
-106 
+105 
 	gmsg_ty≥
  = 
 MATCH_PVP_CHAT_MSG
 ;
 
-107 
+106 
 	gis_ícode
  = 0;
 
-116 
+115 
 	gMsgClõ¡Ch™geF‹m©i⁄
 :
 MsgBa£
 {
 
-117 
+116 
 mid
 ;
 
-118 
+117 
 	gcid
 ;
 
-119 
+118 
 	gtime
 ;
 
-120 
+119 
 	gf‹m©i⁄_id
 ;
 
-121 
+120 
 	gcode
 [16];
 
-122 
+121 
 MsgClõ¡Ch™geF‹m©i⁄
 (){
 
-123 
+122 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_CHANGE_FORMATION
 ;
 
-124 
+123 
 	gmsg_size
  = (
 MsgClõ¡Ch™geF‹m©i⁄
 );
 
-125 
+124 
 	gis_ícode
  = 0;
 
-131 
+130 
 	gMsgClõ¡Ch™geMove
 :
 MsgBa£
 {
 
-132 
+131 
 mid
 ;
 
-133 
+132 
 	gcid
 ;
 
-134 
+133 
 	gtime
 ;
 
-135 
+134 
 	gmove_id
 ;
 
-136 
+135 
 	gcode
 [16];
 
-137 
+136 
 MsgClõ¡Ch™geMove
 (){
 
-138 
+137 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_CHANGE_MOVE
 ;
 
-139 
+138 
 	gmsg_size
  = (
 MsgClõ¡Ch™geMove
 );
 
-140 
+139 
 	gis_ícode
  = 0;
 
-145 
+144 
 	gMsgClõ¡Ch™gePœyî
 :
 MsgBa£
 {
 
-146 
+145 
 mid
 ;
 
-147 
+146 
 	gcid
 ;
 
-148 
+147 
 	gtime
 ;
 
-149 
+148 
 	g√w_f‹m©i⁄_pos_m≠_pid
 [16];
 
-150 
+149 
 	g√w_suôabÀ
 [16];
 
-151 
+150 
 	gcode
 [16];
 
-152 
+151 
 MsgClõ¡Ch™gePœyî
 (){
 
-153 
+152 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_CHANGE_PLAYER
 ;
 
-154 
+153 
 	gmsg_size
  = (
 MsgClõ¡Ch™gePœyî
 );
 
-155 
+154 
 	gis_ícode
  = 0;
 
-161 
+160 
 	gMsgClõ¡CﬂchS≥ak
 :
 MsgBa£
 {
 
-162 
+161 
 mid
 ;
 
-163 
+162 
 	gcid
 ;
 
-164 
+163 
 	gtime
 ;
 
-165 
+164 
 	g•ók_ty≥
 ;
 
-166 
+165 
 	gcode
 [16];
 
-167 
+166 
 MsgClõ¡CﬂchS≥ak
 (){
 
-168 
+167 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_COACH_SPEAK
 ;
 
-169 
+168 
 	gmsg_size
  = (
 MsgClõ¡CﬂchS≥ak
 );
 
-170 
+169 
 	gis_ícode
  = 0 ;
 
-176 
+175 
 	gMsgClõ¡TîmöÆM©ch
 :
 MsgBa£
 {
 
-177 
+176 
 mid
 ;
 
-178 
+177 
 	gcid
 ;
 
-179 
+178 
 	gtime
 ;
 
-180 
+179 
 	gcode
 [16];
 
-181 
+180 
 MsgClõ¡TîmöÆM©ch
 (){
 
-182 
+181 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_TERMINAL_MATCH
 ;
 
-183 
+182 
 	gmsg_size
  = (
 MsgClõ¡TîmöÆM©ch
 );
 
-184 
+183 
 	gis_ícode
  = 0;
 
-189 
+188 
 	gMsgClõ¡PVNSèπM©ch
 :
 MsgBa£
 {
 
-190 
+189 
 mid
 ;
 
-191 
+190 
 	gcid
 ;
 
-192 
+191 
 	gm©ch_ty≥
 ;
 
-193 
+192 
 MsgClõ¡PVNSèπM©ch
 (){
 
-194 
+193 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_PVN_MATCH_START
 ;
 
-195 
+194 
 	gmsg_size
  = (
 MsgClõ¡PVNSèπM©ch
 );
 
-196 
+195 
 	gis_ícode
  = 0;
 
-201 
+200 
 	gMsgClõ¡W©chM©ch
 :
 MsgBa£
 {
 
-202 
+201 
 mid
 ;
 
-203 
+202 
 	gcid
 ;
 
-204 
+203 
 MsgClõ¡W©chM©ch
 (){
 
-205 
+204 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_WATCH_MATCH
 ;
 
-206 
+205 
 	gmsg_size
  = (
 MsgClõ¡W©chM©ch
 );
 
-207 
+206 
 	gis_ícode
  = 0;
 
-211 
+210 
 	gMsgClõ¡W©chM©chAck
 :
 MsgBa£
 {
 
-212 
+211 
 mid
 ;
 
-213 
+212 
 boﬁ
  
 	gr°
 ;
 
-214 
+213 
 MsgClõ¡W©chM©chAck
 (){
 
-215 
+214 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_WATCH_MATCH_ACK
 ;
 
-216 
+215 
 	gmsg_size
  = (
 MsgClõ¡W©chM©chAck
 );
 
-217 
+216 
 	gis_ícode
  = 0;
 
-222 
+221 
 	gMsgClõ¡SèπM©chAck
 :
 MsgBa£
 {
 
-223 
+222 
 mid
 ;
 
-224 
+223 
 	gcid
 ;
 
-225 
+224 
 	g£rvî_ödex
 ;
 
-226 
+225 
 	gr°
+;
+
+226 
+boﬁ
+ 
+	gdïoi°_ch™ge_∂ayî
 ;
 
 227 
 boﬁ
  
-	gdïoi°_ch™ge_∂ayî
-;
-
-228 
-boﬁ
- 
 	gdïoi°_u£_skûl
 ;
 
-229 
+228 
 MsgClõ¡SèπM©chAck
 (){
 
-230 
+229 
 	gmsg_ty≥
  = 
 MSG_TYPE_CLIENT_REQUEST_MATCH_START_ACK
 ;
 
-231 
+230 
 	gmsg_size
  = (
 MsgClõ¡SèπM©chAck
 );
 
-232 
+231 
 	gis_ícode
  = 0;
 
-237 
+236 
 	gMsgSîvîAª«DoM©ch
 :
 MsgBa£
 {
 
-238 
+237 
 MsgSîvîAª«DoM©ch
 (){
 
-239 
+238 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_DO_ARENA_MATCHING
 ;
 
-240 
+239 
 	gmsg_size
  = (
 MsgSîvîAª«DoM©ch
 );
 
-241 
+240 
 	gis_ícode
 = 0;
 
-243 
+242 
 	gzeô
 ;
 
-246 
+245 
 	gMsgSîvîM©chögSuc˚ss
 :
 MsgBa£
 {
 
-247 
+246 
 MsgSîvîM©chögSuc˚ss
 (){
 
-248 
+247 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_MATCHING_SUCCESS
 ;
 
-249 
+248 
 	gmsg_size
  = (
 MsgSîvîM©chögSuc˚ss
 );
 
-250 
+249 
 	gis_ícode
  = 0;
 
-252 
+251 
 	ghome_uid
 ;
 
-253 
+252 
 	gaway_uid
 ;
 
-262 
+261 
 	mMSG_TYPE_SERVER_REQ
  = 2000,
 
-263 
+262 
 	mMSG_TYPE_GTOG_SERVER_NEW_MATCH
 =2004,
 
-264 
+263 
 	mMSG_TYPE_GTOG_SERVER_ROUND_PLAYER_DATA
 ,
 
-265 
+264 
 	mMSG_TYPE_GTOG_SERVER_ROUND_BALL_DATA
 ,
 
-266 
+265 
 	mMSG_TYPE_GTOG_SERVER_RESULT_DATA
 ,
 
-267 
+266 
 	mMSG_TYPE_GTOG_SERVER_MATCH_END
  = 2009,
 
-268 
+267 
 	mMSG_TYPE_GTOG_SERVER_EVENT_DATA
  = 2011,
 
-269 
+268 
 	mMSG_TYPE_GTOG_SERVER_SKILL_DATA
  = 2012,
 
-270 
+269 
 	mMSG_TYPE_GTOG_SERVER_TEAM_SKILL_DATA
  = 2014,
 
-271 
+270 
 	mMSG_TYPE_GTOG_TEAM_NEW_FORMATION
  = 2015,
 
-272 
+271 
 	mMSG_TYPE_GTOG_SERVER_PENTLY_RESULT
  = 2018
 
-279 
+278 
 	gMsgSîvîReq
 : 
 MsgBa£
 {
 
-280 
+279 
 _£rvî_typ
 ;
 
-281 
+280 
 	g_ödex
 ;
 
-282 
+281 
 MsgSîvîReq
 (){
 
-283 
+282 
 	gmsg_size
  = (
 MsgSîvîReq
 );
 
-284 
+283 
 	gmsg_ty≥
  = 
 MSG_TYPE_SERVER_REQ
 ;
 
-285 
+284 
 	gis_ícode
  = 0;
 
-290 
+289 
 	gMsgGameSîvîM©chSèπ
 :
 MsgBa£
 {
 
-291 
+290 
 mid
 ;
 
-292 
+291 
 	g£rvî_ödex
 ;
 
-293 
+292 
 	guid
 ;
 
-294 
+293 
 	g›_uid
 ;
 
-295 
+294 
 	gm©ch_ty≥
 ;
 
-296 
+295 
 MsgGameSîvîM©chSèπ
 (){
 
-297 
+296 
 	gmsg_size
  = (
 MsgGameSîvîM©chSèπ
 );
 
-298 
+297 
 	gmsg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_NEW_MATCH
 ;
 
-299 
+298 
 	gis_ícode
  = 0;
 
-305 
+304 
 	sTimeSˇÀPœyîInfo
 {
 
-306 
+305 
 	mtime_sˇÀ
 ;
 
-307 
+306 
 	mpos_x
 ;
 
-308 
+307 
 	mpos_y
 ;
 
-309 
+308 
 	m°©e
 ;
 
-312 
+311 
 	sPœyîRoundInfo
 {
 
-313 
+312 
 	mpid
 ;
 
-314 
+313 
 	mc⁄d
 ;
 
-315 
+314 
 	mtime_ß˛e_numbîs
 ;
 
-316 *
+315 *
 	m_∂ayî_öfo
 ;
 
-319 
+318 
 	gMsgM©chPœyîRoundD©a
 :
 MsgBa£
 {
 
-320 
+319 
 MsgM©chPœyîRoundD©a
 (){
 
-321 
+320 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_ROUND_PLAYER_DATA
 ;
 
-324 
+323 
 	gmid
 ;
 
-326 
+325 
 	gtime_sˇÀ_°¨t
 ;
 
-327 
+326 
 	gtŸÆ_ß˛e_numbî
 ;
 
-328 
+327 
 	gis_round_íd
 ;
 
-329 
+328 
 	gis_m©ch_íd
 ;
 
-330 
+329 
 	ground_íd_°©us
 ;
 
-331 
+330 
 	ground_ty≥
 ;
 
-332 
+331 
 	gis_hÆf
 ;
 
-333 
+332 
 boﬁ
  
 	gis_Á°_m©ch
 ;
 
-334 
+333 
 	g∂ayî_cou¡
 ;
 
-335 *
+334 *
 	g_∂ayî_round_öfo
 ;
 
-339 
+338 
 	gMsgM©chBÆlRoundD©a
 :
 MsgBa£
 {
 
-340 
+339 
 MsgM©chBÆlRoundD©a
 (){
 
-341 
+340 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_ROUND_BALL_DATA
 ;
 
-343 
+342 
 	gmid
 ;
 
-344 
+343 
 	gtime_sˇÀ_°¨t
 ;
 
-345 
+344 
 	gtimesˇÀ
 ;
 
-346 *
+345 *
 	g_bÆl_round_öfo
 ;
 
-351 
+350 
 	sGameEvít
 {
 
-352 
+351 
 	mtime_sˇÀ
 ;
 
-353 
+352 
 	m§c_pid
 ;
 
-354 
+353 
 	mèrgë_pid
 ;
 
-355 
+354 
 	mevít_ty≥
 ;
 
-358 
+357 
 	gMsgM©chEvítRoundD©a
 :
 MsgBa£
 {
 
-359 
+358 
 MsgM©chEvítRoundD©a
 (){
 
-360 
+359 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_EVENT_DATA
 ;
 
-361 
+360 
 	gis_ícode
  = 1;
 
-363 
+362 
 	gmid
 ;
 
-364 
+363 
 	gtime_sˇÀ_°¨t
 ;
 
-365 
+364 
 	gevít_cou¡
 ;
 
-366 * 
+365 * 
 	gd©a
 ;
 
-373 
+372 
 	sPœyîU£Skûl
 {
 
-374 
+373 
 	mtime_sˇÀ
 ;
 
-375 
+374 
 	mpid
 ;
 
-376 
+375 
 	mskûl_id
 ;
 
-380 
+379 
 	gMsgGamePœyîSkûlD©a
 :
 MsgBa£
 {
 
-381 
+380 
 MsgGamePœyîSkûlD©a
 (){
 
-382 
+381 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_SKILL_DATA
 ;
 
-383 
+382 
 	gis_ícode
  = 1;
 
-385 ~
+384 ~
 MsgGamePœyîSkûlD©a
 (){
 
-386 
+385 
 	gdñëe
 [] (*)&
 	gd©a
 ;
 
-388 
+387 
 	gmid
 ;
 
-389 
+388 
 	gtime_sˇÀ_°¨t
 ;
 
-390 
+389 
 	gskûl_cou¡
 ;
 
-391 
+390 
 	gd©a
 [1];
 
-396 
+395 
 	gMsgGameTómSkûlD©a
 :
 MsgBa£
 {
 
-397 
+396 
 MsgGameTómSkûlD©a
 (){
 
-398 
+397 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_TEAM_SKILL_DATA
 ;
 
-399 
+398 
 	gmsg_size
  = (
 MsgGameTómSkûlD©a
 );
 
-400 
+399 
 	gis_ícode
  = 0;
 
-402 
+401 
 	gmid
 ;
 
-403 
+402 
 	gtime_sˇÀ_°¨t
 ;
 
-404 
+403 
 	gãam_cid_1
 ;
 
-405 
+404 
 	gãam_cid_2
 ;
 
-406 
+405 
 	gãam_skûl_1
 ;
 
-407 
+406 
 	gãam1_©t_íîgy
 ;
 
-408 
+407 
 	gãam1_def_íîgy
 ;
 
-409 
+408 
 	gãam2_©t_íîgy
 ;
 
-410 
+409 
 	gãam2_def_íîgy
 ;
 
-413 
+412 
 	gMsgTómNewPœyîF‹m©i⁄Pos
 :
 MsgBa£
 {
 
-414 
+413 
 mid
 ;
 
-415 
+414 
 	gtime_sˇÀ_°¨t
 ;
 
-416 
+415 
 	ghome_cid
 ;
 
-417 
+416 
 	gaway_cid
 ;
 
-418 
+417 
 	ghome_√w_f‹m©i⁄_pos
 [11];
 
-419 
+418 
 	gaway_√w_f‹m©i⁄_pos
 [11];
 
-420 
+419 
 MsgTómNewPœyîF‹m©i⁄Pos
 (){
 
-421 
+420 
 	gmsg_size
  = (
 MsgTómNewPœyîF‹m©i⁄Pos
 );
 
-422 
+421 
 	gmsg_ty≥
  = 
 MSG_TYPE_GTOG_TEAM_NEW_FORMATION
 ;
 
-423 
+422 
 	gis_ícode
  = 0;
 
-433 
+432 
 	sTómPoöt
 {
 
-434 
+433 
 	mcid
 ;
 
-435 
+434 
 	mpoöt
 ;
 
-438 
+437 
 	gMsgM©chResu…D©a
 :
 MsgBa£
 {
 
-439 
+438 
 MsgM©chResu…D©a
 (){
 
-440 
+439 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_RESULT_DATA
 ;
 
-441 
+440 
 	gmsg_size
  = (
 MsgM©chResu…D©a
 );
 
-442 
+441 
 	gis_ícode
  = 0;
 
-444 
+443 
 	gmid
 ;
 
-445 
+444 
 	gtime_sˇÀ_°¨t
 ;
 
-446 
+445 
 TómPoöt
  
 	gãam1
 ;
 
-447 
+446 
 TómPoöt
  
 	gãam2
 ;
 
-450 
+449 
 	gMsgGameToG©eSîvîM©chEnd
 :
 MsgBa£
 {
 
-451 
+450 
 MsgGameToG©eSîvîM©chEnd
 (){
 
-452 
+451 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_MATCH_END
 ;
 
-453 
+452 
 	gmsg_size
  = (
 MsgGameToG©eSîvîM©chEnd
 );
 
-454 
+453 
 	gis_ícode
  = 0;
 
-456 
+455 
 	gmid
 ;
 
-460 
+459 
 	sPíéyResu…
 {
 
-461 
+460 
 	mshoŸî_∂ayî_id
 ;
 
-462 
+461 
 	mgk_∂ayî_id
 ;
 
-463 
+462 
 	mshoŸ_ty≥
 ;
 
-464 
+463 
 	mßve_ty≥
 ;
 
-465 
+464 
 	mshoŸî_skûl
 ;
 
-466 
+465 
 	mkìp_skûl
 ;
 
-467 
+466 
 	mshoŸ_suc˚ss
 ;
 
-471 
+470 
 	gMsgM©chPíéyResu…D©a
 :
 MsgBa£
 {
 
-472 
+471 
 MsgM©chPíéyResu…D©a
 (){
 
-473 
+472 
 msg_ty≥
  = 
 MSG_TYPE_GTOG_SERVER_PENTLY_RESULT
 ;
 
-474 
+473 
 	gmsg_size
  = (
 MsgM©chPíéyResu…D©a
 );
 
-475 
+474 
 	gis_ícode
  = 0;
 
-478 
+477 
 	gmid
 ;
 
-479 
+478 
 	ground_cou¡
 ;
 
-480 
+479 
 PíéyResu…
  
 	g≥¡ly
 [10];
 
-485 
+484 
 	gMsgAª«îM©chögSuc˚ss
 :
 MsgBa£
 {
 
-486 
+485 
 MsgAª«îM©chögSuc˚ss
 (){
 
-487 
+486 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_MATCHING_SUCCESS_START
 ;
 
-488 
+487 
 	gmsg_size
  = (
 MsgAª«îM©chögSuc˚ss
 );
 
-489 
+488 
 	gis_ícode
  = 0;
 
-491 
+490 
 	gmid
 ;
 
-492 
+491 
 	guid
 ;
 
-493 
+492 
 	g›_uid
 ;
 
-497 
+496 
 	gMsgAª«îE¡î
 :
 MsgBa£
 {
 
-498 
+497 
 MsgAª«îE¡î
 (){
 
-499 
+498 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_ENTER_ARENA
 ;
 
-500 
+499 
 	gmsg_size
  = (
 MsgAª«îE¡î
 );
 
-501 
+500 
 	gis_ícode
  = 0;
 
-503 
+502 
 	g°age_id
 ;
 
-504 
+503 
 	g∂ayî_id
 ;
 
-505 
+504 
 	g©èck_vÆue
 ;
 
-506 
+505 
 	gde„nd_vÆue
 ;
 
-510 
+509 
 	gMsgClõ¡S≥akBroˇ°
 :
 MsgBa£
 {
 
-511 
+510 
 MsgClõ¡S≥akBroˇ°
 (){
 
-512 
+511 
 msg_ty≥
  = 
 MSG_TYEP_SPEAK_BROCAST
 ;
 
-513 
+512 
 	gmsg_size
  = (
 MsgClõ¡S≥akBroˇ°
 );
 
-514 
+513 
 	gis_ícode
  = 0;
 
-516 
+515 
 	gmid
 ;
 
-517 
+516 
 	gcid
 ;
 
-518 
+517 
 	g•ók_ty≥
 ;
 
-522 
+521 
 	gMsgClõ¡U£Skûl
 :
 MsgBa£
 {
 
-523 
+522 
 MsgClõ¡U£Skûl
 (){
 
-524 
+523 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_USE_TEAM_SKILL
 ;
 
-525 
+524 
 	gmsg_size
  = (
 MsgClõ¡U£Skûl
 );
 
-526 
+525 
 	gis_ícode
  = 0;
 
-528 
+527 
 	gtime_°amp
 ;
 
-529 
+528 
 	gmid
 ;
 
-530 
+529 
 	gcid
 ;
 
-531 
+530 
 	gãam_skûl_id
 ;
 
-535 
+534 
 	gMsgClõ¡U£SkûlBroˇ°
 :
 MsgBa£
 {
 
-536 
+535 
 MsgClõ¡U£SkûlBroˇ°
 (){
 
-537 
+536 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_USE_TEAM_SKILL_BROCAST
 ;
 
-538 
+537 
 	gmsg_size
  = (
 MsgClõ¡U£SkûlBroˇ°
 );
 
-539 
+538 
 	gis_ícode
  = 0;
 
-541 
+540 
 	gtime_°amp
 ;
 
-542 
+541 
 	gmid
 ;
 
-543 
+542 
 	gcid
 ;
 
-544 
+543 
 	gãam_skûl_id
 ;
 
-545 
+544 
 	gsuc˚ss
 ;
 
-546 
+545 
 	gsuc˚ss_øã
 ;
 
-549 
+548 
 	gMsgClõ¡Reque°SkûlInfo
 :
 MsgBa£
 {
 
-550 
+549 
 MsgClõ¡Reque°SkûlInfo
 (){
 
-551 
+550 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_REQUEST_TEAM_SKILL_INFO
 ;
 
-552 
+551 
 	gmsg_size
  = (
 MsgClõ¡Reque°SkûlInfo
 );
 
-553 
+552 
 	gis_ícode
  = 0;
 
-555 
+554 
 	gtime_°amp
 ;
 
-556 
+555 
 	gmid
 ;
 
-557 
+556 
 	gcid
 ;
 
-561 
+560 
 	gMsgClõ¡Reque°SkûlInfoAck
 :
 MsgBa£
 {
 
-562 
+561 
 MsgClõ¡Reque°SkûlInfoAck
 (){
 
-563 
+562 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_REQUEST_TEAM_SKILL_INFO_ACK
 ;
 
-564 
+563 
 	gmsg_size
  = (
 MsgClõ¡Reque°SkûlInfoAck
 );
 
-565 
+564 
 	gis_ícode
  = 0;
 
-567 
+566 
 	gtime_°amp
 ;
 
-568 
+567 
 	gmid
 ;
 
-569 
+568 
 	gcid
 ;
 
-570 
+569 
 	g°©e
 ;
 
-574 
+573 
 	gMsgClõ¡Dïoi°O≥øã
 :
 MsgBa£
 {
 
-575 
+574 
 MsgClõ¡Dïoi°O≥øã
 (){
 
-576 
+575 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_DEPOIST_OPERATE
 ;
 
-577 
+576 
 	gmsg_size
  = (
 MsgClõ¡Dïoi°O≥øã
 );
 
-578 
+577 
 	gis_ícode
  = 0;
 
-580 
+579 
 	gmid
 ;
 
-581 
+580 
 	gcid
 ;
 
-582 
+581 
 boﬁ
  
 	gdïoi°_ch™ge_∂ayî
 ;
 
-583 
+582 
 boﬁ
  
 	gdïoi°_u£_skûl
 ;
 
-587 
+586 
 	gMsgClõ¡QuîyFa°M©ch
 :
 MsgBa£
 {
 
-588 
+587 
 MsgClõ¡QuîyFa°M©ch
 (){
 
-589 
+588 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_QUERY_FAST_MATCH
 ;
 
-590 
+589 
 	gmsg_size
  = (
 MsgClõ¡QuîyFa°M©ch
 );
 
-591 
+590 
 	gis_ícode
  = 0;
 
-593 
+592 
 	gmid
 ;
 
-594 
+593 
 	g›î©e_cid
 ;
 
-595 
+594 
 	gtime
 ;
 
-596 
+595 
 	gcode
 [16];
 
-600 
+599 
 	gMsgClõ¡QuîyFa°M©chAck
 :
 MsgBa£
 {
 
-601 
+600 
 MsgClõ¡QuîyFa°M©chAck
 (){
 
-602 
+601 
 msg_ty≥
  = 
 MSG_TYPE_CLIENT_QUERY_FAST_MATCH_ACK
 ;
 
-603 
+602 
 	gmsg_size
  = (
 MsgClõ¡QuîyFa°M©chAck
 );
 
-604 
+603 
 	gis_ícode
  = 0;
 
-606 
+605 
 	gmid
 ;
 
-607 
+606 
 	gcid
 ;
 
-608 
+607 
 boﬁ
  
 	gr°
 ;
 
-611 #¥agm®
+610 #¥agm®
 ∑ck
 ()
 
@@ -72747,1604 +67143,6 @@ IMsgDi•©chî
 _ssockë
 ;
 
-	@gate_server/build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-
-4 #i‚de‡
-__˝lu•lus
-
-
-11 #i‡
-deföed
-(
-__COMO__
-)
-
-12 
-	#COMPILER_ID
- "Comóu"
-
-	)
-
-14 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__COMO_VERSION__
- / 100)
-
-	)
-
-15 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__COMO_VERSION__
- % 100)
-
-	)
-
-17 #ñi‡
-deföed
-(
-__INTEL_COMPILER
-Ë|| deföed(
-__ICC
-)
-
-18 
-	#COMPILER_ID
- "I¡ñ"
-
-	)
-
-20 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/100)
-
-	)
-
-21 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/10 % 10)
-
-	)
-
-22 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__INTEL_COMPILER
- % 10)
-
-	)
-
-23 #i‡
-deföed
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-25 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-	)
-
-28 #ñi‡
-deföed
-(
-__PATHCC__
-)
-
-29 
-	#COMPILER_ID
- "P©hSˇÀ"
-
-	)
-
-30 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PATHCC__
-)
-
-	)
-
-31 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PATHCC_MINOR__
-)
-
-	)
-
-32 #i‡
-deföed
-(
-__PATHCC_PATCHLEVEL__
-)
-
-33 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PATHCC_PATCHLEVEL__
-)
-
-	)
-
-36 #ñi‡
-deföed
-(
-__˛™g__
-)
-
-37 
-	#COMPILER_ID
- "Cœng"
-
-	)
-
-38 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__˛™g_maj‹__
-)
-
-	)
-
-39 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__˛™g_mö‹__
-)
-
-	)
-
-40 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__˛™g_∑tchÀvñ__
-)
-
-	)
-
-42 #ñi‡
-deföed
-(
-__BORLANDC__
-Ë&& deföed(
-__CODEGEARC_VERSION__
-)
-
-43 
-	#COMPILER_ID
- "Emb¨ˇdîo"
-
-	)
-
-44 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>24 & 0x00FF)
-
-	)
-
-45 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>16 & 0x00FF)
-
-	)
-
-46 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
- & 0xFFFF)
-
-	)
-
-48 #ñi‡
-deföed
-(
-__BORLANDC__
-)
-
-49 
-	#COMPILER_ID
- "B‹œnd"
-
-	)
-
-51 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__BORLANDC__
->>8)
-
-	)
-
-52 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__BORLANDC__
- & 0xFF)
-
-	)
-
-54 #ñi‡
-deföed
-(
-__WATCOMC__
-)
-
-55 
-	#COMPILER_ID
- "W©com"
-
-	)
-
-57 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__WATCOMC__
- / 100)
-
-	)
-
-58 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__WATCOMC__
- % 100)
-
-	)
-
-60 #ñi‡
-deföed
-(
-__SUNPRO_CC
-)
-
-61 
-	#COMPILER_ID
- "SunPro"
-
-	)
-
-62 #i‡
-__SUNPRO_CC
- >= 0x5100
-
-64 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>12)
-
-	)
-
-65 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xFF)
-
-	)
-
-66 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-69 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>8)
-
-	)
-
-70 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xF)
-
-	)
-
-71 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-74 #ñi‡
-deföed
-(
-__HP_aCC
-)
-
-75 
-	#COMPILER_ID
- "HP"
-
-	)
-
-77 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__HP_aCC
-/10000)
-
-	)
-
-78 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__HP_aCC
-/100 % 100)
-
-	)
-
-79 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__HP_aCC
- % 100)
-
-	)
-
-81 #ñi‡
-deföed
-(
-__DECCXX
-)
-
-82 
-	#COMPILER_ID
- "Com∑q"
-
-	)
-
-84 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__DECCXX_VER
-/10000000)
-
-	)
-
-85 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__DECCXX_VER
-/100000 % 100)
-
-	)
-
-86 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__DECCXX_VER
- % 10000)
-
-	)
-
-88 #ñi‡
-deföed
-(
-__IBMCPP__
-)
-
-89 #i‡
-deföed
-(
-__COMPILER_VER__
-)
-
-90 
-	#COMPILER_ID
- "zOS"
-
-	)
-
-92 #i‡
-__IBMCPP__
- >= 800
-
-93 
-	#COMPILER_ID
- "XL"
-
-	)
-
-95 
-	#COMPILER_ID
- "VisuÆAge"
-
-	)
-
-98 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__IBMCPP__
-/100)
-
-	)
-
-99 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__IBMCPP__
-/10 % 10)
-
-	)
-
-100 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__IBMCPP__
- % 10)
-
-	)
-
-103 #ñi‡
-deföed
-(
-__PGI
-)
-
-104 
-	#COMPILER_ID
- "PGI"
-
-	)
-
-105 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PGIC__
-)
-
-	)
-
-106 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PGIC_MINOR__
-)
-
-	)
-
-107 #i‡
-deföed
-(
-__PGIC_PATCHLEVEL__
-)
-
-108 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PGIC_PATCHLEVEL__
-)
-
-	)
-
-111 #ñi‡
-deföed
-(
-_CRAYC
-)
-
-112 
-	#COMPILER_ID
- "Cøy"
-
-	)
-
-113 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_RELEASE
-)
-
-	)
-
-114 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_RELEASE_MINOR
-)
-
-	)
-
-116 #ñi‡
-deföed
-(
-__TI_COMPILER_VERSION__
-)
-
-117 
-	#COMPILER_ID
- "TI"
-
-	)
-
-119 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000000)
-
-	)
-
-120 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000 % 1000)
-
-	)
-
-121 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
- % 1000)
-
-	)
-
-123 #ñi‡
-deföed
-(
-__SCO_VERSION__
-)
-
-124 
-	#COMPILER_ID
- "SCO"
-
-	)
-
-126 #ñi‡
-deföed
-(
-__GNUC__
-)
-
-127 
-	#COMPILER_ID
- "GNU"
-
-	)
-
-128 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__GNUC__
-)
-
-	)
-
-129 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__GNUC_MINOR__
-)
-
-	)
-
-130 #i‡
-deföed
-(
-__GNUC_PATCHLEVEL__
-)
-
-131 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__GNUC_PATCHLEVEL__
-)
-
-	)
-
-134 #ñi‡
-deföed
-(
-_MSC_VER
-)
-
-135 
-	#COMPILER_ID
- "MSVC"
-
-	)
-
-137 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_MSC_VER
- / 100)
-
-	)
-
-138 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_MSC_VER
- % 100)
-
-	)
-
-139 #i‡
-deföed
-(
-_MSC_FULL_VER
-)
-
-140 #i‡
-_MSC_VER
- >= 1400
-
-142 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 100000)
-
-	)
-
-145 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 10000)
-
-	)
-
-148 #i‡
-deföed
-(
-_MSC_BUILD
-)
-
-149 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-_MSC_BUILD
-)
-
-	)
-
-153 #ñi‡
-deföed
-(
-__VISUALDSPVERSION__
-)
-
-154 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-156 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>24)
-
-	)
-
-157 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>16 & 0xFF)
-
-	)
-
-158 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>8 & 0xFF)
-
-	)
-
-161 #ñi‡
-deföed
-(
-__ADSPBLACKFIN__
-Ë|| deföed(
-__ADSPTS__
-Ë|| deföed(
-__ADSP21000__
-)
-
-162 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-164 #ñi‡
-deföed
-(
-_SGI_COMPILER_VERSION
-Ë|| deföed(
-_COMPILER_VERSION
-)
-
-165 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-166 #i‡
-deföed
-(
-_SGI_COMPILER_VERSION
-)
-
-168 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/100)
-
-	)
-
-169 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-170 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
- % 10)
-
-	)
-
-173 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/100)
-
-	)
-
-174 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-175 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_COMPILER_VERSION
- % 10)
-
-	)
-
-181 #ñi‡
-deföed
-(
-__sgi
-)
-
-182 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-184 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpua
-)
-
-185 
-	#COMPILER_ID
- "HP"
-
-	)
-
-188 
-	#COMPILER_ID
- ""
-
-	)
-
-196 c⁄°* 
-	göfo_compûî
- = "INFO" ":" "compûî[" 
-COMPILER_ID
- "]";
-
-199 #i‡
-deföed
-(
-__löux
-Ë|| deföed(
-__löux__
-Ë|| deföed(
-löux
-)
-
-200 
-	#PLATFORM_ID
- "Löux"
-
-	)
-
-202 #ñi‡
-deföed
-(
-__CYGWIN__
-)
-
-203 
-	#PLATFORM_ID
- "Cygwö"
-
-	)
-
-205 #ñi‡
-deföed
-(
-__MINGW32__
-)
-
-206 
-	#PLATFORM_ID
- "MöGW"
-
-	)
-
-208 #ñi‡
-deföed
-(
-__APPLE__
-)
-
-209 
-	#PLATFORM_ID
- "D¨wö"
-
-	)
-
-211 #ñi‡
-deföed
-(
-_WIN32
-Ë|| deföed(
-__WIN32__
-Ë|| deföed(
-WIN32
-)
-
-212 
-	#PLATFORM_ID
- "Wödows"
-
-	)
-
-214 #ñi‡
-deföed
-(
-__FªeBSD__
-Ë|| deföed(
-__FªeBSD
-)
-
-215 
-	#PLATFORM_ID
- "FªeBSD"
-
-	)
-
-217 #ñi‡
-deföed
-(
-__NëBSD__
-Ë|| deföed(
-__NëBSD
-)
-
-218 
-	#PLATFORM_ID
- "NëBSD"
-
-	)
-
-220 #ñi‡
-deföed
-(
-__O≥nBSD__
-Ë|| deföed(
-__OPENBSD
-)
-
-221 
-	#PLATFORM_ID
- "O≥nBSD"
-
-	)
-
-223 #ñi‡
-deföed
-(
-__sun
-Ë|| deföed(
-sun
-)
-
-224 
-	#PLATFORM_ID
- "SunOS"
-
-	)
-
-226 #ñi‡
-deföed
-(
-_AIX
-Ë|| deföed(
-__AIX
-Ë|| deföed(
-__AIX__
-Ë|| deföed(
-__aix
-Ë|| deföed(
-__aix__
-)
-
-227 
-	#PLATFORM_ID
- "AIX"
-
-	)
-
-229 #ñi‡
-deföed
-(
-__sgi
-Ë|| deföed(
-__sgi__
-Ë|| deföed(
-_SGI
-)
-
-230 
-	#PLATFORM_ID
- "IRIX"
-
-	)
-
-232 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpux__
-)
-
-233 
-	#PLATFORM_ID
- "HP-UX"
-
-	)
-
-235 #ñi‡
-deföed
-(
-__HAIKU__
-)
-
-236 
-	#PLATFORM_ID
- "Haiku"
-
-	)
-
-238 #ñi‡
-deföed
-(
-__BeOS
-Ë|| deföed(
-__BEOS__
-Ë|| deföed(
-_BEOS
-)
-
-239 
-	#PLATFORM_ID
- "BeOS"
-
-	)
-
-241 #ñi‡
-deföed
-(
-__QNX__
-Ë|| deföed(
-__QNXNTO__
-)
-
-242 
-	#PLATFORM_ID
- "QNX"
-
-	)
-
-244 #ñi‡
-deföed
-(
-__åu64
-Ë|| deföed(
-_åu64
-Ë|| deföed(
-__TRU64__
-)
-
-245 
-	#PLATFORM_ID
- "Tru64"
-
-	)
-
-247 #ñi‡
-deföed
-(
-__riscos
-Ë|| deföed(
-__riscos__
-)
-
-248 
-	#PLATFORM_ID
- "RISCos"
-
-	)
-
-250 #ñi‡
-deföed
-(
-__söix
-Ë|| deföed(
-__söix__
-Ë|| deföed(
-__SINIX__
-)
-
-251 
-	#PLATFORM_ID
- "SINIX"
-
-	)
-
-253 #ñi‡
-deföed
-(
-__UNIX_SV__
-)
-
-254 
-	#PLATFORM_ID
- "UNIX_SV"
-
-	)
-
-256 #ñi‡
-deföed
-(
-__bsdos__
-)
-
-257 
-	#PLATFORM_ID
- "BSDOS"
-
-	)
-
-259 #ñi‡
-deföed
-(
-_MPRAS
-Ë|| deföed(
-MPRAS
-)
-
-260 
-	#PLATFORM_ID
- "MP-RAS"
-
-	)
-
-262 #ñi‡
-deföed
-(
-__osf
-Ë|| deföed(
-__osf__
-)
-
-263 
-	#PLATFORM_ID
- "OSF1"
-
-	)
-
-265 #ñi‡
-deföed
-(
-_SCO_SV
-Ë|| deföed(
-SCO_SV
-Ë|| deföed(
-sco_sv
-)
-
-266 
-	#PLATFORM_ID
- "SCO_SV"
-
-	)
-
-268 #ñi‡
-deföed
-(
-__u…rix
-Ë|| deföed(
-__u…rix__
-Ë|| deföed(
-_ULTRIX
-)
-
-269 
-	#PLATFORM_ID
- "ULTRIX"
-
-	)
-
-271 #ñi‡
-deföed
-(
-__XENIX__
-Ë|| deföed(
-_XENIX
-Ë|| deföed(
-XENIX
-)
-
-272 
-	#PLATFORM_ID
- "Xíix"
-
-	)
-
-275 
-	#PLATFORM_ID
- ""
-
-	)
-
-284 #i‡
-deföed
-(
-_WIN32
-Ë&& deföed(
-_MSC_VER
-)
-
-285 #i‡
-deföed
-(
-_M_IA64
-)
-
-286 
-	#ARCHITECTURE_ID
- "IA64"
-
-	)
-
-288 #ñi‡
-deföed
-(
-_M_X64
-Ë|| deföed(
-_M_AMD64
-)
-
-289 
-	#ARCHITECTURE_ID
- "x64"
-
-	)
-
-291 #ñi‡
-deföed
-(
-_M_IX86
-)
-
-292 
-	#ARCHITECTURE_ID
- "X86"
-
-	)
-
-294 #ñi‡
-deföed
-(
-_M_ARM
-)
-
-295 
-	#ARCHITECTURE_ID
- "ARM"
-
-	)
-
-297 #ñi‡
-deföed
-(
-_M_MIPS
-)
-
-298 
-	#ARCHITECTURE_ID
- "MIPS"
-
-	)
-
-300 #ñi‡
-deföed
-(
-_M_SH
-)
-
-301 
-	#ARCHITECTURE_ID
- "SHx"
-
-	)
-
-304 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-308 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-312 
-	#DEC
-(
-n
-) \
-
-313 ('0' + (((
-n
-) / 10000000)%10)), \
-
-314 ('0' + (((
-n
-) / 1000000)%10)), \
-
-315 ('0' + (((
-n
-) / 100000)%10)), \
-
-316 ('0' + (((
-n
-) / 10000)%10)), \
-
-317 ('0' + (((
-n
-) / 1000)%10)), \
-
-318 ('0' + (((
-n
-) / 100)%10)), \
-
-319 ('0' + (((
-n
-) / 10)%10)), \
-
-320 ('0' + ((
-n
-Ë% 10))
-
-	)
-
-323 
-	#HEX
-(
-n
-) \
-
-324 ('0' + ((
-n
-)>>28 & 0xF)), \
-
-325 ('0' + ((
-n
-)>>24 & 0xF)), \
-
-326 ('0' + ((
-n
-)>>20 & 0xF)), \
-
-327 ('0' + ((
-n
-)>>16 & 0xF)), \
-
-328 ('0' + ((
-n
-)>>12 & 0xF)), \
-
-329 ('0' + ((
-n
-)>>8 & 0xF)), \
-
-330 ('0' + ((
-n
-)>>4 & 0xF)), \
-
-331 ('0' + ((
-n
-Ë& 0xF))
-
-	)
-
-334 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-335 c⁄° 
-	göfo_vîsi⁄
-[] = {
-
-338 
-COMPILER_VERSION_MAJOR
-,
-
-339 #ifde‡
-COMPILER_VERSION_MINOR
-
-
-340 '.', 
-COMPILER_VERSION_MINOR
-,
-
-341 #ifde‡
-COMPILER_VERSION_PATCH
-
-
-342 '.', 
-COMPILER_VERSION_PATCH
-,
-
-343 #ifde‡
-COMPILER_VERSION_TWEAK
-
-
-344 '.', 
-COMPILER_VERSION_TWEAK
-,
-
-355 c⁄°* 
-	göfo_∂©f‹m
- = "INFO" ":" "∂©f‹m[" 
-PLATFORM_ID
- "]";
-
-356 c⁄°* 
-	göfo_¨ch
- = "INFO" ":" "¨ch[" 
-ARCHITECTURE_ID
- "]";
-
-362 
-	$maö
-(
-¨gc
-, * 
-¨gv
-[])
-
-364 
-ªquúe
- = 0;
-
-365 
-ªquúe
- +
-öfo_compûî
-[
-¨gc
-];
-
-366 
-ªquúe
- +
-öfo_∂©f‹m
-[
-¨gc
-];
-
-367 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-368 
-ªquúe
- +
-öfo_vîsi⁄
-[
-¨gc
-];
-
-370 ()
-¨gv
-;
-
-371  
-ªquúe
-;
-
-372 
-	}
-}
-
 	@gate_server/main.cpp
 
 1 
@@ -74441,7 +67239,11 @@ CMsgDi•©chî
 	gpublic_key
 ;
 
-48 
+47 c⁄° * 
+	ggm_logö_public_key
+ = "guanlei";
+
+49 
 	$öô_£rvî_log
 (
 ¨gc
@@ -74449,7 +67251,7 @@ CMsgDi•©chî
 ¨gv
 ){
 
-50 
+51 
 googÀ
 ::
 	`P¨£Comm™dLöeFœgs
@@ -74461,7 +67263,7 @@ googÀ
 åue
 );
 
-51 
+52 
 googÀ
 ::
 	`InôGoogÀLoggög
@@ -74469,7 +67271,7 @@ googÀ
 ¨gv
 [0]);
 
-53 
+54 
 TiXmlDocumít
  
 	`doc
@@ -74477,7 +67279,7 @@ TiXmlDocumít
 CONFIG_FILE
 );
 
-54 
+55 
 boﬁ
  
 lﬂdFûe
@@ -74487,23 +67289,23 @@ doc
 	`LﬂdFûe
 ();
 
-55 if(
+56 if(
 lﬂdFûe
  =
 Ál£
 ){
 
-56 
+57 
 	`LOG
 (
 ERROR
 )<<"Loading fileÉrror ....";
 
-57 
+58 
 	`exô
 (1);
 
-60 
+61 
 TiXmlNode
 * 
 fú°Node
@@ -74513,23 +67315,23 @@ doc
 	`Fú°Chûd
 ("gate_server");
 
-61 if(
+62 if(
 fú°Node
  =
 NULL
 ){
 
-62 
+63 
 	`LOG
 (
 ERROR
 )<<"ERROR OF XML FILE";
 
-63 
+64 
 	`exô
 (1);
 
-66 
+67 
 TiXmlEÀmít
  *
 ñe
@@ -74539,7 +67341,7 @@ fú°Node
 	`ToEÀmít
 ();
 
-67 c⁄° * 
+68 c⁄° * 
 log_öfo_dú
  = 
 ñe
@@ -74547,7 +67349,7 @@ log_öfo_dú
 	`Aâribuã
 ("log_info_dir");
 
-68 c⁄° * 
+69 c⁄° * 
 log_îr‹_dú
  = 
 ñe
@@ -74555,7 +67357,7 @@ log_îr‹_dú
 	`Aâribuã
 ("log_error_dir");
 
-70 
+71 
 googÀ
 ::
 	`SëLogDe°ö©i⁄
@@ -74565,7 +67367,7 @@ INFO
 log_öfo_dú
 );
 
-71 
+72 
 googÀ
 ::
 	`SëLogDe°ö©i⁄
@@ -74575,11 +67377,11 @@ ERROR
 log_îr‹_dú
 );
 
-72 
+73 
 	}
 }
 
-74 
+75 
 	gomg
 ::
 Epﬁlh™dÀr
@@ -74589,7 +67391,7 @@ Epﬁlh™dÀr
 ∑øm
 ){
 
-75 
+76 
 TiXmlDocumít
  
 	`doc
@@ -74597,7 +67399,7 @@ TiXmlDocumít
 CONFIG_FILE
 );
 
-76 
+77 
 boﬁ
  
 lﬂdFûe
@@ -74607,21 +67409,21 @@ doc
 	`LﬂdFûe
 ();
 
-77 if(
+78 if(
 lﬂdFûe
  =
 Ál£
 ){
 
-78 
+79 
 	`VLOG
 (1)<<"ERROR LOAD config file!!";
 
-79  
+80  
 NULL
 ;
 
-82 
+83 
 TiXmlNode
 * 
 fú°Node
@@ -74631,21 +67433,21 @@ doc
 	`Fú°Chûd
 ("gate_server");
 
-83 if(
+84 if(
 fú°Node
  =
 NULL
 ){
 
-84 
+85 
 	`VLOG
 (1)<<"error of xml file";
 
-85 
+86 
 	`exô
 (1);
 
-87 
+88 
 TiXmlEÀmít
  *
 ñe
@@ -74655,7 +67457,7 @@ fú°Node
 	`ToEÀmít
 ();
 
-88 c⁄° * 
+89 c⁄° * 
 ù_buf„r
  = 
 ñe
@@ -74663,7 +67465,7 @@ fú°Node
 	`Aâribuã
 ("ip");
 
-89 
+90 
 SåögBuf„r
  
 	`p‹t_buf„r
@@ -74673,7 +67475,7 @@ SåögBuf„r
 	`Aâribuã
 ("port"));
 
-90 
+91 
 SåögBuf„r
  
 	`s_p‹t_buf„r
@@ -74683,7 +67485,7 @@ SåögBuf„r
 	`Aâribuã
 ("s_port"));
 
-91 
+92 
 p‹t
  = 
 	`©oi
@@ -74693,7 +67495,7 @@ p‹t_buf„r
 	`c_°r
 ());
 
-92 
+93 
 s_p‹t
  = 
 	`©oi
@@ -74703,7 +67505,7 @@ s_p‹t_buf„r
 	`c_°r
 ());
 
-93 
+94 
 g_g©e_£rvî_öfo
 .
 _ù
@@ -74711,7 +67513,7 @@ _ù
 ù_buf„r
 ;
 
-94 
+95 
 g_g©e_£rvî_öfo
 .
 _p‹t
@@ -74719,7 +67521,7 @@ _p‹t
 p‹t
 ;
 
-95 
+96 
 g_g©e_£rvî_öfo
 .
 _s_p‹t
@@ -74727,7 +67529,7 @@ _s_p‹t
 s_p‹t
 ;
 
-98 
+99 
 omg
 ::
 Epﬁlh™dÀr
@@ -74739,7 +67541,7 @@ h™dÀr
 	`Epﬁlh™dÀr
 ();
 
-99 
+100 
 h™dÀr
 ->
 	`£t_msg_di•©chî
@@ -74749,7 +67551,7 @@ CMsgDi•©chî
 ∑øm
 );
 
-100 
+101 
 h™dÀr
 ->
 	`öô_ïﬁl
@@ -74761,13 +67563,13 @@ EPOLL_SIZE
 p‹t
 );
 
-101 
+102 
 h™dÀr
 ->
 	`°¨tLi°íög
 ();
 
-102 
+103 
 h™dÀr
 ->
 	`°¨t
@@ -74775,19 +67577,19 @@ h™dÀr
 Ál£
 );
 
-104  
+105  
 h™dÀr
 ;
 
-105 
+106 
 	}
 }
 
-108 
+109 
 	$£rvî_to_£rvî_°¨t
 (){
 
-109 
+110 
 £rvî_sockë
  *
 sockë
@@ -74797,7 +67599,7 @@ sockë
 	`£rvî_sockë
 ();
 
-110 
+111 
 sockë
 ->
 	`öôSockë
@@ -74807,7 +67609,7 @@ g_g©e_£rvî_öfo
 _s_p‹t
 );
 
-111 
+112 
 SSockëLi°íAd≠ãr
  *
 ss
@@ -74821,7 +67623,7 @@ sockë
 g_msg_di•©chî
 );
 
-112 
+113 
 omg
 ::
 CThªadM™age
@@ -74831,17 +67633,17 @@ CThªadM™age
 ss
 );
 
-113 
+114 
 	}
 }
 
-115 
+116 
 CMsgDi•©chî
 * 
 	$msg_di•©chî_thªad_°¨t
 (){
 
-116 
+117 
 CMsgDi•©chî
  *
 msg_di•©chî
@@ -74849,7 +67651,7 @@ msg_di•©chî
 	`GëIn°™˚
 ();
 
-117 
+118 
 msg_di•©chî
 ->
 	`°¨t
@@ -74857,23 +67659,23 @@ msg_di•©chî
 Ál£
 );
 
-118  
+119  
 msg_di•©chî
 ;
 
-119 
+120 
 	}
 }
 
-121 
+122 
 	$msg_ªcv_thªad_°¨t
 (){
 
-124 
+125 
 	}
 }
 
-126 
+127 
 	g°d
 ::
 m≠
@@ -74885,11 +67687,11 @@ m≠
 g_ã°_∂ayî_m≠
 ;
 
-128 
+129 
 	$lﬂd_game£rvî_öfo
 (){
 
-129 
+130 
 TiXmlDocumít
  
 	`doc
@@ -74897,7 +67699,7 @@ TiXmlDocumít
 CONFIG_FILE
 );
 
-130 
+131 
 boﬁ
  
 lﬂdFûe
@@ -74907,23 +67709,23 @@ doc
 	`LﬂdFûe
 ();
 
-131 i‡(
+132 i‡(
 lﬂdFûe
  =
 Ál£
 ) {
 
-132 
+133 
 	`LOG
 (
 ERROR
 ) << "Loading fileÉrror ....";
 
-133 
+134 
 	`exô
 (1);
 
-136 
+137 
 TiXmlNode
 * 
 fú°Node
@@ -74933,23 +67735,23 @@ doc
 	`Fú°Chûd
 ("gate_server");
 
-137 i‡(
+138 i‡(
 fú°Node
  =
 NULL
 ) {
 
-138 
+139 
 	`LOG
 (
 ERROR
 ) << "ERROR OF XML FILE";
 
-139 
+140 
 	`exô
 (1);
 
-142 
+143 
 TiXmlEÀmít
  *
 ñe
@@ -74959,13 +67761,13 @@ fú°Node
 	`ToEÀmít
 ();
 
-143 
+144 
 public_key
  = 
 √w
  [20];
 
-144 
+145 
 	`°r˝y
 (
 public_key
@@ -74975,27 +67777,27 @@ public_key
 	`Aâribuã
 ("public_key"));
 
-145 
+146 
 	`VLOG
 (0)<<"Publi¯key"<<
 public_key
 ;
 
-146 
+147 
 	}
 }
 
-147 
+148 
 	$lﬂd_ã°î_m≠
 () {
 
-148 
+149 
 TiXmlDocumít
  
 	`doc
 ("config_file/tester_map.xml");
 
-149 
+150 
 boﬁ
  
 lﬂdFûe
@@ -75005,19 +67807,19 @@ doc
 	`LﬂdFûe
 ();
 
-150 i‡(
+151 i‡(
 lﬂdFûe
  =
 Ál£
 ) {
 
-151 
+152 
 	`LOG
 (
 ERROR
 )<<"ERROR LOAD config file!!";
 
-155 
+156 
 TiXmlEÀmít
 * 
 roŸ
@@ -75027,13 +67829,13 @@ doc
 	`Fú°ChûdEÀmít
 ("all");
 
-156 if(
+157 if(
 roŸ
  !
 NULL
 ) {
 
-157 
+158 
 TiXmlNode
 * 
 ã°î
@@ -75041,7 +67843,7 @@ TiXmlNode
 NULL
 ;
 
-158 
+159 
 ã°î
 =
 roŸ
@@ -75052,14 +67854,6 @@ NULL
 ;ã°îÙoŸ->
 	`IãøãChûdªn
 (tester)) {
-
-159 
-TiXmlNode
-* 
-‹dî_node
- = 
-NULL
-;
 
 160 
 TiXmlEÀmít
@@ -79513,7 +72307,7 @@ ba£
 löe
 Ëba£ ## 
 	)
-löe
+line
 
 804 
 	#LOG_OCCURRENCES
@@ -84669,7 +77463,7 @@ ba£
 löe
 Ëba£ ## 
 	)
-löe
+line
 
 804 
 	#LOG_OCCURRENCES
@@ -97507,7 +90301,7 @@ __˝lu•lus
 Âå
 Ë
 	)
-Âå
+fptr
 
 69 (*
 xmlHashDóŒoˇt‹
@@ -451245,7 +444039,7 @@ upd©e
 mysql_sysv¨_
  ## 
 	)
-«me
+name
 
 219 
 	#MYSQL_SYSVAR
@@ -465161,7 +457955,7 @@ STDC
 ¨gs
 Ë
 	)
-¨gs
+args
 
 266 
 	#OF
@@ -465189,7 +457983,7 @@ Z_HAVE_STDARG_H
 ¨gs
 Ë
 	)
-¨gs
+args
 
 274 
 	#Z_ARG
@@ -469055,1604 +461849,6 @@ p
 
 	)
 
-	@net/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-
-4 #i‚de‡
-__˝lu•lus
-
-
-11 #i‡
-deföed
-(
-__COMO__
-)
-
-12 
-	#COMPILER_ID
- "Comóu"
-
-	)
-
-14 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__COMO_VERSION__
- / 100)
-
-	)
-
-15 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__COMO_VERSION__
- % 100)
-
-	)
-
-17 #ñi‡
-deföed
-(
-__INTEL_COMPILER
-Ë|| deföed(
-__ICC
-)
-
-18 
-	#COMPILER_ID
- "I¡ñ"
-
-	)
-
-20 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/100)
-
-	)
-
-21 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__INTEL_COMPILER
-/10 % 10)
-
-	)
-
-22 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__INTEL_COMPILER
- % 10)
-
-	)
-
-23 #i‡
-deföed
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-25 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-__INTEL_COMPILER_BUILD_DATE
-)
-
-	)
-
-28 #ñi‡
-deföed
-(
-__PATHCC__
-)
-
-29 
-	#COMPILER_ID
- "P©hSˇÀ"
-
-	)
-
-30 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PATHCC__
-)
-
-	)
-
-31 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PATHCC_MINOR__
-)
-
-	)
-
-32 #i‡
-deföed
-(
-__PATHCC_PATCHLEVEL__
-)
-
-33 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PATHCC_PATCHLEVEL__
-)
-
-	)
-
-36 #ñi‡
-deföed
-(
-__˛™g__
-)
-
-37 
-	#COMPILER_ID
- "Cœng"
-
-	)
-
-38 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__˛™g_maj‹__
-)
-
-	)
-
-39 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__˛™g_mö‹__
-)
-
-	)
-
-40 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__˛™g_∑tchÀvñ__
-)
-
-	)
-
-42 #ñi‡
-deföed
-(
-__BORLANDC__
-Ë&& deföed(
-__CODEGEARC_VERSION__
-)
-
-43 
-	#COMPILER_ID
- "Emb¨ˇdîo"
-
-	)
-
-44 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>24 & 0x00FF)
-
-	)
-
-45 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
->>16 & 0x00FF)
-
-	)
-
-46 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__CODEGEARC_VERSION__
- & 0xFFFF)
-
-	)
-
-48 #ñi‡
-deföed
-(
-__BORLANDC__
-)
-
-49 
-	#COMPILER_ID
- "B‹œnd"
-
-	)
-
-51 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__BORLANDC__
->>8)
-
-	)
-
-52 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__BORLANDC__
- & 0xFF)
-
-	)
-
-54 #ñi‡
-deföed
-(
-__WATCOMC__
-)
-
-55 
-	#COMPILER_ID
- "W©com"
-
-	)
-
-57 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__WATCOMC__
- / 100)
-
-	)
-
-58 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__WATCOMC__
- % 100)
-
-	)
-
-60 #ñi‡
-deföed
-(
-__SUNPRO_CC
-)
-
-61 
-	#COMPILER_ID
- "SunPro"
-
-	)
-
-62 #i‡
-__SUNPRO_CC
- >= 0x5100
-
-64 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>12)
-
-	)
-
-65 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xFF)
-
-	)
-
-66 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-69 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>8)
-
-	)
-
-70 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__SUNPRO_CC
->>4 & 0xF)
-
-	)
-
-71 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__SUNPRO_CC
- & 0xF)
-
-	)
-
-74 #ñi‡
-deföed
-(
-__HP_aCC
-)
-
-75 
-	#COMPILER_ID
- "HP"
-
-	)
-
-77 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__HP_aCC
-/10000)
-
-	)
-
-78 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__HP_aCC
-/100 % 100)
-
-	)
-
-79 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__HP_aCC
- % 100)
-
-	)
-
-81 #ñi‡
-deföed
-(
-__DECCXX
-)
-
-82 
-	#COMPILER_ID
- "Com∑q"
-
-	)
-
-84 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__DECCXX_VER
-/10000000)
-
-	)
-
-85 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__DECCXX_VER
-/100000 % 100)
-
-	)
-
-86 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__DECCXX_VER
- % 10000)
-
-	)
-
-88 #ñi‡
-deföed
-(
-__IBMCPP__
-)
-
-89 #i‡
-deföed
-(
-__COMPILER_VER__
-)
-
-90 
-	#COMPILER_ID
- "zOS"
-
-	)
-
-92 #i‡
-__IBMCPP__
- >= 800
-
-93 
-	#COMPILER_ID
- "XL"
-
-	)
-
-95 
-	#COMPILER_ID
- "VisuÆAge"
-
-	)
-
-98 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__IBMCPP__
-/100)
-
-	)
-
-99 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__IBMCPP__
-/10 % 10)
-
-	)
-
-100 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__IBMCPP__
- % 10)
-
-	)
-
-103 #ñi‡
-deföed
-(
-__PGI
-)
-
-104 
-	#COMPILER_ID
- "PGI"
-
-	)
-
-105 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__PGIC__
-)
-
-	)
-
-106 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__PGIC_MINOR__
-)
-
-	)
-
-107 #i‡
-deföed
-(
-__PGIC_PATCHLEVEL__
-)
-
-108 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__PGIC_PATCHLEVEL__
-)
-
-	)
-
-111 #ñi‡
-deföed
-(
-_CRAYC
-)
-
-112 
-	#COMPILER_ID
- "Cøy"
-
-	)
-
-113 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_RELEASE
-)
-
-	)
-
-114 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_RELEASE_MINOR
-)
-
-	)
-
-116 #ñi‡
-deföed
-(
-__TI_COMPILER_VERSION__
-)
-
-117 
-	#COMPILER_ID
- "TI"
-
-	)
-
-119 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000000)
-
-	)
-
-120 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
-/1000 % 1000)
-
-	)
-
-121 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__TI_COMPILER_VERSION__
- % 1000)
-
-	)
-
-123 #ñi‡
-deföed
-(
-__SCO_VERSION__
-)
-
-124 
-	#COMPILER_ID
- "SCO"
-
-	)
-
-126 #ñi‡
-deföed
-(
-__GNUC__
-)
-
-127 
-	#COMPILER_ID
- "GNU"
-
-	)
-
-128 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-__GNUC__
-)
-
-	)
-
-129 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-__GNUC_MINOR__
-)
-
-	)
-
-130 #i‡
-deföed
-(
-__GNUC_PATCHLEVEL__
-)
-
-131 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-__GNUC_PATCHLEVEL__
-)
-
-	)
-
-134 #ñi‡
-deföed
-(
-_MSC_VER
-)
-
-135 
-	#COMPILER_ID
- "MSVC"
-
-	)
-
-137 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_MSC_VER
- / 100)
-
-	)
-
-138 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_MSC_VER
- % 100)
-
-	)
-
-139 #i‡
-deföed
-(
-_MSC_FULL_VER
-)
-
-140 #i‡
-_MSC_VER
- >= 1400
-
-142 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 100000)
-
-	)
-
-145 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_MSC_FULL_VER
- % 10000)
-
-	)
-
-148 #i‡
-deföed
-(
-_MSC_BUILD
-)
-
-149 
-	#COMPILER_VERSION_TWEAK
- 
-	`DEC
-(
-_MSC_BUILD
-)
-
-	)
-
-153 #ñi‡
-deföed
-(
-__VISUALDSPVERSION__
-)
-
-154 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-156 
-	#COMPILER_VERSION_MAJOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>24)
-
-	)
-
-157 
-	#COMPILER_VERSION_MINOR
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>16 & 0xFF)
-
-	)
-
-158 
-	#COMPILER_VERSION_PATCH
- 
-	`HEX
-(
-__VISUALDSPVERSION__
->>8 & 0xFF)
-
-	)
-
-161 #ñi‡
-deföed
-(
-__ADSPBLACKFIN__
-Ë|| deföed(
-__ADSPTS__
-Ë|| deföed(
-__ADSP21000__
-)
-
-162 
-	#COMPILER_ID
- "ADSP"
-
-	)
-
-164 #ñi‡
-deföed
-(
-_SGI_COMPILER_VERSION
-Ë|| deföed(
-_COMPILER_VERSION
-)
-
-165 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-166 #i‡
-deföed
-(
-_SGI_COMPILER_VERSION
-)
-
-168 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/100)
-
-	)
-
-169 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-170 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_SGI_COMPILER_VERSION
- % 10)
-
-	)
-
-173 
-	#COMPILER_VERSION_MAJOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/100)
-
-	)
-
-174 
-	#COMPILER_VERSION_MINOR
- 
-	`DEC
-(
-_COMPILER_VERSION
-/10 % 10)
-
-	)
-
-175 
-	#COMPILER_VERSION_PATCH
- 
-	`DEC
-(
-_COMPILER_VERSION
- % 10)
-
-	)
-
-181 #ñi‡
-deföed
-(
-__sgi
-)
-
-182 
-	#COMPILER_ID
- "MIPS¥o"
-
-	)
-
-184 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpua
-)
-
-185 
-	#COMPILER_ID
- "HP"
-
-	)
-
-188 
-	#COMPILER_ID
- ""
-
-	)
-
-196 c⁄°* 
-	göfo_compûî
- = "INFO" ":" "compûî[" 
-COMPILER_ID
- "]";
-
-199 #i‡
-deföed
-(
-__löux
-Ë|| deföed(
-__löux__
-Ë|| deföed(
-löux
-)
-
-200 
-	#PLATFORM_ID
- "Löux"
-
-	)
-
-202 #ñi‡
-deföed
-(
-__CYGWIN__
-)
-
-203 
-	#PLATFORM_ID
- "Cygwö"
-
-	)
-
-205 #ñi‡
-deföed
-(
-__MINGW32__
-)
-
-206 
-	#PLATFORM_ID
- "MöGW"
-
-	)
-
-208 #ñi‡
-deföed
-(
-__APPLE__
-)
-
-209 
-	#PLATFORM_ID
- "D¨wö"
-
-	)
-
-211 #ñi‡
-deföed
-(
-_WIN32
-Ë|| deföed(
-__WIN32__
-Ë|| deföed(
-WIN32
-)
-
-212 
-	#PLATFORM_ID
- "Wödows"
-
-	)
-
-214 #ñi‡
-deföed
-(
-__FªeBSD__
-Ë|| deföed(
-__FªeBSD
-)
-
-215 
-	#PLATFORM_ID
- "FªeBSD"
-
-	)
-
-217 #ñi‡
-deföed
-(
-__NëBSD__
-Ë|| deföed(
-__NëBSD
-)
-
-218 
-	#PLATFORM_ID
- "NëBSD"
-
-	)
-
-220 #ñi‡
-deföed
-(
-__O≥nBSD__
-Ë|| deföed(
-__OPENBSD
-)
-
-221 
-	#PLATFORM_ID
- "O≥nBSD"
-
-	)
-
-223 #ñi‡
-deföed
-(
-__sun
-Ë|| deföed(
-sun
-)
-
-224 
-	#PLATFORM_ID
- "SunOS"
-
-	)
-
-226 #ñi‡
-deföed
-(
-_AIX
-Ë|| deföed(
-__AIX
-Ë|| deföed(
-__AIX__
-Ë|| deföed(
-__aix
-Ë|| deföed(
-__aix__
-)
-
-227 
-	#PLATFORM_ID
- "AIX"
-
-	)
-
-229 #ñi‡
-deföed
-(
-__sgi
-Ë|| deföed(
-__sgi__
-Ë|| deföed(
-_SGI
-)
-
-230 
-	#PLATFORM_ID
- "IRIX"
-
-	)
-
-232 #ñi‡
-deföed
-(
-__hpux
-Ë|| deföed(
-__hpux__
-)
-
-233 
-	#PLATFORM_ID
- "HP-UX"
-
-	)
-
-235 #ñi‡
-deföed
-(
-__HAIKU__
-)
-
-236 
-	#PLATFORM_ID
- "Haiku"
-
-	)
-
-238 #ñi‡
-deföed
-(
-__BeOS
-Ë|| deföed(
-__BEOS__
-Ë|| deföed(
-_BEOS
-)
-
-239 
-	#PLATFORM_ID
- "BeOS"
-
-	)
-
-241 #ñi‡
-deföed
-(
-__QNX__
-Ë|| deföed(
-__QNXNTO__
-)
-
-242 
-	#PLATFORM_ID
- "QNX"
-
-	)
-
-244 #ñi‡
-deföed
-(
-__åu64
-Ë|| deföed(
-_åu64
-Ë|| deföed(
-__TRU64__
-)
-
-245 
-	#PLATFORM_ID
- "Tru64"
-
-	)
-
-247 #ñi‡
-deföed
-(
-__riscos
-Ë|| deföed(
-__riscos__
-)
-
-248 
-	#PLATFORM_ID
- "RISCos"
-
-	)
-
-250 #ñi‡
-deföed
-(
-__söix
-Ë|| deföed(
-__söix__
-Ë|| deföed(
-__SINIX__
-)
-
-251 
-	#PLATFORM_ID
- "SINIX"
-
-	)
-
-253 #ñi‡
-deföed
-(
-__UNIX_SV__
-)
-
-254 
-	#PLATFORM_ID
- "UNIX_SV"
-
-	)
-
-256 #ñi‡
-deföed
-(
-__bsdos__
-)
-
-257 
-	#PLATFORM_ID
- "BSDOS"
-
-	)
-
-259 #ñi‡
-deföed
-(
-_MPRAS
-Ë|| deföed(
-MPRAS
-)
-
-260 
-	#PLATFORM_ID
- "MP-RAS"
-
-	)
-
-262 #ñi‡
-deföed
-(
-__osf
-Ë|| deföed(
-__osf__
-)
-
-263 
-	#PLATFORM_ID
- "OSF1"
-
-	)
-
-265 #ñi‡
-deföed
-(
-_SCO_SV
-Ë|| deföed(
-SCO_SV
-Ë|| deföed(
-sco_sv
-)
-
-266 
-	#PLATFORM_ID
- "SCO_SV"
-
-	)
-
-268 #ñi‡
-deföed
-(
-__u…rix
-Ë|| deföed(
-__u…rix__
-Ë|| deföed(
-_ULTRIX
-)
-
-269 
-	#PLATFORM_ID
- "ULTRIX"
-
-	)
-
-271 #ñi‡
-deföed
-(
-__XENIX__
-Ë|| deföed(
-_XENIX
-Ë|| deföed(
-XENIX
-)
-
-272 
-	#PLATFORM_ID
- "Xíix"
-
-	)
-
-275 
-	#PLATFORM_ID
- ""
-
-	)
-
-284 #i‡
-deföed
-(
-_WIN32
-Ë&& deföed(
-_MSC_VER
-)
-
-285 #i‡
-deföed
-(
-_M_IA64
-)
-
-286 
-	#ARCHITECTURE_ID
- "IA64"
-
-	)
-
-288 #ñi‡
-deföed
-(
-_M_X64
-Ë|| deföed(
-_M_AMD64
-)
-
-289 
-	#ARCHITECTURE_ID
- "x64"
-
-	)
-
-291 #ñi‡
-deföed
-(
-_M_IX86
-)
-
-292 
-	#ARCHITECTURE_ID
- "X86"
-
-	)
-
-294 #ñi‡
-deföed
-(
-_M_ARM
-)
-
-295 
-	#ARCHITECTURE_ID
- "ARM"
-
-	)
-
-297 #ñi‡
-deföed
-(
-_M_MIPS
-)
-
-298 
-	#ARCHITECTURE_ID
- "MIPS"
-
-	)
-
-300 #ñi‡
-deföed
-(
-_M_SH
-)
-
-301 
-	#ARCHITECTURE_ID
- "SHx"
-
-	)
-
-304 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-308 
-	#ARCHITECTURE_ID
- ""
-
-	)
-
-312 
-	#DEC
-(
-n
-) \
-
-313 ('0' + (((
-n
-) / 10000000)%10)), \
-
-314 ('0' + (((
-n
-) / 1000000)%10)), \
-
-315 ('0' + (((
-n
-) / 100000)%10)), \
-
-316 ('0' + (((
-n
-) / 10000)%10)), \
-
-317 ('0' + (((
-n
-) / 1000)%10)), \
-
-318 ('0' + (((
-n
-) / 100)%10)), \
-
-319 ('0' + (((
-n
-) / 10)%10)), \
-
-320 ('0' + ((
-n
-Ë% 10))
-
-	)
-
-323 
-	#HEX
-(
-n
-) \
-
-324 ('0' + ((
-n
-)>>28 & 0xF)), \
-
-325 ('0' + ((
-n
-)>>24 & 0xF)), \
-
-326 ('0' + ((
-n
-)>>20 & 0xF)), \
-
-327 ('0' + ((
-n
-)>>16 & 0xF)), \
-
-328 ('0' + ((
-n
-)>>12 & 0xF)), \
-
-329 ('0' + ((
-n
-)>>8 & 0xF)), \
-
-330 ('0' + ((
-n
-)>>4 & 0xF)), \
-
-331 ('0' + ((
-n
-Ë& 0xF))
-
-	)
-
-334 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-335 c⁄° 
-	göfo_vîsi⁄
-[] = {
-
-338 
-COMPILER_VERSION_MAJOR
-,
-
-339 #ifde‡
-COMPILER_VERSION_MINOR
-
-
-340 '.', 
-COMPILER_VERSION_MINOR
-,
-
-341 #ifde‡
-COMPILER_VERSION_PATCH
-
-
-342 '.', 
-COMPILER_VERSION_PATCH
-,
-
-343 #ifde‡
-COMPILER_VERSION_TWEAK
-
-
-344 '.', 
-COMPILER_VERSION_TWEAK
-,
-
-355 c⁄°* 
-	göfo_∂©f‹m
- = "INFO" ":" "∂©f‹m[" 
-PLATFORM_ID
- "]";
-
-356 c⁄°* 
-	göfo_¨ch
- = "INFO" ":" "¨ch[" 
-ARCHITECTURE_ID
- "]";
-
-362 
-	$maö
-(
-¨gc
-, * 
-¨gv
-[])
-
-364 
-ªquúe
- = 0;
-
-365 
-ªquúe
- +
-öfo_compûî
-[
-¨gc
-];
-
-366 
-ªquúe
- +
-öfo_∂©f‹m
-[
-¨gc
-];
-
-367 #ifde‡
-COMPILER_VERSION_MAJOR
-
-
-368 
-ªquúe
- +
-öfo_vîsi⁄
-[
-¨gc
-];
-
-370 ()
-¨gv
-;
-
-371  
-ªquúe
-;
-
-372 
-	}
-}
-
 	@net/IConnection.h
 
 1 #i‚de‡
@@ -471969,6 +463165,8 @@ LISTEN_SOCKET
 _ïﬁl_mod
 ,
 _msg_h™dÀr
+,
+_ïﬁl_¸óã
 );
 
 51 if(
@@ -472183,6 +463381,8 @@ DATA_SOCKET
 _ïﬁl_mod
 ,
 _msg_h™dÀr
+,
+_ïﬁl_¸óã
 );
 
 99 
@@ -472297,13 +463497,21 @@ EPOLL_SIZE
 VLOG
 (3)<<"epoll_waitÉrror";
 
-127 
+128 if(
+	gfds
+ == 0)
+
+130 
+VLOG
+(3)<<"noÉvent";
+
+134 
 	gi
 =0; i< 
 	gfds
 ; i++) {
 
-128 
+135 
 EPﬁlSockë
  *
 	gïﬁl_sockë
@@ -472317,7 +463525,7 @@ d©a
 ±r
 ;
 
-129 if(
+136 if(
 	gïﬁl_sockë
 ->
 	g_sockë_ty≥
@@ -472327,13 +463535,13 @@ EPﬁlSockë
 LISTEN_SOCKET
 )
 
-131 
+138 
 ac˚±_c⁄n
 (
 ïﬁl_sockë
 );
 
-132 } if(
+139 } if(
 	gïﬁl_sockë
 ->
 	g_sockë_ty≥
@@ -472343,7 +463551,7 @@ EPﬁlSockë
 DATA_SOCKET
 ) {
 
-133 if(
+140 if(
 _evíts
 [
 i
@@ -472357,13 +463565,13 @@ EPOLLHUP
 EPOLLERR
 )) {
 
-134 
+141 
 do_˛o£
 (
 ïﬁl_sockë
 );
 
-135 }if(
+142 }if(
 	g_evíts
 [
 i
@@ -472373,7 +463581,7 @@ i
 	gEPOLLIN
 ) {
 
-136 
+143 
 	gr°
  = 
 ïﬁl_sockë
@@ -472381,17 +463589,17 @@ i
 ⁄_ªad
 ();
 
-137 if(
+144 if(
 	gr°
  == -1)
 
-139 
+146 
 do_˛o£
 (
 ïﬁl_sockë
 );
 
-141 }if(
+148 }if(
 	g_evíts
 [
 i
@@ -472401,7 +463609,7 @@ i
 	gEPOLLOUT
 ) {
 
-142 
+149 
 	gr°
  = 
 ïﬁl_sockë
@@ -472409,17 +463617,17 @@ i
 ⁄_wrôe
 ();
 
-143 if(
+150 if(
 	gr°
  == -1)
 
-145 
+152 
 do_˛o£
 (
 ïﬁl_sockë
 );
 
-148 } if(
+155 } if(
 	gïﬁl_sockë
 ->
 	g_sockë_ty≥
@@ -472429,11 +463637,11 @@ EPﬁlSockë
 CONNECT_SOCKET
 ){
 
-149 
+156 
 VLOG
 (3)<<"Connected Socket...";
 
-155 
+162 
 	gEpﬁlh™dÀr
 ::
 do_˛o£
@@ -472443,19 +463651,25 @@ EPﬁlSockë
 sockë
 ) {
 
-157 if(
+164 if(
 sockë
  =
 NULL
 ){
 
-160 
+167 
+LOG
+(
+INFO
+)<<"close socket";
+
+168 
 ïﬁl_evít
  
 	gev
 ;
 
-161 ::
+169 ::
 ïﬁl_˘l
 (
 _ïﬁl_¸óã
@@ -472469,7 +463683,7 @@ fd
 ev
 );
 
-163 if(
+171 if(
 	gsockë
 ->
 	g_c⁄n_°©e
@@ -472477,7 +463691,7 @@ ev
 CONN_VRIFY
 ){
 
-164 
+172 
 MsgLogöOut
  *
 out
@@ -472485,7 +463699,7 @@ out
 √w
  MsgLoginOut();
 
-165 
+173 
 CMsgEvít
 * 
 	gevít
@@ -472493,7 +463707,7 @@ CMsgEvít
 √w
  CMsgEvent();
 
-166 
+174 
 	gevít
 ->
 	g_˛õ¡_id
@@ -472503,7 +463717,7 @@ sockë
 fd
 ;
 
-167 
+175 
 	gevít
 ->
 	g_msg_ba£
@@ -472511,7 +463725,7 @@ fd
 out
 ;
 
-168 
+176 
 	gevít
 ->
 	g_msg_ty≥
@@ -472519,7 +463733,7 @@ out
 MSG_TYPE_LOGIN_OUT
 ;
 
-169 
+177 
 	g_msg_h™dÀr
 ->
 add_msg_to_queue
@@ -472529,7 +463743,7 @@ evít
 NULL
 );
 
-171 }if(
+179 }if(
 	gsockë
 ->
 	g_c⁄n_°©e
@@ -472537,13 +463751,13 @@ NULL
 CONN_UNVRIFY
 ){
 
-172 
+180 
 dñëe
  
 sockë
 ;
 
-176 
+184 
 	gEpﬁlh™dÀr
 ::
 £nd_d©a
@@ -472557,7 +463771,7 @@ msg
 msg_Àn
 ) {
 
-177 ::
+185 ::
 £nd
 (
 sockë
@@ -472888,30 +464102,18 @@ CONN_UNVRIFY
 ;
 
 24 
-	m_ªcv_buf„r
-.
-ªsize
-(32*1024);
-
-25 
-	m_£nd_buf„r
-.
-ªsize
-(32*1024);
-
-26 
 	m_lock
 .
 öô
 ();
 
-27 
+25 
 	m_msg_di•©chî
  = 
 di•©chî
 ;
 
-30 
+28 
 EPﬁlSockë
 (
 sock_fd
@@ -472923,55 +464125,51 @@ sock_ty≥
 IMsgDi•©chî
 * 
 di•©chî
+,
+ï_fd
 )
 
-32 
+30 
 	mfd
  = 
 sock_fd
 ;
 
-33 
+31 
 	m_sockë_ty≥
  = 
 sock_ty≥
 ;
 
-34 
-	m_ªcv_buf„r
-.
-ªsize
-(32*1024);
-
-35 
-	m_£nd_buf„r
-.
-ªsize
-(32*1024);
-
-36 
+32 
 	m_ïﬁl_mod
  = 
 ïﬁl_mod
 ;
 
-37 
+33 
 	m_lock
 .
 öô
 ();
 
-38 
+34 
 	m_msg_di•©chî
  = 
 di•©chî
 ;
 
-41 ~
+35 
+	m_ïﬁl_fd
+ = 
+ï_fd
+;
+
+38 ~
 EPﬁlSockë
 () {
 
-42 ::
+39 ::
 ïﬁl_˘l
 (
 _ïﬁl_fd
@@ -472983,13 +464181,13 @@ fd
 NULL
 );
 
-43 
+40 
 ˛o£
 (
 fd
 );
 
-46 
+43 
 INT
  
 £t_nodñay
@@ -472999,31 +464197,31 @@ boﬁ
 nodñay
 ) {
 
-47 
+44 
 as£π
 (
 fd
  > 0);
 
-49 
+46 
 INT
  
 	mÊag
 ;
 
-50 i‡(
+47 i‡(
 	mnodñay
 ) {
 
-51 
+48 
 	mÊag
  = 1;
 
-53 
+50 
 	mÊag
  = 0;
 
-56 
+53 
 INT
  
 	mrv
@@ -473039,11 +464237,11 @@ TCP_NODELAY
 Êag
 , (flag));
 
-58  
+55  
 	mrv
 ;
 
-61 
+58 
 INT
  
 £t_ªu£addr
@@ -473053,31 +464251,31 @@ boﬁ
 ªu£
 ) {
 
-62 
+59 
 as£π
 (
 fd
  > 0);
 
-63 
+60 
 INT
  
 	mÊag
 ;
 
-65 i‡(
+62 i‡(
 	mªu£
 ) {
 
-66 
+63 
 	mÊag
  = 1;
 
-68 
+65 
 	mÊag
  = 0;
 
-71 
+68 
 INT
  
 	mrv
@@ -473093,11 +464291,11 @@ SO_REUSEADDR
 Êag
 , (flag));
 
-73  
+70  
 	mrv
 ;
 
-76 
+73 
 INT
  
 £t_blockög
@@ -473107,13 +464305,13 @@ boﬁ
 blockög
 ) {
 
-77 
+74 
 as£π
 (
 fd
  > 0);
 
-79 
+76 
 	mÊag
  = 
 f˙é
@@ -473123,27 +464321,27 @@ fd
 F_GETFL
 );
 
-80 i‡(
+77 i‡(
 	mÊag
  == -1) {
 
-84 i‡(
+81 i‡(
 	mblockög
 ) {
 
-85 
+82 
 	mÊag
  &(~
 O_NONBLOCK
 );
 
-87 
+84 
 	mÊag
  |
 O_NONBLOCK
 ;
 
-90 
+87 
 INT
  
 	mrv
@@ -473157,27 +464355,27 @@ F_SETFL
 Êag
 );
 
-92  
+89  
 	mrv
 ;
 
-95 
+92 
 ⁄_ªad
 ()
 
-97 
+94 
 	mmsg_buf„r
-[2048];
+[2048] = {0};
 
-98 
+95 
 	mÀn
  = 0;
 
-99 
+96 
 	måue
 ){
 
-100 
+97 
 	mÀn
  = 
 ªcv
@@ -473187,21 +464385,21 @@ fd
 msg_buf„r
 ,2048,0);
 
-101 if(
+98 if(
 	mÀn
  ==0) {
 
-102 
+99 
 LOG
 (
 INFO
 )<<"client close socket .......";
 
-107 if(
+104 if(
 	mÀn
  == -1)
 
-109 if(
+106 if(
 î∫o
  !
 EAGAIN
@@ -473209,17 +464407,17 @@ EAGAIN
 EINTR
 )
 
-111 
+108 
 LOG
 (
 ERROR
 )<<"systemÉrror,close client";
 
-117 if(
+114 if(
 	mÀn
  > 0 )
 
-119 
+116 
 	m_ªcv_buf„r
 .
 ö£π
@@ -473233,11 +464431,11 @@ msg_buf„r
 Àn
 );
 
-120 
+117 
 	mmsg_Àn
  = -1;
 
-121 (
+118 (
 	m_ªcv_buf„r
 .
 size
@@ -473251,15 +464449,19 @@ _ªcv_buf„r
 d©a
 (),_recv_buffer.size())) != -1){
 
-122 * 
-msg_d©a
+119 if(
+msg_Àn
+ > 12*1024 || msg_len < 0 )
+
+123 * 
+	mmsg_d©a
  = 
 √w
  [
 msg_Àn
 ];
 
-123 
+124 
 mem˝y
 (
 msg_d©a
@@ -473271,7 +464473,7 @@ d©a
 msg_Àn
 );
 
-124 
+125 
 MsgBa£
 * 
 	mmsg_ba£
@@ -473279,7 +464481,7 @@ MsgBa£
 msg_d©a
 ;
 
-125 
+126 
 CMsgEvít
 * 
 	mevít
@@ -473287,7 +464489,7 @@ CMsgEvít
 √w
  CMsgEvent();
 
-126 
+127 
 	mevít
 ->
 	m_msg_ty≥
@@ -473297,7 +464499,7 @@ msg_ba£
 msg_ty≥
 ;
 
-127 
+128 
 	mevít
 ->
 	m_˛õ¡_id
@@ -473305,7 +464507,7 @@ msg_ty≥
 fd
 ;
 
-128 
+129 
 	mevít
 ->
 	m_msg_ba£
@@ -473313,7 +464515,7 @@ fd
 msg_ba£
 ;
 
-129 
+130 
 	m_ªcv_buf„r
 .
 îa£
@@ -473325,7 +464527,7 @@ begö
 msg_Àn
 );
 
-130 
+131 
 boﬁ
  
 	madd_r°
@@ -473339,29 +464541,29 @@ evít
 this
 );
 
-131 if(
+132 if(
 	madd_r°
  =
 Ál£
 )
 
-133 
+134 
 dñëe
 [] 
 msg_d©a
 ;
 
-144 
+145 
 ⁄_wrôe
 ()
 
-146 if(
+147 if(
 	m_£nd_buf„r
 .
 size
 () <= 0 )
 
-151 
+152 
 	mSc›eLock
 <
 	mMuãxLock
@@ -473371,7 +464573,7 @@ lock
 _lock
 );
 
-154 
+155 
 	mr°
  = ::
 £nd
@@ -473385,11 +464587,11 @@ d©a
 size
 (),0);
 
-155 if(
+156 if(
 	mr°
  < 0 ){
 
-156 if(
+157 if(
 	mî∫o
  =
 EAGAIN
@@ -473399,7 +464601,7 @@ EAGAIN
 EINTR
 ){
 
-163 if(
+164 if(
 	mr°
  < 
 	m_£nd_buf„r
@@ -473407,7 +464609,7 @@ EINTR
 size
 ())
 
-165 
+166 
 mod_ïﬁl_°©us
 (
 EPOLLIN
@@ -473415,7 +464617,7 @@ EPOLLIN
 EPOLLOUT
 );
 
-168 if(
+169 if(
 	mr°
  =
 _£nd_buf„r
@@ -473423,17 +464625,17 @@ _£nd_buf„r
 size
 ())
 
-170 
+171 
 mod_ïﬁl_°©us
 (
 EPOLLIN
 );
 
-172 if(
+173 if(
 	mr°
  != 0){
 
-173 
+174 
 _£nd_buf„r
 .
 îa£
@@ -473443,11 +464645,11 @@ begö
 r°
 );
 
-176  
+177  
 	mr°
 ;
 
-179 
+180 
 £nd_msg
 (c⁄° 
 MsgBa£
@@ -473455,7 +464657,7 @@ MsgBa£
 msg
 )
 
-181  
+182  
 £nd_msg
 ((c⁄° *)
 msg
@@ -473463,7 +464665,7 @@ msg
 msg_size
 );
 
-185 
+186 
 £nd_msg
 (c⁄° * 
 d©a_hód
@@ -473471,7 +464673,7 @@ d©a_hód
 £nd_size
 ){
 
-188 
+189 
 	mSc›eLock
 <
 	mMuãxLock
@@ -473481,13 +464683,13 @@ lock
 _lock
 );
 
-189 if(
+190 if(
 	m_£nd_buf„r
 .
 size
 () > 0 )
 
-191 
+192 
 	m_£nd_buf„r
 .
 ö£π
@@ -473501,7 +464703,7 @@ d©a_hód
 £nd_size
 );
 
-192 
+193 
 mod_ïﬁl_°©us
 (
 EPOLLIN
@@ -473509,7 +464711,7 @@ EPOLLIN
 EPOLLOUT
 );
 
-196 
+197 
 	mr°
  = ::
 £nd
@@ -473521,11 +464723,11 @@ d©a_hód
 £nd_size
 ,0);
 
-197 if(
+198 if(
 	mr°
  < 0 ){
 
-198 if(
+199 if(
 	mî∫o
  =
 EAGAIN
@@ -473535,13 +464737,13 @@ EAGAIN
 EINTR
 ){
 
-205 if(
+206 if(
 	mr°
  < 
 	m£nd_size
 )
 
-207 
+208 
 mod_ïﬁl_°©us
 (
 EPOLLIN
@@ -473549,7 +464751,7 @@ EPOLLIN
 EPOLLOUT
 );
 
-208 
+209 
 	m_£nd_buf„r
 .
 ö£π
@@ -473565,19 +464767,19 @@ r°
 £nd_size
 );
 
-215 
+216 
 mod_ïﬁl_°©us
 (
 °©us
 )
 
-217 
+218 
 ïﬁl_evít
  
 	mevít
  = {0};
 
-218 
+219 
 	mevít
 .
 	mevíts
@@ -473585,7 +464787,7 @@ mod_ïﬁl_°©us
 °©us
 ;
 
-219 
+220 
 	mevít
 .
 	mevíts
@@ -473593,7 +464795,7 @@ mod_ïﬁl_°©us
 _ïﬁl_mod
 ;
 
-220 
+221 
 	mevít
 .
 	md©a
@@ -473603,7 +464805,7 @@ _ïﬁl_mod
 this
 ;
 
-221  ::
+222  ::
 ïﬁl_˘l
 (
 _ïﬁl_fd
@@ -473615,19 +464817,19 @@ fd
 evít
 );
 
-224 
+225 
 add_ïﬁl_evít
 (
 °©us
 )
 
-226 
+227 
 ïﬁl_evít
  
 	mevít
  = {0};
 
-227 
+228 
 	mevít
 .
 	mevíts
@@ -473635,7 +464837,7 @@ add_ïﬁl_evít
 °©us
 ;
 
-228 
+229 
 	mevít
 .
 	mevíts
@@ -473643,7 +464845,7 @@ add_ïﬁl_evít
 _ïﬁl_mod
 ;
 
-229 
+230 
 	mevít
 .
 	md©a
@@ -473653,7 +464855,7 @@ _ïﬁl_mod
 this
 ;
 
-230  ::
+231  ::
 ïﬁl_˘l
 (
 _ïﬁl_fd
@@ -473665,7 +464867,7 @@ fd
 evít
 );
 
-233 
+234 
 £t_˛õ¡_ù_addªss
 (
 sockaddr_ö
@@ -473673,13 +464875,13 @@ sockaddr_ö
 sö
 ){
 
-234 
+235 
 	m_sö
  = 
 sö
 ;
 
-235 
+236 
 	m_ù_°r
  = 
 öë_¡ﬂ
@@ -473689,7 +464891,7 @@ _sö
 sö_addr
 );
 
-236 
+237 
 	m_p‹t
  =
 _sö
@@ -473697,17 +464899,17 @@ _sö
 sö_p‹t
 ;
 
-239 
+240 
 sockaddr_ö
  
 gë_˛õ¡_ù_addªss
 (){
 
-240  
+241  
 	m_sö
 ;
 
-243 
+244 
 	m°d
 ::
 °rög
@@ -473715,15 +464917,15 @@ gë_˛õ¡_ù_addªss
 gë_˛õ¡_ù_°r
 (){
 
-244  
+245  
 _ù_°r
 ;
 
-247 
+248 
 dump_˛õ¡_ù_öfo
 (){
 
-248 
+249 
 LOG
 (
 INFO
@@ -473735,27 +464937,27 @@ c_°r
 	m_p‹t
 ;
 
-251 
+252 
 upd©e_sockë_°©e
 (
 °©e
 ){
 
-252 
+253 
 	m_c⁄n_°©e
  = 
 °©e
 ;
 
-255 
+256 
 gë_sockë_°©e
 (){
 
-256  
+257  
 	m_c⁄n_°©e
 ;
 
-259 
+260 
 check_msg_com∂ëe
 (*
 d©a_hód
@@ -473763,7 +464965,7 @@ d©a_hód
 size
 )
 
-261 
+262 
 MsgBa£
 * 
 	mmsg_hód
@@ -473771,7 +464973,7 @@ MsgBa£
 d©a_hód
 ;
 
-262 if(
+263 if(
 	msize
  >
 msg_hód
@@ -473779,41 +464981,41 @@ msg_hód
 msg_size
 )
 
-264  
+265  
 msg_hód
 ->
 msg_size
 ;
 
-269 
+270 
 EPOLL_SOCKET_FD
  
 	m_ïﬁl_fd
 ;
 
-270 
+271 
 	m_ïﬁl_mod
-;
-
-271 
-INT
- 
-	mfd
 ;
 
 272 
 INT
  
-	m_sockë_ty≥
+	mfd
 ;
 
 273 
 INT
  
-	m_c⁄n_°©e
+	m_sockë_ty≥
 ;
 
 274 
+INT
+ 
+	m_c⁄n_°©e
+;
+
+275 
 	m°d
 ::
 °rög
@@ -473821,28 +465023,20 @@ INT
 _ù_°r
 ;
 
-275 
+276 
 	m_p‹t
 ;
 
-276 
+277 
 MuãxLock
  
 	m_lock
 ;
 
-277 
+278 
 sockaddr_ö
  
 	m_sö
-;
-
-278 
-	m°d
-::
-ve˘‹
-<> 
-_ªcv_buf„r
 ;
 
 279 
@@ -473850,10 +465044,18 @@ _ªcv_buf„r
 ::
 ve˘‹
 <> 
-_£nd_buf„r
+_ªcv_buf„r
 ;
 
 280 
+	m°d
+::
+ve˘‹
+<> 
+_£nd_buf„r
+;
+
+281 
 IMsgDi•©chî
 * 
 	m_msg_di•©chî
@@ -476442,6 +467644,778 @@ INFO
 ();
 
 70 
+	}
+}
+
+	@soccer_ai/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
+
+4 #i‚de‡
+__˝lu•lus
+
+
+8 #i‡
+deföed
+(
+__COMO__
+)
+
+9 
+	#COMPILER_ID
+ "Comóu"
+
+	)
+
+11 #ñi‡
+deföed
+(
+__INTEL_COMPILER
+Ë|| deföed(
+__ICC
+)
+
+12 
+	#COMPILER_ID
+ "I¡ñ"
+
+	)
+
+14 #ñi‡
+deföed
+(
+__˛™g__
+)
+
+15 
+	#COMPILER_ID
+ "Cœng"
+
+	)
+
+17 #ñi‡
+deföed
+(
+__BORLANDC__
+)
+
+18 
+	#COMPILER_ID
+ "B‹œnd"
+
+	)
+
+20 #ñi‡
+deföed
+(
+__WATCOMC__
+)
+
+21 
+	#COMPILER_ID
+ "W©com"
+
+	)
+
+23 #ñi‡
+deföed
+(
+__SUNPRO_CC
+)
+
+24 
+	#COMPILER_ID
+ "SunPro"
+
+	)
+
+26 #ñi‡
+deföed
+(
+__HP_aCC
+)
+
+27 
+	#COMPILER_ID
+ "HP"
+
+	)
+
+29 #ñi‡
+deföed
+(
+__DECCXX
+)
+
+30 
+	#COMPILER_ID
+ "Com∑q"
+
+	)
+
+32 #ñi‡
+deföed
+(
+__IBMCPP__
+)
+
+33 #i‡
+deföed
+(
+__COMPILER_VER__
+)
+
+34 
+	#COMPILER_ID
+ "zOS"
+
+	)
+
+35 #ñi‡
+__IBMCPP__
+ >= 800
+
+36 
+	#COMPILER_ID
+ "XL"
+
+	)
+
+38 
+	#COMPILER_ID
+ "VisuÆAge"
+
+	)
+
+41 #ñi‡
+deföed
+(
+__PGI
+)
+
+42 
+	#COMPILER_ID
+ "PGI"
+
+	)
+
+44 #ñi‡
+deföed
+(
+__PATHSCALE__
+)
+
+45 
+	#COMPILER_ID
+ "P©hSˇÀ"
+
+	)
+
+47 #ñi‡
+deföed
+(
+_CRAYC
+)
+
+48 
+	#COMPILER_ID
+ "Cøy"
+
+	)
+
+50 #ñi‡
+deföed
+(
+__TI_COMPILER_VERSION__
+)
+
+51 
+	#COMPILER_ID
+ "TI_DSP"
+
+	)
+
+53 #ñi‡
+deföed
+(
+__SCO_VERSION__
+)
+
+54 
+	#COMPILER_ID
+ "SCO"
+
+	)
+
+56 #ñi‡
+deföed
+(
+__GNUC__
+)
+
+57 
+	#COMPILER_ID
+ "GNU"
+
+	)
+
+59 #ñi‡
+deföed
+(
+_MSC_VER
+)
+
+60 
+	#COMPILER_ID
+ "MSVC"
+
+	)
+
+62 #ñi‡
+deföed
+(
+__ADSPBLACKFIN__
+Ë|| deföed(
+__ADSPTS__
+Ë|| deföed(
+__ADSP21000__
+)
+
+65 
+	#COMPILER_ID
+ "ADSP"
+
+	)
+
+67 #ñi‡
+deföed
+(
+_SGI_COMPILER_VERSION
+Ë|| deföed(
+_COMPILER_VERSION
+)
+
+68 
+	#COMPILER_ID
+ "MIPS¥o"
+
+	)
+
+73 #ñi‡
+deföed
+(
+__sgi
+)
+
+74 
+	#COMPILER_ID
+ "MIPS¥o"
+
+	)
+
+76 #ñi‡
+deföed
+(
+__hpux
+Ë|| deföed(
+__hpua
+)
+
+77 
+	#COMPILER_ID
+ "HP"
+
+	)
+
+80 
+	#COMPILER_ID
+ ""
+
+	)
+
+88 c⁄°* 
+	göfo_compûî
+ = "INFO" ":" "compûî[" 
+COMPILER_ID
+ "]";
+
+91 #i‡
+deföed
+(
+__löux
+Ë|| deföed(
+__löux__
+Ë|| deföed(
+löux
+)
+
+92 
+	#PLATFORM_ID
+ "Löux"
+
+	)
+
+94 #ñi‡
+deföed
+(
+__CYGWIN__
+)
+
+95 
+	#PLATFORM_ID
+ "Cygwö"
+
+	)
+
+97 #ñi‡
+deföed
+(
+__MINGW32__
+)
+
+98 
+	#PLATFORM_ID
+ "MöGW"
+
+	)
+
+100 #ñi‡
+deföed
+(
+__APPLE__
+)
+
+101 
+	#PLATFORM_ID
+ "D¨wö"
+
+	)
+
+103 #ñi‡
+deföed
+(
+_WIN32
+Ë|| deföed(
+__WIN32__
+Ë|| deföed(
+WIN32
+)
+
+104 
+	#PLATFORM_ID
+ "Wödows"
+
+	)
+
+106 #ñi‡
+deföed
+(
+__FªeBSD__
+Ë|| deföed(
+__FªeBSD
+)
+
+107 
+	#PLATFORM_ID
+ "FªeBSD"
+
+	)
+
+109 #ñi‡
+deföed
+(
+__NëBSD__
+Ë|| deföed(
+__NëBSD
+)
+
+110 
+	#PLATFORM_ID
+ "NëBSD"
+
+	)
+
+112 #ñi‡
+deföed
+(
+__O≥nBSD__
+Ë|| deföed(
+__OPENBSD
+)
+
+113 
+	#PLATFORM_ID
+ "O≥nBSD"
+
+	)
+
+115 #ñi‡
+deföed
+(
+__sun
+Ë|| deföed(
+sun
+)
+
+116 
+	#PLATFORM_ID
+ "SunOS"
+
+	)
+
+118 #ñi‡
+deföed
+(
+_AIX
+Ë|| deföed(
+__AIX
+Ë|| deföed(
+__AIX__
+Ë|| deföed(
+__aix
+Ë|| deföed(
+__aix__
+)
+
+119 
+	#PLATFORM_ID
+ "AIX"
+
+	)
+
+121 #ñi‡
+deföed
+(
+__sgi
+Ë|| deföed(
+__sgi__
+Ë|| deföed(
+_SGI
+)
+
+122 
+	#PLATFORM_ID
+ "IRIX"
+
+	)
+
+124 #ñi‡
+deföed
+(
+__hpux
+Ë|| deföed(
+__hpux__
+)
+
+125 
+	#PLATFORM_ID
+ "HP-UX"
+
+	)
+
+127 #ñi‡
+deföed
+(
+__HAIKU
+Ë|| deföed(
+__HAIKU__
+Ë|| deföed(
+_HAIKU
+)
+
+128 
+	#PLATFORM_ID
+ "Haiku"
+
+	)
+
+133 #ñi‡
+deföed
+(
+__BeOS
+Ë|| deföed(
+__BEOS__
+Ë|| deföed(
+_BEOS
+)
+
+134 
+	#PLATFORM_ID
+ "BeOS"
+
+	)
+
+136 #ñi‡
+deföed
+(
+__QNX__
+Ë|| deföed(
+__QNXNTO__
+)
+
+137 
+	#PLATFORM_ID
+ "QNX"
+
+	)
+
+139 #ñi‡
+deföed
+(
+__åu64
+Ë|| deföed(
+_åu64
+Ë|| deföed(
+__TRU64__
+)
+
+140 
+	#PLATFORM_ID
+ "Tru64"
+
+	)
+
+142 #ñi‡
+deföed
+(
+__riscos
+Ë|| deföed(
+__riscos__
+)
+
+143 
+	#PLATFORM_ID
+ "RISCos"
+
+	)
+
+145 #ñi‡
+deföed
+(
+__söix
+Ë|| deföed(
+__söix__
+Ë|| deföed(
+__SINIX__
+)
+
+146 
+	#PLATFORM_ID
+ "SINIX"
+
+	)
+
+148 #ñi‡
+deföed
+(
+__UNIX_SV__
+)
+
+149 
+	#PLATFORM_ID
+ "UNIX_SV"
+
+	)
+
+151 #ñi‡
+deföed
+(
+__bsdos__
+)
+
+152 
+	#PLATFORM_ID
+ "BSDOS"
+
+	)
+
+154 #ñi‡
+deföed
+(
+_MPRAS
+Ë|| deföed(
+MPRAS
+)
+
+155 
+	#PLATFORM_ID
+ "MP-RAS"
+
+	)
+
+157 #ñi‡
+deföed
+(
+__osf
+Ë|| deföed(
+__osf__
+)
+
+158 
+	#PLATFORM_ID
+ "OSF1"
+
+	)
+
+160 #ñi‡
+deföed
+(
+_SCO_SV
+Ë|| deföed(
+SCO_SV
+Ë|| deföed(
+sco_sv
+)
+
+161 
+	#PLATFORM_ID
+ "SCO_SV"
+
+	)
+
+163 #ñi‡
+deföed
+(
+__u…rix
+Ë|| deföed(
+__u…rix__
+Ë|| deföed(
+_ULTRIX
+)
+
+164 
+	#PLATFORM_ID
+ "ULTRIX"
+
+	)
+
+166 #ñi‡
+deföed
+(
+__XENIX__
+Ë|| deföed(
+_XENIX
+Ë|| deföed(
+XENIX
+)
+
+167 
+	#PLATFORM_ID
+ "Xíix"
+
+	)
+
+170 
+	#PLATFORM_ID
+ ""
+
+	)
+
+179 #i‡
+deföed
+(
+_WIN32
+Ë&& deföed(
+_MSC_VER
+)
+
+180 #i‡
+deföed
+(
+_M_IA64
+)
+
+181 
+	#ARCHITECTURE_ID
+ "IA64"
+
+	)
+
+183 #ñi‡
+deföed
+(
+_M_X64
+Ë|| deföed(
+_M_AMD64
+)
+
+184 
+	#ARCHITECTURE_ID
+ "x64"
+
+	)
+
+186 #ñi‡
+deföed
+(
+_M_IX86
+)
+
+187 
+	#ARCHITECTURE_ID
+ "X86"
+
+	)
+
+190 
+	#ARCHITECTURE_ID
+ ""
+
+	)
+
+194 
+	#ARCHITECTURE_ID
+ ""
+
+	)
+
+201 c⁄°* 
+	göfo_∂©f‹m
+ = "INFO" ":" "∂©f‹m[" 
+PLATFORM_ID
+ "]";
+
+202 c⁄°* 
+	göfo_¨ch
+ = "INFO" ":" "¨ch[" 
+ARCHITECTURE_ID
+ "]";
+
+208 
+	$maö
+(
+¨gc
+, * 
+¨gv
+[])
+
+210 
+ªquúe
+ = 0;
+
+211 
+ªquúe
+ +
+öfo_compûî
+[
+¨gc
+];
+
+212 
+ªquúe
+ +
+öfo_∂©f‹m
+[
+¨gc
+];
+
+213 ()
+¨gv
+;
+
+214  
+ªquúe
+;
+
+215 
 	}
 }
 
@@ -526983,285 +518957,289 @@ _SOCCER_TEAM_H_
 	~"../game_£rvî/GameC⁄figM™age.h
 "
 
-13 
+12 
+	~<Æg‹ôhm
+>
+
+14 
 ˛ass
  
 	gSoc˚rPœyî
 ;
 
-14 
+15 
 ˛ass
  
 	gSoc˚rM©ch
 ;
 
-18 
+19 
 	mGOAL_ATTR_ANTIC
 ,
 
-19 
+20 
 	mGOAL_ATTR_CONCENTRATION
 ,
 
-20 
+21 
 	mGOAL_ATTR_AERIAL
 ,
 
-21 
+22 
 	mGOAL_ATTR_JUMP
 ,
 
-22 
+23 
 	mGOAL_ATTR_DETERMINE
 ,
 
-23 
+24 
 	mGOAL_ATTR_HANDLE
 
 
-28 
+29 
 	mSPEAK_WAIT_FOR
 ,
 
-29 
+30 
 	mSPEAK_MORE_PASS
 ,
 
-30 
+31 
 	mSPEAK_MORE_CORSS
 ,
 
-31 
+32 
 	mSPEAK_MORE_EMPTY_PASS
 ,
 
-32 
+33 
 	mSPEAK_MORE_FOOT_PASS
 ,
 
-33 
+34 
 	mSPEAK_MORE_SPACE
 ,
 
-34 
+35 
 	mSPEAK_LESS_SPACE
 ,
 
-35 
+36 
 	mSPEAK_ATTACK_ATTACK
 ,
 
-36 
+37 
 	mSPEAK_DEFEND_ATTACK
 ,
 
-37 
+38 
 	mSPEAK_KILL_KICK
 ,
 
-38 
+39 
 	mSPEAK_GENTLEMEN
 ,
 
-39 
+40 
 	mSPEAK_END
 
 
-46 
+47 
 	mTACTIC_MIDDLE_PUSH
  = 1,
 
-47 
+48 
 	mTACTIC_LEFT_ATTACK
 ,
 
-48 
+49 
 	mTACTIC_RIGHT_ATTACK
 ,
 
-49 
+50 
 	mTACTIC_BOTH_ATTACK
 ,
 
-50 
+51 
 	mTACTIC_ALL_ATTACK
 ,
 
-51 
+52 
 	mTACTIC_ALL_DEFEND
 ,
 
-52 
+53 
 	mTACTIC_FRONT_TACLE
 ,
 
-53 
+54 
 	mTACTIC_BACK_INSERT
 ,
 
-54 
+55 
 	mTACTIC_QUICK_STRIKE_BACK
 ,
 
-55 
+56 
 	mTACTIC_MIDDLE_CTRL
 ,
 
-56 
+57 
 	mTACTIC_FAKE_OUT
 ,
 
-57 
+58 
 	mTACTIC_STONE_STRIKE_BACK
 ,
 
-58 
+59 
 	mTACTIC_UNIVERSE_CTRL
 ,
 
-59 
+60 
 	mTACTIC_GALAXY_QUICK_ATTACK
 ,
 
-60 
+61 
 	mTACTIC_ATT_DEF
 
 
-61 }
+62 }
 	tTEAM_SKILL_TYPE
 ;
 
-64 
+65 
 	sA˘i⁄Iãm
 
 
-68 
+69 
 	mGOAL
 ,
 
-69 
+70 
 	mSHOOT
 ,
 
-70 
+71 
 	mCROSS
 ,
 
-71 
+72 
 	mPASS
 ,
 
-72 
+73 
 	mBEBREAK
 ,
 
-73 
+74 
 	mBESLIDE
 ,
 
-74 
+75 
 	mPS_RED_CARD
 ,
 
-75 
+76 
 	mPS_YELLOW_CARD
 ,
 
-76 
+77 
 	mPS_INJ
 ,
 
-77 
+78 
 	mGOAL_PENALTY
 ,
 
-78 
+79 
 	mGOAL_FREE
 ,
 
-79 
+80 
 	mSHOOT_OUTSIDE
 
 
-80 } 
+81 } 
 	tTy≥
 ;
 
-82 
+83 
 	muni⁄_pid
 ;
 
-83 
+84 
 Ty≥
  
 	mty≥
 ;
 
-86 
+87 
 	sGK_Pos_Iãm
 
 
-88 
+89 
 Ve˘‹2D
  
 	m_pos
 ;
 
-89 
+90 
 	m_time_sˇÀ
 ;
 
-94 
+95 
 	mLOSER_MODE
  = 0,
 
-95 
+96 
 	mDS_MODE
  = 1,
 
-96 
+97 
 	mGOD_MODE
  = 2
 
-97 }
+98 }
 	tTóm_mode
 ;
 
-99 
+100 
 	sTómSkûl
 {
 
-100 
+101 
 	mè˘ic_id
 ;
 
-101 
+102 
 	mch™˚
 ;
 
-104 
+105 
 	sTómCmpInfo
 {
 
-105 
+106 
 	mpid
 ;
 
-106 
+107 
 	m›_pid
 ;
 
-107 
+108 
 	mty≥
 ;
 
-108 
+109 
 boﬁ
  
 	mr°
 ;
 
-112 
+113 
 ˛ass
  
 	gSoc˚rTóm
@@ -527273,11 +519251,11 @@ GameE¡ôyBa£
 Soc˚rTóm
 >
 
-114 íum { 
+115 íum { 
 PLAYER_COUNT
  = 10 };
 
-116 
+117 
 ‰õnd
  
 ˛ass
@@ -527285,7 +519263,7 @@ PLAYER_COUNT
 	gSoc˚rPœyî
 ;
 
-120 
+121 
 	gSèã
 <
 	gSoc˚rTóm
@@ -527293,7 +519271,7 @@ PLAYER_COUNT
 	g_°©e
 ;
 
-121 
+122 
 	g°d
 ::
 m≠
@@ -527301,61 +519279,61 @@ m≠
 	ggﬂl_©å
 ;
 
-123 
+124 
 Soc˚rPœyî
  *
 	g_ª˚ivög_∂ayî
 ;
 
-124 
+125 
 Soc˚rPœyî
  *
 	g_˛o£°_∂ayî
 ;
 
-125 
+126 
 Soc˚rPœyî
  *
 	g_c⁄åﬁlög_∂ayî
 ;
 
-126 
+127 
 Soc˚rPœyî
  *
 	g_suµ‹tög_∂ayî
 ;
 
-128 
+129 
 Soc˚rPœyî
  *
 	g_m¨kög_∂ayî
 ;
 
-129 
+130 
 Soc˚rPœyî
  *
 	g_mödög_∂ayî
 ;
 
-130 
+131 
 Soc˚rPœyî
  *
 	g_bªakög_∂ayî
 ;
 
-131 
+132 
 Soc˚rPœyî
  *
 	g_aú_de„nd_∂ayî
 ;
 
-132 
+133 
 Soc˚rPœyî
  *
 	g_∑ss_de„nd_∂ayî
 ;
 
-134 
+135 
 	g°d
 ::
 	tve˘‹
@@ -527365,7 +519343,7 @@ Soc˚rPœyî
 	tPLAYER_VEC
 ;
 
-135 
+136 
 	g°d
 ::
 	tve˘‹
@@ -527377,7 +519355,7 @@ Soc˚rPœyî
 	tPLAYER_ITR
 ;
 
-137 
+138 
 	g°d
 ::
 ve˘‹
@@ -527387,7 +519365,7 @@ Soc˚rPœyî
 _∂ayîs_⁄_pôch
 ;
 
-138 
+139 
 	g°d
 ::
 m≠
@@ -527397,7 +519375,7 @@ m≠
 	g_ãam_skûls
 ;
 
-140 
+141 
 	g°d
 ::
 	t∑ú
@@ -527407,7 +519385,7 @@ m≠
 	tPAIR_PLAYER_DIS
 ;
 
-142 
+143 
 	g°d
 ::
 m≠
@@ -527417,39 +519395,39 @@ m≠
 	g_∂ayîs_di°™˚_to_bÆl_m≠
 ;
 
-143 
+144 
 MoveDeföe
  *
 	g_move_deföe
 ;
 
-144 
+145 
 AâackOrdî
  *
 	g_‹dî
 ;
 
-145 
+146 
 Soc˚rM©ch
  *
 	g_m©ch
 ;
 
-146 
+147 
 Soc˚rF‹m©i⁄
  
 	g_f‹m©i⁄
 ;
 
-147 
+148 
 	g_cuºít_f‹m©i⁄_id
 ;
 
-148 
+149 
 	gcuºít_move_id
 ;
 
-150 
+151 
 	g°d
 ::
 ve˘‹
@@ -527459,13 +519437,13 @@ A˘i⁄Iãm
 _a˘i⁄_li°
 ;
 
-151 
+152 
 Soc˚rTóm
  *
 	g_›_ãam
 ;
 
-153 
+154 
 	g°d
 ::
 li°
@@ -527475,55 +519453,55 @@ GK_Pos_Iãm
 _gk_pos_li°
 ;
 
-154 *
+155 *
 	g∂ayî_m¨k_Êag
 ;
 
-156 
+157 
 Soc˚rPœyî
  *
 	g_gk_∂ayî
 ;
 
-157 
+158 
 	g_ãam_Àvñ
 ;
 
-158 
+159 
 	g_kick_off_∂ayî
 ;
 
-159 
+160 
 	g_kick_suµ‹t_∂ayî
 ;
 
-161 
+162 
 	sc‹n‹_∂ayî
 
 
-163 
+164 
 c‹n‹_∂ayî
 ()
 
-165 
+166 
 	gthis
 ->
 	gkick_suµ‹t_∂ayî
  = 0;
 
-166 
+167 
 	gthis
 ->
 	gx
  = 0;
 
-167 
+168 
 	gthis
 ->
 	gy
  = 0;
 
-170 
+171 
 c‹n‹_∂ayî
 (
 ki
@@ -527533,7 +519511,7 @@ x
 y
 )
 
-172 
+173 
 	gthis
 ->
 	gkick_suµ‹t_∂ayî
@@ -527541,7 +519519,7 @@ y
 ki
 ;
 
-173 
+174 
 	gthis
 ->
 	gx
@@ -527549,7 +519527,7 @@ ki
 x
 ;
 
-174 
+175 
 	gthis
 ->
 	gy
@@ -527557,19 +519535,19 @@ x
 y
 ;
 
-177 
+178 
 	gkick_suµ‹t_∂ayî
 ;
 
-178 
+179 
 	gx
 ;
 
-179 
+180 
 	gy
 ;
 
-182 
+183 
 	g°d
 ::
 m≠
@@ -527579,39 +519557,39 @@ m≠
 	g_c‹n‹_m≠
 ;
 
-183 
+184 
 	g_‰ì
 ;
 
-184 
+185 
 	g_c‹n‹
 ;
 
-185 
+186 
 	g_≥«…y
 ;
 
-186 
+187 
 	g_c‹n‹_è˘iˇl
-;
-
-187 
-boﬁ
- 
-	g_ˇrd_ˇn_avoid_offside
 ;
 
 188 
 boﬁ
  
+	g_ˇrd_ˇn_avoid_offside
+;
+
+189 
+boﬁ
+ 
 	g_ˇrd_ˇn_f‹˚_offside
 ;
 
-189 
+190 
 	g_©t_pid
 ;
 
-190 
+191 
 	g°d
 ::
 m≠
@@ -527619,127 +519597,127 @@ m≠
 	g_c⁄s_ef„˘_m≠
 ;
 
-191 
+192 
 Ve˘‹2D
  
 	g_∂ayî_pos
 ;
 
-192 
+193 
 	g_auto_ch™ge_cou¡
 ;
 
-193 
+194 
 boﬁ
  
 	g_who_kick_off
 ;
 
-196 
+197 
 	g_löe_numbî
 [10];
 
-199 
+200 
 	g_back_löe
 ;
 
-202 
+203 
 	g_f‹m©i⁄_Àvñ
 ;
 
-204 
+205 
 	g_©t_vÆue
 ;
 
-205 
+206 
 	g_def_vÆue
 ;
 
-208 
+209 
 	g_è˘ic_u£d_id
 ;
 
-209 
+210 
 	g_œ°_round_è˘ic_u£d
 ;
 
-212 
+213 
 	g_pos£ssi⁄
 ;
 
-214 
+215 
 	g_has_offside
 ;
 
-215 
+216 
 Soc˚rPœyî
  *
 	g_offside_∂ayî
 ;
 
-216 
+217 
 	g_ãam_˛ub_id
 ;
 
-217 
+218 
 boﬁ
  
 	g_is_©t_ãam
 ;
 
-219 
+220 
 Tóm_mode
  
 	g_ãam_mode
 ;
 
-221 
+222 
 	g_√wbõ_°©e
 ;
 
-223 
+224 
 	g_is_round_add
 ;
 
-226 
+227 
 	g_move_com∂ex
 ;
 
-228 
+229 
 boﬁ
  
 	g_is_©t_side
 ;
 
-230 
+231 
 	g_tŸÆ_©èck_cou¡
 ;
 
-233 
+234 
 	g_t›_©èck_mp
 ;
 
-234 
+235 
 	g_t›_def_mp
 ;
 
-237 
+238 
 	g_ãam_©èck_mp
 ;
 
-238 
+239 
 	g_ãam_def_mp
 ;
 
-240 
+241 
 	g_skûl_suc˚ss_øã
 ;
 
-242 
+243 
 	gpublic
 :
 
-243 
+244 
 Soc˚rTóm
 (
 id
@@ -527749,29 +519727,29 @@ Soc˚rM©ch
 m©ch
 );
 
-244 
+245 
 	gvútuÆ
  ~
 Soc˚rTóm
 ();
 
-246 
+247 
 gë_tŸÆ_©ètck_cou¡
 (){
 
-247  
+248  
 	gthis
 ->
 	g_tŸÆ_©èck_cou¡
 ;
 
-250 
+251 
 £t_tŸÆ_©èck_cou¡
 (
 vÆue
 ){
 
-251 
+252 
 	gthis
 ->
 	g_tŸÆ_©èck_cou¡
@@ -527779,7 +519757,7 @@ vÆue
 vÆue
 ;
 
-254 
+255 
 £t_©t_‹_de„nd
 (
 boﬁ
@@ -527787,23 +519765,23 @@ boﬁ
 is_©t
 ){
 
-255 
+256 
 	g_is_©t_side
  = 
 is_©t
 ;
 
-258 
+259 
 boﬁ
  
 is_©t_side
 (){
 
-259  
+260  
 	g_is_©t_side
 ;
 
-262 
+263 
 £t_∂ayî_pos
 (
 x
@@ -527811,7 +519789,7 @@ x
 y
 )
 
-264 
+265 
 	g_∂ayî_pos
 .
 	gx
@@ -527819,7 +519797,7 @@ y
 x
 ;
 
-265 
+266 
 	g_∂ayî_pos
 .
 	gy
@@ -527827,7 +519805,7 @@ x
 y
 ;
 
-268 
+269 
 £t_who_kick_off
 (
 boﬁ
@@ -527835,57 +519813,57 @@ boﬁ
 i
 )
 
-270 
+271 
 	g_who_kick_off
  = 
 i
 ;
 
-273 
+274 
 boﬁ
  
 gë_who_kick_off
 ()
 
-275  
+276  
 	g_who_kick_off
 ;
 
-278 
+279 
 £t_ãam_sc‹e
 (
 so¸e
 )
 
-280 
+281 
 	g_sc‹e
  = 
 so¸e
 ;
 
-283 
+284 
 add_ãam_sc‹e
 (){
 
-284 
+285 
 	g_sc‹e
 ++;
 
-286 
+287 
 	gthis
 ->
 	g_skûl_Ω_¥
  = 0;
 
-289 
+290 
 gë_ãam_s¸€
 ()
 
-291  
+292  
 	g_sc‹e
 ;
 
-294 
+295 
 £t_‰ì_c‹n‹_≥«…y
 (
 ‰ì
@@ -527895,31 +519873,31 @@ c‹n‹
 ≥«…y
 )
 
-296 
+297 
 	g_‰ì
  = 
 ‰ì
 ;
 
-297 
+298 
 	g_c‹n‹
  = 
 c‹n‹
 ;
 
-298 
+299 
 	g_≥«…y
  = 
 ≥«…y
 ;
 
-301 
+302 
 £t_ãam_©èck_mp
 (
 ©t_mp
 ){
 
-302 
+303 
 	gthis
 ->
 	g_ãam_©èck_mp
@@ -527927,33 +519905,33 @@ c‹n‹
 ©t_mp
 ;
 
-305 
+306 
 gë_ãam_©èck_mp
 (){
 
-306  
+307  
 	gthis
 ->
 	g_ãam_©èck_mp
 ;
 
-309 
+310 
 gë_ãam_def_mp
 (){
 
-310  
+311  
 	gthis
 ->
 	g_ãam_def_mp
 ;
 
-313 
+314 
 £t_ãam_def_mp
 (
 def_mp
 ){
 
-314 
+315 
 	gthis
 ->
 	g_ãam_def_mp
@@ -527961,17 +519939,17 @@ def_mp
 def_mp
 ;
 
-317 
+318 
 Soc˚rPœyî
 * 
 gë_mödög_∂ayî
 (){
 
-318  
+319  
 	g_mödög_∂ayî
 ;
 
-321 
+322 
 £t_›_ãam
 (
 Soc˚rTóm
@@ -527983,41 +519961,41 @@ Soc˚rTóm
 	g_›_ãam
  = op_team;}
 
-323 
+324 
 upd©e_∂ayîs
 ();
 
-324 
+325 
 öô_f‹m©i⁄
 (
 posôi⁄
 []);
 
-325 
+326 
 def_shoŸout_≥«…y
 (
 posôi⁄
 []);
 
-326 
+327 
 ©t_shoŸout_≥«…y
 (
 posôi⁄
 []);
 
-327 
+328 
 def_≥«…y_kick_off
 (
 posôi⁄
 []);
 
-328 
+329 
 ©t_≥«…y_kick_off
 (
 posôi⁄
 []);
 
-329 
+330 
 ©t_c‹√r_kick_off
 (
 posôi⁄
@@ -528025,7 +520003,7 @@ posôi⁄
 Êags
 );
 
-330 
+331 
 £t_c‹n‹_kick_suµ‹t_∂ayî
 (
 Êags
@@ -528037,7 +520015,7 @@ x
 y
 );
 
-331 
+332 
 gë_ãam_skûl_suc˚ss_øã
 (
 skûl_id
@@ -528045,7 +520023,7 @@ skûl_id
 •ók_ty≥
 );
 
-332 
+333 
 def_c‹√r_kick_off
 (
 posôi⁄
@@ -528053,13 +520031,13 @@ posôi⁄
 Êags
 );
 
-333 
+334 
 ©t_‰ì_kick_off
 (
 posôi⁄
 []);
 
-334 
+335 
 kick_off_∂ayî
 (
 pid
@@ -528069,13 +520047,13 @@ posôi⁄_id
 posôi⁄
 []);
 
-335 
+336 
 def_‰ì_kick_off
 (
 posôi⁄
 []);
 
-336 
+337 
 Ve˘‹2D
  
 gë_‰ì_kick_off_wÆl_x_y
@@ -528085,61 +520063,61 @@ v
 d
 );
 
-337 
+338 
 ©t_gﬂl_kick_off
 (
 posôi⁄
 []);
 
-340 
+341 
 def_n‹mÆ_kick_off
 (
 posôi⁄
 []);
 
-341 
+342 
 ©t_n‹mÆ_kick_off
 (
 posôi⁄
 []);
 
-344 
+345 
 ©t_de„nd_©t_kick_off
 ();
 
-345 
+346 
 def_de„nd_©t_kick_off
 ([]);
 
-348 
+349 
 def_middÀ_kick_off
 (
 posôi⁄
 []);
 
-349 
+350 
 check_posôi⁄
 (
 posôi⁄
 );
 
-350 
+351 
 ¥ï¨e_f‹_kick_off
 ();
 
-351 
+352 
 upd©e_f‹m©i⁄
 ();
 
-352 
+353 
 adju°_‹dî
 ();
 
-353 
+354 
 awake_‰ez⁄_∂ayî
 ();
 
-354 
+355 
 fix_f‹m©i⁄_by_move_‹dî
 (
 move_typ
@@ -528153,29 +520131,29 @@ boﬁ
 ªsvî£
 );
 
-355 
+356 
 add_Áke_‹dî
 ();
 
-356 
+357 
 add_c‹√r_‹dî
 (
 Êags
 );
 
-357 
+358 
 add_n‹mÆ_‹dî
 ();
 
-358 
+359 
 add_≥«…y_‹dî
 ();
 
-359 
+360 
 add_‰ì_‹dî
 ();
 
-360 
+361 
 pick_∂ayî_by_pos
 (
 ∂ayî_typ
@@ -528185,7 +520163,7 @@ pick_∂ayî_by_pos
 ∂ayî_cou¡
 );
 
-361 
+362 
 add_∂ayî_to_bÆl
 (
 Soc˚rPœyî
@@ -528195,11 +520173,11 @@ Soc˚rPœyî
 di°™˚
 );
 
-362 
+363 
 ˛ór_∂ayî_to_bÆl
 ();
 
-364 
+365 
 Soc˚rPœyî
  *
 £À˘_∂ayî_by_f‹m©i⁄_pos
@@ -528209,7 +520187,7 @@ AâackOrdî
 ‹dî
 );
 
-365 
+366 
 Soc˚rPœyî
  *
 £À˘_§c_∂ayî_by_f‹m©i⁄_pos
@@ -528219,7 +520197,7 @@ AâackOrdî
 ‹dî
 );
 
-366 
+367 
 add_a˘i⁄
 (
 uni⁄_pid
@@ -528231,13 +520209,13 @@ Ty≥
 ty≥
 )
 
-368 
+369 
 A˘i⁄Iãm
  
 ôem
 ;
 
-369 
+370 
 	gôem
 .
 	gty≥
@@ -528245,7 +520223,7 @@ A˘i⁄Iãm
 ty≥
 ;
 
-370 
+371 
 	gôem
 .
 	guni⁄_pid
@@ -528253,7 +520231,7 @@ ty≥
 uni⁄_pid
 ;
 
-371 
+372 
 	g_a˘i⁄_li°
 .
 push_back
@@ -528261,7 +520239,7 @@ push_back
 ôem
 );
 
-374 
+375 
 	g°d
 ::
 ve˘‹
@@ -528271,11 +520249,11 @@ A˘i⁄Iãm
 gë_a˘i⁄_li°
 ()
 
-376  
+377  
 _a˘i⁄_li°
 ;
 
-379 
+380 
 Soc˚rPœyî
  *
 gë_by_∂ayî_id_⁄_pôch
@@ -528283,13 +520261,13 @@ gë_by_∂ayî_id_⁄_pôch
 ∂ayî_id
 )
 
-381  
+382  
 	g_∂ayîs_⁄_pôch
 [
 ∂ayî_id
  - 1];
 
-384 
+385 
 Soc˚rPœyî
 * 
 gë_∂ayî_by_uni⁄_pid
@@ -528297,7 +520275,7 @@ gë_∂ayî_by_uni⁄_pid
 ∂ayî_id
 ){
 
-385 
+386 
 	g°d
 ::
 ve˘‹
@@ -528313,7 +520291,7 @@ _∂ayîs_⁄_pôch
 begö
 ();
 
-386 
+387 
 	gôr
  !
 _∂ayîs_⁄_pôch
@@ -528321,7 +520299,7 @@ _∂ayîs_⁄_pôch
 íd
 ()){
 
-387 if((*
+388 if((*
 ôr
 )->
 gë_uni⁄_pid
@@ -528329,19 +520307,19 @@ gë_uni⁄_pid
 ∂ayî_id
 ){
 
-388  *
+389  *
 ôr
 ;
 
-390 
+391 
 	gôr
 ++;
 
-392  
+393  
 	gNULL
 ;
 
-396 
+397 
 	g°d
 ::
 ve˘‹
@@ -528351,31 +520329,31 @@ Soc˚rPœyî
 gë_Æl_∂ayî_⁄_pôch
 ()
 
-398  
+399  
 _∂ayîs_⁄_pôch
 ;
 
-401 
+402 
 Soc˚rM©ch
  *
 gë_m©ch
 ()
 
-403  
+404  
 	g_m©ch
 ;
 
-406 
+407 
 gë_∂ayîs_⁄_pôch_cou¡
 ()
 
-408  
+409  
 	g_∂ayîs_⁄_pôch
 .
 size
 ();
 
-411 
+412 
 Soc˚rPœyî
  *
 gë_∂ayî_⁄_pôch
@@ -528383,51 +520361,51 @@ gë_∂ayî_⁄_pôch
 i
 )
 
-413  
+414  
 	g_∂ayîs_⁄_pôch
 [
 i
 ];
 
-416 
+417 
 Soc˚rPœyî
  *
 gë_∂ayî_by_f‹m©i⁄_pos
 ();
 
-417 
+418 
 gë_∂ayî_pos_by_f‹m©i⁄_pos
 ();
 
-418 
+419 
 Soc˚rPœyî
 * 
 gë_∂ayî_by_pos_ödex
 ();
 
-420 
+421 
 ˛ór_move_def_deföe
 (){
 
-421 if(
+422 if(
 	g_move_deföe
  !
 NULL
 ){
 
-422 
+423 
 dñëe
  
 _move_deföe
 ;
 
-423 
+424 
 	g_move_deföe
  = 
 NULL
 ;
 
-427 
+428 
 £t_move_def_deföe
 (
 MoveDeföe
@@ -528435,41 +520413,41 @@ MoveDeföe
 move_deföe
 )
 
-429 
+430 
 	g_move_deföe
  = 
 move_deföe
 ;
 
-433 
+434 
 ˇlc_gk_¥e
 (
 cou¡
 , ...);
 
-434 
+435 
 upd©e_gk_pos
 ();
 
-435 
+436 
 Soc˚rPœyî
  *
 gë_gk_∂ayî
 ()
 
-437  
+438  
 	gthis
 ->
 	g_gk_∂ayî
 ;
 
-440 
+441 
 gë_c⁄s_ef„˘
 (
 ef„˘_typ
 );
 
-441 
+442 
 £t_c⁄s_ef„˘
 (
 ef„˘_typ
@@ -528477,7 +520455,7 @@ ef„˘_typ
 ef„˘_vÆue
 );
 
-442 
+443 
 boﬁ
  
 check_offside
@@ -528485,57 +520463,57 @@ check_offside
 pid
 );
 
-443 
+444 
 avoid_offside
 ();
 
-444 
+445 
 boﬁ
  
 ˇn_f‹˚_offside
 ();
 
-445 
+446 
 £t_ˇn_f‹˚_offside
 (
 boﬁ
 );
 
-446 
+447 
 boﬁ
  
 ˇn_avoid_offside
 ();
 
-447 
+448 
 £t_ˇn_avoid_offside
 (
 boﬁ
 );
 
-448 
+449 
 ˇlc_gk_©t_vÆue
 ();
 
-449 
+450 
 ˇlc_gk_def_vÆue
 ();
 
-451 
+452 
 ˇlc_ãam_def_vÆue
 ();
 
-452 
+453 
 ˇlc_ãam_©t_vÆue
 ();
 
-454 
+455 
 £t_f‹m©i⁄_Àvñ
 (
 Àv
 ){
 
-455 
+456 
 	gthis
 ->
 	g_f‹m©i⁄_Àvñ
@@ -528543,13 +520521,13 @@ boﬁ
 Àv
 ;
 
-458 
+459 
 £t_ãam_Àvñ
 (
 Àvñ
 ){
 
-459 
+460 
 	gthis
 ->
 	g_ãam_Àvñ
@@ -528557,23 +520535,23 @@ boﬁ
 Àvñ
 ;
 
-462 
+463 
 gë_ãam_Àvñ
 (){
 
-463  
+464  
 	gthis
 ->
 	g_ãam_Àvñ
 ;
 
-466 
+467 
 £t_offside
 (
 is_offside
 )
 
-468 
+469 
 	gthis
 ->
 	g_has_offside
@@ -528581,29 +520559,29 @@ is_offside
 is_offside
 ;
 
-471 
+472 
 has_offside
 ()
 
-473  
+474  
 	gthis
 ->
 	g_has_offside
 ;
 
-476 
+477 
 Soc˚rPœyî
  *
 gë_offside_∂ayî
 ()
 
-478  
+479  
 	gthis
 ->
 	g_offside_∂ayî
 ;
 
-481 
+482 
 £t_offside_∂ayî
 (
 Soc˚rPœyî
@@ -528611,7 +520589,7 @@ Soc˚rPœyî
 pPœyî
 )
 
-483 
+484 
 	gthis
 ->
 	g_offside_∂ayî
@@ -528619,33 +520597,33 @@ pPœyî
 pPœyî
 ;
 
-486 
+487 
 ª_£t
 ();
 
-487 
+488 
 gëAâ_vÆue
 () const
 
-489  
+490  
 	g_©t_vÆue
 ;
 
-492 
+493 
 gëDef_vÆue
 () const
 
-494  
+495  
 	g_def_vÆue
 ;
 
-497 
+498 
 £tAâ_vÆue
 (
 _©t_vÆue
 )
 
-499 
+500 
 	gthis
 ->
 	g_©t_vÆue
@@ -528653,13 +520631,13 @@ _©t_vÆue
 _©t_vÆue
 ;
 
-500 
+501 
 	gthis
 ->
 	g_ãam_©èck_mp
  = 0;
 
-501 
+502 
 	gthis
 ->
 	g_t›_©èck_mp
@@ -528669,13 +520647,13 @@ _©t_vÆue
 _©t_vÆue
 );
 
-504 
+505 
 £tDef_vÆue
 (
 _def_vÆue
 )
 
-506 
+507 
 	gthis
 ->
 	g_def_vÆue
@@ -528683,13 +520661,13 @@ _def_vÆue
 _def_vÆue
 ;
 
-507 
+508 
 	gthis
 ->
 	g_ãam_def_mp
  = 0;
 
-508 
+509 
 	gthis
 ->
 	g_t›_def_mp
@@ -528699,13 +520677,13 @@ _def_vÆue
 _def_vÆue
 );
 
-511 
+512 
 upd©e_©t_mp
 (
 mp_vÆue
 ){
 
-512 
+513 
 	gthis
 ->
 	g_ãam_©èck_mp
@@ -528713,25 +520691,25 @@ mp_vÆue
 mp_vÆue
 ;
 
-513 if(
+514 if(
 	g_ãam_©èck_mp
  > 
 	g_t›_©èck_mp
 ){
 
-514 
+515 
 	g_ãam_©èck_mp
  = 
 _t›_©èck_mp
 ;
 
-518 
+519 
 upd©e_def_mp
 (
 mp_vÆue
 ){
 
-519 
+520 
 	gthis
 ->
 	g_ãam_def_mp
@@ -528739,25 +520717,25 @@ mp_vÆue
 mp_vÆue
 ;
 
-520 if(
+521 if(
 	g_ãam_def_mp
  > 
 	g_t›_def_mp
 ){
 
-521 
+522 
 	g_ãam_def_mp
  = 
 _t›_def_mp
 ;
 
-525 
+526 
 £t_ãam_cid
 (
 cid
 )
 
-527 
+528 
 	gthis
 ->
 	g_ãam_˛ub_id
@@ -528765,13 +520743,13 @@ cid
 cid
 ;
 
-530 
+531 
 £t_ãam_skûl_suc˚ss_øã
 (
 suc˚ss_øã
 ){
 
-531 
+532 
 	gthis
 ->
 	g_skûl_suc˚ss_øã
@@ -528779,37 +520757,37 @@ suc˚ss_øã
 suc˚ss_øã
 ;
 
-534 
+535 
 gë_ãam_cid
 ()
 
-536  
+537  
 	gthis
 ->
 	g_ãam_˛ub_id
 ;
 
-539 
+540 
 gë_auto_ch™ge_cou¡
 ()
 
-541  
+542  
 	gthis
 ->
 	g_auto_ch™ge_cou¡
 ;
 
-544 
+545 
 add_auto_ch™ge_cou¡
 ()
 
-546 
+547 
 	gthis
 ->
 	g_auto_ch™ge_cou¡
 ++;
 
-549 
+550 
 gë_lowe°_c⁄d_∂ayî
 (
 °d
@@ -528819,7 +520797,7 @@ ve˘‹
 ∂ayîs
 ){
 
-550 
+551 
 °d
 ::
 ve˘‹
@@ -528833,15 +520811,15 @@ ve˘‹
 begö
 ();
 
-551 
+552 
 	g∂ayî_id
  = 0;
 
-552 
+553 
 	gc⁄d
  = 100;
 
-553 
+554 
 	gôr
  !
 ∂ayîs
@@ -528849,7 +520827,7 @@ begö
 íd
 ()){
 
-554 
+555 
 Soc˚rPœyî
 * 
 ∂ayî
@@ -528861,13 +520839,13 @@ gë_∂ayî_by_uni⁄_pid
 ôr
 );
 
-555 if(
+556 if(
 	g∂ayî
  =
 NULL
 ){
 
-556 
+557 
 LOG
 (
 ERROR
@@ -528875,7 +520853,7 @@ ERROR
 ôr
 ;
 
-558 if((
+559 if((
 	g∂ayî
  !
 NULL
@@ -528887,7 +520865,7 @@ gë_c⁄d
 c⁄d
 )){
 
-559 
+560 
 ∂ayî_id
  = 
 ∂ayî
@@ -528895,7 +520873,7 @@ c⁄d
 gë_uni⁄_pid
 ();
 
-560 
+561 
 	gc⁄d
  = 
 ∂ayî
@@ -528903,15 +520881,15 @@ gë_uni⁄_pid
 gë_c⁄d
 ();
 
-562 
+563 
 	gôr
 ++;
 
-564  
+565  
 	g∂ayî_id
 ;
 
-567 
+568 
 gë_Æl_∂ayî_‰⁄t
 (
 °d
@@ -528921,7 +520899,7 @@ ve˘‹
 ∂ayîs
 )
 
-569 
+570 
 PLAYER_ITR
  
 ôr
@@ -528931,11 +520909,11 @@ _∂ayîs_⁄_pôch
 begö
 ();
 
-570 
+571 
 	gpos
  = 0;
 
-571 
+572 
 	gôr
  !
 _∂ayîs_⁄_pôch
@@ -528943,7 +520921,7 @@ _∂ayîs_⁄_pôch
 íd
 ())
 
-573 
+574 
 pos
  = 
 check_posôi⁄
@@ -528953,11 +520931,11 @@ check_posôi⁄
 gë_f‹m©i⁄_pos
 ());
 
-574 i‡(
+575 i‡(
 	gpos
  == 1)
 
-576 
+577 
 ∂ayîs
 .
 push_back
@@ -528967,17 +520945,17 @@ push_back
 gë_uni⁄_pid
 ());
 
-578 
+579 
 	gôr
 ++;
 
-582 
+583 
 Soc˚rPœyî
 * 
 ønd_pick_middÀ_∂ayî
 () {
 
-583 
+584 
 PLAYER_ITR
  
 	gôr
@@ -528987,11 +520965,11 @@ _∂ayîs_⁄_pôch
 begö
 ();
 
-584 
+585 
 	gpos
  = 0;
 
-585 
+586 
 	gôr
  !
 _∂ayîs_⁄_pôch
@@ -528999,7 +520977,7 @@ _∂ayîs_⁄_pôch
 íd
 ())
 
-587 
+588 
 pos
  = 
 check_posôi⁄
@@ -529009,23 +520987,23 @@ check_posôi⁄
 gë_f‹m©i⁄_pos
 ());
 
-588 i‡(
+589 i‡(
 	gpos
  == 2)
 
-590  *
+591  *
 ôr
 ;
 
-592 
+593 
 	gôr
 ++;
 
-594  
+595  
 	gNULL
 ;
 
-598 
+599 
 gë_Æl_∂ayî_middÀ
 (
 °d
@@ -529035,7 +521013,7 @@ ve˘‹
 ∂ayîs
 )
 
-600 
+601 
 PLAYER_ITR
  
 ôr
@@ -529045,11 +521023,11 @@ _∂ayîs_⁄_pôch
 begö
 ();
 
-601 
+602 
 	gpos
  = 0;
 
-602 
+603 
 	gôr
  !
 _∂ayîs_⁄_pôch
@@ -529057,7 +521035,7 @@ _∂ayîs_⁄_pôch
 íd
 ())
 
-604 
+605 
 pos
  = 
 check_posôi⁄
@@ -529067,11 +521045,11 @@ check_posôi⁄
 gë_f‹m©i⁄_pos
 ());
 
-605 i‡(
+606 i‡(
 	gpos
  == 2)
 
-607 
+608 
 ∂ayîs
 .
 push_back
@@ -529081,11 +521059,11 @@ push_back
 gë_uni⁄_pid
 ());
 
-609 
+610 
 	gôr
 ++;
 
-613 
+614 
 gë_Æl_∂ayî_back
 (
 °d
@@ -529095,7 +521073,7 @@ ve˘‹
 ∂ayîs
 )
 
-615 
+616 
 PLAYER_ITR
  
 ôr
@@ -529105,11 +521083,11 @@ _∂ayîs_⁄_pôch
 begö
 ();
 
-616 
+617 
 	gpos
  = 0;
 
-617 
+618 
 	gôr
  !
 _∂ayîs_⁄_pôch
@@ -529117,7 +521095,7 @@ _∂ayîs_⁄_pôch
 íd
 ())
 
-619 
+620 
 pos
  = 
 check_posôi⁄
@@ -529127,11 +521105,11 @@ check_posôi⁄
 gë_f‹m©i⁄_pos
 ());
 
-620 i‡(
+621 i‡(
 	gpos
  == 3)
 
-622 
+623 
 ∂ayîs
 .
 push_back
@@ -529141,17 +521119,17 @@ push_back
 gë_uni⁄_pid
 ());
 
-624 
+625 
 	gôr
 ++;
 
-629 
+630 
 £t_cuºít_move_ˇrd_id
 (
 move_id
 ){
 
-630 
+631 
 	gthis
 ->
 	gcuºít_move_id
@@ -529159,23 +521137,23 @@ move_id
 move_id
 ;
 
-633 
+634 
 gë_cuºít_move_ˇrd_id
 (){
 
-634  
+635  
 	gthis
 ->
 	gcuºít_move_id
 ;
 
-637 
+638 
 £t_cuºít_f‹m©i⁄_ˇrd_id
 (
 f‹m©i⁄_ˇrd_id
 )
 
-639 
+640 
 	gthis
 ->
 	g_cuºít_f‹m©i⁄_id
@@ -529183,21 +521161,21 @@ f‹m©i⁄_ˇrd_id
 f‹m©i⁄_ˇrd_id
 ;
 
-642 
+643 
 gë_cuºít_f‹m©i⁄_ˇrd_id
 ()
 
-644  
+645  
 	gthis
 ->
 	g_cuºít_f‹m©i⁄_id
 ;
 
-647 
+648 
 £t_gﬂl_°©e
 ()
 
-649 
+650 
 	gthis
 ->
 £t_°©e
@@ -529207,11 +521185,11 @@ GﬂlögSèã
 Æloc
 ());
 
-652 
+653 
 öô_def_f‹m©i⁄_bef‹e
 ([]);
 
-654 
+655 
 gë_t›_shoŸî
 (
 °d
@@ -529221,35 +521199,35 @@ ve˘‹
 Soc˚rPœyî
 *>&,);
 
-656 
+657 
 modi„r_move_‹dî_to_‰⁄t
 ();
 
-657 
+658 
 modi„r_move_‹dî_to_back
 ();
 
-659 
+660 
 modi„r_move_‹dî_by_gk_skûl
 ();
 
-661 
+662 
 Soc˚rAâribuã
  
 gë_gk_©å
 ()
 
-663  
+664  
 	g_gk_©å
 ;
 
-666 
+667 
 £t_√wbõ_°©e
 (
 √wbõ_°©e
 )
 
-668 
+669 
 	gthis
 ->
 	g_√wbõ_°©e
@@ -529257,47 +521235,47 @@ gë_gk_©å
 √wbõ_°©e
 ;
 
-671 
+672 
 gë_√wbõ_°©e
 ()
 
-673  
+674  
 	gthis
 ->
 	g_√wbõ_°©e
 ;
 
-676 
+677 
 £t_is_round_add
 (
 i
 )
 
-678 
+679 
 	g_is_round_add
  = 
 i
 ;
 
-681 
+682 
 boﬁ
  
 is_round_add
 ()
 
-683 i‡(
+684 i‡(
 	g_is_round_add
  == 1)
 
-685  
+686  
 åue
 ;
 
-688  
+689  
 	gÁl£
 ;
 
-691 
+692 
 £tTómMode
 (
 Tóm_mode
@@ -529305,7 +521283,7 @@ Tóm_mode
 mode
 )
 
-693 
+694 
 VLOG
 (3Ë<< 
 	gthis
@@ -529315,7 +521293,7 @@ gë_id
 	gmode
 ;
 
-694 
+695 
 	gthis
 ->
 	g_ãam_mode
@@ -529323,13 +521301,13 @@ gë_id
 mode
 ;
 
-697 
+698 
 boﬁ
  
 isInGodMode
 ()
 
-699 i‡(
+700 i‡(
 	gthis
 ->
 	g_ãam_mode
@@ -529337,25 +521315,25 @@ isInGodMode
 GOD_MODE
 )
 
-701 
+702 
 VLOG
 (3)<<"ÂºÄÂêØÊó†ÊïåÊ®°ÂºèÔºå‰∫∫ÂΩìÊùÄ‰∫∫Ôºå‰ΩõÊ°£ÊùÄ‰Ωõ2";
 
-702  
+703  
 	gåue
 ;
 
-705  
+706  
 	gÁl£
 ;
 
-708 
+709 
 boﬁ
  
 isInLo£rMode
 ()
 
-710 i‡(
+711 i‡(
 	gthis
 ->
 	g_ãam_mode
@@ -529363,35 +521341,35 @@ isInLo£rMode
 LOSER_MODE
 )
 
-712 
+713 
 VLOG
 (3)<<"ÂºÄÂêØ14Ê®°ÂºèÔºå‰∏ÄÁ¢óÁÉ≠Áøî";
 
-713  
+714  
 	gåue
 ;
 
-716  
+717  
 	gÁl£
 ;
 
-719 
+720 
 gëBackLöe
 ()
 
-721  
+722  
 	gthis
 ->
 	g_back_löe
 ;
 
-724 
+725 
 £tBackLöe
 (
 backLöe
 )
 
-726 
+727 
 	gthis
 ->
 	g_back_löe
@@ -529399,19 +521377,19 @@ backLöe
 backLöe
 ;
 
-729 
+730 
 Soc˚rF‹m©i⁄
  *
 gëTómF‹m©i⁄
 ()
 
-731  &(
+732  &(
 	gthis
 ->
 	g_f‹m©i⁄
 );
 
-734 
+735 
 Soc˚rPœyî
  *
 choo£_aú_de„nd_∂ayî
@@ -529421,7 +521399,7 @@ Ve˘‹2D
 vec
 );
 
-736 
+737 
 make_∂ayî_to_de„nd_aú
 (c⁄° 
 Ve˘‹2D
@@ -529429,7 +521407,7 @@ Ve˘‹2D
 èrgë
 );
 
-738 
+739 
 make_∂ayî_to_de„nd_∑ss
 (c⁄° 
 Ve˘‹2D
@@ -529437,19 +521415,19 @@ Ve˘‹2D
 vec
 );
 
-740 
+741 
 Soc˚rPœyî
  *
 gë_aú_de„nd_∂ayî
 ()
 
-742  
+743  
 	gthis
 ->
 	g_aú_de„nd_∂ayî
 ;
 
-745 
+746 
 £t_aú_de„nd_∂ayî
 (
 Soc˚rPœyî
@@ -529457,7 +521435,7 @@ Soc˚rPœyî
 ∂ayî
 )
 
-747 
+748 
 	gthis
 ->
 	g_aú_de„nd_∂ayî
@@ -529465,19 +521443,19 @@ Soc˚rPœyî
 ∂ayî
 ;
 
-750 
+751 
 Soc˚rPœyî
  *
 gë_∑ss_de„nd_∂ayî
 ()
 
-752  
+753  
 	gthis
 ->
 	g_∑ss_de„nd_∂ayî
 ;
 
-755 
+756 
 £t_∑ss_de„nd_∂ayî
 (
 Soc˚rPœyî
@@ -529485,7 +521463,7 @@ Soc˚rPœyî
 ∂ayî
 )
 
-757 
+758 
 	gthis
 ->
 	g_∑ss_de„nd_∂ayî
@@ -529493,23 +521471,23 @@ Soc˚rPœyî
 ∂ayî
 ;
 
-760 
+761 
 Soc˚rPœyî
 * 
 gë_ª˚veög_∂ayî
 (){
 
-761  
+762  
 	gthis
 ->
 	g_ª˚ivög_∂ayî
 ;
 
-764 
+765 
 gë_move_com∂ex
 (){
 
-765  
+766  
 	gthis
 ->
 	g_move_deföe
@@ -529517,7 +521495,7 @@ gë_move_com∂ex
 gë_move_com∂ex
 ();
 
-768 
+769 
 Soc˚rPœyî
 * 
 gë_∂ayî_⁄_pôch_by_uni⁄_id
@@ -529525,7 +521503,7 @@ gë_∂ayî_⁄_pôch_by_uni⁄_id
 pid
 ){
 
-769 
+770 
 	g°d
 ::
 ve˘‹
@@ -529543,7 +521521,7 @@ _∂ayîs_⁄_pôch
 begö
 ();
 
-770 
+771 
 	gôr
  !
 this
@@ -529553,7 +521531,7 @@ _∂ayîs_⁄_pôch
 íd
 ()){
 
-771 if((*
+772 if((*
 ôr
 )->
 gë_uni⁄_pid
@@ -529561,19 +521539,19 @@ gë_uni⁄_pid
 pid
 ){
 
-772  *
+773  *
 ôr
 ;
 
-774 
+775 
 	gôr
 ++;
 
-776  
+777  
 	gNULL
 ;
 
-779 
+780 
 add_ãam_skûl
 (
 è˘ic_id
@@ -529581,13 +521559,13 @@ add_ãam_skûl
 ch™˚
 ){
 
-780 
+781 
 TómSkûl
  
 	gskûl
 ;
 
-781 
+782 
 	gskûl
 .
 	gè˘ic_id
@@ -529595,7 +521573,7 @@ TómSkûl
 è˘ic_id
 ;
 
-782 
+783 
 	gskûl
 .
 	gch™˚
@@ -529603,7 +521581,7 @@ TómSkûl
 ch™˚
 ;
 
-783 
+784 
 	g_ãam_skûls
 [
 è˘ic_id
@@ -529611,7 +521589,7 @@ ch™˚
 skûl
 ;
 
-786 
+787 
 TómSkûl
 * 
 gë_ãam_skûl_öfo
@@ -529619,7 +521597,7 @@ gë_ãam_skûl_öfo
 skûl_id
 ){
 
-787 
+788 
 	g°d
 ::
 m≠
@@ -529637,7 +521615,7 @@ föd
 skûl_id
 );
 
-788 if(
+789 if(
 	gôr
  !
 _ãam_skûls
@@ -529645,17 +521623,17 @@ _ãam_skûls
 íd
 ()){
 
-789  &(
+790  &(
 ôr
 ->
 £c⁄d
 );
 
-791  
+792  
 	gNULL
 ;
 
-794 
+795 
 boﬁ
  
 check_ãam_skûl
@@ -529663,7 +521641,7 @@ check_ãam_skûl
 skûl_id
 ){
 
-795 
+796 
 	g°d
 ::
 m≠
@@ -529681,7 +521659,7 @@ föd
 skûl_id
 );
 
-796 if(
+797 if(
 	gôr
  !
 _ãam_skûls
@@ -529689,31 +521667,31 @@ _ãam_skûls
 íd
 ()){
 
-797  
+798  
 åue
 ;
 
-799  
+800  
 	gÁl£
 ;
 
-802 
+803 
 Ta˘icInfo
 * 
 pick_skûl_to_u£_ønd
 (){
 
-803 if(
+804 if(
 	g_ãam_skûls
 .
 size
 () == 0){
 
-804  
+805  
 NULL
 ;
 
-807 
+808 
 	gödex
  = 
 RAND_INT
@@ -529723,7 +521701,7 @@ _ãam_skûls
 size
 ();
 
-808 
+809 
 	g°d
 ::
 m≠
@@ -529739,7 +521717,7 @@ _ãam_skûls
 begö
 ();
 
-809 
+810 
 Ta˘icInfo
 * 
 	göfo
@@ -529747,7 +521725,7 @@ Ta˘icInfo
 NULL
 ;
 
-810 
+811 
 	gôr
  !
 _ãam_skûls
@@ -529755,11 +521733,11 @@ _ãam_skûls
 íd
 ()){
 
-811 if(
+812 if(
 ödex
 -- == 0){
 
-812 
+813 
 öfo
  = 
 CGameC⁄figM™agî
@@ -529773,19 +521751,19 @@ GëTa˘icInfoById
 fú°
 );
 
-813  
+814  
 	göfo
 ;
 
-815 
+816 
 	gôr
 ++;
 
-817  
+818  
 	göfo
 ;
 
-821 
+822 
 	g°d
 ::
 ve˘‹
@@ -529795,7 +521773,7 @@ Ta˘icInfo
 gë_ãamskûl_ˇn_u£_li°
 (){
 
-822 
+823 
 °d
 ::
 ve˘‹
@@ -529805,7 +521783,7 @@ Ta˘icInfo
 skûl_li°_ˇn_u£
 ;
 
-823 
+824 
 	g°d
 ::
 m≠
@@ -529821,7 +521799,7 @@ _ãam_skûls
 begö
 ();
 
-824 
+825 
 	gôr
  !
 _ãam_skûls
@@ -529829,7 +521807,7 @@ _ãam_skûls
 íd
 ()){
 
-825 
+826 
 Ta˘icInfo
 * 
 öfo
@@ -529845,13 +521823,13 @@ GëTa˘icInfoById
 fú°
 );
 
-826 if(
+827 if(
 	göfo
  !
 NULL
 ){
 
-827 if((
+828 if((
 öfo
 ->
 cﬂ°_©t_íîgy
@@ -529865,7 +521843,7 @@ cﬂ°_def_íîgy
 _ãam_def_mp
 ))
 
-829 
+830 
 skûl_li°_ˇn_u£
 .
 push_back
@@ -529873,15 +521851,15 @@ push_back
 öfo
 );
 
-832 
+833 
 	gôr
 ++;
 
-834  
+835  
 	gskûl_li°_ˇn_u£
 ;
 
-837 
+838 
 boﬁ
  
 u£_ãam_skûl
@@ -529891,35 +521869,35 @@ Ta˘icInfo
 öfo
 );
 
-839 
+840 
 u£_ãam_skûl
 ();
 
-841 
+842 
 Soc˚rPœyî
 * 
 pick_c‹√r_bÆl_∂ayî
 ();
 
-843 
+844 
 £À˘_move_by_è˘ic_id
 ();
 
-846 
+847 
 ¥ï¨e_f‹_de„nd_™d_©èck
 ();
 
-848 
+849 
 add_gk_kick_‹dî
 ();
 
-849 
+850 
 pick_suôabÀ_‹dî
 (
 Soc˚rPœyî
 *);
 
-851 
+852 
 boﬁ
  
 check_‹dî_suôabÀ
@@ -529929,7 +521907,7 @@ Soc˚rPœyî
 ˘æ_∂ayî
 );
 
-853 
+854 
 gë_‹dî_˛€°
 (
 Soc˚rPœyî
@@ -529937,39 +521915,39 @@ Soc˚rPœyî
 ∂ayî
 );
 
-855 
+856 
 gë_skûl_u£d
 (){
 
-856  
+857  
 	g_è˘ic_u£d_id
 ;
 
-859 
+860 
 gë_œ°_round_skûl_u£d
 (){
 
-860  
+861  
 	gthis
 ->
 	g_œ°_round_è˘ic_u£d
 ;
 
-863 
+864 
 ª£t_skûl_u£d
 (){
 
-864 
+865 
 	g_œ°_round_è˘ic_u£d
  = 
 _è˘ic_u£d_id
 ;
 
-865 
+866 
 	g_è˘ic_u£d_id
  = 0;
 
-868 
+869 
 TómSkûl
  
 gë_ãam_skûl
@@ -529977,13 +521955,13 @@ gë_ãam_skûl
 è˘ic
 ){
 
-869  
+870  
 	g_ãam_skûls
 [
 è˘ic
 ];
 
-872 
+873 
 modi„r_∑ss_poöt_cﬂch_•ók
 (
 Ve˘‹2D
@@ -529991,19 +521969,19 @@ Ve˘‹2D
 vec
 );
 
-874 
+875 
 ãam_ai_auto_u£_skûl
 ();
 
-877 
+878 
 	gpublic
 :
 
-878 
+879 
 ˛ór_Æl_•ók_ef„˘
 (){
 
-879 
+880 
 i
 =0;
 	gi
@@ -530011,7 +521989,7 @@ i
 	gSPEAK_END
 ;i++){
 
-880 
+881 
 	g_•ók_ef„˘s
 [
 i
@@ -530019,21 +521997,21 @@ i
 Ál£
 ;
 
-884 
+885 
 cﬂch_•ók_ef„˘
 ();
 
-886 
+887 
 gë_cﬂch_•ók_ty≥
 (){
 
-887 
+888 
 	gi
 =0;i<
 	gSPEAK_END
 ;i++){
 
-888 if(
+889 if(
 	g_•ók_ef„˘s
 [
 i
@@ -530041,15 +522019,15 @@ i
 åue
 ){
 
-889  
+890  
 i
 ;
 
-895 
+896 
 dump_Æl_∂ayî_öfo
 (){
 
-896 
+897 
 	g°d
 ::
 o°rög°ªam
@@ -530057,11 +522035,11 @@ o°rög°ªam
 °r
 ;
 
-897 
+898 
 	gi
 =0;i<10;i++){
 
-898 
+899 
 	g°r
 <<":"<<
 	g_∂ayîs_⁄_pôch
@@ -530073,7 +522051,7 @@ gë_°©e_ty≥
 check_bÆl_íãr_möd¨ó
 ();
 
-900 
+901 
 VLOG
 (1)<<
 	g°r
@@ -530083,7 +522061,7 @@ VLOG
 c_°r
 ();
 
-904 
+905 
 boﬁ
  
 check_cﬂch_•ók
@@ -530091,33 +522069,33 @@ check_cﬂch_•ók
 •ók_ty≥
 ){
 
-905 if(
+906 if(
 	g•ók_ty≥
  < 
 	gSPEAK_WAIT_FOR
 ){
 
-906  
+907  
 	gÁl£
 ;
 
-909 if(
+910 if(
 	g•ók_ty≥
  >
 SPEAK_END
 ){
 
-910  
+911  
 Ál£
 ;
 
-912  
+913  
 	g_•ók_ef„˘s
 [
 •ók_ty≥
 ];
 
-915 
+916 
 £t_ãam_de•oô_°©e
 (
 boﬁ
@@ -530127,19 +522105,19 @@ d_∂ayî
 d_u£_skûl
 ){
 
-916 
+917 
 	g_dïosô_ch™ge_∂ayî
  = 
 d_∂ayî
 ;
 
-917 
+918 
 	g_dïosô_u£_skûl
  = 
 d_u£_skûl
 ;
 
-920 
+921 
 gë_ãam_de•oô_°©e
 (
 boﬁ
@@ -530149,19 +522127,19 @@ d_p
 d_u
 ){
 
-921 
+922 
 	gd_p
  = 
 _dïosô_ch™ge_∂ayî
 ;
 
-922 
+923 
 	gd_u
  = 
 _dïosô_u£_skûl
 ;
 
-923 
+924 
 LOG
 (
 INFO
@@ -530171,133 +522149,133 @@ INFO
 	g_dïosô_u£_skûl
 ;
 
-926 
+927 
 gë_cﬂch_ef„˘_©èck_de„nd
 (){
 
-927 
+928 
 	g•ók_ty≥
  = 
 gë_cﬂch_•ók_ty≥
 ();
 
-928 
+929 
 	gvÆue
  =0;
 
-929 
+930 
 	g•ók_ty≥
 ){
 
-930 
+931 
 	gSPEAK_MORE_PASS
 :
 
-931 
+932 
 vÆue
  = 2;
 
-933 
+934 
 	gSPEAK_MORE_CORSS
 :
 
-934 
+935 
 vÆue
  = 7;
 
-936 
+937 
 	gSPEAK_MORE_EMPTY_PASS
 :
 
-937 
+938 
 vÆue
  = 5;
 
-939 
+940 
 	gSPEAK_MORE_FOOT_PASS
 :
 
-940 
+941 
 vÆue
  = 5;
 
-942 
+943 
 	gSPEAK_WAIT_FOR
 :
 
-943 
+944 
 vÆue
  = 4;
 
-945 
+946 
 	gSPEAK_MORE_SPACE
 :
 
-946 
+947 
 vÆue
  = 5;
 
-948 
+949 
 	gSPEAK_LESS_SPACE
 :
 
-949 
+950 
 vÆue
  = 5;
 
-951 
+952 
 	gSPEAK_ATTACK_ATTACK
 :
 
-952 
+953 
 vÆue
  = 5;
 
-954 
+955 
 	gSPEAK_DEFEND_ATTACK
 :
 
-955 
+956 
 vÆue
  = 5;
 
-957 
+958 
 	gSPEAK_KILL_KICK
 :
 
-958 
+959 
 vÆue
  = 4;
 
-960 
+961 
 	gSPEAK_GENTLEMEN
 :
 
-961 
+962 
 vÆue
  = 6;
 
-965 
+966 
 vÆue
  = 4;
 
-968  
+969  
 	gvÆue
 ;
 
-971 
+972 
 boﬁ
  
 is_ãam_Æl_©èck
 (){
 
-972  
+973  
 	gthis
 ->
 	g_is_Æl_©èck
 ;
 
-975 
+976 
 £t_ãam_Æl_©èck
 (
 boﬁ
@@ -530305,7 +522283,7 @@ boﬁ
 vÆue
 ){
 
-976 
+977 
 	gthis
 ->
 	g_is_Æl_©èck
@@ -530313,53 +522291,53 @@ vÆue
 vÆue
 ;
 
-979 
+980 
 add_öj_cou¡
 (){
 
-980 
+981 
 	g_öj_cou¡
 ++;
 
-983 
+984 
 gë_öj_cou¡
 (){
 
-984  
+985  
 	g_öj_cou¡
 ;
 
-987 
+988 
 boﬁ
  
 is_ch™ge_∂ayî_dïosô
 (){
 
-988  
+989  
 	gthis
 ->
 	g_dïosô_ch™ge_∂ayî
 ;
 
-991 
+992 
 boﬁ
  
 is_u£_skûl_dïosô
 (){
 
-992  
+993  
 	gthis
 ->
 	g_dïosô_u£_skûl
 ;
 
-995 
+996 
 £t_Æüs_è˘ic_∂us
 (
 ∂us
 ){
 
-996 
+997 
 	gthis
 ->
 	g_Æüs_è˘ic_∂us
@@ -530367,21 +522345,21 @@ is_u£_skûl_dïosô
 ∂us
 ;
 
-999 
+1000 
 gë_Æüs_è˘ic_∂us
 (){
 
-1000  
+1001  
 	g_Æüs_è˘ic_∂us
 ;
 
-1003 
+1004 
 £t_fô√ss_cﬂch
 (
 fô√ss_cﬂch
 ){
 
-1004 
+1005 
 	gthis
 ->
 	g_fô√ss_cﬂch
@@ -530389,17 +522367,17 @@ fô√ss_cﬂch
 fô√ss_cﬂch
 ;
 
-1007 
+1008 
 gë_fô√ss_cﬂch
 (){
 
-1008  
+1009  
 	gthis
 ->
 	g_fô√ss_cﬂch
 ;
 
-1011 
+1012 
 boﬁ
  
 is_ßme_skûl_œ°_u£
@@ -530407,7 +522385,7 @@ is_ßme_skûl_œ°_u£
 skûl_id
 ){
 
-1012 if(
+1013 if(
 	gthis
 ->
 	g_œ°_skûl_li°
@@ -530415,11 +522393,11 @@ skûl_id
 em±y
 ()){
 
-1013  
+1014  
 	gÁl£
 ;
 
-1016 
+1017 
 	gôr
  = 
 this
@@ -530429,27 +522407,27 @@ _œ°_skûl_li°
 back
 ();
 
-1017 if(
+1018 if(
 	gôr
  =
 skûl_id
 ){
 
-1018  
+1019  
 åue
 ;
 
-1020  
+1021  
 	gÁl£
 ;
 
-1024 
+1025 
 upd©e_ãam_skûl_œ°_u£
 (
 skûl_id
 ){
 
-1025 
+1026 
 	g_œ°_skûl_li°
 .
 push_back
@@ -530457,33 +522435,33 @@ push_back
 skûl_id
 );
 
-1028 
+1029 
 gë_ãam_skûl_u£d_cou¡
 (){
 
-1029  
+1030  
 	g_œ°_skûl_li°
 .
 size
 ();
 
-1032 
+1033 
 boﬁ
  
 check_is_œ°_skûl_ßme
 (){
 
-1033 if(
+1034 if(
 	g_œ°_skûl_li°
 .
 size
 () < 2){
 
-1034  
+1035  
 	gÁl£
 ;
 
-1036 
+1037 
 	g°d
 ::
 li°
@@ -530497,31 +522475,31 @@ _œ°_skûl_li°
 íd
 ();
 
-1037 if(*
+1038 if(*
 	gôr
  =*(--
 ôr
 )){
 
-1038  
+1039  
 åue
 ;
 
-1040  
+1041  
 	gÁl£
 ;
 
-1044 
+1045 
 gë_œ°_skûl_u£_li°
 (){
 
-1045 if(
+1046 if(
 	g_œ°_skûl_li°
 .
 size
 () < 1){
 
-1048 
+1049 
 	gskûl_id
  = 
 _œ°_skûl_li°
@@ -530529,45 +522507,45 @@ _œ°_skûl_li°
 back
 ();
 
-1049  
+1050  
 	gskûl_id
 ;
 
-1052 
+1053 
 gë_Ω_¥
 (){
 
-1053  
+1054  
 	g_skûl_Ω_¥
 ;
 
-1056 
+1057 
 upd©e_Ω_¥
 (
 vÆue
 ){
 
-1057 
+1058 
 	g_skûl_Ω_¥
  +
 vÆue
 ;
 
-1060 
+1061 
 ª£t_Ω_¥
 (){
 
-1061 
+1062 
 	g_skûl_Ω_¥
  = 0.;
 
-1065 
+1066 
 boﬁ
  
 check_wûl_unô_de„nd
 ();
 
-1067 
+1068 
 log_ãam_cmp_öfo
 (
 pid
@@ -530579,13 +522557,13 @@ ty≥
 r°
 ){
 
-1068 
+1069 
 TómCmpInfo
  
 	göfo
 ;
 
-1069 
+1070 
 	göfo
 .
 	gpid
@@ -530593,7 +522571,7 @@ TómCmpInfo
 pid
 ;
 
-1070 
+1071 
 	göfo
 .
 	g›_pid
@@ -530601,7 +522579,7 @@ pid
 ›_pid
 ;
 
-1071 
+1072 
 	göfo
 .
 	gty≥
@@ -530609,7 +522587,7 @@ pid
 ty≥
 ;
 
-1072 
+1073 
 	göfo
 .
 	gr°
@@ -530617,7 +522595,7 @@ ty≥
 r°
 ;
 
-1073 
+1074 
 	g_whﬁe_m©ch_cmp_log
 .
 push_back
@@ -530625,7 +522603,7 @@ push_back
 öfo
 );
 
-1076 
+1077 
 dump_ãam_cmp_öfo
 (
 °d
@@ -530635,7 +522613,7 @@ o°rög°ªam
 °r
 ){
 
-1077 
+1078 
 °d
 ::
 li°
@@ -530651,7 +522629,7 @@ _whﬁe_m©ch_cmp_log
 begö
 ();
 
-1078 
+1079 
 	gôr
  !
 _whﬁe_m©ch_cmp_log
@@ -530659,7 +522637,7 @@ _whﬁe_m©ch_cmp_log
 íd
 ()){
 
-1079 
+1080 
 LOG
 (
 INFO
@@ -530675,7 +522653,7 @@ ty≥
 r°
 ;
 
-1080 
+1081 
 	g°r
 <<
 	gôr
@@ -530683,11 +522661,11 @@ r°
 	gpid
 ;
 
-1081 
+1082 
 	g°r
 <<":";
 
-1082 
+1083 
 	g°r
 <<
 	gôr
@@ -530695,11 +522673,11 @@ r°
 	g›_pid
 ;
 
-1083 
+1084 
 	g°r
 <<":";
 
-1084 
+1085 
 	g°r
 <<
 	gôr
@@ -530707,7 +522685,7 @@ r°
 	gty≥
 ;
 
-1085 
+1086 
 	g°r
 <<":"<<
 	gôr
@@ -530715,11 +522693,11 @@ r°
 	gr°
 ;
 
-1086 
+1087 
 	gôr
 ++;
 
-1087 if(
+1088 if(
 	gôr
  !
 _whﬁe_m©ch_cmp_log
@@ -530727,31 +522705,31 @@ _whﬁe_m©ch_cmp_log
 íd
 ()){
 
-1088 
+1089 
 °r
 <<"#";
 
-1093 
+1094 
 add_u£_skûl_gﬂl
 (){
 
-1094 
+1095 
 	g_u£_skûl_gﬂl
 ++;
 
-1097 
+1098 
 gë_skûl_u£d_gﬂl
 (){
 
-1098  
+1099  
 	g_u£_skûl_gﬂl
 ;
 
-1102 
+1103 
 	g¥iv©e
 :
 
-1103 
+1104 
 boﬁ
  
 _•ók_ef„˘s
@@ -530759,41 +522737,41 @@ _•ók_ef„˘s
 SPEAK_END
 ];
 
-1105 
+1106 
 boﬁ
  
 	g_dïosô_ch™ge_∂ayî
 ;
 
-1107 
+1108 
 boﬁ
  
 	g_dïosô_u£_skûl
 ;
 
-1109 
+1110 
 	g_öj_cou¡
 ;
 
-1111 
+1112 
 boﬁ
  
 	g_is_Æl_©èck
 ;
 
-1113 
+1114 
 	g_Æüs_è˘ic_∂us
 ;
 
-1115 
+1116 
 	g_fô√ss_cﬂch
 ;
 
-1118 
+1119 
 	g_sc‹e
 ;
 
-1121 
+1122 
 	g°d
 ::
 li°
@@ -530801,11 +522779,11 @@ li°
 _œ°_skûl_li°
 ;
 
-1123 
+1124 
 	g_skûl_Ω_¥
 ;
 
-1125 
+1126 
 	g°d
 ::
 li°
@@ -530815,43 +522793,43 @@ TómCmpInfo
 _whﬁe_m©ch_cmp_log
 ;
 
-1127 
+1128 
 	g_u£_skûl_gﬂl
 ;
 
-1129 
+1130 
 	g¥iv©e
 :
 
-1130 
+1131 
 √xt_‹dî
 ();
 
-1132 
+1133 
 	gpublic
 :
 
-1133 
+1134 
 Ve˘‹2D
  
 _gk_pos
 ;
 
-1134 
+1135 
 Soc˚rAâribuã
  
 	g_gk_©å
 ;
 
-1135 
+1136 
 	g_gk_pid
 ;
 
-1136 
+1137 
 	g_gk_©t_vÆue
 ;
 
-1137 
+1138 
 	g_gk_def_vÆue
 ;
 
@@ -533325,10 +525303,9 @@ t
 1
 .
 0
-346
-9281
-CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+342
+8992
+CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
 chat_server/CChannel.cpp
 chat_server/CChannel.h
 chat_server/CChatMsgDispatcher.cpp
@@ -533346,7 +525323,6 @@ client/TestJob.h
 client/main.cpp
 common/CEventThread.cpp
 common/CEventThread.h
-common/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 common/CPoolThread.cpp
 common/CPoolThread.h
 common/CThread.cpp
@@ -533424,7 +525400,6 @@ game_server/SocketRecvJob.h
 game_server/SocketSendJob.h
 game_server/ball_keyframe.cpp
 game_server/ball_keyframe.h
-game_server/build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 game_server/common_func.h
 game_server/init_move_define.cpp
 game_server/main.cpp
@@ -533455,7 +525430,6 @@ gate_server/GateWayPlayer.cpp
 gate_server/GateWayPlayer.h
 gate_server/SSocketListenAdapter.cpp
 gate_server/SSocketListenAdapter.h
-gate_server/build/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 gate_server/main.cpp
 include/gflags/gflags.h
 include/gflags/gflags_completions.h
@@ -533602,7 +525576,6 @@ include/zlib/trees.h
 include/zlib/zconf.h
 include/zlib/zlib.h
 include/zlib/zutil.h
-net/CMakeFiles/2.8.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 net/IConnection.h
 net/IMsgDispatcher.h
 net/client_socket.cpp
@@ -533623,6 +525596,7 @@ net/thread.h
 security_server/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
 security_server/FlexSecurityBox.h
 security_server/main.cpp
+soccer_ai/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
 soccer_ai/action_define.cpp
 soccer_ai/action_define.h
 soccer_ai/attack_order.h

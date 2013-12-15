@@ -35,14 +35,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver/soccer_ai
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver/soccer_ai
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football_server/omgserver/soccer_ai
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver/soccer_ai
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +66,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/soccer_ai/CMakeFiles /home/gl/football_server/omgserver/soccer_ai/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/soccer_ai/CMakeFiles /home/gl/workspace/omgserver/soccer_ai/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/soccer_ai/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/soccer_ai/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

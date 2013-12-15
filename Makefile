@@ -35,14 +35,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football_server/omgserver
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +66,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles /home/gl/football_server/omgserver/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles /home/gl/workspace/omgserver/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -125,6 +122,19 @@ game_server/fast:
 .PHONY : game_server/fast
 
 #=============================================================================
+# Target rules for targets named soccer_ai
+
+# Build rule for target.
+soccer_ai: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 soccer_ai
+.PHONY : soccer_ai
+
+# fast build rule for target.
+soccer_ai/fast:
+	$(MAKE) -f game_server/game_lib/soccer_ai/CMakeFiles/soccer_ai.dir/build.make game_server/game_lib/soccer_ai/CMakeFiles/soccer_ai.dir/build
+.PHONY : soccer_ai/fast
+
+#=============================================================================
 # Target rules for targets named db_server
 
 # Build rule for target.
@@ -173,6 +183,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... gate_server"
 	@echo "... game_server"
+	@echo "... soccer_ai"
 	@echo "... db_server"
 	@echo "... net"
 	@echo "... common"

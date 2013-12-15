@@ -35,14 +35,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football_server/omgserver
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles /home/gl/football_server/omgserver/game_server/build/CMakeFiles/progress.marks
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/CMakeFiles 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles /home/gl/workspace/omgserver/game_server/build/CMakeFiles/progress.marks
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/clean
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +82,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 game_server/build/CMakeFiles/game_server.dir/rule:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/CMakeFiles/game_server.dir/rule
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 game_server/build/CMakeFiles/game_server.dir/rule
 .PHONY : game_server/build/CMakeFiles/game_server.dir/rule
 
 # Convenience name for target.
@@ -109,7 +106,7 @@ game_server: game_server/build/CMakeFiles/game_server.dir/rule
 
 # fast build rule for target.
 game_server/fast:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/build
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/build
 .PHONY : game_server/fast
 
 __/CGameMsgDispatcher.o: __/CGameMsgDispatcher.cpp.o
@@ -117,7 +114,7 @@ __/CGameMsgDispatcher.o: __/CGameMsgDispatcher.cpp.o
 
 # target to build an object file
 __/CGameMsgDispatcher.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameMsgDispatcher.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameMsgDispatcher.cpp.o
 .PHONY : __/CGameMsgDispatcher.cpp.o
 
 __/CGameMsgDispatcher.i: __/CGameMsgDispatcher.cpp.i
@@ -125,7 +122,7 @@ __/CGameMsgDispatcher.i: __/CGameMsgDispatcher.cpp.i
 
 # target to preprocess a source file
 __/CGameMsgDispatcher.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameMsgDispatcher.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameMsgDispatcher.cpp.i
 .PHONY : __/CGameMsgDispatcher.cpp.i
 
 __/CGameMsgDispatcher.s: __/CGameMsgDispatcher.cpp.s
@@ -133,7 +130,7 @@ __/CGameMsgDispatcher.s: __/CGameMsgDispatcher.cpp.s
 
 # target to generate assembly for a file
 __/CGameMsgDispatcher.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameMsgDispatcher.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameMsgDispatcher.cpp.s
 .PHONY : __/CGameMsgDispatcher.cpp.s
 
 __/CGameTimerEventHandler.o: __/CGameTimerEventHandler.cpp.o
@@ -141,7 +138,7 @@ __/CGameTimerEventHandler.o: __/CGameTimerEventHandler.cpp.o
 
 # target to build an object file
 __/CGameTimerEventHandler.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameTimerEventHandler.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameTimerEventHandler.cpp.o
 .PHONY : __/CGameTimerEventHandler.cpp.o
 
 __/CGameTimerEventHandler.i: __/CGameTimerEventHandler.cpp.i
@@ -149,7 +146,7 @@ __/CGameTimerEventHandler.i: __/CGameTimerEventHandler.cpp.i
 
 # target to preprocess a source file
 __/CGameTimerEventHandler.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameTimerEventHandler.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameTimerEventHandler.cpp.i
 .PHONY : __/CGameTimerEventHandler.cpp.i
 
 __/CGameTimerEventHandler.s: __/CGameTimerEventHandler.cpp.s
@@ -157,7 +154,7 @@ __/CGameTimerEventHandler.s: __/CGameTimerEventHandler.cpp.s
 
 # target to generate assembly for a file
 __/CGameTimerEventHandler.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameTimerEventHandler.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CGameTimerEventHandler.cpp.s
 .PHONY : __/CGameTimerEventHandler.cpp.s
 
 __/CMatchManager.o: __/CMatchManager.cpp.o
@@ -165,7 +162,7 @@ __/CMatchManager.o: __/CMatchManager.cpp.o
 
 # target to build an object file
 __/CMatchManager.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchManager.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchManager.cpp.o
 .PHONY : __/CMatchManager.cpp.o
 
 __/CMatchManager.i: __/CMatchManager.cpp.i
@@ -173,7 +170,7 @@ __/CMatchManager.i: __/CMatchManager.cpp.i
 
 # target to preprocess a source file
 __/CMatchManager.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchManager.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchManager.cpp.i
 .PHONY : __/CMatchManager.cpp.i
 
 __/CMatchManager.s: __/CMatchManager.cpp.s
@@ -181,7 +178,7 @@ __/CMatchManager.s: __/CMatchManager.cpp.s
 
 # target to generate assembly for a file
 __/CMatchManager.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchManager.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchManager.cpp.s
 .PHONY : __/CMatchManager.cpp.s
 
 __/CMatchTaskManage.o: __/CMatchTaskManage.cpp.o
@@ -189,7 +186,7 @@ __/CMatchTaskManage.o: __/CMatchTaskManage.cpp.o
 
 # target to build an object file
 __/CMatchTaskManage.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchTaskManage.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchTaskManage.cpp.o
 .PHONY : __/CMatchTaskManage.cpp.o
 
 __/CMatchTaskManage.i: __/CMatchTaskManage.cpp.i
@@ -197,7 +194,7 @@ __/CMatchTaskManage.i: __/CMatchTaskManage.cpp.i
 
 # target to preprocess a source file
 __/CMatchTaskManage.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchTaskManage.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchTaskManage.cpp.i
 .PHONY : __/CMatchTaskManage.cpp.i
 
 __/CMatchTaskManage.s: __/CMatchTaskManage.cpp.s
@@ -205,7 +202,7 @@ __/CMatchTaskManage.s: __/CMatchTaskManage.cpp.s
 
 # target to generate assembly for a file
 __/CMatchTaskManage.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchTaskManage.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/CMatchTaskManage.cpp.s
 .PHONY : __/CMatchTaskManage.cpp.s
 
 __/ConnectToGateJob.o: __/ConnectToGateJob.cpp.o
@@ -213,7 +210,7 @@ __/ConnectToGateJob.o: __/ConnectToGateJob.cpp.o
 
 # target to build an object file
 __/ConnectToGateJob.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ConnectToGateJob.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ConnectToGateJob.cpp.o
 .PHONY : __/ConnectToGateJob.cpp.o
 
 __/ConnectToGateJob.i: __/ConnectToGateJob.cpp.i
@@ -221,7 +218,7 @@ __/ConnectToGateJob.i: __/ConnectToGateJob.cpp.i
 
 # target to preprocess a source file
 __/ConnectToGateJob.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ConnectToGateJob.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ConnectToGateJob.cpp.i
 .PHONY : __/ConnectToGateJob.cpp.i
 
 __/ConnectToGateJob.s: __/ConnectToGateJob.cpp.s
@@ -229,7 +226,7 @@ __/ConnectToGateJob.s: __/ConnectToGateJob.cpp.s
 
 # target to generate assembly for a file
 __/ConnectToGateJob.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ConnectToGateJob.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ConnectToGateJob.cpp.s
 .PHONY : __/ConnectToGateJob.cpp.s
 
 __/GameConfigManage.o: __/GameConfigManage.cpp.o
@@ -237,7 +234,7 @@ __/GameConfigManage.o: __/GameConfigManage.cpp.o
 
 # target to build an object file
 __/GameConfigManage.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GameConfigManage.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GameConfigManage.cpp.o
 .PHONY : __/GameConfigManage.cpp.o
 
 __/GameConfigManage.i: __/GameConfigManage.cpp.i
@@ -245,7 +242,7 @@ __/GameConfigManage.i: __/GameConfigManage.cpp.i
 
 # target to preprocess a source file
 __/GameConfigManage.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GameConfigManage.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GameConfigManage.cpp.i
 .PHONY : __/GameConfigManage.cpp.i
 
 __/GameConfigManage.s: __/GameConfigManage.cpp.s
@@ -253,7 +250,7 @@ __/GameConfigManage.s: __/GameConfigManage.cpp.s
 
 # target to generate assembly for a file
 __/GameConfigManage.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GameConfigManage.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GameConfigManage.cpp.s
 .PHONY : __/GameConfigManage.cpp.s
 
 __/GateConManager.o: __/GateConManager.cpp.o
@@ -261,7 +258,7 @@ __/GateConManager.o: __/GateConManager.cpp.o
 
 # target to build an object file
 __/GateConManager.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateConManager.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateConManager.cpp.o
 .PHONY : __/GateConManager.cpp.o
 
 __/GateConManager.i: __/GateConManager.cpp.i
@@ -269,7 +266,7 @@ __/GateConManager.i: __/GateConManager.cpp.i
 
 # target to preprocess a source file
 __/GateConManager.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateConManager.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateConManager.cpp.i
 .PHONY : __/GateConManager.cpp.i
 
 __/GateConManager.s: __/GateConManager.cpp.s
@@ -277,7 +274,7 @@ __/GateConManager.s: __/GateConManager.cpp.s
 
 # target to generate assembly for a file
 __/GateConManager.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateConManager.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateConManager.cpp.s
 .PHONY : __/GateConManager.cpp.s
 
 __/GateSSocketListenerThread.o: __/GateSSocketListenerThread.cpp.o
@@ -285,7 +282,7 @@ __/GateSSocketListenerThread.o: __/GateSSocketListenerThread.cpp.o
 
 # target to build an object file
 __/GateSSocketListenerThread.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateSSocketListenerThread.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateSSocketListenerThread.cpp.o
 .PHONY : __/GateSSocketListenerThread.cpp.o
 
 __/GateSSocketListenerThread.i: __/GateSSocketListenerThread.cpp.i
@@ -293,7 +290,7 @@ __/GateSSocketListenerThread.i: __/GateSSocketListenerThread.cpp.i
 
 # target to preprocess a source file
 __/GateSSocketListenerThread.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateSSocketListenerThread.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateSSocketListenerThread.cpp.i
 .PHONY : __/GateSSocketListenerThread.cpp.i
 
 __/GateSSocketListenerThread.s: __/GateSSocketListenerThread.cpp.s
@@ -301,7 +298,7 @@ __/GateSSocketListenerThread.s: __/GateSSocketListenerThread.cpp.s
 
 # target to generate assembly for a file
 __/GateSSocketListenerThread.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateSSocketListenerThread.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/GateSSocketListenerThread.cpp.s
 .PHONY : __/GateSSocketListenerThread.cpp.s
 
 __/MatchProcessThread.o: __/MatchProcessThread.cpp.o
@@ -309,7 +306,7 @@ __/MatchProcessThread.o: __/MatchProcessThread.cpp.o
 
 # target to build an object file
 __/MatchProcessThread.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/MatchProcessThread.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/MatchProcessThread.cpp.o
 .PHONY : __/MatchProcessThread.cpp.o
 
 __/MatchProcessThread.i: __/MatchProcessThread.cpp.i
@@ -317,7 +314,7 @@ __/MatchProcessThread.i: __/MatchProcessThread.cpp.i
 
 # target to preprocess a source file
 __/MatchProcessThread.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/MatchProcessThread.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/MatchProcessThread.cpp.i
 .PHONY : __/MatchProcessThread.cpp.i
 
 __/MatchProcessThread.s: __/MatchProcessThread.cpp.s
@@ -325,7 +322,7 @@ __/MatchProcessThread.s: __/MatchProcessThread.cpp.s
 
 # target to generate assembly for a file
 __/MatchProcessThread.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/MatchProcessThread.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/MatchProcessThread.cpp.s
 .PHONY : __/MatchProcessThread.cpp.s
 
 __/RunMatchJob.o: __/RunMatchJob.cpp.o
@@ -333,7 +330,7 @@ __/RunMatchJob.o: __/RunMatchJob.cpp.o
 
 # target to build an object file
 __/RunMatchJob.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/RunMatchJob.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/RunMatchJob.cpp.o
 .PHONY : __/RunMatchJob.cpp.o
 
 __/RunMatchJob.i: __/RunMatchJob.cpp.i
@@ -341,7 +338,7 @@ __/RunMatchJob.i: __/RunMatchJob.cpp.i
 
 # target to preprocess a source file
 __/RunMatchJob.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/RunMatchJob.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/RunMatchJob.cpp.i
 .PHONY : __/RunMatchJob.cpp.i
 
 __/RunMatchJob.s: __/RunMatchJob.cpp.s
@@ -349,7 +346,7 @@ __/RunMatchJob.s: __/RunMatchJob.cpp.s
 
 # target to generate assembly for a file
 __/RunMatchJob.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/RunMatchJob.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/RunMatchJob.cpp.s
 .PHONY : __/RunMatchJob.cpp.s
 
 __/ball_keyframe.o: __/ball_keyframe.cpp.o
@@ -357,7 +354,7 @@ __/ball_keyframe.o: __/ball_keyframe.cpp.o
 
 # target to build an object file
 __/ball_keyframe.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ball_keyframe.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ball_keyframe.cpp.o
 .PHONY : __/ball_keyframe.cpp.o
 
 __/ball_keyframe.i: __/ball_keyframe.cpp.i
@@ -365,7 +362,7 @@ __/ball_keyframe.i: __/ball_keyframe.cpp.i
 
 # target to preprocess a source file
 __/ball_keyframe.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ball_keyframe.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ball_keyframe.cpp.i
 .PHONY : __/ball_keyframe.cpp.i
 
 __/ball_keyframe.s: __/ball_keyframe.cpp.s
@@ -373,7 +370,7 @@ __/ball_keyframe.s: __/ball_keyframe.cpp.s
 
 # target to generate assembly for a file
 __/ball_keyframe.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ball_keyframe.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/ball_keyframe.cpp.s
 .PHONY : __/ball_keyframe.cpp.s
 
 __/init_move_define.o: __/init_move_define.cpp.o
@@ -381,7 +378,7 @@ __/init_move_define.o: __/init_move_define.cpp.o
 
 # target to build an object file
 __/init_move_define.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/init_move_define.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/init_move_define.cpp.o
 .PHONY : __/init_move_define.cpp.o
 
 __/init_move_define.i: __/init_move_define.cpp.i
@@ -389,7 +386,7 @@ __/init_move_define.i: __/init_move_define.cpp.i
 
 # target to preprocess a source file
 __/init_move_define.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/init_move_define.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/init_move_define.cpp.i
 .PHONY : __/init_move_define.cpp.i
 
 __/init_move_define.s: __/init_move_define.cpp.s
@@ -397,7 +394,7 @@ __/init_move_define.s: __/init_move_define.cpp.s
 
 # target to generate assembly for a file
 __/init_move_define.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/init_move_define.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/init_move_define.cpp.s
 .PHONY : __/init_move_define.cpp.s
 
 __/main.o: __/main.cpp.o
@@ -405,7 +402,7 @@ __/main.o: __/main.cpp.o
 
 # target to build an object file
 __/main.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/main.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/main.cpp.o
 .PHONY : __/main.cpp.o
 
 __/main.i: __/main.cpp.i
@@ -413,7 +410,7 @@ __/main.i: __/main.cpp.i
 
 # target to preprocess a source file
 __/main.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/main.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/main.cpp.i
 .PHONY : __/main.cpp.i
 
 __/main.s: __/main.cpp.s
@@ -421,7 +418,7 @@ __/main.s: __/main.cpp.s
 
 # target to generate assembly for a file
 __/main.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/main.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/main.cpp.s
 .PHONY : __/main.cpp.s
 
 __/match.o: __/match.cpp.o
@@ -429,7 +426,7 @@ __/match.o: __/match.cpp.o
 
 # target to build an object file
 __/match.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match.cpp.o
 .PHONY : __/match.cpp.o
 
 __/match.i: __/match.cpp.i
@@ -437,7 +434,7 @@ __/match.i: __/match.cpp.i
 
 # target to preprocess a source file
 __/match.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match.cpp.i
 .PHONY : __/match.cpp.i
 
 __/match.s: __/match.cpp.s
@@ -445,7 +442,7 @@ __/match.s: __/match.cpp.s
 
 # target to generate assembly for a file
 __/match.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match.cpp.s
 .PHONY : __/match.cpp.s
 
 __/match_recorder.o: __/match_recorder.cpp.o
@@ -453,7 +450,7 @@ __/match_recorder.o: __/match_recorder.cpp.o
 
 # target to build an object file
 __/match_recorder.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match_recorder.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match_recorder.cpp.o
 .PHONY : __/match_recorder.cpp.o
 
 __/match_recorder.i: __/match_recorder.cpp.i
@@ -461,7 +458,7 @@ __/match_recorder.i: __/match_recorder.cpp.i
 
 # target to preprocess a source file
 __/match_recorder.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match_recorder.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match_recorder.cpp.i
 .PHONY : __/match_recorder.cpp.i
 
 __/match_recorder.s: __/match_recorder.cpp.s
@@ -469,7 +466,7 @@ __/match_recorder.s: __/match_recorder.cpp.s
 
 # target to generate assembly for a file
 __/match_recorder.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match_recorder.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/match_recorder.cpp.s
 .PHONY : __/match_recorder.cpp.s
 
 __/rand_generator.o: __/rand_generator.cpp.o
@@ -477,7 +474,7 @@ __/rand_generator.o: __/rand_generator.cpp.o
 
 # target to build an object file
 __/rand_generator.cpp.o:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/rand_generator.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/rand_generator.cpp.o
 .PHONY : __/rand_generator.cpp.o
 
 __/rand_generator.i: __/rand_generator.cpp.i
@@ -485,7 +482,7 @@ __/rand_generator.i: __/rand_generator.cpp.i
 
 # target to preprocess a source file
 __/rand_generator.cpp.i:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/rand_generator.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/rand_generator.cpp.i
 .PHONY : __/rand_generator.cpp.i
 
 __/rand_generator.s: __/rand_generator.cpp.s
@@ -493,7 +490,7 @@ __/rand_generator.s: __/rand_generator.cpp.s
 
 # target to generate assembly for a file
 __/rand_generator.cpp.s:
-	cd /home/gl/football_server/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/rand_generator.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/__/rand_generator.cpp.s
 .PHONY : __/rand_generator.cpp.s
 
 # Help Target
@@ -564,6 +561,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/football_server/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
