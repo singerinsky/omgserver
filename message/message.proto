@@ -1,0 +1,6 @@
+message SoccerPlayerInfo
+{
+    required int32 player_id = 1;
+    required string player_name = 2;
+    required int32 age = 3;
+}
