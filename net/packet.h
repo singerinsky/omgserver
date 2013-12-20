@@ -6,10 +6,13 @@
 
 #pragma pack(1)
 
-#define MSG_REQUEST 1;
-#define MSG_REPONSE 2; 
+enum msg_type
+{
+    MSG_REQUEST = 1,
+    MSG_REPONSE = 2, 
+};
 
-enum
+enum message_action_type
 {
     CS_MSG_GET_PLAYER_INFO_REQ = SoccerPlayerInfo<<2 | MSG_REQUEST, 
     CS_MSG_GET_PLAYER_INFO_REP = SoccerPlayerInfo<<2 | MSG_REPONSE, 
