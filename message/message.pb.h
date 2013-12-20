@@ -23,6 +23,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
@@ -31,18 +32,37 @@ void  protobuf_AddDesc_message_2eproto();
 void protobuf_AssignDesc_message_2eproto();
 void protobuf_ShutdownFile_message_2eproto();
 
-class SoccerPlayerInfo;
+class SoccerPlayerInfoRequest;
+class SoccerPlayerInfoReponse;
 
+enum MessageType {
+  SoccerPlayerInfo = 1
+};
+bool MessageType_IsValid(int value);
+const MessageType MessageType_MIN = SoccerPlayerInfo;
+const MessageType MessageType_MAX = SoccerPlayerInfo;
+const int MessageType_ARRAYSIZE = MessageType_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* MessageType_descriptor();
+inline const ::std::string& MessageType_Name(MessageType value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    MessageType_descriptor(), value);
+}
+inline bool MessageType_Parse(
+    const ::std::string& name, MessageType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<MessageType>(
+    MessageType_descriptor(), name, value);
+}
 // ===================================================================
 
-class SoccerPlayerInfo : public ::google::protobuf::Message {
+class SoccerPlayerInfoRequest : public ::google::protobuf::Message {
  public:
-  SoccerPlayerInfo();
-  virtual ~SoccerPlayerInfo();
+  SoccerPlayerInfoRequest();
+  virtual ~SoccerPlayerInfoRequest();
 
-  SoccerPlayerInfo(const SoccerPlayerInfo& from);
+  SoccerPlayerInfoRequest(const SoccerPlayerInfoRequest& from);
 
-  inline SoccerPlayerInfo& operator=(const SoccerPlayerInfo& from) {
+  inline SoccerPlayerInfoRequest& operator=(const SoccerPlayerInfoRequest& from) {
     CopyFrom(from);
     return *this;
   }
@@ -56,17 +76,99 @@ class SoccerPlayerInfo : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const SoccerPlayerInfo& default_instance();
+  static const SoccerPlayerInfoRequest& default_instance();
 
-  void Swap(SoccerPlayerInfo* other);
+  void Swap(SoccerPlayerInfoRequest* other);
 
   // implements Message ----------------------------------------------
 
-  SoccerPlayerInfo* New() const;
+  SoccerPlayerInfoRequest* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const SoccerPlayerInfo& from);
-  void MergeFrom(const SoccerPlayerInfo& from);
+  void CopyFrom(const SoccerPlayerInfoRequest& from);
+  void MergeFrom(const SoccerPlayerInfoRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required int32 player_id = 1;
+  inline bool has_player_id() const;
+  inline void clear_player_id();
+  static const int kPlayerIdFieldNumber = 1;
+  inline ::google::protobuf::int32 player_id() const;
+  inline void set_player_id(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:SoccerPlayerInfoRequest)
+ private:
+  inline void set_has_player_id();
+  inline void clear_has_player_id();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::google::protobuf::int32 player_id_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+
+  void InitAsDefaultInstance();
+  static SoccerPlayerInfoRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class SoccerPlayerInfoReponse : public ::google::protobuf::Message {
+ public:
+  SoccerPlayerInfoReponse();
+  virtual ~SoccerPlayerInfoReponse();
+
+  SoccerPlayerInfoReponse(const SoccerPlayerInfoReponse& from);
+
+  inline SoccerPlayerInfoReponse& operator=(const SoccerPlayerInfoReponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const SoccerPlayerInfoReponse& default_instance();
+
+  void Swap(SoccerPlayerInfoReponse* other);
+
+  // implements Message ----------------------------------------------
+
+  SoccerPlayerInfoReponse* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const SoccerPlayerInfoReponse& from);
+  void MergeFrom(const SoccerPlayerInfoReponse& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -115,7 +217,7 @@ class SoccerPlayerInfo : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 age() const;
   inline void set_age(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:SoccerPlayerInfo)
+  // @@protoc_insertion_point(class_scope:SoccerPlayerInfoReponse)
  private:
   inline void set_has_player_id();
   inline void clear_has_player_id();
@@ -138,85 +240,111 @@ class SoccerPlayerInfo : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_message_2eproto();
 
   void InitAsDefaultInstance();
-  static SoccerPlayerInfo* default_instance_;
+  static SoccerPlayerInfoReponse* default_instance_;
 };
 // ===================================================================
 
 
 // ===================================================================
 
-// SoccerPlayerInfo
+// SoccerPlayerInfoRequest
 
 // required int32 player_id = 1;
-inline bool SoccerPlayerInfo::has_player_id() const {
+inline bool SoccerPlayerInfoRequest::has_player_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void SoccerPlayerInfo::set_has_player_id() {
+inline void SoccerPlayerInfoRequest::set_has_player_id() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void SoccerPlayerInfo::clear_has_player_id() {
+inline void SoccerPlayerInfoRequest::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void SoccerPlayerInfo::clear_player_id() {
+inline void SoccerPlayerInfoRequest::clear_player_id() {
   player_id_ = 0;
   clear_has_player_id();
 }
-inline ::google::protobuf::int32 SoccerPlayerInfo::player_id() const {
+inline ::google::protobuf::int32 SoccerPlayerInfoRequest::player_id() const {
   return player_id_;
 }
-inline void SoccerPlayerInfo::set_player_id(::google::protobuf::int32 value) {
+inline void SoccerPlayerInfoRequest::set_player_id(::google::protobuf::int32 value) {
+  set_has_player_id();
+  player_id_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// SoccerPlayerInfoReponse
+
+// required int32 player_id = 1;
+inline bool SoccerPlayerInfoReponse::has_player_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void SoccerPlayerInfoReponse::set_has_player_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void SoccerPlayerInfoReponse::clear_has_player_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void SoccerPlayerInfoReponse::clear_player_id() {
+  player_id_ = 0;
+  clear_has_player_id();
+}
+inline ::google::protobuf::int32 SoccerPlayerInfoReponse::player_id() const {
+  return player_id_;
+}
+inline void SoccerPlayerInfoReponse::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
 }
 
 // required string player_name = 2;
-inline bool SoccerPlayerInfo::has_player_name() const {
+inline bool SoccerPlayerInfoReponse::has_player_name() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void SoccerPlayerInfo::set_has_player_name() {
+inline void SoccerPlayerInfoReponse::set_has_player_name() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void SoccerPlayerInfo::clear_has_player_name() {
+inline void SoccerPlayerInfoReponse::clear_has_player_name() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void SoccerPlayerInfo::clear_player_name() {
+inline void SoccerPlayerInfoReponse::clear_player_name() {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
     player_name_->clear();
   }
   clear_has_player_name();
 }
-inline const ::std::string& SoccerPlayerInfo::player_name() const {
+inline const ::std::string& SoccerPlayerInfoReponse::player_name() const {
   return *player_name_;
 }
-inline void SoccerPlayerInfo::set_player_name(const ::std::string& value) {
+inline void SoccerPlayerInfoReponse::set_player_name(const ::std::string& value) {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   player_name_->assign(value);
 }
-inline void SoccerPlayerInfo::set_player_name(const char* value) {
+inline void SoccerPlayerInfoReponse::set_player_name(const char* value) {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   player_name_->assign(value);
 }
-inline void SoccerPlayerInfo::set_player_name(const char* value, size_t size) {
+inline void SoccerPlayerInfoReponse::set_player_name(const char* value, size_t size) {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   player_name_->assign(reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* SoccerPlayerInfo::mutable_player_name() {
+inline ::std::string* SoccerPlayerInfoReponse::mutable_player_name() {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   return player_name_;
 }
-inline ::std::string* SoccerPlayerInfo::release_player_name() {
+inline ::std::string* SoccerPlayerInfoReponse::release_player_name() {
   clear_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     return NULL;
@@ -226,7 +354,7 @@ inline ::std::string* SoccerPlayerInfo::release_player_name() {
     return temp;
   }
 }
-inline void SoccerPlayerInfo::set_allocated_player_name(::std::string* player_name) {
+inline void SoccerPlayerInfoReponse::set_allocated_player_name(::std::string* player_name) {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
     delete player_name_;
   }
@@ -240,23 +368,23 @@ inline void SoccerPlayerInfo::set_allocated_player_name(::std::string* player_na
 }
 
 // required int32 age = 3;
-inline bool SoccerPlayerInfo::has_age() const {
+inline bool SoccerPlayerInfoReponse::has_age() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void SoccerPlayerInfo::set_has_age() {
+inline void SoccerPlayerInfoReponse::set_has_age() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void SoccerPlayerInfo::clear_has_age() {
+inline void SoccerPlayerInfoReponse::clear_has_age() {
   _has_bits_[0] &= ~0x00000004u;
 }
-inline void SoccerPlayerInfo::clear_age() {
+inline void SoccerPlayerInfoReponse::clear_age() {
   age_ = 0;
   clear_has_age();
 }
-inline ::google::protobuf::int32 SoccerPlayerInfo::age() const {
+inline ::google::protobuf::int32 SoccerPlayerInfoReponse::age() const {
   return age_;
 }
-inline void SoccerPlayerInfo::set_age(::google::protobuf::int32 value) {
+inline void SoccerPlayerInfoReponse::set_age(::google::protobuf::int32 value) {
   set_has_age();
   age_ = value;
 }
@@ -268,6 +396,10 @@ inline void SoccerPlayerInfo::set_age(::google::protobuf::int32 value) {
 namespace google {
 namespace protobuf {
 
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::MessageType>() {
+  return ::MessageType_descriptor();
+}
 
 }  // namespace google
 }  // namespace protobuf

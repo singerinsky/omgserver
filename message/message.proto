@@ -1,4 +1,14 @@
-message SoccerPlayerInfo
+enum MessageType
+{
+    SoccerPlayerInfo = 1;
+}
+
+message SoccerPlayerInfoRequest
+{
+    required int32 player_id = 1;
+}
+
+message SoccerPlayerInfoReponse
 {
     required int32 player_id = 1;
     required string player_name = 2;

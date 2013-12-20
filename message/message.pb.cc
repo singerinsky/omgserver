@@ -18,9 +18,13 @@
 
 namespace {
 
-const ::google::protobuf::Descriptor* SoccerPlayerInfo_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* SoccerPlayerInfoRequest_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  SoccerPlayerInfo_reflection_ = NULL;
+  SoccerPlayerInfoRequest_reflection_ = NULL;
+const ::google::protobuf::Descriptor* SoccerPlayerInfoReponse_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  SoccerPlayerInfoReponse_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* MessageType_descriptor_ = NULL;
 
 }  // namespace
 
@@ -31,23 +35,39 @@ void protobuf_AssignDesc_message_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "message.proto");
   GOOGLE_CHECK(file != NULL);
-  SoccerPlayerInfo_descriptor_ = file->message_type(0);
-  static const int SoccerPlayerInfo_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfo, player_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfo, player_name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfo, age_),
+  SoccerPlayerInfoRequest_descriptor_ = file->message_type(0);
+  static const int SoccerPlayerInfoRequest_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoRequest, player_id_),
   };
-  SoccerPlayerInfo_reflection_ =
+  SoccerPlayerInfoRequest_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      SoccerPlayerInfo_descriptor_,
-      SoccerPlayerInfo::default_instance_,
-      SoccerPlayerInfo_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfo, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfo, _unknown_fields_),
+      SoccerPlayerInfoRequest_descriptor_,
+      SoccerPlayerInfoRequest::default_instance_,
+      SoccerPlayerInfoRequest_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoRequest, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoRequest, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(SoccerPlayerInfo));
+      sizeof(SoccerPlayerInfoRequest));
+  SoccerPlayerInfoReponse_descriptor_ = file->message_type(1);
+  static const int SoccerPlayerInfoReponse_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoReponse, player_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoReponse, player_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoReponse, age_),
+  };
+  SoccerPlayerInfoReponse_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      SoccerPlayerInfoReponse_descriptor_,
+      SoccerPlayerInfoReponse::default_instance_,
+      SoccerPlayerInfoReponse_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoReponse, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SoccerPlayerInfoReponse, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(SoccerPlayerInfoReponse));
+  MessageType_descriptor_ = file->enum_type(0);
 }
 
 namespace {
@@ -61,14 +81,18 @@ inline void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    SoccerPlayerInfo_descriptor_, &SoccerPlayerInfo::default_instance());
+    SoccerPlayerInfoRequest_descriptor_, &SoccerPlayerInfoRequest::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    SoccerPlayerInfoReponse_descriptor_, &SoccerPlayerInfoReponse::default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_message_2eproto() {
-  delete SoccerPlayerInfo::default_instance_;
-  delete SoccerPlayerInfo_reflection_;
+  delete SoccerPlayerInfoRequest::default_instance_;
+  delete SoccerPlayerInfoRequest_reflection_;
+  delete SoccerPlayerInfoReponse::default_instance_;
+  delete SoccerPlayerInfoReponse_reflection_;
 }
 
 void protobuf_AddDesc_message_2eproto() {
@@ -78,13 +102,17 @@ void protobuf_AddDesc_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\rmessage.proto\"G\n\020SoccerPlayerInfo\022\021\n\tp"
-    "layer_id\030\001 \002(\005\022\023\n\013player_name\030\002 \002(\t\022\013\n\003a"
-    "ge\030\003 \002(\005", 88);
+    "\n\rmessage.proto\",\n\027SoccerPlayerInfoReque"
+    "st\022\021\n\tplayer_id\030\001 \002(\005\"N\n\027SoccerPlayerInf"
+    "oReponse\022\021\n\tplayer_id\030\001 \002(\005\022\023\n\013player_na"
+    "me\030\002 \002(\t\022\013\n\003age\030\003 \002(\005*#\n\013MessageType\022\024\n\020"
+    "SoccerPlayerInfo\020\001", 178);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
-  SoccerPlayerInfo::default_instance_ = new SoccerPlayerInfo();
-  SoccerPlayerInfo::default_instance_->InitAsDefaultInstance();
+  SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
+  SoccerPlayerInfoReponse::default_instance_ = new SoccerPlayerInfoReponse();
+  SoccerPlayerInfoRequest::default_instance_->InitAsDefaultInstance();
+  SoccerPlayerInfoReponse::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_message_2eproto);
 }
 
@@ -94,30 +122,252 @@ struct StaticDescriptorInitializer_message_2eproto {
     protobuf_AddDesc_message_2eproto();
   }
 } static_descriptor_initializer_message_2eproto_;
+const ::google::protobuf::EnumDescriptor* MessageType_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return MessageType_descriptor_;
+}
+bool MessageType_IsValid(int value) {
+  switch(value) {
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 
 #ifndef _MSC_VER
-const int SoccerPlayerInfo::kPlayerIdFieldNumber;
-const int SoccerPlayerInfo::kPlayerNameFieldNumber;
-const int SoccerPlayerInfo::kAgeFieldNumber;
+const int SoccerPlayerInfoRequest::kPlayerIdFieldNumber;
 #endif  // !_MSC_VER
 
-SoccerPlayerInfo::SoccerPlayerInfo()
+SoccerPlayerInfoRequest::SoccerPlayerInfoRequest()
   : ::google::protobuf::Message() {
   SharedCtor();
 }
 
-void SoccerPlayerInfo::InitAsDefaultInstance() {
+void SoccerPlayerInfoRequest::InitAsDefaultInstance() {
 }
 
-SoccerPlayerInfo::SoccerPlayerInfo(const SoccerPlayerInfo& from)
+SoccerPlayerInfoRequest::SoccerPlayerInfoRequest(const SoccerPlayerInfoRequest& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
 }
 
-void SoccerPlayerInfo::SharedCtor() {
+void SoccerPlayerInfoRequest::SharedCtor() {
+  _cached_size_ = 0;
+  player_id_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+SoccerPlayerInfoRequest::~SoccerPlayerInfoRequest() {
+  SharedDtor();
+}
+
+void SoccerPlayerInfoRequest::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void SoccerPlayerInfoRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* SoccerPlayerInfoRequest::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return SoccerPlayerInfoRequest_descriptor_;
+}
+
+const SoccerPlayerInfoRequest& SoccerPlayerInfoRequest::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_message_2eproto();
+  return *default_instance_;
+}
+
+SoccerPlayerInfoRequest* SoccerPlayerInfoRequest::default_instance_ = NULL;
+
+SoccerPlayerInfoRequest* SoccerPlayerInfoRequest::New() const {
+  return new SoccerPlayerInfoRequest;
+}
+
+void SoccerPlayerInfoRequest::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    player_id_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool SoccerPlayerInfoRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required int32 player_id = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &player_id_)));
+          set_has_player_id();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void SoccerPlayerInfoRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required int32 player_id = 1;
+  if (has_player_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->player_id(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* SoccerPlayerInfoRequest::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required int32 player_id = 1;
+  if (has_player_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->player_id(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int SoccerPlayerInfoRequest::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required int32 player_id = 1;
+    if (has_player_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->player_id());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void SoccerPlayerInfoRequest::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const SoccerPlayerInfoRequest* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const SoccerPlayerInfoRequest*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void SoccerPlayerInfoRequest::MergeFrom(const SoccerPlayerInfoRequest& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_player_id()) {
+      set_player_id(from.player_id());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void SoccerPlayerInfoRequest::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SoccerPlayerInfoRequest::CopyFrom(const SoccerPlayerInfoRequest& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SoccerPlayerInfoRequest::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  return true;
+}
+
+void SoccerPlayerInfoRequest::Swap(SoccerPlayerInfoRequest* other) {
+  if (other != this) {
+    std::swap(player_id_, other->player_id_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata SoccerPlayerInfoRequest::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = SoccerPlayerInfoRequest_descriptor_;
+  metadata.reflection = SoccerPlayerInfoRequest_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int SoccerPlayerInfoReponse::kPlayerIdFieldNumber;
+const int SoccerPlayerInfoReponse::kPlayerNameFieldNumber;
+const int SoccerPlayerInfoReponse::kAgeFieldNumber;
+#endif  // !_MSC_VER
+
+SoccerPlayerInfoReponse::SoccerPlayerInfoReponse()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void SoccerPlayerInfoReponse::InitAsDefaultInstance() {
+}
+
+SoccerPlayerInfoReponse::SoccerPlayerInfoReponse(const SoccerPlayerInfoReponse& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void SoccerPlayerInfoReponse::SharedCtor() {
   _cached_size_ = 0;
   player_id_ = 0;
   player_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
@@ -125,11 +375,11 @@ void SoccerPlayerInfo::SharedCtor() {
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-SoccerPlayerInfo::~SoccerPlayerInfo() {
+SoccerPlayerInfoReponse::~SoccerPlayerInfoReponse() {
   SharedDtor();
 }
 
-void SoccerPlayerInfo::SharedDtor() {
+void SoccerPlayerInfoReponse::SharedDtor() {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
     delete player_name_;
   }
@@ -137,28 +387,28 @@ void SoccerPlayerInfo::SharedDtor() {
   }
 }
 
-void SoccerPlayerInfo::SetCachedSize(int size) const {
+void SoccerPlayerInfoReponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* SoccerPlayerInfo::descriptor() {
+const ::google::protobuf::Descriptor* SoccerPlayerInfoReponse::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return SoccerPlayerInfo_descriptor_;
+  return SoccerPlayerInfoReponse_descriptor_;
 }
 
-const SoccerPlayerInfo& SoccerPlayerInfo::default_instance() {
+const SoccerPlayerInfoReponse& SoccerPlayerInfoReponse::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_message_2eproto();
   return *default_instance_;
 }
 
-SoccerPlayerInfo* SoccerPlayerInfo::default_instance_ = NULL;
+SoccerPlayerInfoReponse* SoccerPlayerInfoReponse::default_instance_ = NULL;
 
-SoccerPlayerInfo* SoccerPlayerInfo::New() const {
-  return new SoccerPlayerInfo;
+SoccerPlayerInfoReponse* SoccerPlayerInfoReponse::New() const {
+  return new SoccerPlayerInfoReponse;
 }
 
-void SoccerPlayerInfo::Clear() {
+void SoccerPlayerInfoReponse::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     player_id_ = 0;
     if (has_player_name()) {
@@ -172,7 +422,7 @@ void SoccerPlayerInfo::Clear() {
   mutable_unknown_fields()->Clear();
 }
 
-bool SoccerPlayerInfo::MergePartialFromCodedStream(
+bool SoccerPlayerInfoReponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
   ::google::protobuf::uint32 tag;
@@ -242,7 +492,7 @@ bool SoccerPlayerInfo::MergePartialFromCodedStream(
 #undef DO_
 }
 
-void SoccerPlayerInfo::SerializeWithCachedSizes(
+void SoccerPlayerInfoReponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // required int32 player_id = 1;
   if (has_player_id()) {
@@ -269,7 +519,7 @@ void SoccerPlayerInfo::SerializeWithCachedSizes(
   }
 }
 
-::google::protobuf::uint8* SoccerPlayerInfo::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* SoccerPlayerInfoReponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // required int32 player_id = 1;
   if (has_player_id()) {
@@ -298,7 +548,7 @@ void SoccerPlayerInfo::SerializeWithCachedSizes(
   return target;
 }
 
-int SoccerPlayerInfo::ByteSize() const {
+int SoccerPlayerInfoReponse::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -335,10 +585,10 @@ int SoccerPlayerInfo::ByteSize() const {
   return total_size;
 }
 
-void SoccerPlayerInfo::MergeFrom(const ::google::protobuf::Message& from) {
+void SoccerPlayerInfoReponse::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const SoccerPlayerInfo* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const SoccerPlayerInfo*>(
+  const SoccerPlayerInfoReponse* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const SoccerPlayerInfoReponse*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -347,7 +597,7 @@ void SoccerPlayerInfo::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void SoccerPlayerInfo::MergeFrom(const SoccerPlayerInfo& from) {
+void SoccerPlayerInfoReponse::MergeFrom(const SoccerPlayerInfoReponse& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_player_id()) {
@@ -363,25 +613,25 @@ void SoccerPlayerInfo::MergeFrom(const SoccerPlayerInfo& from) {
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void SoccerPlayerInfo::CopyFrom(const ::google::protobuf::Message& from) {
+void SoccerPlayerInfoReponse::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void SoccerPlayerInfo::CopyFrom(const SoccerPlayerInfo& from) {
+void SoccerPlayerInfoReponse::CopyFrom(const SoccerPlayerInfoReponse& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SoccerPlayerInfo::IsInitialized() const {
+bool SoccerPlayerInfoReponse::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
 
   return true;
 }
 
-void SoccerPlayerInfo::Swap(SoccerPlayerInfo* other) {
+void SoccerPlayerInfoReponse::Swap(SoccerPlayerInfoReponse* other) {
   if (other != this) {
     std::swap(player_id_, other->player_id_);
     std::swap(player_name_, other->player_name_);
@@ -392,11 +642,11 @@ void SoccerPlayerInfo::Swap(SoccerPlayerInfo* other) {
   }
 }
 
-::google::protobuf::Metadata SoccerPlayerInfo::GetMetadata() const {
+::google::protobuf::Metadata SoccerPlayerInfoReponse::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = SoccerPlayerInfo_descriptor_;
-  metadata.reflection = SoccerPlayerInfo_reflection_;
+  metadata.descriptor = SoccerPlayerInfoReponse_descriptor_;
+  metadata.reflection = SoccerPlayerInfoReponse_reflection_;
   return metadata;
 }
 

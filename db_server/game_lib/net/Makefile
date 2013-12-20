@@ -35,6 +35,9 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
 
@@ -157,6 +160,30 @@ epoll_handler.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/epoll_handler.cpp.s
 .PHONY : epoll_handler.cpp.s
 
+game_packet.o: game_packet.cpp.o
+.PHONY : game_packet.o
+
+# target to build an object file
+game_packet.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/game_packet.cpp.o
+.PHONY : game_packet.cpp.o
+
+game_packet.i: game_packet.cpp.i
+.PHONY : game_packet.i
+
+# target to preprocess a source file
+game_packet.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/game_packet.cpp.i
+.PHONY : game_packet.cpp.i
+
+game_packet.s: game_packet.cpp.s
+.PHONY : game_packet.s
+
+# target to generate assembly for a file
+game_packet.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/game_packet.cpp.s
+.PHONY : game_packet.cpp.s
+
 serversocket.o: serversocket.cpp.o
 .PHONY : serversocket.o
 
@@ -244,6 +271,9 @@ help:
 	@echo "... epoll_handler.o"
 	@echo "... epoll_handler.i"
 	@echo "... epoll_handler.s"
+	@echo "... game_packet.o"
+	@echo "... game_packet.i"
+	@echo "... game_packet.s"
 	@echo "... serversocket.o"
 	@echo "... serversocket.i"
 	@echo "... serversocket.s"
