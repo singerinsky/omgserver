@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver/net
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver/net
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football_server/omgserver/net
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver/net
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/net/CMakeFiles /home/gl/football_server/omgserver/net/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/net/CMakeFiles /home/gl/workspace/omgserver/net/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football_server/omgserver/net/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/net/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,21 @@ epoll_handler.s:
 .PHONY : epoll_handler.s
 
 # target to build an object file
+game_packet.o:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/game_packet.o
+.PHONY : game_packet.o
+
+# target to preprocess a source file
+game_packet.i:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/game_packet.i
+.PHONY : game_packet.i
+
+# target to generate assembly for a file
+game_packet.s:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/game_packet.s
+.PHONY : game_packet.s
+
+# target to build an object file
 serversocket.o:
 	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/serversocket.o
 .PHONY : serversocket.o
@@ -201,6 +216,9 @@ help:
 	@echo "... epoll_handler.o"
 	@echo "... epoll_handler.i"
 	@echo "... epoll_handler.s"
+	@echo "... game_packet.o"
+	@echo "... game_packet.i"
+	@echo "... game_packet.s"
 	@echo "... serversocket.o"
 	@echo "... serversocket.i"
 	@echo "... serversocket.s"

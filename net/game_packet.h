@@ -5,12 +5,12 @@
 #include <exception>
 #include "packet.h"
 #include "../common/aliased_buf.h"
-
+/*
 typedef unsigned __int8 uint8_t;
 typedef unsigned __int16 uint16_t;
 typedef unsigned __int32 uint32_t;
 typedef __int32 int32_t;
-
+*/
 struct ss_head
 {
     uint16_t length ;
