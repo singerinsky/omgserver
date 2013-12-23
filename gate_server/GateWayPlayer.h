@@ -103,6 +103,7 @@ public:
 	//	 return get_attack_defend_value() < t1->get_attack_defend_value();
 	 //}
 
+    void forward_game_msg(const char* data,int data_size);
 private:
 	int				_match_watcher_id;
 	EPollSocket* 	_socket;

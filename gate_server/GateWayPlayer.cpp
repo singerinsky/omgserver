@@ -6,6 +6,8 @@
  */
 
 #include "GateWayPlayer.h"
+#include "../net/game_packet.h"
+#include "../net/packet_message.h"
 
 GateWayPlayer::GateWayPlayer(EPollSocket* socket,int player_id):_socket(socket),_player_id(player_id) {
 	_player_state = LOGIN_SUCCESS;
@@ -30,3 +32,13 @@ void GateWayPlayer::send_msg(const MsgBase* msg){
 		}
 	}
 }
+
+void GateWayPlayer::forward_game_msg(const char* data,int data_size)
+{
+    cs_soccer_player_response response;
+    response.body.set_player_id(111);
+    response.body.set_player_name("guanlei");
+    response.body.set_age(21);
+    _socket->send_packet_msg(&response);
+}
+

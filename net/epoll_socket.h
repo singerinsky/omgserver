@@ -5,6 +5,7 @@
 #include "../common/omg_type.h"
 #include "../common/lock.h"
 #include "../net/IMsgDispatcher.h"
+#include "../net/packet.h"
 
 using namespace omg;
 
@@ -211,6 +212,18 @@ struct EPollSocket {
 		
         return 0;
 	}
+
+
+    int send_packet_msg(packet* p)
+    {
+       int size = p->encode_size();
+       if(size < 1)return -1;
+       char buffer[1024*8] = {0};
+       size = p->encode(buffer,1024*8);
+       if(size < 1)return -1;
+       return send_msg(buffer,size);   
+    }
+    
 
     
     int mod_epoll_status(int status)

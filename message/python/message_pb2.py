@@ -14,7 +14,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
-  serialized_pb='\n\rmessage.proto\",\n\x17SoccerPlayerInfoRequest\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\"N\n\x17SoccerPlayerInfoReponse\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x13\n\x0bplayer_name\x18\x02 \x02(\t\x12\x0b\n\x03\x61ge\x18\x03 \x02(\x05*#\n\x0bMessageType\x12\x14\n\x10SoccerPlayerInfo\x10\x01')
+  serialized_pb='\n\rmessage.proto\",\n\x17SoccerPlayerInfoRequest\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\"O\n\x18SoccerPlayerInfoResponse\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x13\n\x0bplayer_name\x18\x02 \x02(\t\x12\x0b\n\x03\x61ge\x18\x03 \x02(\x05*#\n\x0bMessageType\x12\x14\n\x10SoccerPlayerInfo\x10\x01')
 
 _MESSAGETYPE = _descriptor.EnumDescriptor(
   name='MessageType',
@@ -29,8 +29,8 @@ _MESSAGETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=143,
-  serialized_end=178,
+  serialized_start=144,
+  serialized_end=179,
 )
 
 MessageType = enum_type_wrapper.EnumTypeWrapper(_MESSAGETYPE)
@@ -66,29 +66,29 @@ _SOCCERPLAYERINFOREQUEST = _descriptor.Descriptor(
 )
 
 
-_SOCCERPLAYERINFOREPONSE = _descriptor.Descriptor(
-  name='SoccerPlayerInfoReponse',
-  full_name='SoccerPlayerInfoReponse',
+_SOCCERPLAYERINFORESPONSE = _descriptor.Descriptor(
+  name='SoccerPlayerInfoResponse',
+  full_name='SoccerPlayerInfoResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='player_id', full_name='SoccerPlayerInfoReponse.player_id', index=0,
+      name='player_id', full_name='SoccerPlayerInfoResponse.player_id', index=0,
       number=1, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='player_name', full_name='SoccerPlayerInfoReponse.player_name', index=1,
+      name='player_name', full_name='SoccerPlayerInfoResponse.player_name', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='age', full_name='SoccerPlayerInfoReponse.age', index=2,
+      name='age', full_name='SoccerPlayerInfoResponse.age', index=2,
       number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -104,11 +104,11 @@ _SOCCERPLAYERINFOREPONSE = _descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=63,
-  serialized_end=141,
+  serialized_end=142,
 )
 
 DESCRIPTOR.message_types_by_name['SoccerPlayerInfoRequest'] = _SOCCERPLAYERINFOREQUEST
-DESCRIPTOR.message_types_by_name['SoccerPlayerInfoReponse'] = _SOCCERPLAYERINFOREPONSE
+DESCRIPTOR.message_types_by_name['SoccerPlayerInfoResponse'] = _SOCCERPLAYERINFORESPONSE
 
 class SoccerPlayerInfoRequest(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
@@ -116,11 +116,11 @@ class SoccerPlayerInfoRequest(_message.Message):
 
   # @@protoc_insertion_point(class_scope:SoccerPlayerInfoRequest)
 
-class SoccerPlayerInfoReponse(_message.Message):
+class SoccerPlayerInfoResponse(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _SOCCERPLAYERINFOREPONSE
+  DESCRIPTOR = _SOCCERPLAYERINFORESPONSE
 
-  # @@protoc_insertion_point(class_scope:SoccerPlayerInfoReponse)
+  # @@protoc_insertion_point(class_scope:SoccerPlayerInfoResponse)
 
 
 # @@protoc_insertion_point(module_scope)

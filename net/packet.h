@@ -12,9 +12,6 @@
 #include <endian.h>
 #include <byteswap.h>
 
-namespace kingnet
-{
-
 # if __BYTE_ORDER == __BIG_ENDIAN
 
 #define hton_int16(x) (x)
@@ -118,6 +115,5 @@ public:
 };
 
 
-}
 
 #endif /* PACKET_H_ */

@@ -46,7 +46,7 @@ inline int cs_head_size(uint16_t msgid)
 }
 
 template<int32_t PT,typename BT>
-class cs_packet : public kingnet::packet
+class cs_packet : public packet
 {
 public:
     enum{ packet_type = PT ,} ;
@@ -73,7 +73,9 @@ public:
         
         size = cs_head_size(PT) + output.tellp() ;
         if(size >= 65535 ) return -1 ;
-
+        cs_head* head = (cs_head*)data;
+        head->length = size;
+        head->msgid = PT;
         return size ;
 
     }

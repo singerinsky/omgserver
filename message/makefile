@@ -5,7 +5,7 @@ PROTO_FILE_LIST=$(shell ls *.proto |grep -v server)
 all : cpp python as
 
 cpp : 
-	protoc --cpp_out=./ *.proto                       
+	protoc --cpp_out=../net *.proto                       
 python :
 	protoc --python_out=python *.proto                       
 as : 

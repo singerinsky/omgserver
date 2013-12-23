@@ -2,7 +2,7 @@
 #define _PACKET_MSG_H_
 
 #include "game_packet.h"
-#include "../message/message.pb.h"
+#include "message.pb.h"
 
 #pragma pack(1)
 
