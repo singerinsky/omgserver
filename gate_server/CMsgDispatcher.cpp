@@ -586,7 +586,7 @@ bool CMsgDispatcher::do_login(CMsgEvent* msg_event, EPollSocket* socket) {
 		}*/
 	}else{
 		do_logout(player);
-		player->reload_player_info(socket,uid);
+		player->reset(socket,uid);
 	}
 
 	LOG(INFO)<<"Player "<<uid<<" login success!";
