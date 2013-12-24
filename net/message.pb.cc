@@ -105,8 +105,9 @@ void protobuf_AddDesc_message_2eproto() {
     "\n\rmessage.proto\",\n\027SoccerPlayerInfoReque"
     "st\022\021\n\tplayer_id\030\001 \002(\005\"O\n\030SoccerPlayerInf"
     "oResponse\022\021\n\tplayer_id\030\001 \002(\005\022\023\n\013player_n"
-    "ame\030\002 \002(\t\022\013\n\003age\030\003 \002(\005*#\n\013MessageType\022\024\n"
-    "\020SoccerPlayerInfo\020\001", 179);
+    "ame\030\002 \002(\t\022\013\n\003age\030\003 \002(\005*=\n\013MessageType\022\024\n"
+    "\020SoccerPlayerInfo\020\001\022\030\n\024SoccerPlayerTeamI"
+    "nfo\020\002", 205);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
@@ -129,6 +130,7 @@ const ::google::protobuf::EnumDescriptor* MessageType_descriptor() {
 bool MessageType_IsValid(int value) {
   switch(value) {
     case 1:
+    case 2:
       return true;
     default:
       return false;

@@ -36,11 +36,12 @@ class SoccerPlayerInfoRequest;
 class SoccerPlayerInfoResponse;
 
 enum MessageType {
-  SoccerPlayerInfo = 1
+  SoccerPlayerInfo = 1,
+  SoccerPlayerTeamInfo = 2
 };
 bool MessageType_IsValid(int value);
 const MessageType MessageType_MIN = SoccerPlayerInfo;
-const MessageType MessageType_MAX = SoccerPlayerInfo;
+const MessageType MessageType_MAX = SoccerPlayerTeamInfo;
 const int MessageType_ARRAYSIZE = MessageType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor();

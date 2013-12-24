@@ -14,7 +14,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
-  serialized_pb='\n\rmessage.proto\",\n\x17SoccerPlayerInfoRequest\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\"O\n\x18SoccerPlayerInfoResponse\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x13\n\x0bplayer_name\x18\x02 \x02(\t\x12\x0b\n\x03\x61ge\x18\x03 \x02(\x05*#\n\x0bMessageType\x12\x14\n\x10SoccerPlayerInfo\x10\x01')
+  serialized_pb='\n\rmessage.proto\",\n\x17SoccerPlayerInfoRequest\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\"O\n\x18SoccerPlayerInfoResponse\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x13\n\x0bplayer_name\x18\x02 \x02(\t\x12\x0b\n\x03\x61ge\x18\x03 \x02(\x05*=\n\x0bMessageType\x12\x14\n\x10SoccerPlayerInfo\x10\x01\x12\x18\n\x14SoccerPlayerTeamInfo\x10\x02')
 
 _MESSAGETYPE = _descriptor.EnumDescriptor(
   name='MessageType',
@@ -26,15 +26,20 @@ _MESSAGETYPE = _descriptor.EnumDescriptor(
       name='SoccerPlayerInfo', index=0, number=1,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SoccerPlayerTeamInfo', index=1, number=2,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=144,
-  serialized_end=179,
+  serialized_end=205,
 )
 
 MessageType = enum_type_wrapper.EnumTypeWrapper(_MESSAGETYPE)
 SoccerPlayerInfo = 1
+SoccerPlayerTeamInfo = 2
 
 
 

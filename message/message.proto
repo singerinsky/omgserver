@@ -1,6 +1,7 @@
 enum MessageType
 {
     SoccerPlayerInfo = 1;
+    SoccerPlayerTeamInfo = 2;
 }
 
 message SoccerPlayerInfoRequest
