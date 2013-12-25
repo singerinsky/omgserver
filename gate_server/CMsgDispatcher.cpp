@@ -19,7 +19,12 @@ CMsgDispatcher::~CMsgDispatcher() {
 
 void* CMsgDispatcher::on_run(void) {
 	int count = 0;
+    on_timeout(_timer_mgr);
 	while (1) {
+        
+        int now_ms = get_run_ms();
+        _timer_mgr.run_until(now_ms);
+
 		dispatch_msg();
         count++;
 	}

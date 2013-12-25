@@ -1,5 +1,5 @@
 #include "../common/head.h"
-#include "../common/daemon.h"
+#include "../common/system_util.h"
 #include "glog/logging.h"
 #include "../net/msg.h"
 #include "../net/epoll_handler.h"
@@ -173,7 +173,6 @@ void load_tester_map() {
 			}
 
 		}
-	LOG(INFO)<<"SSSSSSSS";
 }
 
 
@@ -185,16 +184,12 @@ int main(int argc, char **argv){
 			VLOG(0)<<"ERROR OF DAEMON";
 		}
 	}
-	#ifdef _QQ_PLATM_
-		VLOG(0)<<"Building in qq platrom....";
-	#endif
 
 	#ifdef _MY_DEBUG_
 		load_tester_map();
 		LOG(INFO)<<"Building in local....";
 	#endif
 
-	signal(SIGPIPE,SIG_IGN);
 	omg::CThreadManage::BeginPoolThread(4,10);
 
 	CMsgDispatcher* dispatcher = msg_dispatcher_thread_start();

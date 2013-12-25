@@ -13,6 +13,7 @@
 #include "../common/queue.h"
 #include "../common/lock.h"
 #include "../common/MD5.h"
+#include "../common/timer_manager.h"
 #include "../net/thread.h"
 #include "../net/epoll_socket.h"
 #include "../net/client_socket.h"
@@ -88,8 +89,12 @@ class CGateTimerEventHandler;
 
 class CMsgDispatcher:public IMsgDispatcher, public Thread {
 public:
-	CMsgDispatcher(const char* name=NULL):Thread(name){
+	CMsgDispatcher(const char* name=NULL):Thread(name)
+    {
 		_pass_msg_count++;
+        tick_msg = get_tsc_us()*1000;
+        _timer_mgr.init(get_run_ms(),14);
+        _dispatcher_timer.set_owner(this);
 	}
 	virtual ~CMsgDispatcher();
 	virtual void*	on_run(void);	
@@ -140,6 +145,10 @@ public:
 		this->_timer_handler = handler;
 	}
 
+    int64_t get_run_ms(){return rdtsc()/tick_ms;}
+
+    void on_timeout(timer_manager* timer_mgr);
+
 protected:
 	typedef std::map<int,MatchInfo*>::iterator MATCH_WATCH_ITR;
 	std::map<int, MatchInfo*>	_match_watcher;
@@ -148,5 +157,11 @@ protected:
 	int		_pass_msg_count;
 	static CMsgDispatcher* _m_instance;
 	CGateTimerEventHandler*	_timer_handler;
+    timer_manager   _timer_mgr;
+    int64_t tick_ms;
+
+private:
+    template_timer<CMsgDispatcher,&CMsgDispatcher::on_timeout> _dispatcher_timer;
+
 };
 #endif /* CMSGDISPATCHER_H_ */

@@ -1,6 +1,6 @@
 #include "../common/head.h"
 #include "../common/omg_type.h"
-#include "../common/daemon.h"
+#include "../common/system_util.h"
 #include "../net/serversocket.h"
 #include "../net/client_socket.h"
 #include "../common/CThreadManage.h"
@@ -131,8 +131,8 @@ int main(int argc, char** argv) {
 	if (FLAGS_daemon) {
 		init_daemon();
 	}
-	signal(SIGPIPE, SIG_IGN);
-	//init card info
+	
+    //init card info
 	CGameConfigManager::GetInstance();
 
 	omg::CThreadManage::BeginPoolThread(3, 4);

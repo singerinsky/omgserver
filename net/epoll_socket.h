@@ -162,12 +162,12 @@ struct EPollSocket {
             return -1;
 		}
         //have data not send ,register write epoll event
-        if(rst < _send_buffer.size())
+        if(rst < (int)_send_buffer.size())
         {
              mod_epoll_status(EPOLLIN|EPOLLOUT); 
         }
     
-        if(rst == _send_buffer.size())
+        if(rst == (int)_send_buffer.size())
         {
             mod_epoll_status(EPOLLIN);
         }
