@@ -19,7 +19,7 @@ CMsgDispatcher::~CMsgDispatcher() {
 
 void* CMsgDispatcher::on_run(void) {
 	int count = 0;
-    on_timeout(_timer_mgr);
+    on_timeout(&_timer_mgr);
 	while (1) {
         
         int now_ms = get_run_ms();
@@ -30,6 +30,12 @@ void* CMsgDispatcher::on_run(void) {
 	}
 	return NULL;
 }
+
+void CMsgDispatcher::on_timeout(timer_manager* timer_mgr)
+{
+
+}
+
 
 bool CMsgDispatcher::check_msg_valide(CMsgEvent* msg_event,EPollSocket* scoket) {
 	if(scoket == NULL){

@@ -22,7 +22,7 @@ enum { LOCAL_TIME_ZONE = 8 * 3600 }; // 本地时区
 
 extern long timezone;  // 本地时区偏移
 
-namespace kingnet
+namespace omg 
 {
 
 

@@ -14,6 +14,7 @@
 #include "../common/lock.h"
 #include "../common/MD5.h"
 #include "../common/timer_manager.h"
+#include "../common/time_util.h"
 #include "../net/thread.h"
 #include "../net/epoll_socket.h"
 #include "../net/client_socket.h"
@@ -92,7 +93,7 @@ public:
 	CMsgDispatcher(const char* name=NULL):Thread(name)
     {
 		_pass_msg_count++;
-        tick_msg = get_tsc_us()*1000;
+        _tick_ms = get_tsc_us()*1000;
         _timer_mgr.init(get_run_ms(),14);
         _dispatcher_timer.set_owner(this);
 	}
@@ -145,7 +146,7 @@ public:
 		this->_timer_handler = handler;
 	}
 
-    int64_t get_run_ms(){return rdtsc()/tick_ms;}
+    int64_t get_run_ms(){return rdtsc()/_tick_ms;}
 
     void on_timeout(timer_manager* timer_mgr);
 
@@ -158,7 +159,7 @@ protected:
 	static CMsgDispatcher* _m_instance;
 	CGateTimerEventHandler*	_timer_handler;
     timer_manager   _timer_mgr;
-    int64_t tick_ms;
+    int64_t _tick_ms;
 
 private:
     template_timer<CMsgDispatcher,&CMsgDispatcher::on_timeout> _dispatcher_timer;
