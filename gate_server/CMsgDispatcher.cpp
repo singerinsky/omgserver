@@ -18,7 +18,6 @@ CMsgDispatcher::~CMsgDispatcher() {
 }
 
 void* CMsgDispatcher::on_run(void) {
-	int count = 0;
     on_timeout(&_timer_mgr);
 	while (1) {
         
@@ -26,14 +25,18 @@ void* CMsgDispatcher::on_run(void) {
         _timer_mgr.run_until(now_ms);
 
 		dispatch_msg();
-        count++;
 	}
 	return NULL;
 }
 
 void CMsgDispatcher::on_timeout(timer_manager* timer_mgr)
 {
-
+    VLOG(1)<<"ON TIME CALL";
+   _dispatcher_timer.set_expired(get_run_ms()+1000); 
+   if(timer_mgr->add_timer(&_dispatcher_timer) != 0 )
+   {
+    VLOG(1)<<"error add timer";
+   }
 }
 
 
