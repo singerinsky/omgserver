@@ -31,7 +31,6 @@ void* CMsgDispatcher::on_run(void) {
 
 void CMsgDispatcher::on_timeout(timer_manager* timer_mgr)
 {
-    VLOG(1)<<"ON TIME CALL";
    _dispatcher_timer.set_expired(get_run_ms()+1000); 
    if(timer_mgr->add_timer(&_dispatcher_timer) != 0 )
    {
