@@ -20,10 +20,8 @@ CMsgDispatcher::~CMsgDispatcher() {
 void* CMsgDispatcher::on_run(void) {
     on_timeout(&_timer_mgr);
 	while (1) {
-        
-        int now_ms = get_run_ms();
+        int64_t now_ms = get_run_ms();
         _timer_mgr.run_until(now_ms);
-
 		dispatch_msg();
 	}
 	return NULL;
@@ -32,6 +30,7 @@ void* CMsgDispatcher::on_run(void) {
 void CMsgDispatcher::on_timeout(timer_manager* timer_mgr)
 {
    _dispatcher_timer.set_expired(get_run_ms()+1000); 
+
    if(timer_mgr->add_timer(&_dispatcher_timer) != 0 )
    {
     VLOG(1)<<"error add timer";
@@ -583,7 +582,7 @@ bool CMsgDispatcher::do_login(CMsgEvent* msg_event, EPollSocket* socket) {
 
 	GateWayPlayer* player  = GateWayPlayerManager::GetInstance()->GetGateWayPlayer(uid);
 	if(player == NULL){
-		player = new GateWayPlayer(socket,uid);
+		player = new GateWayPlayer(socket,uid,_timer_mgr);
 /*		if(mid < 0 ){*/
 			//加入竞技场的链接
 		GateWayPlayerManager::GetInstance()->AddPlayerMap(uid,player);

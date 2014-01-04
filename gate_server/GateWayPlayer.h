@@ -24,8 +24,13 @@ typedef enum{
 
 class GateWayPlayer {
     public:
-        GateWayPlayer(EPollSocket* socket,PLAYER_ID player_id);
+        GateWayPlayer(EPollSocket* socket,PLAYER_ID player_id,timer_manager& mgr);
         virtual ~GateWayPlayer();
+
+        void init()
+        {
+            _gate_player_timer.set_owner(this); 
+        }
 
         void 	reset(EPollSocket* socket,PLAYER_ID player_id){
             _login_time = time(NULL);
@@ -39,6 +44,7 @@ class GateWayPlayer {
             _player_state = OFFLINE;
         }
 
+        void on_timeout(timer_manager*);
         void set_arenaer_stage_id(int stage_id){
             _arenaer_stage_id = stage_id;
         }
@@ -116,6 +122,8 @@ class GateWayPlayer {
         int 		_zeit_enter_arenar;
         int			_club_attack_value;
         int			_club_defend_value;
+        timer_manager& _timer_mgr;
+        template_timer<GateWayPlayer,&GateWayPlayer::on_timeout> _gate_player_timer;
 };
 
 #endif /* GATEWAYPLAYER_H_ */
