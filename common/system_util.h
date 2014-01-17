@@ -22,11 +22,17 @@ int init_daemon(void)
     if( (pid = fork() ) < 0 ) return -1 ;
     else if(pid != 0 )  _exit(0) ;
 
-    if((chdir("/")!=0) ) return -1 ;
+//    if((chdir("/")!=0) ) return -1 ;
 
 
     return 0;
 }
+
+#define MAIN_FUNCTION int main(int argc,char** argv){\
+	init_server_log(argc,argv);\
+	if(FLAGS_daemon){\
+		init_daemon();\
+	}\
 
 
 

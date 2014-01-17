@@ -94,6 +94,8 @@ namespace omg {
             if((nfd = accept(listen_socket->fd,(struct sockaddr*)&sin,&len)) == -1) {
                 return -1;
             }
+           
+            on_connection(nfd,(struct sockaddr*)&sin);
 
             socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
             socket_client->_epoll_fd = _epoll_create;
