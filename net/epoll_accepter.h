@@ -1,4 +1,4 @@
-#ifndef _EPOLL_ACCEPTER
+#ifndef _EPOLL_ACCEPTER 
 #define _EPOLL_ACCEPTER
 
 #include "../common/head.h"
@@ -9,28 +9,30 @@
 
 using namespace omg;
 #define MAX_ACCEPT_ONCE 256
+
 class epoll_accepter:public io_handler {
 
-	epoll_accepter(std::string ip_str,int port) {
+	epoll_accepter() {
 		_fd = 0;
-		_ip_str = ip_str;
-		_port = port;
 	}
 
-	~epoll_accepter(void) {
-		::epoll_ctl(_epoll_fd, EPOLL_CTL_DEL, _fd, NULL);
+    virtual	~epoll_accepter(void) {
+        _fd = -1;
 		close(_fd);
 	}
 
-	int init(epoll_handler& handler)
+public:
+	int init(epoll_handler* handler,std::string ip_str,int port)
 	{
+        _ip_str = ip_str;
+        _port = port;
 		init_sa_in(&_sin,_ip_str.c_str(),_port);
 		_fd = start_tcp_service(&_sin);
-		handler.add_event_handler(_fd,this);
+		handler->add_event_handler(_fd,this);
 		return _fd;
 	}
 
-    void on_read()
+    virtual void on_read()
     {
     	struct sockaddr_in sin;
 		socklen_t len = sizeof(sockaddr_in);
@@ -39,8 +41,8 @@ class epoll_accepter:public io_handler {
 
 		for(int i = 0;i<MAX_ACCEPT_ONCE;i++)
 		{
-			nfd = accept(_fd,(struct sockaddr*)&sin,&len));
-			if(nfd > =0 )
+			nfd = accept(_fd,(struct sockaddr*)&sin,&len);
+			if(nfd >= 0)
 			{
 				on_connection(nfd,(struct sockaddr*)&sin);
 			}
@@ -48,14 +50,14 @@ class epoll_accepter:public io_handler {
 			{
 				if(errno == EAGAIN || errno ==EMFILE || errno ==ENFILE) break ;
 				else if ( errno == EINTR || errno ==ECONNABORTED ) continue ;
-				else on_error(_fd);
+				else on_error();
 			}
     	}
     }
 
 
 
-    int on_write()
+    virtual void on_write()
     {
     }
 
@@ -78,6 +80,7 @@ class epoll_accepter:public io_handler {
 public:
 	virtual int on_connection(int nfd,sockaddr* addr) = 0;
 
+    virtual void on_error() = 0;
 
 private:
 	std::string 	_ip_str;
