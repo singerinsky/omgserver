@@ -18,7 +18,7 @@ void init_server_log(int argc, char** argv){
 	google::InitGoogleLogging(argv[0]);
 }
 
-omg::Epollhandler*  epoll_server_thread_start(void* param){
+omg::epoll_handler*  epoll_server_thread_start(void* param){
 	TiXmlDocument doc(CONFIG_FILE);
 	bool loadFile = doc.LoadFile();
 	if(loadFile == false){
@@ -36,7 +36,7 @@ omg::Epollhandler*  epoll_server_thread_start(void* param){
 	StringBuffer port_buffer(ele->Attribute("port"));
 	int port = atoi(port_buffer.c_str());
 
-	omg::Epollhandler *handler = new omg::Epollhandler();
+	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->init_epoll(EPOLL_SIZE,ip_buffer,port);
 	handler->startListening();
 	handler->set_msg_dispatcher((CChatMsgDispatcher*)param);
@@ -90,7 +90,7 @@ int main(int argc, char **argv){
 	
 	msg_dispatcher->start(false);
 
-	omg::Epollhandler *handler = epoll_server_thread_start(msg_dispatcher);
+	omg::epoll_handler *handler = epoll_server_thread_start(msg_dispatcher);
 	if(handler == NULL){
 		VLOG(1)<<"ERROR OF CREATE EPOLL";
 		return -1;

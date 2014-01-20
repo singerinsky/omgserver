@@ -2,10 +2,10 @@
 
 namespace omg {
 
-    Epollhandler::~Epollhandler() {
+    epoll_handler::~epoll_handler() {
     }
 
-    bool Epollhandler::init_epoll(int epoll_size, const char* ip, int port,bool use_et) {
+    bool epoll_handler::init_epoll(int epoll_size, const char* ip, int port,bool use_et) {
         assert(epoll_size > 0);
         _epoll_create = epoll_create(epoll_size);
         _port = port;
@@ -22,7 +22,7 @@ namespace omg {
         return true;
     }
 
-    void Epollhandler::startListening() {
+    void epoll_handler::startListening() {
 
         EPollSocket *s;
         int fd = ::socket(AF_INET, SOCK_STREAM, 0);
@@ -58,7 +58,6 @@ namespace omg {
         sin.sin_family = AF_INET;
         inet_aton(this->_ip_buffer.c_str(),&(sin.sin_addr));
         sin.sin_port= htons(this->_port);
-        VLOG(2)<<this->_ip_buffer.c_str();
         //绑定套接字
         int rcv = 0;
         rcv = ::bind(fd,(const sockaddr*)&sin,sizeof(sin));
@@ -84,7 +83,7 @@ namespace omg {
         return;
     }
 
-    int Epollhandler::accept_conn(EPollSocket* listen_socket) {
+    int epoll_handler::accept_conn(EPollSocket* listen_socket) {
         struct sockaddr_in sin;
         socklen_t len = sizeof(sockaddr_in);
         EPollSocket *socket_client = NULL;
@@ -112,14 +111,14 @@ namespace omg {
         }
     }
 
-    void* Epollhandler::on_run(void) {
+    void* epoll_handler::on_run(void) {
         while(_is_final) {
             do_select();
         }
         return NULL;
     }
 
-    void Epollhandler::do_select() {
+    void epoll_handler::do_select() {
         while(1) {
             int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,20);
             if(fds < 0) {
@@ -161,7 +160,7 @@ namespace omg {
         }
     }
 
-    void Epollhandler::do_close(EPollSocket *socket) {
+    void epoll_handler::do_close(EPollSocket *socket) {
         //remove from socket map
         if(socket == NULL){
             return;
@@ -183,13 +182,23 @@ namespace omg {
         }
     }
 
-    void Epollhandler::send_data(EPollSocket *socket,const char* msg,int msg_len) {
+    void epoll_handler::send_data(EPollSocket *socket,const char* msg,int msg_len) {
         ::send(socket->fd,msg,msg_len,0);
     }
 
-   void Epollhandler::on_connection(int fd,sockaddr* addr)
+   void epoll_handler::on_connection(int fd,sockaddr* addr)
    {
    
    }
+
+   int epoll_handler::add_event_handler(int fd,io_handler* handler)
+   {
+       epoll_event event = {0};
+       event.events = EPOLLIN;
+       event.events |= _epoll_mod;
+       event.data.ptr = handler;
+       return ::epoll_ctl(_epoll_fd,EPOLL_CTL_ADD,fd,&event);
+   }
+
 }
 

@@ -72,7 +72,7 @@ void init_server_log(int argc, char** argv){
 	google::SetLogDestination(google::ERROR,log_error_dir);
 }
 
-omg::Epollhandler*  epoll_server_thread_start(void* param){
+omg::epoll_handler*  epoll_server_thread_start(void* param){
 	TiXmlDocument doc(CONFIG_FILE);
 	bool loadFile = doc.LoadFile();
 	if(loadFile == false){
@@ -96,7 +96,7 @@ omg::Epollhandler*  epoll_server_thread_start(void* param){
 	g_gate_server_info._s_port = s_port;
 
 
-	omg::Epollhandler *handler = new omg::Epollhandler();
+	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->set_msg_dispatcher((CMsgDispatcher*)param);
 	handler->init_epoll(EPOLL_SIZE,ip_buffer,port);
 	handler->startListening();
@@ -200,7 +200,7 @@ int main(int argc, char **argv){
 	dispatcher->set_timer_hander(timer_thread);
 	//timer_thread->add_arena_event();
 //	msg_recv_thread_start();	
-	omg::Epollhandler *handler = epoll_server_thread_start(dispatcher);
+	omg::epoll_handler *handler = epoll_server_thread_start(dispatcher);
 	if(handler == NULL){
 		VLOG(1)<<"ERROR OF CREATE EPOLL";
 		return -1;

@@ -9,20 +9,21 @@
 #include "define.h"
 
 const int EPOLL_SIZE = 128*1024;
+
 #ifndef EPOLLRDHUP
 	#define EPOLLRDHUP 0x2000
 #endif
 
 namespace omg{
-	class Epollhandler : public Thread
+	class epoll_handler : public Thread
 	{
 		public:
-			Epollhandler(const char *name=NULL) : Thread(name){
+			epoll_handler(const char *name=NULL) : Thread(name){
 				VLOG(3)<<"STARTING epoll thread"<<name;
 				_epoll_create = 0;
                 _is_final = true;
 			}
-			virtual ~Epollhandler();
+			virtual ~epoll_handler();
 			bool init_epoll(int epoll_size,const char* ip,int port,bool use_et_mod=false);
 			void startListening();
 			int  accept_conn(EPollSocket* s);
@@ -30,7 +31,7 @@ namespace omg{
 			void recv_data(EPollSocket* socket);
 			void do_close(EPollSocket*);
 
-            void add_event_handler(int fd,IConnection* conn);
+            int add_event_handler(int fd,io_handler* handler);
 
 		public:
 			virtual void *on_run(void);
@@ -50,7 +51,7 @@ namespace omg{
 			epoll_event _events[EPOLL_SIZE];
 			int	_port;
 			StringBuffer	_ip_buffer;
-            int _epoll_mod;
+            int 	_epoll_mod;
             bool    _is_final; 
 	};
 }

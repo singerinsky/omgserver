@@ -41,56 +41,8 @@ struct EPollSocket {
 		close(fd);
 	}
 
-	INT set_nodelay(bool nodelay) {
-		assert(fd > 0);
 
-		INT flag;
-		if (nodelay) {
-			flag = 1;
-		} else {
-			flag = 0;
-		}
-
-		INT rv = setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &flag, sizeof(flag));
-
-		return rv;
-	}
-
-	INT set_reuseaddr(bool reuse) {
-		assert(fd > 0);
-		INT flag;
-
-		if (reuse) {
-			flag = 1;
-		} else {
-			flag = 0;
-		}
-
-		INT rv = setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &flag, sizeof(flag));
-
-		return rv;
-	}
-
-	INT set_blocking(bool blocking) {
-		assert(fd > 0);
-
-		int flag = fcntl(fd, F_GETFL);
-		if (flag == -1) {
-			return -1;
-		}
-
-		if (blocking) {
-			flag &= (~O_NONBLOCK);
-		} else {
-			flag |= O_NONBLOCK;
-		}
-
-		INT rv = fcntl(fd, F_SETFL, flag);
-
-		return rv;
-	}
-
-    int on_read()
+	int on_read()
     {
         char msg_buffer[2048] = {0};
         int len = 0;
