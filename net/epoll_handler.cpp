@@ -94,7 +94,7 @@ namespace omg {
             if((nfd = accept(listen_socket->fd,(struct sockaddr*)&sin,&len)) == -1) {
                 return -1;
             }
-           
+
             on_connection(nfd,(struct sockaddr*)&sin);
 
             socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
@@ -121,7 +121,7 @@ namespace omg {
 
     void Epollhandler::do_select() {
         while(1) {
-            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,100);
+            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,20);
             if(fds < 0) {
                 VLOG(3)<<"epoll_wait error";
                 break;
@@ -187,5 +187,9 @@ namespace omg {
         ::send(socket->fd,msg,msg_len,0);
     }
 
+   void Epollhandler::on_connection(int fd,sockaddr* addr)
+   {
+   
+   }
 }
 

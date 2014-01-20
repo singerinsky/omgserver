@@ -10,6 +10,7 @@
 
 #include "../common/head.h"
 #include "../net/epoll_socket.h"
+#include "../common/timer_manager.h"
 
 typedef int PLAYER_ID;
 typedef int MATCH_ID;

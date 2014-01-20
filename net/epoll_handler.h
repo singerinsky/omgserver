@@ -29,6 +29,9 @@ namespace omg{
 			void send_data(EPollSocket *socket,const char* msg,int msg_len);
 			void recv_data(EPollSocket* socket);
 			void do_close(EPollSocket*);
+
+            void add_event_handler(int fd,);
+
 		public:
 			virtual void *on_run(void);
 		
