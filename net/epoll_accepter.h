@@ -5,13 +5,14 @@
 #include "../common/omg_type.h"
 #include "packet.h"
 #include "net_util.h"
-
+#include "IConnection.h"
 
 using namespace omg;
 #define MAX_ACCEPT_ONCE 256
 
 class epoll_accepter:public io_handler {
 
+public:
 	epoll_accepter() {
 		_fd = 0;
 	}
@@ -22,13 +23,14 @@ class epoll_accepter:public io_handler {
 	}
 
 public:
-	int init(epoll_handler* handler,std::string ip_str,int port)
+	int init(std::string ip_str,int port)
 	{
         _ip_str = ip_str;
         _port = port;
 		init_sa_in(&_sin,_ip_str.c_str(),_port);
 		_fd = start_tcp_service(&_sin);
-		handler->add_event_handler(_fd,this);
+		LOG_IF(INFO,_fd > 0)<<"start listening in"<<_port;
+        //handler->add_event_handler(_fd,this);
 		return _fd;
 	}
 
@@ -36,9 +38,7 @@ public:
     {
     	struct sockaddr_in sin;
 		socklen_t len = sizeof(sockaddr_in);
-		EPollSocket *socket_client = NULL;
 		int nfd;
-
 		for(int i = 0;i<MAX_ACCEPT_ONCE;i++)
 		{
 			nfd = accept(_fd,(struct sockaddr*)&sin,&len);
