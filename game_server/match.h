@@ -212,7 +212,7 @@ public:
 		std::map<int,IConnection*>::iterator itr = _listen_gate_map.begin();
 		while(itr != _listen_gate_map.end()){
 			if(((itr->second))->connected()){
-				((itr->second))->sendData(msg,msg_size);
+				((itr->second))->send_data(msg,msg_size);
 			}
 			itr++;
 		}

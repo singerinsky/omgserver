@@ -51,7 +51,7 @@ public:
 
 	int 	SendMsgToGateServer(MsgBase* pMsg){
 		if(_client->connected()){
-			return _client->sendData((const char*)pMsg,pMsg->msg_size);
+			return _client->send_data((const char*)pMsg,pMsg->msg_size);
 		}
 		return -1;
 	}

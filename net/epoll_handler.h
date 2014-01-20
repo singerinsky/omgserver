@@ -30,7 +30,7 @@ namespace omg{
 			void recv_data(EPollSocket* socket);
 			void do_close(EPollSocket*);
 
-            void add_event_handler(int fd,);
+            void add_event_handler(int fd,IConnection* conn);
 
 		public:
 			virtual void *on_run(void);

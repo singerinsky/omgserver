@@ -2,13 +2,13 @@
 #define _I_CONNECTION_H_
 class IConnection{
 	public:
-		virtual int sendData(const char*,int)=0;
 		virtual bool connected()=0;
         virtual void on_read(int fd){};
         virtual void on_write(int fd){};
+		virtual int  send_data(const char*,int)=0;
 
 	public:
-		virtual int getConnectionId()=0;
+		virtual int get_connection_id()=0;
 };
 
 #endif

@@ -23,7 +23,7 @@ struct GServerInfo{
 	int			_index;
 	CSocketClient* _c_socket;
 	int	SendData(const char* msg,int msg_size){
-		return _c_socket->sendData(msg,msg_size);
+		return _c_socket->send_data(msg,msg_size);
 	}
 };
 

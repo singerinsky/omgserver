@@ -35,7 +35,7 @@ public:
 							msg._server_type = 2;
 							msg._index = server_index;
 							strncpy(msg._version,GAME_SERVER_VERSION,19);
-							_client->sendData((const char*)&msg,sizeof(MsgServerRegister));
+							_client->send_data((const char*)&msg,sizeof(MsgServerRegister));
 						}
 					}else if(msg_size < 0){
 						sleep(1);

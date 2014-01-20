@@ -57,7 +57,7 @@ bool CSocketClient::set_block(bool block) {
 
 }
 
-int CSocketClient::sendData(const char *buffer, int buffer_size) {
+int CSocketClient::send_data(const char *buffer, int buffer_size) {
 	int ret = 0;
 
 	while (ret < buffer_size) {

@@ -32,7 +32,7 @@ public:
 					nanosleep(&ts,NULL);
 					continue;
 				}
-				int rst = _client->sendData((const char*) msg, msg->msg_size);
+				int rst = _client->send_data((const char*) msg, msg->msg_size);
 
 				if ((rst == -1)) {
 					/*if (msg->msg_type == MSG_TYPE_GTODB_SERVER_MATCH_END) {

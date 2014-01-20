@@ -137,7 +137,7 @@ void CMsgDispatcher::dispatch_msg() {
 			int mid = msg->mid;
 			GServerInfo* server_info = GetMatchRunServer(mid);
 			if(server_info != NULL){
-				server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+				server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 			}
 			delete[] (char*)msg;
 			event->_msg_base = NULL;
@@ -150,7 +150,7 @@ void CMsgDispatcher::dispatch_msg() {
 			int mid = msg->mid;
 			GServerInfo* server_info = GetMatchRunServer(mid);
 			if(server_info != NULL){
-				server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+				server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 			}
 			delete event;
 		}
@@ -161,7 +161,7 @@ void CMsgDispatcher::dispatch_msg() {
 			int mid = msg->mid;
 			GServerInfo* server_info = GetMatchRunServer(mid);
 			if(server_info != NULL){
-				server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+				server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 			}
 			delete[] (char*)msg;
 			event->_msg_base = NULL;
@@ -173,7 +173,7 @@ void CMsgDispatcher::dispatch_msg() {
 			MsgClientCoachSpeak *msg = (MsgClientCoachSpeak*)event->_msg_base;
 			GServerInfo* server_info = GetMatchRunServer(msg->mid);
 			if(server_info != NULL){
-				server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+				server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 				LOG(INFO)<<"玩家喊话"<<msg->cid<<":"<<msg->speak_type;
 			}
 			delete[] (char*)msg;
@@ -207,7 +207,7 @@ void CMsgDispatcher::dispatch_msg() {
 			int mid = msg->mid;
 			GServerInfo * server_info = GetMatchRunServer(mid);
 			if(server_info != NULL){
-				server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+				server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 			}
 			delete event;
 		}
@@ -414,7 +414,7 @@ void CMsgDispatcher::dispatch_msg() {
 			MsgServerMatchingSuccess* msg = (MsgServerMatchingSuccess*)(event->_msg_base);
 			GServerInfo* server_info = PickMatchServer();
 			if(server_info != NULL){
-				server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+				server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 			}
 
 			GateWayPlayer* home_player = GateWayPlayerManager::GetInstance()->GetGateWayPlayer(msg->home_uid);
@@ -899,7 +899,7 @@ void CMsgDispatcher::remove_all_watcher(MatchInfo* info, bool need_logout) {
 void CMsgDispatcher::forward_to_game_server(MsgBase* msg,int mid){
 	GServerInfo* server_info = GetMatchRunServer(mid);
 	if(server_info != NULL){
-		server_info->_c_socket->sendData((const char*)msg,msg->msg_size);
+		server_info->_c_socket->send_data((const char*)msg,msg->msg_size);
 	}
 }
 
