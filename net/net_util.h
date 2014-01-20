@@ -34,83 +34,18 @@
 #include<sys/stat.h>
 
 //格式化socket地址
-void init_sa_in(sockaddr_in* addr_in, const char* ip_str, int port) {
-	if (addr_in == NULL || ip_str == NULL || port < 1)
-		return;
-	memset(addr_in, 0, sizeof(sockaddr_in));
-	addr_in->sin_family = AF_INET;
-	addr_in->sin_port = htons(port);
-	addr_in->sin_addr.s_addr = inet_addr(ip_str);
-}
+void init_sa_in(sockaddr_in* addr_in, const char* ip_str, int port) ;
 
 //设置socket block or not
-int set_sock_noblock(int fd,bool blocking) {
-
-	int flag = fcntl(fd, F_GETFL);
-	if (flag == -1) {
-		return -1;
-	}
-
-	if (blocking) {
-		flag &= (~O_NONBLOCK);
-	} else {
-		flag |= O_NONBLOCK;
-	}
-
-	int rv = fcntl(fd, F_SETFL, flag);
-
-	return rv;
-}
+int set_sock_noblock(int fd,bool blocking) ;
 
 //设置socket是否延迟发送
-int set_nodelay(int fd, bool nodelay) {
-
-	int flag;
-	if (nodelay) {
-		flag = 1;
-	} else {
-		flag = 0;
-	}
-
-	int rv = setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &flag, sizeof(flag));
-
-	return rv;
-}
+int set_nodelay(int fd, bool nodelay) ;
 
 //设置地址可重用
-int set_reuseaddr(int fd, bool reuse) {
-	int flag;
-
-	if (reuse) {
-		flag = 1;
-	} else {
-		flag = 0;
-	}
-
-	int rv = setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &flag, sizeof(flag));
-
-	return rv;
-}
+int set_reuseaddr(int fd, bool reuse) ;
 
 //绑定且开始监听
-int start_tcp_service(sockaddr_in* addr)
-{
-	if(addr == NULL)return -1;
-	int sockfd = socket(AF_INET,SOCK_STREAM,0);
-	if(sockfd < 0 )return -1;
-	set_sock_noblock(sockfd,false);
-	set_reuseaddr(sockfd,true);
-	if(bind(sockfd,(sockaddr*)addr,sizeof(sockaddr))!=0)
-	{
-		close(sockfd);
-		return -2;
-	}
-	if(listen(sockfd,1024)!=0)
-	{
-		close(sockfd);
-		return -3;
-	}
-	return sockfd;
-}
+int start_tcp_service(sockaddr_in* addr);
 
 #endif /* NET_UTIL_H_ */
