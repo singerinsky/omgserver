@@ -4,18 +4,6 @@
  *  Created on: 2014年1月20日
  *      Author: guanlei
  */
-
-
-/*
- * net_util.h
- *
- *  Created on: 2014年1月20日
- *      Author: guanlei
- */
-
-#ifndef NET_UTIL_H_
-#define NET_UTIL_H_
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -40,6 +28,7 @@
 #include <stdarg.h>
 #include <sys/param.h>
 #include<sys/stat.h>
+#include "net_util.h"
 
 //格式化socket地址
 void init_sa_in(sockaddr_in* addr_in, const char* ip_str, int port) {
@@ -121,6 +110,5 @@ int start_tcp_service(sockaddr_in* addr)
 	return sockfd;
 }
 
-#endif /* NET_UTIL_H_ */
 
 

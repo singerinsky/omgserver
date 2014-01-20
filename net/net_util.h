@@ -31,7 +31,7 @@
 #include <stdint.h>
 #include <stdarg.h>
 #include <sys/param.h>
-#include<sys/stat.h>
+#include <sys/stat.h>
 
 //格式化socket地址
 void init_sa_in(sockaddr_in* addr_in, const char* ip_str, int port) ;

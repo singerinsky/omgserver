@@ -91,8 +91,8 @@ int main(int argc,char** argv){
 	handler->init_epoll(EPOLL_SIZE,g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port);
 	db_accepter* accepter = new db_accepter();
     std::string ips = "127.0.0.1";
-    accepter->init(handler,ips,8979);
-	//handler->add_event_handler(accepter->get_sock_fd(),accepter);
+    accepter->init(ips,8979);
+	handler->add_event_handler(accepter->get_sock_fd(),accepter);
 	handler->startListening();
 	handler->set_msg_dispatcher(msg_dispatcher);
 	handler->start(false);
