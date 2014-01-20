@@ -11,7 +11,7 @@
 
 class db_accepter: public epoll_accepter {
 public:
-	db_accepter();
+	db_accepter(std::string ip_str,int port):_ip_str(ip_str),_port(port);
 	virtual ~db_accepter();
 
 public:

@@ -70,6 +70,11 @@ class epoll_accepter:public io_handler {
 	void dump_client_ip_info(){
 		LOG(INFO)<<"client :"<<_ip_str.c_str()<<":"<<_port;
 	}
+
+	int get_sock_fd()
+	{
+		return _fd;
+	}
 public:
 	virtual int on_connection(int nfd,sockaddr* addr) = 0;
 

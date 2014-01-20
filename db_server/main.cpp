@@ -89,6 +89,9 @@ int main(int argc,char** argv){
 	//接收游戏服务器的连接
 	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->init_epoll(EPOLL_SIZE,g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port);
+	db_accepter accepter("127.0.0.1",9092);
+
+	handler->add_event_handler(accepter.get_sock_fd(),&accepter);
 	handler->startListening();
 	handler->set_msg_dispatcher(msg_dispatcher);
 	handler->start(false);
