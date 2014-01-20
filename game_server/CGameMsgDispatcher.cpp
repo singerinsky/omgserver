@@ -177,7 +177,7 @@ void CGameMsgDispatcher::dispatch_msg() {
 			MsgServerReq msg;
 			msg._index = server_index;
 			msg._server_typ = 2;
-			event->_msg_from->sendData((const char*)&msg,sizeof(msg));
+			event->_msg_from->send_data((const char*)&msg,sizeof(msg));
 			CSocketClient* client = (CSocketClient*)(event->_msg_from);
 			GateConManager::GetInstance()->ModiferConnectionToRegister(client->get_socket_ip_port_info());
 		}
@@ -213,7 +213,7 @@ void CGameMsgDispatcher::dispatch_msg() {
 					ack.uid = msg->op1.uid;
 					ack.op_uid = msg->op2.uid;
 					IConnection* conn = pair_info->_conn;
-					conn->sendData((const char*)&ack,ack.msg_size);
+					conn->send_data((const char*)&ack,ack.msg_size);
 					LOG(INFO)<<"send message to gate to tell match is ready"<<ack.mid;
 				}
 
@@ -241,7 +241,7 @@ void CGameMsgDispatcher::dispatch_msg() {
 					match->add_listener_list(conn->getConnectionId(),conn);
 					//发送比赛信息
 					SignGateMatchInfo(match,conn);
-					conn->sendData((const char*)&ack_msg,ack_msg.msg_size);
+					conn->send_data((const char*)&ack_msg,ack_msg.msg_size);
 				}
 
 				if(match->get_time_scale() >= 1){
@@ -505,7 +505,7 @@ void CGameMsgDispatcher::SignGateMatchInfo(Match* match,IConnection* conn){
 	new_match_msg.server_index = server_index;
 	new_match_msg.match_type = match->_match_typ;
 	if(conn->connected()){
-		conn->sendData((const char*)&new_match_msg,sizeof(new_match_msg));
+		conn->send_data((const char*)&new_match_msg,sizeof(new_match_msg));
 	}
 	//初始化后要加上比赛的开始检查
 }
