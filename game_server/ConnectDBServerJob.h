@@ -55,7 +55,7 @@ private:
 		msg._server_type = 2;
 		msg._index = server_index;
 		strncpy(msg._version,GAME_SERVER_VERSION,19);
-		_client->sendData((const char*)&msg,sizeof(msg));
+		_client->send_data((const char*)&msg,sizeof(msg));
 	}
 public:
 	void SendToDBServer();
