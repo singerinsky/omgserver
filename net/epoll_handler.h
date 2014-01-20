@@ -7,6 +7,7 @@
 #include "msg.h"
 #include "IMsgDispatcher.h"
 #include "define.h"
+#include "IConnection.h"
 
 const int EPOLL_SIZE = 128*1024;
 

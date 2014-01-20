@@ -37,7 +37,7 @@
 void init_sa_in(sockaddr_in* addr_in, const char* ip_str, int port) {
 	if (addr_in == NULL || ip_str == NULL || port < 1)
 		return;
-	memset(addr, 0, sizeof(sockaddr_in));
+	memset(addr_in, 0, sizeof(sockaddr_in));
 	addr_in->sin_family = AF_INET;
 	addr_in->sin_port = htons(port);
 	addr_in->sin_addr.s_addr = inet_addr(ip_str);

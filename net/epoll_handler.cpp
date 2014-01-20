@@ -1,4 +1,5 @@
 #include "epoll_handler.h"
+#include "net_util.h"
 
 namespace omg {
 
@@ -48,7 +49,7 @@ namespace omg {
         s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
 
         //设置套接字为非阻塞
-        if(s->set_blocking(false) == -1)
+        if(set_sock_noblock(fd,false) == -1)
         {
             VLOG(3)<<"error of set socket noblocking";
             return;
@@ -98,9 +99,12 @@ namespace omg {
 
             socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
             socket_client->_epoll_fd = _epoll_create;
-            socket_client->set_blocking(false);
-            socket_client->set_nodelay(true);
-            socket_client->set_reuseaddr(true);
+            //socket_client->set_blocking(false);
+           // socket_client->set_nodelay(true);
+            //socket_client->set_reuseaddr(true);
+            set_sock_noblock(nfd,false);
+            set_reuseaddr(nfd,true);
+            set_nodelay(nfd,true);
             socket_client->set_client_ip_address(sin);
             if(socket_client->add_epoll_event(EPOLLIN) != 0){
                 LOG(ERROR)<<"accept connection error "; 
@@ -197,7 +201,7 @@ namespace omg {
        event.events = EPOLLIN;
        event.events |= _epoll_mod;
        event.data.ptr = handler;
-       return ::epoll_ctl(_epoll_fd,EPOLL_CTL_ADD,fd,&event);
+       return ::epoll_ctl(_epoll_create,EPOLL_CTL_ADD,fd,&event);
    }
 
 }
