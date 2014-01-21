@@ -60,7 +60,7 @@ private:
 	void UpdateGServerInfo(MsgUpdateGServerInfo* msg);
 
 private:
-	omg::ConcurrenceQueue<CMsgEvent,omg::MutexLock,omg::NullLock>	_msg_queue;
+	omg::ConcurrenceLockQueue<CMsgEvent,omg::MutexLock>	_msg_queue;
 	//omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;
 
 };

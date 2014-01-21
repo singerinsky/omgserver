@@ -24,7 +24,7 @@ public:
 	}
 
 protected:
-	omg::ConcurrenceQueue<RunMatchJob,omg::MutexLock,omg::MutexLock>	_job_queue;
+	omg::ConcurrenceLockQueue<RunMatchJob,omg::MutexLock>	_job_queue;
 	int _thread_id;
 };
 

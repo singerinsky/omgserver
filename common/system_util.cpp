@@ -26,5 +26,13 @@ int init_daemon(void)
     return 0;
 }
 
-
+void do_wait_ms(int ms)
+{
+    if(ms <= 0 )return;
+  	timespec ts;
+    ts.tv_nsec = (ms%1000)*1000000;
+	ts.tv_sec = ms/1000;
+        
+    pselect(0,NULL,NULL,NULL,&ts,NULL);
+}
 

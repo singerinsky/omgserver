@@ -1,4 +1,10 @@
 /*
+:a
+
+
+
+
+
  * CMsgDispatcher.cpp
  *
  *  Created on: 2012-2-2
@@ -20,7 +26,7 @@ CMsgDispatcher::~CMsgDispatcher() {
 void* CMsgDispatcher::on_run(void) {
     on_timeout(&_timer_mgr);
 	while (1) {
-        int64_t now_ms = get_run_ms();
+        int64_t now_ms = _ms_before_run = get_run_ms();
         _timer_mgr.run_until(now_ms);
 		dispatch_msg();
 	}
@@ -33,8 +39,9 @@ void CMsgDispatcher::on_timeout(timer_manager* timer_mgr)
 
    if(timer_mgr->add_timer(&_dispatcher_timer) != 0 )
    {
-    VLOG(1)<<"error add timer";
+        VLOG(1)<<"error add timer";
    }
+   VLOG(1)<<"add timer";
 }
 
 
@@ -539,7 +546,10 @@ void CMsgDispatcher::dispatch_msg() {
 		timespec ts;
 		ts.tv_nsec = 20000000;
 		ts.tv_sec = 0;
-		nanosleep(&ts,NULL);
+        if((get_run_ms() - _ms_before_run) < 20)
+        {
+            do_wait_ms(get_run_ms() - _ms_before_run);  
+        }
 	}
 }
 

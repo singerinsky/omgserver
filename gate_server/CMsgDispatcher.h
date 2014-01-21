@@ -25,6 +25,7 @@
 #include "GateWayPlayer.h"
 #include <string>
 #include <sstream>
+#include "../common/system_util.h"
 
 extern char* public_key;
 
@@ -160,7 +161,7 @@ class CMsgDispatcher:public IMsgDispatcher, public Thread {
         CGateTimerEventHandler*	_timer_handler;
         timer_manager   _timer_mgr;
         int64_t _tick_ms;
-
+        int64_t _ms_before_run;
     private:
         template_timer<CMsgDispatcher,&CMsgDispatcher::on_timeout> _dispatcher_timer;
 

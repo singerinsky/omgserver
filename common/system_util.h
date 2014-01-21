@@ -10,6 +10,6 @@ int init_daemon(void);
 		init_daemon();\
 	}\
 
-
+void do_wait_ms(int ms);
 
 #endif
