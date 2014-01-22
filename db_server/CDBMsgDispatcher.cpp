@@ -1,7 +1,7 @@
 #include "CDBMsgDispatcher.h"
 
 CDBMsgDispatcher::CDBMsgDispatcher() {
-
+    _tick_ms = get_tsc_us()*1000;
 }
 
 CDBMsgDispatcher::~CDBMsgDispatcher() {
@@ -127,13 +127,13 @@ void CDBMsgDispatcher::dispatch_msg() {
 
 	}
 } else {
-	//	VLOG(1)<<"null msg .....";
-	timespec ts;
-	ts.tv_nsec = 20000000;
-	ts.tv_sec = 0;
-	nanosleep(&ts,NULL);
-}
+    //	VLOG(1)<<"null msg .....";
+    if((get_run_ms() - _ms_before_run) < 20)
+    {
+        do_wait_ms(get_run_ms() - _ms_before_run);  
+    }
 
+}
 }
 
 void* CDBMsgDispatcher::on_run() {

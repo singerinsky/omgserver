@@ -543,9 +543,6 @@ void CMsgDispatcher::dispatch_msg() {
 			LOG(ERROR)<<"unknown message"<<msg_type;
 		}
 	}else{
-		timespec ts;
-		ts.tv_nsec = 20000000;
-		ts.tv_sec = 0;
         if((get_run_ms() - _ms_before_run) < 20)
         {
             do_wait_ms(get_run_ms() - _ms_before_run);  

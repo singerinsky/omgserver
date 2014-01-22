@@ -7,6 +7,8 @@
 #include "CDBTaskManage.h"
 #include "DBEvent.h"
 #include "CServerManage.h"
+#include "../common/system_util.h"
+#include "../common/time_util.h"
 
 #define _DEBUG_SERVER_INFO
 using namespace omg;
@@ -17,8 +19,11 @@ public:
 	bool add_msg_to_queue(CMsgEvent*,EPollSocket*);
 	void dispatch_msg();
 	virtual void*	on_run(void);
+    int64_t get_run_ms(){return rdtsc()/_tick_ms;}
 private:
 	omg::WRQueue<CMsgEvent,MutexLock>	_msg_queue;
+    int64_t _ms_before_run;
+    int64_t _tick_ms;
 };
 
 
