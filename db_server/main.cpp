@@ -92,7 +92,7 @@ int main(int argc,char** argv){
 	db_accepter* accepter = new db_accepter();
     std::string ips = "127.0.0.1";
     accepter->init(ips,8979);
-	handler->add_event_handler(accepter->get_sock_fd(),accepter);
+	int rst = handler->add_event_handler(accepter->get_sock_fd(),accepter);
 	handler->startListening();
 	handler->set_msg_dispatcher(msg_dispatcher);
 	handler->start(false);

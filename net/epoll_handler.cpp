@@ -130,6 +130,9 @@ namespace omg {
                 break;
             }
 
+            if(fds>0)
+            VLOG(3)<<"FDS count "<<fds; 
+
             if(fds == 0)
             {
                 continue;

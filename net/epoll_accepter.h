@@ -36,6 +36,7 @@ public:
 
     virtual void on_read()
     {
+        LOG(INFO)<<"acceptor recving....";
     	struct sockaddr_in sin;
 		socklen_t len = sizeof(sockaddr_in);
 		int nfd;
