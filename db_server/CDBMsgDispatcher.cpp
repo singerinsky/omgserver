@@ -2,6 +2,9 @@
 
 CDBMsgDispatcher::CDBMsgDispatcher() {
     _tick_ms = get_tsc_us()*1000;
+    _timer_mgr.init(get_run_ms(),14);
+    _dispatcher_timer.set_owner(this);
+ 
 }
 
 CDBMsgDispatcher::~CDBMsgDispatcher() {
@@ -137,9 +140,22 @@ void CDBMsgDispatcher::dispatch_msg() {
 }
 
 void* CDBMsgDispatcher::on_run() {
+    on_timeout(&_timer_mgr);
 	while (1) {
+        int64_t now_ms = _ms_before_run = get_run_ms();
+        _timer_mgr.run_until(now_ms);
 		dispatch_msg();
 	}
 	return NULL;
 }
 
+void CDBMsgDispatcher::on_timeout(timer_manager* timer)
+{
+    _dispatcher_timer.set_expired(get_run_ms()+1000); 
+
+   if(_timer_mgr.add_timer(&_dispatcher_timer) != 0 )
+   {
+        VLOG(1)<<"error add timer";
+   }
+   LOG(INFO)<<"on db time out ";
+}

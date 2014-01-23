@@ -132,7 +132,6 @@ namespace omg {
 
             if(fds == 0)
             {
-                VLOG(3)<<"no event";
                 continue;
             }
 

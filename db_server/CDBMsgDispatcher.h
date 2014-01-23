@@ -9,6 +9,7 @@
 #include "CServerManage.h"
 #include "../common/system_util.h"
 #include "../common/time_util.h"
+#include "../common/timer_manager.h"
 
 #define _DEBUG_SERVER_INFO
 using namespace omg;
@@ -20,10 +21,14 @@ public:
 	void dispatch_msg();
 	virtual void*	on_run(void);
     int64_t get_run_ms(){return rdtsc()/_tick_ms;}
+    void    on_timeout(timer_manager* timer_mgr);
 private:
 	omg::WRQueue<CMsgEvent,MutexLock>	_msg_queue;
     int64_t _ms_before_run;
     int64_t _tick_ms;
+    timer_manager _timer_mgr;
+private:
+    template_timer<CDBMsgDispatcher,&CDBMsgDispatcher::on_timeout> _dispatcher_timer;
 };
 
 
