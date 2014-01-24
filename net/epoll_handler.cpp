@@ -131,7 +131,9 @@ namespace omg {
             }
 
             if(fds>0)
-            VLOG(3)<<"FDS count "<<fds; 
+            {
+                VLOG(3)<<"FDS count "<<fds; 
+            }
 
             if(fds == 0)
             {
@@ -139,32 +141,31 @@ namespace omg {
             }
 
             for(int i=0; i< fds; i++) {
-                EPollSocket *epoll_socket = (EPollSocket*)_events[i].data.ptr;
-                if(epoll_socket->_socket_type == EPollSocket::LISTEN_SOCKET)
+                io_handler *handler = (io_handler*)_events[i].data.ptr;
+                if(handler == NULL)
                 {
-                    accept_conn(epoll_socket);
-                } else if(epoll_socket->_socket_type == EPollSocket::DATA_SOCKET) {
-                    if(_events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
-                        do_close(epoll_socket);
-                    }else if(_events[i].events & EPOLLIN) {
-                        int rst = epoll_socket->on_read();
-                        if(rst == -1)
-                        {
-                            do_close(epoll_socket);
-                        }
-                    }else if(_events[i].events & EPOLLOUT) {
-                        int rst = epoll_socket->on_write();
-                        if(rst == -1)
-                        {
-                            do_close(epoll_socket);
-                        }
-                    }
-                } else if(epoll_socket->_socket_type == EPollSocket::CONNECT_SOCKET){//主动连接socket
-                    VLOG(3)<<"Connected Socket...";
+                    return ;
                 }
-            }
+                if(_events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
+                    handler->on_error();
+                    //do_close(epoll_socket);
+                }else if(_events[i].events & EPOLLIN) {
+                    int rst = handler->on_read();
+                    if(rst == -1)
+                    {
+                        handler->on_error();
+                    }
+                }else if(_events[i].events & EPOLLOUT) {
+                    int rst = handler->on_write();
+                    if(rst == -1)
+                    {
+                        handler->on_error();
+                    }
+                }
+            } 
         }
     }
+}
 
     void epoll_handler::do_close(EPollSocket *socket) {
         //remove from socket map
