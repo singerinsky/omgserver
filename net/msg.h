@@ -24,8 +24,17 @@ struct MsgBase{
 
 //
 class IConnection;
+struct connection_id;
+
 class CMsgEvent{
 public:
+	CMsgEvent(int msg_type,connection_id& id,MsgBase* msg_base)
+	{
+		_msg_type = msg_type;
+		_client_id = id;
+		_msg_base = msg_base;
+	}
+
 	virtual ~CMsgEvent(){
 		if(_msg_base != NULL){
 			delete[] (char*)_msg_base;
@@ -33,8 +42,7 @@ public:
 		}
 	}
 	int _msg_type;
-	int _client_id;
-	IConnection*	_msg_from;
+	connection_id _client_id;
 	MsgBase *_msg_base;
 };
 

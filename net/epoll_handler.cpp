@@ -207,5 +207,14 @@ namespace omg {
        return ::epoll_ctl(_epoll_create,EPOLL_CTL_ADD,fd,&event);
    }
 
+   int epoll_handler::mod_epoll_status(int fd,io_handler* handler,int event_type) {
+   	epoll_event event = { 0 };
+   	event.events |= event_type;
+   	event.events |= _epoll_mod;
+   	event.data.ptr = handler;
+   	event.data.fd = fd;
+   	return ::epoll_ctl(_epoll_fd, EPOLL_CTL_MOD, fd, &event);
+   }
+
 }
 

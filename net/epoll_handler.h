@@ -33,6 +33,7 @@ namespace omg{
 			void do_close(EPollSocket*);
 
             int add_event_handler(int fd,io_handler* handler);
+            int mod_epoll_status(int fd,io_handler* handler,int event_type);
 
 		public:
 			virtual void *on_run(void);

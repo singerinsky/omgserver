@@ -1,0 +1,155 @@
+/*
+ * socketclient.cpp
+ *
+ *  Created on: 2014年1月24日
+ *      Author: guanlei
+ */
+
+#include "socketclient.h"
+
+namespace omg {
+#define MAX_MSG_SIZE 12*1024
+
+socket_client::socket_client(int fd, epoll_handler* handler) {
+	// TODO Auto-generated constructor stub
+	_socket_fd = fd;
+	_conn_state = CONN_UNVRIFY;
+	_lock.init();
+	_epoll_handler = handler;
+	_conn_id._fd = fd;
+	_conn_id._timestamp = time(NULL);
+}
+
+socket_client::~socket_client() {
+	// TODO Auto-generated destructor stub
+}
+
+#define MSG_BUFF_SIZE 2048
+int socket_client::on_read() {
+	char msg_buffer[MSG_BUFF_SIZE] = { 0 };
+	int len = 0;
+	while (true) {
+		len = recv(fd, msg_buffer, MSG_BUFF_SIZE, 0);
+		if (len == 0) {
+			LOG(INFO)<<"client close socket .......";
+			return 0;
+		}
+
+		if (len == -1) {
+			if (errno != EAGAIN && errno != EINTR) {
+				LOG(ERROR)<<"system error,close client";
+				return -1;
+			}
+		}
+
+		if (len > 0) {
+			_recv_buffer.insert(_recv_buffer.end(), msg_buffer,
+					msg_buffer + len);
+			int msg_len = -1;
+			while ((_recv_buffer.size() > 0)
+					&& (msg_len = check_msg_complete(_recv_buffer.data(),
+							_recv_buffer.size())) != -1) {
+				if (msg_len > MAX_MSG_SIZE || msg_len < 0) {
+					return -1;
+				}
+				char* msg_data = new char[msg_len];
+				memcpy(msg_data, _recv_buffer.data(), msg_len);
+				MsgBase* msg_base = (MsgBase*) msg_data;
+				CMsgEvent* event = new CMsgEvent(msg_base->msg_type, _conn_id,
+						msg_base);
+				_recv_buffer.erase(_recv_buffer.begin(),
+						_recv_buffer.begin() + msg_len);
+				bool add_rst = _msg_dispatcher->add_msg_to_queue(event, this);
+				if (add_rst == false) {
+					delete[] msg_data;
+					return -1;
+				}
+			}
+		}
+	}
+	return 0;
+}
+
+int socket_client::on_write() {
+	if (_send_buffer.size() <= 0) {
+		return 0;
+	}
+	//send lock
+	ScopeLock<MutexLock> lock(_lock);
+
+	//send unlock
+	int rst = ::send(fd, _send_buffer.data(), _send_buffer.size(), 0);
+	if (rst < 0) {
+		if (errno == EAGAIN || errno == EINTR) { //缓冲区满了。
+			return 0;
+		}
+		//error should disconnect
+		return -1;
+	}
+	//have data not send ,register write epoll event
+	if (rst < (int) _send_buffer.size()) {
+		mod_epoll_status(EPOLLIN | EPOLLOUT);
+	}
+
+	if (rst == (int) _send_buffer.size()) {
+		mod_epoll_status (EPOLLIN);
+	}
+	if (rst != 0) {
+		_send_buffer.erase(_send_buffer.begin(), _send_buffer.begin() + rst);
+	}
+
+	return rst;
+}
+
+int socket_client::on_error() {
+}
+
+int socket_client::send_msg(const char* data_head, int send_size) {
+	//if send buffer has data ,push data into buffer
+	//send lock
+	ScopeLock<MutexLock> lock(_lock);
+	if (_send_buffer.size() > 0) {
+		_send_buffer.insert(_send_buffer.end(), data_head,
+				data_head + send_size);
+		mod_epoll_status(EPOLLIN | EPOLLOUT);
+		return 0;
+	}
+	//send unlock
+	int rst = ::send(fd, data_head, send_size, 0);
+	if (rst < 0) {
+		if (errno == EAGAIN || errno == EINTR) {        //缓冲区满了。
+			return 0;
+		}
+		//error should disconnect
+		return -1;
+	}
+	//have data not send ,register write epoll event
+	if (rst < send_size) {
+		mod_epoll_status(EPOLLIN | EPOLLOUT);
+		_send_buffer.insert(_send_buffer.end(), data_head + rst,
+				data_head + send_size);
+	}
+
+	return 0;
+}
+
+int socket_client::send_packet_msg(packet* p) {
+	int size = p->encode_size();
+	if (size < 1)
+		return -1;
+	char buffer[1024 * 8] = { 0 };
+	size = p->encode(buffer, 1024 * 8);
+	if (size < 1)
+		return -1;
+	return send_msg(buffer, size);
+}
+
+int socket_client::check_msg_complete(char *data_head, int size) {
+	MsgBase* msg_head = (MsgBase*) data_head;
+	if (size >= msg_head->msg_size) {
+		return msg_head->msg_size;
+	}
+	return -1;
+}
+
+} /* namespace omg */
