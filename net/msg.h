@@ -28,6 +28,7 @@ struct connection_id;
 
 class CMsgEvent{
 public:
+    CMsgEvent(){}
 	CMsgEvent(int msg_type,connection_id& id,MsgBase* msg_base)
 	{
 		_msg_type = msg_type;

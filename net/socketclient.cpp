@@ -8,9 +8,10 @@
 #include "socketclient.h"
 
 namespace omg {
+
 #define MAX_MSG_SIZE 12*1024
 
-socket_client::socket_client(int fd, epoll_handler* handler) {
+socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
 	// TODO Auto-generated constructor stub
 	_socket_fd = fd;
 	_conn_state = CONN_UNVRIFY;
@@ -18,6 +19,8 @@ socket_client::socket_client(int fd, epoll_handler* handler) {
 	_epoll_handler = handler;
 	_conn_id._fd = fd;
 	_conn_id._timestamp = time(NULL);
+    _sin = addr;
+    _msg_dispatcher = dispatcher;
 }
 
 socket_client::~socket_client() {
@@ -29,7 +32,7 @@ int socket_client::on_read() {
 	char msg_buffer[MSG_BUFF_SIZE] = { 0 };
 	int len = 0;
 	while (true) {
-		len = recv(fd, msg_buffer, MSG_BUFF_SIZE, 0);
+		len = recv(_socket_fd, msg_buffer, MSG_BUFF_SIZE, 0);
 		if (len == 0) {
 			LOG(INFO)<<"client close socket .......";
 			return 0;
@@ -102,6 +105,7 @@ int socket_client::on_write() {
 }
 
 int socket_client::on_error() {
+
 }
 
 int socket_client::send_msg(const char* data_head, int send_size) {
@@ -114,6 +118,7 @@ int socket_client::send_msg(const char* data_head, int send_size) {
 		mod_epoll_status(EPOLLIN | EPOLLOUT);
 		return 0;
 	}
+
 	//send unlock
 	int rst = ::send(fd, data_head, send_size, 0);
 	if (rst < 0) {

@@ -4,8 +4,8 @@
 #include "msg.h"
 #include "../common/omg_type.h"
 #include "../common/lock.h"
-#include "../net/IMsgDispatcher.h"
-#include "../net/packet.h"
+#include "IMsgDispatcher.h"
+#include "packet.h"
 
 using namespace omg;
 
@@ -78,7 +78,8 @@ struct EPollSocket {
                     MsgBase* msg_base = (MsgBase*)msg_data;
                     CMsgEvent* event = new CMsgEvent();
                     event->_msg_type = msg_base->msg_type; 
-                    event->_client_id = fd;
+                    event->_client_id._fd = fd;
+                    event->_client_id._timestamp = time(NULL);
                     event->_msg_base = msg_base;
                     _recv_buffer.erase(_recv_buffer.begin(),_recv_buffer.begin()+msg_len);
                     bool add_rst = _msg_dispatcher->add_msg_to_queue(event,this);
