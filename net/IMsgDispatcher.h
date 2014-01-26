@@ -6,7 +6,7 @@ class io_handler;
 class IMsgDispatcher{
 public:
 	//virtual ~IMsgDispatcher()=0;
-	virtual	bool add_msg_to_queue(CMsgEvent*,io_handler* handler = 0)=0;
+	virtual	bool add_msg_to_queue(CMsgEvent*)=0;
 	virtual void dispatch_msg()=0; 
 
 };

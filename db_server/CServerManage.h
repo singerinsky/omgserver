@@ -3,6 +3,7 @@
 #include "../common/head.h"
 #include "../net/socketclient.h"
 #include <set>
+#include "../common/timer_manager.h"
 using namespace std;
 
 class GameServerClient :public socket_client{

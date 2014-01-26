@@ -3,10 +3,10 @@
 #include "time_util.h"
 #include "timer_manager.h"
 #include <string>
+#include "../net/IMsgDispatcher.h"
 
 using namespace omg;
 namespace omg{
-    class IMsgDispatcher;
     class server_application
     {
         public:
@@ -26,7 +26,7 @@ namespace omg{
                 return &_timer_mgr; 
             }
 
-            server_application* get_instance()
+            static server_application* get_instance()
             {
                 if(application == NULL)
                 {
@@ -47,6 +47,6 @@ namespace omg{
             IMsgDispatcher* _msg_dispatcher;
     };
 
-    #define ServerRun   server_application::get_instance();
+    #define ServerRun   server_application::get_instance()
 }
 #endif

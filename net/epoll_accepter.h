@@ -13,7 +13,8 @@ using namespace omg;
 class epoll_accepter:public io_handler {
 
 public:
-	epoll_accepter(epoll_hander* handler,IMsgDispatcher* dispatcher) {
+	epoll_accepter(epoll_hander* handler,IMsgDispatcher* dispatcher)
+    {
 		_fd = 0;
         _epoll_handler = handler;
         _dispatcher = dispatcher;
@@ -36,7 +37,7 @@ public:
 		return _fd;
 	}
 
-    virtual void on_read()
+    virtual int on_read()
     {
         LOG(INFO)<<"acceptor recving....";
     	struct sockaddr_in sin;
@@ -56,12 +57,15 @@ public:
 				else on_error();
 			}
     	}
+
+        return 0;
     }
 
 
 
-    virtual void on_write()
+    virtual int on_write()
     {
+        return 0;
     }
 
 	sockaddr_in get_client_ip_address(){
@@ -93,7 +97,7 @@ public:
 public:
 	virtual int on_connection(int nfd,sockaddr* addr) = 0;
 
-    virtual void on_error() = 0;
+    virtual int on_error() = 0;
 
 private:
 	std::string 	_ip_str;

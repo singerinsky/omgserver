@@ -16,13 +16,14 @@ class epoll_handler;
 class IMsgDispatcher;
 class db_accepter: public epoll_accepter {
 public:
-	db_accepter(epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer);
+	db_accepter(epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer)
+    {}
 	virtual ~db_accepter();
 
 public:
 	virtual int on_connection(int nfd,sockaddr* addr);
-    virtual void on_error(){
-
+    virtual int on_error(){
+        return 1;
     }
 };
 

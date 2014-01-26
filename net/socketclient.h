@@ -10,8 +10,9 @@
 #include "IConnection.h"
 #include "IMsgDispatcher.h"
 #include <vector>
-#include "../common/head.h"
 #include "packet.h"
+#include "../common/head.h"
+#include "../common/server_application.h"
 
 namespace omg {
     

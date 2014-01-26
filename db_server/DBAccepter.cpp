@@ -7,11 +7,6 @@
 
 #include "DBAccepter.h"
 
-db_accepter::db_accepter() {
-	// TODO Auto-generated constructor stub
-
-}
-
 db_accepter::~db_accepter() {
 	// TODO Auto-generated destructor stub
 }

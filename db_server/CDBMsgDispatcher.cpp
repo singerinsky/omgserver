@@ -11,7 +11,9 @@ CDBMsgDispatcher::~CDBMsgDispatcher() {
 
 }
 
-bool CDBMsgDispatcher::add_msg_to_queue(CMsgEvent* event, GameServerClient* client) {
+
+bool CDBMsgDispatcher::add_msg_to_queue(CMsgEvent* event ) {
+    GameServerClient* client = NULL;
     //	VLOG(1)<<"GET EVENT FROM GAME SERVER"<<event->_msg_type;
     if (event->_msg_type == MSG_TYPE_SERVER_REGISTER)//游戏服务器注册
     {
@@ -68,7 +70,7 @@ if(server == NULL) {
                     server = CServerManage::GetInstance()->AddNewMatch(msg->mid);
                     //			}
                     if(server != NULL) {
-                        int data = server->connection->send_msg(event->_msg_base);
+                        int data = server->send_msg((const char*)event->_msg_base,event->_msg_base->msg_size);
                         VLOG(1)<<"SEND MSG"<<data;
                     } else {
                         VLOG(1)<<"NO SUCH GAME SERVE R";
@@ -79,10 +81,10 @@ delete event;
 }break;
 case MSG_TYPE_LOGIN_OUT://断开
 {
-    GameServerClient* client = CServerManage::GetInstance()->GetGameServerBySocketFd(event->_client_id);
+    GameServerClient* client = CServerManage::GetInstance()->GetGameServerBySocketFd(event->_client_id._fd);
     int server_index = client->index;
     CServerManage::GetInstance()->RemoveServer(server_index);
-    VLOG(1)<<"游戏服务器"<<event->_client_id<<"断开!!";
+    VLOG(1)<<"游戏服务器"<<event->_client_id._fd<<"断开!!";
     delete event->_msg_base;
     event->_msg_base = NULL;
     delete event;
@@ -93,7 +95,7 @@ case MSG_TYPE_MATCH_MOVE://通知比赛开始
     int mid = ((MsgRunMatch*)event->_msg_base)->mid;
     GameServerClient* server = CServerManage::GetInstance()->GetMatchRunServer(mid);
     if(server!= NULL) {
-        server->connection->send_msg(event->_msg_base);
+        server->send_msg((const char*)event->_msg_base,event->_msg_base->msg_size);
     }
 }
 break;
