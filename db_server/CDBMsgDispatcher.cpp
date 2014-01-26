@@ -11,13 +11,13 @@ CDBMsgDispatcher::~CDBMsgDispatcher() {
 
 }
 
-bool CDBMsgDispatcher::add_msg_to_queue(CMsgEvent* event, EPollSocket* socket) {
+bool CDBMsgDispatcher::add_msg_to_queue(CMsgEvent* event, GameServerClient* client) {
 	//	VLOG(1)<<"GET EVENT FROM GAME SERVER"<<event->_msg_type;
 	if (event->_msg_type == MSG_TYPE_SERVER_REGISTER)//游戏服务器注册
 	{
 		MsgServerRegister *msg = (MsgServerRegister*) event->_msg_base;
 		VLOG(1)<<"regsiter Server "<<msg->_server_type<<" "<<msg->_index;
-		CServerManage::GetInstance()->RegisterServer(msg->_index,socket);
+		CServerManage::GetInstance()->RegisterServer(msg->_index,client);
 		//MsgUpdateGServerInfo* update_msg = new MsgUpdateGServerInfo();
 		//update_msg->index = msg->_index;
 		//update_msg->server_typ = msg->_server_type;

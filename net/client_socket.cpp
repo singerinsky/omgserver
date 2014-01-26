@@ -123,7 +123,6 @@ int CSocketClient::recvData() {
 	CMsgEvent* event = new CMsgEvent();
 	event->_msg_type = msg_typ;
 	event->_msg_base = (MsgBase*)buffer;
-	event->_msg_from = this;
 	_msg_dispatcher->add_msg_to_queue(event);
 	return ret;
 }

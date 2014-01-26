@@ -11,9 +11,12 @@
 #include "../common/head.h"
 #include "../net/epoll_accepter.h"
 
+
+class epoll_handler;
+class IMsgDispatcher;
 class db_accepter: public epoll_accepter {
 public:
-	db_accepter();
+	db_accepter(epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer);
 	virtual ~db_accepter();
 
 public:

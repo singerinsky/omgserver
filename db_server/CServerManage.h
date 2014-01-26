@@ -7,8 +7,15 @@ using namespace std;
 
 class GameServerClient :public socket_client{
 public:
-	GameServerClient(){
-        
+	GameServerClient(int fd,
+                    sockaddr_in& in,
+                    epoll_handler* handler,
+                    IMsgDispatcher* dispatcher,
+                    timer_manager* timer_mgr):socket_client(fd,in,handler,dispatcher){
+        _timer_mgr = timer_mgr;    
+        _timer.set_owner(this);        
+        _timer.set_expired(ServerRun->get_run_ms()+5000);
+        _timer_mgr->add_timer(&_timer);
 	}
 
 	~GameServerClient(){
@@ -22,6 +29,7 @@ public:
 	std::set<int> _match_list;
 private:
     template_timer<GameServerClient,&GameServerClient::on_timeout> _timer;
+    timer_manager* _timer_mgr;
 };
 
 class CServerManage {
@@ -37,12 +45,8 @@ public:
 		}
 		return _m_instance;
 	}
-	void RegisterServer(int index, EPollSocket* socket) {
-		GameServerClient *client = new GameServerClient();
-		client->index = index;
-		client->connection = socket;
-		client->server_ip = inet_ntoa(socket->get_client_ip_address().sin_addr);
-		VLOG(2)<<"GameServer connect from "<<client->server_ip.c_str();
+	void RegisterServer(int index, GameServerClient* client) {
+		VLOG(2)<<"GameServer connect from "<<client->get_ip_port_str().c_str();
 		_server_map[index] = client;
 	}
 
@@ -75,7 +79,7 @@ public:
 		_lock.lock();
 		SERVER_ITR itr = _server_map.begin();
 		while(itr != _server_map.end()) {
-			if(fd == itr->second->connection->fd){
+			if(fd == itr->second->get_socket_fd()){
 				_lock.unlock();
 				return itr->second;
 			}
@@ -130,7 +134,7 @@ public:
 		_lock.lock();
 		std::map<int,GameServerClient*>::iterator itr = _server_map.begin();
 		while(itr != _server_map.end()){
-			if(itr->second->server_ip == ip){
+			if(itr->second->get_ip_port_str() == ip){
 				itr->second->_match_list.insert(mid);
 				_lock.unlock();
 				return itr->second;

@@ -352,6 +352,78 @@ mtrand.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.s
 .PHONY : mtrand.cpp.s
 
+server_application.o: server_application.cpp.o
+.PHONY : server_application.o
+
+# target to build an object file
+server_application.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.o
+.PHONY : server_application.cpp.o
+
+server_application.i: server_application.cpp.i
+.PHONY : server_application.i
+
+# target to preprocess a source file
+server_application.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.i
+.PHONY : server_application.cpp.i
+
+server_application.s: server_application.cpp.s
+.PHONY : server_application.s
+
+# target to generate assembly for a file
+server_application.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.s
+.PHONY : server_application.cpp.s
+
+system_util.o: system_util.cpp.o
+.PHONY : system_util.o
+
+# target to build an object file
+system_util.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.o
+.PHONY : system_util.cpp.o
+
+system_util.i: system_util.cpp.i
+.PHONY : system_util.i
+
+# target to preprocess a source file
+system_util.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.i
+.PHONY : system_util.cpp.i
+
+system_util.s: system_util.cpp.s
+.PHONY : system_util.s
+
+# target to generate assembly for a file
+system_util.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.s
+.PHONY : system_util.cpp.s
+
+timer_manager.o: timer_manager.cpp.o
+.PHONY : timer_manager.o
+
+# target to build an object file
+timer_manager.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.o
+.PHONY : timer_manager.cpp.o
+
+timer_manager.i: timer_manager.cpp.i
+.PHONY : timer_manager.i
+
+# target to preprocess a source file
+timer_manager.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.i
+.PHONY : timer_manager.cpp.i
+
+timer_manager.s: timer_manager.cpp.s
+.PHONY : timer_manager.s
+
+# target to generate assembly for a file
+timer_manager.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.s
+.PHONY : timer_manager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -391,6 +463,15 @@ help:
 	@echo "... mtrand.o"
 	@echo "... mtrand.i"
 	@echo "... mtrand.s"
+	@echo "... server_application.o"
+	@echo "... server_application.i"
+	@echo "... server_application.s"
+	@echo "... system_util.o"
+	@echo "... system_util.i"
+	@echo "... system_util.s"
+	@echo "... timer_manager.o"
+	@echo "... timer_manager.i"
+	@echo "... timer_manager.s"
 .PHONY : help
 
 

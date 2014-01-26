@@ -99,45 +99,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named gate_server
-
-# Build rule for target.
-gate_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gate_server
-.PHONY : gate_server
-
-# fast build rule for target.
-gate_server/fast:
-	$(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
-.PHONY : gate_server/fast
-
-#=============================================================================
-# Target rules for targets named game_server
-
-# Build rule for target.
-game_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 game_server
-.PHONY : game_server
-
-# fast build rule for target.
-game_server/fast:
-	$(MAKE) -f game_server/build/CMakeFiles/game_server.dir/build.make game_server/build/CMakeFiles/game_server.dir/build
-.PHONY : game_server/fast
-
-#=============================================================================
-# Target rules for targets named soccer_ai
-
-# Build rule for target.
-soccer_ai: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 soccer_ai
-.PHONY : soccer_ai
-
-# fast build rule for target.
-soccer_ai/fast:
-	$(MAKE) -f game_server/game_lib/soccer_ai/CMakeFiles/soccer_ai.dir/build.make game_server/game_lib/soccer_ai/CMakeFiles/soccer_ai.dir/build
-.PHONY : soccer_ai/fast
-
-#=============================================================================
 # Target rules for targets named db_server
 
 # Build rule for target.
@@ -184,9 +145,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... gate_server"
-	@echo "... game_server"
-	@echo "... soccer_ai"
 	@echo "... db_server"
 	@echo "... net"
 	@echo "... common"

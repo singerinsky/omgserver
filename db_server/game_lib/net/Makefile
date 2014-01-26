@@ -208,6 +208,30 @@ message.pb.cc.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+net_util.o: net_util.cpp.o
+.PHONY : net_util.o
+
+# target to build an object file
+net_util.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/net_util.cpp.o
+.PHONY : net_util.cpp.o
+
+net_util.i: net_util.cpp.i
+.PHONY : net_util.i
+
+# target to preprocess a source file
+net_util.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/net_util.cpp.i
+.PHONY : net_util.cpp.i
+
+net_util.s: net_util.cpp.s
+.PHONY : net_util.s
+
+# target to generate assembly for a file
+net_util.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/net_util.cpp.s
+.PHONY : net_util.cpp.s
+
 serversocket.o: serversocket.cpp.o
 .PHONY : serversocket.o
 
@@ -232,29 +256,29 @@ serversocket.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/serversocket.cpp.s
 .PHONY : serversocket.cpp.s
 
-socket_epoll.o: socket_epoll.cpp.o
-.PHONY : socket_epoll.o
+socketclient.o: socketclient.cpp.o
+.PHONY : socketclient.o
 
 # target to build an object file
-socket_epoll.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/socket_epoll.cpp.o
-.PHONY : socket_epoll.cpp.o
+socketclient.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/socketclient.cpp.o
+.PHONY : socketclient.cpp.o
 
-socket_epoll.i: socket_epoll.cpp.i
-.PHONY : socket_epoll.i
+socketclient.i: socketclient.cpp.i
+.PHONY : socketclient.i
 
 # target to preprocess a source file
-socket_epoll.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/socket_epoll.cpp.i
-.PHONY : socket_epoll.cpp.i
+socketclient.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/socketclient.cpp.i
+.PHONY : socketclient.cpp.i
 
-socket_epoll.s: socket_epoll.cpp.s
-.PHONY : socket_epoll.s
+socketclient.s: socketclient.cpp.s
+.PHONY : socketclient.s
 
 # target to generate assembly for a file
-socket_epoll.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/socket_epoll.cpp.s
-.PHONY : socket_epoll.cpp.s
+socketclient.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/net/CMakeFiles/net.dir/build.make db_server/game_lib/net/CMakeFiles/net.dir/socketclient.cpp.s
+.PHONY : socketclient.cpp.s
 
 thread.o: thread.cpp.o
 .PHONY : thread.o
@@ -301,12 +325,15 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... net_util.o"
+	@echo "... net_util.i"
+	@echo "... net_util.s"
 	@echo "... serversocket.o"
 	@echo "... serversocket.i"
 	@echo "... serversocket.s"
-	@echo "... socket_epoll.o"
-	@echo "... socket_epoll.i"
-	@echo "... socket_epoll.s"
+	@echo "... socketclient.o"
+	@echo "... socketclient.i"
+	@echo "... socketclient.s"
 	@echo "... thread.o"
 	@echo "... thread.i"
 	@echo "... thread.s"

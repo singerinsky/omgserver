@@ -24,8 +24,7 @@ namespace omg {
 
     class socket_client: public io_handler {
         public:
-            socket_client(){};
-            void   init(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
+            socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
             virtual ~socket_client();
             virtual int on_read();
             virtual int on_write();
@@ -51,6 +50,10 @@ namespace omg {
             int send_packet_msg(packet* p);
             
             int send_msg(const char* data_head, int send_size);
+
+            std::string get_ip_port_str(){
+                return _ip_str; 
+            }
 
         private:
             std::vector<char> _recv_buffer;

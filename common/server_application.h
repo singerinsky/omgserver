@@ -1,14 +1,16 @@
 #ifndef _SERVER_APPLICATION_ 
 #define _SERVER_APPLICATION_
 #include "time_util.h"
+#include "timer_manager.h"
 #include <string>
 
 using namespace omg;
 namespace omg{
+    class IMsgDispatcher;
     class server_application
     {
         public:
-            void server_application()
+            server_application()
             {
                 _tick_ms = get_tsc_us()/1000; 
                 _timer_mgr.init(get_run_ms(),14);
@@ -42,6 +44,7 @@ namespace omg{
             std::string _server_name;
             static server_application* application;
             timer_manager _timer_mgr;
+            IMsgDispatcher* _msg_dispatcher;
     };
 
     #define ServerRun   server_application::get_instance();

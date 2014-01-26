@@ -256,6 +256,30 @@ __/CWorldEventHandler.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.s
 .PHONY : __/CWorldEventHandler.cpp.s
 
+__/DBAccepter.o: __/DBAccepter.cpp.o
+.PHONY : __/DBAccepter.o
+
+# target to build an object file
+__/DBAccepter.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.o
+.PHONY : __/DBAccepter.cpp.o
+
+__/DBAccepter.i: __/DBAccepter.cpp.i
+.PHONY : __/DBAccepter.i
+
+# target to preprocess a source file
+__/DBAccepter.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.i
+.PHONY : __/DBAccepter.cpp.i
+
+__/DBAccepter.s: __/DBAccepter.cpp.s
+.PHONY : __/DBAccepter.s
+
+# target to generate assembly for a file
+__/DBAccepter.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.s
+.PHONY : __/DBAccepter.cpp.s
+
 __/DBConnectionPool.o: __/DBConnectionPool.cpp.o
 .PHONY : __/DBConnectionPool.o
 
@@ -355,6 +379,9 @@ help:
 	@echo "... __/CWorldEventHandler.o"
 	@echo "... __/CWorldEventHandler.i"
 	@echo "... __/CWorldEventHandler.s"
+	@echo "... __/DBAccepter.o"
+	@echo "... __/DBAccepter.i"
+	@echo "... __/DBAccepter.s"
 	@echo "... __/DBConnectionPool.o"
 	@echo "... __/DBConnectionPool.i"
 	@echo "... __/DBConnectionPool.s"
