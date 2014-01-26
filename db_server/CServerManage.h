@@ -1,25 +1,27 @@
 #ifndef _SERVER_MANAGE_H_
 #define _SERVER_MANAGE_H
 #include "../common/head.h"
-#include "../net/epoll_socket.h"
+#include "../net/socketclient.h"
 #include <set>
 using namespace std;
 
-class GameServerClient {
+class GameServerClient :public socket_client{
 public:
 	GameServerClient(){
-
+        
 	}
 
 	~GameServerClient(){
-		delete connection;
+
 	}
+
+    void on_timeout(timer_manager* timer_mgr);
 
 public:
 	int index;
-	std::string server_ip;
-	EPollSocket *connection;
 	std::set<int> _match_list;
+private:
+    template_timer<GameServerClient,&GameServerClient::on_timeout> _timer;
 };
 
 class CServerManage {

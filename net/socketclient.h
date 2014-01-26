@@ -24,7 +24,8 @@ namespace omg {
 
     class socket_client: public io_handler {
         public:
-            socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
+            socket_client(){};
+            void   init(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
             virtual ~socket_client();
             virtual int on_read();
             virtual int on_write();
@@ -34,6 +35,11 @@ namespace omg {
             }
             CONN_STATE get_state() {
                 return _conn_state;
+            }
+
+            void set_state(CONN_STATE value)
+            {
+                _conn_state = value;
             }
 
             int get_socket_fd() {

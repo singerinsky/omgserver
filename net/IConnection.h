@@ -25,13 +25,19 @@ class io_handler {
 
 class IConnection: public io_handler {
     public:
-        virtual bool connected()=0;
+        virtual bool connected()
+        {
+            return _connected;
+        }
+
         virtual int on_read() = 0;
         virtual int on_write() = 0; 
         virtual int on_error() = 0; 
         virtual int send_data(const char*, int)=0;
 
         virtual int get_connection_id()=0;
+    private:
+        bool _connected;
 };
 
 #endif

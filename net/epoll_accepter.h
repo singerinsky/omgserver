@@ -13,8 +13,10 @@ using namespace omg;
 class epoll_accepter:public io_handler {
 
 public:
-	epoll_accepter() {
+	epoll_accepter(epoll_hander* handler,IMsgDispatcher* dispatcher) {
 		_fd = 0;
+        _epoll_handler = handler;
+        _dispatcher = dispatcher;
 	}
 
     virtual	~epoll_accepter(void) {
@@ -78,6 +80,16 @@ public:
 	{
 		return _fd;
 	}
+
+    IMsgDispatcher* get_msg_dispatcher()
+    {
+        return _dispatcher;
+    }
+
+    epoll_handler* get_epoll_handler()
+    {
+        return _epoll_handler;
+    }
 public:
 	virtual int on_connection(int nfd,sockaddr* addr) = 0;
 
@@ -88,5 +100,7 @@ private:
     int				_port;
     sockaddr_in		_sin;
     int 			_fd;
+    IMsgDispatcher* _dispatcher;
+    epoll_handler*  _epoll_handler;
 };
 #endif

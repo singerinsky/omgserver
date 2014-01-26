@@ -13,7 +13,7 @@ namespace omg {
 
 #define MAX_MSG_SIZE 12*1024
 
-socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
+void socket_client::init(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
 	// TODO Auto-generated constructor stub
 	_socket_fd = fd;
 	_conn_state = CONN_UNCONFIRM;
