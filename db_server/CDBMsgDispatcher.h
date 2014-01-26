@@ -12,12 +12,13 @@
 #include "../common/timer_manager.h"
 
 #define _DEBUG_SERVER_INFO
+
 using namespace omg;
 class CDBMsgDispatcher: public IMsgDispatcher, public Thread{
 public:
 	CDBMsgDispatcher();
 	~CDBMsgDispatcher();
-	bool add_msg_to_queue(CMsgEvent*,EPollSocket*);
+	bool add_msg_to_queue(CMsgEvent*,GameServerClient*);
 	void dispatch_msg();
 	virtual void*	on_run(void);
     int64_t get_run_ms(){return rdtsc()/_tick_ms;}
