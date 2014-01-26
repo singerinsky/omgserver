@@ -1,5 +1,6 @@
 #include "epoll_handler.h"
 #include "net_util.h"
+#include "socketclient.h"
 
 namespace omg {
 
@@ -24,8 +25,8 @@ namespace omg {
     }
 
     void epoll_handler::startListening() {
-
-        EPollSocket *s;
+/*
+        socket_client *s;
         int fd = ::socket(AF_INET, SOCK_STREAM, 0);
         if (fd == -1) {
             VLOG(3)<<"error of create socket";
@@ -46,7 +47,7 @@ namespace omg {
             ::close(fd);
             return;
         }
-        s = new EPollSocket(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
+        s = new socket_client(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
 
         //设置套接字为非阻塞
         if(set_sock_noblock(fd,false) == -1)
@@ -82,12 +83,14 @@ namespace omg {
             exit(1);
         }
         return;
+        */
     }
 
-    int epoll_handler::accept_conn(EPollSocket* listen_socket) {
+    int epoll_handler::accept_conn(socket_client* listen_socket) {
+        /*
         struct sockaddr_in sin;
         socklen_t len = sizeof(sockaddr_in);
-        EPollSocket *socket_client = NULL;
+        socket_client *socket_client = NULL;
         int nfd;
 
         while(true){
@@ -97,7 +100,7 @@ namespace omg {
 
             on_connection(nfd,(struct sockaddr*)&sin);
 
-            socket_client = new EPollSocket(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
+            socket_client = new socket_client(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
             socket_client->_epoll_fd = _epoll_create;
             //socket_client->set_blocking(false);
            // socket_client->set_nodelay(true);
@@ -113,6 +116,8 @@ namespace omg {
             }
             VLOG(1)<<"Accept connection"<<socket_client->fd;
         }
+        */
+        return 1;
     }
 
     void* epoll_handler::on_run(void) {
@@ -163,34 +168,35 @@ namespace omg {
                     }
                 }
             } 
-        }
-    }
-}
 
-    void epoll_handler::do_close(EPollSocket *socket) {
+        }
+        
+    }
+   
+    void epoll_handler::do_close(socket_client *socket) {
         //remove from socket map
         if(socket == NULL){
             return;
         }
         LOG(INFO)<<"close socket";
         epoll_event ev;
-        ::epoll_ctl(_epoll_create, EPOLL_CTL_DEL,socket->fd , &ev);
+        ::epoll_ctl(_epoll_create, EPOLL_CTL_DEL,socket->get_socket_fd() , &ev);
 
-        if(socket->_conn_state == CONN_VRIFY){//已经成功登录
+        if(socket->get_state() == CONN_CONFIRM){//已经成功登录
             MsgLoginOut *out = new MsgLoginOut();
             CMsgEvent* event = new CMsgEvent();
-            event->_client_id = socket->fd;
+            event->_client_id = socket->get_id();
             event->_msg_base = out;
             event->_msg_type = MSG_TYPE_LOGIN_OUT;
             _msg_handler->add_msg_to_queue(event,NULL);
             return;
-        }else if(socket->_conn_state == CONN_UNVRIFY){
+        }else if(socket->get_state() == CONN_UNCONFIRM){
             delete socket;
         }
     }
 
-    void epoll_handler::send_data(EPollSocket *socket,const char* msg,int msg_len) {
-        ::send(socket->fd,msg,msg_len,0);
+    void epoll_handler::send_data(socket_client *socket,const char* msg,int msg_len) {
+        ::send(socket->get_socket_fd(),msg,msg_len,0);
     }
 
    void epoll_handler::on_connection(int fd,sockaddr* addr)
@@ -213,7 +219,7 @@ namespace omg {
    	event.events |= _epoll_mod;
    	event.data.ptr = handler;
    	event.data.fd = fd;
-   	return ::epoll_ctl(_epoll_fd, EPOLL_CTL_MOD, fd, &event);
+   	return ::epoll_ctl(_epoll_create, EPOLL_CTL_MOD, fd, &event);
    }
 
 }

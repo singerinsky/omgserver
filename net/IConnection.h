@@ -26,15 +26,9 @@ class io_handler {
 class IConnection: public io_handler {
     public:
         virtual bool connected()=0;
-        virtual int on_read() {
-        }
-        ;
-        virtual int on_write() {
-        }
-        ;
-        virtual int on_error() {
-        }
-        ;
+        virtual int on_read() = 0;
+        virtual int on_write() = 0; 
+        virtual int on_error() = 0; 
         virtual int send_data(const char*, int)=0;
 
         virtual int get_connection_id()=0;

@@ -62,6 +62,10 @@ class CSocketClient:public IConnection
 			return _server_ip_port_str;
 		}
 
+        int on_error(){return 0;}
+        int on_write(){return 0;}
+        int on_read(){return 0;}
+
 	private:
 		bool _is_connected;
 		int _server_port;

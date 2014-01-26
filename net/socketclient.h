@@ -8,11 +8,14 @@
 #ifndef SOCKETCLIENT_H_
 #define SOCKETCLIENT_H_
 #include "IConnection.h"
+#include "IMsgDispatcher.h"
 #include <vector>
 #include "../common/head.h"
-#include "../net/epoll_handler.h"
+#include "packet.h"
 
 namespace omg {
+    
+    class epoll_handler;
     typedef enum {
         CONN_UNCONFIRM = 1,
         CONN_CONFIRM = 2,
@@ -40,6 +43,8 @@ namespace omg {
             int check_msg_complete(char *data_head,int size);
 
             int send_packet_msg(packet* p);
+            
+            int send_msg(const char* data_head, int send_size);
 
         private:
             std::vector<char> _recv_buffer;

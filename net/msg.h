@@ -2,6 +2,8 @@
 #define _MSG_H_
 
 #include "../common/head.h"
+#include "IConnection.h"
+
 #pragma pack(1)
 
 /*
@@ -23,8 +25,6 @@ struct MsgBase{
 };
 
 //
-class IConnection;
-struct connection_id;
 
 class CMsgEvent{
 public:

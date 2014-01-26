@@ -6,6 +6,8 @@
  */
 
 #include "socketclient.h"
+#include "msg.h"
+#include "epoll_handler.h"
 
 namespace omg {
 
@@ -14,7 +16,7 @@ namespace omg {
 socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
 	// TODO Auto-generated constructor stub
 	_socket_fd = fd;
-	_conn_state = CONN_UNVRIFY;
+	_conn_state = CONN_UNCONFIRM;
 	_lock.init();
 	_epoll_handler = handler;
 	_conn_id._fd = fd;
@@ -81,46 +83,46 @@ int socket_client::on_write() {
 	ScopeLock<MutexLock> lock(_lock);
 
 	//send unlock
-	int rst = ::send(fd, _send_buffer.data(), _send_buffer.size(), 0);
-	if (rst < 0) {
-		if (errno == EAGAIN || errno == EINTR) { //缓冲区满了。
-			return 0;
-		}
-		//error should disconnect
-		return -1;
-	}
-	//have data not send ,register write epoll event
-	if (rst < (int) _send_buffer.size()) {
-		mod_epoll_status(EPOLLIN | EPOLLOUT);
-	}
+	int rst = ::send(_socket_fd, _send_buffer.data(), _send_buffer.size(), 0);
+        if (rst < 0) {
+            if (errno == EAGAIN || errno == EINTR) { //缓冲区满了。
+                return 0;
+            }
+            //error should disconnect
+            return -1;
+        }
+        //have data not send ,register write epoll event
+        if (rst < (int) _send_buffer.size()) {
+            _epoll_handler->mod_epoll_status(_socket_fd,this,EPOLLIN | EPOLLOUT);
+        }
 
-	if (rst == (int) _send_buffer.size()) {
-		mod_epoll_status (EPOLLIN);
-	}
-	if (rst != 0) {
-		_send_buffer.erase(_send_buffer.begin(), _send_buffer.begin() + rst);
-	}
+        if (rst == (int) _send_buffer.size()) {
+            _epoll_handler->mod_epoll_status (_socket_fd,this,EPOLLIN);
+        }
+        if (rst != 0) {
+            _send_buffer.erase(_send_buffer.begin(), _send_buffer.begin() + rst);
+        }
 
-	return rst;
-}
+        return rst;
+    }
 
-int socket_client::on_error() {
+    int socket_client::on_error() {
 
-}
+    }
 
-int socket_client::send_msg(const char* data_head, int send_size) {
-	//if send buffer has data ,push data into buffer
-	//send lock
-	ScopeLock<MutexLock> lock(_lock);
-	if (_send_buffer.size() > 0) {
+    int socket_client::send_msg(const char* data_head, int send_size) {
+        //if send buffer has data ,push data into buffer
+        //send lock
+        ScopeLock<MutexLock> lock(_lock);
+        if (_send_buffer.size() > 0) {
 		_send_buffer.insert(_send_buffer.end(), data_head,
 				data_head + send_size);
-		mod_epoll_status(EPOLLIN | EPOLLOUT);
+		_epoll_handler->mod_epoll_status(_socket_fd,this,EPOLLIN | EPOLLOUT);
 		return 0;
 	}
 
 	//send unlock
-	int rst = ::send(fd, data_head, send_size, 0);
+	int rst = ::send(_socket_fd, data_head, send_size, 0);
 	if (rst < 0) {
 		if (errno == EAGAIN || errno == EINTR) {        //缓冲区满了。
 			return 0;
@@ -130,7 +132,7 @@ int socket_client::send_msg(const char* data_head, int send_size) {
 	}
 	//have data not send ,register write epoll event
 	if (rst < send_size) {
-		mod_epoll_status(EPOLLIN | EPOLLOUT);
+		_epoll_handler->mod_epoll_status(_socket_fd,this,EPOLLIN | EPOLLOUT);
 		_send_buffer.insert(_send_buffer.end(), data_head + rst,
 				data_head + send_size);
 	}
