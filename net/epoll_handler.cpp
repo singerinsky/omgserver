@@ -188,7 +188,7 @@ namespace omg {
             event->_client_id = socket->get_id();
             event->_msg_base = out;
             event->_msg_type = MSG_TYPE_LOGIN_OUT;
-            _msg_handler->add_msg_to_queue(event,NULL);
+            _msg_handler->add_msg_to_queue(event);
             return;
         }else if(socket->get_state() == CONN_UNCONFIRM){
             delete socket;

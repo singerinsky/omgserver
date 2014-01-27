@@ -11,9 +11,8 @@ using namespace omg;
 #define MAX_ACCEPT_ONCE 256
 
 class epoll_accepter:public io_handler {
-
 public:
-	epoll_accepter(epoll_hander* handler,IMsgDispatcher* dispatcher)
+	epoll_accepter(epoll_handler* handler,IMsgDispatcher* dispatcher)
     {
 		_fd = 0;
         _epoll_handler = handler;
