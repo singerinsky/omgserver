@@ -6,6 +6,7 @@
  */
 
 #include "DBAccepter.h"
+#include "CServerManage.h"
 
 db_accepter::~db_accepter() {
 	// TODO Auto-generated destructor stub

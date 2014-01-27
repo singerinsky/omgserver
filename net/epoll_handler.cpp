@@ -5,6 +5,7 @@
 namespace omg {
 
     epoll_handler::~epoll_handler() {
+
     }
 
     bool epoll_handler::init_epoll(int epoll_size, const char* ip, int port,bool use_et) {

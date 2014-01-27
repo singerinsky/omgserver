@@ -6,9 +6,12 @@
 #include "packet.h"
 #include "net_util.h"
 #include "IConnection.h"
+#include "epoll_handler.h"
+#include "IMsgDispatcher.h"
+
+#define MAX_ACCEPT_ONCE 256
 
 using namespace omg;
-#define MAX_ACCEPT_ONCE 256
 
 class epoll_accepter:public io_handler {
 public:

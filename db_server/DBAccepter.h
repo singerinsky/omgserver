@@ -10,14 +10,16 @@
 
 #include "../common/head.h"
 #include "../net/epoll_accepter.h"
+#include "../net/epoll_handler.h"
+#include "../net/IMsgDispatcher.h"
 
+using namespace omg;
 
-class epoll_handler;
-class IMsgDispatcher;
 class db_accepter: public epoll_accepter {
 public:
-	db_accepter(epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer)
-    {}
+	db_accepter(omg::epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer)
+    {
+    }
 	virtual ~db_accepter();
 
 public:
