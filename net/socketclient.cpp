@@ -64,7 +64,9 @@ int socket_client::on_read() {
 						msg_base);
 				_recv_buffer.erase(_recv_buffer.begin(),
 						_recv_buffer.begin() + msg_len);
-				bool add_rst = _msg_dispatcher->add_msg_to_queue(event);
+                /******/
+
+			    bool add_rst = _msg_dispatcher->add_msg_to_queue(event);
 				if (add_rst == false) {
 					delete[] msg_data;
 					return -1;

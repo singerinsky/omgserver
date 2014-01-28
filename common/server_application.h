@@ -7,6 +7,8 @@
 
 using namespace omg;
 namespace omg{
+    class msg_process;
+
     class server_application
     {
         public:
@@ -39,14 +41,19 @@ namespace omg{
             {
                 return _msg_dispatcher;
             }
+
+            msg_process* get_msgprocess(){
+                return _msg_process;
+            }
         private:
             int64_t _tick_ms;
             std::string _server_name;
             static server_application* application;
             timer_manager _timer_mgr;
             IMsgDispatcher* _msg_dispatcher;
+            msg_process* _msg_process;
     };
 
-    #define ServerRun   server_application::get_instance()
+#define ServerRun   server_application::get_instance()
 }
 #endif
