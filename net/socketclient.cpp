@@ -32,7 +32,7 @@ socket_client::~socket_client() {
 
 int socket_client::init(epoll_handler* handler)
 {
-    if(_socket_fd <0 || handler == NULL)return -1;
+    if(_socket_fd < 0 || handler == NULL)return -1;
     set_nodelay(_socket_fd,false);
     set_sock_noblock(_socket_fd,true);
     handler->add_event_handler(_socket_fd,this);    

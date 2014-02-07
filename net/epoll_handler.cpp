@@ -10,6 +10,7 @@ namespace omg {
 
     bool epoll_handler::init_epoll(int epoll_size, const char* ip, int port,bool use_et) {
         assert(epoll_size > 0);
+        memset(_handler,0,sizeof(_handler));
         _epoll_create = epoll_create(epoll_size);
         _port = port;
         this->_ip_buffer = ip;
@@ -148,27 +149,28 @@ namespace omg {
 
             for(int i=0; i< fds; i++) {
                 io_handler *handler = (io_handler*)_events[i].data.ptr;
-                if(handler == NULL)
+                int event_fd = _events[i].data.fd;
+                if(handler == NULL || (_handler[event_fd] == NULL) || event_fd < 0 || event_fd > MAX_CLIENT)
                 {
                     return ;
                 }
                 if(_events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
-                    handler->on_error();
+                    _handler[event_fd]->on_error();
                     //do_close(epoll_socket);
                 }
                 else
                 {
                     if(_events[i].events & EPOLLIN) {
-                        int rst = handler->on_read();
+                        int rst = _handler[event_fd]->on_read();
                         if(rst == -1)
                         {
-                            handler->on_error();
+                            _handler[event_fd]->on_error();
                         }
                     }else if(_events[i].events & EPOLLOUT) {
-                        int rst = handler->on_write();
+                        int rst = _handler[event_fd]->on_write();
                         if(rst == -1)
                         {
-                            handler->on_error();
+                            _handler[event_fd]->on_error();
                         }
                     }
                 }
@@ -215,7 +217,8 @@ namespace omg {
         event.events |= EPOLLIN;
         event.events |= _epoll_mod;
         event.events |= EPOLLRDHUP;
-        event.data.ptr = handler;
+        event.data.fd = fd;
+        _handler[fd] = handler;
         return ::epoll_ctl(_epoll_create,EPOLL_CTL_ADD,fd,&event);
     }
 
@@ -223,7 +226,6 @@ namespace omg {
         epoll_event event = { 0 };
         event.events |= event_type;
         event.events |= _epoll_mod;
-        event.data.ptr = handler;
         event.data.fd = fd;
         return ::epoll_ctl(_epoll_create, EPOLL_CTL_MOD, fd, &event);
     }
@@ -232,6 +234,7 @@ namespace omg {
     {
         if(fd < 0 )return -1; 
         if(_epoll_create< 0)return -2;
+        _handler[fd] = NULL;
         epoll_ctl(_epoll_create,EPOLL_CTL_DEL,fd,NULL);
     }
 

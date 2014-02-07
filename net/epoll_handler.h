@@ -9,7 +9,7 @@
 #include "IConnection.h"
 
 const int EPOLL_SIZE = 128*1024;
-
+const int MAX_CLIENT = 10240;
 #ifndef EPOLLRDHUP
 	#define EPOLLRDHUP 0x2000
 #endif
@@ -56,6 +56,7 @@ namespace omg{
 			StringBuffer	_ip_buffer;
             int 	_epoll_mod;
             bool    _is_final; 
+            io_handler*  _handler[MAX_CLIENT];
 	};
 }
 

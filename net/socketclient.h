@@ -59,6 +59,7 @@ namespace omg {
 
             void fini();
 
+            bool is_connected(){return _connected;}
         private:
             std::vector<char> _recv_buffer;
             std::vector<char> _send_buffer;
@@ -73,6 +74,7 @@ namespace omg {
             int _socket_fd;
             int _port;
             sockaddr_in _sin;
+            bool _connected;
     };
 
 } /* namespace omg */
