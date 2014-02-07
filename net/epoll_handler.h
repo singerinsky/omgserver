@@ -34,6 +34,7 @@ namespace omg{
 
             int add_event_handler(int fd,io_handler* handler);
             int mod_epoll_status(int fd,io_handler* handler,int event_type);
+            int del_event_handler(int fd);
 
 		public:
 			virtual void *on_run(void);

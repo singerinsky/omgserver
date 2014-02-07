@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football_server/omgserver/client
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football_server/omgserver/client
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver/client
 
 # Include any dependencies generated for this target.
 include CMakeFiles/client.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/client.dir/flags.make
 
 CMakeFiles/client.dir/main.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/football_server/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/client.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/client.dir/main.cpp.o -c /home/gl/football_server/omgserver/client/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/client.dir/main.cpp.o -c /home/gl/workspace/omgserver/client/main.cpp
 
 CMakeFiles/client.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/football_server/omgserver/client/main.cpp > CMakeFiles/client.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/workspace/omgserver/client/main.cpp > CMakeFiles/client.dir/main.cpp.i
 
 CMakeFiles/client.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/football_server/omgserver/client/main.cpp -o CMakeFiles/client.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/workspace/omgserver/client/main.cpp -o CMakeFiles/client.dir/main.cpp.s
 
 CMakeFiles/client.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/client.dir/main.cpp.o.requires
@@ -99,6 +99,6 @@ CMakeFiles/client.dir/clean:
 .PHONY : CMakeFiles/client.dir/clean
 
 CMakeFiles/client.dir/depend:
-	cd /home/gl/football_server/omgserver/client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/football_server/omgserver/client /home/gl/football_server/omgserver/client /home/gl/football_server/omgserver/client /home/gl/football_server/omgserver/client /home/gl/football_server/omgserver/client/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gl/workspace/omgserver/client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/workspace/omgserver/client /home/gl/workspace/omgserver/client /home/gl/workspace/omgserver/client /home/gl/workspace/omgserver/client /home/gl/workspace/omgserver/client/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/client.dir/depend
 

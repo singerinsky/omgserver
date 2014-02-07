@@ -25,6 +25,8 @@ public:
 
     void on_timeout(timer_manager* timer_mgr);
 
+    int on_error();
+
 public:
 	int index;
 	std::set<int> _match_list;

@@ -28,7 +28,7 @@ int main(int argc,char** argv){
 	
 	memset(&addr,0,sizeof(addr));
 	addr.sin_family =	AF_INET;
-	addr.sin_port = htons(19999);	
+	addr.sin_port = htons(8979);	
 	inet_pton(AF_INET,"127.0.0.1",&addr.sin_addr);
 //	TestJob *pjob = new TestJob();
 //	omg::CThreadManage::AddJob(pjob);

@@ -88,7 +88,7 @@ int main(int argc,char** argv){
 	msg_dispatcher->start(false);
 	//接收游戏服务器的连接
 	omg::epoll_handler *handler = new omg::epoll_handler();
-	handler->init_epoll(EPOLL_SIZE,g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port);
+	handler->init_epoll(EPOLL_SIZE,g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port,true);
 	db_accepter* accepter = new db_accepter(handler,(IMsgDispatcher*)msg_dispatcher);
     std::string ips = "127.0.0.1";
     accepter->init(ips,8979);

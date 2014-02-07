@@ -8,6 +8,7 @@
 #include "socketclient.h"
 #include "msg.h"
 #include "epoll_handler.h"
+#include "net_util.h"
 
 namespace omg {
 
@@ -29,6 +30,22 @@ socket_client::~socket_client() {
 	// TODO Auto-generated destructor stub
 }
 
+int socket_client::init(epoll_handler* handler)
+{
+    if(_socket_fd <0 || handler == NULL)return -1;
+    set_nodelay(_socket_fd,false);
+    set_sock_noblock(_socket_fd,true);
+    handler->add_event_handler(_socket_fd,this);    
+    return 1;
+}
+
+void socket_client::fini()
+{
+    _epoll_handler->del_event_handler(_socket_fd);
+    close(_socket_fd);
+}
+
+
 #define MSG_BUFF_SIZE 2048
 int socket_client::on_read() {
 	char msg_buffer[MSG_BUFF_SIZE] = { 0 };
@@ -37,7 +54,7 @@ int socket_client::on_read() {
 		len = recv(_socket_fd, msg_buffer, MSG_BUFF_SIZE, 0);
 		if (len == 0) {
 			LOG(INFO)<<"client close socket .......";
-			return 0;
+			return -1;
 		}
 
 		if (len == -1) {
@@ -109,7 +126,7 @@ int socket_client::on_write() {
     }
 
     int socket_client::on_error() {
-
+        return 1;        
     }
 
 
@@ -127,7 +144,7 @@ int socket_client::on_write() {
 	//send unlock
 	int rst = ::send(_socket_fd, data_head, send_size, 0);
 	if (rst < 0) {
-		if (errno == EAGAIN || errno == EINTR) {        //缓冲区满了。
+		if (errno == EAGAIN || errno == EINTR) {        
 			return 0;
 		}
 		//error should disconnect

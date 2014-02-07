@@ -19,6 +19,7 @@ CMakeFiles/client.dir/main.cpp.o: ../common/omg_type.h
 CMakeFiles/client.dir/main.cpp.o: ../net/../common/omg_type.h
 CMakeFiles/client.dir/main.cpp.o: ../net/../net/IConnection.h
 CMakeFiles/client.dir/main.cpp.o: ../net/../net/IMsgDispatcher.h
+CMakeFiles/client.dir/main.cpp.o: ../net/IConnection.h
 CMakeFiles/client.dir/main.cpp.o: ../net/client_socket.h
 CMakeFiles/client.dir/main.cpp.o: ../net/msg.h
 CMakeFiles/client.dir/main.cpp.o: TestJob.h

@@ -27,6 +27,7 @@ namespace omg {
         public:
             socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
             virtual ~socket_client();
+            int init(epoll_handler* handler);
             virtual int on_read();
             virtual int on_write();
             virtual int on_error();
@@ -55,6 +56,8 @@ namespace omg {
             std::string get_ip_port_str(){
                 return _ip_str; 
             }
+
+            void fini();
 
         private:
             std::vector<char> _recv_buffer;
