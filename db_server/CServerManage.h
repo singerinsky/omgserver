@@ -29,6 +29,8 @@ public:
 
     void reset();
 
+    int process_msg(packet_info * packet);
+
 public:
 	int index;
 	std::set<int> _match_list;

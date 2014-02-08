@@ -13,6 +13,7 @@
 namespace omg {
 
 #define MAX_MSG_SIZE 12*1024
+#define _MSG_BASE_
 
 socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
 	// TODO Auto-generated constructor stub
@@ -68,12 +69,19 @@ int socket_client::on_read() {
 			_recv_buffer.insert(_recv_buffer.end(), msg_buffer,
 					msg_buffer + len);
 			int msg_len = -1;
-			while ((_recv_buffer.size() > 0)
-					&& (msg_len = check_msg_complete(_recv_buffer.data(),
-							_recv_buffer.size())) != -1) {
-				if (msg_len > MAX_MSG_SIZE || msg_len < 0) {
+			while (_recv_buffer.size() > 0)
+			{
+#ifdef  _MSG_BASE_ 
+				msg_len = check_msg_complete(_recv_buffer.data(),_recv_buffer.size());
+                if(msg_len == -1)//message not complete 
+                {
+                    break; 
+                }
+
+				if (msg_len > MAX_MSG_SIZE) {
 					return -1;
 				}
+#endif
 				char* msg_data = new char[msg_len];
 				memcpy(msg_data, _recv_buffer.data(), msg_len);
 				MsgBase* msg_base = (MsgBase*) msg_data;
@@ -81,7 +89,6 @@ int socket_client::on_read() {
 						msg_base);
 				_recv_buffer.erase(_recv_buffer.begin(),
 						_recv_buffer.begin() + msg_len);
-                /******/
 
 			    bool add_rst = _msg_dispatcher->add_msg_to_queue(event);
 				if (add_rst == false) {

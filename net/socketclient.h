@@ -60,6 +60,8 @@ namespace omg {
             void fini();
 
             bool is_connected(){return _connected;}
+
+            virtual int  process_msg(){return 1;};
         private:
             std::vector<char> _recv_buffer;
             std::vector<char> _send_buffer;

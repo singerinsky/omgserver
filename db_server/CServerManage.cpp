@@ -9,6 +9,8 @@ void GameServerClient::on_timeout(timer_manager* timer_mgr)
 
 void GameServerClient::reset()
 {
+    index = -1;
+    _match_list.clear();
     _timer_mgr->del_timer(&_timer);
 }
 
