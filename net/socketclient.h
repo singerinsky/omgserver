@@ -27,7 +27,7 @@ namespace omg {
         public:
             socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
             virtual ~socket_client();
-            int init(epoll_handler* handler);
+            int init();
             virtual int on_read();
             virtual int on_write();
             virtual int on_error();

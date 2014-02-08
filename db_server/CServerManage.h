@@ -27,6 +27,8 @@ public:
 
     int on_error();
 
+    void reset();
+
 public:
 	int index;
 	std::set<int> _match_list;
