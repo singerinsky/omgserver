@@ -62,6 +62,8 @@ namespace omg {
             bool is_connected(){return _connected;}
 
             virtual int  process_msg(){return 1;};
+
+            virtual int  check_packet_info(char* msg_data,int size,packet_info*) = 0;
         private:
             std::vector<char> _recv_buffer;
             std::vector<char> _send_buffer;

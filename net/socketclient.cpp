@@ -82,6 +82,11 @@ int socket_client::on_read() {
 					return -1;
 				}
 #endif
+#ifdef _MSG_PACKET_
+                packet_info packet;
+                msg_len = check_packet_info(_recv_buffer.data(),_recv_buffer.size(),&packet);
+
+#endif
 				char* msg_data = new char[msg_len];
 				memcpy(msg_data, _recv_buffer.data(), msg_len);
 				MsgBase* msg_base = (MsgBase*) msg_data;

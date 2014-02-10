@@ -31,6 +31,8 @@ public:
 
     int process_msg(packet_info * packet);
 
+    int check_packet_info(char* data,int size,packet_info*);
+
 public:
 	int index;
 	std::set<int> _match_list;
