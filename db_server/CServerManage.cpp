@@ -42,3 +42,19 @@ int GameServerClient::check_packet_info(char* data,int size,packet_info* info)
     info->data = data;
     return info->size;
 }
+
+int GameServerClient::process_msg(packet_info* packet)
+{
+    //to some check like heart beat or other
+    int packet_type = packet->type;
+    switch(packet_type)
+    {
+    
+    }
+    return 1;
+
+}
+
+
+
+

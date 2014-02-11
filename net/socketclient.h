@@ -14,6 +14,7 @@
 #include "../common/head.h"
 #include "../common/server_application.h"
 
+#define MAX_MSG_SIZE 12*1024
 namespace omg {
     
     class epoll_handler;
@@ -61,7 +62,7 @@ namespace omg {
 
             bool is_connected(){return _connected;}
 
-            virtual int  process_msg(){return 1;};
+            virtual int  process_msg(packet_info* info){return 1;};
 
             virtual int  check_packet_info(char* msg_data,int size,packet_info*) = 0;
         private:

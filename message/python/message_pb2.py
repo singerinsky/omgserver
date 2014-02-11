@@ -14,8 +14,34 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='message.proto',
   package='',
-  serialized_pb='\n\rmessage.proto\",\n\x17SoccerPlayerInfoRequest\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\"O\n\x18SoccerPlayerInfoResponse\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x13\n\x0bplayer_name\x18\x02 \x02(\t\x12\x0b\n\x03\x61ge\x18\x03 \x02(\x05*=\n\x0bMessageType\x12\x14\n\x10SoccerPlayerInfo\x10\x01\x12\x18\n\x14SoccerPlayerTeamInfo\x10\x02')
+  serialized_pb='\n\rmessage.proto\",\n\x17SoccerPlayerInfoRequest\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\"O\n\x18SoccerPlayerInfoResponse\x12\x11\n\tplayer_id\x18\x01 \x02(\x05\x12\x13\n\x0bplayer_name\x18\x02 \x02(\t\x12\x0b\n\x03\x61ge\x18\x03 \x02(\x05*D\n\x0fMSG_ACTION_TYPE\x12\x0f\n\x0bMSG_REQUEST\x10\x00\x12\x10\n\x0cMSG_RESPONSE\x10\x01\x12\x0e\n\nMSG_NOTIFY\x10\x02*)\n\x0bMessageType\x12\x1a\n\x16MSG_SOCCER_PLAYER_INFO\x10\x01')
 
+_MSG_ACTION_TYPE = _descriptor.EnumDescriptor(
+  name='MSG_ACTION_TYPE',
+  full_name='MSG_ACTION_TYPE',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='MSG_REQUEST', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_RESPONSE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_NOTIFY', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=144,
+  serialized_end=212,
+)
+
+MSG_ACTION_TYPE = enum_type_wrapper.EnumTypeWrapper(_MSG_ACTION_TYPE)
 _MESSAGETYPE = _descriptor.EnumDescriptor(
   name='MessageType',
   full_name='MessageType',
@@ -23,23 +49,21 @@ _MESSAGETYPE = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='SoccerPlayerInfo', index=0, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SoccerPlayerTeamInfo', index=1, number=2,
+      name='MSG_SOCCER_PLAYER_INFO', index=0, number=1,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=144,
-  serialized_end=205,
+  serialized_start=214,
+  serialized_end=255,
 )
 
 MessageType = enum_type_wrapper.EnumTypeWrapper(_MESSAGETYPE)
-SoccerPlayerInfo = 1
-SoccerPlayerTeamInfo = 2
+MSG_REQUEST = 0
+MSG_RESPONSE = 1
+MSG_NOTIFY = 2
+MSG_SOCCER_PLAYER_INFO = 1
 
 
 

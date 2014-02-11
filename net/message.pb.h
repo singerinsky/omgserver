@@ -35,13 +35,32 @@ void protobuf_ShutdownFile_message_2eproto();
 class SoccerPlayerInfoRequest;
 class SoccerPlayerInfoResponse;
 
+enum MSG_ACTION_TYPE {
+  MSG_REQUEST = 0,
+  MSG_RESPONSE = 1,
+  MSG_NOTIFY = 2
+};
+bool MSG_ACTION_TYPE_IsValid(int value);
+const MSG_ACTION_TYPE MSG_ACTION_TYPE_MIN = MSG_REQUEST;
+const MSG_ACTION_TYPE MSG_ACTION_TYPE_MAX = MSG_NOTIFY;
+const int MSG_ACTION_TYPE_ARRAYSIZE = MSG_ACTION_TYPE_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* MSG_ACTION_TYPE_descriptor();
+inline const ::std::string& MSG_ACTION_TYPE_Name(MSG_ACTION_TYPE value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    MSG_ACTION_TYPE_descriptor(), value);
+}
+inline bool MSG_ACTION_TYPE_Parse(
+    const ::std::string& name, MSG_ACTION_TYPE* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<MSG_ACTION_TYPE>(
+    MSG_ACTION_TYPE_descriptor(), name, value);
+}
 enum MessageType {
-  SoccerPlayerInfo = 1,
-  SoccerPlayerTeamInfo = 2
+  MSG_SOCCER_PLAYER_INFO = 1
 };
 bool MessageType_IsValid(int value);
-const MessageType MessageType_MIN = SoccerPlayerInfo;
-const MessageType MessageType_MAX = SoccerPlayerTeamInfo;
+const MessageType MessageType_MIN = MSG_SOCCER_PLAYER_INFO;
+const MessageType MessageType_MAX = MSG_SOCCER_PLAYER_INFO;
 const int MessageType_ARRAYSIZE = MessageType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor();
@@ -397,6 +416,10 @@ inline void SoccerPlayerInfoResponse::set_age(::google::protobuf::int32 value) {
 namespace google {
 namespace protobuf {
 
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::MSG_ACTION_TYPE>() {
+  return ::MSG_ACTION_TYPE_descriptor();
+}
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::MessageType>() {
   return ::MessageType_descriptor();

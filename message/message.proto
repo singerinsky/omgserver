@@ -1,7 +1,15 @@
+
+enum MSG_ACTION_TYPE
+{
+    MSG_REQUEST = 0;
+    MSG_RESPONSE = 1;
+    MSG_NOTIFY= 2;
+}
+
+
 enum MessageType
 {
-    SoccerPlayerInfo = 1;
-    SoccerPlayerTeamInfo = 2;
+    MSG_SOCCER_PLAYER_INFO = 1;
 }
 
 message SoccerPlayerInfoRequest

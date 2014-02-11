@@ -12,7 +12,6 @@
 
 namespace omg {
 
-#define MAX_MSG_SIZE 12*1024
 #define _MSG_BASE_
 
 socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
@@ -82,9 +81,12 @@ int socket_client::on_read() {
 					return -1;
 				}
 #endif
+
 #ifdef _MSG_PACKET_
                 packet_info packet;
                 msg_len = check_packet_info(_recv_buffer.data(),_recv_buffer.size(),&packet);
+                if(msg_len < 0 )return msg_len;//error of message decode
+                int rst = process_msg(&packet); 
 
 #endif
 				char* msg_data = new char[msg_len];

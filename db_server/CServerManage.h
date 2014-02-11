@@ -2,6 +2,8 @@
 #define _SERVER_MANAGE_H
 #include "../common/head.h"
 #include "../net/socketclient.h"
+#include "../net/packet.h"
+#include "../net/game_packet.h"
 #include <set>
 #include "../common/timer_manager.h"
 using namespace std;

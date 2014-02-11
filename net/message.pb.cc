@@ -24,6 +24,7 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* SoccerPlayerInfoResponse_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   SoccerPlayerInfoResponse_reflection_ = NULL;
+const ::google::protobuf::EnumDescriptor* MSG_ACTION_TYPE_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor_ = NULL;
 
 }  // namespace
@@ -67,7 +68,8 @@ void protobuf_AssignDesc_message_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(SoccerPlayerInfoResponse));
-  MessageType_descriptor_ = file->enum_type(0);
+  MSG_ACTION_TYPE_descriptor_ = file->enum_type(0);
+  MessageType_descriptor_ = file->enum_type(1);
 }
 
 namespace {
@@ -105,9 +107,10 @@ void protobuf_AddDesc_message_2eproto() {
     "\n\rmessage.proto\",\n\027SoccerPlayerInfoReque"
     "st\022\021\n\tplayer_id\030\001 \002(\005\"O\n\030SoccerPlayerInf"
     "oResponse\022\021\n\tplayer_id\030\001 \002(\005\022\023\n\013player_n"
-    "ame\030\002 \002(\t\022\013\n\003age\030\003 \002(\005*=\n\013MessageType\022\024\n"
-    "\020SoccerPlayerInfo\020\001\022\030\n\024SoccerPlayerTeamI"
-    "nfo\020\002", 205);
+    "ame\030\002 \002(\t\022\013\n\003age\030\003 \002(\005*D\n\017MSG_ACTION_TYP"
+    "E\022\017\n\013MSG_REQUEST\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\n"
+    "MSG_NOTIFY\020\002*)\n\013MessageType\022\032\n\026MSG_SOCCE"
+    "R_PLAYER_INFO\020\001", 255);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
@@ -123,6 +126,21 @@ struct StaticDescriptorInitializer_message_2eproto {
     protobuf_AddDesc_message_2eproto();
   }
 } static_descriptor_initializer_message_2eproto_;
+const ::google::protobuf::EnumDescriptor* MSG_ACTION_TYPE_descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return MSG_ACTION_TYPE_descriptor_;
+}
+bool MSG_ACTION_TYPE_IsValid(int value) {
+  switch(value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor() {
   protobuf_AssignDescriptorsOnce();
   return MessageType_descriptor_;
@@ -130,7 +148,6 @@ const ::google::protobuf::EnumDescriptor* MessageType_descriptor() {
 bool MessageType_IsValid(int value) {
   switch(value) {
     case 1:
-    case 2:
       return true;
     default:
       return false;
