@@ -148,9 +148,9 @@ namespace omg {
             }
 
             for(int i=0; i< fds; i++) {
-                io_handler *handler = (io_handler*)_events[i].data.ptr;
+                //io_handler *handler = (io_handler*)_events[i].data.ptr;
                 int event_fd = _events[i].data.fd;
-                if(handler == NULL || (_handler[event_fd] == NULL) || event_fd < 0 || event_fd > MAX_CLIENT)
+                if((_handler[event_fd] == NULL) || event_fd < 0 || event_fd > MAX_CLIENT)
                 {
                     return ;
                 }
@@ -236,6 +236,7 @@ namespace omg {
         if(_epoll_create< 0)return -2;
         _handler[fd] = NULL;
         epoll_ctl(_epoll_create,EPOLL_CTL_DEL,fd,NULL);
+        return 0;
     }
 
 }

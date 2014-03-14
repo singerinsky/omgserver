@@ -96,6 +96,7 @@ int main(int argc,char** argv){
 	handler->startListening();
 	handler->set_msg_dispatcher(msg_dispatcher);
 	handler->start(false);
+    pthread_t thread_id = handler->get_thread_id();
 
 	//初始化数据库连接池,增加处理的线程队列
 	omg::CThreadManage::BeginPoolThread(10,20);
@@ -108,6 +109,7 @@ int main(int argc,char** argv){
 	//开启线程池,启动轮训线程,读取世界的事件
 	CWorldEventHandler *world_event = new CWorldEventHandler(conn,msg_dispatcher);
 	omg::CThreadManage::AddJob(world_event);
-	sleep(365*60*60);
+
+    pthread_join(thread_id,NULL);
 	//pthread_exit(NULL);
 }

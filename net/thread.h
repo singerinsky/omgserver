@@ -22,6 +22,8 @@ namespace omg
 		virtual void *on_run(void) = 0;
 
 		void *join(void);
+
+        pthread_t get_thread_id(){return _pthread_id;}
 	};
 
 }
