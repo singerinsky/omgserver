@@ -86,6 +86,7 @@ objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/define.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/epoll_handler.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/msg.h
+objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/net_util.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/packet.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/socketclient.cpp
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/workspace/omgserver/net/socketclient.h

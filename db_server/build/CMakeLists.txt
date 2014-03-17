@@ -24,4 +24,4 @@ MESSAGE("Linking libs ${libname}")
 
 ADD_EXECUTABLE(db_server ${DIR_SRCS})
 ADD_DEPENDENCIES(db_server net common mysqlpp)
-TARGET_LINK_LIBRARIES(db_server net common libgflags.so libglog.so libtinyxml.a mysqlclient mysqlpp pthread)
+TARGET_LINK_LIBRARIES(db_server net common libgflags.so libglog.so libtinyxml.a mysqlclient mysqlpp pthread libprotobuf.a)

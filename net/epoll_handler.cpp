@@ -27,99 +27,11 @@ namespace omg {
     }
 
     void epoll_handler::startListening() {
-        /*
-           socket_client *s;
-           int fd = ::socket(AF_INET, SOCK_STREAM, 0);
-           if (fd == -1) {
-           VLOG(3)<<"error of create socket";
-           return;
-           }
-        //设置可复用
-        int opt = SO_REUSEADDR;
-        setsockopt(fd,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(int));
-        //设置缓冲区大小
-        int window_size = 128 * 1024;
-        if (-1 == ::setsockopt(fd,SOL_SOCKET,SO_RCVBUF,(char*)&window_size,sizeof(window_size)))
-        {
-        ::close(fd);
-        return;
-        }
-        if (-1 == ::setsockopt(fd,SOL_SOCKET,SO_SNDBUF,(char*)&window_size,sizeof(window_size)))
-        {
-        ::close(fd);
-        return;
-        }
-        s = new socket_client(fd,EPollSocket::LISTEN_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
-
-        //设置套接字为非阻塞
-        if(set_sock_noblock(fd,false) == -1)
-        {
-        VLOG(3)<<"error of set socket noblocking";
-        return;
-        }
-
-        sockaddr_in sin;
-        sin.sin_family = AF_INET;
-        inet_aton(this->_ip_buffer.c_str(),&(sin.sin_addr));
-        sin.sin_port= htons(this->_port);
-        //绑定套接字
-        int rcv = 0;
-        rcv = ::bind(fd,(const sockaddr*)&sin,sizeof(sin));
-
-        if(rcv == -1)
-        {
-        LOG(ERROR)<<"error of bind socket "<<this->_port<<":"<<_ip_buffer.c_str();
-        exit(1);
-        }
-
-        rcv = ::listen(fd,128);
-        if(rcv == -1) {
-        VLOG(3)<<"error of listen socket";
-        return;
-        }
-
-        int rst = s->add_epoll_event(EPOLLIN);
-        if(rst != 0)
-        {
-        LOG(ERROR)<<"init epoll fd add"<<rst;
-        exit(1);
-        }
-        return;
-        */
+        
     }
 
     int epoll_handler::accept_conn(socket_client* listen_socket) {
-        /*
-           struct sockaddr_in sin;
-           socklen_t len = sizeof(sockaddr_in);
-           socket_client *socket_client = NULL;
-           int nfd;
-
-           while(true){
-           if((nfd = accept(listen_socket->fd,(struct sockaddr*)&sin,&len)) == -1) {
-           return -1;
-           }
-
-           on_connection(nfd,(struct sockaddr*)&sin);
-
-           socket_client = new socket_client(nfd,EPollSocket::DATA_SOCKET,_epoll_mod,_msg_handler,_epoll_create);
-           socket_client->_epoll_fd = _epoll_create;
-        //socket_client->set_blocking(false);
-        // socket_client->set_nodelay(true);
-        //socket_client->set_reuseaddr(true);
-        set_sock_noblock(nfd,false);
-        set_reuseaddr(nfd,true);
-        set_nodelay(nfd,true);
-        socket_client->set_client_ip_address(sin);
-        if(socket_client->add_epoll_event(EPOLLIN) != 0){
-        LOG(ERROR)<<"accept connection error "; 
-        delete socket_client;
-        return -1;
-        }
-        VLOG(1)<<"Accept connection"<<socket_client->fd;
-        }
-        */
-        return 1;
+                return 1;
     }
 
     void* epoll_handler::on_run(void) {

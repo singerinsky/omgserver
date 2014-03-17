@@ -47,9 +47,18 @@ int GameServerClient::process_msg(packet_info* packet)
 {
     //to some check like heart beat or other
     int packet_type = packet->type;
+    if(MessageType_IsValid(packet_type))
+    {
+        return -1;
+    };
+
+    int process_ret = 0;
     switch(packet_type)
     {
-    
+        case  CS_MSG_SOCCER_PLAYER_REQ:
+            cs_soccer_player_request request;
+            //process_ret = _packet.decode(packet->data,packet->size);
+
     }
     return 1;
 

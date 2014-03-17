@@ -1,4 +1,5 @@
 ./message/message.pb.cc
+./message/message_define.h
 ./message/message.pb.h
 ./db_server/build/CMakeFiles/2.8.10.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 ./db_server/CDBMsgDispatcher.cpp
@@ -14,8 +15,10 @@
 ./db_server/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
 ./db_server/DBConnectionPool.h
 ./db_server/main.cpp
+./db_server/dbmsg_process.cpp
 ./db_server/CDBTaskManage.cpp
 ./db_server/CDBTaskManage.h
+./db_server/dbmsg_process.h
 ./db_server/CDBhandlerJob.cpp
 ./db_server/CNpcPlayerCache.h
 ./db_server/CServerManage.cpp
@@ -73,6 +76,7 @@
 ./common/IJob.h
 ./common/mtrand.cpp
 ./common/queue.h
+./common/IMsgProcess.h
 ./common/CTimerEventHandler.cpp
 ./common/head.h
 ./common/string.h
