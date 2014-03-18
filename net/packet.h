@@ -12,7 +12,8 @@
 #include <endian.h>
 #include <byteswap.h>
 
-# if __BYTE_ORDER == __BIG_ENDIAN
+//# if __BYTE_ORDER == __BIG_ENDIAN
+# if 1
 
 #define hton_int16(x) (x)
 #define hton_int32(x) (x)

@@ -12,7 +12,8 @@
 
 namespace omg {
 
-#define _MSG_BASE_
+//#define _MSG_BASE_
+#define _MSG_PACKET_
 
 socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
 	// TODO Auto-generated constructor stub

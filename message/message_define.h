@@ -15,7 +15,7 @@ enum
 
 
 typedef cs_packet<CS_MSG_SOCCER_PLAYER_REQ,SoccerPlayerInfoRequest> cs_soccer_player_request;
-typedef cs_packet<CS_MSG_SOCCER_PLAYER_REP,SoccerPlayerInfoResponse> cs_soccer_player_reponse;
+typedef cs_packet<CS_MSG_SOCCER_PLAYER_REP,SoccerPlayerInfoResponse> cs_soccer_player_response;
 
 
 #endif

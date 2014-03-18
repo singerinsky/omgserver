@@ -16,6 +16,11 @@ CMakeFiles/client.dir/main.cpp.o: ../common/JobDequeue.h
 CMakeFiles/client.dir/main.cpp.o: ../common/head.h
 CMakeFiles/client.dir/main.cpp.o: ../common/lock.h
 CMakeFiles/client.dir/main.cpp.o: ../common/omg_type.h
+CMakeFiles/client.dir/main.cpp.o: ../message/../net/../common/aliased_buf.h
+CMakeFiles/client.dir/main.cpp.o: ../message/../net/game_packet.h
+CMakeFiles/client.dir/main.cpp.o: ../message/../net/message.pb.h
+CMakeFiles/client.dir/main.cpp.o: ../message/../net/packet.h
+CMakeFiles/client.dir/main.cpp.o: ../message/message_define.h
 CMakeFiles/client.dir/main.cpp.o: ../net/../common/omg_type.h
 CMakeFiles/client.dir/main.cpp.o: ../net/../net/IConnection.h
 CMakeFiles/client.dir/main.cpp.o: ../net/../net/IMsgDispatcher.h

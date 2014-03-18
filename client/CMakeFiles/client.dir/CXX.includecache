@@ -204,6 +204,50 @@ head.h
 
 /home/gl/workspace/omgserver/client/../common/omg_type.h
 
+/home/gl/workspace/omgserver/client/../message/../net/../common/aliased_buf.h
+streambuf
+-
+
+/home/gl/workspace/omgserver/client/../message/../net/game_packet.h
+sstream
+-
+exception
+-
+packet.h
+/home/gl/workspace/omgserver/client/../message/../net/packet.h
+../common/aliased_buf.h
+/home/gl/workspace/omgserver/client/../message/../net/../common/aliased_buf.h
+
+/home/gl/workspace/omgserver/client/../message/../net/message.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/generated_message_reflection.h
+-
+
+/home/gl/workspace/omgserver/client/../message/../net/packet.h
+stdint.h
+-
+endian.h
+-
+byteswap.h
+-
+
+/home/gl/workspace/omgserver/client/../message/message_define.h
+../net/packet.h
+/home/gl/workspace/omgserver/client/../message/../net/packet.h
+../net/game_packet.h
+/home/gl/workspace/omgserver/client/../message/../net/game_packet.h
+../net/message.pb.h
+/home/gl/workspace/omgserver/client/../message/../net/message.pb.h
+
 /home/gl/workspace/omgserver/client/../net/../common/omg_type.h
 
 /home/gl/workspace/omgserver/client/../net/../net/IConnection.h
@@ -259,4 +303,6 @@ TestJob.h
 /home/gl/workspace/omgserver/client/TestJob.h
 ../common/CThreadManage.h
 /home/gl/workspace/omgserver/client/../common/CThreadManage.h
+../message/message_define.h
+/home/gl/workspace/omgserver/client/../message/message_define.h
 

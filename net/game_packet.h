@@ -74,8 +74,8 @@ public:
         size = cs_head_size(PT) + output.tellp() ;
         if(size >= 65535 ) return -1 ;
         cs_head* head = (cs_head*)data;
-        head->length = size;
-        head->msgid = PT;
+        head->length = ntoh_int16(size);
+        head->msgid = ntoh_int16(PT);
         return size ;
 
     }

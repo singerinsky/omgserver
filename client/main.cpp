@@ -10,12 +10,14 @@
 #include "../net/client_socket.h"
 #include "TestJob.h"
 #include "../common/CThreadManage.h"
+#include "../message/message_define.h"
 
 void init_server_log(int argc, char** argv){
 	google::ParseCommandLineFlags(&argc,&argv,true);		
 	google::InitGoogleLogging(argv[0]);
 }
 
+void send_soccer_player_info(int fd);
 
 
 int main(int argc,char** argv){
@@ -50,10 +52,10 @@ int main(int argc,char** argv){
 			msg_login.uid = 1;
             msg_login.zeit = time(NULL);
 			if(is_login == false){
-				send(fd,(const char*)&msg_login,msg_login.msg_size,0);
+				///send(fd,(const char*)&msg_login,msg_login.msg_size,0);
 				is_login = true;
 			}
-
+            send_soccer_player_info(fd);
 			struct MsgAlive msg_live;
 			int msg_len = sizeof(MsgAlive);
 			char* buff = (char*)malloc(msg_len);
@@ -76,3 +78,26 @@ int main(int argc,char** argv){
 	pthread_exit(NULL);	
 	return 1;
 }
+
+void send_soccer_player_info(int fd)
+{
+    cs_soccer_player_request request;
+    request.body.set_player_id(1);
+    int size = request.encode_size();
+    VLOG(1)<<"ENCODE SIZE "<<size;
+    char* data_buff = new char[size];
+    int final_size = request.encode(data_buff,size);
+    if(final_size == - 1)VLOG(1)<<"error of encode ";
+    VLOG(1)<<"FINAL ENCODE SIZE"<<final_size;
+    int send_size = send(fd,data_buff,final_size,0);
+
+    VLOG(1)<<"SEND SIZE "<<send_size;
+
+
+
+}
+
+
+
+
+
