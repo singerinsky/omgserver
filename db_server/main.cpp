@@ -73,6 +73,7 @@ void load_db_config(){
 }
 
 int main(int argc,char** argv){
+
 	init_server_log(argc,argv);
 	if(FLAGS_daemon){
 		init_daemon();

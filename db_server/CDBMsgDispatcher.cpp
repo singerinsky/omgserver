@@ -1,10 +1,8 @@
 #include "CDBMsgDispatcher.h"
 
 CDBMsgDispatcher::CDBMsgDispatcher() {
-    _tick_ms = get_tsc_us()*1000;
-    _timer_mgr.init(get_run_ms(),14);
     _dispatcher_timer.set_owner(this);
-
+    _timer_mgr = ServerRun->get_timer_mgr();
 }
 
 CDBMsgDispatcher::~CDBMsgDispatcher() {
@@ -133,31 +131,35 @@ default:
 }
 } else {
     //	VLOG(1)<<"null msg .....";
-    if((get_run_ms() - _ms_before_run) < 20)
+/*    if((get_run_ms() - _ms_before_run) < 20)
     {
         do_wait_ms(get_run_ms() - _ms_before_run);  
     }
-
+*/
 }
 }
 
 void* CDBMsgDispatcher::on_run() {
-    on_timeout(&_timer_mgr);
+    on_timeout(_timer_mgr);
     while (1) {
-        int64_t now_ms = _ms_before_run = get_run_ms();
-        _timer_mgr.run_until(now_ms);
+//       int64_t now_ms = _ms_before_run = get_run_ms();
+//        _timer_mgr.run_until(now_ms);
+        ServerRun->run_util_now();
+        LOG(INFO)<<"bef.....";
         dispatch_msg();
+        LOG(INFO)<<"dis.....";
     }
     return NULL;
 }
 
 void CDBMsgDispatcher::on_timeout(timer_manager* timer)
 {
-    _dispatcher_timer.set_expired(get_run_ms()+1000); 
-
-    if(_timer_mgr.add_timer(&_dispatcher_timer) != 0 )
+    int64_t now = ServerRun->get_run_ms();
+    _dispatcher_timer.set_expired(now+1000); 
+    int ret;
+    if((ret = _timer_mgr->add_timer(&_dispatcher_timer)) != 0 )
     {
-        VLOG(1)<<"error add timer";
+        VLOG(1)<<"error add timer"<<ret;
     }
     LOG(INFO)<<"on db time out ";
 }

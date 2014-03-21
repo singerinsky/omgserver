@@ -5,7 +5,6 @@
 #include <string>
 #include "../net/IMsgDispatcher.h"
 
-using namespace omg;
 namespace omg{
     class msg_process;
 
@@ -45,6 +44,12 @@ namespace omg{
             msg_process* get_msgprocess(){
                 return _msg_process;
             }
+
+            void run_util_now()
+            {
+                _timer_mgr.run_until(get_run_ms()); 
+            }
+
         private:
             int64_t _tick_ms;
             std::string _server_name;
@@ -54,6 +59,6 @@ namespace omg{
             msg_process* _msg_process;
     };
 
-#define ServerRun   server_application::get_instance()
+    #define ServerRun   server_application::get_instance()
 }
 #endif

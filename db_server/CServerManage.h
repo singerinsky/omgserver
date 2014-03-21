@@ -7,7 +7,9 @@
 #include <set>
 #include "../common/timer_manager.h"
 #include "../message/message_define.h"
+
 using namespace std;
+using namespace omg;
 
 class GameServerClient :public socket_client{
 public:

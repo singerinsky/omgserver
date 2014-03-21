@@ -376,6 +376,30 @@ server_application.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.s
 .PHONY : server_application.cpp.s
 
+singleton.o: singleton.cpp.o
+.PHONY : singleton.o
+
+# target to build an object file
+singleton.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/singleton.cpp.o
+.PHONY : singleton.cpp.o
+
+singleton.i: singleton.cpp.i
+.PHONY : singleton.i
+
+# target to preprocess a source file
+singleton.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/singleton.cpp.i
+.PHONY : singleton.cpp.i
+
+singleton.s: singleton.cpp.s
+.PHONY : singleton.s
+
+# target to generate assembly for a file
+singleton.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/singleton.cpp.s
+.PHONY : singleton.cpp.s
+
 system_util.o: system_util.cpp.o
 .PHONY : system_util.o
 
@@ -466,6 +490,9 @@ help:
 	@echo "... server_application.o"
 	@echo "... server_application.i"
 	@echo "... server_application.s"
+	@echo "... singleton.o"
+	@echo "... singleton.i"
+	@echo "... singleton.s"
 	@echo "... system_util.o"
 	@echo "... system_util.i"
 	@echo "... system_util.s"

@@ -27,7 +27,7 @@ private:
 	omg::WRQueue<CMsgEvent,MutexLock>	_msg_queue;
     int64_t _ms_before_run;
     int64_t _tick_ms;
-    timer_manager _timer_mgr;
+    timer_manager* _timer_mgr;
 private:
     template_timer<CDBMsgDispatcher,&CDBMsgDispatcher::on_timeout> _dispatcher_timer;
 };

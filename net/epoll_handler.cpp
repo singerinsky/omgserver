@@ -27,60 +27,53 @@ namespace omg {
 
     void* epoll_handler::on_run(void) {
         while(_is_final) {
+           // _timer_mgr->run_until();
             do_select();
         }
         return NULL;
     }
 
     void epoll_handler::do_select() {
-        while(1) {
-            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,_epoll_wait_ms);
-            if(fds < 0) {
-                VLOG(3)<<"epoll_wait error";
-                break;
-            }
-
-            if(fds>0)
-            {
-                VLOG(3)<<"event count "<<fds; 
-            }
-
-            if(fds == 0)
-            {
-                continue;
-            }
-
-            for(int i=0; i< fds; i++) {
-                //io_handler *handler = (io_handler*)_events[i].data.ptr;
-                int event_fd = _events[i].data.fd;
-                if((_handler[event_fd] == NULL) || event_fd < 0 || event_fd > MAX_CLIENT)
-                {
-                    return ;
-                }
-                if(_events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
-                    _handler[event_fd]->on_error();
-                    //do_close(epoll_socket);
-                }
-                else
-                {
-                    if(_events[i].events & EPOLLIN) {
-                        int rst = _handler[event_fd]->on_read();
-                        if(rst == -1)
-                        {
-                            _handler[event_fd]->on_error();
-                        }
-                    }else if(_events[i].events & EPOLLOUT) {
-                        int rst = _handler[event_fd]->on_write();
-                        if(rst == -1)
-                        {
-                            _handler[event_fd]->on_error();
-                        }
-                    }
-                }
-            } 
-
+        int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,_epoll_wait_ms);
+        if(fds < 0) {
+            VLOG(3)<<"epoll_wait error";
+            _is_final = false;
+            return;
         }
 
+        if(fds == 0)
+        {
+            return;
+        }
+
+        for(int i=0; i< fds; i++) {
+            //io_handler *handler = (io_handler*)_events[i].data.ptr;
+            int event_fd = _events[i].data.fd;
+            if((_handler[event_fd] == NULL) || event_fd < 0 || event_fd > MAX_CLIENT)
+            {
+                return ;
+            }
+            if(_events[i].events & (EPOLLRDHUP | EPOLLHUP | EPOLLERR)) {
+                _handler[event_fd]->on_error();
+                //do_close(epoll_socket);
+            }
+            else
+            {
+                if(_events[i].events & EPOLLIN) {
+                    int rst = _handler[event_fd]->on_read();
+                    if(rst == -1)
+                    {
+                        _handler[event_fd]->on_error();
+                    }
+                }else if(_events[i].events & EPOLLOUT) {
+                    int rst = _handler[event_fd]->on_write();
+                    if(rst == -1)
+                    {
+                        _handler[event_fd]->on_error();
+                    }
+                }
+            }
+        } 
     }
 
     void epoll_handler::do_close(socket_client *socket) {
