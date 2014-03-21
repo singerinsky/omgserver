@@ -56,21 +56,6 @@ int main(int argc,char** argv){
 				is_login = true;
 			}
             send_soccer_player_info(fd);
-			struct MsgAlive msg_live;
-			int msg_len = sizeof(MsgAlive);
-			char* buff = (char*)malloc(msg_len);
-			int i=0;
-			msg_live.player_id = 111;
-            msg_live.zeit = time(NULL);
-			memcpy(buff,&msg_live,msg_len);
-			VLOG(1)<<"SEND MSG...";
-		//snprintf(buff,sizeof(buff),"send message%d",i);
-//			int len = send(fd,buff,msg_len,0);
-			VLOG(1)<<"SEND MSG";
-			char buffer[1024];
-			usleep(10000*500);
-			recv(fd,buffer,1024,0);
-			VLOG(1)<<"Server time is "<<((MsgAlive*)buffer)->zeit;
 		}
 	}else{
 		VLOG(1)<<"error connect";
@@ -84,20 +69,11 @@ void send_soccer_player_info(int fd)
     cs_soccer_player_request request;
     request.body.set_player_id(1);
     int size = request.encode_size();
-    VLOG(1)<<"ENCODE SIZE "<<size;
     char* data_buff = new char[size];
     int final_size = request.encode(data_buff,size);
     if(final_size == - 1)VLOG(1)<<"error of encode ";
-    VLOG(1)<<"FINAL ENCODE SIZE"<<final_size;
     int send_size = send(fd,data_buff,final_size,0);
-
-    VLOG(1)<<"SEND SIZE "<<send_size;
-
-
-
 }
-
-
 
 
 

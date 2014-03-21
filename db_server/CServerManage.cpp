@@ -62,9 +62,14 @@ int GameServerClient::process_msg(packet_info* packet)
 
 int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
 {
-   cs_soccer_player_request request; 
-   if(request.decode(packet->data,packet->size) != packet->size)return -1;
-   LOG(INFO)<<"receive data "<<packet->size;
+    cs_soccer_player_request request; 
+    if(request.decode(packet->data,packet->size) != packet->size)return -1;
+    LOG(INFO)<<"receive data "<<packet->size;
+    cs_soccer_player_response response;
+    response.body.set_player_id(8825);
+    response.body.set_player_name("guanlei");
+    response.body.set_age(25);
+    send_packet_msg(&response);
 }
 
 

@@ -103,7 +103,6 @@
 ./net/socketclient.cpp
 ./net/game_packet.cpp
 ./net/IMsgDispatcher.h
-./net/packet_message.h
 ./net/thread.cpp
 ./net/CMakeFiles/2.8.10.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
 ./net/socketclient.h

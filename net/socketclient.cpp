@@ -141,6 +141,7 @@ int socket_client::on_write() {
     }
 
     int socket_client::on_error() {
+        LOG(ERROR)<<"error client ,to disconnect";
         return 1;        
     }
 
