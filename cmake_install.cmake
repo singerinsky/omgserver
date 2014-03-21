@@ -1,4 +1,4 @@
-# Install script for directory: /home/gl/workspace/omgserver
+# Install script for directory: /home/gl/football_server/omgserver
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/gl/workspace/omgserver/db_server/build/cmake_install.cmake")
+  INCLUDE("/home/gl/football_server/omgserver/db_server/build/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -44,7 +44,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/gl/workspace/omgserver/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/gl/football_server/omgserver/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/gl/workspace/omgserver/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/gl/football_server/omgserver/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
