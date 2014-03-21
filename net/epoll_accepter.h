@@ -34,14 +34,14 @@ public:
         _port = port;
 		init_sa_in(&_sin,_ip_str.c_str(),_port);
 		_fd = start_tcp_service(&_sin);
-		LOG_IF(INFO,_fd > 0)<<"start listening in"<<_port;
+		LOG_IF(INFO,_fd > 0)<<"start tcp listening port:"<<_port;
         //handler->add_event_handler(_fd,this);
 		return _fd;
 	}
 
     virtual int on_read()
     {
-        LOG(INFO)<<"acceptor recving....";
+        LOG(INFO)<<"new connection coming";
     	struct sockaddr_in sin;
 		socklen_t len = sizeof(sockaddr_in);
 		int nfd;

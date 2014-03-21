@@ -81,27 +81,26 @@ int main(int argc,char** argv){
 	//载入数据库的连接信息
 	load_db_config();
 
-
 	//init db msg dispatcher
 	CDBMsgDispatcher *msg_dispatcher = new CDBMsgDispatcher();
 
 	msg_dispatcher->start(false);
-	//接收游戏服务器的连接
+	//初始化epoll_reactor_
 	omg::epoll_handler *handler = new omg::epoll_handler();
-	handler->init_epoll(EPOLL_SIZE,g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port,true);
+	handler->init_epoll(EPOLL_SIZE,10,true);
+    //初始化接收器
 	db_accepter* accepter = new db_accepter(handler,(IMsgDispatcher*)msg_dispatcher);
-    std::string ips = "127.0.0.1";
-    accepter->init(ips,8979);
+    accepter->init(g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port);
 	int rst = handler->add_event_handler(accepter->get_sock_fd(),accepter);
-	handler->startListening();
 	handler->set_msg_dispatcher(msg_dispatcher);
 	handler->start(false);
+
     pthread_t thread_id = handler->get_thread_id();
 
 	//初始化数据库连接池,增加处理的线程队列
-	omg::CThreadManage::BeginPoolThread(10,20);
+	omg::CThreadManage::BeginPoolThread(5,10);
 	DBConnectionPool *conn= DBConnectionPool::GetInstance();
-	for(int i=0;i<10;i++){
+	for(int i=0;i<5;i++){
 		CDBQueryhandlerJob* job = new CDBQueryhandlerJob(conn,msg_dispatcher,i+1);
 		CDBTaskManage::GetInstance()->AddProcessThread(job);
 		omg::CThreadManage::AddJob(job);
@@ -111,5 +110,4 @@ int main(int argc,char** argv){
 	omg::CThreadManage::AddJob(world_event);
 
     pthread_join(thread_id,NULL);
-	//pthread_exit(NULL);
 }

@@ -25,8 +25,7 @@ namespace omg{
                 _is_final = true;
 			}
 			virtual ~epoll_handler();
-			bool init_epoll(int epoll_size,const char* ip,int port,bool use_et_mod=false);
-			void startListening();
+			bool init_epoll(int epoll_size,int wait_ms,bool use_et_mod=false);
 			int  accept_conn(socket_client* s);
 			void send_data(socket_client *socket,const char* msg,int msg_len);
 			void recv_data(socket_client* socket);
@@ -50,6 +49,7 @@ namespace omg{
 
 		private :
 			int _epoll_create;
+            int _epoll_wait_ms;
 			IMsgDispatcher* _msg_handler;
 			epoll_event _events[EPOLL_SIZE];
 			int	_port;
@@ -57,6 +57,7 @@ namespace omg{
             int 	_epoll_mod;
             bool    _is_final; 
             io_handler*  _handler[MAX_CLIENT];
+
 	};
 }
 

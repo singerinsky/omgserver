@@ -8,12 +8,11 @@ namespace omg {
 
     }
 
-    bool epoll_handler::init_epoll(int epoll_size, const char* ip, int port,bool use_et) {
+    bool epoll_handler::init_epoll(int epoll_size, int wait_ms,bool use_et) {
         assert(epoll_size > 0);
         memset(_handler,0,sizeof(_handler));
         _epoll_create = epoll_create(epoll_size);
-        _port = port;
-        this->_ip_buffer = ip;
+        _epoll_wait_ms = wait_ms;
         assert(_epoll_create > 0);
         if(use_et)
         {
@@ -26,14 +25,6 @@ namespace omg {
         return true;
     }
 
-    void epoll_handler::startListening() {
-        
-    }
-
-    int epoll_handler::accept_conn(socket_client* listen_socket) {
-                return 1;
-    }
-
     void* epoll_handler::on_run(void) {
         while(_is_final) {
             do_select();
@@ -43,7 +34,7 @@ namespace omg {
 
     void epoll_handler::do_select() {
         while(1) {
-            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,20);
+            int fds = epoll_wait(_epoll_create,_events,EPOLL_SIZE,_epoll_wait_ms);
             if(fds < 0) {
                 VLOG(3)<<"epoll_wait error";
                 break;
@@ -51,7 +42,7 @@ namespace omg {
 
             if(fds>0)
             {
-                VLOG(3)<<"FDS count "<<fds; 
+                VLOG(3)<<"event count "<<fds; 
             }
 
             if(fds == 0)
