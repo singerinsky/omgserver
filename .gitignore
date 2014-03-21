@@ -1,7 +1,11 @@
 # Compiled Object files
+#*.out
 *.slo
 *.lo
 *.o
+#*.files
+#*.list
+*.vim
 
 # Compiled Dynamic libraries
 *.so
@@ -19,3 +23,4 @@ net/CMakeFiles/
 CMakeCache.txt
 net/CMakeCache.txt
 cscope.*
+#Debug
