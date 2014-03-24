@@ -13,7 +13,7 @@ namespace omg{
         public:
             server_application()
             {
-                _tick_ms = get_tsc_us()/1000; 
+                _tick_ms = get_tsc_us()*1000; 
                 _timer_mgr.init(get_run_ms(),14);
             }
 

@@ -131,23 +131,18 @@ default:
 }
 } else {
     //	VLOG(1)<<"null msg .....";
-/*    if((get_run_ms() - _ms_before_run) < 20)
-    {
-        do_wait_ms(get_run_ms() - _ms_before_run);  
-    }
-*/
+    
+        do_wait_ms(200);  
+
 }
 }
 
 void* CDBMsgDispatcher::on_run() {
     on_timeout(_timer_mgr);
+
     while (1) {
-//       int64_t now_ms = _ms_before_run = get_run_ms();
-//        _timer_mgr.run_until(now_ms);
         ServerRun->run_util_now();
-        LOG(INFO)<<"bef.....";
         dispatch_msg();
-        LOG(INFO)<<"dis.....";
     }
     return NULL;
 }
@@ -161,5 +156,4 @@ void CDBMsgDispatcher::on_timeout(timer_manager* timer)
     {
         VLOG(1)<<"error add timer"<<ret;
     }
-    LOG(INFO)<<"on db time out ";
 }
