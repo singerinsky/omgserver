@@ -7,6 +7,7 @@
 #include "IMsgDispatcher.h"
 #include "define.h"
 #include "IConnection.h"
+#include "../common/server_application.h"
 
 const int EPOLL_SIZE = 128*1024;
 const int MAX_CLIENT = 10240;

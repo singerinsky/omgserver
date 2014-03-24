@@ -28,6 +28,7 @@ namespace omg {
     void* epoll_handler::on_run(void) {
         while(_is_final) {
            // _timer_mgr->run_until();
+            ServerRun->run_util_now();
             do_select();
         }
         return NULL;

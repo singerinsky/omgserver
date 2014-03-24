@@ -141,7 +141,7 @@ void* CDBMsgDispatcher::on_run() {
     on_timeout(_timer_mgr);
 
     while (1) {
-        ServerRun->run_util_now();
+       // ServerRun->run_util_now();
         dispatch_msg();
     }
     return NULL;
@@ -156,4 +156,6 @@ void CDBMsgDispatcher::on_timeout(timer_manager* timer)
     {
         VLOG(1)<<"error add timer"<<ret;
     }
+
+    LOG(INFO)<<"on msg dispatcher time out";
 }
