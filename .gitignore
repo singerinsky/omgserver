@@ -5,7 +5,6 @@
 *.o
 *.files
 *.list
-*.vim
 
 # Compiled Dynamic libraries
 *.so
