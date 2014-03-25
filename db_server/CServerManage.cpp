@@ -4,8 +4,19 @@ CServerManage* CServerManage::_m_instance;
 
 void GameServerClient::on_timeout(timer_manager* timer_mgr)
 {
-    LOG(INFO)<<"data client check time out in 5's ,should disconnect.";
-    fini();
+    if(_connection_status == WAIT_LOGIN || _connection_status == HEART_BEAT_TIME_OUT)
+    {
+        LOG(INFO)<<"data client check time out in 5's ,should disconnect.";
+        fini();
+    }
+    else
+    {
+        _timer.set_expired(ServerRun->get_run_ms() + 5000);
+        if((_timer_mgr->add_timer(&_timer)) != 0 )
+        {
+            LOG(INFO)<<"add timer success"; 
+        }
+    }
 }
 
 void GameServerClient::reset()
@@ -62,9 +73,10 @@ int GameServerClient::process_msg(packet_info* packet)
 
 int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
 {
-   cs_soccer_player_request request; 
-   if(request.decode(packet->data,packet->size) != packet->size)return -1;
-   LOG(INFO)<<"Message get soccer player info:size  "<<packet->size;
+    cs_soccer_player_request request; 
+    if(request.decode(packet->data,packet->size) != packet->size)return -1;
+    LOG(INFO)<<"Message get soccer player info:size  "<<packet->size;
+    _connection_status = ALREADY_LOGIN;
 }
 
 

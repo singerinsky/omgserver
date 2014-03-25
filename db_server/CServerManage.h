@@ -11,6 +11,13 @@
 using namespace std;
 using namespace omg;
 
+enum
+{
+    WAIT_LOGIN = 1,
+    ALREADY_LOGIN = 2,
+    HEART_BEAT_TIME_OUT =3
+};
+
 class GameServerClient :public socket_client{
 public:
 	GameServerClient(int fd,
@@ -22,6 +29,7 @@ public:
         _timer.set_owner(this);        
         _timer.set_expired(ServerRun->get_run_ms()+5000);
         _timer_mgr->add_timer(&_timer);
+        _connection_status = WAIT_LOGIN;
 	}
 
 	~GameServerClient(){
@@ -46,6 +54,8 @@ public:
 private:
     template_timer<GameServerClient,&GameServerClient::on_timeout> _timer;
     timer_manager* _timer_mgr;
+private:
+    int _connection_status;
 };
 
 class CServerManage {
