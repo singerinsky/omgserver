@@ -2,6 +2,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/common.dir/CThreadManage.cpp.o"
   "CMakeFiles/common.dir/IJob.cpp.o"
   "CMakeFiles/common.dir/MD5.cpp.o"
+  "CMakeFiles/common.dir/singleton.cpp.o"
   "CMakeFiles/common.dir/CPoolThread.cpp.o"
   "CMakeFiles/common.dir/CThread.cpp.o"
   "CMakeFiles/common.dir/timer_manager.cpp.o"

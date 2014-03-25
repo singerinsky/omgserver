@@ -223,6 +223,8 @@ define.h
 /home/gl/workspace/omgserver/net/define.h
 IConnection.h
 /home/gl/workspace/omgserver/net/IConnection.h
+../common/server_application.h
+/home/gl/workspace/omgserver/net/../common/server_application.h
 
 /home/gl/workspace/omgserver/net/game_packet.cpp
 game_packet.h

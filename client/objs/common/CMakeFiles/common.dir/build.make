@@ -118,9 +118,32 @@ objs/common/CMakeFiles/common.dir/MD5.cpp.o.provides: objs/common/CMakeFiles/com
 
 objs/common/CMakeFiles/common.dir/MD5.cpp.o.provides.build: objs/common/CMakeFiles/common.dir/MD5.cpp.o
 
+objs/common/CMakeFiles/common.dir/singleton.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
+objs/common/CMakeFiles/common.dir/singleton.cpp.o: /home/gl/workspace/omgserver/common/singleton.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/singleton.cpp.o"
+	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/singleton.cpp.o -c /home/gl/workspace/omgserver/common/singleton.cpp
+
+objs/common/CMakeFiles/common.dir/singleton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common.dir/singleton.cpp.i"
+	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/workspace/omgserver/common/singleton.cpp > CMakeFiles/common.dir/singleton.cpp.i
+
+objs/common/CMakeFiles/common.dir/singleton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common.dir/singleton.cpp.s"
+	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/workspace/omgserver/common/singleton.cpp -o CMakeFiles/common.dir/singleton.cpp.s
+
+objs/common/CMakeFiles/common.dir/singleton.cpp.o.requires:
+.PHONY : objs/common/CMakeFiles/common.dir/singleton.cpp.o.requires
+
+objs/common/CMakeFiles/common.dir/singleton.cpp.o.provides: objs/common/CMakeFiles/common.dir/singleton.cpp.o.requires
+	$(MAKE) -f objs/common/CMakeFiles/common.dir/build.make objs/common/CMakeFiles/common.dir/singleton.cpp.o.provides.build
+.PHONY : objs/common/CMakeFiles/common.dir/singleton.cpp.o.provides
+
+objs/common/CMakeFiles/common.dir/singleton.cpp.o.provides.build: objs/common/CMakeFiles/common.dir/singleton.cpp.o
+
 objs/common/CMakeFiles/common.dir/CPoolThread.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/CPoolThread.cpp.o: /home/gl/workspace/omgserver/common/CPoolThread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/CPoolThread.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/CPoolThread.cpp.o -c /home/gl/workspace/omgserver/common/CPoolThread.cpp
 
@@ -143,7 +166,7 @@ objs/common/CMakeFiles/common.dir/CPoolThread.cpp.o.provides.build: objs/common/
 
 objs/common/CMakeFiles/common.dir/CThread.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/CThread.cpp.o: /home/gl/workspace/omgserver/common/CThread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/CThread.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/CThread.cpp.o -c /home/gl/workspace/omgserver/common/CThread.cpp
 
@@ -166,7 +189,7 @@ objs/common/CMakeFiles/common.dir/CThread.cpp.o.provides.build: objs/common/CMak
 
 objs/common/CMakeFiles/common.dir/timer_manager.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/timer_manager.cpp.o: /home/gl/workspace/omgserver/common/timer_manager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/timer_manager.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/timer_manager.cpp.o -c /home/gl/workspace/omgserver/common/timer_manager.cpp
 
@@ -189,7 +212,7 @@ objs/common/CMakeFiles/common.dir/timer_manager.cpp.o.provides.build: objs/commo
 
 objs/common/CMakeFiles/common.dir/CEventThread.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/CEventThread.cpp.o: /home/gl/workspace/omgserver/common/CEventThread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/CEventThread.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/CEventThread.cpp.o -c /home/gl/workspace/omgserver/common/CEventThread.cpp
 
@@ -212,7 +235,7 @@ objs/common/CMakeFiles/common.dir/CEventThread.cpp.o.provides.build: objs/common
 
 objs/common/CMakeFiles/common.dir/server_application.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/server_application.cpp.o: /home/gl/workspace/omgserver/common/server_application.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/server_application.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/server_application.cpp.o -c /home/gl/workspace/omgserver/common/server_application.cpp
 
@@ -235,7 +258,7 @@ objs/common/CMakeFiles/common.dir/server_application.cpp.o.provides.build: objs/
 
 objs/common/CMakeFiles/common.dir/system_util.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/system_util.cpp.o: /home/gl/workspace/omgserver/common/system_util.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/system_util.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/system_util.cpp.o -c /home/gl/workspace/omgserver/common/system_util.cpp
 
@@ -258,7 +281,7 @@ objs/common/CMakeFiles/common.dir/system_util.cpp.o.provides.build: objs/common/
 
 objs/common/CMakeFiles/common.dir/mtrand.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/mtrand.cpp.o: /home/gl/workspace/omgserver/common/mtrand.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/mtrand.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/mtrand.cpp.o -c /home/gl/workspace/omgserver/common/mtrand.cpp
 
@@ -281,7 +304,7 @@ objs/common/CMakeFiles/common.dir/mtrand.cpp.o.provides.build: objs/common/CMake
 
 objs/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o: /home/gl/workspace/omgserver/common/CTimerEventHandler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/CTimerEventHandler.cpp.o -c /home/gl/workspace/omgserver/common/CTimerEventHandler.cpp
 
@@ -304,7 +327,7 @@ objs/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o.provides.build: objs/
 
 objs/common/CMakeFiles/common.dir/circular_buffer.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/circular_buffer.cpp.o: /home/gl/workspace/omgserver/common/circular_buffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/circular_buffer.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/circular_buffer.cpp.o -c /home/gl/workspace/omgserver/common/circular_buffer.cpp
 
@@ -327,7 +350,7 @@ objs/common/CMakeFiles/common.dir/circular_buffer.cpp.o.provides.build: objs/com
 
 objs/common/CMakeFiles/common.dir/JobDequeue.cpp.o: objs/common/CMakeFiles/common.dir/flags.make
 objs/common/CMakeFiles/common.dir/JobDequeue.cpp.o: /home/gl/workspace/omgserver/common/JobDequeue.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/workspace/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/common/CMakeFiles/common.dir/JobDequeue.cpp.o"
 	cd /home/gl/workspace/omgserver/client/objs/common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/common.dir/JobDequeue.cpp.o -c /home/gl/workspace/omgserver/common/JobDequeue.cpp
 
@@ -353,6 +376,7 @@ common_OBJECTS = \
 "CMakeFiles/common.dir/CThreadManage.cpp.o" \
 "CMakeFiles/common.dir/IJob.cpp.o" \
 "CMakeFiles/common.dir/MD5.cpp.o" \
+"CMakeFiles/common.dir/singleton.cpp.o" \
 "CMakeFiles/common.dir/CPoolThread.cpp.o" \
 "CMakeFiles/common.dir/CThread.cpp.o" \
 "CMakeFiles/common.dir/timer_manager.cpp.o" \
@@ -370,6 +394,7 @@ common_EXTERNAL_OBJECTS =
 objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/CThreadManage.cpp.o
 objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/IJob.cpp.o
 objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/MD5.cpp.o
+objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/singleton.cpp.o
 objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/CPoolThread.cpp.o
 objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/CThread.cpp.o
 objs/game_lib/libcommon.a: objs/common/CMakeFiles/common.dir/timer_manager.cpp.o
@@ -393,6 +418,7 @@ objs/common/CMakeFiles/common.dir/build: objs/game_lib/libcommon.a
 objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/CThreadManage.cpp.o.requires
 objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/IJob.cpp.o.requires
 objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/MD5.cpp.o.requires
+objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/singleton.cpp.o.requires
 objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/CPoolThread.cpp.o.requires
 objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/CThread.cpp.o.requires
 objs/common/CMakeFiles/common.dir/requires: objs/common/CMakeFiles/common.dir/timer_manager.cpp.o.requires

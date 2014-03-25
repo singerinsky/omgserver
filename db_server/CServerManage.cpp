@@ -4,7 +4,8 @@ CServerManage* CServerManage::_m_instance;
 
 void GameServerClient::on_timeout(timer_manager* timer_mgr)
 {
-    LOG(INFO)<<"check time out";
+    LOG(INFO)<<"data client check time out in 5's ,should disconnect.";
+    fini();
 }
 
 void GameServerClient::reset()
@@ -18,7 +19,6 @@ int GameServerClient::on_error()
 {
     LOG(INFO)<<"gameserver client disconnet";
     reset();
-
     fini();
     return 1;
 }
@@ -64,7 +64,7 @@ int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
 {
    cs_soccer_player_request request; 
    if(request.decode(packet->data,packet->size) != packet->size)return -1;
-   LOG(INFO)<<"receive data "<<packet->size;
+   LOG(INFO)<<"Message get soccer player info:size  "<<packet->size;
 }
 
 

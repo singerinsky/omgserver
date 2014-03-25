@@ -15,6 +15,7 @@
 
 using namespace omg;
 
+class CServerClient;
 class db_accepter: public epoll_accepter {
 public:
 	db_accepter(omg::epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer)
@@ -27,6 +28,8 @@ public:
     virtual int on_error(){
         return 1;
     }
+private:
+    std::map<int,CServerClient*> _client_map;
 };
 
 #endif /* DBACCEPTER_H_ */

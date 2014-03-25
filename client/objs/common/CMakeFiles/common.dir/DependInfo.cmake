@@ -15,6 +15,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/gl/workspace/omgserver/common/circular_buffer.cpp" "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/circular_buffer.cpp.o"
   "/home/gl/workspace/omgserver/common/mtrand.cpp" "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/mtrand.cpp.o"
   "/home/gl/workspace/omgserver/common/server_application.cpp" "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/server_application.cpp.o"
+  "/home/gl/workspace/omgserver/common/singleton.cpp" "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/singleton.cpp.o"
   "/home/gl/workspace/omgserver/common/system_util.cpp" "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/system_util.cpp.o"
   "/home/gl/workspace/omgserver/common/timer_manager.cpp" "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/timer_manager.cpp.o"
   )

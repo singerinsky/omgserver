@@ -50,21 +50,6 @@ void CDBMsgDispatcher::dispatch_msg() {
                 {
                     MsgMatchTeamInfo* msg = (MsgMatchTeamInfo*) event->_msg_base;
                     GameServerClient* server = NULL;
-                    /*
-#ifdef _DEBUG_SERVER_INFO
-VLOG(1)<<"Debug server info...............op1 uid is "<<msg->op1.uid;
-
-if(msg->op1.uid == 28) {
-std::string ip = "192.168.91.57";
-server = CServerManage::GetInstance()->AddMatchToServerByIp(ip,msg->mid);
-} else {
-server = CServerManage::GetInstance()->AddNewMatch(msg->mid);
-}
-#else
-server = CServerManage::GetInstance()->AddNewMatch(msg->mid);
-#endif
-if(server == NULL) {
-*/
                     server = CServerManage::GetInstance()->AddNewMatch(msg->mid);
                     //			}
                     if(server != NULL) {
@@ -73,75 +58,74 @@ if(server == NULL) {
                     } else {
                         VLOG(1)<<"NO SUCH GAME SERVE R";
                     }
-delete msg;
-event->_msg_base = NULL;
-delete event;
-}break;
-case MSG_TYPE_LOGIN_OUT://断开
-{
-    GameServerClient* client = CServerManage::GetInstance()->GetGameServerBySocketFd(event->_client_id._fd);
-    int server_index = client->index;
-    CServerManage::GetInstance()->RemoveServer(server_index);
-    VLOG(1)<<"游戏服务器"<<event->_client_id._fd<<"断开!!";
-    delete event->_msg_base;
-    event->_msg_base = NULL;
-    delete event;
-}
-break;
-case MSG_TYPE_MATCH_MOVE://通知比赛开始
-{
-    int mid = ((MsgRunMatch*)event->_msg_base)->mid;
-    GameServerClient* server = CServerManage::GetInstance()->GetMatchRunServer(mid);
-    if(server!= NULL) {
-        server->send_msg((const char*)event->_msg_base,event->_msg_base->msg_size);
-    }
-}
-break;
-case MSG_TYPE_GTODB_SERVER_MATCH_END://比赛结束写回数据
-{
-    CDBTaskManage::GetInstance()->AddTaskEvent(event);
-}
-break;
-case MSG_TYPE_GTODB_PLAYER_UPDATE://比赛球员数据写回
-{
-    //MsgGameToDbServerPlayerUpdate* msg = (MsgGameToDbServerPlayerUpdate*)event->_msg_base;
-    CDBTaskManage::GetInstance()->AddTaskEvent(event);
-}
-break;
-case MSG_TYPE_GTODB_MATCH_EVENT_WB://比赛事件
-{
-    CDBTaskManage::GetInstance()->AddTaskEvent(event);
-}
-break;
-case MSG_TYPE_GTODB_START_ARENA://开始挑战成功
-{
-    CDBTaskManage::GetInstance()->AddTaskEvent(event);
-}
-break;
-case MSG_TYPE_UPDATE_GSERVER://更新游戏服务器状态到数据库服务器
-{
-    CDBTaskManage::GetInstance()->AddTaskEvent(event);
-}
-break;
-default:
-{
-    LOG(ERROR)<<"unknown msg....";
-}
+                    delete msg;
+                    event->_msg_base = NULL;
+                    delete event;
+        }break;
+        case MSG_TYPE_LOGIN_OUT://断开
+        {
+            GameServerClient* client = CServerManage::GetInstance()->GetGameServerBySocketFd(event->_client_id._fd);
+            int server_index = client->index;
+            CServerManage::GetInstance()->RemoveServer(server_index);
+            VLOG(1)<<"游戏服务器"<<event->_client_id._fd<<"断开!!";
+            delete event->_msg_base;
+            event->_msg_base = NULL;
+            delete event;
+        }
+        break;
+        case MSG_TYPE_MATCH_MOVE://通知比赛开始
+        {
+            int mid = ((MsgRunMatch*)event->_msg_base)->mid;
+            GameServerClient* server = CServerManage::GetInstance()->GetMatchRunServer(mid);
+            if(server!= NULL) {
+                server->send_msg((const char*)event->_msg_base,event->_msg_base->msg_size);
+            }
+        }
+        break;
+        case MSG_TYPE_GTODB_SERVER_MATCH_END://比赛结束写回数据
+        {
+            CDBTaskManage::GetInstance()->AddTaskEvent(event);
+        }
+        break;
+        case MSG_TYPE_GTODB_PLAYER_UPDATE://比赛球员数据写回
+        {
+            //MsgGameToDbServerPlayerUpdate* msg = (MsgGameToDbServerPlayerUpdate*)event->_msg_base;
+            CDBTaskManage::GetInstance()->AddTaskEvent(event);
+        }
+        break;
+        case MSG_TYPE_GTODB_MATCH_EVENT_WB://比赛事件
+        {
+            CDBTaskManage::GetInstance()->AddTaskEvent(event);
+        }
+        break;
+        case MSG_TYPE_GTODB_START_ARENA://开始挑战成功
+        {
+            CDBTaskManage::GetInstance()->AddTaskEvent(event);
+        }
+        break;
+        case MSG_TYPE_UPDATE_GSERVER://更新游戏服务器状态到数据库服务器
+        {
+            CDBTaskManage::GetInstance()->AddTaskEvent(event);
+        }
+        break;
+        default:
+        {
+            LOG(ERROR)<<"unknown msg....";
+        }
 
-}
+    }
 } else {
     //	VLOG(1)<<"null msg .....";
-    
-        do_wait_ms(200);  
+    do_wait_ms(200);  
 
 }
 }
 
 void* CDBMsgDispatcher::on_run() {
-    on_timeout(_timer_mgr);
+//    on_timeout(_timer_mgr);
 
     while (1) {
-       // ServerRun->run_util_now();
+        // ServerRun->run_util_now();
         dispatch_msg();
     }
     return NULL;
