@@ -82,10 +82,6 @@ tinystr.h
 
 /home/gl/workspace/omgserver/net/../common/../net/IMsgDispatcher.h
 
-/home/gl/workspace/omgserver/net/../common/aliased_buf.h
-streambuf
--
-
 /home/gl/workspace/omgserver/net/../common/head.h
 stdio.h
 -
@@ -225,20 +221,6 @@ IConnection.h
 /home/gl/workspace/omgserver/net/IConnection.h
 ../common/server_application.h
 /home/gl/workspace/omgserver/net/../common/server_application.h
-
-/home/gl/workspace/omgserver/net/game_packet.cpp
-game_packet.h
-/home/gl/workspace/omgserver/net/game_packet.h
-
-/home/gl/workspace/omgserver/net/game_packet.h
-sstream
--
-exception
--
-packet.h
-/home/gl/workspace/omgserver/net/packet.h
-../common/aliased_buf.h
-/home/gl/workspace/omgserver/net/../common/aliased_buf.h
 
 /home/gl/workspace/omgserver/net/msg.h
 ../common/head.h

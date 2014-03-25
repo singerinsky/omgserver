@@ -65,6 +65,8 @@ int GameServerClient::process_msg(packet_info* packet)
         case  CS_MSG_SOCCER_PLAYER_REQ:
             do_get_soccer_player_info(packet);
             //process_ret = _packet.decode(packet->data,packet->size);
+        default:
+            LOG(ERROR)<<"unknown message ";
 
     }
     return 1;

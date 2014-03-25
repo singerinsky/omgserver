@@ -68,7 +68,7 @@ int main(int argc,char** argv){
 //			int len = send(fd,buff,msg_len,0);
 			VLOG(1)<<"SEND MSG";
 			char buffer[1024];
-			usleep(10000*500);
+			usleep(5000);
 			recv(fd,buffer,1024,0);
 			VLOG(1)<<"Server time is "<<((MsgAlive*)buffer)->zeit;
 		}
