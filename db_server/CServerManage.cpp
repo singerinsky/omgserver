@@ -79,6 +79,11 @@ int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
     if(request.decode(packet->data,packet->size) != packet->size)return -1;
     LOG(INFO)<<"Message get soccer player info:size  "<<packet->size;
     _connection_status = ALREADY_LOGIN;
+    cs_soccer_player_response response;
+    response.body.set_player_id(19);
+    response.body.set_player_name("guanlei");
+    response.body.set_age(29);
+    send_packet_msg(&response);
 }
 
 

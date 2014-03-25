@@ -119,9 +119,6 @@ objs/common/CMakeFiles/common.dir/server_application.cpp.o: /home/gl/workspace/o
 objs/common/CMakeFiles/common.dir/server_application.cpp.o: /home/gl/workspace/omgserver/common/time_util.h
 objs/common/CMakeFiles/common.dir/server_application.cpp.o: /home/gl/workspace/omgserver/common/timer_manager.h
 
-objs/common/CMakeFiles/common.dir/singleton.cpp.o: /home/gl/workspace/omgserver/common/singleton.cpp
-objs/common/CMakeFiles/common.dir/singleton.cpp.o: /home/gl/workspace/omgserver/common/singleton.h
-
 objs/common/CMakeFiles/common.dir/system_util.cpp.o: ../include/gflags/gflags.h
 objs/common/CMakeFiles/common.dir/system_util.cpp.o: ../include/glog/log_severity.h
 objs/common/CMakeFiles/common.dir/system_util.cpp.o: ../include/glog/logging.h

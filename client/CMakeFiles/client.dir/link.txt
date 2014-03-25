@@ -1,1 +1,1 @@
-/usr/bin/c++    -O0 -Wall -g -ggdb    CMakeFiles/client.dir/main.cpp.o  -o client  -L/usr/local/lib  -L../lib -rdynamic objs/game_lib/libnet.a objs/game_lib/libcommon.a -lpthread -lgflags -lglog -Wl,-Bstatic -ltinyxml -lprotobuf -Wl,-Bdynamic -Wl,-rpath,/usr/local/lib:../lib 
+/usr/bin/c++    -O0 -Wall -g -ggdb    CMakeFiles/client.dir/main.cpp.o  -o client -rdynamic -L/usr/local/lib -L../lib objs/game_lib/libnet.a objs/game_lib/libcommon.a -lpthread -lgflags -lglog -Wl,-Bstatic -ltinyxml -lprotobuf -Wl,-Bdynamic -Wl,-rpath,/usr/local/lib:../lib 

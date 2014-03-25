@@ -10,6 +10,7 @@ enum MSG_ACTION_TYPE
 enum MessageType
 {
     MSG_SOCCER_PLAYER_INFO = 1;
+    MSG_HEART_BEAT          = 2;//心跳
 }
 
 message SoccerPlayerInfoRequest
@@ -22,4 +23,14 @@ message SoccerPlayerInfoResponse
     required int32 player_id = 1;
     required string player_name = 2;
     required int32 age = 3;
+}
+
+message ClientHeartBeatRequest
+{
+    required int32 client_time = 1;
+}
+
+message ClientHeartBeatResponse
+{
+    required int32 server_time = 1;
 }
