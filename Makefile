@@ -99,6 +99,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named gate_server
+
+# Build rule for target.
+gate_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gate_server
+.PHONY : gate_server
+
+# fast build rule for target.
+gate_server/fast:
+	$(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
+.PHONY : gate_server/fast
+
+#=============================================================================
 # Target rules for targets named db_server
 
 # Build rule for target.
@@ -145,6 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... gate_server"
 	@echo "... db_server"
 	@echo "... net"
 	@echo "... common"

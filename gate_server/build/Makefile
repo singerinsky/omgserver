@@ -304,6 +304,30 @@ __/SSocketListenAdapter.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.s
 .PHONY : __/SSocketListenAdapter.cpp.s
 
+__/gate_application.o: __/gate_application.cpp.o
+.PHONY : __/gate_application.o
+
+# target to build an object file
+__/gate_application.cpp.o:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.o
+.PHONY : __/gate_application.cpp.o
+
+__/gate_application.i: __/gate_application.cpp.i
+.PHONY : __/gate_application.i
+
+# target to preprocess a source file
+__/gate_application.cpp.i:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.i
+.PHONY : __/gate_application.cpp.i
+
+__/gate_application.s: __/gate_application.cpp.s
+.PHONY : __/gate_application.s
+
+# target to generate assembly for a file
+__/gate_application.cpp.s:
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.s
+.PHONY : __/gate_application.cpp.s
+
 __/main.o: __/main.cpp.o
 .PHONY : __/main.o
 
@@ -361,6 +385,9 @@ help:
 	@echo "... __/SSocketListenAdapter.o"
 	@echo "... __/SSocketListenAdapter.i"
 	@echo "... __/SSocketListenAdapter.s"
+	@echo "... __/gate_application.o"
+	@echo "... __/gate_application.i"
+	@echo "... __/gate_application.s"
 	@echo "... __/main.o"
 	@echo "... __/main.i"
 	@echo "... __/main.s"

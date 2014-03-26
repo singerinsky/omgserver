@@ -103,11 +103,6 @@ namespace omg {
         ::send(socket->get_socket_fd(),msg,msg_len,0);
     }
 
-    void epoll_handler::on_connection(int fd,sockaddr* addr)
-    {
-
-    }
-
     int epoll_handler::add_event_handler(int fd,io_handler* handler)
     {
         epoll_event event = {0};

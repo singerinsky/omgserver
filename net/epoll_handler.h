@@ -42,7 +42,6 @@ namespace omg{
                 this->_msg_handler = dispatcher;
             }
 
-            virtual void on_connection(int fd,sockaddr* addr);
         protected:
             void do_select();
 

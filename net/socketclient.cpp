@@ -88,23 +88,10 @@ int socket_client::on_read() {
                 packet_info packet;
                 msg_len = check_packet_info(_recv_buffer.data(),_recv_buffer.size(),&packet);
                 if(msg_len < 0 )return msg_len;//error of message decode
-                int rst = process_msg(&packet); 
+                process_msg(&packet); 
 #endif
-			/*	char* msg_data = new char[msg_len];
-				memcpy(msg_data, _recv_buffer.data(), msg_len);
-				MsgBase* msg_base = (MsgBase*) msg_data;
-				CMsgEvent* event = new CMsgEvent(msg_base->msg_type, _conn_id,
-						msg_base);
-                        */
 				_recv_buffer.erase(_recv_buffer.begin(),
 						_recv_buffer.begin() + msg_len);
-                /*
-			    bool add_rst = _msg_dispatcher->add_msg_to_queue(event);
-				if (add_rst == false) {
-					delete[] msg_data;
-					return -1;
-				}
-                */
                 return 1;
 			}
 		}
