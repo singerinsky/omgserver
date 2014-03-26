@@ -112,126 +112,6 @@ gate_server/fast:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
 .PHONY : gate_server/fast
 
-__/CAllServerManage.o: __/CAllServerManage.cpp.o
-.PHONY : __/CAllServerManage.o
-
-# target to build an object file
-__/CAllServerManage.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.o
-.PHONY : __/CAllServerManage.cpp.o
-
-__/CAllServerManage.i: __/CAllServerManage.cpp.i
-.PHONY : __/CAllServerManage.i
-
-# target to preprocess a source file
-__/CAllServerManage.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.i
-.PHONY : __/CAllServerManage.cpp.i
-
-__/CAllServerManage.s: __/CAllServerManage.cpp.s
-.PHONY : __/CAllServerManage.s
-
-# target to generate assembly for a file
-__/CAllServerManage.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CAllServerManage.cpp.s
-.PHONY : __/CAllServerManage.cpp.s
-
-__/CArenaManage.o: __/CArenaManage.cpp.o
-.PHONY : __/CArenaManage.o
-
-# target to build an object file
-__/CArenaManage.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.o
-.PHONY : __/CArenaManage.cpp.o
-
-__/CArenaManage.i: __/CArenaManage.cpp.i
-.PHONY : __/CArenaManage.i
-
-# target to preprocess a source file
-__/CArenaManage.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.i
-.PHONY : __/CArenaManage.cpp.i
-
-__/CArenaManage.s: __/CArenaManage.cpp.s
-.PHONY : __/CArenaManage.s
-
-# target to generate assembly for a file
-__/CArenaManage.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CArenaManage.cpp.s
-.PHONY : __/CArenaManage.cpp.s
-
-__/CGameMsgRecv.o: __/CGameMsgRecv.cpp.o
-.PHONY : __/CGameMsgRecv.o
-
-# target to build an object file
-__/CGameMsgRecv.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.o
-.PHONY : __/CGameMsgRecv.cpp.o
-
-__/CGameMsgRecv.i: __/CGameMsgRecv.cpp.i
-.PHONY : __/CGameMsgRecv.i
-
-# target to preprocess a source file
-__/CGameMsgRecv.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.i
-.PHONY : __/CGameMsgRecv.cpp.i
-
-__/CGameMsgRecv.s: __/CGameMsgRecv.cpp.s
-.PHONY : __/CGameMsgRecv.s
-
-# target to generate assembly for a file
-__/CGameMsgRecv.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGameMsgRecv.cpp.s
-.PHONY : __/CGameMsgRecv.cpp.s
-
-__/CGateTimerEventHandler.o: __/CGateTimerEventHandler.cpp.o
-.PHONY : __/CGateTimerEventHandler.o
-
-# target to build an object file
-__/CGateTimerEventHandler.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.o
-.PHONY : __/CGateTimerEventHandler.cpp.o
-
-__/CGateTimerEventHandler.i: __/CGateTimerEventHandler.cpp.i
-.PHONY : __/CGateTimerEventHandler.i
-
-# target to preprocess a source file
-__/CGateTimerEventHandler.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.i
-.PHONY : __/CGateTimerEventHandler.cpp.i
-
-__/CGateTimerEventHandler.s: __/CGateTimerEventHandler.cpp.s
-.PHONY : __/CGateTimerEventHandler.s
-
-# target to generate assembly for a file
-__/CGateTimerEventHandler.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CGateTimerEventHandler.cpp.s
-.PHONY : __/CGateTimerEventHandler.cpp.s
-
-__/CMsgDispatcher.o: __/CMsgDispatcher.cpp.o
-.PHONY : __/CMsgDispatcher.o
-
-# target to build an object file
-__/CMsgDispatcher.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.o
-.PHONY : __/CMsgDispatcher.cpp.o
-
-__/CMsgDispatcher.i: __/CMsgDispatcher.cpp.i
-.PHONY : __/CMsgDispatcher.i
-
-# target to preprocess a source file
-__/CMsgDispatcher.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.i
-.PHONY : __/CMsgDispatcher.cpp.i
-
-__/CMsgDispatcher.s: __/CMsgDispatcher.cpp.s
-.PHONY : __/CMsgDispatcher.s
-
-# target to generate assembly for a file
-__/CMsgDispatcher.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/CMsgDispatcher.cpp.s
-.PHONY : __/CMsgDispatcher.cpp.s
-
 __/GateUserManager.o: __/GateUserManager.cpp.o
 .PHONY : __/GateUserManager.o
 
@@ -280,30 +160,6 @@ __/GateWayPlayer.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.s
 .PHONY : __/GateWayPlayer.cpp.s
 
-__/SSocketListenAdapter.o: __/SSocketListenAdapter.cpp.o
-.PHONY : __/SSocketListenAdapter.o
-
-# target to build an object file
-__/SSocketListenAdapter.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.o
-.PHONY : __/SSocketListenAdapter.cpp.o
-
-__/SSocketListenAdapter.i: __/SSocketListenAdapter.cpp.i
-.PHONY : __/SSocketListenAdapter.i
-
-# target to preprocess a source file
-__/SSocketListenAdapter.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.i
-.PHONY : __/SSocketListenAdapter.cpp.i
-
-__/SSocketListenAdapter.s: __/SSocketListenAdapter.cpp.s
-.PHONY : __/SSocketListenAdapter.s
-
-# target to generate assembly for a file
-__/SSocketListenAdapter.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/SSocketListenAdapter.cpp.s
-.PHONY : __/SSocketListenAdapter.cpp.s
-
 __/gate_application.o: __/gate_application.cpp.o
 .PHONY : __/gate_application.o
 
@@ -328,30 +184,6 @@ __/gate_application.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.s
 .PHONY : __/gate_application.cpp.s
 
-__/main.o: __/main.cpp.o
-.PHONY : __/main.o
-
-# target to build an object file
-__/main.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.o
-.PHONY : __/main.cpp.o
-
-__/main.i: __/main.cpp.i
-.PHONY : __/main.i
-
-# target to preprocess a source file
-__/main.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.i
-.PHONY : __/main.cpp.i
-
-__/main.s: __/main.cpp.s
-.PHONY : __/main.s
-
-# target to generate assembly for a file
-__/main.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/main.cpp.s
-.PHONY : __/main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -361,36 +193,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... gate_server"
 	@echo "... rebuild_cache"
-	@echo "... __/CAllServerManage.o"
-	@echo "... __/CAllServerManage.i"
-	@echo "... __/CAllServerManage.s"
-	@echo "... __/CArenaManage.o"
-	@echo "... __/CArenaManage.i"
-	@echo "... __/CArenaManage.s"
-	@echo "... __/CGameMsgRecv.o"
-	@echo "... __/CGameMsgRecv.i"
-	@echo "... __/CGameMsgRecv.s"
-	@echo "... __/CGateTimerEventHandler.o"
-	@echo "... __/CGateTimerEventHandler.i"
-	@echo "... __/CGateTimerEventHandler.s"
-	@echo "... __/CMsgDispatcher.o"
-	@echo "... __/CMsgDispatcher.i"
-	@echo "... __/CMsgDispatcher.s"
 	@echo "... __/GateUserManager.o"
 	@echo "... __/GateUserManager.i"
 	@echo "... __/GateUserManager.s"
 	@echo "... __/GateWayPlayer.o"
 	@echo "... __/GateWayPlayer.i"
 	@echo "... __/GateWayPlayer.s"
-	@echo "... __/SSocketListenAdapter.o"
-	@echo "... __/SSocketListenAdapter.i"
-	@echo "... __/SSocketListenAdapter.s"
 	@echo "... __/gate_application.o"
 	@echo "... __/gate_application.i"
 	@echo "... __/gate_application.s"
-	@echo "... __/main.o"
-	@echo "... __/main.i"
-	@echo "... __/main.s"
 .PHONY : help
 
 

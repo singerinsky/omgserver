@@ -26,7 +26,7 @@ namespace omg {
 
     class socket_client: public io_handler {
         public:
-            socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler,IMsgDispatcher* dispatcher );
+            socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler );
             virtual ~socket_client();
             int init();
             virtual int on_read();

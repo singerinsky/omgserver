@@ -5,10 +5,6 @@
 #include "../net/epoll_handler.h"
 #include "../common/CThreadManage.h"
 #include "../net/serversocket.h"
-#include "GServer.h"
-#include "SSocketListenAdapter.h"
-#include "CMsgDispatcher.h"
-#include "CGateTimerEventHandler.h"
 
 #define CONFIG_FILE "config/server.xml"
 
@@ -41,8 +37,6 @@ struct GateServerInfo{
 };
 
 //local gate server info
-GateServerInfo	g_gate_server_info;
-CMsgDispatcher	*g_msg_dispatcher;
 char* public_key;
 const char* gm_login_public_key = "guanlei";
 
@@ -72,7 +66,7 @@ void init_server_log(int argc, char** argv){
 	google::SetLogDestination(google::ERROR,log_error_dir);
 }
 
-omg::epoll_handler*  epoll_server_thread_start(void* param){
+omg::epoll_handler*  epoll_server_thread_start(){
 	TiXmlDocument doc(CONFIG_FILE);
 	bool loadFile = doc.LoadFile();
 	if(loadFile == false){
@@ -91,37 +85,16 @@ omg::epoll_handler*  epoll_server_thread_start(void* param){
 	StringBuffer s_port_buffer(ele->Attribute("s_port"));
 	int port = atoi(port_buffer.c_str());
 	int s_port = atoi(s_port_buffer.c_str());
-	g_gate_server_info._ip = ip_buffer;
-	g_gate_server_info._port = port;
-	g_gate_server_info._s_port = s_port;
 
 
 	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->init_epoll(EPOLL_SIZE,10,true);
-	handler->startListening();
 	handler->start(false);
-	//handler->join();
+    pthread_join(handler->get_thread_id(),NULL);
 	return handler;		
 }
 
-//start to listening game server to connection 
-void server_to_server_start(){
-	server_socket *socket = new server_socket();
-	socket->initSocket(g_gate_server_info._s_port);
-	SSocketListenAdapter *ss = new SSocketListenAdapter(socket,g_msg_dispatcher);
-	omg::CThreadManage::AddJob(ss);
-}
 
-CMsgDispatcher* msg_dispatcher_thread_start(){
-	CMsgDispatcher	*msg_dispatcher = CMsgDispatcher::GetInstance();
-	msg_dispatcher->start(false);
-	return msg_dispatcher;
-}
-
-void msg_recv_thread_start(){
-	//CGameRec* rec = new CGameRec();
-	//rec->start(false);
-}
 
 std::map<std::string,std::string> g_test_player_map;
 
@@ -177,7 +150,6 @@ void load_tester_map() {
 
 int main(int argc, char **argv){
 	init_server_log(argc, argv);
-	load_gameserver_info();
 	if(FLAGS_daemon){
 		if(init_daemon() == -1){
 			VLOG(0)<<"ERROR OF DAEMON";
@@ -191,22 +163,10 @@ int main(int argc, char **argv){
 
 	omg::CThreadManage::BeginPoolThread(4,10);
 
-	CMsgDispatcher* dispatcher = msg_dispatcher_thread_start();
-	g_msg_dispatcher = dispatcher;	
-	//event thread
-	CGateTimerEventHandler *timer_thread = new CGateTimerEventHandler(dispatcher,10);
-	omg::CThreadManage::AddJob(timer_thread);
-	dispatcher->set_timer_hander(timer_thread);
-	//timer_thread->add_arena_event();
-//	msg_recv_thread_start();	
-	omg::epoll_handler *handler = epoll_server_thread_start(dispatcher);
+	omg::epoll_handler *handler = epoll_server_thread_start();
 	if(handler == NULL){
 		VLOG(1)<<"ERROR OF CREATE EPOLL";
 		return -1;
 	}
-	//start to server connect
-	server_to_server_start();
-//	handler->join();
-	sleep(3600*24*365);
 	return 1;
 }

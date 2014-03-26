@@ -23,8 +23,7 @@ public:
 	GameServerClient(int fd,
                     sockaddr_in& in,
                     epoll_handler* handler,
-                    IMsgDispatcher* dispatcher,
-                    timer_manager* timer_mgr):socket_client(fd,in,handler,dispatcher){
+                    timer_manager* timer_mgr):socket_client(fd,in,handler){
         _timer_mgr = timer_mgr;    
         _timer.set_owner(this);        
         _timer.set_expired(ServerRun->get_run_ms()+5000);

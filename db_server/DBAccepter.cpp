@@ -15,7 +15,7 @@ db_accepter::~db_accepter() {
 int db_accepter::on_connection(int nfd,sockaddr* addr)
 {
 	LOG(INFO)<<"receive a new connection!";
-    GameServerClient* client = new GameServerClient(nfd,*(sockaddr_in*)addr,get_epoll_handler(),get_msg_dispatcher(),ServerRun->get_timer_mgr());
+    GameServerClient* client = new GameServerClient(nfd,*(sockaddr_in*)addr,get_epoll_handler(),ServerRun->get_timer_mgr());
     
     int rst =  client->init();
     if(rst == -1)return -1;

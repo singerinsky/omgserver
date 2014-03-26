@@ -15,7 +15,7 @@ namespace omg {
 //#define _MSG_BASE_
 #define _MSG_PACKET_
 
-socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,IMsgDispatcher* dispatcher) {
+socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) {
 	// TODO Auto-generated constructor stub
 	_socket_fd = fd;
 	_conn_state = CONN_UNCONFIRM;
@@ -24,7 +24,6 @@ socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler,I
 	_conn_id._fd = fd;
 	_conn_id._timestamp = time(NULL);
     _sin = addr;
-    _msg_dispatcher = dispatcher;
 }
 
 socket_client::~socket_client() {
