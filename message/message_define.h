@@ -8,14 +8,19 @@
 
 enum
 {
-   CS_MSG_SOCCER_PLAYER_REQ = MSG_SOCCER_PLAYER_INFO << 2 |MSG_REQUEST, 
-   CS_MSG_SOCCER_PLAYER_REP = MSG_SOCCER_PLAYER_INFO << 2 |MSG_RESPONSE,
+    CS_MSG_HEART_BEAT_REQ        = MSG_HEART_BEAT        << 2|MSG_REQUEST,
+    CS_MSG_HEART_BEAT_REP        = MSG_HEART_BEAT        << 2|MSG_RESPONSE,
+
+    CS_MSG_SOCCER_PLAYER_REQ = MSG_SOCCER_PLAYER_INFO << 2 |MSG_REQUEST, 
+    CS_MSG_SOCCER_PLAYER_REP = MSG_SOCCER_PLAYER_INFO << 2 |MSG_RESPONSE,
 };
 
 
 
 typedef cs_packet<CS_MSG_SOCCER_PLAYER_REQ,SoccerPlayerInfoRequest> cs_soccer_player_request;
 typedef cs_packet<CS_MSG_SOCCER_PLAYER_REP,SoccerPlayerInfoResponse> cs_soccer_player_response;
+typedef cs_packet<CS_MSG_HEART_BEAT_REQ,ClientHeartBeatRequest> cs_client_hb_request;
+typedef cs_packet<CS_MSG_HEART_BEAT_REP,ClientHeartBeatResponse> cs_client_hb_response;
 
 
 #endif

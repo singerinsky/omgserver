@@ -68,9 +68,9 @@ int main(int argc,char** argv){
 //			int len = send(fd,buff,msg_len,0);
 			VLOG(1)<<"SEND MSG";
 			char buffer[1024];
-			usleep(5000);
-			recv(fd,buffer,1024,0);
-			VLOG(1)<<"Server time is "<<((MsgAlive*)buffer)->zeit;
+			usleep(500000);
+			int recv_size = recv(fd,buffer,1024,0);
+			VLOG(1)<<"Server time is "<<recv_size;
 		}
 	}else{
 		VLOG(1)<<"error connect";
@@ -92,9 +92,6 @@ void send_soccer_player_info(int fd)
     int send_size = send(fd,data_buff,final_size,0);
 
     VLOG(1)<<"SEND SIZE "<<send_size;
-
-
-
 }
 
 

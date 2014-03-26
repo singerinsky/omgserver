@@ -13,11 +13,3 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/gl/workspace/omgserver/client/objs/net/CMakeFiles/net.dir/DependInfo.cmake"
   "/home/gl/workspace/omgserver/client/objs/common/CMakeFiles/common.dir/DependInfo.cmake"
   )
-
-# The include file search paths:
-SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "../include"
-  )
-SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
-SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
-SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
