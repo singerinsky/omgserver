@@ -30,7 +30,7 @@ class GateWayPlayer: public socket_client {
         GateWayPlayer(int fd,sockaddr_in& addr ,epoll_handler* handler,timer_manager* mgr);
         virtual ~GateWayPlayer();
 
-        void init()
+        void init_timer()
         {
             _gate_player_timer.set_owner(this); 
             _gate_player_timer.set_expired(ServerRun->get_run_ms()+5000);

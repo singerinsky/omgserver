@@ -24,6 +24,8 @@ socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) 
 	_conn_id._fd = fd;
 	_conn_id._timestamp = time(NULL);
     _sin = addr;
+
+    init();
 }
 
 socket_client::~socket_client() {

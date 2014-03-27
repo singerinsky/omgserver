@@ -26,7 +26,7 @@ int client_accepter::on_connection(int nfd,sockaddr* addr)
 {
     LOG(INFO)<<"GET CLENT Connect";
     GateWayPlayer* player = new GateWayPlayer(nfd,*(sockaddr_in*)addr,_epoll_handler,ServerRun->get_timer_mgr());
-    player->init();
+    player->init_timer();
 }
 
 int client_accepter::on_error()
