@@ -11,6 +11,7 @@ enum MessageType
 {
     MSG_SOCCER_PLAYER_INFO = 1;
     MSG_HEART_BEAT          = 2;//心跳
+    MSG_CLIENT_LOGIN        =3;//client login
 }
 
 message SoccerPlayerInfoRequest
@@ -33,4 +34,17 @@ message ClientHeartBeatRequest
 message ClientHeartBeatResponse
 {
     required int32 server_time = 1;
+}
+
+message ClientLoginRequest
+{
+    required int32 player_id = 1;
+    required string player_pwd = 2;
+    required string md5_code = 3;
+}
+
+message ClientLoginResponse
+{
+    required int32 ret = 1;
+    required string player_name = 2;
 }

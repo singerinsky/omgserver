@@ -20,10 +20,9 @@ typedef int MATCH_ID;
 
 //连接客户端的状态
 typedef enum{
+    WAIT_LOGIN,
     LOGIN_SUCCESS,					//登陆成功
     OFFLINE,						//下线
-    WAIT_FOR_ARENAER_MACHING,		//等待竞技场匹配
-    MACHING_SUCCESS_FOR_MATCH_START//匹配成功，等待比赛开始
 }PLAYER_STATE;
 
 class GateWayPlayer: public socket_client {
@@ -41,12 +40,15 @@ class GateWayPlayer: public socket_client {
                 LOG(INFO)<<"add timer error !"<<ret;
             }
         }
-        
+
         int get_player_id(){return _player_id;}
         int get_client_sock_fd(){return 0;}
         void on_timeout(timer_manager*);
         void forward_game_msg(const char* data,int data_size);
         int  check_packet_info(char* msg_data,int size,packet_info*);
+        int  process_msg(packet_info* info);
+        bool is_login(){return _player_state == LOGIN_SUCCESS;}
+        void do_player_login_request(packet_info*);
 
     private:
         int				_match_watcher_id;
