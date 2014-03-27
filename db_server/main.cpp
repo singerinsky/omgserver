@@ -90,7 +90,7 @@ int main(int argc,char** argv){
 	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->init_epoll(EPOLL_SIZE,10,true);
     //初始化接收器
-	db_accepter* accepter = new db_accepter(handler,(IMsgDispatcher*)msg_dispatcher);
+	db_accepter* accepter = new db_accepter(handler);
     accepter->init(g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port);
 	int rst = handler->add_event_handler(accepter->get_sock_fd(),accepter);
 	handler->set_msg_dispatcher(msg_dispatcher);

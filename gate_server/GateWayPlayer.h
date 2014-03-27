@@ -28,17 +28,17 @@ typedef enum{
 
 class GateWayPlayer: public socket_client {
     public:
-        GateWayPlayer(PLAYER_ID player_id,timer_manager& mgr);
+        GateWayPlayer(int fd,sockaddr_in& addr ,epoll_handler* handler,timer_manager* mgr);
         virtual ~GateWayPlayer();
 
         void init()
         {
             _gate_player_timer.set_owner(this); 
             _gate_player_timer.set_expired(ServerRun->get_run_ms()+5000);
-            int ret = _timer_mgr.add_timer(&_gate_player_timer); 
-            if(ret <= 0)
+            int ret = _timer_mgr->add_timer(&_gate_player_timer); 
+            if(ret != 0)
             {
-                LOG(INFO)<<"add timer error !";
+                LOG(INFO)<<"add timer error !"<<ret;
             }
         }
         
@@ -46,6 +46,7 @@ class GateWayPlayer: public socket_client {
         int get_client_sock_fd(){return 0;}
         void on_timeout(timer_manager*);
         void forward_game_msg(const char* data,int data_size);
+        int  check_packet_info(char* msg_data,int size,packet_info*);
 
     private:
         int				_match_watcher_id;
@@ -58,7 +59,7 @@ class GateWayPlayer: public socket_client {
         int 		_zeit_enter_arenar;
         int			_club_attack_value;
         int			_club_defend_value;
-        timer_manager& _timer_mgr;
+        timer_manager* _timer_mgr;
         template_timer<GateWayPlayer,&GateWayPlayer::on_timeout> _gate_player_timer;
 };
 

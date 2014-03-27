@@ -36,10 +36,6 @@ namespace omg{
                 return application; 
             }
 
-            IMsgDispatcher* get_msg_dispatcher()
-            {
-                return _msg_dispatcher;
-            }
 
             msg_process* get_msgprocess(){
                 return _msg_process;
@@ -55,7 +51,6 @@ namespace omg{
             std::string _server_name;
             static server_application* application;
             timer_manager _timer_mgr;
-            IMsgDispatcher* _msg_dispatcher;
             msg_process* _msg_process;
     };
 

@@ -5,29 +5,14 @@
 #include "../net/epoll_handler.h"
 #include "../common/CThreadManage.h"
 #include "../net/serversocket.h"
+#include "client_acceptor.h"
 
+
+using namespace omg;
 #define CONFIG_FILE "config/server.xml"
 
 DEFINE_bool(daemon,true,"if start not as daemon");
-/*
-using google::dense_hash_map;
 
-void test_map(){
-	dense_hash_map<int,int> test;
-	test.set_empty_key(-1);
-	std::map<int,int> map_test;
-	VLOG(1)<<"INT";
-	for(int i=0;i<100000;i++){
-		//test[i] = rand();
-		map_test[i] = rand();
-	}
-	VLOG(1)<<"START";	
-	test.find(788);	
-	VLOG(1)<<"END";
-	map_test.find(788);
-	VLOG(1)<<"END";
-}
-*/
 
 //the gate server info,_port is the client connection port, the _s_port is the port of the server to server side
 struct GateServerInfo{
@@ -86,9 +71,12 @@ omg::epoll_handler*  epoll_server_thread_start(){
 	int port = atoi(port_buffer.c_str());
 	int s_port = atoi(s_port_buffer.c_str());
 
-
 	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->init_epoll(EPOLL_SIZE,10,true);
+   
+    client_accepter *cp = new client_accepter(handler);
+    cp->init(ip_buffer,port);
+	int rst = handler->add_event_handler(cp->get_sock_fd(),cp);
 	handler->start(false);
     pthread_join(handler->get_thread_id(),NULL);
 	return handler;		

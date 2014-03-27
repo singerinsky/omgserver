@@ -18,7 +18,7 @@ using namespace omg;
 class CServerClient;
 class db_accepter: public epoll_accepter {
 public:
-	db_accepter(omg::epoll_handler* handler,IMsgDispatcher* dispathcer):epoll_accepter(handler,dispathcer)
+	db_accepter(omg::epoll_handler* handler):epoll_accepter(handler)
     {
     }
 	virtual ~db_accepter();

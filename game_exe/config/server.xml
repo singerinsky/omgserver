@@ -2,4 +2,4 @@
 <gate_server ip="127.0.0.1" port="19999" s_port="10000" public_key="1234" log_info_dir="gate_log_info" log_error_dir="gate_log_error"/>
 <game_server log_info_dir="game_log/info" public_key="1234" log_error_dir="game_log/error"/>
 <db_server ip="0.0.0.0" s_port="29999" log_info_dir="db_log/info" log_error_dir="db_log/error" />
-<database data_base_ip="0.0.0.0"  mysql_port="3306" db="football_gl" username="root" password="firefly"/>
+<database data_base_ip="0.0.0.0"  mysql_port="3306" db="football" username="root" password="firefly"/>

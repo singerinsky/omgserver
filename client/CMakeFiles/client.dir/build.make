@@ -31,6 +31,9 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver/client
 
@@ -77,9 +80,9 @@ client_OBJECTS = \
 client_EXTERNAL_OBJECTS =
 
 client: CMakeFiles/client.dir/main.cpp.o
+client: CMakeFiles/client.dir/build.make
 client: objs/game_lib/libnet.a
 client: objs/game_lib/libcommon.a
-client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
