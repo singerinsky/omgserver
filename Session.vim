@@ -8,7 +8,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 gate_server/gate_application.cpp
+badd +1 gate_server/gate_application.cpp
 args gate_server/gate_application.cpp
 edit gate_server/gate_application.cpp
 set splitbelow splitright
@@ -17,12 +17,12 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-let s:l = 81 - ((29 * winheight(0) + 21) / 43)
+let s:l = 83 - ((31 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-81
-normal! 05|
+83
+normal! 0
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif

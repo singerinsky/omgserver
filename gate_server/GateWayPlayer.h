@@ -45,7 +45,6 @@ class GateWayPlayer: public socket_client {
         int get_client_sock_fd(){return 0;}
         void on_timeout(timer_manager*);
         void forward_game_msg(const char* data,int data_size);
-        int  check_packet_info(char* msg_data,int size,packet_info*);
         int  process_msg(packet_info* info);
         bool is_login(){return _player_state == LOGIN_SUCCESS;}
         void do_player_login_request(packet_info*);

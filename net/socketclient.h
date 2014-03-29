@@ -11,6 +11,7 @@
 #include "IMsgDispatcher.h"
 #include <vector>
 #include "packet.h"
+#include "game_packet.h"
 #include "../common/head.h"
 #include "../common/server_application.h"
 
@@ -27,8 +28,10 @@ namespace omg {
     class socket_client: public io_handler {
         public:
             socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler );
+            socket_client(std::string ip,int port,epoll_handler* handler);
             virtual ~socket_client();
             int init();
+            int connect(std::string server_ip,int port);
             virtual int on_read();
             virtual int on_write();
             virtual int on_error();
@@ -64,7 +67,7 @@ namespace omg {
 
             virtual int  process_msg(packet_info* info){return 1;};
 
-            virtual int  check_packet_info(char* msg_data,int size,packet_info*) = 0;
+            virtual int  check_packet_info(char* msg_data,int size,packet_info*);
         private:
             std::vector<char> _recv_buffer;
             std::vector<char> _send_buffer;

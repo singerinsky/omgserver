@@ -28,8 +28,30 @@ socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) 
     init();
 }
 
+socket_client::socket_client(std::string ip,int port,epoll_handler* handler)
+{
+    _conn_state = CONN_UNCONFIRM;
+    _lock.init();
+    _epoll_handler = handler;
+    connect(ip,port);
+}
+
 socket_client::~socket_client() {
 	// TODO Auto-generated destructor stub
+}
+
+int socket_client::connect(std::string server_ip,int port)
+{
+    struct sockaddr_in addr;
+    init_sa_in(&addr, server_ip.c_str(), port) ;
+	int fd = socket(AF_INET,SOCK_STREAM,0);
+    if(fd <= 0)return -1;
+    _socket_fd = fd;
+	int conn_rst = ::connect(fd,(struct sockaddr*)&addr,sizeof(addr));
+    if(conn_rst != 0)LOG(ERROR)<<"connect to server"<<server_ip.c_str()<<" :"<<port<<" failed";
+    init();
+    LOG(INFO)<<"connect to server"<<server_ip.c_str()<<" :"<<port<<" success!";
+    return 1;
 }
 
 int socket_client::init()
@@ -185,5 +207,28 @@ int socket_client::check_msg_complete(char *data_head, int size) {
 	}
 	return -1;
 }
+
+int socket_client::check_packet_info(char* data,int size,packet_info* info)
+{
+    cs_head* head = (cs_head*)data; 
+    if(size < sizeof(cs_head))
+    {
+        //message not complete
+        return  0;
+    }
+    else
+    {
+        info->size = (int)head->length;
+        info->type = (int)head->msgid;
+    }
+
+    if(info->size < size)return 0;
+
+    //message error
+    if(info->size <0 || info->size > MAX_MSG_SIZE || info->type < 0 )return -1;
+    info->data = data;
+    return info->size;
+}
+
 
 } /* namespace omg */

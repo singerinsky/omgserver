@@ -34,28 +34,6 @@ int GameServerClient::on_error()
     return 1;
 }
 
-int GameServerClient::check_packet_info(char* data,int size,packet_info* info)
-{
-    cs_head* head = (cs_head*)data; 
-    if(size < sizeof(cs_head))
-    {
-        //message not complete
-        return  0;
-    }
-    else
-    {
-        info->size = (int)head->length;
-        info->type = (int)head->msgid;
-    }
-
-    if(info->size < size)return 0;
-
-    //message error
-    if(info->size <0 || info->size > MAX_MSG_SIZE || info->type < 0 )return -1;
-    info->data = data;
-    return info->size;
-}
-
 int GameServerClient::process_msg(packet_info* packet)
 {
     //to some check like heart beat or other

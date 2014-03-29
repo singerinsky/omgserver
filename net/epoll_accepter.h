@@ -34,6 +34,7 @@ public:
 		init_sa_in(&_sin,_ip_str.c_str(),_port);
 		_fd = start_tcp_service(&_sin);
 		LOG_IF(INFO,_fd > 0)<<"start tcp listening port:"<<_port;
+        if(_fd < 0)return -1;
         //handler->add_event_handler(_fd,this);
 		return _fd;
 	}

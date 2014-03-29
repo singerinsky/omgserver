@@ -27,11 +27,13 @@ int client_accepter::on_connection(int nfd,sockaddr* addr)
     LOG(INFO)<<"GET CLENT Connect";
     GateWayPlayer* player = new GateWayPlayer(nfd,*(sockaddr_in*)addr,_epoll_handler,ServerRun->get_timer_mgr());
     player->init_timer();
+    return 1;
 }
 
 int client_accepter::on_error()
 {
     LOG(INFO)<<"error of epoll acceptor!";
+    return 1;
 }
 
 #endif

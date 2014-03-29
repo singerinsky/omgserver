@@ -43,8 +43,6 @@ public:
 
     int process_msg(packet_info * packet);
 
-    int check_packet_info(char* data,int size,packet_info*);
-
     int do_get_soccer_player_info(const packet_info* packet);
 
 public:
