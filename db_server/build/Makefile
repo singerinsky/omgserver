@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
+CMAKE_SOURCE_DIR = /home/gl/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/workspace/omgserver
+CMAKE_BINARY_DIR = /home/gl/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles /home/gl/workspace/omgserver/db_server/build/CMakeFiles/progress.marks
-	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles 0
+	cd /home/gl/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles /home/gl/omgserver/db_server/build/CMakeFiles/progress.marks
+	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/clean
+	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/preinstall
+	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/preinstall
+	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 db_server/build/CMakeFiles/db_server.dir/rule:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/CMakeFiles/db_server.dir/rule
+	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/build/CMakeFiles/db_server.dir/rule
 .PHONY : db_server/build/CMakeFiles/db_server.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ db_server: db_server/build/CMakeFiles/db_server.dir/rule
 
 # fast build rule for target.
 db_server/fast:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/build
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/build
 .PHONY : db_server/fast
 
 __/CDBMsgDispatcher.o: __/CDBMsgDispatcher.cpp.o
@@ -117,7 +117,7 @@ __/CDBMsgDispatcher.o: __/CDBMsgDispatcher.cpp.o
 
 # target to build an object file
 __/CDBMsgDispatcher.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.o
 .PHONY : __/CDBMsgDispatcher.cpp.o
 
 __/CDBMsgDispatcher.i: __/CDBMsgDispatcher.cpp.i
@@ -125,7 +125,7 @@ __/CDBMsgDispatcher.i: __/CDBMsgDispatcher.cpp.i
 
 # target to preprocess a source file
 __/CDBMsgDispatcher.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.i
 .PHONY : __/CDBMsgDispatcher.cpp.i
 
 __/CDBMsgDispatcher.s: __/CDBMsgDispatcher.cpp.s
@@ -133,7 +133,7 @@ __/CDBMsgDispatcher.s: __/CDBMsgDispatcher.cpp.s
 
 # target to generate assembly for a file
 __/CDBMsgDispatcher.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.s
 .PHONY : __/CDBMsgDispatcher.cpp.s
 
 __/CDBTaskManage.o: __/CDBTaskManage.cpp.o
@@ -141,7 +141,7 @@ __/CDBTaskManage.o: __/CDBTaskManage.cpp.o
 
 # target to build an object file
 __/CDBTaskManage.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBTaskManage.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBTaskManage.cpp.o
 .PHONY : __/CDBTaskManage.cpp.o
 
 __/CDBTaskManage.i: __/CDBTaskManage.cpp.i
@@ -149,7 +149,7 @@ __/CDBTaskManage.i: __/CDBTaskManage.cpp.i
 
 # target to preprocess a source file
 __/CDBTaskManage.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBTaskManage.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBTaskManage.cpp.i
 .PHONY : __/CDBTaskManage.cpp.i
 
 __/CDBTaskManage.s: __/CDBTaskManage.cpp.s
@@ -157,7 +157,7 @@ __/CDBTaskManage.s: __/CDBTaskManage.cpp.s
 
 # target to generate assembly for a file
 __/CDBTaskManage.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBTaskManage.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBTaskManage.cpp.s
 .PHONY : __/CDBTaskManage.cpp.s
 
 __/CDBhandlerJob.o: __/CDBhandlerJob.cpp.o
@@ -165,7 +165,7 @@ __/CDBhandlerJob.o: __/CDBhandlerJob.cpp.o
 
 # target to build an object file
 __/CDBhandlerJob.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBhandlerJob.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBhandlerJob.cpp.o
 .PHONY : __/CDBhandlerJob.cpp.o
 
 __/CDBhandlerJob.i: __/CDBhandlerJob.cpp.i
@@ -173,7 +173,7 @@ __/CDBhandlerJob.i: __/CDBhandlerJob.cpp.i
 
 # target to preprocess a source file
 __/CDBhandlerJob.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBhandlerJob.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBhandlerJob.cpp.i
 .PHONY : __/CDBhandlerJob.cpp.i
 
 __/CDBhandlerJob.s: __/CDBhandlerJob.cpp.s
@@ -181,7 +181,7 @@ __/CDBhandlerJob.s: __/CDBhandlerJob.cpp.s
 
 # target to generate assembly for a file
 __/CDBhandlerJob.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBhandlerJob.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBhandlerJob.cpp.s
 .PHONY : __/CDBhandlerJob.cpp.s
 
 __/CNpcPlayerCache.o: __/CNpcPlayerCache.cpp.o
@@ -189,7 +189,7 @@ __/CNpcPlayerCache.o: __/CNpcPlayerCache.cpp.o
 
 # target to build an object file
 __/CNpcPlayerCache.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CNpcPlayerCache.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CNpcPlayerCache.cpp.o
 .PHONY : __/CNpcPlayerCache.cpp.o
 
 __/CNpcPlayerCache.i: __/CNpcPlayerCache.cpp.i
@@ -197,7 +197,7 @@ __/CNpcPlayerCache.i: __/CNpcPlayerCache.cpp.i
 
 # target to preprocess a source file
 __/CNpcPlayerCache.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CNpcPlayerCache.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CNpcPlayerCache.cpp.i
 .PHONY : __/CNpcPlayerCache.cpp.i
 
 __/CNpcPlayerCache.s: __/CNpcPlayerCache.cpp.s
@@ -205,7 +205,7 @@ __/CNpcPlayerCache.s: __/CNpcPlayerCache.cpp.s
 
 # target to generate assembly for a file
 __/CNpcPlayerCache.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CNpcPlayerCache.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CNpcPlayerCache.cpp.s
 .PHONY : __/CNpcPlayerCache.cpp.s
 
 __/CServerManage.o: __/CServerManage.cpp.o
@@ -213,7 +213,7 @@ __/CServerManage.o: __/CServerManage.cpp.o
 
 # target to build an object file
 __/CServerManage.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CServerManage.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CServerManage.cpp.o
 .PHONY : __/CServerManage.cpp.o
 
 __/CServerManage.i: __/CServerManage.cpp.i
@@ -221,7 +221,7 @@ __/CServerManage.i: __/CServerManage.cpp.i
 
 # target to preprocess a source file
 __/CServerManage.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CServerManage.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CServerManage.cpp.i
 .PHONY : __/CServerManage.cpp.i
 
 __/CServerManage.s: __/CServerManage.cpp.s
@@ -229,7 +229,7 @@ __/CServerManage.s: __/CServerManage.cpp.s
 
 # target to generate assembly for a file
 __/CServerManage.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CServerManage.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CServerManage.cpp.s
 .PHONY : __/CServerManage.cpp.s
 
 __/CWorldEventHandler.o: __/CWorldEventHandler.cpp.o
@@ -237,7 +237,7 @@ __/CWorldEventHandler.o: __/CWorldEventHandler.cpp.o
 
 # target to build an object file
 __/CWorldEventHandler.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.o
 .PHONY : __/CWorldEventHandler.cpp.o
 
 __/CWorldEventHandler.i: __/CWorldEventHandler.cpp.i
@@ -245,7 +245,7 @@ __/CWorldEventHandler.i: __/CWorldEventHandler.cpp.i
 
 # target to preprocess a source file
 __/CWorldEventHandler.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.i
 .PHONY : __/CWorldEventHandler.cpp.i
 
 __/CWorldEventHandler.s: __/CWorldEventHandler.cpp.s
@@ -253,7 +253,7 @@ __/CWorldEventHandler.s: __/CWorldEventHandler.cpp.s
 
 # target to generate assembly for a file
 __/CWorldEventHandler.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CWorldEventHandler.cpp.s
 .PHONY : __/CWorldEventHandler.cpp.s
 
 __/DBAccepter.o: __/DBAccepter.cpp.o
@@ -261,7 +261,7 @@ __/DBAccepter.o: __/DBAccepter.cpp.o
 
 # target to build an object file
 __/DBAccepter.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.o
 .PHONY : __/DBAccepter.cpp.o
 
 __/DBAccepter.i: __/DBAccepter.cpp.i
@@ -269,7 +269,7 @@ __/DBAccepter.i: __/DBAccepter.cpp.i
 
 # target to preprocess a source file
 __/DBAccepter.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.i
 .PHONY : __/DBAccepter.cpp.i
 
 __/DBAccepter.s: __/DBAccepter.cpp.s
@@ -277,7 +277,7 @@ __/DBAccepter.s: __/DBAccepter.cpp.s
 
 # target to generate assembly for a file
 __/DBAccepter.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBAccepter.cpp.s
 .PHONY : __/DBAccepter.cpp.s
 
 __/DBConnectionPool.o: __/DBConnectionPool.cpp.o
@@ -285,7 +285,7 @@ __/DBConnectionPool.o: __/DBConnectionPool.cpp.o
 
 # target to build an object file
 __/DBConnectionPool.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool.cpp.o
 .PHONY : __/DBConnectionPool.cpp.o
 
 __/DBConnectionPool.i: __/DBConnectionPool.cpp.i
@@ -293,7 +293,7 @@ __/DBConnectionPool.i: __/DBConnectionPool.cpp.i
 
 # target to preprocess a source file
 __/DBConnectionPool.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool.cpp.i
 .PHONY : __/DBConnectionPool.cpp.i
 
 __/DBConnectionPool.s: __/DBConnectionPool.cpp.s
@@ -301,7 +301,7 @@ __/DBConnectionPool.s: __/DBConnectionPool.cpp.s
 
 # target to generate assembly for a file
 __/DBConnectionPool.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool.cpp.s
 .PHONY : __/DBConnectionPool.cpp.s
 
 __/DBConnectionPool_test.o: __/DBConnectionPool_test.cpp.o
@@ -309,7 +309,7 @@ __/DBConnectionPool_test.o: __/DBConnectionPool_test.cpp.o
 
 # target to build an object file
 __/DBConnectionPool_test.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.o
 .PHONY : __/DBConnectionPool_test.cpp.o
 
 __/DBConnectionPool_test.i: __/DBConnectionPool_test.cpp.i
@@ -317,7 +317,7 @@ __/DBConnectionPool_test.i: __/DBConnectionPool_test.cpp.i
 
 # target to preprocess a source file
 __/DBConnectionPool_test.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.i
 .PHONY : __/DBConnectionPool_test.cpp.i
 
 __/DBConnectionPool_test.s: __/DBConnectionPool_test.cpp.s
@@ -325,7 +325,7 @@ __/DBConnectionPool_test.s: __/DBConnectionPool_test.cpp.s
 
 # target to generate assembly for a file
 __/DBConnectionPool_test.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.s
 .PHONY : __/DBConnectionPool_test.cpp.s
 
 __/dbmsg_process.o: __/dbmsg_process.cpp.o
@@ -333,7 +333,7 @@ __/dbmsg_process.o: __/dbmsg_process.cpp.o
 
 # target to build an object file
 __/dbmsg_process.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.o
 .PHONY : __/dbmsg_process.cpp.o
 
 __/dbmsg_process.i: __/dbmsg_process.cpp.i
@@ -341,7 +341,7 @@ __/dbmsg_process.i: __/dbmsg_process.cpp.i
 
 # target to preprocess a source file
 __/dbmsg_process.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.i
 .PHONY : __/dbmsg_process.cpp.i
 
 __/dbmsg_process.s: __/dbmsg_process.cpp.s
@@ -349,7 +349,7 @@ __/dbmsg_process.s: __/dbmsg_process.cpp.s
 
 # target to generate assembly for a file
 __/dbmsg_process.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.s
 .PHONY : __/dbmsg_process.cpp.s
 
 __/main.o: __/main.cpp.o
@@ -357,7 +357,7 @@ __/main.o: __/main.cpp.o
 
 # target to build an object file
 __/main.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/main.cpp.o
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/main.cpp.o
 .PHONY : __/main.cpp.o
 
 __/main.i: __/main.cpp.i
@@ -365,7 +365,7 @@ __/main.i: __/main.cpp.i
 
 # target to preprocess a source file
 __/main.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/main.cpp.i
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/main.cpp.i
 .PHONY : __/main.cpp.i
 
 __/main.s: __/main.cpp.s
@@ -373,7 +373,7 @@ __/main.s: __/main.cpp.s
 
 # target to generate assembly for a file
 __/main.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/main.cpp.s
+	cd /home/gl/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/main.cpp.s
 .PHONY : __/main.cpp.s
 
 # Help Target
@@ -429,6 +429,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -88,4 +88,14 @@ void GateWayPlayer::forward_game_msg(const char* data,int data_size)
 void GateWayPlayer::do_player_login_request(packet_info* info)
 {
     LOG(INFO)<<"process login request";
+    cs_client_login_request request;
+    if(info->size != request.decode(info->data,info->size))
+    {
+        LOG(INFO)<<"decode message"<<info->type<<"error"; 
+        return ;
+    }
+    LOG(INFO)<<"player request login"<<request.body.player_id();
+    LOG(INFO)<<"player request login"<<request.body.player_pwd();
+    LOG(INFO)<<"player request login"<<request.body.md5_code();
+    //forward to db server 
 }

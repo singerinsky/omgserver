@@ -18,6 +18,7 @@ void init_server_log(int argc, char** argv){
 }
 
 void send_soccer_player_info(int fd);
+void send_client_login_message(int fd);
 
 
 int main(int argc,char** argv){
@@ -47,30 +48,12 @@ int main(int argc,char** argv){
 		printf("%d",rest);
 		bool is_login = false;
 		while(1){
-			struct MsgLogin msg_login;
-			msg_login.mid = 10;
-			msg_login.uid = 1;
-            msg_login.zeit = time(NULL);
-			if(is_login == false){
-				///send(fd,(const char*)&msg_login,msg_login.msg_size,0);
-				is_login = true;
-			}
+            send_client_login_message(fd);
             send_soccer_player_info(fd);
-			struct MsgAlive msg_live;
-			int msg_len = sizeof(MsgAlive);
-			char* buff = (char*)malloc(msg_len);
-			int i=0;
-			msg_live.player_id = 111;
-            msg_live.zeit = time(NULL);
-			memcpy(buff,&msg_live,msg_len);
-			VLOG(1)<<"SEND MSG...";
-		//snprintf(buff,sizeof(buff),"send message%d",i);
-//			int len = send(fd,buff,msg_len,0);
-			VLOG(1)<<"SEND MSG";
 			char buffer[1024];
 			usleep(500000);
 			int recv_size = recv(fd,buffer,1024,0);
-			VLOG(1)<<"Server time is "<<recv_size;
+            VLOG(1)<<"receive server message for "<<recv_size;
 		}
 	}else{
 		VLOG(1)<<"error connect";
@@ -79,22 +62,34 @@ int main(int argc,char** argv){
 	return 1;
 }
 
+void send_packet_msg(int fd,packet* info)
+{
+    char buff[1024];
+    int final_size = info->encode(buff,1024); 
+    send(fd,buff,final_size,0);
+}
+
 void send_soccer_player_info(int fd)
 {
     cs_soccer_player_request request;
     request.body.set_player_id(1);
     int size = request.encode_size();
-    VLOG(1)<<"ENCODE SIZE "<<size;
     char* data_buff = new char[size];
     int final_size = request.encode(data_buff,size);
     if(final_size == - 1)VLOG(1)<<"error of encode ";
-    VLOG(1)<<"FINAL ENCODE SIZE"<<final_size;
     int send_size = send(fd,data_buff,final_size,0);
-
-    VLOG(1)<<"SEND SIZE "<<send_size;
+    VLOG(1)<<"send soccer player inf";
 }
 
-
+void send_client_login_message(int fd)
+{
+    cs_client_login_request request;
+    request.body.set_player_id(2009);
+    request.body.set_player_pwd("nice_body");
+    request.body.set_md5_code("md5code");
+    send_packet_msg(fd,&request);
+    VLOG(1)<<"send client login inf";
+}
 
 
 
