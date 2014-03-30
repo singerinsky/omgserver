@@ -31,6 +31,14 @@ void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
 {
     LOG(INFO)<<"DO SQL QUREY";
     LOG(INFO)<<event->sql_str.c_str();
+    mysqlpp::Query query = _conn.query(event->sql_str.c_str());
+    if(mysqlpp::StoreQueryResult ret = query.store())
+    {
+        LOG(INFO)<<"found "<<ret.num_rows();
+    }else
+    {
+        LOG(INFO)<<"nothing found!!"; 
+    }
 }
 
 
