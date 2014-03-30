@@ -20,8 +20,8 @@ namespace omg {
     
     class epoll_handler;
     typedef enum {
-        CONN_UNCONFIRM = 1,
-        CONN_CONFIRM = 2,
+        CONN_UNCONNECT = 0,
+        CONN_CONNECTED = 2,
         CONN_WAITDEL = 3
     } CONN_STATE;
 
@@ -31,7 +31,7 @@ namespace omg {
             socket_client(std::string ip,int port,epoll_handler* handler);
             virtual ~socket_client();
             int init();
-            int connect(std::string server_ip,int port);
+            int connect();
             virtual int on_read();
             virtual int on_write();
             virtual int on_error();
@@ -63,7 +63,7 @@ namespace omg {
 
             void fini();
 
-            bool is_connected(){return _connected;}
+            bool is_connected(){return _conn_state != CONN_UNCONNECT;}
 
             virtual int  process_msg(packet_info* info){return 1;};
 
@@ -78,9 +78,9 @@ namespace omg {
             IMsgDispatcher* _msg_dispatcher;
         private:
             std::string _ip_str;
+            int _port;
             int _epoll_mod;
             int _socket_fd;
-            int _port;
             sockaddr_in _sin;
             bool _connected;
     };

@@ -18,7 +18,8 @@ namespace omg {
 socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) {
 	// TODO Auto-generated constructor stub
 	_socket_fd = fd;
-	_conn_state = CONN_UNCONFIRM;
+	_conn_state = CONN_UNCONNECT;
+    _connected = false;
 	_lock.init();
 	_epoll_handler = handler;
 	_conn_id._fd = fd;
@@ -30,27 +31,33 @@ socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) 
 
 socket_client::socket_client(std::string ip,int port,epoll_handler* handler)
 {
-    _conn_state = CONN_UNCONFIRM;
+    _ip_str = ip;
+    _port = port;
+    _conn_state = CONN_UNCONNECT;
+    _connected = false;
     _lock.init();
     _epoll_handler = handler;
-    connect(ip,port);
+	int fd = socket(AF_INET,SOCK_STREAM,0);
+    _socket_fd = fd;
+    init();
 }
 
 socket_client::~socket_client() {
 	// TODO Auto-generated destructor stub
 }
 
-int socket_client::connect(std::string server_ip,int port)
+int socket_client::connect()
 {
     struct sockaddr_in addr;
-    init_sa_in(&addr, server_ip.c_str(), port) ;
-	int fd = socket(AF_INET,SOCK_STREAM,0);
-    if(fd <= 0)return -1;
-    _socket_fd = fd;
-	int conn_rst = ::connect(fd,(struct sockaddr*)&addr,sizeof(addr));
-    if(conn_rst != 0)LOG(ERROR)<<"connect to server"<<server_ip.c_str()<<" :"<<port<<" failed";
-    init();
-    LOG(INFO)<<"connect to server"<<server_ip.c_str()<<" :"<<port<<" success!";
+    init_sa_in(&addr, _ip_str.c_str(), _port) ;
+    int conn_rst = ::connect(_socket_fd,(struct sockaddr*)&addr,sizeof(addr));
+    if(conn_rst != 0)
+    {
+        LOG(ERROR)<<"connect to server"<<_ip_str.c_str()<<" :"<<_port<<" failed";
+        return -1;
+    }
+    LOG(INFO)<<"connect to server"<<_ip_str.c_str()<<" :"<<_port<<" success!";
+    _conn_state = CONN_CONNECTED;
     return 1;
 }
 

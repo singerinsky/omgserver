@@ -77,28 +77,6 @@ namespace omg {
         } 
     }
 
-    void epoll_handler::do_close(socket_client *socket) {
-        //remove from socket map
-        if(socket == NULL){
-            return;
-        }
-        LOG(INFO)<<"close socket";
-        epoll_event ev;
-        ::epoll_ctl(_epoll_create, EPOLL_CTL_DEL,socket->get_socket_fd() , &ev);
-
-        if(socket->get_state() == CONN_CONFIRM){//已经成功登录
-            MsgLoginOut *out = new MsgLoginOut();
-            CMsgEvent* event = new CMsgEvent();
-            event->_client_id = socket->get_id();
-            event->_msg_base = out;
-            event->_msg_type = MSG_TYPE_LOGIN_OUT;
-            _msg_handler->add_msg_to_queue(event);
-            return;
-        }else if(socket->get_state() == CONN_UNCONFIRM){
-            delete socket;
-        }
-    }
-
     void epoll_handler::send_data(socket_client *socket,const char* msg,int msg_len) {
         ::send(socket->get_socket_fd(),msg,msg_len,0);
     }

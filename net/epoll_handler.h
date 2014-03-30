@@ -29,7 +29,6 @@ namespace omg{
             int  accept_conn(socket_client* s);
             void send_data(socket_client *socket,const char* msg,int msg_len);
             void recv_data(socket_client* socket);
-            void do_close(socket_client*);
 
             int add_event_handler(int fd,io_handler* handler);
             int mod_epoll_status(int fd,io_handler* handler,int event_type);
