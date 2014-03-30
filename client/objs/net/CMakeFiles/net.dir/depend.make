@@ -23,6 +23,7 @@ objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: ../include/glog/vlog_is_on.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/../include/tinystr.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/../include/tinyxml.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/../net/IMsgDispatcher.h
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/aliased_buf.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/head.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/lock.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/../common/omg_type.h
@@ -34,6 +35,7 @@ objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/IMsgDisp
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/define.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/epoll_handler.cpp
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/epoll_handler.h
+objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/game_packet.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/msg.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/net_util.h
 objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o: /home/gl/omgserver/net/packet.h
@@ -75,6 +77,7 @@ objs/net/CMakeFiles/net.dir/socketclient.cpp.o: ../include/glog/vlog_is_on.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/../include/tinystr.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/../include/tinyxml.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/../net/IMsgDispatcher.h
+objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/aliased_buf.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/head.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/lock.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/../common/omg_type.h
@@ -85,6 +88,7 @@ objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/IConnecti
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/IMsgDispatcher.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/define.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/epoll_handler.h
+objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/game_packet.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/msg.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/net_util.h
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/packet.h

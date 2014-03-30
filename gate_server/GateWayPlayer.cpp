@@ -8,6 +8,7 @@
 #include "GateWayPlayer.h"
 #include "../net/game_packet.h"
 #include "../message/message_define.h"
+#include "gate_server.h"
 
 GateWayPlayer::GateWayPlayer(int fd,sockaddr_in& addr ,epoll_handler* handler,timer_manager* mgr):socket_client(fd,addr,handler),_timer_mgr(mgr) {
     _player_state = WAIT_LOGIN;
@@ -78,5 +79,6 @@ void GateWayPlayer::do_player_login_request(packet_info* info)
     LOG(INFO)<<"player request login"<<request.body.player_id();
     LOG(INFO)<<"player request login"<<request.body.player_pwd();
     LOG(INFO)<<"player request login"<<request.body.md5_code();
+    GlobalServer->forward_db_message(info);
     //forward to db server 
 }

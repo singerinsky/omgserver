@@ -28,7 +28,8 @@ public:
         _timer.set_owner(this);        
         _timer.set_expired(ServerRun->get_run_ms()+5000);
         _timer_mgr->add_timer(&_timer);
-        _connection_status = WAIT_LOGIN;
+     //   _connection_status = WAIT_LOGIN;
+        _connection_status = ALREADY_LOGIN;
 	}
 
 	~GameServerClient(){
@@ -44,6 +45,7 @@ public:
     int process_msg(packet_info * packet);
 
     int do_get_soccer_player_info(const packet_info* packet);
+    int do_check_client_log(const packet_info* packet);
 
 public:
 	int index;

@@ -49,7 +49,7 @@ int main(int argc,char** argv){
 		bool is_login = false;
 		while(1){
             send_client_login_message(fd);
-            send_soccer_player_info(fd);
+//            send_soccer_player_info(fd);
 			char buffer[1024];
 			usleep(500000);
 			int recv_size = recv(fd,buffer,1024,0);
@@ -66,7 +66,8 @@ void send_packet_msg(int fd,packet* info)
 {
     char buff[1024];
     int final_size = info->encode(buff,1024); 
-    send(fd,buff,final_size,0);
+    int send_size = send(fd,buff,final_size,0);
+    VLOG(2)<<"send data size"<<send_size;
 }
 
 void send_soccer_player_info(int fd)
@@ -88,7 +89,7 @@ void send_client_login_message(int fd)
     request.body.set_player_pwd("nice_body");
     request.body.set_md5_code("md5code");
     send_packet_msg(fd,&request);
-    VLOG(1)<<"send client login inf";
+    VLOG(1)<<"send client login info";
 }
 
 

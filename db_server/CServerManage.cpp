@@ -42,13 +42,15 @@ int GameServerClient::process_msg(packet_info* packet)
     int process_ret = 0;
     switch(packet_type)
     {
+        case CS_MSG_CLIENT_LOGIN_REQ:
+            do_check_client_log(packet);
+            break;
         case  CS_MSG_SOCCER_PLAYER_REQ:
             do_get_soccer_player_info(packet);
             //process_ret = _packet.decode(packet->data,packet->size);
             break;
         default:
-            LOG(ERROR)<<"unknown message ";
-
+            LOG(ERROR)<<"unknown message "<<packet_type;
     }
     return 1;
 
@@ -66,6 +68,18 @@ int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
     response.body.set_player_name("guanlei");
     response.body.set_age(29);
     send_packet_msg(&response);
+}
+
+int GameServerClient::do_check_client_log(const packet_info* packet)
+{
+    cs_client_login_request request;
+    if(request.decode(packet->data,packet->size) != packet->size)return -1;
+    LOG(INFO)<<"Message get soccer player"<<get_socket_fd()<<" info:size  "<<packet->size;
+    int player_id = request.body.player_id();
+    std::string player_pwd = request.body.player_pwd();
+    std::string md5_code = request.body.md5_code();
+    LOG(INFO)<<"client "<<player_id<<" use password"<<player_pwd.c_str()<<" with code"<<md5_code.c_str();
+    return 1; 
 }
 
 
