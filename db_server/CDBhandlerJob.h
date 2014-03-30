@@ -47,7 +47,7 @@ class CDBQueryhandlerJob: public omg::IJob {
         int  _task_processed;
         int  _id;
 
-        void QueryClientLoginInfo();
+        void QueryClientLoginInfo(db_event*);
     private:
         omg::ConcurrenceLockQueue<db_event,omg::MutexLock>	_msg_queue;
         //omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;

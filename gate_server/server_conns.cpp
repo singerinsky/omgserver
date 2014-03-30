@@ -17,7 +17,7 @@ void db_connection::on_timeout(timer_manager* time_mgr)
     {
         LOG(INFO)<<"do reconnect";
         int rst = re_connect();    
-        if(rst != 0)
+        if(rst != 1)
         {
            _conn_timer.set_expired(ServerRun->get_run_ms()+5000);  
            if(time_mgr->add_timer(&_conn_timer) != 0 )

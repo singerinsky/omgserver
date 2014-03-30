@@ -7,12 +7,12 @@ SET(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "CMakeFiles/2.8.10.1/CMakeCCompiler.cmake"
-  "CMakeFiles/2.8.10.1/CMakeCXXCompiler.cmake"
-  "CMakeFiles/2.8.10.1/CMakeSystem.cmake"
+  "CMakeFiles/2.8.11.2/CMakeCCompiler.cmake"
+  "CMakeFiles/2.8.11.2/CMakeCXXCompiler.cmake"
+  "CMakeFiles/2.8.11.2/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "/home/gl/workspace/omgserver/common/CMakeLists.txt"
-  "/home/gl/workspace/omgserver/net/CMakeLists.txt"
+  "/home/gl/omgserver/common/CMakeLists.txt"
+  "/home/gl/omgserver/net/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake"

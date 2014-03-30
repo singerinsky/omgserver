@@ -1,4 +1,6 @@
 #include "CServerManage.h"
+#include "CDBhandlerJob.h"
+#include "CDBTaskManage.h"
 
 CServerManage* CServerManage::_m_instance;
 
@@ -82,6 +84,12 @@ int GameServerClient::do_check_client_log(const packet_info* packet)
     std::string player_pwd = request.body.player_pwd();
     std::string md5_code = request.body.md5_code();
     LOG(INFO)<<"client "<<player_id<<" use password"<<player_pwd.c_str()<<" with code"<<md5_code.c_str();
+    char    str_sql[256] = {0};
+    snprintf(str_sql,256,"select * from  u_account where uid=%d and player_pwd=%s",player_id,player_pwd.c_str());
+    db_event *event = new db_event();
+    event->seq = index;
+    event->sql_str = str_sql; 
+    CDBTaskManage::GetInstance()->AddTaskEvent(event);
     return 1; 
 }
 

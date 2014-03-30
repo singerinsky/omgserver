@@ -21,14 +21,16 @@ void CDBQueryhandlerJob::ExecuteJob() {
         db_event* event = _msg_queue.dequeue();
         if (event != NULL) {
             this->_task_processed++;
-            QueryClientLoginInfo();
+            QueryClientLoginInfo(event);
             delete event;
         }
     }
 }
 
-void CDBQueryhandlerJob::QueryClientLoginInfo()
+void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
 {
+    LOG(INFO)<<"DO SQL QUREY";
+    LOG(INFO)<<event->sql_str.c_str();
 }
 
 
