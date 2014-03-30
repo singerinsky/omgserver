@@ -1,15 +1,19 @@
+#ifndef _GATE_SERVER_G_
+#define _GATE_SERVER_G_
+
 #include "../common/server_application.h"
 #include "server_conns.h"
+
 using namespace omg;
 
-class GateServerGloabl
+class GateServerGlobal
 {
     public:
-        bool init();
-        static GateServerGloabl* get_instance(){
+        bool init(epoll_handler*);
+        static GateServerGlobal* get_instance(){
             if(_instance == NULL)
             {
-                _instance = new GateServerGloabl(); 
+                _instance = new GateServerGlobal(); 
             }
             return _instance;
         }
@@ -17,8 +21,10 @@ class GateServerGloabl
     public:
         db_connection* db_conn;
     private:
-        static GateServerGloabl* _instance;
+        static GateServerGlobal* _instance;
         epoll_handler* _handler;
 };
 
-#define GlobalServer GateServerGlobal::get_instance()
+#define GlobalServer    GateServerGlobal::get_instance()
+
+#endif

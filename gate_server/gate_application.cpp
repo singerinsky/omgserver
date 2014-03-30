@@ -6,10 +6,12 @@
 #include "../common/CThreadManage.h"
 #include "../net/serversocket.h"
 #include "client_acceptor.h"
+#include "gate_server.h"
 
 
 using namespace omg;
 #define CONFIG_FILE "config/server.xml"
+
 
 DEFINE_bool(daemon,true,"if start not as daemon");
 
@@ -73,6 +75,8 @@ omg::epoll_handler*  epoll_server_thread_start(){
 
     omg::epoll_handler *handler = new omg::epoll_handler();
     handler->init_epoll(EPOLL_SIZE,10,true);
+
+    GlobalServer->init(handler);
 
     client_accepter *cp = new client_accepter(handler);
     if(cp->init(ip_buffer,port) < 0)

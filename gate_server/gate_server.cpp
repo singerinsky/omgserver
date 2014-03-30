@@ -1,12 +1,11 @@
 #include "gate_server.h"
 
-GateServerGloabl* GateServerGloabl::_instance;
+GateServerGlobal* GateServerGlobal::_instance;
 
-
-bool GateServerGloabl::init(epoll_handler* handler)
+bool GateServerGlobal::init(epoll_handler* handler)
 {
     _handler = handler;
-    TiXmlDocument doc(CONFIG_FILE);
+    TiXmlDocument doc("config/server.xml");
     bool loadFile = doc.LoadFile();
     if(loadFile == false){
         LOG(ERROR)<<"ERROR LOAD config file!!";
@@ -23,7 +22,8 @@ bool GateServerGloabl::init(epoll_handler* handler)
     StringBuffer s_port_buffer(ele->Attribute("s_port"));
     int s_port = atoi(s_port_buffer.c_str());
     LOG(INFO)<<"connect to dbserver "<<ip_buffer<<":"<<s_port;
-    db_conn = new db_connection(ip_buffer,s_port,_handler);
+    std::string ip(ip_buffer);
+    db_conn = new db_connection(ip,s_port,_handler);
     int conn_rst = db_conn->connect();    
     if(conn_rst !=0)
     {

@@ -26,7 +26,7 @@ socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) 
 	_conn_id._timestamp = time(NULL);
     _sin = addr;
 
-    init();
+    init_epoll();
 }
 
 socket_client::socket_client(std::string ip,int port,epoll_handler* handler)
@@ -39,11 +39,17 @@ socket_client::socket_client(std::string ip,int port,epoll_handler* handler)
     _epoll_handler = handler;
 	int fd = socket(AF_INET,SOCK_STREAM,0);
     _socket_fd = fd;
-    init();
 }
 
 socket_client::~socket_client() {
 	// TODO Auto-generated destructor stub
+}
+
+int socket_client::re_connect()
+{
+	int fd = socket(AF_INET,SOCK_STREAM,0);
+    _socket_fd = fd;
+    return connect();
 }
 
 int socket_client::connect()
@@ -58,10 +64,11 @@ int socket_client::connect()
     }
     LOG(INFO)<<"connect to server"<<_ip_str.c_str()<<" :"<<_port<<" success!";
     _conn_state = CONN_CONNECTED;
+    if(init_epoll() < 0)return -1;
     return 1;
 }
 
-int socket_client::init()
+int socket_client::init_epoll()
 {
     if(_socket_fd < 0 || _epoll_handler == NULL)return -1;
     set_nodelay(_socket_fd,false);
@@ -118,7 +125,11 @@ int socket_client::on_read() {
                 packet_info packet;
                 msg_len = check_packet_info(_recv_buffer.data(),_recv_buffer.size(),&packet);
                 if(msg_len == 0)break;
-                if(msg_len < 0 )return msg_len;//error of message decode
+                if(msg_len < 0 )
+                {
+                    LOG(ERROR)<<"error decode message";
+                    return msg_len;//error of message decode
+                }
                 process_msg(&packet); 
 #endif
 				_recv_buffer.erase(_recv_buffer.begin(),

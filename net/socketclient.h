@@ -30,8 +30,9 @@ namespace omg {
             socket_client(int fd,sockaddr_in& addr_in,epoll_handler* handler );
             socket_client(std::string ip,int port,epoll_handler* handler);
             virtual ~socket_client();
-            int init();
+            int init_epoll();
             int connect();
+            int re_connect();
             virtual int on_read();
             virtual int on_write();
             virtual int on_error();

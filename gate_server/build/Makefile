@@ -184,6 +184,54 @@ __/gate_application.cpp.s:
 	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.s
 .PHONY : __/gate_application.cpp.s
 
+__/gate_server.o: __/gate_server.cpp.o
+.PHONY : __/gate_server.o
+
+# target to build an object file
+__/gate_server.cpp.o:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.o
+.PHONY : __/gate_server.cpp.o
+
+__/gate_server.i: __/gate_server.cpp.i
+.PHONY : __/gate_server.i
+
+# target to preprocess a source file
+__/gate_server.cpp.i:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.i
+.PHONY : __/gate_server.cpp.i
+
+__/gate_server.s: __/gate_server.cpp.s
+.PHONY : __/gate_server.s
+
+# target to generate assembly for a file
+__/gate_server.cpp.s:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.s
+.PHONY : __/gate_server.cpp.s
+
+__/server_conns.o: __/server_conns.cpp.o
+.PHONY : __/server_conns.o
+
+# target to build an object file
+__/server_conns.cpp.o:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.o
+.PHONY : __/server_conns.cpp.o
+
+__/server_conns.i: __/server_conns.cpp.i
+.PHONY : __/server_conns.i
+
+# target to preprocess a source file
+__/server_conns.cpp.i:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.i
+.PHONY : __/server_conns.cpp.i
+
+__/server_conns.s: __/server_conns.cpp.s
+.PHONY : __/server_conns.s
+
+# target to generate assembly for a file
+__/server_conns.cpp.s:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.s
+.PHONY : __/server_conns.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -202,6 +250,12 @@ help:
 	@echo "... __/gate_application.o"
 	@echo "... __/gate_application.i"
 	@echo "... __/gate_application.s"
+	@echo "... __/gate_server.o"
+	@echo "... __/gate_server.i"
+	@echo "... __/gate_server.s"
+	@echo "... __/server_conns.o"
+	@echo "... __/server_conns.i"
+	@echo "... __/server_conns.s"
 .PHONY : help
 
 
