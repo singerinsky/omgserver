@@ -45,6 +45,7 @@ public:
 
     int do_get_soccer_player_info(const packet_info* packet);
     int do_check_client_log(const packet_info* packet);
+    int do_register_gate(const packet_info* packet);
 
 public:
 	int index;

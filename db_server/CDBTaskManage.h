@@ -37,7 +37,7 @@ class CDBTaskManage {
                 return ;
             }
             int process_index = seq%_job_vec.size();
-            (*_job_vec[process_index])->AddTask(event);
+            (_job_vec[process_index])->AddTask(event);
         }
 
     private:

@@ -7,7 +7,8 @@
 #include "../net/client_socket.h"
 #include "../common/CThreadManage.h"
 #include "DBConnectionPool.h"
-#include "CWorldEventHandler.h"
+#include "CDBhandlerJob.h"
+#include "CDBTaskManage.h"
 #include "DBAccepter.h"
 #define my_debug
 
@@ -81,10 +82,6 @@ int main(int argc,char** argv){
 	//载入数据库的连接信息
 	load_db_config();
 
-	//init db msg dispatcher
-	CDBMsgDispatcher *msg_dispatcher = new CDBMsgDispatcher();
-
-	msg_dispatcher->start(false);
 	//初始化epoll_reactor_
 	omg::epoll_handler *handler = new omg::epoll_handler();
 	handler->init_epoll(EPOLL_SIZE,10,true);
@@ -92,7 +89,6 @@ int main(int argc,char** argv){
 	db_accepter* accepter = new db_accepter(handler);
     accepter->init(g_db_server_info.server_ip.c_str(),g_db_server_info.listening_port);
 	int rst = handler->add_event_handler(accepter->get_sock_fd(),accepter);
-	handler->set_msg_dispatcher(msg_dispatcher);
 	handler->start(false);
 
     pthread_t thread_id = handler->get_thread_id();
@@ -101,13 +97,13 @@ int main(int argc,char** argv){
 	omg::CThreadManage::BeginPoolThread(5,10);
 	DBConnectionPool *conn= DBConnectionPool::GetInstance();
 	for(int i=0;i<5;i++){
-		CDBQueryhandlerJob* job = new CDBQueryhandlerJob(conn,msg_dispatcher,i+1);
+		CDBQueryhandlerJob* job = new CDBQueryhandlerJob(conn,i+1);
 		CDBTaskManage::GetInstance()->AddProcessThread(job);
 		omg::CThreadManage::AddJob(job);
 	}
 	//开启线程池,启动轮训线程,读取世界的事件
-	CWorldEventHandler *world_event = new CWorldEventHandler(conn,msg_dispatcher);
-	omg::CThreadManage::AddJob(world_event);
+	//CWorldEventHandler *world_event = new CWorldEventHandler(conn,msg_dispatcher);
+	//omg::CThreadManage::AddJob(world_event);
 
     pthread_join(thread_id,NULL);
 }

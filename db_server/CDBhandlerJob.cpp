@@ -27,8 +27,8 @@ void CDBQueryhandlerJob::ExecuteJob() {
     }
 }
 
-void CDBQueryhandlerJob::QueryClientLoginInfo();
-
+void CDBQueryhandlerJob::QueryClientLoginInfo()
+{
 }
 
 

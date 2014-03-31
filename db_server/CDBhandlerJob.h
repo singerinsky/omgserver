@@ -26,8 +26,7 @@ class db_event
 
 class CDBQueryhandlerJob: public omg::IJob {
     public:
-        CDBQueryhandlerJob(DBConnectionPool* pool,IMsgDispatcher* dispatcher,int number):_conn(*pool,true){
-            _msg_dispatcher = dispatcher;
+        CDBQueryhandlerJob(DBConnectionPool* pool,int number):_conn(*pool,true){
             _task_all = 0;
             _task_processed = 0;
             _id = number;
@@ -44,7 +43,6 @@ class CDBQueryhandlerJob: public omg::IJob {
         }
     private:
         mysqlpp::ScopedConnection _conn;
-        IMsgDispatcher* _msg_dispatcher;
         int  _task_all;
         int  _task_processed;
         int  _id;
