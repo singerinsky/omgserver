@@ -328,30 +328,6 @@ __/DBConnectionPool_test.cpp.s:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/DBConnectionPool_test.cpp.s
 .PHONY : __/DBConnectionPool_test.cpp.s
 
-__/dbmsg_process.o: __/dbmsg_process.cpp.o
-.PHONY : __/dbmsg_process.o
-
-# target to build an object file
-__/dbmsg_process.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.o
-.PHONY : __/dbmsg_process.cpp.o
-
-__/dbmsg_process.i: __/dbmsg_process.cpp.i
-.PHONY : __/dbmsg_process.i
-
-# target to preprocess a source file
-__/dbmsg_process.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.i
-.PHONY : __/dbmsg_process.cpp.i
-
-__/dbmsg_process.s: __/dbmsg_process.cpp.s
-.PHONY : __/dbmsg_process.s
-
-# target to generate assembly for a file
-__/dbmsg_process.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/dbmsg_process.cpp.s
-.PHONY : __/dbmsg_process.cpp.s
-
 __/main.o: __/main.cpp.o
 .PHONY : __/main.o
 
@@ -412,9 +388,6 @@ help:
 	@echo "... __/DBConnectionPool_test.o"
 	@echo "... __/DBConnectionPool_test.i"
 	@echo "... __/DBConnectionPool_test.s"
-	@echo "... __/dbmsg_process.o"
-	@echo "... __/dbmsg_process.i"
-	@echo "... __/dbmsg_process.s"
 	@echo "... __/main.o"
 	@echo "... __/main.i"
 	@echo "... __/main.s"
