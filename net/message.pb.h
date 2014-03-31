@@ -36,6 +36,8 @@ class ClientHeartBeatRequest;
 class ClientHeartBeatResponse;
 class ClientLoginRequest;
 class ClientLoginResponse;
+class GateServerRegisterRequest;
+class GateServerRegisterResponse;
 
 enum MSG_ACTION_TYPE {
   MSG_REQUEST = 0,
@@ -60,11 +62,12 @@ inline bool MSG_ACTION_TYPE_Parse(
 enum MessageType {
   MSG_SOCCER_PLAYER_INFO = 1,
   MSG_HEART_BEAT = 2,
-  MSG_CLIENT_LOGIN = 3
+  MSG_CLIENT_LOGIN = 3,
+  MSG_GATE_SERVER_REGISTER = 4
 };
 bool MessageType_IsValid(int value);
 const MessageType MessageType_MIN = MSG_SOCCER_PLAYER_INFO;
-const MessageType MessageType_MAX = MSG_CLIENT_LOGIN;
+const MessageType MessageType_MAX = MSG_GATE_SERVER_REGISTER;
 const int MessageType_ARRAYSIZE = MessageType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor();
@@ -635,6 +638,170 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static ClientLoginResponse* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class GateServerRegisterRequest : public ::google::protobuf::Message {
+ public:
+  GateServerRegisterRequest();
+  virtual ~GateServerRegisterRequest();
+  
+  GateServerRegisterRequest(const GateServerRegisterRequest& from);
+  
+  inline GateServerRegisterRequest& operator=(const GateServerRegisterRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+  
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+  
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GateServerRegisterRequest& default_instance();
+  
+  void Swap(GateServerRegisterRequest* other);
+  
+  // implements Message ----------------------------------------------
+  
+  GateServerRegisterRequest* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const GateServerRegisterRequest& from);
+  void MergeFrom(const GateServerRegisterRequest& from);
+  void Clear();
+  bool IsInitialized() const;
+  
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  
+  ::google::protobuf::Metadata GetMetadata() const;
+  
+  // nested types ----------------------------------------------------
+  
+  // accessors -------------------------------------------------------
+  
+  // required int32 server_index = 1;
+  inline bool has_server_index() const;
+  inline void clear_server_index();
+  static const int kServerIndexFieldNumber = 1;
+  inline ::google::protobuf::int32 server_index() const;
+  inline void set_server_index(::google::protobuf::int32 value);
+  
+  // @@protoc_insertion_point(class_scope:GateServerRegisterRequest)
+ private:
+  inline void set_has_server_index();
+  inline void clear_has_server_index();
+  
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  
+  ::google::protobuf::int32 server_index_;
+  
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+  
+  void InitAsDefaultInstance();
+  static GateServerRegisterRequest* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class GateServerRegisterResponse : public ::google::protobuf::Message {
+ public:
+  GateServerRegisterResponse();
+  virtual ~GateServerRegisterResponse();
+  
+  GateServerRegisterResponse(const GateServerRegisterResponse& from);
+  
+  inline GateServerRegisterResponse& operator=(const GateServerRegisterResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+  
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+  
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GateServerRegisterResponse& default_instance();
+  
+  void Swap(GateServerRegisterResponse* other);
+  
+  // implements Message ----------------------------------------------
+  
+  GateServerRegisterResponse* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const GateServerRegisterResponse& from);
+  void MergeFrom(const GateServerRegisterResponse& from);
+  void Clear();
+  bool IsInitialized() const;
+  
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  
+  ::google::protobuf::Metadata GetMetadata() const;
+  
+  // nested types ----------------------------------------------------
+  
+  // accessors -------------------------------------------------------
+  
+  // required int32 ret = 2;
+  inline bool has_ret() const;
+  inline void clear_ret();
+  static const int kRetFieldNumber = 2;
+  inline ::google::protobuf::int32 ret() const;
+  inline void set_ret(::google::protobuf::int32 value);
+  
+  // @@protoc_insertion_point(class_scope:GateServerRegisterResponse)
+ private:
+  inline void set_has_ret();
+  inline void clear_has_ret();
+  
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  
+  ::google::protobuf::int32 ret_;
+  
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+  
+  void InitAsDefaultInstance();
+  static GateServerRegisterResponse* default_instance_;
+};
 // ===================================================================
 
 
@@ -1046,6 +1213,58 @@ inline ::std::string* ClientLoginResponse::release_player_name() {
     player_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
     return temp;
   }
+}
+
+// -------------------------------------------------------------------
+
+// GateServerRegisterRequest
+
+// required int32 server_index = 1;
+inline bool GateServerRegisterRequest::has_server_index() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void GateServerRegisterRequest::set_has_server_index() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void GateServerRegisterRequest::clear_has_server_index() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void GateServerRegisterRequest::clear_server_index() {
+  server_index_ = 0;
+  clear_has_server_index();
+}
+inline ::google::protobuf::int32 GateServerRegisterRequest::server_index() const {
+  return server_index_;
+}
+inline void GateServerRegisterRequest::set_server_index(::google::protobuf::int32 value) {
+  set_has_server_index();
+  server_index_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// GateServerRegisterResponse
+
+// required int32 ret = 2;
+inline bool GateServerRegisterResponse::has_ret() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void GateServerRegisterResponse::set_has_ret() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void GateServerRegisterResponse::clear_has_ret() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void GateServerRegisterResponse::clear_ret() {
+  ret_ = 0;
+  clear_has_ret();
+}
+inline ::google::protobuf::int32 GateServerRegisterResponse::ret() const {
+  return ret_;
+}
+inline void GateServerRegisterResponse::set_ret(::google::protobuf::int32 value) {
+  set_has_ret();
+  ret_ = value;
 }
 
 

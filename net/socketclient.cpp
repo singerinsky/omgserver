@@ -22,10 +22,8 @@ socket_client::socket_client(int fd, sockaddr_in& addr, epoll_handler* handler) 
     _connected = false;
 	_lock.init();
 	_epoll_handler = handler;
-	_conn_id._fd = fd;
-	_conn_id._timestamp = time(NULL);
     _sin = addr;
-
+    reset_id();
     init_epoll();
 }
 
@@ -39,16 +37,24 @@ socket_client::socket_client(std::string ip,int port,epoll_handler* handler)
     _epoll_handler = handler;
 	int fd = socket(AF_INET,SOCK_STREAM,0);
     _socket_fd = fd;
+    reset_id();
 }
 
 socket_client::~socket_client() {
 	// TODO Auto-generated destructor stub
 }
 
+void socket_client::reset_id()
+{
+    _conn_id._fd = _socket_fd;
+    _conn_id._timestamp = time(NULL);
+}
+
 int socket_client::re_connect()
 {
 	int fd = socket(AF_INET,SOCK_STREAM,0);
     _socket_fd = fd;
+    reset_id();
     return connect();
 }
 

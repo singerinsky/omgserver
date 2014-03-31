@@ -49,6 +49,9 @@ int GameServerClient::process_msg(packet_info* packet)
             do_get_soccer_player_info(packet);
             //process_ret = _packet.decode(packet->data,packet->size);
             break;
+        case CS_MSG_GATE_REGISTER_REQ:
+            do_register_gate(packet);
+            break;
         default:
             LOG(ERROR)<<"unknown message "<<packet_type;
     }
@@ -81,6 +84,25 @@ int GameServerClient::do_check_client_log(const packet_info* packet)
     LOG(INFO)<<"client "<<player_id<<" use password"<<player_pwd.c_str()<<" with code"<<md5_code.c_str();
     return 1; 
 }
+
+int GameServerClient::do_register_gate(const packet_info* packet)
+{
+    cs_gate_register_request request;
+    if(request.decode(packet->data,packet->size) != packet->size)return -1;
+    LOG(INFO)<<"Message register gate server "<<get_socket_fd()<<" info:size  "<<packet->size;
+    int server_index = request.body.server_index();
+    if(CServerManage::GetInstance()->GetGameServerByIndex(server_index) != NULL)
+    {
+        LOG(ERROR)<<"same game client has regitster"; 
+        return -1;
+    }
+    CServerManage::GetInstance()->RegisterServer(server_index, this);
+    LOG(INFO)<<"gate server"<<server_index<<" register";
+    return 1; 
+}
+
+
+
 
 
 

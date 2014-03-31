@@ -16,6 +16,9 @@ enum
 
     CS_MSG_CLIENT_LOGIN_REQ         = MSG_CLIENT_LOGIN  <<2|MSG_REQUEST,
     CS_MSG_CLIENT_LOGIN_REP         = MSG_CLIENT_LOGIN  <<2|MSG_RESPONSE,
+
+    CS_MSG_GATE_REGISTER_REQ    = MSG_GATE_SERVER_REGISTER << 2|MSG_REQUEST,
+    CS_MSG_GATE_REGISTER_REP    = MSG_GATE_SERVER_REGISTER << 2|MSG_RESPONSE,
 };
 
 
@@ -28,6 +31,9 @@ typedef cs_packet<CS_MSG_HEART_BEAT_REP,ClientHeartBeatResponse> cs_client_hb_re
 
 typedef cs_packet<CS_MSG_CLIENT_LOGIN_REQ,ClientLoginRequest> cs_client_login_request;
 typedef cs_packet<CS_MSG_CLIENT_LOGIN_REP,ClientLoginResponse> cs_client_login_response;
+
+typedef cs_packet<CS_MSG_GATE_REGISTER_REQ,GateServerRegisterRequest> cs_gate_register_request;
+typedef cs_packet<CS_MSG_GATE_REGISTER_REP,GateServerRegisterResponse> cs_gate_register_response;
 
 
 #endif

@@ -12,6 +12,7 @@ enum MessageType
     MSG_SOCCER_PLAYER_INFO = 1;
     MSG_HEART_BEAT          = 2;//心跳
     MSG_CLIENT_LOGIN        =3;//client login
+    MSG_GATE_SERVER_REGISTER =4;//gate server register
 }
 
 message SoccerPlayerInfoRequest
@@ -47,4 +48,14 @@ message ClientLoginResponse
 {
     required int32 ret = 1;
     required string player_name = 2;
+}
+
+message GateServerRegisterRequest
+{
+    required int32 server_index = 1;
+}
+
+message GateServerRegisterResponse
+{
+    required int32 ret = 2;
 }

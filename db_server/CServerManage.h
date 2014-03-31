@@ -28,8 +28,7 @@ public:
         _timer.set_owner(this);        
         _timer.set_expired(ServerRun->get_run_ms()+5000);
         _timer_mgr->add_timer(&_timer);
-     //   _connection_status = WAIT_LOGIN;
-        _connection_status = ALREADY_LOGIN;
+        _connection_status = WAIT_LOGIN;
 	}
 
 	~GameServerClient(){
@@ -71,7 +70,7 @@ public:
 		return _m_instance;
 	}
 	void RegisterServer(int index, GameServerClient* client) {
-		VLOG(2)<<"GameServer connect from "<<client->get_ip_port_str().c_str();
+		VLOG(2)<<"GateServer from "<<client->get_ip_port_str().c_str();
 		_server_map[index] = client;
 	}
 
@@ -99,6 +98,19 @@ public:
 			}
 		return server_pick;
 	}
+
+    GameServerClient* GetGameServerByIndex(int index)
+    {
+        _lock.lock();
+        itr = _server_map.find(index);
+		if(itr != _server_map.end()) {
+				_lock.unlock();
+				return itr->second;
+		}
+		_lock.unlock();
+		return NULL;
+	
+    }
 
 	GameServerClient* GetGameServerBySocketFd(int fd){
 		_lock.lock();
