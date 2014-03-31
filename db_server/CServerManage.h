@@ -102,6 +102,7 @@ public:
     GameServerClient* GetGameServerByIndex(int index)
     {
         _lock.lock();
+        std::map<int,GameServerClient*>::iterator itr;
         itr = _server_map.find(index);
 		if(itr != _server_map.end()) {
 				_lock.unlock();

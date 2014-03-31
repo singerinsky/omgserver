@@ -8,7 +8,6 @@
 #include "../common/CThreadManage.h"
 #include "DBConnectionPool.h"
 #include "CWorldEventHandler.h"
-#include "CDBMsgDispatcher.h"
 #include "DBAccepter.h"
 #define my_debug
 

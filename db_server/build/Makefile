@@ -112,30 +112,6 @@ db_server/fast:
 	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/build
 .PHONY : db_server/fast
 
-__/CDBMsgDispatcher.o: __/CDBMsgDispatcher.cpp.o
-.PHONY : __/CDBMsgDispatcher.o
-
-# target to build an object file
-__/CDBMsgDispatcher.cpp.o:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.o
-.PHONY : __/CDBMsgDispatcher.cpp.o
-
-__/CDBMsgDispatcher.i: __/CDBMsgDispatcher.cpp.i
-.PHONY : __/CDBMsgDispatcher.i
-
-# target to preprocess a source file
-__/CDBMsgDispatcher.cpp.i:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.i
-.PHONY : __/CDBMsgDispatcher.cpp.i
-
-__/CDBMsgDispatcher.s: __/CDBMsgDispatcher.cpp.s
-.PHONY : __/CDBMsgDispatcher.s
-
-# target to generate assembly for a file
-__/CDBMsgDispatcher.cpp.s:
-	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/__/CDBMsgDispatcher.cpp.s
-.PHONY : __/CDBMsgDispatcher.cpp.s
-
 __/CDBTaskManage.o: __/CDBTaskManage.cpp.o
 .PHONY : __/CDBTaskManage.o
 
@@ -361,9 +337,6 @@ help:
 	@echo "... db_server"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... __/CDBMsgDispatcher.o"
-	@echo "... __/CDBMsgDispatcher.i"
-	@echo "... __/CDBMsgDispatcher.s"
 	@echo "... __/CDBTaskManage.o"
 	@echo "... __/CDBTaskManage.i"
 	@echo "... __/CDBTaskManage.s"

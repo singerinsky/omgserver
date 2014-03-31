@@ -29,7 +29,7 @@ bool GateServerGlobal::init(epoll_handler* handler)
     {
         db_conn->on_timeout(ServerRun->get_timer_mgr()); 
     }
-
+    db_conn->send_register_message();
 
     return 1;
 }

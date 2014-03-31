@@ -1,4 +1,5 @@
 #include "server_conns.h"
+#include "../message/message_define.h"
 
 int  db_connection::process_msg(packet_info* info)
 {
@@ -40,3 +41,9 @@ void db_connection::forward_server_packet(packet_info* info)
     send_msg(info->data,info->size);
 }
  
+void db_connection::send_register_message()
+{
+    cs_gate_register_request request;
+    request.body.set_server_index(1);
+    send_packet_msg(&request);
+}

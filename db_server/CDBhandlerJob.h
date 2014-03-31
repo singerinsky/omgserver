@@ -17,6 +17,12 @@
 #include "DBConnectionPool.h"
 
 using namespace omg;
+class db_event
+{
+    public:
+        int seq;
+        std::string sql_str;
+};
 
 class CDBQueryhandlerJob: public omg::IJob {
     public:

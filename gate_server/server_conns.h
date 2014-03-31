@@ -17,6 +17,7 @@ class db_connection: public socket_client
         void     on_timeout(timer_manager* time_mgr);
         virtual int on_error();
         void    forward_server_packet(packet_info* info);
+        void    send_register_message();
     private:
         template_timer<db_connection,&db_connection::on_timeout> _conn_timer;
 };
