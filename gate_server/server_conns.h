@@ -11,6 +11,7 @@ class db_connection: public socket_client
     public:
         db_connection(std::string ip,int port,epoll_handler* handler):socket_client(ip,port,handler)
         {
+            _conn_timer.set_owner(this);
         }
         virtual int  process_msg(packet_info* info);
         void     on_timeout(timer_manager* time_mgr);

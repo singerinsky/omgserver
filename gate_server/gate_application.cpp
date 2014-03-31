@@ -69,9 +69,7 @@ omg::epoll_handler*  epoll_server_thread_start(){
     TiXmlElement *ele = firstNode->ToElement();
     const char* ip_buffer = ele->Attribute("ip");
     StringBuffer port_buffer(ele->Attribute("port"));
-    StringBuffer s_port_buffer(ele->Attribute("s_port"));
     int port = atoi(port_buffer.c_str());
-    int s_port = atoi(s_port_buffer.c_str());
 
     omg::epoll_handler *handler = new omg::epoll_handler();
     handler->init_epoll(EPOLL_SIZE,10,true);
