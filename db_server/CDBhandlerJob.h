@@ -17,9 +17,18 @@
 #include "DBConnectionPool.h"
 
 using namespace omg;
+
+enum DB_OPERATE
+{
+    COMMON_DEL,
+    COMMON_UPDATE,
+    QUERY_LOGIN_INFO,
+};
+
 class db_event
 {
     public:
+        DB_OPERATE operate_type;
         int seq;
         std::string sql_str;
 };
@@ -48,6 +57,8 @@ class CDBQueryhandlerJob: public omg::IJob {
         int  _id;
 
         void QueryClientLoginInfo(db_event*);
+        void DoCommonDel(db_event*);
+        void DoCommonUpdate(db_event*);
     private:
         omg::ConcurrenceLockQueue<db_event,omg::MutexLock>	_msg_queue;
         //omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;

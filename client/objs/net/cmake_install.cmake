@@ -1,4 +1,4 @@
-# Install script for directory: /home/gl/omgserver/net
+# Install script for directory: /home/gl/workspace/omgserver/net
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

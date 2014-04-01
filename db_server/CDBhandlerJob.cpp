@@ -31,7 +31,8 @@ void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
 {
     LOG(INFO)<<"DO SQL QUREY";
     LOG(INFO)<<event->sql_str.c_str();
-    mysqlpp::Query query = _conn.query(event->sql_str.c_str());
+
+    mysqlpp::Query query = _conn->query(event->sql_str.c_str());
     if(mysqlpp::StoreQueryResult ret = query.store())
     {
         LOG(INFO)<<"found "<<ret.num_rows();
@@ -39,6 +40,33 @@ void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
     {
         LOG(INFO)<<"nothing found!!"; 
     }
+}
+
+void CDBQueryhandlerJob::DoCommonDel(db_event*)
+{
+    mysqlpp::Query query = _conn->query(event->sql_str.c_str()); 
+    if(mysqlpp::StoreQueryResult ret = query.store())
+    {
+    
+    }
+    else
+    {
+    
+    }
+}
+
+void CDBQueryhandlerJob::DoCommonUpdate(db_event*)
+{
+    mysqlpp::Query query = _conn->query(event->sql_str.c_str()); 
+    if(mysqlpp::StoreQueryResult ret = query.store())
+    {
+    
+    }
+    else
+    {
+    
+    }
+
 }
 
 

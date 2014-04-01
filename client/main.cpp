@@ -85,7 +85,7 @@ void send_soccer_player_info(int fd)
 void send_client_login_message(int fd)
 {
     cs_client_login_request request;
-    request.body.set_player_id(2009);
+    request.body.set_player_id(11);
     request.body.set_player_pwd("nice_body");
     request.body.set_md5_code("md5code");
     send_packet_msg(fd,&request);
