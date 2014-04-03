@@ -7,6 +7,8 @@
 #include <set>
 #include "../common/timer_manager.h"
 #include "../message/message_define.h"
+#include <memory>
+
 
 using namespace std;
 using namespace omg;
@@ -32,7 +34,7 @@ public:
 	}
 
 	~GameServerClient(){
-
+        VLOG(2)<<"delete game server client";
 	}
 
     void on_timeout(timer_manager* timer_mgr);
@@ -46,6 +48,7 @@ public:
     int do_get_soccer_player_info(const packet_info* packet);
     int do_check_client_log(const packet_info* packet);
     int do_register_gate(const packet_info* packet);
+    int do_common_update_insert(const packet_info* packet);
 
 public:
 	int index;
@@ -57,6 +60,8 @@ private:
     int _connection_status;
 };
 
+
+typedef shared_ptr<GameServerClient>   game_client_spr;
 class CServerManage {
 protected:
 	CServerManage() {
@@ -70,7 +75,8 @@ public:
 		}
 		return _m_instance;
 	}
-	void RegisterServer(int index, GameServerClient* client) {
+
+	void RegisterServer(int index, game_client_spr client) {
 		VLOG(2)<<"GateServer from "<<client->get_ip_port_str().c_str();
 		_server_map[index] = client;
 	}
@@ -82,28 +88,10 @@ public:
 		}
 	}
 
-	//先选取承载比赛最小的服务器
-	GameServerClient* PickServerToRunMatch() {
-		if (_server_map.size() <= 0) {
-			VLOG(1)<<"没有游戏服务器注册";
-			return NULL;
-		}
-
-		SERVER_ITR itr = _server_map.begin();
-		GameServerClient* server_pick = itr->second;
-		while(itr != _server_map.end()) {
-			if(itr->second->_match_list.size() < server_pick->_match_list.size()){
-					server_pick = itr->second;
-				}
-				itr++;
-			}
-		return server_pick;
-	}
-
-    GameServerClient* GetGameServerByIndex(int index)
+    game_client_spr GetGameServerByIndex(int index)
     {
         _lock.lock();
-        std::map<int,GameServerClient*>::iterator itr;
+        std::map<int,game_client_spr>::iterator itr;
         itr = _server_map.find(index);
 		if(itr != _server_map.end()) {
 				_lock.unlock();
@@ -114,7 +102,7 @@ public:
 	
     }
 
-	GameServerClient* GetGameServerBySocketFd(int fd){
+	game_client_spr GetGameServerBySocketFd(int fd){
 		_lock.lock();
 		SERVER_ITR itr = _server_map.begin();
 		while(itr != _server_map.end()) {
@@ -128,71 +116,15 @@ public:
 		return NULL;
 	}
 
-	//获取mid所在的比赛的服务器
-	GameServerClient* GetMatchRunServer(int mid) {
-		_lock.lock();
-		SERVER_ITR itr = _server_map.begin();
-		while(itr != _server_map.end()) {
-			std::set<int>::iterator itr_match = itr->second->_match_list.begin();
-			while(itr_match != itr->second->_match_list.end()){
-				if(*itr_match == mid){
-					_lock.unlock();
-					return itr->second;
-				}
-				itr_match++;
-			}
-			itr++;
-		}
-		_lock.unlock();
-		return NULL;
-	}
-
-	//比赛结束，移除比赛
-	void RemoveMatch(int server_index,int mid){
-		_lock.lock();
-		SERVER_ITR itr = _server_map.find(server_index);
-		if(itr != _server_map.end()){
-			itr->second->_match_list.erase(mid);
-		}
-		_lock.unlock();
-	}
-
-
-	//添加一个比赛到比赛服务器中
-	GameServerClient* AddNewMatch(int mid) {
-		_lock.lock();
-		GameServerClient* server = PickServerToRunMatch();
-		if(server != NULL) {
-			server->_match_list.insert(mid);
-		}
-		_lock.unlock();
-		return server;
-	}
-
-	GameServerClient* AddMatchToServerByIp(std::string ip,int mid){
-		_lock.lock();
-		std::map<int,GameServerClient*>::iterator itr = _server_map.begin();
-		while(itr != _server_map.end()){
-			if(itr->second->get_ip_port_str() == ip){
-				itr->second->_match_list.insert(mid);
-				_lock.unlock();
-				return itr->second;
-			}
-			itr++;
-		}
-		_lock.unlock();
-		return NULL;
-	}
-
-	int GetMatchServerOnlineCount(){
+    int GetMatchServerOnlineCount(){
 		return _server_map.size();	
 	}
 
 private:
 	static CServerManage* _m_instance;
 	omg::MutexLock _lock;
-	std::map<int,GameServerClient*> _server_map;
-	typedef std::map<int,GameServerClient*>::iterator SERVER_ITR;
+	std::map<int,game_client_spr> _server_map;
+	typedef std::map<int,game_client_spr>::iterator SERVER_ITR;
 };
 
 #endif

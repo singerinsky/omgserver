@@ -1,4 +1,4 @@
-# Install script for directory: /home/gl/omgserver/gate_server/build
+# Install script for directory: /home/gl/workspace/omgserver/gate_server/build
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

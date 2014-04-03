@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/omgserver
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/omgserver
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles /home/gl/omgserver/db_server/game_lib/common/CMakeFiles/progress.marks
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles /home/gl/workspace/omgserver/db_server/game_lib/common/CMakeFiles/progress.marks
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/clean
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 db_server/game_lib/common/CMakeFiles/common.dir/rule:
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/CMakeFiles/common.dir/rule
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 db_server/game_lib/common/CMakeFiles/common.dir/rule
 .PHONY : db_server/game_lib/common/CMakeFiles/common.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ common: db_server/game_lib/common/CMakeFiles/common.dir/rule
 
 # fast build rule for target.
 common/fast:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/build
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/build
 .PHONY : common/fast
 
 CEventThread.o: CEventThread.cpp.o
@@ -117,7 +117,7 @@ CEventThread.o: CEventThread.cpp.o
 
 # target to build an object file
 CEventThread.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CEventThread.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CEventThread.cpp.o
 .PHONY : CEventThread.cpp.o
 
 CEventThread.i: CEventThread.cpp.i
@@ -125,7 +125,7 @@ CEventThread.i: CEventThread.cpp.i
 
 # target to preprocess a source file
 CEventThread.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CEventThread.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CEventThread.cpp.i
 .PHONY : CEventThread.cpp.i
 
 CEventThread.s: CEventThread.cpp.s
@@ -133,7 +133,7 @@ CEventThread.s: CEventThread.cpp.s
 
 # target to generate assembly for a file
 CEventThread.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CEventThread.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CEventThread.cpp.s
 .PHONY : CEventThread.cpp.s
 
 CPoolThread.o: CPoolThread.cpp.o
@@ -141,7 +141,7 @@ CPoolThread.o: CPoolThread.cpp.o
 
 # target to build an object file
 CPoolThread.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CPoolThread.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CPoolThread.cpp.o
 .PHONY : CPoolThread.cpp.o
 
 CPoolThread.i: CPoolThread.cpp.i
@@ -149,7 +149,7 @@ CPoolThread.i: CPoolThread.cpp.i
 
 # target to preprocess a source file
 CPoolThread.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CPoolThread.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CPoolThread.cpp.i
 .PHONY : CPoolThread.cpp.i
 
 CPoolThread.s: CPoolThread.cpp.s
@@ -157,7 +157,7 @@ CPoolThread.s: CPoolThread.cpp.s
 
 # target to generate assembly for a file
 CPoolThread.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CPoolThread.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CPoolThread.cpp.s
 .PHONY : CPoolThread.cpp.s
 
 CThread.o: CThread.cpp.o
@@ -165,7 +165,7 @@ CThread.o: CThread.cpp.o
 
 # target to build an object file
 CThread.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThread.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThread.cpp.o
 .PHONY : CThread.cpp.o
 
 CThread.i: CThread.cpp.i
@@ -173,7 +173,7 @@ CThread.i: CThread.cpp.i
 
 # target to preprocess a source file
 CThread.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThread.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThread.cpp.i
 .PHONY : CThread.cpp.i
 
 CThread.s: CThread.cpp.s
@@ -181,7 +181,7 @@ CThread.s: CThread.cpp.s
 
 # target to generate assembly for a file
 CThread.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThread.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThread.cpp.s
 .PHONY : CThread.cpp.s
 
 CThreadManage.o: CThreadManage.cpp.o
@@ -189,7 +189,7 @@ CThreadManage.o: CThreadManage.cpp.o
 
 # target to build an object file
 CThreadManage.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThreadManage.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThreadManage.cpp.o
 .PHONY : CThreadManage.cpp.o
 
 CThreadManage.i: CThreadManage.cpp.i
@@ -197,7 +197,7 @@ CThreadManage.i: CThreadManage.cpp.i
 
 # target to preprocess a source file
 CThreadManage.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThreadManage.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThreadManage.cpp.i
 .PHONY : CThreadManage.cpp.i
 
 CThreadManage.s: CThreadManage.cpp.s
@@ -205,7 +205,7 @@ CThreadManage.s: CThreadManage.cpp.s
 
 # target to generate assembly for a file
 CThreadManage.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThreadManage.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CThreadManage.cpp.s
 .PHONY : CThreadManage.cpp.s
 
 CTimerEventHandler.o: CTimerEventHandler.cpp.o
@@ -213,7 +213,7 @@ CTimerEventHandler.o: CTimerEventHandler.cpp.o
 
 # target to build an object file
 CTimerEventHandler.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o
 .PHONY : CTimerEventHandler.cpp.o
 
 CTimerEventHandler.i: CTimerEventHandler.cpp.i
@@ -221,7 +221,7 @@ CTimerEventHandler.i: CTimerEventHandler.cpp.i
 
 # target to preprocess a source file
 CTimerEventHandler.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.i
 .PHONY : CTimerEventHandler.cpp.i
 
 CTimerEventHandler.s: CTimerEventHandler.cpp.s
@@ -229,7 +229,7 @@ CTimerEventHandler.s: CTimerEventHandler.cpp.s
 
 # target to generate assembly for a file
 CTimerEventHandler.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/CTimerEventHandler.cpp.s
 .PHONY : CTimerEventHandler.cpp.s
 
 IJob.o: IJob.cpp.o
@@ -237,7 +237,7 @@ IJob.o: IJob.cpp.o
 
 # target to build an object file
 IJob.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/IJob.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/IJob.cpp.o
 .PHONY : IJob.cpp.o
 
 IJob.i: IJob.cpp.i
@@ -245,7 +245,7 @@ IJob.i: IJob.cpp.i
 
 # target to preprocess a source file
 IJob.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/IJob.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/IJob.cpp.i
 .PHONY : IJob.cpp.i
 
 IJob.s: IJob.cpp.s
@@ -253,7 +253,7 @@ IJob.s: IJob.cpp.s
 
 # target to generate assembly for a file
 IJob.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/IJob.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/IJob.cpp.s
 .PHONY : IJob.cpp.s
 
 JobDequeue.o: JobDequeue.cpp.o
@@ -261,7 +261,7 @@ JobDequeue.o: JobDequeue.cpp.o
 
 # target to build an object file
 JobDequeue.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/JobDequeue.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/JobDequeue.cpp.o
 .PHONY : JobDequeue.cpp.o
 
 JobDequeue.i: JobDequeue.cpp.i
@@ -269,7 +269,7 @@ JobDequeue.i: JobDequeue.cpp.i
 
 # target to preprocess a source file
 JobDequeue.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/JobDequeue.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/JobDequeue.cpp.i
 .PHONY : JobDequeue.cpp.i
 
 JobDequeue.s: JobDequeue.cpp.s
@@ -277,7 +277,7 @@ JobDequeue.s: JobDequeue.cpp.s
 
 # target to generate assembly for a file
 JobDequeue.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/JobDequeue.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/JobDequeue.cpp.s
 .PHONY : JobDequeue.cpp.s
 
 MD5.o: MD5.cpp.o
@@ -285,7 +285,7 @@ MD5.o: MD5.cpp.o
 
 # target to build an object file
 MD5.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/MD5.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/MD5.cpp.o
 .PHONY : MD5.cpp.o
 
 MD5.i: MD5.cpp.i
@@ -293,7 +293,7 @@ MD5.i: MD5.cpp.i
 
 # target to preprocess a source file
 MD5.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/MD5.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/MD5.cpp.i
 .PHONY : MD5.cpp.i
 
 MD5.s: MD5.cpp.s
@@ -301,7 +301,7 @@ MD5.s: MD5.cpp.s
 
 # target to generate assembly for a file
 MD5.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/MD5.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/MD5.cpp.s
 .PHONY : MD5.cpp.s
 
 circular_buffer.o: circular_buffer.cpp.o
@@ -309,7 +309,7 @@ circular_buffer.o: circular_buffer.cpp.o
 
 # target to build an object file
 circular_buffer.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/circular_buffer.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/circular_buffer.cpp.o
 .PHONY : circular_buffer.cpp.o
 
 circular_buffer.i: circular_buffer.cpp.i
@@ -317,7 +317,7 @@ circular_buffer.i: circular_buffer.cpp.i
 
 # target to preprocess a source file
 circular_buffer.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/circular_buffer.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/circular_buffer.cpp.i
 .PHONY : circular_buffer.cpp.i
 
 circular_buffer.s: circular_buffer.cpp.s
@@ -325,7 +325,7 @@ circular_buffer.s: circular_buffer.cpp.s
 
 # target to generate assembly for a file
 circular_buffer.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/circular_buffer.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/circular_buffer.cpp.s
 .PHONY : circular_buffer.cpp.s
 
 mtrand.o: mtrand.cpp.o
@@ -333,7 +333,7 @@ mtrand.o: mtrand.cpp.o
 
 # target to build an object file
 mtrand.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.o
 .PHONY : mtrand.cpp.o
 
 mtrand.i: mtrand.cpp.i
@@ -341,7 +341,7 @@ mtrand.i: mtrand.cpp.i
 
 # target to preprocess a source file
 mtrand.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.i
 .PHONY : mtrand.cpp.i
 
 mtrand.s: mtrand.cpp.s
@@ -349,7 +349,7 @@ mtrand.s: mtrand.cpp.s
 
 # target to generate assembly for a file
 mtrand.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/mtrand.cpp.s
 .PHONY : mtrand.cpp.s
 
 server_application.o: server_application.cpp.o
@@ -357,7 +357,7 @@ server_application.o: server_application.cpp.o
 
 # target to build an object file
 server_application.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.o
 .PHONY : server_application.cpp.o
 
 server_application.i: server_application.cpp.i
@@ -365,7 +365,7 @@ server_application.i: server_application.cpp.i
 
 # target to preprocess a source file
 server_application.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.i
 .PHONY : server_application.cpp.i
 
 server_application.s: server_application.cpp.s
@@ -373,7 +373,7 @@ server_application.s: server_application.cpp.s
 
 # target to generate assembly for a file
 server_application.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/server_application.cpp.s
 .PHONY : server_application.cpp.s
 
 system_util.o: system_util.cpp.o
@@ -381,7 +381,7 @@ system_util.o: system_util.cpp.o
 
 # target to build an object file
 system_util.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.o
 .PHONY : system_util.cpp.o
 
 system_util.i: system_util.cpp.i
@@ -389,7 +389,7 @@ system_util.i: system_util.cpp.i
 
 # target to preprocess a source file
 system_util.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.i
 .PHONY : system_util.cpp.i
 
 system_util.s: system_util.cpp.s
@@ -397,7 +397,7 @@ system_util.s: system_util.cpp.s
 
 # target to generate assembly for a file
 system_util.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/system_util.cpp.s
 .PHONY : system_util.cpp.s
 
 timer_manager.o: timer_manager.cpp.o
@@ -405,7 +405,7 @@ timer_manager.o: timer_manager.cpp.o
 
 # target to build an object file
 timer_manager.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.o
 .PHONY : timer_manager.cpp.o
 
 timer_manager.i: timer_manager.cpp.i
@@ -413,7 +413,7 @@ timer_manager.i: timer_manager.cpp.i
 
 # target to preprocess a source file
 timer_manager.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.i
 .PHONY : timer_manager.cpp.i
 
 timer_manager.s: timer_manager.cpp.s
@@ -421,7 +421,7 @@ timer_manager.s: timer_manager.cpp.s
 
 # target to generate assembly for a file
 timer_manager.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f db_server/game_lib/common/CMakeFiles/common.dir/build.make db_server/game_lib/common/CMakeFiles/common.dir/timer_manager.cpp.s
 .PHONY : timer_manager.cpp.s
 
 # Help Target
@@ -483,6 +483,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

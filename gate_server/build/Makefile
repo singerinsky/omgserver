@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/omgserver
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/omgserver
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles /home/gl/omgserver/gate_server/build/CMakeFiles/progress.marks
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles /home/gl/workspace/omgserver/gate_server/build/CMakeFiles/progress.marks
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/clean
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 gate_server/build/CMakeFiles/gate_server.dir/rule:
-	cd /home/gl/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/CMakeFiles/gate_server.dir/rule
+	cd /home/gl/workspace/omgserver && $(MAKE) -f CMakeFiles/Makefile2 gate_server/build/CMakeFiles/gate_server.dir/rule
 .PHONY : gate_server/build/CMakeFiles/gate_server.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ gate_server: gate_server/build/CMakeFiles/gate_server.dir/rule
 
 # fast build rule for target.
 gate_server/fast:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
 .PHONY : gate_server/fast
 
 __/GateUserManager.o: __/GateUserManager.cpp.o
@@ -117,7 +117,7 @@ __/GateUserManager.o: __/GateUserManager.cpp.o
 
 # target to build an object file
 __/GateUserManager.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.o
 .PHONY : __/GateUserManager.cpp.o
 
 __/GateUserManager.i: __/GateUserManager.cpp.i
@@ -125,7 +125,7 @@ __/GateUserManager.i: __/GateUserManager.cpp.i
 
 # target to preprocess a source file
 __/GateUserManager.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.i
 .PHONY : __/GateUserManager.cpp.i
 
 __/GateUserManager.s: __/GateUserManager.cpp.s
@@ -133,7 +133,7 @@ __/GateUserManager.s: __/GateUserManager.cpp.s
 
 # target to generate assembly for a file
 __/GateUserManager.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateUserManager.cpp.s
 .PHONY : __/GateUserManager.cpp.s
 
 __/GateWayPlayer.o: __/GateWayPlayer.cpp.o
@@ -141,7 +141,7 @@ __/GateWayPlayer.o: __/GateWayPlayer.cpp.o
 
 # target to build an object file
 __/GateWayPlayer.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.o
 .PHONY : __/GateWayPlayer.cpp.o
 
 __/GateWayPlayer.i: __/GateWayPlayer.cpp.i
@@ -149,7 +149,7 @@ __/GateWayPlayer.i: __/GateWayPlayer.cpp.i
 
 # target to preprocess a source file
 __/GateWayPlayer.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.i
 .PHONY : __/GateWayPlayer.cpp.i
 
 __/GateWayPlayer.s: __/GateWayPlayer.cpp.s
@@ -157,7 +157,7 @@ __/GateWayPlayer.s: __/GateWayPlayer.cpp.s
 
 # target to generate assembly for a file
 __/GateWayPlayer.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/GateWayPlayer.cpp.s
 .PHONY : __/GateWayPlayer.cpp.s
 
 __/gate_application.o: __/gate_application.cpp.o
@@ -165,7 +165,7 @@ __/gate_application.o: __/gate_application.cpp.o
 
 # target to build an object file
 __/gate_application.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.o
 .PHONY : __/gate_application.cpp.o
 
 __/gate_application.i: __/gate_application.cpp.i
@@ -173,7 +173,7 @@ __/gate_application.i: __/gate_application.cpp.i
 
 # target to preprocess a source file
 __/gate_application.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.i
 .PHONY : __/gate_application.cpp.i
 
 __/gate_application.s: __/gate_application.cpp.s
@@ -181,7 +181,7 @@ __/gate_application.s: __/gate_application.cpp.s
 
 # target to generate assembly for a file
 __/gate_application.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_application.cpp.s
 .PHONY : __/gate_application.cpp.s
 
 __/gate_server.o: __/gate_server.cpp.o
@@ -189,7 +189,7 @@ __/gate_server.o: __/gate_server.cpp.o
 
 # target to build an object file
 __/gate_server.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.o
 .PHONY : __/gate_server.cpp.o
 
 __/gate_server.i: __/gate_server.cpp.i
@@ -197,7 +197,7 @@ __/gate_server.i: __/gate_server.cpp.i
 
 # target to preprocess a source file
 __/gate_server.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.i
 .PHONY : __/gate_server.cpp.i
 
 __/gate_server.s: __/gate_server.cpp.s
@@ -205,7 +205,7 @@ __/gate_server.s: __/gate_server.cpp.s
 
 # target to generate assembly for a file
 __/gate_server.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.s
 .PHONY : __/gate_server.cpp.s
 
 __/server_conns.o: __/server_conns.cpp.o
@@ -213,7 +213,7 @@ __/server_conns.o: __/server_conns.cpp.o
 
 # target to build an object file
 __/server_conns.cpp.o:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.o
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.o
 .PHONY : __/server_conns.cpp.o
 
 __/server_conns.i: __/server_conns.cpp.i
@@ -221,7 +221,7 @@ __/server_conns.i: __/server_conns.cpp.i
 
 # target to preprocess a source file
 __/server_conns.cpp.i:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.i
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.i
 .PHONY : __/server_conns.cpp.i
 
 __/server_conns.s: __/server_conns.cpp.s
@@ -229,7 +229,7 @@ __/server_conns.s: __/server_conns.cpp.s
 
 # target to generate assembly for a file
 __/server_conns.cpp.s:
-	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.s
+	cd /home/gl/workspace/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/server_conns.cpp.s
 .PHONY : __/server_conns.cpp.s
 
 # Help Target
@@ -267,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/workspace/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

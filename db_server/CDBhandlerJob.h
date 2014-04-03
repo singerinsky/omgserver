@@ -20,8 +20,8 @@ using namespace omg;
 
 enum DB_OPERATE
 {
-    COMMON_DEL,
-    COMMON_UPDATE,
+    COMMON_INSERT,
+    COMMON_UPDATE_DEL,
     QUERY_LOGIN_INFO,
 };
 
@@ -47,7 +47,7 @@ class CDBQueryhandlerJob: public omg::IJob {
         int		GetTaskInProcess(){
             return _task_all - _task_processed;
         }
-        int getId(){
+        int     getId(){
             return _id;
         }
     private:
@@ -57,12 +57,11 @@ class CDBQueryhandlerJob: public omg::IJob {
         int  _id;
 
         void QueryClientLoginInfo(db_event*);
-        void DoCommonDel(db_event*);
-        void DoCommonUpdate(db_event*);
+        void DoCommonDelOrUpdate(db_event*);
+        int  DoCommonInsert(db_event* event);
     private:
         omg::ConcurrenceLockQueue<db_event,omg::MutexLock>	_msg_queue;
         //omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;
-
 };
 
 #endif /* CDBHANDLERJOB_H_ */

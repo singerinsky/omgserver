@@ -30,9 +30,11 @@ void GameServerClient::reset()
 
 int GameServerClient::on_error()
 {
-    LOG(INFO)<<"gameserver client disconnet";
+    LOG(INFO)<<"gameserver client disconnet"<<index;
+    int temp = index;
     reset();
     fini();
+    CServerManage::GetInstance()->RemoveServer(temp);
     return 1;
 }
 
@@ -66,7 +68,6 @@ int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
     cs_soccer_player_request request; 
     if(request.decode(packet->data,packet->size) != packet->size)return -1;
     LOG(INFO)<<"Message get soccer player"<<get_socket_fd()<<" info:size  "<<packet->size;
-
     _connection_status = ALREADY_LOGIN;
     cs_soccer_player_response response;
     response.body.set_player_id(19);
@@ -74,6 +75,12 @@ int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
     response.body.set_age(29);
     send_packet_msg(&response);
 }
+
+int GameServerClient::do_common_update_insert(const packet_info* packet)
+{
+    return 1;
+}
+
 
 int GameServerClient::do_check_client_log(const packet_info* packet)
 {
@@ -87,6 +94,7 @@ int GameServerClient::do_check_client_log(const packet_info* packet)
     char    str_sql[256] = {0};
     snprintf(str_sql,256,"select * from  u_account where uid=%d and player_pwd='%s'",player_id,player_pwd.c_str());
     db_event *event = new db_event();
+    event->operate_type = QUERY_LOGIN_INFO;
     event->seq = index;
     event->sql_str = str_sql; 
     CDBTaskManage::GetInstance()->AddTaskEvent(event);
@@ -98,13 +106,16 @@ int GameServerClient::do_register_gate(const packet_info* packet)
     cs_gate_register_request request;
     if(request.decode(packet->data,packet->size) != packet->size)return -1;
     LOG(INFO)<<"Message register gate server "<<get_socket_fd()<<" info:size  "<<packet->size;
+
     int server_index = request.body.server_index();
     if(CServerManage::GetInstance()->GetGameServerByIndex(server_index) != NULL)
     {
         LOG(ERROR)<<"same game client has regitster"; 
         return -1;
     }
-    CServerManage::GetInstance()->RegisterServer(server_index, this);
+    shared_ptr<GameServerClient> ptr(this);
+    CServerManage::GetInstance()->RegisterServer(server_index, ptr);
+    ptr->index = server_index;
     LOG(INFO)<<"gate server"<<server_index<<" register";
     return 1; 
 }

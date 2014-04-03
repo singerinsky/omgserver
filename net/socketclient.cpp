@@ -42,6 +42,7 @@ socket_client::socket_client(std::string ip,int port,epoll_handler* handler)
 
 socket_client::~socket_client() {
 	// TODO Auto-generated destructor stub
+    VLOG(2)<<"delete socket client";
 }
 
 void socket_client::reset_id()
@@ -85,7 +86,6 @@ int socket_client::init_epoll()
 
 void socket_client::fini()
 {
-    LOG(INFO)<<"connection disconnect from server side";
     _epoll_handler->del_event_handler(_socket_fd);
     close(_socket_fd);
 }

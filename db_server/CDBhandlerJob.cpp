@@ -6,6 +6,8 @@
  */
 
 #include "CDBhandlerJob.h"
+#include "../message/message_define.h"
+#include "CServerManage.h"
 
 CDBQueryhandlerJob::~CDBQueryhandlerJob() {
     // TODO Auto-generated destructor stub
@@ -21,7 +23,18 @@ void CDBQueryhandlerJob::ExecuteJob() {
         db_event* event = _msg_queue.dequeue();
         if (event != NULL) {
             this->_task_processed++;
-            QueryClientLoginInfo(event);
+            if(event->operate_type == QUERY_LOGIN_INFO)
+            {
+                QueryClientLoginInfo(event);
+            }
+            else if(event->operate_type == COMMON_UPDATE_DEL)
+            {
+                DoCommonDelOrUpdate(event); 
+            }
+            else
+            {
+                DoCommonInsert(event); 
+            }
             delete event;
         }
     }
@@ -29,44 +42,54 @@ void CDBQueryhandlerJob::ExecuteJob() {
 
 void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
 {
-    LOG(INFO)<<"DO SQL QUREY";
-    LOG(INFO)<<event->sql_str.c_str();
-
     mysqlpp::Query query = _conn->query(event->sql_str.c_str());
+    cs_client_login_response response;
     if(mysqlpp::StoreQueryResult ret = query.store())
     {
         LOG(INFO)<<"found "<<ret.num_rows();
+        response.body.set_ret(1);
+        response.body.set_player_name(ret[0]["real_name"]);
     }else
     {
+        response.body.set_ret(-2);
         LOG(INFO)<<"nothing found!!"; 
     }
+    game_client_spr ptr = CServerManage::GetInstance()->GetGameServerByIndex(event->seq);
+    if(ptr)
+    {
+        ptr->send_packet_msg(&response); 
+    }
 }
 
-void CDBQueryhandlerJob::DoCommonDel(db_event*)
+void CDBQueryhandlerJob::DoCommonDelOrUpdate(db_event* event)
 {
     mysqlpp::Query query = _conn->query(event->sql_str.c_str()); 
-    if(mysqlpp::StoreQueryResult ret = query.store())
+    mysqlpp::SimpleResult ret = query.execute();
+    if(!ret)
     {
-    
+        LOG(ERROR)<<"-1:"<<query.error();
+        return; 
+    }
+    if(ret.rows() <= 0)
+    {
+        LOG(ERROR)<<"-1:"<<event->sql_str.c_str();
     }
     else
     {
-    
+        LOG(INFO)<<"1:"<<event->sql_str.c_str(); 
     }
 }
 
-void CDBQueryhandlerJob::DoCommonUpdate(db_event*)
+int CDBQueryhandlerJob::DoCommonInsert(db_event* event)
 {
-    mysqlpp::Query query = _conn->query(event->sql_str.c_str()); 
-    if(mysqlpp::StoreQueryResult ret = query.store())
+    mysqlpp::Query query = _conn->query(event->sql_str.c_str());
+    mysqlpp::SimpleResult ret = query.execute();
+    if(!ret)
     {
-    
+        LOG(ERROR)<<"-1:"<<query.error();
+        return -1; 
     }
-    else
-    {
-    
-    }
-
+    LOG(INFO)<<"1:"<<event->sql_str.c_str();
+    return ret.insert_id(); 
 }
-
 
