@@ -131,8 +131,9 @@ void protobuf_AssignDesc_message_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ClientLoginRequest));
   ClientLoginResponse_descriptor_ = file->message_type(5);
-  static const int ClientLoginResponse_offsets_[2] = {
+  static const int ClientLoginResponse_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, ret_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, player_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, player_name_),
   };
   ClientLoginResponse_reflection_ =
@@ -243,16 +244,16 @@ void protobuf_AddDesc_message_2eproto() {
     "tRequest\022\023\n\013client_time\030\001 \002(\005\".\n\027ClientH"
     "eartBeatResponse\022\023\n\013server_time\030\001 \002(\005\"M\n"
     "\022ClientLoginRequest\022\021\n\tplayer_id\030\001 \002(\005\022\022"
-    "\n\nplayer_pwd\030\002 \002(\t\022\020\n\010md5_code\030\003 \002(\t\"7\n\023"
-    "ClientLoginResponse\022\013\n\003ret\030\001 \002(\005\022\023\n\013play"
-    "er_name\030\002 \002(\t\"1\n\031GateServerRegisterReque"
-    "st\022\024\n\014server_index\030\001 \002(\005\")\n\032GateServerRe"
-    "gisterResponse\022\013\n\003ret\030\002 \002(\005*D\n\017MSG_ACTIO"
-    "N_TYPE\022\017\n\013MSG_REQUEST\020\000\022\020\n\014MSG_RESPONSE\020"
-    "\001\022\016\n\nMSG_NOTIFY\020\002*q\n\013MessageType\022\032\n\026MSG_"
-    "SOCCER_PLAYER_INFO\020\001\022\022\n\016MSG_HEART_BEAT\020\002"
-    "\022\024\n\020MSG_CLIENT_LOGIN\020\003\022\034\n\030MSG_GATE_SERVE"
-    "R_REGISTER\020\004", 652);
+    "\n\nplayer_pwd\030\002 \002(\t\022\020\n\010md5_code\030\003 \002(\t\"J\n\023"
+    "ClientLoginResponse\022\013\n\003ret\030\001 \002(\005\022\021\n\tplay"
+    "er_id\030\002 \002(\005\022\023\n\013player_name\030\003 \002(\t\"1\n\031Gate"
+    "ServerRegisterRequest\022\024\n\014server_index\030\001 "
+    "\002(\005\")\n\032GateServerRegisterResponse\022\013\n\003ret"
+    "\030\002 \002(\005*D\n\017MSG_ACTION_TYPE\022\017\n\013MSG_REQUEST"
+    "\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\nMSG_NOTIFY\020\002*q\n\013"
+    "MessageType\022\032\n\026MSG_SOCCER_PLAYER_INFO\020\001\022"
+    "\022\n\016MSG_HEART_BEAT\020\002\022\024\n\020MSG_CLIENT_LOGIN\020"
+    "\003\022\034\n\030MSG_GATE_SERVER_REGISTER\020\004", 671);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
@@ -1568,6 +1569,7 @@ void ClientLoginRequest::Swap(ClientLoginRequest* other) {
 
 #ifndef _MSC_VER
 const int ClientLoginResponse::kRetFieldNumber;
+const int ClientLoginResponse::kPlayerIdFieldNumber;
 const int ClientLoginResponse::kPlayerNameFieldNumber;
 #endif  // !_MSC_VER
 
@@ -1588,6 +1590,7 @@ ClientLoginResponse::ClientLoginResponse(const ClientLoginResponse& from)
 void ClientLoginResponse::SharedCtor() {
   _cached_size_ = 0;
   ret_ = 0;
+  player_id_ = 0;
   player_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
@@ -1627,6 +1630,7 @@ ClientLoginResponse* ClientLoginResponse::New() const {
 void ClientLoginResponse::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     ret_ = 0;
+    player_id_ = 0;
     if (has_player_name()) {
       if (player_name_ != &::google::protobuf::internal::kEmptyString) {
         player_name_->clear();
@@ -1654,12 +1658,28 @@ bool ClientLoginResponse::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(18)) goto parse_player_name;
+        if (input->ExpectTag(16)) goto parse_player_id;
         break;
       }
       
-      // required string player_name = 2;
+      // required int32 player_id = 2;
       case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+         parse_player_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &player_id_)));
+          set_has_player_id();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_player_name;
+        break;
+      }
+      
+      // required string player_name = 3;
+      case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_player_name:
@@ -1698,13 +1718,18 @@ void ClientLoginResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->ret(), output);
   }
   
-  // required string player_name = 2;
+  // required int32 player_id = 2;
+  if (has_player_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->player_id(), output);
+  }
+  
+  // required string player_name = 3;
   if (has_player_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->player_name().data(), this->player_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     ::google::protobuf::internal::WireFormatLite::WriteString(
-      2, this->player_name(), output);
+      3, this->player_name(), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -1720,14 +1745,19 @@ void ClientLoginResponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->ret(), target);
   }
   
-  // required string player_name = 2;
+  // required int32 player_id = 2;
+  if (has_player_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->player_id(), target);
+  }
+  
+  // required string player_name = 3;
   if (has_player_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->player_name().data(), this->player_name().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->player_name(), target);
+        3, this->player_name(), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -1748,7 +1778,14 @@ int ClientLoginResponse::ByteSize() const {
           this->ret());
     }
     
-    // required string player_name = 2;
+    // required int32 player_id = 2;
+    if (has_player_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->player_id());
+    }
+    
+    // required string player_name = 3;
     if (has_player_name()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1785,6 +1822,9 @@ void ClientLoginResponse::MergeFrom(const ClientLoginResponse& from) {
     if (from.has_ret()) {
       set_ret(from.ret());
     }
+    if (from.has_player_id()) {
+      set_player_id(from.player_id());
+    }
     if (from.has_player_name()) {
       set_player_name(from.player_name());
     }
@@ -1805,7 +1845,7 @@ void ClientLoginResponse::CopyFrom(const ClientLoginResponse& from) {
 }
 
 bool ClientLoginResponse::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
   
   return true;
 }
@@ -1813,6 +1853,7 @@ bool ClientLoginResponse::IsInitialized() const {
 void ClientLoginResponse::Swap(ClientLoginResponse* other) {
   if (other != this) {
     std::swap(ret_, other->ret_);
+    std::swap(player_id_, other->player_id_);
     std::swap(player_name_, other->player_name_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);

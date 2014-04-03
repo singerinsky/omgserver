@@ -6,6 +6,9 @@ int  db_connection::process_msg(packet_info* info)
     int type = info->type;
     switch(type)
     {
+        case CS_MSG_CLIENT_LOGIN_REP:
+            do_login_response(info);              
+            break;
         default:
             LOG(ERROR)<<"unknown message not handler"<<type;
     }
@@ -46,4 +49,17 @@ void db_connection::send_register_message()
     cs_gate_register_request request;
     request.body.set_server_index(1);
     send_packet_msg(&request);
+}
+
+void db_connection::do_login_response(packet_info* info)
+{
+   cs_client_login_response response;
+   if(!response.decode(info->data,info->size))
+   {
+        LOG(ERROR)<<"decode failed ..."; 
+        return;
+   }
+
+   LOG(INFO)<<"login name is "<<response.body.player_name();
+   LOG(INFO)<<"login id is "<<response.body.player_id();
 }

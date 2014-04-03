@@ -116,6 +116,7 @@ int GameServerClient::do_register_gate(const packet_info* packet)
     shared_ptr<GameServerClient> ptr(this);
     CServerManage::GetInstance()->RegisterServer(server_index, ptr);
     ptr->index = server_index;
+    ptr->set_connection_status(ALREADY_LOGIN);
     LOG(INFO)<<"gate server"<<server_index<<" register";
     return 1; 
 }

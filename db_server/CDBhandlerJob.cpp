@@ -48,6 +48,7 @@ void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
     {
         LOG(INFO)<<"found "<<ret.num_rows();
         response.body.set_ret(1);
+        response.body.set_player_id(ret[0]["uid"]);
         response.body.set_player_name(ret[0]["real_name"]);
     }else
     {

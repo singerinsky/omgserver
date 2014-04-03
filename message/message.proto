@@ -47,7 +47,8 @@ message ClientLoginRequest
 message ClientLoginResponse
 {
     required int32 ret = 1;
-    required string player_name = 2;
+    optional int32 player_id = 2;
+    optional string player_name = 3;
 }
 
 message GateServerRegisterRequest

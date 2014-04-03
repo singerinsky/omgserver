@@ -42,6 +42,10 @@ public:
     int on_error();
 
     void reset();
+    void set_connection_status(int value)
+    {
+        _connection_status = value;
+    }
 
     int process_msg(packet_info * packet);
 
@@ -62,6 +66,7 @@ private:
 
 
 typedef shared_ptr<GameServerClient>   game_client_spr;
+
 class CServerManage {
 protected:
 	CServerManage() {

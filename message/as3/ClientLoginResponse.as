@@ -21,7 +21,14 @@ package  {
 		/**
 		 *  @private
 		 */
-		public static const PLAYER_NAME:FieldDescriptor$TYPE_STRING = new FieldDescriptor$TYPE_STRING("ClientLoginResponse.player_name", "playerName", (2 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
+		public static const PLAYER_ID:FieldDescriptor$TYPE_INT32 = new FieldDescriptor$TYPE_INT32("ClientLoginResponse.player_id", "playerId", (2 << 3) | com.netease.protobuf.WireType.VARINT);
+
+		public var playerId:int;
+
+		/**
+		 *  @private
+		 */
+		public static const PLAYER_NAME:FieldDescriptor$TYPE_STRING = new FieldDescriptor$TYPE_STRING("ClientLoginResponse.player_name", "playerName", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
 		public var playerName:String;
 
@@ -31,7 +38,9 @@ package  {
 		override used_by_generated_code final function writeToBuffer(output:com.netease.protobuf.WritingBuffer):void {
 			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 1);
 			com.netease.protobuf.WriteUtils.write$TYPE_INT32(output, this.ret);
-			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 2);
+			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 2);
+			com.netease.protobuf.WriteUtils.write$TYPE_INT32(output, this.playerId);
+			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
 			com.netease.protobuf.WriteUtils.write$TYPE_STRING(output, this.playerName);
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
@@ -43,6 +52,7 @@ package  {
 		 */
 		override used_by_generated_code final function readFromSlice(input:flash.utils.IDataInput, bytesAfterSlice:uint):void {
 			var ret$count:uint = 0;
+			var player_id$count:uint = 0;
 			var player_name$count:uint = 0;
 			while (input.bytesAvailable > bytesAfterSlice) {
 				var tag:uint = com.netease.protobuf.ReadUtils.read$TYPE_UINT32(input);
@@ -55,6 +65,13 @@ package  {
 					this.ret = com.netease.protobuf.ReadUtils.read$TYPE_INT32(input);
 					break;
 				case 2:
+					if (player_id$count != 0) {
+						throw new flash.errors.IOError('Bad data format: ClientLoginResponse.playerId cannot be set twice.');
+					}
+					++player_id$count;
+					this.playerId = com.netease.protobuf.ReadUtils.read$TYPE_INT32(input);
+					break;
+				case 3:
 					if (player_name$count != 0) {
 						throw new flash.errors.IOError('Bad data format: ClientLoginResponse.playerName cannot be set twice.');
 					}

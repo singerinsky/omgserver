@@ -605,10 +605,17 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 ret() const;
   inline void set_ret(::google::protobuf::int32 value);
   
-  // required string player_name = 2;
+  // required int32 player_id = 2;
+  inline bool has_player_id() const;
+  inline void clear_player_id();
+  static const int kPlayerIdFieldNumber = 2;
+  inline ::google::protobuf::int32 player_id() const;
+  inline void set_player_id(::google::protobuf::int32 value);
+  
+  // required string player_name = 3;
   inline bool has_player_name() const;
   inline void clear_player_name();
-  static const int kPlayerNameFieldNumber = 2;
+  static const int kPlayerNameFieldNumber = 3;
   inline const ::std::string& player_name() const;
   inline void set_player_name(const ::std::string& value);
   inline void set_player_name(const char* value);
@@ -620,16 +627,19 @@ class ClientLoginResponse : public ::google::protobuf::Message {
  private:
   inline void set_has_ret();
   inline void clear_has_ret();
+  inline void set_has_player_id();
+  inline void clear_has_player_id();
   inline void set_has_player_name();
   inline void clear_has_player_name();
   
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
   
-  ::std::string* player_name_;
   ::google::protobuf::int32 ret_;
+  ::google::protobuf::int32 player_id_;
+  ::std::string* player_name_;
   
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
   
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -1157,15 +1167,37 @@ inline void ClientLoginResponse::set_ret(::google::protobuf::int32 value) {
   ret_ = value;
 }
 
-// required string player_name = 2;
-inline bool ClientLoginResponse::has_player_name() const {
+// required int32 player_id = 2;
+inline bool ClientLoginResponse::has_player_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ClientLoginResponse::set_has_player_name() {
+inline void ClientLoginResponse::set_has_player_id() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void ClientLoginResponse::clear_has_player_name() {
+inline void ClientLoginResponse::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000002u;
+}
+inline void ClientLoginResponse::clear_player_id() {
+  player_id_ = 0;
+  clear_has_player_id();
+}
+inline ::google::protobuf::int32 ClientLoginResponse::player_id() const {
+  return player_id_;
+}
+inline void ClientLoginResponse::set_player_id(::google::protobuf::int32 value) {
+  set_has_player_id();
+  player_id_ = value;
+}
+
+// required string player_name = 3;
+inline bool ClientLoginResponse::has_player_name() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void ClientLoginResponse::set_has_player_name() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void ClientLoginResponse::clear_has_player_name() {
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline void ClientLoginResponse::clear_player_name() {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
