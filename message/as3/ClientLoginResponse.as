@@ -23,14 +23,50 @@ package  {
 		 */
 		public static const PLAYER_ID:FieldDescriptor$TYPE_INT32 = new FieldDescriptor$TYPE_INT32("ClientLoginResponse.player_id", "playerId", (2 << 3) | com.netease.protobuf.WireType.VARINT);
 
-		public var playerId:int;
+		private var player_id$field:int;
+
+		private var hasField$0:uint = 0;
+
+		public function clearPlayerId():void {
+			hasField$0 &= 0xfffffffe;
+			player_id$field = new int();
+		}
+
+		public function get hasPlayerId():Boolean {
+			return (hasField$0 & 0x1) != 0;
+		}
+
+		public function set playerId(value:int):void {
+			hasField$0 |= 0x1;
+			player_id$field = value;
+		}
+
+		public function get playerId():int {
+			return player_id$field;
+		}
 
 		/**
 		 *  @private
 		 */
 		public static const PLAYER_NAME:FieldDescriptor$TYPE_STRING = new FieldDescriptor$TYPE_STRING("ClientLoginResponse.player_name", "playerName", (3 << 3) | com.netease.protobuf.WireType.LENGTH_DELIMITED);
 
-		public var playerName:String;
+		private var player_name$field:String;
+
+		public function clearPlayerName():void {
+			player_name$field = null;
+		}
+
+		public function get hasPlayerName():Boolean {
+			return player_name$field != null;
+		}
+
+		public function set playerName(value:String):void {
+			player_name$field = value;
+		}
+
+		public function get playerName():String {
+			return player_name$field;
+		}
 
 		/**
 		 *  @private
@@ -38,10 +74,14 @@ package  {
 		override used_by_generated_code final function writeToBuffer(output:com.netease.protobuf.WritingBuffer):void {
 			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 1);
 			com.netease.protobuf.WriteUtils.write$TYPE_INT32(output, this.ret);
-			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 2);
-			com.netease.protobuf.WriteUtils.write$TYPE_INT32(output, this.playerId);
-			com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
-			com.netease.protobuf.WriteUtils.write$TYPE_STRING(output, this.playerName);
+			if (hasPlayerId) {
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.VARINT, 2);
+				com.netease.protobuf.WriteUtils.write$TYPE_INT32(output, player_id$field);
+			}
+			if (hasPlayerName) {
+				com.netease.protobuf.WriteUtils.writeTag(output, com.netease.protobuf.WireType.LENGTH_DELIMITED, 3);
+				com.netease.protobuf.WriteUtils.write$TYPE_STRING(output, player_name$field);
+			}
 			for (var fieldKey:* in this) {
 				super.writeUnknown(output, fieldKey);
 			}

@@ -43,6 +43,16 @@ int GameServerClient::process_msg(packet_info* packet)
     //to some check like heart beat or other
     int packet_type = packet->type;
 
+    if(packet_type != CS_MSG_GATE_REGISTER_REQ)
+    {
+        if(_connection_status == WAIT_LOGIN)
+        {
+            LOG(ERROR)<<"Recived Message Before Register!"; 
+            return 1;
+        }
+    
+    }
+
     int process_ret = 0;
     switch(packet_type)
     {

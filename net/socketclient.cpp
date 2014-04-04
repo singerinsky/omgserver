@@ -131,6 +131,7 @@ int socket_client::on_read() {
                 packet_info packet;
                 msg_len = check_packet_info(_recv_buffer.data(),_recv_buffer.size(),&packet);
                 if(msg_len == 0)break;
+
                 if(msg_len < 0 )
                 {
                     LOG(ERROR)<<"error decode message";

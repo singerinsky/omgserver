@@ -54,13 +54,13 @@ glog/vlog_is_on.h
 glog/log_severity.h
 ../include/glog/glog/log_severity.h
 
-/home/gl/workspace/omgserver/client/../common/../include/tinystr.h
+/home/gl/omgserver/client/../common/../include/tinystr.h
 assert.h
 -
 string.h
 -
 
-/home/gl/workspace/omgserver/client/../common/../include/tinyxml.h
+/home/gl/omgserver/client/../common/../include/tinyxml.h
 ctype.h
 -
 stdio.h
@@ -78,57 +78,57 @@ iostream
 sstream
 -
 tinystr.h
-/home/gl/workspace/omgserver/client/../common/../include/tinystr.h
+/home/gl/omgserver/client/../common/../include/tinystr.h
 
-/home/gl/workspace/omgserver/client/../common/CEventThread.h
+/home/gl/omgserver/client/../common/CEventThread.h
 CThread.h
-/home/gl/workspace/omgserver/client/../common/CThread.h
+/home/gl/omgserver/client/../common/CThread.h
 IJob.h
-/home/gl/workspace/omgserver/client/../common/IJob.h
+/home/gl/omgserver/client/../common/IJob.h
 lock.h
-/home/gl/workspace/omgserver/client/../common/lock.h
+/home/gl/omgserver/client/../common/lock.h
 
-/home/gl/workspace/omgserver/client/../common/CPoolThread.h
+/home/gl/omgserver/client/../common/CPoolThread.h
 CThread.h
-/home/gl/workspace/omgserver/client/../common/CThread.h
+/home/gl/omgserver/client/../common/CThread.h
 JobDequeue.h
-/home/gl/workspace/omgserver/client/../common/JobDequeue.h
+/home/gl/omgserver/client/../common/JobDequeue.h
 CEventThread.h
-/home/gl/workspace/omgserver/client/../common/CEventThread.h
+/home/gl/omgserver/client/../common/CEventThread.h
 
-/home/gl/workspace/omgserver/client/../common/CThread.h
+/home/gl/omgserver/client/../common/CThread.h
 pthread.h
 -
 ../common/head.h
-/home/gl/workspace/omgserver/client/../common/../common/head.h
+/home/gl/omgserver/client/../common/../common/head.h
 
-/home/gl/workspace/omgserver/client/../common/CThreadManage.h
+/home/gl/omgserver/client/../common/CThreadManage.h
 list
 -
 CEventThread.h
-/home/gl/workspace/omgserver/client/../common/CEventThread.h
+/home/gl/omgserver/client/../common/CEventThread.h
 CThread.h
-/home/gl/workspace/omgserver/client/../common/CThread.h
+/home/gl/omgserver/client/../common/CThread.h
 lock.h
-/home/gl/workspace/omgserver/client/../common/lock.h
+/home/gl/omgserver/client/../common/lock.h
 CPoolThread.h
-/home/gl/workspace/omgserver/client/../common/CPoolThread.h
+/home/gl/omgserver/client/../common/CPoolThread.h
 IJob.h
-/home/gl/workspace/omgserver/client/../common/IJob.h
+/home/gl/omgserver/client/../common/IJob.h
 
-/home/gl/workspace/omgserver/client/../common/IJob.h
+/home/gl/omgserver/client/../common/IJob.h
 cstddef
 -
 
-/home/gl/workspace/omgserver/client/../common/JobDequeue.h
+/home/gl/omgserver/client/../common/JobDequeue.h
 list
 -
 IJob.h
-/home/gl/workspace/omgserver/client/../common/IJob.h
+/home/gl/omgserver/client/../common/IJob.h
 head.h
-/home/gl/workspace/omgserver/client/../common/head.h
+/home/gl/omgserver/client/../common/head.h
 
-/home/gl/workspace/omgserver/client/../common/head.h
+/home/gl/omgserver/client/../common/head.h
 stdio.h
 -
 stdlib.h
@@ -186,53 +186,57 @@ map
 list
 -
 omg_type.h
-/home/gl/workspace/omgserver/client/../common/omg_type.h
+/home/gl/omgserver/client/../common/omg_type.h
 string.h
-/home/gl/workspace/omgserver/client/../common/string.h
+/home/gl/omgserver/client/../common/string.h
 glog/logging.h
 -
 ../include/tinyxml.h
-/home/gl/workspace/omgserver/client/../common/../include/tinyxml.h
+/home/gl/omgserver/client/../common/../include/tinyxml.h
 ../include/tinystr.h
-/home/gl/workspace/omgserver/client/../common/../include/tinystr.h
+/home/gl/omgserver/client/../common/../include/tinystr.h
 lock.h
-/home/gl/workspace/omgserver/client/../common/lock.h
+/home/gl/omgserver/client/../common/lock.h
 
-/home/gl/workspace/omgserver/client/../common/lock.h
+/home/gl/omgserver/client/../common/lock.h
 head.h
-/home/gl/workspace/omgserver/client/../common/head.h
+/home/gl/omgserver/client/../common/head.h
 
-/home/gl/workspace/omgserver/client/../common/omg_type.h
+/home/gl/omgserver/client/../common/omg_type.h
 
-/home/gl/workspace/omgserver/client/../message/../net/../common/aliased_buf.h
+/home/gl/omgserver/client/../message/../net/../common/aliased_buf.h
 streambuf
 -
 
-/home/gl/workspace/omgserver/client/../message/../net/game_packet.h
+/home/gl/omgserver/client/../message/../net/game_packet.h
 sstream
 -
 exception
 -
 packet.h
-/home/gl/workspace/omgserver/client/../message/../net/packet.h
+/home/gl/omgserver/client/../message/../net/packet.h
 ../common/aliased_buf.h
-/home/gl/workspace/omgserver/client/../message/../net/../common/aliased_buf.h
+/home/gl/omgserver/client/../message/../net/../common/aliased_buf.h
 
-/home/gl/workspace/omgserver/client/../message/../net/message.pb.h
+/home/gl/omgserver/client/../message/../net/message.pb.h
 string
 -
 google/protobuf/stubs/common.h
 -
 google/protobuf/generated_message_util.h
 -
+google/protobuf/message.h
+-
 google/protobuf/repeated_field.h
 -
 google/protobuf/extension_set.h
 -
-google/protobuf/generated_message_reflection.h
+google/protobuf/generated_enum_reflection.h
+-
+google/protobuf/unknown_field_set.h
 -
 
-/home/gl/workspace/omgserver/client/../message/../net/packet.h
+/home/gl/omgserver/client/../message/../net/packet.h
 stdint.h
 -
 endian.h
@@ -240,69 +244,69 @@ endian.h
 byteswap.h
 -
 
-/home/gl/workspace/omgserver/client/../message/message_define.h
+/home/gl/omgserver/client/../message/message_define.h
 ../net/packet.h
-/home/gl/workspace/omgserver/client/../message/../net/packet.h
+/home/gl/omgserver/client/../message/../net/packet.h
 ../net/game_packet.h
-/home/gl/workspace/omgserver/client/../message/../net/game_packet.h
+/home/gl/omgserver/client/../message/../net/game_packet.h
 ../net/message.pb.h
-/home/gl/workspace/omgserver/client/../message/../net/message.pb.h
+/home/gl/omgserver/client/../message/../net/message.pb.h
 
-/home/gl/workspace/omgserver/client/../net/../common/omg_type.h
+/home/gl/omgserver/client/../net/../common/omg_type.h
 
-/home/gl/workspace/omgserver/client/../net/../net/IConnection.h
+/home/gl/omgserver/client/../net/../net/IConnection.h
 
-/home/gl/workspace/omgserver/client/../net/../net/IMsgDispatcher.h
+/home/gl/omgserver/client/../net/../net/IMsgDispatcher.h
 
-/home/gl/workspace/omgserver/client/../net/IConnection.h
+/home/gl/omgserver/client/../net/IConnection.h
 
-/home/gl/workspace/omgserver/client/../net/client_socket.h
+/home/gl/omgserver/client/../net/client_socket.h
 ../common/head.h
-/home/gl/workspace/omgserver/client/../net/../common/head.h
+/home/gl/omgserver/client/../net/../common/head.h
 ../common/omg_type.h
-/home/gl/workspace/omgserver/client/../net/../common/omg_type.h
+/home/gl/omgserver/client/../net/../common/omg_type.h
 ../net/msg.h
-/home/gl/workspace/omgserver/client/../net/../net/msg.h
+/home/gl/omgserver/client/../net/../net/msg.h
 ../net/IMsgDispatcher.h
-/home/gl/workspace/omgserver/client/../net/../net/IMsgDispatcher.h
+/home/gl/omgserver/client/../net/../net/IMsgDispatcher.h
 ../net/IConnection.h
-/home/gl/workspace/omgserver/client/../net/../net/IConnection.h
+/home/gl/omgserver/client/../net/../net/IConnection.h
 
-/home/gl/workspace/omgserver/client/../net/msg.h
+/home/gl/omgserver/client/../net/msg.h
 ../common/head.h
-/home/gl/workspace/omgserver/client/../net/../common/head.h
+/home/gl/omgserver/client/../net/../common/head.h
 IConnection.h
-/home/gl/workspace/omgserver/client/../net/IConnection.h
+/home/gl/omgserver/client/../net/IConnection.h
 
-/home/gl/workspace/omgserver/client/TestJob.h
+/home/gl/omgserver/client/TestJob.h
 ../common/IJob.h
-/home/gl/workspace/omgserver/client/../common/IJob.h
+/home/gl/omgserver/client/../common/IJob.h
 stdio.h
-/home/gl/workspace/omgserver/client/stdio.h
+/home/gl/omgserver/client/stdio.h
 
-/home/gl/workspace/omgserver/client/main.cpp
+/home/gl/omgserver/client/main.cpp
 ../common/head.h
-/home/gl/workspace/omgserver/client/../common/head.h
+/home/gl/omgserver/client/../common/head.h
 ../net/msg.h
-/home/gl/workspace/omgserver/client/../net/msg.h
+/home/gl/omgserver/client/../net/msg.h
 sys/socket.h
 -
 sys/types.h
 -
 stdio.h
-/home/gl/workspace/omgserver/client/stdio.h
+/home/gl/omgserver/client/stdio.h
 string.h
-/home/gl/workspace/omgserver/client/string.h
+/home/gl/omgserver/client/string.h
 string.h
-/home/gl/workspace/omgserver/client/string.h
+/home/gl/omgserver/client/string.h
 ../net/msg.h
-/home/gl/workspace/omgserver/client/../net/msg.h
+/home/gl/omgserver/client/../net/msg.h
 ../net/client_socket.h
-/home/gl/workspace/omgserver/client/../net/client_socket.h
+/home/gl/omgserver/client/../net/client_socket.h
 TestJob.h
-/home/gl/workspace/omgserver/client/TestJob.h
+/home/gl/omgserver/client/TestJob.h
 ../common/CThreadManage.h
-/home/gl/workspace/omgserver/client/../common/CThreadManage.h
+/home/gl/omgserver/client/../common/CThreadManage.h
 ../message/message_define.h
-/home/gl/workspace/omgserver/client/../message/message_define.h
+/home/gl/omgserver/client/../message/message_define.h
 

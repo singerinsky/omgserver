@@ -46,10 +46,12 @@ void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
     cs_client_login_response response;
     if(mysqlpp::StoreQueryResult ret = query.store())
     {
-        LOG(INFO)<<"found "<<ret.num_rows();
-        response.body.set_ret(1);
-        response.body.set_player_id(ret[0]["uid"]);
-        response.body.set_player_name(ret[0]["real_name"]);
+        if(ret.num_rows() > 0){
+            LOG(INFO)<<"found "<<ret.num_rows();
+            response.body.set_ret(1);
+            response.body.set_player_id(ret[0]["uid"]);
+            response.body.set_player_name(ret[0]["real_name"]);
+        }
     }else
     {
         response.body.set_ret(-2);
