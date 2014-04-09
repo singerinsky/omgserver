@@ -34,16 +34,12 @@ public:
 	int							GetGatePlayerCount();
 
 	inline	void				SendMsgAll(packet* msg){
-		_lock.lock();
 		SMItr itr= _player_map.begin();
 		while(itr != _player_map.end()){
 			GateWayPlayer* player = itr->second;
-			_lock.unlock();
 			player->send_packet_msg(msg);
-			_lock.lock();
 			itr++;
 		}
-		_lock.unlock();
 	}
 
 	std::list<int>	export_all_player_online(){
@@ -61,6 +57,5 @@ private:
 	static	GateWayPlayerManager*	_m_instance;
 	PlayerMap	_player_map;
 	//MutexLock	_lock;
-	omg::NullLock	_lock;
 };
 #endif /* CSOCKETMAP_H_ */

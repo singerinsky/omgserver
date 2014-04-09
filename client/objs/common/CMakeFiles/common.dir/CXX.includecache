@@ -248,10 +248,6 @@ Timer.h
 ../net/IMsgDispatcher.h
 /home/gl/omgserver/common/../net/IMsgDispatcher.h
 
-/home/gl/omgserver/common/IJob.cpp
-IJob.h
-/home/gl/omgserver/common/IJob.h
-
 /home/gl/omgserver/common/IJob.h
 cstddef
 -
@@ -267,20 +263,6 @@ IJob.h
 /home/gl/omgserver/common/IJob.h
 head.h
 /home/gl/omgserver/common/head.h
-
-/home/gl/omgserver/common/MD5.cpp
-MD5.h
-/home/gl/omgserver/common/MD5.h
-stdio.h
--
-
-/home/gl/omgserver/common/MD5.h
-string
--
-iostream
--
-string.h
--
 
 /home/gl/omgserver/common/Timer.h
 head.h
@@ -375,12 +357,6 @@ lock.h
 /home/gl/omgserver/common/lock.h
 head.h
 /home/gl/omgserver/common/head.h
-
-/home/gl/omgserver/common/mtrand.cpp
-mtrand.h
-/home/gl/omgserver/common/mtrand.h
-
-/home/gl/omgserver/common/mtrand.h
 
 /home/gl/omgserver/common/omg_type.h
 

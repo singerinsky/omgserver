@@ -208,6 +208,30 @@ __/gate_server.cpp.s:
 	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/gate_server.cpp.s
 .PHONY : __/gate_server.cpp.s
 
+__/role.o: __/role.cpp.o
+.PHONY : __/role.o
+
+# target to build an object file
+__/role.cpp.o:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/role.cpp.o
+.PHONY : __/role.cpp.o
+
+__/role.i: __/role.cpp.i
+.PHONY : __/role.i
+
+# target to preprocess a source file
+__/role.cpp.i:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/role.cpp.i
+.PHONY : __/role.cpp.i
+
+__/role.s: __/role.cpp.s
+.PHONY : __/role.s
+
+# target to generate assembly for a file
+__/role.cpp.s:
+	cd /home/gl/omgserver && $(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/__/role.cpp.s
+.PHONY : __/role.cpp.s
+
 __/server_conns.o: __/server_conns.cpp.o
 .PHONY : __/server_conns.o
 
@@ -253,6 +277,9 @@ help:
 	@echo "... __/gate_server.o"
 	@echo "... __/gate_server.i"
 	@echo "... __/gate_server.s"
+	@echo "... __/role.o"
+	@echo "... __/role.i"
+	@echo "... __/role.s"
 	@echo "... __/server_conns.o"
 	@echo "... __/server_conns.i"
 	@echo "... __/server_conns.s"
