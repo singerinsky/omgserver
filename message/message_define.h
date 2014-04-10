@@ -4,7 +4,7 @@
 
 #include "../net/packet.h"
 #include "../net/game_packet.h"
-#include "../net/message.pb.h"
+#include "message.pb.h"
 
 enum
 {

@@ -6,6 +6,7 @@ class orm_generator
     var $name ;
     var $file_h ;
     var $file_cpp ;
+    var $file_proto;
 
     function __construct()
     {
@@ -17,6 +18,7 @@ class orm_generator
         $this->file_h = fopen("${output_dir}/${tbname}.h",'w') ;
         $this->file_cpp = fopen("${output_dir}/${tbname}.cpp",'w') ;
         $this->comm_file_h = fopen("${output_dir}/sql_binder.h",'w') ;
+        $this->file_proto = fopen("../message/${tbname}.proto",'w');
 
     } 
 
@@ -42,8 +44,7 @@ class orm_generator
         fwrite($this->comm_file_h,"    virtual ~sql_binder() { } ;\n") ;
         fwrite($this->comm_file_h,"    virtual void clear_dirty() =0;\n") ;
         fwrite($this->comm_file_h,"    virtual bool is_dirty() const = 0;\n");
-        fwrite($this->comm_file_h,"    virtual void load(const char** data) = 0;\n") ;
-        fwrite($this->comm_file_h,"    virtual void load(const vector<string>& data) =0;\n") ;
+        fwrite($this->comm_file_h,"    virtual void load(mysqlpp::Row&) = 0;\n") ;
         fwrite($this->comm_file_h,"    virtual int sql_insert(char* buf,int size) const =0;\n") ;
         fwrite($this->comm_file_h,"    virtual int sql_replace(char* buf,int size) const =0;\n") ;
         fwrite($this->comm_file_h,"    virtual int sql_update(char* buf,int size) const =0;\n") ;
@@ -63,6 +64,7 @@ class orm_generator
     {
         fwrite($this->file_h,"#ifndef _generate_h_$this->name \n") ;
         fwrite($this->file_h,"#define _generate_h_$this->name \n") ;
+        fwrite($this->file_h,"#include <mysql++/mysql++.h>\n");
         //fwrite($this->file_h,"#include <stdint.h>\n") ;
         //fwrite($this->file_h,"#include <string>\n") ;
         //fwrite($this->file_h,"#include <vector>\n") ;
@@ -78,8 +80,7 @@ class orm_generator
         fwrite($this->file_h,"    bool is_dirty() const\n    {\n");
         fwrite($this->file_h,"        for(int i=0;i<FIELD_COUNT;++i) {if(dirty[i]) return true;} ;\n") ;
         fwrite($this->file_h,"        return false ;\n    } ;\n") ;
-        fwrite($this->file_h,"    void load(const char** data);\n") ;
-        fwrite($this->file_h,"    void load(const vector<string>& data);\n") ;
+        fwrite($this->file_h,"    void load(mysqlpp::Row&);\n") ;
         fwrite($this->file_h,"    int sql_insert(char* buf,int size) const;\n") ;
         fwrite($this->file_h,"    int sql_replace(char* buf,int size) const;\n") ;
         fwrite($this->file_h,"    int sql_update(char* buf,int size) const;\n") ;
@@ -131,49 +132,26 @@ class orm_generator
     function generate_cpp_load()
     {
 
-        fwrite($this->file_cpp, "void $this->name::load(const char** data)\n{\n" );
+        fwrite($this->file_cpp, "void $this->name::load(mysqlpp::Row& row)\n{\n" );
         foreach($this->fields as $k=>$field)
         {   
             
             if($field[2] == "string")
             {
-                fwrite($this->file_cpp, "    ${field[1]}.assign(data[$field[0]]);\n" );
+                fwrite($this->file_cpp, "    ${field[1]}.assign(row[\"$field[1]\"]);\n" );
             }
             else if (strstr($field[2],"int64") )
             {
-                fwrite($this->file_cpp, "    ${field[1]} = (${field[2]})atol(data[$field[0]]);\n" );
+                fwrite($this->file_cpp, "    ${field[1]} = (${field[2]})atol(row[\"$field[1]\"]);\n" );
             }
             else
             {
-                fwrite($this->file_cpp, "    ${field[1]} = (${field[2]})atoi(data[$field[0]]);\n" );
+                fwrite($this->file_cpp, "    ${field[1]} = (${field[2]})atoi(row[\"$field[1]\"]);\n" );
             }
         }
 
         fwrite($this->file_cpp, "    memset(dirty,0,sizeof(dirty));\n" );
         fwrite($this->file_cpp, "}\n" );
-
-        fwrite($this->file_cpp, "void $this->name::load(const vector<string>& data)\n{\n" );
-        foreach($this->fields as $k=>$field)
-        {   
-            
-            if($field[2] == "string")
-            {
-                fwrite($this->file_cpp, "    ${field[1]}.assign(data[$field[0]].c_str());\n" );
-            }
-            else if (strstr($field[2],"int64") )
-            {
-                fwrite($this->file_cpp, "    ${field[1]} = (${field[2]})atol(data[$field[0]].c_str());\n" );
-            }
-            else
-            {
-                fwrite($this->file_cpp, "    ${field[1]} = (${field[2]})atoi(data[$field[0]].c_str());\n" );
-            }
-        }
-
-        fwrite($this->file_cpp, "    memset(dirty,0,sizeof(dirty));\n" );
-        fwrite($this->file_cpp, "}\n" );
-
-
 
     }
 
@@ -322,12 +300,62 @@ class orm_generator
         }
     }
 
+    function generate_proto()
+    {
+        fwrite($this->file_proto,"message db_$this->name \n");
+        fwrite($this->file_proto,"{\n");
+        $start = 1;
+        foreach($this->fields as $k=>$v)
+        {
+            if($v[2] == "string") 
+            {
+                fwrite($this->file_proto,"required string $v[1] = $start;\n"); 
+            }else if($v[2] == "int64_t")
+            {
+                fwrite($this->file_proto,"required int64 $v[1] = $start;\n");    
+            }
+            else
+            {
+                fwrite($this->file_proto,"required int32 $v[1] = $start;\n"); 
+            }
+            $start++;
+        }
+        fwrite($this->file_proto,"}\n");
+    
+    }
+
+    function generate_load_from_pb()
+    {
+        fwrite($this->file_cpp, "void $this->name::load_from_pb(db_$this->name& pb)\n"); 
+        fwrite($this->file_cpp,"{\n");
+        foreach($this->fields as $k=>$v)
+        {
+            fwrite($this->file_cpp,"    $v[1] = pb.$v[1]();\n"); 
+        }
+        fwrite($this->file_cpp,"}\n");
+    }
+
+
+    function generate_copy_to_pb()
+    {
+        fwrite($this->file_cpp, "void $this->name::copy_to_pb(db_$this->name& pb)\n"); 
+        fwrite($this->file_cpp,"{\n");
+        foreach($this->fields as $k=>$v)
+        {
+            fwrite($this->file_cpp,"    pb.set_$v[1]($v[1]);\n"); 
+        }
+        fwrite($this->file_cpp,"}\n");
+    
+    }
+
     function generate_h()
     {
         $this->generate_h_begin() ;
 
         fwrite($this->file_h, "public:\n" );
         foreach($this->fields as $k=>$v) $this->generate_method($v) ;
+        fwrite($this->file_h, "    void load_from_pb(db_$this->name&);\n");
+        fwrite($this->file_h, "    void copy_to_pb(db_$this->name&);\n");
 
         fwrite($this->file_h, "private:\n    //data member\n" );
         foreach($this->fields as $k=>$v) $this->generate_field($v) ;
@@ -352,9 +380,9 @@ class orm_generator
         $this->generate_cpp_replace() ;
         $this->generate_cpp_update() ;
         $this->generate_cpp_delete() ;
+        $this->generate_load_from_pb() ;
+        $this->generate_copy_to_pb() ;
         $this->generate_cpp_end() ;
-
-
     }
 
     function generate()
@@ -362,6 +390,7 @@ class orm_generator
         $this->generate_comm_h() ;
         $this->generate_h() ;
         $this->generate_cpp() ;
+        $this->generate_proto();
     }
 
 } 

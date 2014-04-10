@@ -1,3 +1,4 @@
+import "role_info.proto";
 
 enum MSG_ACTION_TYPE
 {
@@ -49,6 +50,7 @@ message ClientLoginResponse
     required int32 ret = 1;
     optional int32 player_id = 2;
     optional string player_name = 3;
+    optional db_role_info role_data = 4;
 }
 
 message GateServerRegisterRequest
@@ -58,5 +60,6 @@ message GateServerRegisterRequest
 
 message GateServerRegisterResponse
 {
-    required int32 ret = 2;
+    required int32 ret = 1;
 }
+

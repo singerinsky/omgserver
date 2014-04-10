@@ -134,10 +134,11 @@ void protobuf_AssignDesc_message_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ClientLoginRequest));
   ClientLoginResponse_descriptor_ = file->message_type(5);
-  static const int ClientLoginResponse_offsets_[3] = {
+  static const int ClientLoginResponse_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, ret_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, player_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, player_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, role_data_),
   };
   ClientLoginResponse_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -239,24 +240,27 @@ void protobuf_AddDesc_message_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::protobuf_AddDesc_role_5finfo_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\rmessage.proto\",\n\027SoccerPlayerInfoReque"
-    "st\022\021\n\tplayer_id\030\001 \002(\005\"O\n\030SoccerPlayerInf"
-    "oResponse\022\021\n\tplayer_id\030\001 \002(\005\022\023\n\013player_n"
-    "ame\030\002 \002(\t\022\013\n\003age\030\003 \002(\005\"-\n\026ClientHeartBea"
-    "tRequest\022\023\n\013client_time\030\001 \002(\005\".\n\027ClientH"
-    "eartBeatResponse\022\023\n\013server_time\030\001 \002(\005\"M\n"
-    "\022ClientLoginRequest\022\021\n\tplayer_id\030\001 \002(\005\022\022"
-    "\n\nplayer_pwd\030\002 \002(\t\022\020\n\010md5_code\030\003 \002(\t\"J\n\023"
-    "ClientLoginResponse\022\013\n\003ret\030\001 \002(\005\022\021\n\tplay"
-    "er_id\030\002 \001(\005\022\023\n\013player_name\030\003 \001(\t\"1\n\031Gate"
-    "ServerRegisterRequest\022\024\n\014server_index\030\001 "
-    "\002(\005\")\n\032GateServerRegisterResponse\022\013\n\003ret"
-    "\030\002 \002(\005*D\n\017MSG_ACTION_TYPE\022\017\n\013MSG_REQUEST"
-    "\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\nMSG_NOTIFY\020\002*q\n\013"
-    "MessageType\022\032\n\026MSG_SOCCER_PLAYER_INFO\020\001\022"
-    "\022\n\016MSG_HEART_BEAT\020\002\022\024\n\020MSG_CLIENT_LOGIN\020"
-    "\003\022\034\n\030MSG_GATE_SERVER_REGISTER\020\004", 671);
+    "\n\rmessage.proto\032\017role_info.proto\",\n\027Socc"
+    "erPlayerInfoRequest\022\021\n\tplayer_id\030\001 \002(\005\"O"
+    "\n\030SoccerPlayerInfoResponse\022\021\n\tplayer_id\030"
+    "\001 \002(\005\022\023\n\013player_name\030\002 \002(\t\022\013\n\003age\030\003 \002(\005\""
+    "-\n\026ClientHeartBeatRequest\022\023\n\013client_time"
+    "\030\001 \002(\005\".\n\027ClientHeartBeatResponse\022\023\n\013ser"
+    "ver_time\030\001 \002(\005\"M\n\022ClientLoginRequest\022\021\n\t"
+    "player_id\030\001 \002(\005\022\022\n\nplayer_pwd\030\002 \002(\t\022\020\n\010m"
+    "d5_code\030\003 \002(\t\"l\n\023ClientLoginResponse\022\013\n\003"
+    "ret\030\001 \002(\005\022\021\n\tplayer_id\030\002 \001(\005\022\023\n\013player_n"
+    "ame\030\003 \001(\t\022 \n\trole_data\030\004 \001(\0132\r.db_role_i"
+    "nfo\"1\n\031GateServerRegisterRequest\022\024\n\014serv"
+    "er_index\030\001 \002(\005\")\n\032GateServerRegisterResp"
+    "onse\022\013\n\003ret\030\001 \002(\005*D\n\017MSG_ACTION_TYPE\022\017\n\013"
+    "MSG_REQUEST\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\nMSG_N"
+    "OTIFY\020\002*q\n\013MessageType\022\032\n\026MSG_SOCCER_PLA"
+    "YER_INFO\020\001\022\022\n\016MSG_HEART_BEAT\020\002\022\024\n\020MSG_CL"
+    "IENT_LOGIN\020\003\022\034\n\030MSG_GATE_SERVER_REGISTER"
+    "\020\004", 722);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
@@ -1578,6 +1582,7 @@ void ClientLoginRequest::Swap(ClientLoginRequest* other) {
 const int ClientLoginResponse::kRetFieldNumber;
 const int ClientLoginResponse::kPlayerIdFieldNumber;
 const int ClientLoginResponse::kPlayerNameFieldNumber;
+const int ClientLoginResponse::kRoleDataFieldNumber;
 #endif  // !_MSC_VER
 
 ClientLoginResponse::ClientLoginResponse()
@@ -1586,6 +1591,7 @@ ClientLoginResponse::ClientLoginResponse()
 }
 
 void ClientLoginResponse::InitAsDefaultInstance() {
+  role_data_ = const_cast< ::db_role_info*>(&::db_role_info::default_instance());
 }
 
 ClientLoginResponse::ClientLoginResponse(const ClientLoginResponse& from)
@@ -1599,6 +1605,7 @@ void ClientLoginResponse::SharedCtor() {
   ret_ = 0;
   player_id_ = 0;
   player_name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  role_data_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -1611,6 +1618,7 @@ void ClientLoginResponse::SharedDtor() {
     delete player_name_;
   }
   if (this != default_instance_) {
+    delete role_data_;
   }
 }
 
@@ -1643,6 +1651,9 @@ void ClientLoginResponse::Clear() {
       if (player_name_ != &::google::protobuf::internal::kEmptyString) {
         player_name_->clear();
       }
+    }
+    if (has_role_data()) {
+      if (role_data_ != NULL) role_data_->::db_role_info::Clear();
     }
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -1699,6 +1710,20 @@ bool ClientLoginResponse::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(34)) goto parse_role_data;
+        break;
+      }
+
+      // optional .db_role_info role_data = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_role_data:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_role_data()));
+        } else {
+          goto handle_uninterpreted;
+        }
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -1740,6 +1765,12 @@ void ClientLoginResponse::SerializeWithCachedSizes(
       3, this->player_name(), output);
   }
 
+  // optional .db_role_info role_data = 4;
+  if (has_role_data()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->role_data(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -1766,6 +1797,13 @@ void ClientLoginResponse::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->player_name(), target);
+  }
+
+  // optional .db_role_info role_data = 4;
+  if (has_role_data()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->role_data(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -1798,6 +1836,13 @@ int ClientLoginResponse::ByteSize() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->player_name());
+    }
+
+    // optional .db_role_info role_data = 4;
+    if (has_role_data()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->role_data());
     }
 
   }
@@ -1836,6 +1881,9 @@ void ClientLoginResponse::MergeFrom(const ClientLoginResponse& from) {
     if (from.has_player_name()) {
       set_player_name(from.player_name());
     }
+    if (from.has_role_data()) {
+      mutable_role_data()->::db_role_info::MergeFrom(from.role_data());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -1855,6 +1903,9 @@ void ClientLoginResponse::CopyFrom(const ClientLoginResponse& from) {
 bool ClientLoginResponse::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
 
+  if (has_role_data()) {
+    if (!this->role_data().IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -1863,6 +1914,7 @@ void ClientLoginResponse::Swap(ClientLoginResponse* other) {
     std::swap(ret_, other->ret_);
     std::swap(player_id_, other->player_id_);
     std::swap(player_name_, other->player_name_);
+    std::swap(role_data_, other->role_data_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -2157,8 +2209,8 @@ bool GateServerRegisterResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 ret = 2;
-      case 2: {
+      // required int32 ret = 1;
+      case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2190,9 +2242,9 @@ bool GateServerRegisterResponse::MergePartialFromCodedStream(
 
 void GateServerRegisterResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required int32 ret = 2;
+  // required int32 ret = 1;
   if (has_ret()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->ret(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->ret(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -2203,9 +2255,9 @@ void GateServerRegisterResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* GateServerRegisterResponse::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required int32 ret = 2;
+  // required int32 ret = 1;
   if (has_ret()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->ret(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->ret(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -2219,7 +2271,7 @@ int GateServerRegisterResponse::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required int32 ret = 2;
+    // required int32 ret = 1;
     if (has_ret()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(

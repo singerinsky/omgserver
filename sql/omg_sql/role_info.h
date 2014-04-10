@@ -1,5 +1,6 @@
 #ifndef _generate_h_role_info 
 #define _generate_h_role_info 
+#include <mysql++/mysql++.h>
 #include "sql_binder.h"
 class role_info : public sql_binder 
 {
@@ -11,8 +12,7 @@ public:
         for(int i=0;i<FIELD_COUNT;++i) {if(dirty[i]) return true;} ;
         return false ;
     } ;
-    void load(const char** data);
-    void load(const vector<string>& data);
+    void load(mysqlpp::Row&);
     int sql_insert(char* buf,int size) const;
     int sql_replace(char* buf,int size) const;
     int sql_update(char* buf,int size) const;
@@ -209,6 +209,8 @@ public:
     void set_renown(int32_t value) { if(renown!= value){dirty[45] = 1; renown = value;} } ; 
     int sql_renown(char* buf,int size) const{return snprintf(buf,size,"renown='%ld'",(int64_t)renown);}
 
+    void load_from_pb(db_role_info&);
+    void copy_to_pb(db_role_info&);
 private:
     //data member
     int32_t role_id ; 

@@ -51,17 +51,44 @@ void CDBQueryhandlerJob::QueryClientLoginInfo(db_event* event)
             response.body.set_ret(1);
             response.body.set_player_id(ret[0]["uid"]);
             response.body.set_player_name(ret[0]["real_name"]);
+            bool load_ret=LoadRoleInfo(*response.body.mutable_role_data(),121);
+            if(load_ret == false)
+            {
+                response.body.set_ret(-2); 
+            }
+        }
+        else
+        {
+            response.body.set_ret(-2);
         }
     }else
     {
         response.body.set_ret(-2);
         LOG(INFO)<<"nothing found!!"; 
     }
+
     game_client_spr ptr = CServerManage::GetInstance()->GetGameServerByIndex(event->seq);
     if(ptr)
     {
         ptr->send_packet_msg(&response); 
     }
+}
+
+bool CDBQueryhandlerJob::LoadRoleInfo(db_role_info& pb_role,int role_id)
+{
+    role_info role;
+    role.set_role_id(role_id);
+    char sql_buff[256] = {0};
+    role.sql_query(sql_buff,256);
+    mysqlpp::Query query = _conn->query(sql_buff);
+    mysqlpp::StoreQueryResult ret = query.store();
+    if(ret.num_rows() > 0)
+    {
+        role.load(ret[0]); 
+        role.copy_to_pb(pb_role);
+        return true;
+    }
+    return false;
 }
 
 void CDBQueryhandlerJob::DoCommonDelOrUpdate(db_event* event)

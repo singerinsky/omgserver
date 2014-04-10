@@ -56,8 +56,8 @@ CMAKE_BINARY_DIR = /home/gl/omgserver/client
 # Target rules for target CMakeFiles/client.dir
 
 # All Build rule for target.
-CMakeFiles/client.dir/all: objs/common/CMakeFiles/common.dir/all
 CMakeFiles/client.dir/all: objs/net/CMakeFiles/net.dir/all
+CMakeFiles/client.dir/all: objs/common/CMakeFiles/common.dir/all
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles  1

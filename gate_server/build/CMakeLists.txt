@@ -30,6 +30,6 @@ LINK_DIRECTORIES(../../libfor${libname})
 MESSAGE("Linking libs ${libname}")
 AUX_SOURCE_DIRECTORY(. DIR_SRCS)
 ADD_EXECUTABLE(gate_server ${DIR_SRCS})
-ADD_DEPENDENCIES(gate_server net common)
-TARGET_LINK_LIBRARIES(gate_server net common gflags glog libtinyxml.a libz.so pthread protobuf)
+ADD_DEPENDENCIES(gate_server net common message_lib)
+TARGET_LINK_LIBRARIES(gate_server net common message_lib gflags glog libtinyxml.a libz.so pthread protobuf)
 

@@ -34,8 +34,10 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/gl/omgserver/db_server/game_lib/net/cmake_install.cmake")
-  INCLUDE("/home/gl/omgserver/db_server/game_lib/common/cmake_install.cmake")
+  INCLUDE("/home/gl/omgserver/game_lib/net/cmake_install.cmake")
+  INCLUDE("/home/gl/omgserver/game_lib/common/cmake_install.cmake")
+  INCLUDE("/home/gl/omgserver/game_lib/orm/cmake_install.cmake")
+  INCLUDE("/home/gl/omgserver/game_lib/message_lib/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

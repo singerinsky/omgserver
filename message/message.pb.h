@@ -25,6 +25,7 @@
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "role_info.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Internal implementation detail -- do not call these.
@@ -629,6 +630,15 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   inline ::std::string* release_player_name();
   inline void set_allocated_player_name(::std::string* player_name);
 
+  // optional .db_role_info role_data = 4;
+  inline bool has_role_data() const;
+  inline void clear_role_data();
+  static const int kRoleDataFieldNumber = 4;
+  inline const ::db_role_info& role_data() const;
+  inline ::db_role_info* mutable_role_data();
+  inline ::db_role_info* release_role_data();
+  inline void set_allocated_role_data(::db_role_info* role_data);
+
   // @@protoc_insertion_point(class_scope:ClientLoginResponse)
  private:
   inline void set_has_ret();
@@ -637,15 +647,18 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   inline void clear_has_player_id();
   inline void set_has_player_name();
   inline void clear_has_player_name();
+  inline void set_has_role_data();
+  inline void clear_has_role_data();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::int32 ret_;
   ::google::protobuf::int32 player_id_;
   ::std::string* player_name_;
+  ::db_role_info* role_data_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
 
   friend void  protobuf_AddDesc_message_2eproto();
   friend void protobuf_AssignDesc_message_2eproto();
@@ -792,10 +805,10 @@ class GateServerRegisterResponse : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // required int32 ret = 2;
+  // required int32 ret = 1;
   inline bool has_ret() const;
   inline void clear_ret();
-  static const int kRetFieldNumber = 2;
+  static const int kRetFieldNumber = 1;
   inline ::google::protobuf::int32 ret() const;
   inline void set_ret(::google::protobuf::int32 value);
 
@@ -1301,6 +1314,44 @@ inline void ClientLoginResponse::set_allocated_player_name(::std::string* player
   }
 }
 
+// optional .db_role_info role_data = 4;
+inline bool ClientLoginResponse::has_role_data() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void ClientLoginResponse::set_has_role_data() {
+  _has_bits_[0] |= 0x00000008u;
+}
+inline void ClientLoginResponse::clear_has_role_data() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline void ClientLoginResponse::clear_role_data() {
+  if (role_data_ != NULL) role_data_->::db_role_info::Clear();
+  clear_has_role_data();
+}
+inline const ::db_role_info& ClientLoginResponse::role_data() const {
+  return role_data_ != NULL ? *role_data_ : *default_instance_->role_data_;
+}
+inline ::db_role_info* ClientLoginResponse::mutable_role_data() {
+  set_has_role_data();
+  if (role_data_ == NULL) role_data_ = new ::db_role_info;
+  return role_data_;
+}
+inline ::db_role_info* ClientLoginResponse::release_role_data() {
+  clear_has_role_data();
+  ::db_role_info* temp = role_data_;
+  role_data_ = NULL;
+  return temp;
+}
+inline void ClientLoginResponse::set_allocated_role_data(::db_role_info* role_data) {
+  delete role_data_;
+  role_data_ = role_data;
+  if (role_data) {
+    set_has_role_data();
+  } else {
+    clear_has_role_data();
+  }
+}
+
 // -------------------------------------------------------------------
 
 // GateServerRegisterRequest
@@ -1331,7 +1382,7 @@ inline void GateServerRegisterRequest::set_server_index(::google::protobuf::int3
 
 // GateServerRegisterResponse
 
-// required int32 ret = 2;
+// required int32 ret = 1;
 inline bool GateServerRegisterResponse::has_ret() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }

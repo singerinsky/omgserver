@@ -15,6 +15,7 @@
 #include "../common/queue.h"
 #include <mysql++/mysql++.h>
 #include "DBConnectionPool.h"
+#include "../orm/role_info.h"
 
 using namespace omg;
 
@@ -59,6 +60,7 @@ class CDBQueryhandlerJob: public omg::IJob {
         void QueryClientLoginInfo(db_event*);
         void DoCommonDelOrUpdate(db_event*);
         int  DoCommonInsert(db_event* event);
+        bool LoadRoleInfo(db_role_info& pb_role,int role_id);
     private:
         omg::ConcurrenceLockQueue<db_event,omg::MutexLock>	_msg_queue;
         //omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;
