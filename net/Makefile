@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver/net
+CMAKE_SOURCE_DIR = /home/gl/omgserver/net
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/workspace/omgserver/net
+CMAKE_BINARY_DIR = /home/gl/omgserver/net
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/net/CMakeFiles /home/gl/workspace/omgserver/net/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/net/CMakeFiles /home/gl/omgserver/net/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/net/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/net/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,6 +157,21 @@ game_packet.s:
 .PHONY : game_packet.s
 
 # target to build an object file
+net_util.o:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/net_util.o
+.PHONY : net_util.o
+
+# target to preprocess a source file
+net_util.i:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/net_util.i
+.PHONY : net_util.i
+
+# target to generate assembly for a file
+net_util.s:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/net_util.s
+.PHONY : net_util.s
+
+# target to build an object file
 serversocket.o:
 	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/serversocket.o
 .PHONY : serversocket.o
@@ -172,19 +187,19 @@ serversocket.s:
 .PHONY : serversocket.s
 
 # target to build an object file
-socket_epoll.o:
-	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/socket_epoll.o
-.PHONY : socket_epoll.o
+socketclient.o:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/socketclient.o
+.PHONY : socketclient.o
 
 # target to preprocess a source file
-socket_epoll.i:
-	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/socket_epoll.i
-.PHONY : socket_epoll.i
+socketclient.i:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/socketclient.i
+.PHONY : socketclient.i
 
 # target to generate assembly for a file
-socket_epoll.s:
-	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/socket_epoll.s
-.PHONY : socket_epoll.s
+socketclient.s:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/socketclient.s
+.PHONY : socketclient.s
 
 # target to build an object file
 thread.o:
@@ -219,12 +234,15 @@ help:
 	@echo "... game_packet.o"
 	@echo "... game_packet.i"
 	@echo "... game_packet.s"
+	@echo "... net_util.o"
+	@echo "... net_util.i"
+	@echo "... net_util.s"
 	@echo "... serversocket.o"
 	@echo "... serversocket.i"
 	@echo "... serversocket.s"
-	@echo "... socket_epoll.o"
-	@echo "... socket_epoll.i"
-	@echo "... socket_epoll.s"
+	@echo "... socketclient.o"
+	@echo "... socketclient.i"
+	@echo "... socketclient.s"
 	@echo "... thread.o"
 	@echo "... thread.i"
 	@echo "... thread.s"

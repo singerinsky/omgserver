@@ -12,6 +12,8 @@ class game_role
         {
             _role_timer.set_owner(this);
             _role_timer.set_expired(ServerRun->get_run_ms()+10*1000);
+            _timer_mgr = ServerRun->get_timer_mgr();
+            _timer_mgr->add_timer(&_role_timer);
         }
 
         void on_timeout(timer_manager*);
@@ -25,6 +27,7 @@ class game_role
     private:
         role_info _role_info;
         template_timer<game_role,&game_role::on_timeout>  _role_timer;
+        timer_manager* _timer_mgr;
 
 };
 

@@ -11,10 +11,10 @@ SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -std=c++11 -O3 -Wall -g -D_GNU_SOURC
 INCLUDE_DIRECTORIES(./include )
 
 SET(CMAKE_BUILD_TYPE DEBUG)
-ADD_SUBDIRECTORY(net game_lib/net) 
-ADD_SUBDIRECTORY(common game_lib/common)
-ADD_SUBDIRECTORY(orm game_lib/orm)
-ADD_SUBDIRECTORY(message game_lib/message_lib)
+ADD_SUBDIRECTORY(net build/net) 
+ADD_SUBDIRECTORY(common build/common)
+ADD_SUBDIRECTORY(orm build/orm)
+ADD_SUBDIRECTORY(message build/message_lib)
 
 
 ADD_SUBDIRECTORY(gate_server/build)                             

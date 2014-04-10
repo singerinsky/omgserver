@@ -14,6 +14,7 @@ enum MessageType
     MSG_HEART_BEAT          = 2;//心跳
     MSG_CLIENT_LOGIN        =3;//client login
     MSG_GATE_SERVER_REGISTER =4;//gate server register
+    MSG_DB_COMMON_UPDATE    = 5;//common update
 }
 
 message SoccerPlayerInfoRequest
@@ -63,3 +64,8 @@ message GateServerRegisterResponse
     required int32 ret = 1;
 }
 
+message DataCommonUpdateNtf
+{
+    required int32  key = 1;
+    required string sql_str = 2;
+}

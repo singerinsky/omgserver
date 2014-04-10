@@ -108,7 +108,7 @@ net: cmake_check_build_system
 
 # fast build rule for target.
 net/fast:
-	$(MAKE) -f game_lib/net/CMakeFiles/net.dir/build.make game_lib/net/CMakeFiles/net.dir/build
+	$(MAKE) -f build/net/CMakeFiles/net.dir/build.make build/net/CMakeFiles/net.dir/build
 .PHONY : net/fast
 
 #=============================================================================
@@ -121,7 +121,7 @@ common: cmake_check_build_system
 
 # fast build rule for target.
 common/fast:
-	$(MAKE) -f game_lib/common/CMakeFiles/common.dir/build.make game_lib/common/CMakeFiles/common.dir/build
+	$(MAKE) -f build/common/CMakeFiles/common.dir/build.make build/common/CMakeFiles/common.dir/build
 .PHONY : common/fast
 
 #=============================================================================
@@ -134,7 +134,7 @@ orm: cmake_check_build_system
 
 # fast build rule for target.
 orm/fast:
-	$(MAKE) -f game_lib/orm/CMakeFiles/orm.dir/build.make game_lib/orm/CMakeFiles/orm.dir/build
+	$(MAKE) -f build/orm/CMakeFiles/orm.dir/build.make build/orm/CMakeFiles/orm.dir/build
 .PHONY : orm/fast
 
 #=============================================================================
@@ -147,7 +147,7 @@ message_lib: cmake_check_build_system
 
 # fast build rule for target.
 message_lib/fast:
-	$(MAKE) -f game_lib/message_lib/CMakeFiles/message_lib.dir/build.make game_lib/message_lib/CMakeFiles/message_lib.dir/build
+	$(MAKE) -f build/message_lib/CMakeFiles/message_lib.dir/build.make build/message_lib/CMakeFiles/message_lib.dir/build
 .PHONY : message_lib/fast
 
 #=============================================================================

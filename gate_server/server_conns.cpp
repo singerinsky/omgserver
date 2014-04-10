@@ -67,8 +67,10 @@ void db_connection::do_login_response(packet_info* info)
    role_data.load_from_pb(response.body.role_data());
 }
 
-void db_connection::do_data_update()
+void db_connection::do_data_update(sql_binder* binder)
 {
-
+   char sql_buff[8192] = {0}; 
+   int buff_left = binder->sql_update(sql_buff,8192);
+   sql_buff[buff_left] = '\0';
 
 }
