@@ -2,6 +2,7 @@
 #include "../message/message_define.h"
 //#include "../message/role_info.pb.h"
 #include "../orm/role_info.h"
+#include "role.h"
 
 int  db_connection::process_msg(packet_info* info)
 {
@@ -61,6 +62,13 @@ void db_connection::do_login_response(packet_info* info)
         LOG(ERROR)<<"decode failed ..."; 
         return;
    }
-   role_info* role = new role_info;
-   role->load_from_pb(response.body.role_data());
+   game_role* role = new game_role;
+   role_info& role_data = role->get_role_info_data();
+   role_data.load_from_pb(response.body.role_data());
+}
+
+void db_connection::do_data_update()
+{
+
+
 }

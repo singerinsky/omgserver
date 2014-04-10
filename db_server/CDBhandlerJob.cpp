@@ -82,7 +82,6 @@ bool CDBQueryhandlerJob::LoadRoleInfo(db_role_info& pb_role,int role_id)
     char sql_buff[256] = {0};
     role.sql_query(sql_buff,256);
     mysqlpp::Query query = _conn->query(sql_buff);
-    LOG(INFO)<<"SQL:"<<sql_buff;
     mysqlpp::StoreQueryResult ret = query.store();
     if(ret.num_rows() > 0)
     {
