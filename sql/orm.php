@@ -34,6 +34,7 @@ class orm_generator
         fwrite($this->comm_file_h,"#define _generate_h_SQL_BINDER \n") ;
         fwrite($this->comm_file_h,"#include <stdint.h>\n") ;
         fwrite($this->comm_file_h,"#include <string.h>\n") ;
+        fwrite($this->comm_file_h,"#include <stdio.h>\n") ;
         fwrite($this->comm_file_h,"#include <string>\n") ;
         fwrite($this->comm_file_h,"#include <vector>\n") ;
         fwrite($this->comm_file_h,"using std::string;\n") ;
@@ -65,6 +66,7 @@ class orm_generator
         fwrite($this->file_h,"#ifndef _generate_h_$this->name \n") ;
         fwrite($this->file_h,"#define _generate_h_$this->name \n") ;
         fwrite($this->file_h,"#include <mysql++/mysql++.h>\n");
+        fwrite($this->file_h,"#include \"../message/$this->name.pb.h\"\n");
         //fwrite($this->file_h,"#include <stdint.h>\n") ;
         //fwrite($this->file_h,"#include <string>\n") ;
         //fwrite($this->file_h,"#include <vector>\n") ;
@@ -326,7 +328,7 @@ class orm_generator
 
     function generate_load_from_pb()
     {
-        fwrite($this->file_cpp, "void $this->name::load_from_pb(db_$this->name& pb)\n"); 
+        fwrite($this->file_cpp, "void $this->name::load_from_pb(const db_$this->name& pb)\n"); 
         fwrite($this->file_cpp,"{\n");
         foreach($this->fields as $k=>$v)
         {
@@ -354,7 +356,7 @@ class orm_generator
 
         fwrite($this->file_h, "public:\n" );
         foreach($this->fields as $k=>$v) $this->generate_method($v) ;
-        fwrite($this->file_h, "    void load_from_pb(db_$this->name&);\n");
+        fwrite($this->file_h, "    void load_from_pb(const db_$this->name&);\n");
         fwrite($this->file_h, "    void copy_to_pb(db_$this->name&);\n");
 
         fwrite($this->file_h, "private:\n    //data member\n" );

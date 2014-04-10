@@ -1,9 +1,8 @@
 #ifndef _generate_h_role_info 
 #define _generate_h_role_info 
 #include <mysql++/mysql++.h>
-#include "sql_binder.h"
 #include "../message/role_info.pb.h"
-
+#include "sql_binder.h"
 class role_info : public sql_binder 
 {
 public:
@@ -211,7 +210,7 @@ public:
     void set_renown(int32_t value) { if(renown!= value){dirty[45] = 1; renown = value;} } ; 
     int sql_renown(char* buf,int size) const{return snprintf(buf,size,"renown='%ld'",(int64_t)renown);}
 
-    void load_from_pb(db_role_info&);
+    void load_from_pb(const db_role_info&);
     void copy_to_pb(db_role_info&);
 private:
     //data member

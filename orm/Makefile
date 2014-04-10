@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/omgserver
+CMAKE_SOURCE_DIR = /home/gl/omgserver/orm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/omgserver
+CMAKE_BINARY_DIR = /home/gl/omgserver/orm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles /home/gl/omgserver/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/orm/CMakeFiles /home/gl/omgserver/orm/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/orm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,32 +99,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named net
-
-# Build rule for target.
-net: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 net
-.PHONY : net
-
-# fast build rule for target.
-net/fast:
-	$(MAKE) -f game_lib/net/CMakeFiles/net.dir/build.make game_lib/net/CMakeFiles/net.dir/build
-.PHONY : net/fast
-
-#=============================================================================
-# Target rules for targets named common
-
-# Build rule for target.
-common: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 common
-.PHONY : common
-
-# fast build rule for target.
-common/fast:
-	$(MAKE) -f game_lib/common/CMakeFiles/common.dir/build.make game_lib/common/CMakeFiles/common.dir/build
-.PHONY : common/fast
-
-#=============================================================================
 # Target rules for targets named orm
 
 # Build rule for target.
@@ -134,47 +108,23 @@ orm: cmake_check_build_system
 
 # fast build rule for target.
 orm/fast:
-	$(MAKE) -f game_lib/orm/CMakeFiles/orm.dir/build.make game_lib/orm/CMakeFiles/orm.dir/build
+	$(MAKE) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/build
 .PHONY : orm/fast
 
-#=============================================================================
-# Target rules for targets named message_lib
+# target to build an object file
+role_info.o:
+	$(MAKE) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/role_info.o
+.PHONY : role_info.o
 
-# Build rule for target.
-message_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 message_lib
-.PHONY : message_lib
+# target to preprocess a source file
+role_info.i:
+	$(MAKE) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/role_info.i
+.PHONY : role_info.i
 
-# fast build rule for target.
-message_lib/fast:
-	$(MAKE) -f game_lib/message_lib/CMakeFiles/message_lib.dir/build.make game_lib/message_lib/CMakeFiles/message_lib.dir/build
-.PHONY : message_lib/fast
-
-#=============================================================================
-# Target rules for targets named gate_server
-
-# Build rule for target.
-gate_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gate_server
-.PHONY : gate_server
-
-# fast build rule for target.
-gate_server/fast:
-	$(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
-.PHONY : gate_server/fast
-
-#=============================================================================
-# Target rules for targets named db_server
-
-# Build rule for target.
-db_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_server
-.PHONY : db_server
-
-# fast build rule for target.
-db_server/fast:
-	$(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/build
-.PHONY : db_server/fast
+# target to generate assembly for a file
+role_info.s:
+	$(MAKE) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/role_info.s
+.PHONY : role_info.s
 
 # Help Target
 help:
@@ -183,13 +133,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... net"
-	@echo "... common"
 	@echo "... orm"
-	@echo "... message_lib"
-	@echo "... gate_server"
-	@echo "... db_server"
+	@echo "... rebuild_cache"
+	@echo "... role_info.o"
+	@echo "... role_info.i"
+	@echo "... role_info.s"
 .PHONY : help
 
 

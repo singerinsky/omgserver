@@ -434,7 +434,7 @@ int role_info::sql_delete(char* buf,int size) const
     buf += len ; size -= len ;
     return origin_size - size ; 
 } 
-void role_info::load_from_pb(db_role_info& pb)
+void role_info::load_from_pb(const db_role_info& pb)
 {
     role_id = pb.role_id();
     uid = pb.uid();

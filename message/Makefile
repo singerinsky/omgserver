@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/omgserver
+CMAKE_SOURCE_DIR = /home/gl/omgserver/message
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/omgserver
+CMAKE_BINARY_DIR = /home/gl/omgserver/message
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles /home/gl/omgserver/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/message/CMakeFiles /home/gl/omgserver/message/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/omgserver/message/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,45 +99,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named net
-
-# Build rule for target.
-net: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 net
-.PHONY : net
-
-# fast build rule for target.
-net/fast:
-	$(MAKE) -f game_lib/net/CMakeFiles/net.dir/build.make game_lib/net/CMakeFiles/net.dir/build
-.PHONY : net/fast
-
-#=============================================================================
-# Target rules for targets named common
-
-# Build rule for target.
-common: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 common
-.PHONY : common
-
-# fast build rule for target.
-common/fast:
-	$(MAKE) -f game_lib/common/CMakeFiles/common.dir/build.make game_lib/common/CMakeFiles/common.dir/build
-.PHONY : common/fast
-
-#=============================================================================
-# Target rules for targets named orm
-
-# Build rule for target.
-orm: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 orm
-.PHONY : orm
-
-# fast build rule for target.
-orm/fast:
-	$(MAKE) -f game_lib/orm/CMakeFiles/orm.dir/build.make game_lib/orm/CMakeFiles/orm.dir/build
-.PHONY : orm/fast
-
-#=============================================================================
 # Target rules for targets named message_lib
 
 # Build rule for target.
@@ -147,34 +108,38 @@ message_lib: cmake_check_build_system
 
 # fast build rule for target.
 message_lib/fast:
-	$(MAKE) -f game_lib/message_lib/CMakeFiles/message_lib.dir/build.make game_lib/message_lib/CMakeFiles/message_lib.dir/build
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/build
 .PHONY : message_lib/fast
 
-#=============================================================================
-# Target rules for targets named gate_server
+# target to build an object file
+message.pb.o:
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/message.pb.o
+.PHONY : message.pb.o
 
-# Build rule for target.
-gate_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gate_server
-.PHONY : gate_server
+# target to preprocess a source file
+message.pb.i:
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/message.pb.i
+.PHONY : message.pb.i
 
-# fast build rule for target.
-gate_server/fast:
-	$(MAKE) -f gate_server/build/CMakeFiles/gate_server.dir/build.make gate_server/build/CMakeFiles/gate_server.dir/build
-.PHONY : gate_server/fast
+# target to generate assembly for a file
+message.pb.s:
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/message.pb.s
+.PHONY : message.pb.s
 
-#=============================================================================
-# Target rules for targets named db_server
+# target to build an object file
+role_info.pb.o:
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/role_info.pb.o
+.PHONY : role_info.pb.o
 
-# Build rule for target.
-db_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 db_server
-.PHONY : db_server
+# target to preprocess a source file
+role_info.pb.i:
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/role_info.pb.i
+.PHONY : role_info.pb.i
 
-# fast build rule for target.
-db_server/fast:
-	$(MAKE) -f db_server/build/CMakeFiles/db_server.dir/build.make db_server/build/CMakeFiles/db_server.dir/build
-.PHONY : db_server/fast
+# target to generate assembly for a file
+role_info.pb.s:
+	$(MAKE) -f CMakeFiles/message_lib.dir/build.make CMakeFiles/message_lib.dir/role_info.pb.s
+.PHONY : role_info.pb.s
 
 # Help Target
 help:
@@ -183,13 +148,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... net"
-	@echo "... common"
-	@echo "... orm"
 	@echo "... message_lib"
-	@echo "... gate_server"
-	@echo "... db_server"
+	@echo "... rebuild_cache"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
+	@echo "... role_info.pb.o"
+	@echo "... role_info.pb.i"
+	@echo "... role_info.pb.s"
 .PHONY : help
 
 

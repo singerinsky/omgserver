@@ -1,5 +1,7 @@
 #include "server_conns.h"
 #include "../message/message_define.h"
+//#include "../message/role_info.pb.h"
+#include "../orm/role_info.h"
 
 int  db_connection::process_msg(packet_info* info)
 {
@@ -59,7 +61,6 @@ void db_connection::do_login_response(packet_info* info)
         LOG(ERROR)<<"decode failed ..."; 
         return;
    }
-
-   LOG(INFO)<<"login name is "<<response.body.player_name();
-   LOG(INFO)<<"login id is "<<response.body.player_id();
+   role_info* role = new role_info;
+   role->load_from_pb(response.body.role_data());
 }
