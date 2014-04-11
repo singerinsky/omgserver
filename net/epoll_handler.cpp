@@ -41,7 +41,7 @@ namespace omg {
             _is_final = false;
             return;
         }
-
+        LOG(INFO)<<"EMPTY..";
         if(fds == 0)
         {
             return;
