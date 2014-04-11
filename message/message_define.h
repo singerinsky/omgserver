@@ -19,6 +19,8 @@ enum
 
     CS_MSG_GATE_REGISTER_REQ    = MSG_GATE_SERVER_REGISTER << 2|MSG_REQUEST,
     CS_MSG_GATE_REGISTER_REP    = MSG_GATE_SERVER_REGISTER << 2|MSG_RESPONSE,
+    
+    CS_MSG_COMMON_DATA_UPDATE_NTF    = MSG_DB_COMMON_UPDATE<< 2|MSG_NOTIFY,
 };
 
 
@@ -35,5 +37,5 @@ typedef cs_packet<CS_MSG_CLIENT_LOGIN_REP,ClientLoginResponse> cs_client_login_r
 typedef cs_packet<CS_MSG_GATE_REGISTER_REQ,GateServerRegisterRequest> cs_gate_register_request;
 typedef cs_packet<CS_MSG_GATE_REGISTER_REP,GateServerRegisterResponse> cs_gate_register_response;
 
-
+typedef cs_packet<CS_MSG_COMMON_DATA_UPDATE_NTF,DataCommonUpdateNtf> cs_data_common_update_ntf;
 #endif

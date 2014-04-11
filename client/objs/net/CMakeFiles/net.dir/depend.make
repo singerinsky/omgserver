@@ -47,9 +47,6 @@ objs/net/CMakeFiles/net.dir/game_packet.cpp.o: /home/gl/omgserver/net/game_packe
 objs/net/CMakeFiles/net.dir/game_packet.cpp.o: /home/gl/omgserver/net/game_packet.h
 objs/net/CMakeFiles/net.dir/game_packet.cpp.o: /home/gl/omgserver/net/packet.h
 
-objs/net/CMakeFiles/net.dir/message.pb.cc.o: /home/gl/omgserver/net/message.pb.cc
-objs/net/CMakeFiles/net.dir/message.pb.cc.o: /home/gl/omgserver/net/message.pb.h
-
 objs/net/CMakeFiles/net.dir/net_util.cpp.o: /home/gl/omgserver/net/net_util.cpp
 objs/net/CMakeFiles/net.dir/net_util.cpp.o: /home/gl/omgserver/net/net_util.h
 

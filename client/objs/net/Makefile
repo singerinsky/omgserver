@@ -184,30 +184,6 @@ game_packet.cpp.s:
 	cd /home/gl/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/game_packet.cpp.s
 .PHONY : game_packet.cpp.s
 
-message.pb.o: message.pb.cc.o
-.PHONY : message.pb.o
-
-# target to build an object file
-message.pb.cc.o:
-	cd /home/gl/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/message.pb.cc.o
-.PHONY : message.pb.cc.o
-
-message.pb.i: message.pb.cc.i
-.PHONY : message.pb.i
-
-# target to preprocess a source file
-message.pb.cc.i:
-	cd /home/gl/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/message.pb.cc.i
-.PHONY : message.pb.cc.i
-
-message.pb.s: message.pb.cc.s
-.PHONY : message.pb.s
-
-# target to generate assembly for a file
-message.pb.cc.s:
-	cd /home/gl/omgserver/client && $(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/message.pb.cc.s
-.PHONY : message.pb.cc.s
-
 net_util.o: net_util.cpp.o
 .PHONY : net_util.o
 
@@ -322,9 +298,6 @@ help:
 	@echo "... game_packet.o"
 	@echo "... game_packet.i"
 	@echo "... game_packet.s"
-	@echo "... message.pb.o"
-	@echo "... message.pb.i"
-	@echo "... message.pb.s"
 	@echo "... net_util.o"
 	@echo "... net_util.i"
 	@echo "... net_util.s"

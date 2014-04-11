@@ -45,7 +45,6 @@ class orm_generator
         fwrite($this->comm_file_h,"    virtual ~sql_binder() { } ;\n") ;
         fwrite($this->comm_file_h,"    virtual void clear_dirty() =0;\n") ;
         fwrite($this->comm_file_h,"    virtual bool is_dirty() const = 0;\n");
-        fwrite($this->comm_file_h,"    virtual void load(mysqlpp::Row&) = 0;\n") ;
         fwrite($this->comm_file_h,"    virtual int sql_insert(char* buf,int size) const =0;\n") ;
         fwrite($this->comm_file_h,"    virtual int sql_replace(char* buf,int size) const =0;\n") ;
         fwrite($this->comm_file_h,"    virtual int sql_update(char* buf,int size) const =0;\n") ;

@@ -13,7 +13,6 @@ public:
     virtual ~sql_binder() { } ;
     virtual void clear_dirty() =0;
     virtual bool is_dirty() const = 0;
-    virtual void load(mysqlpp::Row&) = 0;
     virtual int sql_insert(char* buf,int size) const =0;
     virtual int sql_replace(char* buf,int size) const =0;
     virtual int sql_update(char* buf,int size) const =0;

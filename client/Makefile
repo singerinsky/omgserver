@@ -111,32 +111,6 @@ client/fast:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-#=============================================================================
-# Target rules for targets named net
-
-# Build rule for target.
-net: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 net
-.PHONY : net
-
-# fast build rule for target.
-net/fast:
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/build
-.PHONY : net/fast
-
-#=============================================================================
-# Target rules for targets named common
-
-# Build rule for target.
-common: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 common
-.PHONY : common
-
-# fast build rule for target.
-common/fast:
-	$(MAKE) -f objs/common/CMakeFiles/common.dir/build.make objs/common/CMakeFiles/common.dir/build
-.PHONY : common/fast
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -170,8 +144,6 @@ help:
 	@echo "... client"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... net"
-	@echo "... common"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

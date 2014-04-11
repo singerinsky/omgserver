@@ -118,32 +118,9 @@ objs/net/CMakeFiles/net.dir/net_util.cpp.o.provides: objs/net/CMakeFiles/net.dir
 
 objs/net/CMakeFiles/net.dir/net_util.cpp.o.provides.build: objs/net/CMakeFiles/net.dir/net_util.cpp.o
 
-objs/net/CMakeFiles/net.dir/message.pb.cc.o: objs/net/CMakeFiles/net.dir/flags.make
-objs/net/CMakeFiles/net.dir/message.pb.cc.o: /home/gl/omgserver/net/message.pb.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/message.pb.cc.o"
-	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/message.pb.cc.o -c /home/gl/omgserver/net/message.pb.cc
-
-objs/net/CMakeFiles/net.dir/message.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/message.pb.cc.i"
-	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/omgserver/net/message.pb.cc > CMakeFiles/net.dir/message.pb.cc.i
-
-objs/net/CMakeFiles/net.dir/message.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/message.pb.cc.s"
-	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/omgserver/net/message.pb.cc -o CMakeFiles/net.dir/message.pb.cc.s
-
-objs/net/CMakeFiles/net.dir/message.pb.cc.o.requires:
-.PHONY : objs/net/CMakeFiles/net.dir/message.pb.cc.o.requires
-
-objs/net/CMakeFiles/net.dir/message.pb.cc.o.provides: objs/net/CMakeFiles/net.dir/message.pb.cc.o.requires
-	$(MAKE) -f objs/net/CMakeFiles/net.dir/build.make objs/net/CMakeFiles/net.dir/message.pb.cc.o.provides.build
-.PHONY : objs/net/CMakeFiles/net.dir/message.pb.cc.o.provides
-
-objs/net/CMakeFiles/net.dir/message.pb.cc.o.provides.build: objs/net/CMakeFiles/net.dir/message.pb.cc.o
-
 objs/net/CMakeFiles/net.dir/client_socket.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
 objs/net/CMakeFiles/net.dir/client_socket.cpp.o: /home/gl/omgserver/net/client_socket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/client_socket.cpp.o"
 	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/client_socket.cpp.o -c /home/gl/omgserver/net/client_socket.cpp
 
@@ -166,7 +143,7 @@ objs/net/CMakeFiles/net.dir/client_socket.cpp.o.provides.build: objs/net/CMakeFi
 
 objs/net/CMakeFiles/net.dir/thread.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
 objs/net/CMakeFiles/net.dir/thread.cpp.o: /home/gl/omgserver/net/thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/thread.cpp.o"
 	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/thread.cpp.o -c /home/gl/omgserver/net/thread.cpp
 
@@ -189,7 +166,7 @@ objs/net/CMakeFiles/net.dir/thread.cpp.o.provides.build: objs/net/CMakeFiles/net
 
 objs/net/CMakeFiles/net.dir/game_packet.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
 objs/net/CMakeFiles/net.dir/game_packet.cpp.o: /home/gl/omgserver/net/game_packet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/game_packet.cpp.o"
 	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/game_packet.cpp.o -c /home/gl/omgserver/net/game_packet.cpp
 
@@ -212,7 +189,7 @@ objs/net/CMakeFiles/net.dir/game_packet.cpp.o.provides.build: objs/net/CMakeFile
 
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: objs/net/CMakeFiles/net.dir/flags.make
 objs/net/CMakeFiles/net.dir/socketclient.cpp.o: /home/gl/omgserver/net/socketclient.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/omgserver/client/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object objs/net/CMakeFiles/net.dir/socketclient.cpp.o"
 	cd /home/gl/omgserver/client/objs/net && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/net.dir/socketclient.cpp.o -c /home/gl/omgserver/net/socketclient.cpp
 
@@ -238,7 +215,6 @@ net_OBJECTS = \
 "CMakeFiles/net.dir/serversocket.cpp.o" \
 "CMakeFiles/net.dir/epoll_handler.cpp.o" \
 "CMakeFiles/net.dir/net_util.cpp.o" \
-"CMakeFiles/net.dir/message.pb.cc.o" \
 "CMakeFiles/net.dir/client_socket.cpp.o" \
 "CMakeFiles/net.dir/thread.cpp.o" \
 "CMakeFiles/net.dir/game_packet.cpp.o" \
@@ -247,28 +223,26 @@ net_OBJECTS = \
 # External object files for target net
 net_EXTERNAL_OBJECTS =
 
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/serversocket.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/net_util.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/message.pb.cc.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/client_socket.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/thread.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/game_packet.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/socketclient.cpp.o
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/build.make
-objs/game_lib/libnet.a: objs/net/CMakeFiles/net.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../game_lib/libnet.a"
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/serversocket.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/net_util.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/client_socket.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/thread.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/game_packet.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/socketclient.cpp.o
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/build.make
+game_lib/libnet.a: objs/net/CMakeFiles/net.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../../game_lib/libnet.a"
 	cd /home/gl/omgserver/client/objs/net && $(CMAKE_COMMAND) -P CMakeFiles/net.dir/cmake_clean_target.cmake
 	cd /home/gl/omgserver/client/objs/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-objs/net/CMakeFiles/net.dir/build: objs/game_lib/libnet.a
+objs/net/CMakeFiles/net.dir/build: game_lib/libnet.a
 .PHONY : objs/net/CMakeFiles/net.dir/build
 
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/serversocket.cpp.o.requires
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o.requires
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/net_util.cpp.o.requires
-objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/message.pb.cc.o.requires
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/client_socket.cpp.o.requires
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/thread.cpp.o.requires
 objs/net/CMakeFiles/net.dir/requires: objs/net/CMakeFiles/net.dir/game_packet.cpp.o.requires

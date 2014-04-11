@@ -10,8 +10,6 @@ SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/DependInfo.cmake"
-  "/home/gl/omgserver/client/objs/common/CMakeFiles/common.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

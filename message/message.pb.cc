@@ -42,6 +42,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* GateServerRegisterResponse_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GateServerRegisterResponse_reflection_ = NULL;
+const ::google::protobuf::Descriptor* DataCommonUpdateNtf_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  DataCommonUpdateNtf_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* MSG_ACTION_TYPE_descriptor_ = NULL;
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor_ = NULL;
 
@@ -181,6 +184,22 @@ void protobuf_AssignDesc_message_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(GateServerRegisterResponse));
+  DataCommonUpdateNtf_descriptor_ = file->message_type(8);
+  static const int DataCommonUpdateNtf_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataCommonUpdateNtf, key_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataCommonUpdateNtf, sql_str_),
+  };
+  DataCommonUpdateNtf_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      DataCommonUpdateNtf_descriptor_,
+      DataCommonUpdateNtf::default_instance_,
+      DataCommonUpdateNtf_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataCommonUpdateNtf, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DataCommonUpdateNtf, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(DataCommonUpdateNtf));
   MSG_ACTION_TYPE_descriptor_ = file->enum_type(0);
   MessageType_descriptor_ = file->enum_type(1);
 }
@@ -211,6 +230,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     GateServerRegisterRequest_descriptor_, &GateServerRegisterRequest::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     GateServerRegisterResponse_descriptor_, &GateServerRegisterResponse::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    DataCommonUpdateNtf_descriptor_, &DataCommonUpdateNtf::default_instance());
 }
 
 }  // namespace
@@ -232,6 +253,8 @@ void protobuf_ShutdownFile_message_2eproto() {
   delete GateServerRegisterRequest_reflection_;
   delete GateServerRegisterResponse::default_instance_;
   delete GateServerRegisterResponse_reflection_;
+  delete DataCommonUpdateNtf::default_instance_;
+  delete DataCommonUpdateNtf_reflection_;
 }
 
 void protobuf_AddDesc_message_2eproto() {
@@ -255,12 +278,14 @@ void protobuf_AddDesc_message_2eproto() {
     "ame\030\003 \001(\t\022 \n\trole_data\030\004 \001(\0132\r.db_role_i"
     "nfo\"1\n\031GateServerRegisterRequest\022\024\n\014serv"
     "er_index\030\001 \002(\005\")\n\032GateServerRegisterResp"
-    "onse\022\013\n\003ret\030\001 \002(\005*D\n\017MSG_ACTION_TYPE\022\017\n\013"
-    "MSG_REQUEST\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\nMSG_N"
-    "OTIFY\020\002*q\n\013MessageType\022\032\n\026MSG_SOCCER_PLA"
-    "YER_INFO\020\001\022\022\n\016MSG_HEART_BEAT\020\002\022\024\n\020MSG_CL"
-    "IENT_LOGIN\020\003\022\034\n\030MSG_GATE_SERVER_REGISTER"
-    "\020\004", 722);
+    "onse\022\013\n\003ret\030\001 \002(\005\"3\n\023DataCommonUpdateNtf"
+    "\022\013\n\003key\030\001 \002(\005\022\017\n\007sql_str\030\002 \002(\t*D\n\017MSG_AC"
+    "TION_TYPE\022\017\n\013MSG_REQUEST\020\000\022\020\n\014MSG_RESPON"
+    "SE\020\001\022\016\n\nMSG_NOTIFY\020\002*\213\001\n\013MessageType\022\032\n\026"
+    "MSG_SOCCER_PLAYER_INFO\020\001\022\022\n\016MSG_HEART_BE"
+    "AT\020\002\022\024\n\020MSG_CLIENT_LOGIN\020\003\022\034\n\030MSG_GATE_S"
+    "ERVER_REGISTER\020\004\022\030\n\024MSG_DB_COMMON_UPDATE"
+    "\020\005", 802);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
@@ -271,6 +296,7 @@ void protobuf_AddDesc_message_2eproto() {
   ClientLoginResponse::default_instance_ = new ClientLoginResponse();
   GateServerRegisterRequest::default_instance_ = new GateServerRegisterRequest();
   GateServerRegisterResponse::default_instance_ = new GateServerRegisterResponse();
+  DataCommonUpdateNtf::default_instance_ = new DataCommonUpdateNtf();
   SoccerPlayerInfoRequest::default_instance_->InitAsDefaultInstance();
   SoccerPlayerInfoResponse::default_instance_->InitAsDefaultInstance();
   ClientHeartBeatRequest::default_instance_->InitAsDefaultInstance();
@@ -279,6 +305,7 @@ void protobuf_AddDesc_message_2eproto() {
   ClientLoginResponse::default_instance_->InitAsDefaultInstance();
   GateServerRegisterRequest::default_instance_->InitAsDefaultInstance();
   GateServerRegisterResponse::default_instance_->InitAsDefaultInstance();
+  DataCommonUpdateNtf::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_message_2eproto);
 }
 
@@ -313,6 +340,7 @@ bool MessageType_IsValid(int value) {
     case 2:
     case 3:
     case 4:
+    case 5:
       return true;
     default:
       return false;
@@ -2344,6 +2372,272 @@ void GateServerRegisterResponse::Swap(GateServerRegisterResponse* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = GateServerRegisterResponse_descriptor_;
   metadata.reflection = GateServerRegisterResponse_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int DataCommonUpdateNtf::kKeyFieldNumber;
+const int DataCommonUpdateNtf::kSqlStrFieldNumber;
+#endif  // !_MSC_VER
+
+DataCommonUpdateNtf::DataCommonUpdateNtf()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void DataCommonUpdateNtf::InitAsDefaultInstance() {
+}
+
+DataCommonUpdateNtf::DataCommonUpdateNtf(const DataCommonUpdateNtf& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void DataCommonUpdateNtf::SharedCtor() {
+  _cached_size_ = 0;
+  key_ = 0;
+  sql_str_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+DataCommonUpdateNtf::~DataCommonUpdateNtf() {
+  SharedDtor();
+}
+
+void DataCommonUpdateNtf::SharedDtor() {
+  if (sql_str_ != &::google::protobuf::internal::kEmptyString) {
+    delete sql_str_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void DataCommonUpdateNtf::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* DataCommonUpdateNtf::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return DataCommonUpdateNtf_descriptor_;
+}
+
+const DataCommonUpdateNtf& DataCommonUpdateNtf::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_message_2eproto();
+  return *default_instance_;
+}
+
+DataCommonUpdateNtf* DataCommonUpdateNtf::default_instance_ = NULL;
+
+DataCommonUpdateNtf* DataCommonUpdateNtf::New() const {
+  return new DataCommonUpdateNtf;
+}
+
+void DataCommonUpdateNtf::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    key_ = 0;
+    if (has_sql_str()) {
+      if (sql_str_ != &::google::protobuf::internal::kEmptyString) {
+        sql_str_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool DataCommonUpdateNtf::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required int32 key = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &key_)));
+          set_has_key();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_sql_str;
+        break;
+      }
+
+      // required string sql_str = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_sql_str:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_sql_str()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->sql_str().data(), this->sql_str().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void DataCommonUpdateNtf::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required int32 key = 1;
+  if (has_key()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->key(), output);
+  }
+
+  // required string sql_str = 2;
+  if (has_sql_str()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->sql_str().data(), this->sql_str().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->sql_str(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* DataCommonUpdateNtf::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required int32 key = 1;
+  if (has_key()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->key(), target);
+  }
+
+  // required string sql_str = 2;
+  if (has_sql_str()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->sql_str().data(), this->sql_str().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->sql_str(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int DataCommonUpdateNtf::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required int32 key = 1;
+    if (has_key()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->key());
+    }
+
+    // required string sql_str = 2;
+    if (has_sql_str()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->sql_str());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void DataCommonUpdateNtf::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const DataCommonUpdateNtf* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const DataCommonUpdateNtf*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void DataCommonUpdateNtf::MergeFrom(const DataCommonUpdateNtf& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_key()) {
+      set_key(from.key());
+    }
+    if (from.has_sql_str()) {
+      set_sql_str(from.sql_str());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void DataCommonUpdateNtf::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void DataCommonUpdateNtf::CopyFrom(const DataCommonUpdateNtf& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool DataCommonUpdateNtf::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  return true;
+}
+
+void DataCommonUpdateNtf::Swap(DataCommonUpdateNtf* other) {
+  if (other != this) {
+    std::swap(key_, other->key_);
+    std::swap(sql_str_, other->sql_str_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata DataCommonUpdateNtf::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = DataCommonUpdateNtf_descriptor_;
+  metadata.reflection = DataCommonUpdateNtf_reflection_;
   return metadata;
 }
 

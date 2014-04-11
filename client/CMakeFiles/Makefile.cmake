@@ -11,8 +11,6 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/2.8.11.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/2.8.11.2/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "/home/gl/omgserver/common/CMakeLists.txt"
-  "/home/gl/omgserver/net/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake"
@@ -37,13 +35,9 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "objs/net/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "objs/common/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/client.dir/DependInfo.cmake"
-  "objs/net/CMakeFiles/net.dir/DependInfo.cmake"
-  "objs/common/CMakeFiles/common.dir/DependInfo.cmake"
   )

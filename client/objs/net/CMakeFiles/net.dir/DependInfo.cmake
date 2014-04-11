@@ -7,7 +7,6 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/gl/omgserver/net/client_socket.cpp" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/client_socket.cpp.o"
   "/home/gl/omgserver/net/epoll_handler.cpp" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/epoll_handler.cpp.o"
   "/home/gl/omgserver/net/game_packet.cpp" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/game_packet.cpp.o"
-  "/home/gl/omgserver/net/message.pb.cc" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/message.pb.cc.o"
   "/home/gl/omgserver/net/net_util.cpp" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/net_util.cpp.o"
   "/home/gl/omgserver/net/serversocket.cpp" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/serversocket.cpp.o"
   "/home/gl/omgserver/net/socketclient.cpp" "/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir/socketclient.cpp.o"

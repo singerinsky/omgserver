@@ -1,3 +1,1 @@
 /home/gl/omgserver/client/CMakeFiles/client.dir
-/home/gl/omgserver/client/objs/common/CMakeFiles/common.dir
-/home/gl/omgserver/client/objs/net/CMakeFiles/net.dir

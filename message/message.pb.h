@@ -41,6 +41,7 @@ class ClientLoginRequest;
 class ClientLoginResponse;
 class GateServerRegisterRequest;
 class GateServerRegisterResponse;
+class DataCommonUpdateNtf;
 
 enum MSG_ACTION_TYPE {
   MSG_REQUEST = 0,
@@ -66,11 +67,12 @@ enum MessageType {
   MSG_SOCCER_PLAYER_INFO = 1,
   MSG_HEART_BEAT = 2,
   MSG_CLIENT_LOGIN = 3,
-  MSG_GATE_SERVER_REGISTER = 4
+  MSG_GATE_SERVER_REGISTER = 4,
+  MSG_DB_COMMON_UPDATE = 5
 };
 bool MessageType_IsValid(int value);
 const MessageType MessageType_MIN = MSG_SOCCER_PLAYER_INFO;
-const MessageType MessageType_MAX = MSG_GATE_SERVER_REGISTER;
+const MessageType MessageType_MAX = MSG_DB_COMMON_UPDATE;
 const int MessageType_ARRAYSIZE = MessageType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MessageType_descriptor();
@@ -831,6 +833,103 @@ class GateServerRegisterResponse : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static GateServerRegisterResponse* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class DataCommonUpdateNtf : public ::google::protobuf::Message {
+ public:
+  DataCommonUpdateNtf();
+  virtual ~DataCommonUpdateNtf();
+
+  DataCommonUpdateNtf(const DataCommonUpdateNtf& from);
+
+  inline DataCommonUpdateNtf& operator=(const DataCommonUpdateNtf& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const DataCommonUpdateNtf& default_instance();
+
+  void Swap(DataCommonUpdateNtf* other);
+
+  // implements Message ----------------------------------------------
+
+  DataCommonUpdateNtf* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const DataCommonUpdateNtf& from);
+  void MergeFrom(const DataCommonUpdateNtf& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required int32 key = 1;
+  inline bool has_key() const;
+  inline void clear_key();
+  static const int kKeyFieldNumber = 1;
+  inline ::google::protobuf::int32 key() const;
+  inline void set_key(::google::protobuf::int32 value);
+
+  // required string sql_str = 2;
+  inline bool has_sql_str() const;
+  inline void clear_sql_str();
+  static const int kSqlStrFieldNumber = 2;
+  inline const ::std::string& sql_str() const;
+  inline void set_sql_str(const ::std::string& value);
+  inline void set_sql_str(const char* value);
+  inline void set_sql_str(const char* value, size_t size);
+  inline ::std::string* mutable_sql_str();
+  inline ::std::string* release_sql_str();
+  inline void set_allocated_sql_str(::std::string* sql_str);
+
+  // @@protoc_insertion_point(class_scope:DataCommonUpdateNtf)
+ private:
+  inline void set_has_key();
+  inline void clear_has_key();
+  inline void set_has_sql_str();
+  inline void clear_has_sql_str();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  ::std::string* sql_str_;
+  ::google::protobuf::int32 key_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
+
+  friend void  protobuf_AddDesc_message_2eproto();
+  friend void protobuf_AssignDesc_message_2eproto();
+  friend void protobuf_ShutdownFile_message_2eproto();
+
+  void InitAsDefaultInstance();
+  static DataCommonUpdateNtf* default_instance_;
+};
 // ===================================================================
 
 
@@ -1402,6 +1501,102 @@ inline ::google::protobuf::int32 GateServerRegisterResponse::ret() const {
 inline void GateServerRegisterResponse::set_ret(::google::protobuf::int32 value) {
   set_has_ret();
   ret_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// DataCommonUpdateNtf
+
+// required int32 key = 1;
+inline bool DataCommonUpdateNtf::has_key() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void DataCommonUpdateNtf::set_has_key() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void DataCommonUpdateNtf::clear_has_key() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void DataCommonUpdateNtf::clear_key() {
+  key_ = 0;
+  clear_has_key();
+}
+inline ::google::protobuf::int32 DataCommonUpdateNtf::key() const {
+  return key_;
+}
+inline void DataCommonUpdateNtf::set_key(::google::protobuf::int32 value) {
+  set_has_key();
+  key_ = value;
+}
+
+// required string sql_str = 2;
+inline bool DataCommonUpdateNtf::has_sql_str() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void DataCommonUpdateNtf::set_has_sql_str() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void DataCommonUpdateNtf::clear_has_sql_str() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void DataCommonUpdateNtf::clear_sql_str() {
+  if (sql_str_ != &::google::protobuf::internal::kEmptyString) {
+    sql_str_->clear();
+  }
+  clear_has_sql_str();
+}
+inline const ::std::string& DataCommonUpdateNtf::sql_str() const {
+  return *sql_str_;
+}
+inline void DataCommonUpdateNtf::set_sql_str(const ::std::string& value) {
+  set_has_sql_str();
+  if (sql_str_ == &::google::protobuf::internal::kEmptyString) {
+    sql_str_ = new ::std::string;
+  }
+  sql_str_->assign(value);
+}
+inline void DataCommonUpdateNtf::set_sql_str(const char* value) {
+  set_has_sql_str();
+  if (sql_str_ == &::google::protobuf::internal::kEmptyString) {
+    sql_str_ = new ::std::string;
+  }
+  sql_str_->assign(value);
+}
+inline void DataCommonUpdateNtf::set_sql_str(const char* value, size_t size) {
+  set_has_sql_str();
+  if (sql_str_ == &::google::protobuf::internal::kEmptyString) {
+    sql_str_ = new ::std::string;
+  }
+  sql_str_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* DataCommonUpdateNtf::mutable_sql_str() {
+  set_has_sql_str();
+  if (sql_str_ == &::google::protobuf::internal::kEmptyString) {
+    sql_str_ = new ::std::string;
+  }
+  return sql_str_;
+}
+inline ::std::string* DataCommonUpdateNtf::release_sql_str() {
+  clear_has_sql_str();
+  if (sql_str_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = sql_str_;
+    sql_str_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void DataCommonUpdateNtf::set_allocated_sql_str(::std::string* sql_str) {
+  if (sql_str_ != &::google::protobuf::internal::kEmptyString) {
+    delete sql_str_;
+  }
+  if (sql_str) {
+    set_has_sql_str();
+    sql_str_ = sql_str;
+  } else {
+    clear_has_sql_str();
+    sql_str_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 

@@ -12,8 +12,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/common.dir/mtrand.cpp.o"
   "CMakeFiles/common.dir/CEventThread.cpp.o"
   "CMakeFiles/common.dir/MD5.cpp.o"
-  "../game_lib/libcommon.pdb"
-  "../game_lib/libcommon.a"
+  "../../game_lib/libcommon.pdb"
+  "../../game_lib/libcommon.a"
 )
 
 # Per-language clean rules from dependency scanning.

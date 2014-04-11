@@ -19,9 +19,10 @@ CMakeFiles/client.dir/main.cpp.o
  /home/gl/omgserver/client/../common/omg_type.h
  /home/gl/omgserver/client/../message/../net/../common/aliased_buf.h
  /home/gl/omgserver/client/../message/../net/game_packet.h
- /home/gl/omgserver/client/../message/../net/message.pb.h
  /home/gl/omgserver/client/../message/../net/packet.h
+ /home/gl/omgserver/client/../message/message.pb.h
  /home/gl/omgserver/client/../message/message_define.h
+ /home/gl/omgserver/client/../message/role_info.pb.h
  /home/gl/omgserver/client/../net/../common/omg_type.h
  /home/gl/omgserver/client/../net/../net/IConnection.h
  /home/gl/omgserver/client/../net/../net/IMsgDispatcher.h

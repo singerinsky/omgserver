@@ -65,12 +65,27 @@ void db_connection::do_login_response(packet_info* info)
    game_role* role = new game_role;
    role_info& role_data = role->get_role_info_data();
    role_data.load_from_pb(response.body.role_data());
+
+   int add_rst = role_manager::get_instance()->add_role(role,role->get_role_info_data().get_role_id());
+   LOG(INFO)<<"GET role data info"<<role->get_role_info_data().get_tid();
+   role->get_role_info_data().set_tid(time(NULL));
 }
 
-void db_connection::do_data_update(sql_binder* binder)
+void db_connection::do_data_update(sql_binder* binder,int key)
 {
-   char sql_buff[8192] = {0}; 
-   int buff_left = binder->sql_update(sql_buff,8192);
-   sql_buff[buff_left] = '\0';
+    char sql_buff[8192] = {0}; 
+    if(!binder->is_dirty())
+        return;
+    int buff_left = binder->sql_update(sql_buff,8192);
+    if(buff_left <= 0)
+    {
+        LOG(INFO)<<"sql too long"<<key; 
+        return ;
+    }
+    sql_buff[buff_left] = '\0';
 
+    cs_data_common_update_ntf ntf;
+    ntf.body.set_key(key);    
+    ntf.body.set_sql_str(sql_buff);    
+    send_packet_msg(&ntf);
 }

@@ -48,7 +48,9 @@ int main(int argc,char** argv){
 		printf("%d",rest);
 		bool is_login = false;
 		while(1){
+            if(is_login == false)
             send_client_login_message(fd);
+            is_login =true; 
 //            send_soccer_player_info(fd);
 			char buffer[1024];
 			usleep(500000);
