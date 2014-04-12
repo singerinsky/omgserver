@@ -297,7 +297,7 @@ class orm_generator
         {
             fwrite($this->file_h, "    $field[2] get_${field[1]}() const { return $field[1];} ; \n" );
             fwrite($this->file_h, "    void set_${field[1]}($field[2] value) { if($field[1]!= value){dirty[${field[0]}] = 1; $field[1] = value;} } ; \n" );
-            fwrite($this->file_h, "    int sql_${field[1]}(char* buf,int size) const{return snprintf(buf,size,\"${field[1]}='%ld'\",(int64_t)${field[1]});}\n\n" );
+            fwrite($this->file_h, "    int sql_${field[1]}(char* buf,int size) const{return snprintf(buf,size,\"${field[1]}='%lld'\",(int64_t)${field[1]});}\n\n" );
         }
     }
 
