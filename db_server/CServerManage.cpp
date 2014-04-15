@@ -66,6 +66,9 @@ int GameServerClient::process_msg(packet_info* packet)
         case CS_MSG_GATE_REGISTER_REQ:
             do_register_gate(packet);
             break;
+        case CS_MSG_COMMON_DATA_UPDATE_NTF: 
+            do_common_update_del(packet);
+            break;
         default:
             LOG(ERROR)<<"unknown message "<<packet_type;
     }
@@ -86,8 +89,15 @@ int GameServerClient::do_get_soccer_player_info(const packet_info* packet)
     send_packet_msg(&response);
 }
 
-int GameServerClient::do_common_update_insert(const packet_info* packet)
+int GameServerClient::do_common_update_del(const packet_info* packet)
 {
+    cs_data_common_update_ntf ntf;
+    if(ntf.decode(packet->data,packet->size) != packet->size)return -1;
+    db_event* event = new db_event();
+    event->operate_type = COMMON_UPDATE_DEL;
+    event->seq = ntf.body.key();
+    event->sql_str = ntf.body.sql_str();
+    CDBTaskManage::GetInstance()->AddTaskEvent(event);
     return 1;
 }
 

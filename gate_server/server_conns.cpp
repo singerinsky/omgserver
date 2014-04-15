@@ -3,6 +3,7 @@
 //#include "../message/role_info.pb.h"
 #include "../orm/role_info.h"
 #include "role.h"
+#include "gate_server.h"
 
 int  db_connection::process_msg(packet_info* info)
 {
@@ -62,7 +63,7 @@ void db_connection::do_login_response(packet_info* info)
         LOG(ERROR)<<"decode failed ..."; 
         return;
    }
-   game_role* role = new game_role;
+   game_role* role = new game_role(GlobalServer->get_db_connection());
    role_info& role_data = role->get_role_info_data();
    role_data.load_from_pb(response.body.role_data());
 
@@ -83,9 +84,11 @@ void db_connection::do_data_update(sql_binder* binder,int key)
         return ;
     }
     sql_buff[buff_left] = '\0';
+    LOG(INFO)<<"do update sql"<<sql_buff;
 
     cs_data_common_update_ntf ntf;
     ntf.body.set_key(key);    
     ntf.body.set_sql_str(sql_buff);    
     send_packet_msg(&ntf);
+    binder->clear_dirty();
 }

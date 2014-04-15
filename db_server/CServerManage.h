@@ -52,8 +52,7 @@ public:
     int do_get_soccer_player_info(const packet_info* packet);
     int do_check_client_log(const packet_info* packet);
     int do_register_gate(const packet_info* packet);
-    int do_common_update_insert(const packet_info* packet);
-
+    int do_common_update_del(const packet_info* packet);
 public:
 	int index;
 	std::set<int> _match_list;

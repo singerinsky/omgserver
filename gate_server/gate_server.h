@@ -32,6 +32,11 @@ class GateServerGlobal
             }
         }
 
+        db_connection* get_db_connection()
+        {
+            return db_conn; 
+        }
+
     public:
         db_connection* db_conn;
     private:
