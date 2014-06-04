@@ -138,6 +138,7 @@ namespace omg
 		Lock _lock;
 	};
 
+    //mulitply read ,single write
 	template<class T,class Lock>
 	class WRQueue{
 	private:
