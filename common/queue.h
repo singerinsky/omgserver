@@ -1,9 +1,11 @@
 #ifndef _CON_QUEUE_H_
 #define _CON_QUEUE_H_
+#include "lock.h"
+
 namespace omg
 {
 
-	template<class T, class HeadLock, class TailLock>
+	template<class T>
 	class ConcurrenceQueue
 	{
 		struct ConcurrenceQueueNode
@@ -22,8 +24,6 @@ namespace omg
 		{
 			ConcurrenceQueueNode *node = new ConcurrenceQueueNode();
 			_head = _tail = node;
-			_head_lock.init();
-			_tail_lock.init();
 		}
 
 		~ConcurrenceQueue(void)
@@ -44,59 +44,109 @@ namespace omg
 		{
 			ConcurrenceQueueNode *node = new ConcurrenceQueueNode();
 			node->value = value;
-			_tail_lock.lock();
-			_head_lock.lock();
 			_tail->next = node;
 			_tail = node;
-			_head_lock.lock_continue();
-			_head_lock.unlock();
-			_tail_lock.unlock();
 		}
 
 		T *dequeue(void)
 		{
-			_head_lock.lock();
-
-			ConcurrenceQueueNode *node = _head;
-			ConcurrenceQueueNode *new_head = node->next;
-			if (new_head == NULL)
+			while(_head == NULL || _head->next == NULL)
 			{
-				//_head_lock.unlock();
-				//wait for the cond
-/*				_head_lock.lock_hold();
-				node = _head;
-				new_head = node->next;
-				T* value = new_head->value;
-				_head = new_head;*/
-
-				_head_lock.unlock();
-				//return value;
-				return NULL;
-			}
-			T *value = new_head->value;
-			_head = new_head;
-			_head_lock.unlock();
-
-			delete node;
-
+			    return NULL;
+            }
+                
+			T *value = _head->next->value;
+            ConcurrenceQueueNode* old_head = _head;
+			_head = _head->next;
+			delete old_head;
 			return value;
 		}
 
 	private:
 		ConcurrenceQueueNode *_head;
 		ConcurrenceQueueNode *_tail;
-		HeadLock _head_lock;
-		TailLock _tail_lock;
 	};
 
+
+	template<class T,class Lock>
+	class ConcurrenceLockQueue
+	{
+		struct ConcurrenceQueueNode
+		{
+			ConcurrenceQueueNode(void)
+			{
+				next = NULL;
+				value = NULL;
+			}
+			T *value;
+			ConcurrenceQueueNode *next;
+		};
+
+	public:
+		ConcurrenceLockQueue(void)
+		{
+			ConcurrenceQueueNode *node = new ConcurrenceQueueNode();
+			_head = _tail = node;
+			_lock.init();
+		}
+
+		~ConcurrenceLockQueue(void)
+		{
+			for (;_head != _tail;)
+			{
+				T *event = dequeue();
+				if (event == NULL)
+				{
+					break;
+				}
+				delete event;
+			}
+			delete _head;
+		}
+
+		void enqueue(T *value)
+		{
+            _lock.lock();
+			ConcurrenceQueueNode *node = new ConcurrenceQueueNode();
+			node->value = value;
+			_tail->next = node;
+			_tail = node;
+            _lock.unlock();
+            //tell other thread to start
+            _lock.lock_continue();
+		}
+
+		T *dequeue(void)
+		{
+            _lock.lock();
+			while(_head == NULL || _head->next == NULL)
+			{
+                _lock.lock_hold();
+			}
+                
+			T *value = _head->next->value;
+            ConcurrenceQueueNode* old_head = _head;
+			_head = _head->next;
+            _lock.unlock();
+			delete old_head;
+			return value;
+		}
+
+	private:
+		ConcurrenceQueueNode *_head;
+		ConcurrenceQueueNode *_tail;
+		Lock _lock;
+	};
+
+    //mulitply read ,single write
 	template<class T,class Lock>
 	class WRQueue{
 	private:
-		ConcurrenceQueue<T,NullLock,NullLock> _in_queue;
-		ConcurrenceQueue<T,NullLock,NullLock> _out_queue;
+		ConcurrenceQueue<T> _in_queue;
+		ConcurrenceQueue<T> _out_queue;
 
-		ConcurrenceQueue<T,NullLock,NullLock>* volatile  _p_in_queue;
-		ConcurrenceQueue<T,NullLock,NullLock>* volatile  _p_out_queue;
+		ConcurrenceQueue<T>* volatile  _p_in_queue;
+		ConcurrenceQueue<T>* volatile  _p_out_queue;
 		Lock	_lock;
 	public:
 		WRQueue(){
@@ -123,7 +173,7 @@ namespace omg
 
 		void exchange_r_w_queue(){
 			_lock.lock();
-			ConcurrenceQueue<T,NullLock,NullLock>* tmp_point;
+			ConcurrenceQueue<T>* tmp_point;
 			tmp_point = _p_in_queue;
 			_p_in_queue = _p_out_queue;
 			_p_out_queue = tmp_point;

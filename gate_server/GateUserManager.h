@@ -14,6 +14,8 @@
 #include <map>
 using namespace omg;
 
+class packet;
+
 typedef std::map<SocketFD,GateWayPlayer*> SocketMap;
 typedef std::map<int,GateWayPlayer*>::iterator SMItr;
 
@@ -30,17 +32,14 @@ public:
 	GateWayPlayer*				GetGateWayPlayerBySockFd(int);
 	static GateWayPlayerManager*	GetInstance();
 	int							GetGatePlayerCount();
-	inline	void				SendMsgAll(MsgBase* msg){
-		_lock.lock();
+
+	inline	void				SendMsgAll(packet* msg){
 		SMItr itr= _player_map.begin();
 		while(itr != _player_map.end()){
 			GateWayPlayer* player = itr->second;
-			_lock.unlock();
-			player->send_msg(msg);
-			_lock.lock();
+			player->send_packet_msg(msg);
 			itr++;
 		}
-		_lock.unlock();
 	}
 
 	std::list<int>	export_all_player_online(){
@@ -58,6 +57,5 @@ private:
 	static	GateWayPlayerManager*	_m_instance;
 	PlayerMap	_player_map;
 	//MutexLock	_lock;
-	omg::NullLock	_lock;
 };
 #endif /* CSOCKETMAP_H_ */

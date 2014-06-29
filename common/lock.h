@@ -191,4 +191,24 @@ namespace omg
 
 }
 
+template<class T>
+class  ScopeLock
+{
+    public:
+        ScopeLock(T& t):lock(t){
+            lock.lock(); 
+        }
+        ~ScopeLock(){
+            lock.unlock(); 
+        }
+    protected:
+        T&   lock;
+};
+
+
+
+
+
+
+
 #endif /* _SFL_LOCK_H_ */

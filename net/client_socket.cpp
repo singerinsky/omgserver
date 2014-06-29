@@ -57,7 +57,7 @@ bool CSocketClient::set_block(bool block) {
 
 }
 
-int CSocketClient::sendData(const char *buffer, int buffer_size) {
+int CSocketClient::send_data(const char *buffer, int buffer_size) {
 	int ret = 0;
 
 	while (ret < buffer_size) {
@@ -123,7 +123,6 @@ int CSocketClient::recvData() {
 	CMsgEvent* event = new CMsgEvent();
 	event->_msg_type = msg_typ;
 	event->_msg_base = (MsgBase*)buffer;
-	event->_msg_from = this;
 	_msg_dispatcher->add_msg_to_queue(event);
 	return ret;
 }

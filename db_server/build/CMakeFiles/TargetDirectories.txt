@@ -1,3 +1,0 @@
-/home/gl/football/omgserver/objs/common/CMakeFiles/common.dir
-/home/gl/football/omgserver/db_server/build/CMakeFiles/db_server.dir
-/home/gl/football/omgserver/objs/net/CMakeFiles/net.dir

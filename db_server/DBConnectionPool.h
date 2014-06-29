@@ -32,6 +32,13 @@ private:
 		password_(server_info->password),
 		port_(server_info->port){
 		LOG(INFO)<<"Init database "<<server_info->db_name<<" ip:"<<server_info->data_base_ip<<" port:"<<server_info->port;
+        mysqlpp::Connection* temp_conn = create();
+        if(temp_conn == NULL)
+        {
+            LOG(ERROR)<<"Connect mysql server error!";
+            exit(1);
+        }
+        delete temp_conn;
 	}
 public:
 	virtual ~DBConnectionPool();

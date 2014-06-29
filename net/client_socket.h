@@ -25,14 +25,14 @@ class CSocketClient:public IConnection
 		};
 		CSocketClient(short port,const char* server_ip);
 		virtual ~CSocketClient();
-		int  getConnectionId(){
+		int  get_connection_id(){
 			return _socket_fd;
 		}
 		bool set_block(bool);	
 		bool connectToServer();
 		int recvData();
 		int recvData(char* buff,int len);
-		int sendData(const char*,int);
+		int send_data(const char*,int);
 		void set_msg_dispatcher(IMsgDispatcher* dispatcher){
 			this->_msg_dispatcher = dispatcher;
 		}
@@ -61,6 +61,10 @@ class CSocketClient:public IConnection
 		StringBuffer	get_socket_ip_port_info(){
 			return _server_ip_port_str;
 		}
+
+        int on_error(){return 0;}
+        int on_write(){return 0;}
+        int on_read(){return 0;}
 
 	private:
 		bool _is_connected;

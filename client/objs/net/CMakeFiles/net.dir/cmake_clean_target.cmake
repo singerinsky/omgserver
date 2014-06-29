@@ -1,3 +1,3 @@
 FILE(REMOVE_RECURSE
-  "libnet.a"
+  "../../game_lib/libnet.a"
 )

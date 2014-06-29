@@ -15,54 +15,55 @@
 #include "../common/queue.h"
 #include <mysql++/mysql++.h>
 #include "DBConnectionPool.h"
-#include "DBEvent.h"
-#include "CNpcPlayerCache.h"
+#include "../orm/role_info.h"
 
 using namespace omg;
 
+enum DB_OPERATE
+{
+    COMMON_INSERT,
+    COMMON_UPDATE_DEL,
+    QUERY_LOGIN_INFO,
+};
+
+class db_event
+{
+    public:
+        DB_OPERATE operate_type;
+        int seq;
+        std::string sql_str;
+};
+
 class CDBQueryhandlerJob: public omg::IJob {
-public:
-	CDBQueryhandlerJob(DBConnectionPool* pool,IMsgDispatcher* dispatcher,int number):_conn(*pool,true){
-		_msg_dispatcher = dispatcher;
-		_task_all = 0;
-		_task_processed = 0;
-		_id = number;
-	};
-	virtual ~CDBQueryhandlerJob();
-	virtual void ExecuteJob();
-	void 	AddTask(CMsgEvent *event);
-	int		GetTaskInProcess(){
-		return _task_all - _task_processed;
-	}
-	int getId(){
-		return _id;
-	}
-private:
-	mysqlpp::ScopedConnection _conn;
-	IMsgDispatcher* _msg_dispatcher;
-	int  _task_all;
-	int  _task_processed;
-	int  _id;
+    public:
+        CDBQueryhandlerJob(DBConnectionPool* pool,int number):_conn(*pool,true){
+            _task_all = 0;
+            _task_processed = 0;
+            _id = number;
+        };
+        virtual ~CDBQueryhandlerJob();
+        virtual void ExecuteJob();
+        void 	AddTask(db_event *event);
 
-private:
-	int QueryMatchOperate(int,int,int*,MsgMoveOperator&);
-	void QueryFixtureInfo(int,int&,int&,int&,int&,int&);
-	int  QueryPlayerAttrInfo(int,MsgPlayerInfo&);
-	void GeneralPlayerInfoUnFound(int,MsgPlayerInfo&);
-	void UpdateMatchStatus(int);
-	void UpdateMatchResultInfo(MsgGameToDbServerMatchEnd*);
-	void UpdatePlayersMatchInfo(MsgGameToDbServerPlayerUpdate*);
-	void WriteBackMatchEvent(MsgGameEventDBWB*);
-	void QueryTeamSkillInfo(int,MsgMoveOperator&);
-	int  QueryTeamSkillBuff(int cid,int tactic_id);
-	void ModiferNpcTeamAttribute(MsgMoveOperator& msg,int npc_player_rate);
-	void StartArenaMatch(MsgMatchArenaStartArena* msg);
-	void UpdateGServerInfo(MsgUpdateGServerInfo* msg);
+        int		GetTaskInProcess(){
+            return _task_all - _task_processed;
+        }
+        int     getId(){
+            return _id;
+        }
+    private:
+        mysqlpp::ScopedConnection _conn;
+        int  _task_all;
+        int  _task_processed;
+        int  _id;
 
-private:
-	omg::ConcurrenceQueue<CMsgEvent,omg::MutexLock,omg::NullLock>	_msg_queue;
-	//omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;
-
+        void QueryClientLoginInfo(db_event*);
+        void DoCommonDelOrUpdate(db_event*);
+        int  DoCommonInsert(db_event* event);
+        bool LoadRoleInfo(db_role_info& pb_role,int role_id);
+    private:
+        omg::ConcurrenceLockQueue<db_event,omg::MutexLock>	_msg_queue;
+        //omg::WRQueue<CMsgEvent,omg::MutexLock>	_msg_queue;
 };
 
 #endif /* CDBHANDLERJOB_H_ */

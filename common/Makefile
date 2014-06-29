@@ -38,22 +38,19 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/football/omgserver
+CMAKE_SOURCE_DIR = /home/gl/workspace/omgserver/common
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/football/omgserver
+CMAKE_BINARY_DIR = /home/gl/workspace/omgserver/common
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -72,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gl/football/omgserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football/omgserver/CMakeFiles /home/gl/football/omgserver/common/CMakeFiles/progress.marks
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 common/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/football/omgserver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/common/CMakeFiles /home/gl/workspace/omgserver/common/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/omgserver/common/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 common/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -88,272 +85,181 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 common/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 common/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gl/football/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-common/CMakeFiles/common.dir/rule:
-	cd /home/gl/football/omgserver && $(MAKE) -f CMakeFiles/Makefile2 common/CMakeFiles/common.dir/rule
-.PHONY : common/CMakeFiles/common.dir/rule
+#=============================================================================
+# Target rules for targets named common
 
-# Convenience name for target.
-common: common/CMakeFiles/common.dir/rule
+# Build rule for target.
+common: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 common
 .PHONY : common
 
 # fast build rule for target.
 common/fast:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/build
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/build
 .PHONY : common/fast
 
-CEventThread.o: CEventThread.cpp.o
+# target to build an object file
+CEventThread.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CEventThread.o
 .PHONY : CEventThread.o
 
-# target to build an object file
-CEventThread.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CEventThread.cpp.o
-.PHONY : CEventThread.cpp.o
-
-CEventThread.i: CEventThread.cpp.i
+# target to preprocess a source file
+CEventThread.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CEventThread.i
 .PHONY : CEventThread.i
 
-# target to preprocess a source file
-CEventThread.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CEventThread.cpp.i
-.PHONY : CEventThread.cpp.i
-
-CEventThread.s: CEventThread.cpp.s
+# target to generate assembly for a file
+CEventThread.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CEventThread.s
 .PHONY : CEventThread.s
 
-# target to generate assembly for a file
-CEventThread.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CEventThread.cpp.s
-.PHONY : CEventThread.cpp.s
-
-CPoolThread.o: CPoolThread.cpp.o
+# target to build an object file
+CPoolThread.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CPoolThread.o
 .PHONY : CPoolThread.o
 
-# target to build an object file
-CPoolThread.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CPoolThread.cpp.o
-.PHONY : CPoolThread.cpp.o
-
-CPoolThread.i: CPoolThread.cpp.i
+# target to preprocess a source file
+CPoolThread.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CPoolThread.i
 .PHONY : CPoolThread.i
 
-# target to preprocess a source file
-CPoolThread.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CPoolThread.cpp.i
-.PHONY : CPoolThread.cpp.i
-
-CPoolThread.s: CPoolThread.cpp.s
+# target to generate assembly for a file
+CPoolThread.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CPoolThread.s
 .PHONY : CPoolThread.s
 
-# target to generate assembly for a file
-CPoolThread.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CPoolThread.cpp.s
-.PHONY : CPoolThread.cpp.s
-
-CThread.o: CThread.cpp.o
+# target to build an object file
+CThread.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CThread.o
 .PHONY : CThread.o
 
-# target to build an object file
-CThread.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CThread.cpp.o
-.PHONY : CThread.cpp.o
-
-CThread.i: CThread.cpp.i
+# target to preprocess a source file
+CThread.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CThread.i
 .PHONY : CThread.i
 
-# target to preprocess a source file
-CThread.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CThread.cpp.i
-.PHONY : CThread.cpp.i
-
-CThread.s: CThread.cpp.s
+# target to generate assembly for a file
+CThread.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CThread.s
 .PHONY : CThread.s
 
-# target to generate assembly for a file
-CThread.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CThread.cpp.s
-.PHONY : CThread.cpp.s
-
-CThreadManage.o: CThreadManage.cpp.o
+# target to build an object file
+CThreadManage.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CThreadManage.o
 .PHONY : CThreadManage.o
 
-# target to build an object file
-CThreadManage.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CThreadManage.cpp.o
-.PHONY : CThreadManage.cpp.o
-
-CThreadManage.i: CThreadManage.cpp.i
+# target to preprocess a source file
+CThreadManage.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CThreadManage.i
 .PHONY : CThreadManage.i
 
-# target to preprocess a source file
-CThreadManage.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CThreadManage.cpp.i
-.PHONY : CThreadManage.cpp.i
-
-CThreadManage.s: CThreadManage.cpp.s
+# target to generate assembly for a file
+CThreadManage.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CThreadManage.s
 .PHONY : CThreadManage.s
 
-# target to generate assembly for a file
-CThreadManage.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CThreadManage.cpp.s
-.PHONY : CThreadManage.cpp.s
-
-CTimerEventHandler.o: CTimerEventHandler.cpp.o
+# target to build an object file
+CTimerEventHandler.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CTimerEventHandler.o
 .PHONY : CTimerEventHandler.o
 
-# target to build an object file
-CTimerEventHandler.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CTimerEventHandler.cpp.o
-.PHONY : CTimerEventHandler.cpp.o
-
-CTimerEventHandler.i: CTimerEventHandler.cpp.i
+# target to preprocess a source file
+CTimerEventHandler.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CTimerEventHandler.i
 .PHONY : CTimerEventHandler.i
 
-# target to preprocess a source file
-CTimerEventHandler.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CTimerEventHandler.cpp.i
-.PHONY : CTimerEventHandler.cpp.i
-
-CTimerEventHandler.s: CTimerEventHandler.cpp.s
+# target to generate assembly for a file
+CTimerEventHandler.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/CTimerEventHandler.s
 .PHONY : CTimerEventHandler.s
 
-# target to generate assembly for a file
-CTimerEventHandler.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/CTimerEventHandler.cpp.s
-.PHONY : CTimerEventHandler.cpp.s
-
-IJob.o: IJob.cpp.o
+# target to build an object file
+IJob.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/IJob.o
 .PHONY : IJob.o
 
-# target to build an object file
-IJob.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/IJob.cpp.o
-.PHONY : IJob.cpp.o
-
-IJob.i: IJob.cpp.i
+# target to preprocess a source file
+IJob.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/IJob.i
 .PHONY : IJob.i
 
-# target to preprocess a source file
-IJob.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/IJob.cpp.i
-.PHONY : IJob.cpp.i
-
-IJob.s: IJob.cpp.s
+# target to generate assembly for a file
+IJob.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/IJob.s
 .PHONY : IJob.s
 
-# target to generate assembly for a file
-IJob.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/IJob.cpp.s
-.PHONY : IJob.cpp.s
-
-JobDequeue.o: JobDequeue.cpp.o
+# target to build an object file
+JobDequeue.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/JobDequeue.o
 .PHONY : JobDequeue.o
 
-# target to build an object file
-JobDequeue.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/JobDequeue.cpp.o
-.PHONY : JobDequeue.cpp.o
-
-JobDequeue.i: JobDequeue.cpp.i
+# target to preprocess a source file
+JobDequeue.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/JobDequeue.i
 .PHONY : JobDequeue.i
 
-# target to preprocess a source file
-JobDequeue.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/JobDequeue.cpp.i
-.PHONY : JobDequeue.cpp.i
-
-JobDequeue.s: JobDequeue.cpp.s
+# target to generate assembly for a file
+JobDequeue.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/JobDequeue.s
 .PHONY : JobDequeue.s
 
-# target to generate assembly for a file
-JobDequeue.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/JobDequeue.cpp.s
-.PHONY : JobDequeue.cpp.s
-
-MD5.o: MD5.cpp.o
+# target to build an object file
+MD5.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/MD5.o
 .PHONY : MD5.o
 
-# target to build an object file
-MD5.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/MD5.cpp.o
-.PHONY : MD5.cpp.o
-
-MD5.i: MD5.cpp.i
+# target to preprocess a source file
+MD5.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/MD5.i
 .PHONY : MD5.i
 
-# target to preprocess a source file
-MD5.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/MD5.cpp.i
-.PHONY : MD5.cpp.i
-
-MD5.s: MD5.cpp.s
+# target to generate assembly for a file
+MD5.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/MD5.s
 .PHONY : MD5.s
 
-# target to generate assembly for a file
-MD5.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/MD5.cpp.s
-.PHONY : MD5.cpp.s
-
-circular_buffer.o: circular_buffer.cpp.o
+# target to build an object file
+circular_buffer.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/circular_buffer.o
 .PHONY : circular_buffer.o
 
-# target to build an object file
-circular_buffer.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/circular_buffer.cpp.o
-.PHONY : circular_buffer.cpp.o
-
-circular_buffer.i: circular_buffer.cpp.i
+# target to preprocess a source file
+circular_buffer.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/circular_buffer.i
 .PHONY : circular_buffer.i
 
-# target to preprocess a source file
-circular_buffer.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/circular_buffer.cpp.i
-.PHONY : circular_buffer.cpp.i
-
-circular_buffer.s: circular_buffer.cpp.s
+# target to generate assembly for a file
+circular_buffer.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/circular_buffer.s
 .PHONY : circular_buffer.s
 
-# target to generate assembly for a file
-circular_buffer.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/circular_buffer.cpp.s
-.PHONY : circular_buffer.cpp.s
-
-mtrand.o: mtrand.cpp.o
+# target to build an object file
+mtrand.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/mtrand.o
 .PHONY : mtrand.o
 
-# target to build an object file
-mtrand.cpp.o:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/mtrand.cpp.o
-.PHONY : mtrand.cpp.o
-
-mtrand.i: mtrand.cpp.i
+# target to preprocess a source file
+mtrand.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/mtrand.i
 .PHONY : mtrand.i
 
-# target to preprocess a source file
-mtrand.cpp.i:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/mtrand.cpp.i
-.PHONY : mtrand.cpp.i
-
-mtrand.s: mtrand.cpp.s
-.PHONY : mtrand.s
-
 # target to generate assembly for a file
-mtrand.cpp.s:
-	cd /home/gl/football/omgserver && $(MAKE) -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/mtrand.cpp.s
-.PHONY : mtrand.cpp.s
+mtrand.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/mtrand.s
+.PHONY : mtrand.s
 
 # Help Target
 help:
@@ -405,6 +311,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gl/football/omgserver && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

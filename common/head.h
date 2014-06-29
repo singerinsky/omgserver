@@ -37,7 +37,7 @@
 #include <glog/logging.h>
 #include "../include/tinyxml.h"
 #include "../include/tinystr.h"
-#include <boost/pool/pool.hpp>
+//#include <boost/pool/pool.hpp>
 
 
 #include "lock.h"
